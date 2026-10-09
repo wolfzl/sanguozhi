@@ -2,7 +2,7 @@
 
 基于《三国志·陈寿撰裴松之注》的手机友好静态网站。第二版提供 34 位人物、38 个事件（其中 18 个关键事件）、65 卷全文与《上三国志注表》。卡片以简体写成，原文阅读支持简繁切换，引用区分陈寿正文与裴注。
 
-项目位于 `/Users/zhangliang/ai/readbook/tmp/sanguozhi-simplified`，是 `.sanguozhi-repo` 的独立 Git worktree，开发分支为 `feat/sanguozhi-simplified`。本次从事件线第二版提交 `9d2951e` 新建 worktree，网站页面路径、数据结构和引用标识沿用第二版。原始 EPUB 与原有阅读资料保持不变。
+项目位于 `/Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified`，是 `.sanguozhi-repo` 的独立 Git worktree，开发分支为 `feat/sanguozhi-simplified`。本次从事件线第二版提交 `9d2951e` 新建 worktree，网站页面路径、数据结构和引用标识沿用第二版。原始 EPUB 与原有阅读资料保持不变。
 
 ## 打开网站
 
@@ -11,7 +11,7 @@
 预览服务关闭后，在终端执行：
 
 ```bash
-cd /Users/zhangliang/ai/readbook/tmp/sanguozhi-simplified
+cd /Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified
 npm run preview -- --port 4324
 ```
 
