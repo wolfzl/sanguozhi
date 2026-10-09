@@ -8,6 +8,22 @@
 
 本次交付的预览地址：**http://127.0.0.1:4324/**。
 
+目录入口脚本为 `/Users/zhangliang/ai/readbook/sanguozhi/site.sh`，后台启动服务，关闭当前终端后仍可继续运行：
+
+```bash
+cd /Users/zhangliang/ai/readbook/sanguozhi
+./site.sh start    # 启动；已运行时复用现有服务
+./site.sh status   # 查看运行状态
+./site.sh restart  # 重启
+./site.sh stop     # 停止
+```
+
+不带参数时查看状态。脚本从自身位置定位网站，也可以在其他目录用绝对路径执行。日志保存在 `sanguozhi-simplified/work/site-control/preview.log`，PID 记录保存在同目录的 `preview.pid`。脚本只停止本项目在 4324 端口的 Astro 预览进程，发现其他程序占用端口时会提示并退出；它也支持复用之前通过 `npm run preview -- --port 4324` 启动的本项目服务。
+
+依赖和 `dist/` 必须先准备好；缺少时脚本会给出安装或构建命令。修改网站后先停止服务、执行 `npm run build`，再启动。脚本不会自动重建网站。
+
+入口脚本的源码 `scripts/site.sh` 已纳入 Git。重新检出项目时，可执行 `cp scripts/site.sh ../site.sh && chmod +x ../site.sh` 恢复目录入口；只需改动项目外层目录名称时无需修改脚本。
+
 预览服务关闭后，在终端执行：
 
 ```bash
@@ -88,6 +104,8 @@ npm run build
 npm run test:browser
 npm run test:reader
 ```
+
+启停脚本验证使用 `npm run test:control`，需要先构建网站并让 4324 端口空闲。检查会实际启动及停止测试工作区的服务，覆盖重复启动、重启、过期 PID、端口冲突和复用现有预览进程。
 
 完整浏览器检查使用 Playwright Chromium；在新环境缺少浏览器时先执行 `npx playwright install chromium`。可用 `SANGUO_URL=http://127.0.0.1:其他端口 npm run test:browser` 更换地址；`test:reader` 同样支持该环境变量。
 
