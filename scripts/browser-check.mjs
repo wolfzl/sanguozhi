@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import { chromium } from "playwright";
-const base = process.env.SANGUO_URL || "http://127.0.0.1:4323";
+const base = process.env.SANGUO_URL || "http://127.0.0.1:4324";
 fs.mkdirSync("work",{recursive:true});
 const cards = JSON.parse(fs.readFileSync("src/data/cards.json", "utf8"));
 const browser = await chromium.launch();

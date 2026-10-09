@@ -1,18 +1,18 @@
 # 三国志 · 人物与事件
 
-基于《三国志·陈寿撰裴松之注》的手机友好静态网站。第二版提供 34 位人物、38 个事件（其中 18 个关键事件）、65 卷全文与《上三国志注表》。卡片以简体写成，原文保留繁体，引用区分陈寿正文与裴注。
+基于《三国志·陈寿撰裴松之注》的手机友好静态网站。第二版提供 34 位人物、38 个事件（其中 18 个关键事件）、65 卷全文与《上三国志注表》。卡片以简体写成，原文阅读支持简繁切换，引用区分陈寿正文与裴注。
 
-项目位于 `/Users/zhangliang/ai/readbook/tmp/sanguozhi-timeline`，是 `.sanguozhi-repo` 的独立 Git worktree，开发分支为 `feat/sanguozhi-timeline-v2`。原始 EPUB 与原有阅读资料保持不变。
+项目位于 `/Users/zhangliang/ai/readbook/tmp/sanguozhi-simplified`，是 `.sanguozhi-repo` 的独立 Git worktree，开发分支为 `feat/sanguozhi-simplified`。本次从事件线第二版提交 `9d2951e` 新建 worktree，网站页面路径、数据结构和引用标识沿用第二版。原始 EPUB 与原有阅读资料保持不变。
 
 ## 打开网站
 
-本次交付的预览地址：**http://127.0.0.1:4323/**。
+本次交付的预览地址：**http://127.0.0.1:4324/**。
 
 预览服务关闭后，在终端执行：
 
 ```bash
-cd /Users/zhangliang/ai/readbook/tmp/sanguozhi-timeline
-npm run preview -- --port 4323
+cd /Users/zhangliang/ai/readbook/tmp/sanguozhi-simplified
+npm run preview -- --port 4324
 ```
 
 再在浏览器打开上面的地址。源码和 `dist/` 均已生成。静态页面需要通过 HTTP 服务访问；目录、脚本及资源采用站点根路径。
@@ -22,7 +22,7 @@ npm run preview -- --port 4323
 ```bash
 npm ci
 npm run build
-npm run preview -- --port 4323
+npm run preview -- --port 4324
 ```
 
 本次验证环境：Node.js 25.6.0，Astro 5.18.2。开发预览使用 `npm run dev`，默认地址为 http://127.0.0.1:4321/。
@@ -37,7 +37,9 @@ npm run preview -- --port 4323
 - 事件页提供背景与后果、同一历史进程、并行对照、政权承继关联，附解释和引用。解读明确标注，时间相邻导航单独保留。
 - 未设人物卡的参与者仅显示姓名，不生成失效页面。
 - 每个关键生平节点、关系和事件段落附原文依据。点击引用编号展开节选，再进入精确的原文块。
-- 原文可切换卷目、翻页及显示/隐藏裴注；从引用链接进入注文时自动显示相应裴注。
+- 原文默认显示简体，工具栏可切换简体／繁体；正文、裴注、标题及引书名称一起切换。当前浏览器通过 localStorage 记住选择，翻页、刷新后继续使用；存储不可用时仍可正常切换。
+- 简体通过现有 OpenCC 依赖从繁体底本转换，仅改变阅读区文字。切回繁体直接恢复保存的原字形，不做简转繁反推；卡片引用保持底本字形。JavaScript 不可用时显示繁体底本并隐藏字形切换按钮。
+- 原文可切换卷目、翻页及显示/隐藏裴注；从引用链接进入注文时自动显示相应裴注。切换字形保留段落 ID、锚点高亮、链接和阅读位置。
 - 分享优先使用浏览器系统分享；不支持或分享失败时复制链接。用户取消分享时静默返回。
 - 复制链接优先使用 Clipboard API，不可用时尝试兼容复制；两种方式都失败时提示从地址栏复制。
 
@@ -55,6 +57,9 @@ npm run preview -- --port 4323
 - `src/data/edition.json`：本期数量、关键事件数和时间范围；增补范围时同步更新。
 - `src/lib/timeline.mjs`：筛选状态、时间线名称与位置的纯函数。
 - `docs/event-v2-review.md` / `docs/person-v2-review.md`：新增内容的史料核对记录。
+- `src/lib/reader-script.ts`：阅读区文字转换、原字形恢复与偏好记忆。
+- `scripts/reader-check.mjs`：66 个阅读单元的简繁切换、结构保留、原文恢复与浏览器行为检查。
+- `docs/simplified-reader.md`：简体阅读设计与验证记录。
 - `docs/validation-v2.md`：第二版验证记录。
 - `docs/content-review.md`：首版史料核对记录。
 - `docs/validation.md`：首版验收记录；新版结果见 `docs/validation-v2.md`。
@@ -79,11 +84,12 @@ python3 scripts/extract_epub.py /absolute/path/book.epub --output work/new-book.
 npm test
 npm run validate
 npm run build
-# 另一个终端先运行 npm run preview -- --port 4323
+# 另一个终端先运行 npm run preview -- --port 4324
 npm run test:browser
+npm run test:reader
 ```
 
-完整浏览器检查使用 Playwright Chromium；在新环境缺少浏览器时先执行 `npx playwright install chromium`。可用 `SANGUO_URL=http://127.0.0.1:其他端口 npm run test:browser` 更换地址。
+完整浏览器检查使用 Playwright Chromium；在新环境缺少浏览器时先执行 `npx playwright install chromium`。可用 `SANGUO_URL=http://127.0.0.1:其他端口 npm run test:browser` 更换地址；`test:reader` 同样支持该环境变量。
 
 全书比对测试读取原始 EPUB；原件不在指定路径时会明确跳过这两项测试，其他测试仍可运行。原件未复制进网站仓库。浏览器截图与临时报告在被 Git 忽略的 `work/` 内。
 

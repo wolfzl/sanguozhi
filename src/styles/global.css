@@ -1146,10 +1146,30 @@ em {
   top: 0;
   background: var(--paper);
   z-index: 5;
+  flex-wrap: wrap;
 }
 .reader-toolbar > label {
-  max-width: 65%;
+  flex: 1 1 220px;
   min-width: 0;
+}
+.reader-script-controls {
+  display: flex;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.reader-script-controls[hidden] {
+  display: none;
+}
+.reader-toolbar .reader-script-controls button {
+  padding-inline: 12px;
+  justify-content: center;
+  min-width: 44px;
+}
+.reader-script-controls button[aria-pressed="true"] {
+  background: var(--red);
+  color: var(--paper);
 }
 .reader-toolbar select {
   background: var(--card);
@@ -2068,8 +2088,8 @@ em {
     gap: 12px;
   }
   .reader-toolbar > label {
-    max-width: 64%;
-    flex: 1;
+    max-width: 100%;
+    flex: 1 1 100%;
   }
   .reader-toolbar select {
     font-size: 10px;
