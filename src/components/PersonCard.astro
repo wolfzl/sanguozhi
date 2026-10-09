@@ -3,11 +3,11 @@ import type { Person } from '../lib/catalog';
 import { searchText } from '../lib/search.mjs';
 interface Props {person: Person; searchable?: boolean; index?: number}
 const {person:p,searchable=false,index=0}=Astro.props;
-const tone={'曹魏':'wei','蜀汉':'shu','孙吴':'wu','袁氏':'yuan'}[p.faction]??'wei';
+const tone={'曹魏':'wei','蜀汉':'shu','孙吴':'wu','袁氏':'yuan','汉末':'yuan','西晋':'wei'}[p.faction]??'wei';
 ---
 <a class={`person-card tone-${tone}`} href={`/people/${p.id}/`} data-search-card={searchable?true:undefined} data-search={searchable?searchText(p):undefined} data-faction={p.faction}>
 <div class="card-top"><span class="faction"><i></i>{p.faction}</span><span class="card-no">{String(index+1).padStart(2,'0')}</span></div>
-<div class="person-name"><h3>{p.name}</h3><span>字 {p.courtesy}</span></div>
+<div class="person-name"><h3>{p.name}</h3><span>{p.courtesy==='本书未详'?'字号未详':`字 ${p.courtesy}`}</span></div>
 <p class="person-role">{p.role}</p><p class="card-lead">{p.lead}</p>
 <div class="card-bottom"><span>{p.tags.slice(0,2).join(' / ')}</span><span class="arrow" aria-hidden="true">↗</span></div>
 </a>

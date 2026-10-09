@@ -1,7 +1,23 @@
 ---
 import Base from '../../layouts/Base.astro';
-import EventRow from '../../components/EventRow.astro';
-import SearchBar from '../../components/SearchBar.astro';
+import Timeline from '../../components/Timeline.astro';
 import {events} from '../../lib/catalog';
+import {categories} from '../../lib/timeline.mjs';
+import '../../styles/timeline.css';
 ---
-<Base title="事件" active="events"><div class="shell browse-page" data-search-root><div class="page-heading"><div class="eyebrow">事件 / EVENTS</div><h1>顺着时间，<br/><em>读懂变化。</em></h1><p>从迎帝都许到首次北伐，看见人物如何行动，局势如何转移。</p></div><SearchBar kind="events" count={events.length}/><div class="event-list">{events.map(event=><EventRow event={event} searchable/>)}</div><div class="empty-state" data-empty hidden><h2>还没有找到这个事件</h2><p>试试事件名、别名，或换一个关键词。</p><button class="button button-light" data-reset>查看全部事件</button></div><p class="browse-footnote">按事件起始或主要发生年份排序。历时较长的事件，详情页标明时间范围。</p></div></Base>
+<Base title="三国事件线" description="从184年黄巾起义到280年吴亡，沿曹魏与晋、蜀汉、孙吴三条线，读懂事件的来龙去脉。" active="events">
+<div class="shell browse-page timeline-page" data-timeline-root>
+<div class="page-heading"><div class="eyebrow">事件 / 184—280</div><h1>三条线交织，<br/><em>一个时代起落。</em></h1><p>从黄巾起义到三国归晋。看见各方怎样立足、建国，又在哪里相遇。</p></div>
+<div class="timeline-controls">
+<div class="timeline-control-top"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">搜索事件</span><input type="search" placeholder="搜索事件、别名或关键词" autocomplete="off"/></label><div class="timeline-buttons view-buttons" aria-label="展现形式">{[['parallel','三线并行'],['list','时间列表']].map(([value,label])=><button type="button" data-timeline-filter="view" data-value={value} aria-pressed={value==='parallel'?'true':'false'}>{label}</button>)}</div></div>
+<div class="timeline-filter-line"><span class="filter-label">阅读范围</span><div class="timeline-buttons" aria-label="事件重要程度">{[['key','关键'],['all','全部']].map(([value,label])=><button type="button" data-timeline-filter="importance" data-value={value} aria-pressed={value==='key'?'true':'false'}>{label}</button>)}</div></div>
+<div class="timeline-filter-line"><span class="filter-label">沿谁的线</span><div class="timeline-buttons lane-buttons" aria-label="事件势力">{[['all','全部势力'],['wei','曹魏与晋'],['shu','蜀汉'],['wu','孙吴']].map(([value,label])=><button type="button" data-timeline-filter="lane" data-value={value} aria-pressed={value==='all'?'true':'false'}>{label}</button>)}</div></div>
+<details class="timeline-type-filter"><summary>按事件类型筛选 <span data-category-label>全部类型</span></summary><div class="timeline-buttons" aria-label="事件类型">{[['all','全部类型'],...Object.entries(categories)].map(([value,label])=><button type="button" data-timeline-filter="category" data-value={value} aria-pressed={value==='all'?'true':'false'}>{label}</button>)}</div></details>
+</div>
+<div class="timeline-summary"><p class="results-count" aria-live="polite">显示 <strong data-count>{events.length}</strong> / {events.length} 个事件 <span> · 支持简繁体搜索</span></p><button type="button" class="timeline-reset" data-reset>重置筛选</button></div>
+<p class="timeline-reading-hint">同年事件共用时间刻度，年份间距不按比例。跨线卡片只收录一次，标签说明参与各方；连线表示时间延续与共同参与，前因后果详见事件页。</p>
+<noscript><p class="timeline-reading-hint">当前显示全部事件；启用 JavaScript 后可筛选关键事件、势力与类型。</p><style is:inline>.timeline-controls,.timeline-reset{display:none}</style></noscript>
+<Timeline/>
+<div class="empty-state" data-empty hidden><h2>这组条件下还没有事件</h2><p>试试减少筛选条件，或换一个关键词。</p><button class="button button-light" data-empty-reset>查看全部事件</button></div>
+<div class="timeline-closing"><span class="section-eyebrow">280 / 时代的终点</span><h2>三条线，最终汇入统一。</h2><p>蜀汉于 263 年结束，曹魏于 265 年让位于晋，孙吴于 280 年结束。沿任意一条线阅读，都可以回到这段共同的历史。</p><a class="text-link" href="/events/fall-wu/">读三国时代的收束 ↗</a></div>
+</div></Base>

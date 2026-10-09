@@ -1,5 +1,5 @@
 ---
-import {personById} from '../lib/catalog';
+import {participantName} from '../lib/catalog';
 import type {Event} from '../lib/catalog';
 import {searchText} from '../lib/search.mjs';
 interface Props {event: Event; searchable?: boolean}
@@ -8,5 +8,5 @@ const {event:e,searchable=false}=Astro.props;
 <a class="event-row" href={`/events/${e.id}/`} data-search-card={searchable?true:undefined} data-search={searchable?searchText(e):undefined} data-year={e.year}>
 <div class="event-year"><strong>{e.year}</strong><span>公元</span></div>
 <div class="event-info"><div class="event-tags">{e.tags.join(' · ')}</div><h3>{e.title}</h3><p>{e.lead}</p></div>
-<div class="event-people">{e.participants.slice(0,3).map(p=>personById(p.personId).name).join(' / ')}<span class="arrow" aria-hidden="true">↗</span></div>
+<div class="event-people">{e.participants.slice(0,3).map(p=>participantName(p)).join(' / ')}<span class="arrow" aria-hidden="true">↗</span></div>
 </a>

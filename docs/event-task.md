@@ -1,0 +1,11 @@
+# 事件内容独立任务
+只编辑 scripts/event_content.py 和 docs/event-v2-review.md。不要编辑 cards.json、create_cards.py、其他代码，不要提交（主代理统一提交）。不要启动子代理。
+实现 expand_events(base, R) 返回38个事件（原8 id保留）；build_relationships(R) 返回事件关系数组。
+每事件字段原Event相同，加endYear:int、order:int（同年明确顺序；无准确月不能编造）、phase: formation|states|unification、lanes:string[] common|wei|shu|wu、categories:string[] war|state|succession|diplomacy|governance、importance:key|standard。
+参与者 {personId,role} 或 {name,role}（没有人物卡时纯文本）。所有部分 refs用R(blockid,quote?,work?)准确取本书引句；需要核对事实而非仅存在引句。事件400—700字（sections合计），4段背景/经过/结果/影响，最后段interpretation=true；其他段含分析时亦true。每段明确证据。新事件每个至少3个事实原文依据；少则说明原因，不编造。书中不同记载保留差异。精简平实，避免同质填充。
+38节点ID（时间）：yellow-turbans184, dong-zhuo-capital189, anti-dong-coalition190, sun-ce-jiangdong195—196, welcome-emperor196, sun-quan-succession200, guandu200, longzhong-plan约207, chibi208, enter-shu211—214, jingzhou-boundary215, hefei215, hanzhong219, jingzhou219, wei-founding220, shu-founding221, yiling221—222, liu-bei-entrustment223, wu-shu-reconciliation223, southern-campaign225, first-northern-expedition228, shiting228, wu-emperor229, wuzhang-plains234, jiang-wan-government234, cao-fang-succession239, gaoping-tombs249, sun-liang-succession252, fei-yi-death253, cao-fang-deposition254, sima-zhao-regency255, cao-mao-death260, fall-shu263, zhong-hui-rebellion264, sun-hao-succession264, jin-founding265（年号公元口径说明）, jin-conquest-wu279—280, fall-wu280。
+关键18个：yellow-turbans,dong-zhuo-capital,welcome-emperor,guandu,chibi,enter-shu,hanzhong,jingzhou,wei-founding,shu-founding,yiling,wu-emperor,wuzhang-plains,gaoping-tombs,cao-mao-death,fall-shu,jin-founding,fall-wu。
+前9事件formation、其后至jiang-wan-government共16 states、余13 unification（从239开始，234所有事件共用年份组）。共同背景前3为common，其他根据实际参战/事务方多选。不把影响全国当作三方共同参与。魏灭蜀 wei+shu，关羽失荆州wei+shu+wu，晋伐吴wei+wu，归晋线仍使用wei稳定ID并按年改标签。
+原12人ID：caocao,yuanshao,liubei,sunquan,zhuge-liang,guanyu,zhangfei,zhaoyun,zhouyu,lusu,lumeng,luxun。
+新增22人ID：zhang-jiao,dong-zhuo,sun-jian,sun-ce,cao-pi,cao-rui,liu-shan,cao-shuang,cao-mao,sima-yi,sima-shi,sima-zhao,sima-yan,jiang-wan,fei-yi,jiang-wei,deng-ai,zhong-hui,sun-hao,wang-jun,du-yu,zhang-liao。其他姓名纯文本。
+关系 {id,from,to,type:context|process|parallel|succession,summary,interpretation:boolean,refs}。每事件至少1个关系（入或出），目标约30—45，非时间邻接自动生成；process只是同一进程、parallel对照非因果，context才指前因后果并有依据。返回关系顺序稳定，平行只存一次，其他方向能识别前后。原文依据及解读严格分层。写review文档：每节点关键原文及事实、异文/纪年注意事项。

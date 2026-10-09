@@ -171,9 +171,16 @@ E('first-northern-expedition','诸葛亮首次北伐','228年 · 建兴六年',2
 ('结果','诸葛亮迁出西县千余家，撤回汉中，处置马谡，又上疏承认自己用人和统军失当，请求自贬。赵云传补充箕谷方向：赵云、邓芝兵弱敌强，作战失利，但收束军队固守，没有大败；退军后赵云也被贬职。把两篇一起看，才能避免只记街亭，而忽略另一条作战方向同样影响了整体结果。',['v035-b0012','v036-b0022']),
 ('影响与理解','这次出兵没有实现预定进展，却展示了部署、执行、撤退与问责之间的关系。诸葛亮并没有因开局顺利就免于失败，赵云也不是没有失利的将领。从这里可以追问：主力与疑军怎样配合，前方将领有没有落实部署，撤军时又能保存多少力量。诸葛亮的自贬与赵云的收束队伍，把用人、执行和责任落到具体行动上，也为后续北伐留下了经验。',['v035-b0012','v036-b0022'])])
 
+from person_content import expand_people
+from event_content import expand_events, build_relationships
+people = expand_people(people, R)
+events = expand_events(events, R)
+events.sort(key=lambda e: (e['year'], e['order']))
+event_relations = build_relationships(R)
+
 for p in people:
-    p['eventIds'] = [e['id'] for e in events if any(x['personId'] == p['id'] for x in e['participants'])]
-Path('src/data/cards.json').write_text(json.dumps({'people':people,'events':events},ensure_ascii=False,indent=2),encoding='utf-8')
+    p['eventIds'] = [e['id'] for e in events if any(x.get('personId') == p['id'] for x in e['participants'])]
+Path('src/data/cards.json').write_text(json.dumps({'people':people,'events':events,'eventRelations':event_relations},ensure_ascii=False,indent=2),encoding='utf-8')
 for p in people: print(p['name'],sum(len(x['text']) for x in p['paragraphs']))
 for e in events: print(e['title'],sum(len(x['text']) for x in e['sections']))
-print('Wrote 12 people and 8 events with verified quotation substrings.')
+print(f'Wrote {len(people)} people, {len(events)} events and {len(event_relations)} relationships with verified quotation substrings.')

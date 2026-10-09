@@ -1,4 +1,5 @@
 import { normalizeSearch } from "./search.mjs";
+import { parseTimelineState, encodeTimelineState, categories, layoutYearEvents } from "./timeline.mjs";
 let toastTimer: ReturnType<typeof setTimeout>;
 function announce(message: string) {
   const toast = document.querySelector<HTMLElement>("[data-toast]");
@@ -143,3 +144,104 @@ const selector = document.querySelector<HTMLSelectElement>(
 selector?.addEventListener("change", () => {
   if (selector.value) location.assign(`/read/${selector.value}/`);
 });
+
+// The event explorer uses one canonical DOM card per event in both views.
+const timelineRoot = document.querySelector<HTMLElement>("[data-timeline-root]");
+if (timelineRoot) {
+  const input = timelineRoot.querySelector<HTMLInputElement>('input[type="search"]');
+  const cards = [...timelineRoot.querySelectorAll<HTMLElement>("[data-search-card]")];
+  const buttons = [...timelineRoot.querySelectorAll<HTMLButtonElement>("[data-timeline-filter]")];
+  const timeline = timelineRoot.querySelector<HTMLElement>(".timeline");
+  let state = parseTimelineState(location.search);
+  let searchTimer: ReturnType<typeof setTimeout>;
+  function updateTimeline() {
+    const query = normalizeSearch(state.q);
+    let visible = 0;
+    for (const card of cards) {
+      const match = (state.importance === "all" || card.dataset.importance === "key") && (state.lane === "all" || card.dataset.lanes?.split(" ").includes(state.lane)) && (state.category === "all" || card.dataset.categories?.split(" ").includes(state.category)) && (card.dataset.search ?? "").includes(query);
+      card.hidden = !match;
+      if (match) visible++;
+    }
+    for (const group of timelineRoot!.querySelectorAll<HTMLElement>("[data-year-group], [data-phase]")) group.hidden = ![...group.querySelectorAll<HTMLElement>("[data-search-card]")].some(card => !card.hidden);
+    for (const group of timelineRoot!.querySelectorAll<HTMLElement>("[data-year-group]")) {
+      const shown = [...group.querySelectorAll<HTMLElement>("[data-search-card]")].filter(card => !card.hidden);
+      const placements = layoutYearEvents(shown.map(card => ({lanes:(card.dataset.lanes ?? "").split(" ")})));
+      shown.forEach((card,index) => card.style.setProperty("--lane-row",String(placements[index].row)));
+    }
+    for (const button of buttons) button.setAttribute("aria-pressed", String(state[button.dataset.timelineFilter as keyof typeof state] === button.dataset.value));
+    const count = timelineRoot!.querySelector("[data-count]");
+    if (count) count.textContent = String(visible);
+    const empty = timelineRoot!.querySelector<HTMLElement>("[data-empty]");
+    if (empty) empty.hidden = visible !== 0;
+    if (timeline) {
+      timeline.dataset.timelineView = state.view;
+      timeline.classList.toggle("timeline-single", state.lane !== "all");
+      for (const element of timeline.querySelectorAll<HTMLElement>("[data-track-lane], [data-header-lane], [data-rail-lane]")) {
+        const lane = element.dataset.trackLane ?? element.dataset.headerLane ?? element.dataset.railLane;
+        element.hidden = state.lane !== "all" && lane !== state.lane;
+      }
+    }
+    const categoryLabel = timelineRoot!.querySelector("[data-category-label]");
+    if (categoryLabel) categoryLabel.textContent = state.category === "all" ? "全部类型" : categories[state.category as keyof typeof categories];
+  }
+  function syncURL(push: boolean) {
+    const next = new URL(location.href);
+    const encoded = new URLSearchParams(encodeTimelineState(state));
+    for (const name of ["importance","lane","category","q","view"]) {
+      next.searchParams.delete(name);
+      if (encoded.has(name)) next.searchParams.set(name,encoded.get(name)!);
+    }
+    if (next.href !== location.href) history[push ? "pushState" : "replaceState"](null,"",next);
+    try { sessionStorage.setItem("sanguo-timeline-url",next.pathname+next.search+next.hash); } catch {}
+  }
+  function restore() {
+    clearTimeout(searchTimer);
+    state = parseTimelineState(location.search);
+    if (input) input.value = state.q;
+    if (state.category !== "all") {
+      const detail = timelineRoot!.querySelector<HTMLDetailsElement>(".timeline-type-filter");
+      if (detail) detail.open = true;
+    }
+    updateTimeline();
+    try { sessionStorage.setItem("sanguo-timeline-url",location.pathname+location.search+location.hash); } catch {}
+  }
+  input?.addEventListener("input", () => {
+    state.q = input.value;
+    updateTimeline();
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => syncURL(false), 180);
+  });
+  // Save immediately before following a result; back restores the current query.
+  timelineRoot.addEventListener("click", (event) => {
+    if ((event.target as Element).closest("a[href]")) {
+      clearTimeout(searchTimer);
+      syncURL(false);
+    }
+  });
+  for (const button of buttons) button.addEventListener("click", () => {
+    clearTimeout(searchTimer);
+    const next = {...state,[button.dataset.timelineFilter!]:button.dataset.value};
+    state = parseTimelineState(encodeTimelineState(next));
+    updateTimeline();
+    syncURL(true);
+  });
+  function reset(all = false) {
+    clearTimeout(searchTimer);
+    state = parseTimelineState(all ? "?importance=all" : "");
+    if (input) input.value = "";
+    updateTimeline(); syncURL(true);
+  }
+  timelineRoot.querySelector("[data-reset]")?.addEventListener("click", () => reset());
+  timelineRoot.querySelector("[data-empty-reset]")?.addEventListener("click", () => reset(true));
+  window.addEventListener("popstate",restore);
+  window.addEventListener("pageshow",restore);
+  restore();
+}
+
+try {
+  const remembered = sessionStorage.getItem("sanguo-timeline-url");
+  if (remembered) {
+    const url = new URL(remembered,location.origin);
+    if (url.origin === location.origin && url.pathname === "/events/") for (const link of document.querySelectorAll<HTMLAnchorElement>("[data-timeline-back]")) link.href = url.pathname + url.search + url.hash;
+  }
+} catch {}

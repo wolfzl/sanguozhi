@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import * as api from '../scripts/content-validation.mjs';
+const event = (id,year) => ({id,year,endYear:year,order:0,phase:'states',importance:'key',lanes:['shu'],categories:['war'],participants:[]});
+const edge = {id:'a-b',from:'a',to:'b',type:'process',summary:'同一进程中的后续行动。',interpretation:true,refs:[{blockId:'source'}]};
+test('rejects an event relationship with a missing target or an unconnected event',()=>{
+ assert.equal(typeof api.validateTimeline,'function');
+ const errors=api.validateTimeline([event('a',220),event('b',221)],[{...edge,to:'missing'}]);
+ assert.ok(errors.some(e=>e.includes('missing')));
+ assert.ok(errors.some(e=>e.includes('Unconnected event b')));
+});
+test('rejects time range reversal and events extending an ended polity',()=>{
+ assert.equal(typeof api.validateTimeline,'function');
+ const errors=api.validateTimeline([{...event('a',264),endYear:263},event('b',265)],[edge]);
+ assert.ok(errors.some(e=>e.includes('time range')));
+ assert.ok(errors.some(e=>e.includes('Shu after 263')));
+});
+test('accepts an explicitly sourced parallel comparison without turning it into chronological causality',()=>{
+ assert.equal(typeof api.validateTimeline,'function');
+ assert.deepEqual(api.validateTimeline([event('a',221),event('b',220)],[{...edge,type:'parallel',interpretation:false}]),[]);
+});

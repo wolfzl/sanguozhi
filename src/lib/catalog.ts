@@ -43,9 +43,24 @@ export interface Event {
   lead: string;
   aliases: string[];
   tags: string[];
-  participants: { personId: string; role: string }[];
+  endYear: number;
+  order: number;
+  phase: "formation" | "states" | "unification";
+  lanes: ("common" | "wei" | "shu" | "wu")[];
+  importance: "key" | "standard";
+  categories: ("war" | "state" | "succession" | "diplomacy" | "governance")[];
+  participants: { personId?: string; name?: string; role: string }[];
   sections: (Paragraph & { heading: string; interpretation: boolean })[];
   note: SourceNote | null;
+}
+export interface EventRelation {
+  id: string;
+  from: string;
+  to: string;
+  type: "context" | "process" | "parallel" | "succession";
+  summary: string;
+  interpretation: boolean;
+  refs: SourceRef[];
 }
 export interface Volume {
   id: string;
@@ -67,8 +82,8 @@ export interface Volume {
 export const book = bookData;
 export const volumes = bookData.volumes as Volume[];
 export const people = cardData.people as Person[];
-export const events = (cardData.events as Event[]).sort(
-  (a, b) => a.year - b.year,
+export const events = (cardData.events as unknown as Event[]).sort(
+  (a, b) => a.year - b.year || a.order - b.order,
 );
 const simplify = Converter({ from: "tw", to: "cn" });
 export function volumeTitle(v: Volume) {
@@ -113,4 +128,12 @@ export function personById(id: string) {
 }
 export function eventById(id: string) {
   return events.find((e) => e.id === id)!;
+}
+
+export const eventRelations = (cardData as unknown as {eventRelations?: EventRelation[]}).eventRelations ?? [];
+export function relationsForEvent(id: string) {
+  return eventRelations.filter(r => r.from === id || r.to === id);
+}
+export function participantName(p: Event["participants"][number]) {
+  return p.personId ? personById(p.personId).name : p.name ?? "";
 }

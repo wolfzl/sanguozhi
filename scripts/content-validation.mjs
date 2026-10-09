@@ -20,3 +20,39 @@ export function collectReferences(value) {
   if ("blockId" in value && "quote" in value) return [value];
   return Object.values(value).flatMap(collectReferences);
 }
+
+export function validateTimeline(events, relations) {
+  const errors = [];
+  const ids = new Set(events.map(e => e.id));
+  const connected = new Set();
+  const edgeKeys = new Set();
+  for (const event of events) {
+    if (!Number.isInteger(event.year) || !Number.isInteger(event.endYear) || event.endYear < event.year) errors.push(`Invalid time range ${event.id}`);
+    if (!Number.isInteger(event.order)) errors.push(`Missing same-year order ${event.id}`);
+    if (!['formation','states','unification'].includes(event.phase)) errors.push(`Invalid phase ${event.id}`);
+    if (!['key','standard'].includes(event.importance)) errors.push(`Invalid importance ${event.id}`);
+    if (!Array.isArray(event.lanes) || event.lanes.length === 0 || event.lanes.some(l => !['common','wei','shu','wu'].includes(l)) || new Set(event.lanes).size !== event.lanes.length) errors.push(`Invalid lanes ${event.id}`);
+    if (event.lanes?.includes('common') && event.lanes.length !== 1) errors.push(`Common background combined with polity ${event.id}`);
+    if (event.lanes?.includes('shu') && event.year > 263) errors.push(`Shu after 263: ${event.id}`);
+    if (event.lanes?.includes('wu') && event.year > 280) errors.push(`Wu after 280: ${event.id}`);
+    if (!event.categories?.length || event.categories.some(c => !['war','state','succession','diplomacy','governance'].includes(c))) errors.push(`Invalid categories ${event.id}`);
+    for (const p of event.participants ?? []) if(Boolean(p.personId) === Boolean(p.name) || !p.role) errors.push(`Ambiguous participant ${event.id}`);
+  }
+  for (const relation of relations) {
+    if (!ids.has(relation.from)) errors.push(`Missing relation source ${relation.from}`);
+    if (!ids.has(relation.to)) errors.push(`Missing relation target ${relation.to}`);
+    if (relation.from === relation.to) errors.push(`Self relation ${relation.id}`);
+    if (!['context','process','parallel','succession'].includes(relation.type)) errors.push(`Invalid relation type ${relation.id}`);
+    if (!relation.summary || !relation.refs?.length || typeof relation.interpretation !== 'boolean') errors.push(`Unsupported relation ${relation.id}`);
+    const ends = relation.type === 'parallel' ? [relation.from,relation.to].sort() : [relation.from,relation.to];
+    const key = `${relation.type}:${ends.join(':')}`;
+    if (edgeKeys.has(key)) errors.push(`Duplicate relation ${relation.id}`);
+    edgeKeys.add(key);
+    if (ids.has(relation.from) && ids.has(relation.to)) {
+      connected.add(relation.from); connected.add(relation.to);
+      if (relation.type !== 'parallel' && events.find(e=>e.id===relation.from).year > events.find(e=>e.id===relation.to).year) errors.push(`Backward chronological relation ${relation.id}`);
+    }
+  }
+  for (const id of ids) if(!connected.has(id)) errors.push(`Unconnected event ${id}`);
+  return errors;
+}

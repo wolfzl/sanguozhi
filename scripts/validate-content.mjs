@@ -3,9 +3,11 @@ import assert from "node:assert/strict";
 import {
   validateReferences,
   collectReferences,
+  validateTimeline,
 } from "./content-validation.mjs";
 const book = JSON.parse(fs.readFileSync("src/data/book.json", "utf8"));
-const { people, events } = JSON.parse(
+const edition = JSON.parse(fs.readFileSync("src/data/edition.json", "utf8"));
+const { people, events, eventRelations = [] } = JSON.parse(
   fs.readFileSync("src/data/cards.json", "utf8"),
 );
 assert.equal(book.volumes.length, 66);
@@ -14,15 +16,19 @@ assert.deepEqual(
   Array.from({ length: 65 }, (_, i) => i + 1),
 );
 assert.equal(book.volumes.at(-1).title, "上三國志註表");
-assert.equal(people.length, 12);
-assert.equal(events.length, 8);
-for (const records of [people, events, book.volumes])
+assert.equal(people.length, edition.people);
+assert.equal(events.length, edition.events);
+assert.equal(events.filter(e=>e.importance==='key').length,edition.keyEvents);
+assert.equal(Math.min(...events.map(e=>e.year)),edition.startYear);
+assert.equal(Math.max(...events.map(e=>e.endYear)),edition.endYear);
+assert.deepEqual(validateTimeline(events,eventRelations),[]);
+for (const records of [people, events, eventRelations, book.volumes])
   assert.equal(
     new Set(records.map((r) => r.id)).size,
     records.length,
     "Duplicate ID",
   );
-const allRefs = collectReferences({ people, events });
+const allRefs = collectReferences({ people, events, eventRelations });
 assert.deepEqual(validateReferences(book, allRefs), []);
 for (const v of book.volumes) {
   assert.ok(
@@ -66,9 +72,11 @@ for (const e of events) {
   assert.ok(length >= 400 && length <= 700, `${e.title}: length ${length}`);
   assert.ok(Number.isInteger(e.year));
   for (const s of e.sections) assert.ok(s.refs.length);
-  for (const p of e.participants)
-    assert.ok(people.find((x) => x.id === p.personId)?.eventIds.includes(e.id));
+  for (const p of e.participants) {
+    if(p.personId) assert.ok(people.find((x) => x.id === p.personId)?.eventIds.includes(e.id), `Broken reciprocal participant ${e.id}/${p.personId}`);
+    else assert.ok(p.name, `Unnamed participant ${e.id}`);
+  }
 }
 console.log(
-  `Validated 66 volumes, 12 people, 8 events, ${allRefs.length} references; quotations, layers and reciprocal links valid.`,
+  `Validated 66 volumes, ${people.length} people, ${events.length} events, ${eventRelations.length} relationships, ${allRefs.length} references; quotations, layers and reciprocal links valid.`,
 );

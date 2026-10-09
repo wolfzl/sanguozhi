@@ -2197,3 +2197,6 @@ em {
     transition: none !important;
   }
 }
+
+/* More historical factions remain usable on narrow screens. */
+.filter-group { flex-wrap: wrap; }

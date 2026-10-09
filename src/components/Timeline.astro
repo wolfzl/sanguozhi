@@ -1,0 +1,31 @@
+---
+import {events, participantName} from '../lib/catalog';
+import {searchText} from '../lib/search.mjs';
+import {phases,laneIds,laneLabel,laneStatus,layoutYearEvents,categories} from '../lib/timeline.mjs';
+---
+<div class="timeline" data-timeline-view="parallel">
+<div class="timeline-lane-heading" aria-label="三条势力线"><span>公元</span><div class="lane-wei" data-header-lane="wei"><strong>曹氏 → 曹魏 → 西晋</strong><small>220 建魏 · 265 入晋</small></div><div class="lane-shu" data-header-lane="shu"><strong>刘备 → 蜀汉</strong><small>221 建汉 · 263 结束</small></div><div class="lane-wu" data-header-lane="wu"><strong>孙氏 → 孙吴</strong><small>229 称帝 · 280 结束</small></div></div>
+{Object.entries(phases).map(([phase,info],index)=>{
+const phaseEvents = events.filter(e=>e.phase===phase);
+const years = [...new Set(phaseEvents.map(e=>e.year))];
+return <section class="timeline-phase" data-phase={phase} id={`phase-${phase}`}>
+<header class="timeline-phase-title"><span>{String(index+1).padStart(2,'0')} / {info.period}</span><h2>{info.title}</h2><p>{info.lead}</p></header>
+{years.map(year=>{
+const yearEvents=phaseEvents.filter(e=>e.year===year);
+const common=yearEvents.every(e=>e.lanes.includes('common'));
+const positions=layoutYearEvents(yearEvents);
+return <section class:list={['timeline-year',{'timeline-common':common}]} data-year-group={year} id={`${phase}-${year}`} aria-label={`${year}年事件`}>
+<div class="timeline-year-label"><strong>{year}</strong><span>公元</span></div>
+<div class="timeline-year-content">
+{!common&&<div class="timeline-track-labels" aria-hidden="true">{laneIds.map(lane=><span class:list={[`lane-${lane}`,laneStatus(lane,year)]} data-track-lane={lane}>{laneLabel(lane,year)}{laneStatus(lane,year)==='ended'?' · 已结束':laneStatus(lane,year)==='ending'?' · 终点':''}</span>)}</div>}
+{!common&&<div class="timeline-rails" aria-hidden="true">{laneIds.map(lane=><i class:list={[`lane-${lane}`,laneStatus(lane,year)]} data-rail-lane={lane}/>)}</div>}
+<div class="timeline-year-cards">
+{yearEvents.map((e,index)=>{const position=positions[index];return <a class:list={['timeline-card',`lane-${e.lanes[0]}`,{'shared-event':e.lanes.length>1,'key-event':e.importance==='key'}]} href={`/events/${e.id}/`} style={`--lane-start:${position.start};--lane-span:${position.span};--lane-row:${position.row}`} data-search-card data-event-id={e.id} data-search={searchText(e)} data-importance={e.importance} data-lanes={e.lanes.join(' ')} data-categories={e.categories.join(' ')} data-year={e.year}>
+<div class="timeline-card-top"><span>{e.importance==='key'?'关键事件':'事件节点'}</span><span aria-hidden="true">↗</span></div>
+<h3>{e.title}</h3><p>{e.lead}</p>
+<div class="timeline-card-lanes">{e.lanes.map(lane=><span class={`lane-${lane}`}>{laneLabel(lane,e.year)}</span>)}</div>
+<div class="timeline-card-bottom"><span>{e.year===e.endYear?`${e.year} 年`:`${e.year}—${e.endYear} 年`} · {e.categories.map(c=>categories[c]).join(' / ')}</span><small>{e.participants.slice(0,3).map(p=>participantName(p)).join(' / ')}</small></div>
+</a>;})}
+</div></div></section>;})}
+</section>;})}
+</div>
