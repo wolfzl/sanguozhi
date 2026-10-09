@@ -1,0 +1,74 @@
+import fs from "node:fs";
+import assert from "node:assert/strict";
+import {
+  validateReferences,
+  collectReferences,
+} from "./content-validation.mjs";
+const book = JSON.parse(fs.readFileSync("src/data/book.json", "utf8"));
+const { people, events } = JSON.parse(
+  fs.readFileSync("src/data/cards.json", "utf8"),
+);
+assert.equal(book.volumes.length, 66);
+assert.deepEqual(
+  book.volumes.slice(0, 65).map((v) => Number(v.id)),
+  Array.from({ length: 65 }, (_, i) => i + 1),
+);
+assert.equal(book.volumes.at(-1).title, "上三國志註表");
+assert.equal(people.length, 12);
+assert.equal(events.length, 8);
+for (const records of [people, events, book.volumes])
+  assert.equal(
+    new Set(records.map((r) => r.id)).size,
+    records.length,
+    "Duplicate ID",
+  );
+const allRefs = collectReferences({ people, events });
+assert.deepEqual(validateReferences(book, allRefs), []);
+for (const v of book.volumes) {
+  assert.ok(
+    v.blocks.length > 0 && v.sourceUrl && v.revision,
+    `Empty or untraceable volume ${v.id}`,
+  );
+  const ids = v.blocks.flatMap((b) => [
+    b.id,
+    ...b.notes.filter((n) => n.id !== b.id).map((n) => n.id),
+  ]);
+  assert.equal(new Set(ids).size, ids.length, `Duplicate anchor ${v.id}`);
+  assert.ok(
+    !v.blocks.some((b) => b.text.includes("\ufffd")),
+    `Replacement character ${v.id}`,
+  );
+}
+for (const p of people) {
+  const length = p.paragraphs.reduce((sum, x) => sum + x.text.length, 0);
+  assert.ok(
+    length >= 300 && length <= 500,
+    `${p.name}: biography length ${length}`,
+  );
+  assert.ok(p.milestones.length >= 3 && p.milestones.length <= 5);
+  for (const part of [...p.paragraphs, ...p.milestones, ...p.relations])
+    assert.ok(part.refs.length);
+  for (const r of p.relations)
+    assert.ok(
+      people.some((x) => x.id === r.personId),
+      `Unknown relation ${r.personId}`,
+    );
+  for (const id of p.eventIds)
+    assert.ok(
+      events
+        .find((e) => e.id === id)
+        ?.participants.some((x) => x.personId === p.id),
+    );
+  for (const id of p.reading) assert.ok(book.volumes.some((v) => v.id === id));
+}
+for (const e of events) {
+  const length = e.sections.reduce((sum, x) => sum + x.text.length, 0);
+  assert.ok(length >= 400 && length <= 700, `${e.title}: length ${length}`);
+  assert.ok(Number.isInteger(e.year));
+  for (const s of e.sections) assert.ok(s.refs.length);
+  for (const p of e.participants)
+    assert.ok(people.find((x) => x.id === p.personId)?.eventIds.includes(e.id));
+}
+console.log(
+  `Validated 66 volumes, 12 people, 8 events, ${allRefs.length} references; quotations, layers and reciprocal links valid.`,
+);

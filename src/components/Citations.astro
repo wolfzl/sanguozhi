@@ -1,0 +1,7 @@
+---
+import {refKey,refLabel} from '../lib/catalog';
+import type {SourceRef} from '../lib/catalog';
+interface Props {refs: SourceRef[]; all: SourceRef[]}
+const {refs,all}=Astro.props;
+---
+<span class="citations">{refs.map(ref=>{const n=all.findIndex(r=>refKey(r)===refKey(ref))+1;return <a href={`#source-${n}`} aria-label={`依据 ${n}：${refLabel(ref)}`}>[{n}]</a>;})}</span>

@@ -1,0 +1,7 @@
+---
+import Base from '../../layouts/Base.astro';
+import EventRow from '../../components/EventRow.astro';
+import SearchBar from '../../components/SearchBar.astro';
+import {events} from '../../lib/catalog';
+---
+<Base title="事件" active="events"><div class="shell browse-page" data-search-root><div class="page-heading"><div class="eyebrow">事件 / EVENTS</div><h1>顺着时间，<br/><em>读懂变化。</em></h1><p>从迎帝都许到首次北伐，看见人物如何行动，局势如何转移。</p></div><SearchBar kind="events" count={events.length}/><div class="event-list">{events.map(event=><EventRow event={event} searchable/>)}</div><div class="empty-state" data-empty hidden><h2>还没有找到这个事件</h2><p>试试事件名、别名，或换一个关键词。</p><button class="button button-light" data-reset>查看全部事件</button></div><p class="browse-footnote">按事件起始或主要发生年份排序。历时较长的事件，详情页标明时间范围。</p></div></Base>

@@ -1,0 +1,9 @@
+---
+import {volumes,refLabel} from '../lib/catalog';
+import type {SourceRef} from '../lib/catalog';
+interface Props {refs: SourceRef[]}
+const {refs}=Astro.props;
+---
+<section id="sources" class="article-section sources"><div class="section-eyebrow">回到史料</div><h2>原文依据</h2><p class="muted">展开查看节选，或前往对应卷中的完整段落。正文与裴注分别标明。</p>
+{refs.map((ref,i)=>{const volume=volumes.find(v=>v.id===ref.volume)!;return <details class="source-item" id={`source-${i+1}`}><summary><span class="source-number">{String(i+1).padStart(2,'0')}</span><span>{refLabel(ref)}</span><span class="source-plus" aria-hidden="true">+</span></summary><div class="source-content"><blockquote lang="zh-Hant">{ref.quote}</blockquote><div class="source-actions"><a href={`/read/${ref.volume}/#${ref.blockId}`}>阅读完整原文 <span aria-hidden="true">↗</span></a><a href={volume.permalink} target="_blank" rel="noopener">维基文库修订版 ↗</a></div></div></details>})}
+</section>
