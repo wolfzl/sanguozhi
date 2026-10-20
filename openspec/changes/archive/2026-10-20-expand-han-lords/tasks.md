@@ -6,4 +6,4 @@
 - [x] 2.2 Add relevant Wei/Shu/Wu figures and participant links.
 ## 3. Verification and delivery
 - [x] 3.1 Regenerate data, validate references, run tests/build/browser checks.
-- [ ] 3.2 Update site documentation, integrate clean local site and restart preview.
+- [x] 3.2 Update site documentation, integrate clean local site and restart preview.
