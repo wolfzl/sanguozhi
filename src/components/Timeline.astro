@@ -4,7 +4,7 @@ import {searchText} from '../lib/search.mjs';
 import {phases,laneIds,laneLabel,laneStatus,layoutYearEvents,categories} from '../lib/timeline.mjs';
 ---
 <div class="timeline" data-timeline-view="parallel">
-<div class="timeline-lane-heading" aria-label="三条势力线"><span>公元</span><div class="lane-wei" data-header-lane="wei"><strong>曹氏 → 曹魏 → 西晋</strong><small>220 建魏 · 265 入晋</small></div><div class="lane-shu" data-header-lane="shu"><strong>刘备 → 蜀汉</strong><small>221 建汉 · 263 结束</small></div><div class="lane-wu" data-header-lane="wu"><strong>孙氏 → 孙吴</strong><small>229 称帝 · 280 结束</small></div></div>
+<div class="timeline-lane-heading" aria-label="四条历史线"><span>公元</span><div class="lane-wei" data-header-lane="wei"><strong>曹氏 → 曹魏 → 西晋</strong><small>220 建魏 · 265 入晋</small></div><div class="lane-shu" data-header-lane="shu"><strong>刘备 → 蜀汉</strong><small>221 建汉 · 263 结束</small></div><div class="lane-wu" data-header-lane="wu"><strong>孙氏 → 孙吴</strong><small>229 称帝 · 280 结束</small></div><div class="lane-lords" data-header-lane="lords"><strong>汉末诸侯</strong><small>河北 · 徐州 · 荆益 · 关中</small></div></div>
 {Object.entries(phases).map(([phase,info],index)=>{
 const phaseEvents = events.filter(e=>e.phase===phase);
 const years = [...new Set(phaseEvents.map(e=>e.year))];

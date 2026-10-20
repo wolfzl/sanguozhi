@@ -177,6 +177,9 @@ people = expand_people(people, R)
 events = expand_events(events, R)
 events.sort(key=lambda e: (e['year'], e['order']))
 event_relations = build_relationships(R)
+from lords_content import expand_lords
+people, events, event_relations = expand_lords(people, events, event_relations, R)
+events.sort(key=lambda e: (e["year"], e["order"]))
 
 for p in people:
     p['eventIds'] = [e['id'] for e in events if any(x.get('personId') == p['id'] for x in e['participants'])]

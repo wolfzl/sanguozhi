@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import { chromium } from "playwright";
+import { matchesCard } from "../src/lib/search.mjs";
 const base = process.env.SANGUO_URL || "http://127.0.0.1:4324";
 fs.mkdirSync("work",{recursive:true});
 const cards = JSON.parse(fs.readFileSync("src/data/cards.json", "utf8"));
@@ -22,12 +23,8 @@ try {
   await page.goto(base + "/people/", { waitUntil: "networkidle" });
   const search = page.getByRole("searchbox");
   await search.fill("劉備");
-  assert.equal(await page.locator("[data-search-card]:visible").count(), 1);
-  assert.ok(
-    (await page.locator("[data-search-card]:visible").innerText()).includes(
-      "刘备",
-    ),
-  );
+  assert.equal(await page.locator("[data-search-card]:visible").count(), cards.people.filter(p=>matchesCard(p,"劉備")).length);
+  assert.equal(await page.locator('[data-search-card][href="/people/liubei/"]').isVisible(),true);
   await search.fill("玄德");
   assert.equal(await page.locator("[data-search-card]:visible").count(), 1);
   await search.fill("不存在的人");
@@ -38,12 +35,18 @@ try {
   assert.equal(await page.locator("[data-search-card]:visible").count(), cards.people.filter(p=>p.faction==="孙吴").length);
   await page.getByRole("button", { name: "全部", exact: true }).click();
   assert.equal(await page.locator("[data-search-card]:visible").count(), cards.people.length);
+  await page.getByRole("button",{name:"汉末",exact:true}).click();
+  assert.equal(await page.locator("[data-search-card]:visible").count(),cards.people.filter(p=>p.faction==='汉末').length);
+  for(const name of ['袁绍','袁术','公孙瓒','吕布','马腾']) assert.ok((await page.locator('[data-search-card]:visible').allTextContents()).some(text=>text.includes(name)),name);
+  assert.equal(await page.getByRole('button',{name:'袁氏',exact:true}).count(),0);
   await page.goto(base + "/events/", { waitUntil: "networkidle" });
-  assert.equal(await page.locator("[data-search-card]:visible").count(),18,"Key events are the default");
-  assert.equal(await page.locator("[data-search-card]").count(),38,"Each event has exactly one DOM card");
-  assert.equal(new Set(await page.locator("[data-search-card]").evaluateAll(els=>els.map(e=>e.dataset.eventId))).size,38);
+  assert.equal(await page.locator("[data-search-card]:visible").count(),cards.events.length,"All events are the default");
+  assert.equal(await page.locator("[data-search-card]").count(),cards.events.length,"Each event has exactly one DOM card");
+  assert.equal(new Set(await page.locator("[data-search-card]").evaluateAll(els=>els.map(e=>e.dataset.eventId))).size,cards.events.length);
+  await page.getByRole("button",{name:"关键",exact:true}).click();
+  assert.equal(await page.locator("[data-search-card]:visible").count(),cards.events.filter(e=>e.importance==='key').length);
   await page.getByRole("button",{name:"全部",exact:true}).click();
-  assert.equal(await page.locator("[data-search-card]:visible").count(),38);
+  assert.equal(await page.locator("[data-search-card]:visible").count(),cards.events.length);
   await page.getByRole("searchbox").fill("街亭");
   assert.equal(await page.locator("[data-search-card]:visible").count(),1);
   assert.ok((await page.locator("[data-search-card]:visible").innerText()).includes("首次北伐"));
@@ -53,10 +56,25 @@ try {
   const years=await page.locator("[data-search-card]").evaluateAll(els=>els.map(e=>Number(e.dataset.year)));
   assert.deepEqual(years,[...years].sort((a,b)=>a-b));
   assert.equal(years[0],184); assert.equal(years.at(-1),280);
-  const aligned = await page.locator('[data-year-group="200"] [data-search-card]').evaluateAll(els=>els.map(e=>e.getBoundingClientRect().top));
+  const aligned = await page.locator('[data-year-group="264"] [data-search-card]').evaluateAll(els=>els.map(e=>e.getBoundingClientRect().top));
   assert.equal(aligned.length,2);
-  assert.ok(Math.abs(aligned[0]-aligned[1])<=1,'Independent 200-year events align in the same row');
+  assert.ok(Math.abs(aligned[0]-aligned[1])<=1,'Independent 264-year events align in the same row');
   assert.equal(await page.locator('[data-year-group="234"]').count(),1,'234 shares one year group');
+  await page.getByRole("button",{name:"汉末诸侯",exact:true}).click();
+  const lordsCount=cards.events.filter(e=>e.lanes.includes('lords')||e.lanes.includes('common')).length;
+  assert.equal(await page.locator('[data-search-card]:visible').count(),lordsCount);
+  await page.reload({waitUntil:'networkidle'});
+  assert.equal(await page.locator('[data-search-card]:visible').count(),lordsCount);
+  await page.getByRole('searchbox').fill('公孫瓚');
+  assert.ok(await page.locator('[data-search-card]:visible').count()>0);
+  await page.locator('[data-search-card]:visible').last().click();
+  await page.waitForLoadState('networkidle');
+  assert.ok((await page.locator('[data-timeline-back]').getAttribute('href')).includes('lane=lords'));
+  await page.locator('[data-timeline-back]').click();
+  await page.waitForLoadState('networkidle');
+  assert.equal(await page.getByRole('searchbox').inputValue(),'公孫瓚');
+  await page.locator('[data-reset]').click();
+  assert.equal(await page.locator('[data-search-card]:visible').count(),cards.events.length);
   await page.getByRole("button",{name:"曹魏与晋",exact:true}).click();
   await page.locator(".timeline-type-filter summary").click();
   await page.getByRole("button",{name:"战争",exact:true}).click();
@@ -82,7 +100,7 @@ try {
   assert.equal(await page.locator('[data-empty]').isVisible(),true);
   assert.equal(await page.locator('[data-phase]:visible').count(),0);
   await page.locator('[data-empty-reset]').click();
-  assert.equal(await page.locator('[data-search-card]:visible').count(),38);
+  assert.equal(await page.locator('[data-search-card]:visible').count(),cards.events.length);
   assert.equal(await page.locator('[data-year-group="264"] [data-track-lane="shu"]').innerText(),'蜀汉 · 已结束');
   assert.equal(await page.locator('[data-year-group="265"] [data-track-lane="wei"]').innerText(),'西晋');
   await page.screenshot({path:'work/timeline-desktop.png',fullPage:false});
@@ -95,7 +113,7 @@ try {
   const noJS = await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:900}});
   const plainPage=await noJS.newPage();
   await plainPage.goto(base+'/events/');
-  assert.equal(await plainPage.locator('[data-search-card]:visible').count(),38);
+  assert.equal(await plainPage.locator('[data-search-card]:visible').count(),cards.events.length);
   assert.equal(await plainPage.locator('.timeline-controls').isVisible(),false);
   await noJS.close();
   await page.goto(base + "/people/caocao/", { waitUntil: "networkidle" });

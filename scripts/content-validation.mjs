@@ -31,7 +31,7 @@ export function validateTimeline(events, relations) {
     if (!Number.isInteger(event.order)) errors.push(`Missing same-year order ${event.id}`);
     if (!['formation','states','unification'].includes(event.phase)) errors.push(`Invalid phase ${event.id}`);
     if (!['key','standard'].includes(event.importance)) errors.push(`Invalid importance ${event.id}`);
-    if (!Array.isArray(event.lanes) || event.lanes.length === 0 || event.lanes.some(l => !['common','wei','shu','wu'].includes(l)) || new Set(event.lanes).size !== event.lanes.length) errors.push(`Invalid lanes ${event.id}`);
+    if (!Array.isArray(event.lanes) || event.lanes.length === 0 || event.lanes.some(l => !['common','wei','shu','wu','lords'].includes(l)) || new Set(event.lanes).size !== event.lanes.length) errors.push(`Invalid lanes ${event.id}`);
     if (event.lanes?.includes('common') && event.lanes.length !== 1) errors.push(`Common background combined with polity ${event.id}`);
     if (event.lanes?.includes('shu') && event.year > 263) errors.push(`Shu after 263: ${event.id}`);
     if (event.lanes?.includes('wu') && event.year > 280) errors.push(`Wu after 280: ${event.id}`);

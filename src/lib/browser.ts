@@ -158,7 +158,7 @@ if (timelineRoot) {
     const query = normalizeSearch(state.q);
     let visible = 0;
     for (const card of cards) {
-      const match = (state.importance === "all" || card.dataset.importance === "key") && (state.lane === "all" || card.dataset.lanes?.split(" ").includes(state.lane)) && (state.category === "all" || card.dataset.categories?.split(" ").includes(state.category)) && (card.dataset.search ?? "").includes(query);
+      const match = (state.importance === "all" || card.dataset.importance === "key") && (state.lane === "all" || (card.dataset.lanes?.split(" ").includes(state.lane) || (state.lane === "lords" && card.dataset.lanes?.split(" ").includes("common")))) && (state.category === "all" || card.dataset.categories?.split(" ").includes(state.category)) && (card.dataset.search ?? "").includes(query);
       card.hidden = !match;
       if (match) visible++;
     }

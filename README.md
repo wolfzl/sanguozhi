@@ -1,8 +1,8 @@
 # 三国志 · 人物与事件
 
-基于《三国志·陈寿撰裴松之注》的手机友好静态网站。第二版提供 34 位人物、38 个事件（其中 18 个关键事件）、65 卷全文与《上三国志注表》。卡片以简体写成，原文阅读支持简繁切换，引用区分陈寿正文与裴注。
+基于《三国志·陈寿撰裴松之注》的手机友好静态网站。第三版提供 65 位人物、61 个事件（其中 25 个关键事件）、65 卷全文与《上三国志注表》。卡片以简体写成，原文阅读支持简繁切换，引用区分陈寿正文与裴注。
 
-项目位于 `/Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified`，是 `.sanguozhi-repo` 的独立 Git worktree，开发分支为 `feat/sanguozhi-simplified`。本次从事件线第二版提交 `9d2951e` 新建 worktree，网站页面路径、数据结构和引用标识沿用第二版。原始 EPUB 与原有阅读资料保持不变。
+项目位于 `/Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified`，是 `.sanguozhi-repo` 的独立 Git worktree，开发分支为 `feat/sanguozhi-simplified`。汉末诸侯扩充从 `01dcf9a` 新建 worktree，在 `feat/sanguozhi-lords-expansion` 完成；网站页面路径、数据结构和引用标识沿用第二版。原始 EPUB 与原有阅读资料保持不变。
 
 ## 打开网站
 
@@ -46,8 +46,8 @@ npm run preview -- --port 4324
 ## 网站内容与行为
 
 - 首页、人物列表、事件列表、人物详情、事件详情、全书目录、原文阅读、版本说明及 404 页面。
-- 人物支持简繁姓名、字号、常见称谓搜索和主要历史势力筛选，覆盖汉末、魏、蜀、吴、晋。
-- 184—280 年事件线默认显示 18 个关键事件，可切换全部 38 个事件。桌面支持三线并行/时间列表，手机使用单列时间汇总。
+- 人物支持简繁姓名、字号、常见称谓搜索和主要历史势力筛选，覆盖汉末、魏、蜀、吴、晋；袁绍、袁术等独立诸侯统一归入汉末。
+- 184—280 年事件线默认显示全部 61 个事件，可切换 25 个关键事件。桌面支持曹魏与晋、蜀汉、孙吴、汉末诸侯四线并行及时间列表，手机使用单列时间汇总。
 - 阅读范围、势力、事件类型与搜索组合筛选；URL 保存状态，刷新、历史返回、详情页“返回事件线”均可恢复。选一方时展开为单条线。
 - 曹氏势力→曹魏→西晋、刘备势力→蜀汉、孙氏势力→孙吴按年代改变名称；蜀汉在 263 年结束。共享事件只有一张卡和一个页面。
 - 事件页提供背景与后果、同一历史进程、并行对照、政权承继关联，附解释和引用。解读明确标注，时间相邻导航单独保留。
@@ -67,9 +67,11 @@ npm run preview -- --port 4324
 - `src/data/cards.json`：人物与事件卡片。可直接编辑；已有卡片 ID 不应因改中文标题而改变。
 - `src/lib/catalog.ts`：人物、事件、出处的 TypeScript 类型和页面查询。
 - `scripts/extract_epub.py`：Python 标准库 EPUB 提取器。
-- `scripts/create_cards.py`：保留原始卡片种子，再调用 `event_content.py` / `person_content.py` 扩充，统一生成卡片、关系与人物事件双向链接。重新运行会覆盖 `cards.json`；请编辑对应种子文件。
+- `scripts/create_cards.py`：保留原始卡片种子，再调用 `event_content.py` / `person_content.py` / `lords_content.py` 扩充，统一生成卡片、关系与人物事件双向链接。重新运行会覆盖 `cards.json`；请编辑对应种子文件。
 - `scripts/event_content.py`：30 张新增事件、38 个事件元数据及事件关系的编辑种子。
-- `scripts/person_content.py`：22 张新增人物及原人物更新的编辑种子。
+- `scripts/person_content.py`：第二版 22 张新增人物及原人物更新的编辑种子。
+- `scripts/lords_content.py`：第三版 31 张新增人物、23 个新增事件、诸侯线及补充参与关系的编辑种子。
+- `docs/han-lords-expansion.md`：第三版增补范围、史料层次与验证记录。
 - `src/data/edition.json`：本期数量、关键事件数和时间范围；增补范围时同步更新。
 - `src/lib/timeline.mjs`：筛选状态、时间线名称与位置的纯函数。
 - `docs/event-v2-review.md` / `docs/person-v2-review.md`：新增内容的史料核对记录。

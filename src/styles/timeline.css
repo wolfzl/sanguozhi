@@ -1,4 +1,4 @@
-.timeline-page { --wei: #66756c; --shu: #a14230; --wu: #9b7f4f; }
+.timeline-page { --lords: #716188; --wei: #66756c; --shu: #a14230; --wu: #9b7f4f; }
 .timeline-controls { border-block: 1px solid var(--line); padding: 22px 0; }
 .timeline-control-top { display: flex; gap: 30px; align-items: center; justify-content: space-between; margin-bottom: 18px; }
 .timeline-buttons { display: flex; flex-wrap: wrap; gap: 7px; }
@@ -16,7 +16,7 @@
 .timeline-summary .results-count { margin-block: 19px; }
 .timeline-reset { border: 0; background: none; font-size: 11px; color: var(--muted); padding: 10px 0 10px 15px; }
 .timeline-reading-hint { max-width: 790px; font-size: 11px; color: var(--muted); line-height: 1.9; margin: 0 0 28px; }
-.timeline-lane-heading { display: grid; grid-template-columns: 80px repeat(3,minmax(0,1fr)); gap: 22px; padding: 18px 0; border-block: 1px solid var(--line); }
+.timeline-lane-heading { display: grid; grid-template-columns: 80px repeat(4,minmax(0,1fr)); gap: 22px; padding: 18px 0; border-block: 1px solid var(--line); }
 .timeline-lane-heading > span { color: var(--muted); font-size: 11px; }
 .timeline-lane-heading > div { border-top: 3px solid currentColor; padding-top: 12px; }
 .timeline-lane-heading strong { display: block; font-family: var(--serif); font-size: 18px; letter-spacing: .5px; }
@@ -24,6 +24,7 @@
 .lane-wei { color: var(--wei,#66756c); }
 .lane-shu { color: var(--shu,#a14230); }
 .lane-wu { color: var(--wu,#9b7f4f); }
+.lane-lords { color: var(--lords,#716188); }
 .lane-common { color: var(--muted); }
 .timeline-phase-title { margin-block: 38px 22px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
 .timeline-phase-title > span { color: var(--red); font-size: 10px; letter-spacing: 1.5px; }
@@ -34,15 +35,15 @@
 .timeline-year-label strong { font: 28px var(--serif); display: block; line-height: 1.2; }
 .timeline-year-label span { font-size: 9px; color: var(--muted); letter-spacing: 2px; }
 .timeline-year-content { position: relative; min-width: 0; }
-.timeline-track-labels { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; padding-bottom: 7px; }
+.timeline-track-labels { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 22px; padding-bottom: 7px; }
 .timeline-track-labels span { font-size: 9px; padding-left: 15px; }
 .timeline-track-labels .ended { color: #999b94; }
 .timeline-track-labels .ending { font-weight: 600; }
-.timeline-rails { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; position: absolute; inset: 0 0 -26px; z-index: 0; pointer-events: none; }
+.timeline-rails { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 22px; position: absolute; inset: 0 0 -26px; z-index: 0; pointer-events: none; }
 .timeline-rails i { display: block; border-left: 1px solid currentColor; margin-left: 4px; opacity: .3; }
 .timeline-rails .ended { border-left: 0; }
 .timeline-rails .ending { border-left-style: dashed; }
-.timeline-year-cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px 22px; position: relative; z-index: 1; }
+.timeline-year-cards { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px 22px; position: relative; z-index: 1; }
 .timeline-card { grid-column: var(--lane-start) / span var(--lane-span); grid-row: var(--lane-row); min-width: 0; display: block; border: 1px solid var(--line); border-left: 3px solid currentColor; background: var(--card); padding: 17px 19px; transition: border-color .2s, transform .2s; }
 .timeline-card:hover { border-color: currentColor; transform: translateY(-2px); }
 .timeline-card-top { display: flex; justify-content: space-between; font-size: 9px; letter-spacing: 1px; color: var(--muted); }
@@ -79,7 +80,7 @@
 .timeline-single .timeline-year-cards { grid-template-columns: minmax(0,1fr); }
 .timeline-single .timeline-card { grid-column: 1; grid-row: auto; }
 @media(max-width:1100px) {
- .timeline-lane-heading,.timeline-year { gap: 14px; grid-template-columns: 65px repeat(3,minmax(0,1fr)); }
+ .timeline-lane-heading,.timeline-year { gap: 14px; grid-template-columns: 65px repeat(4,minmax(0,1fr)); }
  .timeline-year { grid-template-columns: 65px minmax(0,1fr); }
  .timeline-year-cards,.timeline-track-labels,.timeline-rails { gap: 14px; }
  .timeline-card { padding: 14px; }

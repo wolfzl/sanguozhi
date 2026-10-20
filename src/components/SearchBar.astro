@@ -4,6 +4,6 @@ const {kind,count}=Astro.props;
 const people=kind==='people';
 ---
 <div class="browse-controls"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">{people?'搜索人物':'搜索事件'}</span><input type="search" placeholder={people?'搜索姓名、字号或别名':'搜索事件、别名或关键词'} autocomplete="off"/></label>
-{people&&<div class="filter-group" aria-label="按主要历史势力筛选">{[['all','全部'],['曹魏','曹魏'],['蜀汉','蜀汉'],['孙吴','孙吴'],['袁氏','袁氏'],['汉末','汉末'],['西晋','西晋']].map(([value,label])=><button type="button" data-filter={value} aria-pressed={value==='all'?'true':'false'}>{label}</button>)}</div>}
+{people&&<div class="filter-group" aria-label="按主要历史势力筛选">{[['all','全部'],['曹魏','曹魏'],['蜀汉','蜀汉'],['孙吴','孙吴'],['汉末','汉末'],['西晋','西晋']].map(([value,label])=><button type="button" data-filter={value} aria-pressed={value==='all'?'true':'false'}>{label}</button>)}</div>}
 </div><p class="results-count" aria-live="polite">共 <span data-count>{count}</span> {people?'位人物':'个事件'}<span> · 支持简繁体搜索</span></p>
 <noscript><p>所有卡片均可直接阅读；启用 JavaScript 后可使用搜索与筛选。</p></noscript>

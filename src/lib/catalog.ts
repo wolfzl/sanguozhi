@@ -46,7 +46,7 @@ export interface Event {
   endYear: number;
   order: number;
   phase: "formation" | "states" | "unification";
-  lanes: ("common" | "wei" | "shu" | "wu")[];
+  lanes: ("common" | "wei" | "shu" | "wu" | "lords")[];
   importance: "key" | "standard";
   categories: ("war" | "state" | "succession" | "diplomacy" | "governance")[];
   participants: { personId?: string; name?: string; role: string }[];

@@ -19,3 +19,7 @@ test('accepts an explicitly sourced parallel comparison without turning it into 
  assert.equal(typeof api.validateTimeline,'function');
  assert.deepEqual(api.validateTimeline([event('a',221),event('b',220)],[{...edge,type:'parallel',interpretation:false}]),[]);
 });
+
+test('accepts independent lords in the formation and later consolidation periods',()=>{
+ assert.deepEqual(api.validateTimeline([{...event('a',199),lanes:['lords']},{...event('b',211),lanes:['wei','lords']}],[edge]),[]);
+});
