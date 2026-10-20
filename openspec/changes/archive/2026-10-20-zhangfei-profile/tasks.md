@@ -6,4 +6,4 @@
 ## 2. Verification and publication
 - [x] 2.1 Verify deterministic generation, existing tests and production build.
 - [x] 2.2 Check all portraits and Zhang Fei desktop/mobile source and event navigation.
-- [ ] 2.3 Integrate into local website, restart preview and open Zhang Fei.
+- [x] 2.3 Integrate into local website, restart preview and open Zhang Fei.
