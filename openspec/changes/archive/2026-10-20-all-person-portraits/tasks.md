@@ -6,5 +6,5 @@
 - [x] Add portrait coverage validation and regression tests.
 - [x] Review facts, sources, relations and reciprocal participation.
 - [x] Run full content, build and browser checks, including mobile layout.
-- [ ] Update editorial documentation and archive specification.
-- [ ] Integrate locally and restart the preview.
+- [x] Update editorial documentation and archive specification.
+- [x] Integrate locally and restart the preview.
