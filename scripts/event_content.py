@@ -39,6 +39,7 @@ META = [
  ('fei-yi-death',253,253,'shu','succession governance'),
  ('cao-fang-deposition',254,254,'wei','succession'),
  ('sima-zhao-regency',255,255,'wei','succession governance'),
+ ('shouchun-siege',257,258,'wei wu','war'),
  ('cao-mao-death',260,260,'wei','succession'),
  ('fall-shu',263,263,'wei shu','war state'),
  ('zhong-hui-rebellion',264,264,'wei','war succession'),
@@ -47,7 +48,7 @@ META = [
  ('jin-conquest-wu',279,280,'wei wu','war'),
  ('fall-wu',280,280,'wei wu','state war'),
 ]
-KEY = set('yellow-turbans dong-zhuo-capital welcome-emperor guandu chibi enter-shu hanzhong jingzhou wei-founding shu-founding yiling wu-emperor wuzhang-plains gaoping-tombs cao-mao-death fall-shu jin-founding fall-wu'.split())
+KEY = set('shouchun-siege yellow-turbans dong-zhuo-capital welcome-emperor guandu chibi enter-shu hanzhong jingzhou wei-founding shu-founding yiling wu-emperor wuzhang-plains gaoping-tombs cao-mao-death fall-shu jin-founding fall-wu'.split())
 PERSON_IDS = set('caocao yuanshao liubei sunquan zhuge-liang guanyu zhangfei zhaoyun zhouyu lusu lumeng luxun zhang-jiao dong-zhuo sun-jian sun-ce cao-pi cao-rui liu-shan cao-shuang cao-mao sima-yi sima-shi sima-zhao sima-yan jiang-wan fei-yi jiang-wei deng-ai zhong-hui sun-hao wang-jun du-yu zhang-liao'.split())
 
 
@@ -364,6 +365,15 @@ def expand_events(base, R):
         [('v004-b0032','以衞將軍司馬文王為大將軍，錄尚書事。'),('v028-b0055','會遷黃門侍郎')],
         [('v028-b0055','景王薨於許昌，文王總統六軍'),('v004-b0077','進晉公爵為王')]])
 
+    add('shouchun-siege','司马昭围攻寿春','257—258年 · 甘露二年至三年',
+        '诸葛诞据寿春起兵，司马昭围困待变，以招降和攻城收束淮南战事。',
+        [('sima-zhao','统军围攻寿春'),('zhong-hui','以书信策动吴援将领出降'),('诸葛诞','据寿春起兵'),('王基','督军围城并进谏'),('文鸯','文钦被杀后出降'),('文虎','与兄文鸯一同出降')],[
+        '257年，魏廷征诸葛诞入朝任司空，诸葛诞没有接受，杀扬州刺史乐綝，据寿春起兵，向吴求援。司马昭督中外诸军进讨，以王基、陈骞等围城，又派部队防备吴援。围城与阻援同时展开，寿春内外各支军队的粮食和协作，逐渐决定战事走向。',
+        '有人主张急攻，司马昭担心坚城难下，援军再到便会腹背受敌，决定深沟高垒，等待城中自困。王基反对中途移营，他听取建议，保持围势。钟会又利用全氏家族的矛盾设计书信，使吴援中的全怿等将领出降，城中军心更加分裂，粮食也日渐耗尽。',
+        '258年初，诸葛诞与文钦争执，杀死文钦。文钦的儿子文鸯、文虎逃出城投降，司马昭没有听从处死二人的建议，而让他们绕城喊话，说文钦的儿子尚且不杀，其余人又何必害怕。随后魏军四面进攻，寿春被破，诸葛诞突围时被杀，唐咨等及大批吴军归降。',
+        '破城后，有人建议将吴军降卒全部处死，司马昭没有采纳，而将他们安置在三河附近郡县。王基又劝止了乘胜深入吴境的计划。这场战争既有长期围困，也有招降、离间和战后安置；它让司马昭进一步控制淮南，也把诸葛诞、钟会与王基等人的经历连在一起。'
+        ], [[('v028-b0021',),('v028-b0022',)],[('v028-b0024',),('v027-b0027',),('v028-b0057',)],[('v028-b0023',)],[('v028-b0024',),('v027-b0027',)]])
+
     add('cao-mao-death','曹髦出兵与被杀','260年 · 甘露五年',
         '皇帝试图反抗司马昭控制，冲突中被杀；官方令与注引记录不同。',
         [('cao-mao','出兵的皇帝'),('sima-zhao','掌权大臣'),('sima-yan','后迎曹奂'),('贾充','迎击皇帝部众'),('成济','裴注记其刺帝'),('王经','劝止出兵者')], [
@@ -487,6 +497,7 @@ def expand_events(base, R):
 def build_relationships(R):
     """Curated links: co-temporality alone never creates a causal edge."""
     rows = [
+        ('sima-zhao-regency','shouchun-siege','process','司马昭接掌辅政后，亲自统军处理诸葛诞起兵与吴军增援。',False,[('v028-b0055',),('v028-b0022',)]),
         ('yellow-turbans','dong-zhuo-capital','process','两事同属汉末秩序变化；张角起事与董卓掌京相隔数年，不作直接因果。',True,[('v001-b0003','黃巾起。'),('v001-b0005','京都大亂。')]),
         ('dong-zhuo-capital','anti-dong-coalition','context','董卓专断朝政，州郡兴兵讨伐；联盟成立和迁都见于次年记事。',False,[('v046-b0006','卓擅朝政'),('v001-b0006','同時俱起兵')]),
         ('anti-dong-coalition','welcome-emperor','process','讨董时迁帝长安，后续战乱使朝廷流徙，196年曹操迎帝都许；这是朝廷迁徙的连续进程。',False,[('v001-b0007','徙天子都長安'),('v006-b0014','乃以天子還洛陽'),('v006-b0016','太祖乃迎天子都許。')]),

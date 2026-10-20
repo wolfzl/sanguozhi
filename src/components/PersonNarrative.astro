@@ -1,0 +1,21 @@
+---
+import type {Paragraph} from '../lib/catalog';
+interface Props { paragraph: Paragraph }
+const {paragraph}=Astro.props;
+const links = paragraph.eventLinks ?? [];
+const parts: {text: string; eventId?: string}[] = [];
+let rest = paragraph.text;
+// Editorial links follow their order in the paragraph; render plain text safely.
+for (const link of links) {
+  const index = rest.indexOf(link.label);
+  if (index < 0) throw new Error(`Missing event label: ${link.label}`);
+  parts.push({text:rest.slice(0,index)}, {text:link.label,eventId:link.eventId});
+  rest = rest.slice(index + link.label.length);
+}
+parts.push({text:rest});
+---
+{parts.map(part=>part.eventId?<a href={`/events/${part.eventId}/`}>{part.text}</a>:part.text)}
+<style>
+  a { color: var(--red); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+</style>

@@ -12,6 +12,7 @@ export interface SourceRef {
 export interface Paragraph {
   text: string;
   refs: SourceRef[];
+  eventLinks?: { label: string; eventId: string }[];
 }
 export interface SourceNote {
   title: string;
@@ -26,10 +27,11 @@ export interface Person {
   role: string;
   lead: string;
   period: string;
+  lifespan?: { text: string; sourceTitle: string; sourceUrl: string; quote: string; note: string };
   aliases: string[];
   tags: string[];
   paragraphs: Paragraph[];
-  milestones: (Paragraph & { when: string; title: string })[];
+  milestones: (Paragraph & { when: string; title: string; eventIds?: string[] })[];
   relations: { personId: string; label: string; refs: SourceRef[] }[];
   reading: string[];
   eventIds: string[];

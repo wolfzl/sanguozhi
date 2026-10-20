@@ -21,6 +21,30 @@ export function collectReferences(value) {
   return Object.values(value).flatMap(collectReferences);
 }
 
+export function validatePersonEventLinks(people, events) {
+  const errors = [];
+  const byId = new Map(events.map(event=>[event.id,event]));
+  for (const person of people) {
+    const targets = [];
+    for (const paragraph of person.paragraphs) {
+      let offset = 0;
+      for (const link of paragraph.eventLinks ?? []) {
+        const index = link.label ? paragraph.text.indexOf(link.label,offset) : -1;
+        if (index < 0) errors.push(`Missing or unordered event label ${person.id}/${link.label}`);
+        else offset = index + link.label.length;
+        targets.push(link.eventId);
+      }
+    }
+    for (const milestone of person.milestones) targets.push(...(milestone.eventIds ?? []));
+    for (const id of targets) {
+      if (!byId.has(id)) errors.push(`Missing person event target ${person.id}/${id}`);
+      else if (!person.eventIds.includes(id) || !byId.get(id).participants.some(p=>p.personId===person.id))
+        errors.push(`Missing reciprocal person event ${person.id}/${id}`);
+    }
+  }
+  return errors;
+}
+
 export function validateTimeline(events, relations) {
   const errors = [];
   const ids = new Set(events.map(e => e.id));
