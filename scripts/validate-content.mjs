@@ -5,6 +5,7 @@ import {
   collectReferences,
   validateTimeline,
   validatePersonEventLinks,
+  validatePortraits,
 } from "./content-validation.mjs";
 const book = JSON.parse(fs.readFileSync("src/data/book.json", "utf8"));
 const edition = JSON.parse(fs.readFileSync("src/data/edition.json", "utf8"));
@@ -24,6 +25,7 @@ assert.equal(Math.min(...events.map(e=>e.year)),edition.startYear);
 assert.equal(Math.max(...events.map(e=>e.endYear)),edition.endYear);
 assert.deepEqual(validateTimeline(events,eventRelations),[]);
 assert.deepEqual(validatePersonEventLinks(people,events),[]);
+assert.deepEqual(validatePortraits(people,book),[]);
 for (const records of [people, events, eventRelations, book.volumes])
   assert.equal(
     new Set(records.map((r) => r.id)).size,

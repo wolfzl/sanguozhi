@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as api from '../scripts/content-validation.mjs';
-const event = (id,year) => ({id,year,endYear:year,order:0,phase:'states',importance:'key',lanes:['shu'],categories:['war'],participants:[]});
+const event = (id,year) => ({id,year,endYear:year,order:0,phase:year<211?'formation':year<239?'states':'unification',importance:'key',lanes:['shu'],categories:['war'],participants:[]});
 const edge = {id:'a-b',from:'a',to:'b',type:'process',summary:'同一进程中的后续行动。',interpretation:true,refs:[{blockId:'source'}]};
 test('rejects an event relationship with a missing target or an unconnected event',()=>{
  assert.equal(typeof api.validateTimeline,'function');
@@ -22,4 +22,9 @@ test('accepts an explicitly sourced parallel comparison without turning it into 
 
 test('accepts independent lords in the formation and later consolidation periods',()=>{
  assert.deepEqual(api.validateTimeline([{...event('a',199),lanes:['lords']},{...event('b',211),lanes:['wei','lords']}],[edge]),[]);
+});
+
+test('rejects stage labels that would move later events ahead of earlier years',()=>{
+ const errors=api.validateTimeline([{...event('a',241),phase:'states',lanes:['wu']},{...event('b',249),phase:'unification',lanes:['wei']}],[edge]);
+ assert.ok(errors.some(e=>e.includes('phase year a')));
 });

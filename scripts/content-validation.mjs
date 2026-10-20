@@ -21,6 +21,28 @@ export function collectReferences(value) {
   return Object.values(value).flatMap(collectReferences);
 }
 
+export function validatePortraits(people, book) {
+  const errors = [];
+  for (const p of people) {
+    const life = p.lifespan;
+    if (!life || ['text','sourceTitle','sourceUrl','quote','note'].some(key=>!life[key]?.trim())) {
+      errors.push(`Missing lifespan evidence ${p.id}`);
+    } else if (life.sourceUrl.startsWith('/')) {
+      const match = life.sourceUrl.match(/^\/read\/(\d{3})\/#(v\d{3}-b\d{4}(?:-n\d{2})?)$/);
+      const volume = book.volumes.find(v=>v.id===match?.[1]);
+      const sources = volume?.blocks.flatMap(b=>[{id:b.id,text:b.mainText},...b.notes]) ?? [];
+      if (!sources.find(s=>s.id===match?.[2])?.text.includes(life.quote)) errors.push(`Invalid lifespan quote ${p.id}`);
+    } else if (!life.sourceUrl.startsWith('https://')) errors.push(`Invalid lifespan URL ${p.id}`);
+    if (!p.courtesy?.trim()) errors.push(`Empty courtesy name ${p.id}`);
+    if (!p.paragraphs.some(part=>part.eventLinks?.length)) errors.push(`Portrait without narrative events ${p.id}`);
+    if (!p.milestones.some(part=>part.eventIds?.length)) errors.push(`Portrait without milestone events ${p.id}`);
+    if (p.milestones.some(part=>!part.when?.includes('年'))) errors.push(`Undated milestone ${p.id}`);
+    const ids = p.relations.map(r=>r.personId);
+    if (ids.includes(p.id) || new Set(ids).size!==ids.length) errors.push(`Duplicate or self relation ${p.id}`);
+  }
+  return errors;
+}
+
 export function validatePersonEventLinks(people, events) {
   const errors = [];
   const byId = new Map(events.map(event=>[event.id,event]));
@@ -53,6 +75,8 @@ export function validateTimeline(events, relations) {
   for (const event of events) {
     if (!Number.isInteger(event.year) || !Number.isInteger(event.endYear) || event.endYear < event.year) errors.push(`Invalid time range ${event.id}`);
     if (!Number.isInteger(event.order)) errors.push(`Missing same-year order ${event.id}`);
+    const expectedPhase = event.year < 211 ? 'formation' : event.year < 239 ? 'states' : 'unification';
+    if (event.phase !== expectedPhase) errors.push(`Invalid phase year ${event.id}`);
     if (!['formation','states','unification'].includes(event.phase)) errors.push(`Invalid phase ${event.id}`);
     if (!['key','standard'].includes(event.importance)) errors.push(`Invalid importance ${event.id}`);
     if (!Array.isArray(event.lanes) || event.lanes.length === 0 || event.lanes.some(l => !['common','wei','shu','wu','lords'].includes(l)) || new Set(event.lanes).size !== event.lanes.length) errors.push(`Invalid lanes ${event.id}`);

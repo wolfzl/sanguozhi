@@ -179,6 +179,25 @@ events.sort(key=lambda e: (e['year'], e['order']))
 event_relations = build_relationships(R)
 from lords_content import expand_lords
 people, events, event_relations = expand_lords(people, events, event_relations, R)
+from portrait_events_wei import apply as events_wei
+from portrait_events_shu import apply as events_shu
+from portrait_events_wu import apply as events_wu
+portrait_event_start = len(events)
+for expand in (events_wei, events_shu, events_wu):
+    expand(people, events, event_relations, R)
+names = {p['id']: p['name'] for p in people}
+for event in events[portrait_event_start:]:
+    event['tags'] = list(dict.fromkeys(event['tags'] + [names[p['personId']] if p.get('personId') else p['name'] for p in event['participants']]))
+from portraits_han import apply as portraits_han
+from portraits_wei_jin import apply as portraits_wei_jin
+from portraits_shu import apply as portraits_shu
+from portraits_wu import apply as portraits_wu
+for revise in (portraits_han, portraits_wei_jin, portraits_shu, portraits_wu):
+    revise(people, events, R)
+for person in people:
+    person['courtesy'] = person['courtesy'] or '本书未详'
+    # A revised relationship replaces older seeds with the same target.
+    person['relations'] = list({r['personId']: r for r in reversed(person['relations'])}.values())[::-1]
 events.sort(key=lambda e: (e["year"], e["order"]))
 
 for p in people:

@@ -1,6 +1,6 @@
 import { normalizeSearch, searchText } from "./search.mjs";
 export const categories = {war:"战争",state:"建国与政权更替",succession:"继承与权力变化",diplomacy:"联盟外交",governance:"治理"};
-export const phases = {formation:{title:"汉末动荡与势力形成",period:"184—208",lead:"从汉廷失序到诸侯竞逐，看各方如何形成势力。"},states:{title:"三国建立与竞争",period:"211—234",lead:"建国、战争与外交，让三条线不断交汇。"},unification:{title:"政权变化与归于统一",period:"239—280",lead:"继承与权力转移，最终汇入新的时代。"}};
+export const phases = {formation:{title:"汉末动荡与势力形成",period:"184—209",lead:"从汉廷失序到诸侯竞逐，看各方如何形成势力。"},states:{title:"三国建立与竞争",period:"211—238",lead:"建国、战争与外交，让三条线不断交汇。"},unification:{title:"政权变化与归于统一",period:"239—280",lead:"继承与权力转移，最终汇入新的时代。"}};
 export const laneIds = ["wei","shu","wu","lords"];
 export const relationTypes = {context:"背景与后果",process:"同一历史进程",parallel:"并行对照",succession:"政权承继"};
 export function parseTimelineState(search = "") {
