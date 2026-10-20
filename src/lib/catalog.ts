@@ -19,6 +19,27 @@ export interface SourceNote {
   text: string;
   refs: SourceRef[];
 }
+export interface DossierRecord extends Paragraph {
+  when: string;
+  title: string;
+  category: string;
+  eventIds?: string[];
+}
+export interface PersonDossier {
+  tier: '核心人物' | '拓展人物' | '背景人物';
+  hometown: string;
+  highestOffice: string;
+  highestTitle: string;
+  posthumous: string;
+  deeds: string[];
+  refs: SourceRef[];
+  civil: DossierRecord[];
+  civilNote: string;
+  military: DossierRecord[];
+  setbacks: DossierRecord[];
+  extraRelations: {name: string; label: string; refs: SourceRef[]}[];
+  glossary: {term: string; text: string}[];
+}
 export interface Person {
   id: string;
   name: string;
@@ -28,10 +49,11 @@ export interface Person {
   lead: string;
   period: string;
   lifespan?: { text: string; sourceTitle: string; sourceUrl: string; quote: string; note: string };
+  dossier?: PersonDossier;
   aliases: string[];
   tags: string[];
   paragraphs: Paragraph[];
-  milestones: (Paragraph & { when: string; title: string; eventIds?: string[] })[];
+  milestones: (Paragraph & { when: string; title: string; office?: string; eventIds?: string[] })[];
   relations: { personId: string; label: string; refs: SourceRef[] }[];
   reading: string[];
   eventIds: string[];

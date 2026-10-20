@@ -194,6 +194,8 @@ from portraits_shu import apply as portraits_shu
 from portraits_wu import apply as portraits_wu
 for revise in (portraits_han, portraits_wei_jin, portraits_shu, portraits_wu):
     revise(people, events, R)
+from zhangfei_profile import apply as apply_zhangfei_profile
+apply_zhangfei_profile(people, events, R)
 for person in people:
     person['courtesy'] = person['courtesy'] or '本书未详'
     # A revised relationship replaces older seeds with the same target.

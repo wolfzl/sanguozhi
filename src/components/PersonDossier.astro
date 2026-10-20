@@ -1,0 +1,153 @@
+---
+import Sources from './Sources.astro';
+import Citations from './Citations.astro';
+import Share from './Share.astro';
+import EventRow from './EventRow.astro';
+import PersonNarrative from './PersonNarrative.astro';
+import { personById, eventById, referencesFor, volumes, volumeTitle } from '../lib/catalog';
+import type { Person } from '../lib/catalog';
+interface Props { person: Person }
+const { person: p } = Astro.props;
+const d = p.dossier!;
+const refs = referencesFor(p);
+const sections = [
+  {id:'civil-achievements',title:'文治功绩',eyebrow:'治理与谋划',records:d.civil,note:d.civilNote},
+  {id:'military-achievements',title:'武功功绩',eyebrow:'征战中的贡献',records:d.military},
+  {id:'setbacks',title:'失误与挫折',eyebrow:'看见经历中的得失',records:d.setbacks},
+];
+const navigation = [
+  ['life','人物介绍'],['milestones','生平履历'],
+  ...sections.map(s=>[s.id,s.title]),['relations','人物关系'],['reading-note','阅读提示'],
+  ['related-events','相关事件'],['sources','原文依据'],
+];
+---
+<div class="shell detail-page person-dossier">
+  <a class="back-link" href="/people/">← 人物列表</a>
+  <header class="detail-heading">
+    <div>
+      <div class="eyebrow">人物 / {p.faction}<span class="reading-tier">{d.tier}</span></div>
+      <h1>{p.name}<span>字 {p.courtesy}</span></h1>
+      <p class="detail-lead">{p.lead}</p>
+    </div>
+    <Share />
+  </header>
+  <div class="article-layout">
+    <aside class="detail-sidebar">
+      <div class="profile-seal" aria-hidden="true">{p.name.slice(0,1)}</div>
+      <span class="section-eyebrow">人物小档案</span>
+      <dl>
+        {p.lifespan && <>
+          <dt>生卒年</dt>
+          <dd>{p.lifespan.text}<details class="lifespan-evidence"><summary>年代依据</summary><p>{p.lifespan.note}<a href={p.lifespan.sourceUrl}>{p.lifespan.sourceTitle} ↗</a></p></details></dd>
+        </>}
+        <dt>籍贯</dt><dd>{d.hometown}</dd>
+        <dt>主要身份</dt><dd>{p.role}</dd>
+        <dt>最高官职</dt><dd>{d.highestOffice}</dd>
+        <dt>最高爵位</dt><dd>{d.highestTitle}</dd>
+        <dt>谥号</dt><dd>{d.posthumous}</dd>
+        <dt>常见称谓</dt><dd>{p.aliases.map(a=>a==='桓侯'?'张桓侯':a).join('、')}</dd>
+        <dt>代表事迹</dt><dd>{d.deeds.join('、')}</dd>
+      </dl>
+      <nav aria-label="本页目录">
+        {navigation.map(([id,title],index)=><a href={`#${id}`}>{title}<span>{String(index+1).padStart(2,'0')}</span></a>)}
+      </nav>
+    </aside>
+    <article class="article-body">
+      <section id="life" class="article-section">
+        <div class="section-eyebrow">认识这个人</div><h2>人物介绍</h2>
+        {p.paragraphs.map(paragraph=><p><PersonNarrative paragraph={paragraph}/><Citations refs={paragraph.refs} all={refs}/></p>)}
+      </section>
+      <section id="milestones" class="article-section">
+        <div class="section-eyebrow">沿着经历看变化</div><h2>生平履历</h2>
+        <table class="dossier-table career-table">
+          <caption class="sr-only">张飞的重要经历与官职、爵位变化</caption>
+          <thead><tr><th scope="col">时间</th><th scope="col">重要经历</th><th scope="col">官职、爵位变化</th></tr></thead>
+          <tbody>{p.milestones.map(m=><tr>
+            <th scope="row" data-label="时间"><span class="milestone-date">{m.when}</span></th>
+            <td data-label="重要经历"><p>{m.text}<Citations refs={m.refs} all={refs}/></p>{m.eventIds && m.eventIds.length>0&&<div class="record-events">{m.eventIds.map(id=><a href={`/events/${id}/`}>{eventById(id).title} ↗</a>)}</div>}</td>
+            <td data-label="官职、爵位变化" class:list={{'office-change':m.office!=='—','no-change':m.office==='—'}}>{m.office}</td>
+          </tr>)}</tbody>
+        </table>
+      </section>
+      {sections.map(section=><section id={section.id} class="article-section">
+        <div class="section-eyebrow">{section.eyebrow}</div><h2>{section.title}</h2>
+        {section.records.length>0?<table class="dossier-table achievement-table">
+          <caption class="sr-only">{p.name}的{section.title}</caption>
+          <thead><tr><th scope="col">年份</th><th scope="col">{section.id==='setbacks'?'事件':'功绩'}</th><th scope="col">{section.id==='setbacks'?'性质':'类型'}</th><th scope="col">{section.id==='setbacks'?'经过与后果':'具体表现与影响'}</th></tr></thead>
+          <tbody>{section.records.map(record=><tr>
+            <th scope="row" data-label="年份">{record.when}</th>
+            <td data-label={section.id==='setbacks'?'事件':'功绩'}><strong>{record.title}</strong></td>
+            <td data-label={section.id==='setbacks'?'性质':'类型'}><span class="record-category">{record.category}</span></td>
+            <td data-label={section.id==='setbacks'?'经过与后果':'具体表现与影响'}><p>{record.text}<Citations refs={record.refs} all={refs}/></p>{record.eventIds && record.eventIds.length>0&&<div class="record-events">{record.eventIds.map(id=><a href={`/events/${id}/`}>{eventById(id).title} ↗</a>)}</div>}</td>
+          </tr>)}</tbody>
+        </table>:<p class="evidence-note">{section.note}</p>}
+      </section>)}
+      <section id="relations" class="article-section">
+        <div class="section-eyebrow">他与谁的故事交织</div><h2>人物关系</h2>
+        <div class="relation-list">
+          {p.relations.map(r=><div class="relation"><a href={`/people/${r.personId}/`}>{personById(r.personId).name}<span aria-hidden="true">↗</span></a><p>{r.label}<Citations refs={r.refs} all={refs}/></p></div>)}
+          {d.extraRelations.map(r=><div class="relation"><span class="relation-name">{r.name}</span><p>{r.label}<Citations refs={r.refs} all={refs}/></p></div>)}
+        </div>
+      </section>
+      {p.note&&<aside id="reading-note" class="editor-note"><span class="section-eyebrow">阅读提示</span><h3>{p.note.title}</h3><p>{p.note.text}<Citations refs={p.note.refs} all={refs}/></p></aside>}
+      <details class="glossary"><summary>文中名词 <span>领 · 假节 · 追谥</span></summary><dl>{d.glossary.map(item=><><dt>{item.term}</dt><dd>{item.text}</dd></>)}</dl></details>
+      <section id="related-events" class="article-section">
+        <div class="section-eyebrow">从人物走向事件</div><h2>相关事件</h2>
+        <div class="event-list compact">{p.eventIds.map(id=><EventRow event={eventById(id)}/>)}</div>
+      </section>
+      <Sources refs={refs}/>
+      <section class="original-invite"><span>继续读他的原传</span>{p.reading.map(id=>{const v=volumes.find(x=>x.id===id)!;return <a href={`/read/${id}/`}>{volumeTitle(v)} ↗</a>;})}</section>
+    </article>
+  </div>
+</div>
+
+<style>
+  .reading-tier{display:inline-block;margin-left:14px;padding:3px 9px;border:1px solid var(--line);color:var(--red);font-size:10px;letter-spacing:1px}
+  .lifespan-evidence{margin-top:5px;font-size:10px;color:var(--muted)}
+  .lifespan-evidence summary{cursor:pointer;width:fit-content}
+  .lifespan-evidence p{margin-top:6px;line-height:1.9}
+  .lifespan-evidence a{display:block;color:var(--red)}
+  .dossier-table{width:100%;border-collapse:collapse;table-layout:fixed;border-top:1px solid var(--line);font-size:12px;line-height:1.95}
+  .dossier-table th,.dossier-table td{text-align:left;vertical-align:top;padding:17px 12px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+  .dossier-table thead th{font-size:11px;color:var(--muted);font-weight:400;background:rgba(120,90,55,.035)}
+  .dossier-table tbody th{font-weight:400;color:var(--muted);font-size:11px}
+  .dossier-table p{margin:0}
+  .dossier-table strong{font-weight:600}
+  .career-table th:first-child{width:22%}
+  .career-table thead th:nth-child(2){width:43%}
+  .career-table .milestone-date{font-size:11px;color:inherit}
+  .office-change{color:var(--red)}
+  .no-change{color:var(--muted)}
+  .achievement-table th:first-child{width:16%}
+  .achievement-table thead th:nth-child(2){width:23%}
+  .achievement-table thead th:nth-child(3){width:15%}
+  .record-category{font-size:11px;color:var(--muted)}
+  .record-events{display:flex;flex-wrap:wrap;gap:3px 12px;margin-top:7px}
+  .record-events a{font-size:10px;color:var(--red);text-decoration:underline;text-underline-offset:3px}
+  .evidence-note{padding:18px 22px;border-left:2px solid var(--line);background:rgba(120,90,55,.035);color:var(--muted)}
+  .relation-name{font:19px var(--serif)}
+  .glossary{margin:0 0 42px;border-block:1px solid var(--line);padding:16px 0;font-size:12px;scroll-margin-top:30px}
+  .glossary summary{cursor:pointer;list-style-position:inside}
+  .glossary summary span{margin-left:14px;color:var(--muted);font-size:11px}
+  .glossary dl{display:grid;grid-template-columns:55px 1fr;gap:10px 20px;margin:20px 0 5px}
+  .glossary dd{margin:0;color:var(--muted);line-height:1.9}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  @media(max-width:640px){
+    .dossier-table,.dossier-table tbody{display:block}
+    .dossier-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+    .dossier-table tr{display:block;padding:17px 0;border-bottom:1px solid var(--line)}
+    .dossier-table th,.dossier-table td{display:block;width:auto!important;border:0;padding:4px 0;font-size:13px;line-height:1.95}
+    .dossier-table tbody th{padding-top:0;color:var(--red);font-size:11px}
+    .career-table .milestone-date{font-size:11px}
+    .dossier-table td::before{content:attr(data-label);display:block;font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:5px}
+    .dossier-table .no-change{display:none}
+    .achievement-table td:nth-child(2)::before,.achievement-table td:nth-child(3)::before{display:none}
+    .achievement-table td:nth-child(2){font-size:16px;padding-bottom:0}
+    .achievement-table td:nth-child(3){padding-top:0}
+    .record-events a{font-size:11px}
+    .record-category{font-size:11px}
+    .evidence-note{padding:15px 17px}
+    .relation-name{font-size:17px}
+    .glossary{margin-bottom:30px}
+  }
+</style>

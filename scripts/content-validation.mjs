@@ -58,10 +58,38 @@ export function validatePersonEventLinks(people, events) {
       }
     }
     for (const milestone of person.milestones) targets.push(...(milestone.eventIds ?? []));
+    for (const group of ['civil','military','setbacks']) {
+      for (const record of person.dossier?.[group] ?? []) targets.push(...(record.eventIds ?? []));
+    }
     for (const id of targets) {
       if (!byId.has(id)) errors.push(`Missing person event target ${person.id}/${id}`);
       else if (!person.eventIds.includes(id) || !byId.get(id).participants.some(p=>p.personId===person.id))
         errors.push(`Missing reciprocal person event ${person.id}/${id}`);
+    }
+  }
+  return errors;
+}
+
+export function validatePersonDossiers(people) {
+  const errors = [];
+  for (const person of people) {
+    const d = person.dossier;
+    if (!d) continue;
+    if (!['核心人物','拓展人物','背景人物'].includes(d.tier)) errors.push(`Invalid reading tier ${person.id}`);
+    for (const key of ['hometown','highestOffice','highestTitle','posthumous']) {
+      if (!d[key]?.trim()) errors.push(`Missing dossier fact ${person.id}/${key}`);
+    }
+    if (!d.deeds?.length) errors.push(`Missing representative deeds ${person.id}`);
+    for (const group of ['civil','military','setbacks']) {
+      if (!Array.isArray(d[group])) { errors.push(`Missing dossier section ${person.id}/${group}`); continue; }
+      for (const record of d[group]) {
+        if (['when','title','category','text'].some(key=>!record[key]?.trim()) || !record.refs?.length)
+          errors.push(`Unsupported dossier record ${person.id}/${group}`);
+      }
+    }
+    if (!d.civil?.length && !d.civilNote?.trim()) errors.push(`Missing civil evidence explanation ${person.id}`);
+    for (const item of d.extraRelations ?? []) {
+      if (!item.name?.trim() || !item.label?.trim() || !item.refs?.length) errors.push(`Unsupported named relation ${person.id}`);
     }
   }
   return errors;

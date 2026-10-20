@@ -6,6 +6,7 @@ import {
   validateTimeline,
   validatePersonEventLinks,
   validatePortraits,
+  validatePersonDossiers,
 } from "./content-validation.mjs";
 const book = JSON.parse(fs.readFileSync("src/data/book.json", "utf8"));
 const edition = JSON.parse(fs.readFileSync("src/data/edition.json", "utf8"));
@@ -26,6 +27,7 @@ assert.equal(Math.max(...events.map(e=>e.endYear)),edition.endYear);
 assert.deepEqual(validateTimeline(events,eventRelations),[]);
 assert.deepEqual(validatePersonEventLinks(people,events),[]);
 assert.deepEqual(validatePortraits(people,book),[]);
+assert.deepEqual(validatePersonDossiers(people),[]);
 for (const records of [people, events, eventRelations, book.volumes])
   assert.equal(
     new Set(records.map((r) => r.id)).size,
@@ -52,10 +54,10 @@ for (const v of book.volumes) {
 for (const p of people) {
   const length = p.paragraphs.reduce((sum, x) => sum + x.text.length, 0);
   assert.ok(
-    length >= 300 && length <= 500,
+    length >= 300 && length <= (p.dossier ? 800 : 500),
     `${p.name}: biography length ${length}`,
   );
-  assert.ok(p.milestones.length >= 3 && p.milestones.length <= 8);
+  assert.ok(p.milestones.length >= 3 && p.milestones.length <= (p.dossier ? 12 : 8));
   for (const part of [...p.paragraphs, ...p.milestones, ...p.relations])
     assert.ok(part.refs.length);
   for (const r of p.relations)

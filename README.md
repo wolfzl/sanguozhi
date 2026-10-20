@@ -71,6 +71,7 @@ npm run preview -- --port 4324
 - `scripts/event_content.py`：30 张新增事件、38 个事件元数据及事件关系的编辑种子。
 - `scripts/person_content.py`：第二版 22 张新增人物及原人物更新的编辑种子。
 - `scripts/portraits_*.py`：按汉末、魏晋、蜀、吴分组的人物小传、生卒依据、纪年经历和人物关系。
+- `scripts/zhangfei_profile.py`：张飞新版人物资料，包含统一生平履历、功绩与挫折；在人物小传生成后应用，重新生成数据不会丢失。
 - `scripts/portrait_events_*.py`：人物关键经历所需的8个补充事件，先于人物改写生成。
 - `scripts/lords_content.py`：第三版 31 张新增人物、23 个新增事件、诸侯线及补充参与关系的编辑种子。
 - `docs/han-lords-expansion.md`：第三版增补范围、史料层次与验证记录。
@@ -107,6 +108,7 @@ npm run build
 # 另一个终端先运行 npm run preview -- --port 4324
 npm run test:browser
 npm run test:portraits
+npm run test:dossier
 npm run test:reader
 ```
 
@@ -135,3 +137,5 @@ OpenCC 浏览器模块的许可及第三方声明保留在 `public/licenses/`，
 人物介绍使用简洁、自然的小传口吻，以人物在具体事件中的行动串起生平。已核实的生卒年单独展示；推算、有争议或不详的时间注明依据，不拿活动年代代替生卒年。正文中的重要事件写明年份并链接站内事件页，关键经历也提供入口；事件页列出人物，人物页保留双向关联。故事优先取《三国志》正文和裴注；补充其他史书的生卒依据时单独注明书名和来源。65位人物现已统一这一写作方式；本轮重写其余64位，并补充辽东、兴势、东兴、毌丘俭文钦起兵、洮西、段谷、南郡与吴国二宫之争8个事件页。
 
 人物段落可附 `eventLinks`（按正文顺序填写 label 和 eventId）；关键经历可附 `eventIds`。构建会校验事件存在、链接文字出现且顺序正确、参与人物与事件双向相连。`lifespan` 保存生卒年与独立的补充史料依据。
+
+张飞新版人物页保留原有原文与事件入口，新增核心人物标签、人物资料、统一生平履历、文治功绩说明、武功功绩、失误与挫折及名词解释。`test:dossier` 支持 `SANGUO_URL`，验证资料布局、裴注跳转、事件回链和1440/390/320像素页面。其余64位人物沿用现有布局。
