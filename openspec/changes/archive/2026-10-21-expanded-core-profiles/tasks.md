@@ -11,4 +11,4 @@
 ## 3. Verification and publication
 - [x] 3.1 Check deterministic generation and preservation of other records.
 - [x] 3.2 Run reference/unit/build and responsive browser checks.
-- [ ] 3.3 Publish six pages and verify live site and closed review port.
+- [x] 3.3 Publish six pages and verify live site and closed review port.
