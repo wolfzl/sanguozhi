@@ -11,6 +11,7 @@ export interface SourceRef {
 }
 export interface Paragraph {
   text: string;
+  title?: string;
   refs: SourceRef[];
   eventLinks?: { label: string; eventId: string }[];
 }
@@ -23,9 +24,18 @@ export interface DossierRecord extends Paragraph {
   when: string;
   title: string;
   category: string;
+  group?: string;
   eventIds?: string[];
 }
 export interface PersonDossier {
+  expanded?: boolean;
+  sourceScope?: string;
+  factDetails?: {label: string; text: string; refs: SourceRef[]}[];
+  scholarship?: SourceNote[];
+  assessment?: SourceNote[];
+  readingNotes?: SourceNote[];
+  contextRelations?: (SourceNote & {category: string; people: {name: string; personId: string}[]})[];
+  appendixRefs?: SourceRef[];
   tier: '核心人物' | '拓展人物' | '背景人物';
   hometown: string;
   highestOffice: string;

@@ -54,10 +54,10 @@ for (const v of book.volumes) {
 for (const p of people) {
   const length = p.paragraphs.reduce((sum, x) => sum + x.text.length, 0);
   assert.ok(
-    length >= 300 && length <= (p.dossier ? 800 : 500),
+    length >= 300 && length <= (p.dossier?.expanded ? 6000 : p.dossier ? 800 : 500),
     `${p.name}: biography length ${length}`,
   );
-  assert.ok(p.milestones.length >= 3 && p.milestones.length <= (p.dossier ? 12 : 8));
+  assert.ok(p.milestones.length >= 3 && p.milestones.length <= (p.dossier?.expanded ? 80 : p.dossier ? 12 : 8));
   for (const part of [...p.paragraphs, ...p.milestones, ...p.relations])
     assert.ok(part.refs.length);
   for (const r of p.relations)

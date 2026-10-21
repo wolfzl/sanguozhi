@@ -78,6 +78,22 @@ export function validatePersonDossiers(people, {requireAll=false} = {}) {
       if (requireAll) errors.push(`Missing dossier ${person.id}`);
       continue;
     }
+    if (d.expanded) {
+      if (!d.sourceScope?.trim()) errors.push(`Missing expanded source scope ${person.id}`);
+      for (const key of ['scholarship','assessment','readingNotes']) {
+        if (!Array.isArray(d[key])) errors.push(`Missing expanded section ${person.id}/${key}`);
+        for (const item of d[key] ?? []) if (!item.title?.trim() || !item.text?.trim() || !item.refs?.length)
+          errors.push(`Unsupported expanded record ${person.id}/${key}`);
+      }
+      for (const item of person.paragraphs ?? []) if (!item.title?.trim() || !item.text?.trim() || !item.refs?.length)
+        errors.push(`Unsupported expanded introduction ${person.id}`);
+      for (const item of person.milestones ?? []) if (!item.title?.trim() || !item.text?.trim() || !item.office?.trim() || !item.refs?.length)
+        errors.push(`Unsupported expanded career ${person.id}`);
+      for (const item of d.contextRelations ?? []) if (!item.title?.trim() || !item.text?.trim() || !item.refs?.length)
+        errors.push(`Unsupported expanded relationship ${person.id}`);
+      for (const item of d.factDetails ?? []) if (!item.label?.trim() || !item.text?.trim() || !item.refs?.length)
+        errors.push(`Unsupported expanded fact ${person.id}`);
+    }
     if (requireAll) {
       if (!d.refs?.length) errors.push(`Missing profile evidence ${person.id}`);
       for (const m of person.milestones ?? []) if (!m.office?.trim()) errors.push(`Missing career office ${person.id}`);
