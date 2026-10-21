@@ -64,7 +64,7 @@ npm run preview -- --port 4324
 ## 内容结构与增补方法
 
 - `src/data/book.json`：66 个原文章节、固定段落与注文标识、EPUB 哈希、各页来源和修订号。
-- `src/data/cards.json`：人物与事件卡片。可直接编辑；已有卡片 ID 不应因改中文标题而改变。
+- `src/data/cards.json`：生成的人物与事件卡片。请编辑对应种子并重新生成；已有卡片 ID 不应因改中文标题而改变。
 - `src/lib/catalog.ts`：人物、事件、出处的 TypeScript 类型和页面查询。
 - `scripts/extract_epub.py`：Python 标准库 EPUB 提取器。
 - `scripts/create_cards.py`：保留原始卡片种子，再调用 `event_content.py` / `person_content.py` / `lords_content.py` 及 `portraits_*.py` / `portrait_events_*.py` 扩充，统一生成卡片、关系与人物事件双向链接。重新运行会覆盖 `cards.json`；请编辑对应种子文件。
@@ -72,6 +72,7 @@ npm run preview -- --port 4324
 - `scripts/person_content.py`：第二版 22 张新增人物及原人物更新的编辑种子。
 - `scripts/portraits_*.py`：按汉末、魏晋、蜀、吴分组的人物小传、生卒依据、纪年经历和人物关系。
 - `scripts/zhangfei_profile.py`：张飞新版人物资料，包含统一生平履历、功绩与挫折；在人物小传生成后应用，重新生成数据不会丢失。
+- `scripts/expanded_profiles.py`：曹操及刘备、诸葛亮、孙权、周瑜、陆逊、司马懿的完整档案集成。曹操确认稿保存在 `profile_caocao_content.py`，其他六人在 `profiles_*_expanded.py`。扩展字段包括有题生平、分组功绩、治学与个人侧面、史家评价、史料辨析及完整本传附录；司马懿按散见材料注明范围。
 - `scripts/portrait_events_*.py`：人物关键经历所需的8个补充事件，先于人物改写生成。
 - `scripts/lords_content.py`：第三版 31 张新增人物、23 个新增事件、诸侯线及补充参与关系的编辑种子。
 - `docs/han-lords-expansion.md`：第三版增补范围、史料层次与验证记录。
@@ -138,4 +139,4 @@ OpenCC 浏览器模块的许可及第三方声明保留在 `public/licenses/`，
 
 人物段落可附 `eventLinks`（按正文顺序填写 label 和 eventId）；关键经历可附 `eventIds`。构建会校验事件存在、链接文字出现且顺序正确、参与人物与事件双向相连。`lifespan` 保存生卒年与独立的补充史料依据。
 
-张飞新版人物页保留原有原文与事件入口，新增核心人物标签、人物资料、统一生平履历、文治功绩说明、武功功绩、失误与挫折及名词解释。`test:dossier` 支持 `SANGUO_URL`，验证资料布局、裴注跳转、事件回链和1440/390/320像素页面。其余64位人物沿用现有布局。
+张飞新版人物页保留原有原文与事件入口，新增核心人物标签、人物资料、统一生平履历、文治功绩说明、武功功绩、失误与挫折及名词解释。`test:dossier` 支持 `SANGUO_URL`，验证资料布局、裴注跳转、事件回链和1440/390/320像素页面。其他人物仍使用相同基础档案结构。曹操等七位增加完整资料，各类条目数量按史料决定；扩展页的引用区支持简繁搜索、段落编号检索和引用跳转自动展开。运行 `node scripts/expanded-dossiers-browser-check.mjs` 检查七位的1440/768/390/320像素页面、引用焦点、搜索及直接锚点。

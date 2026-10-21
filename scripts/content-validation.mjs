@@ -47,7 +47,7 @@ export function validatePersonEventLinks(people, events) {
   const errors = [];
   const byId = new Map(events.map(event=>[event.id,event]));
   for (const person of people) {
-    const targets = [];
+    const targets = (person.dossier?.relatedEventNotes ?? []).map(note=>note.eventId);
     for (const paragraph of person.paragraphs) {
       let offset = 0;
       for (const link of paragraph.eventLinks ?? []) {
@@ -57,7 +57,17 @@ export function validatePersonEventLinks(people, events) {
         targets.push(link.eventId);
       }
     }
-    for (const milestone of person.milestones) targets.push(...(milestone.eventIds ?? []));
+    for (const milestone of person.milestones) {
+      targets.push(...(milestone.eventIds ?? []));
+      if (person.dossier?.expanded) {
+        const years=(milestone.when?.match(/(?<!\d)\d{3}(?!\d)/g) ?? []).map(Number);
+        for (const id of milestone.eventIds ?? []) {
+          const event=byId.get(id);
+          if (years.length && event && (Math.min(...years)>event.endYear || Math.max(...years)<event.year))
+            errors.push(`Expanded career event date mismatch ${person.id}/${id}`);
+        }
+      }
+    }
     for (const group of ['civil','military','setbacks']) {
       for (const record of person.dossier?.[group] ?? []) targets.push(...(record.eventIds ?? []));
     }

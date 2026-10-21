@@ -36,6 +36,7 @@ export interface PersonDossier {
   readingNotes?: SourceNote[];
   contextRelations?: (SourceNote & {category: string; people: {name: string; personId: string}[]})[];
   appendixRefs?: SourceRef[];
+  relatedEventNotes?: {eventId: string; label: string; text: string}[];
   tier: '核心人物' | '拓展人物' | '背景人物';
   hometown: string;
   highestOffice: string;
@@ -49,7 +50,7 @@ export interface PersonDossier {
   militaryNote?: string;
   setbacks: DossierRecord[];
   setbacksNote?: string;
-  extraRelations: {name: string; label: string; refs: SourceRef[]}[];
+  extraRelations: {name: string; label: string; refs: SourceRef[]; people?: {name: string; personId: string}[]}[];
   glossary: {term: string; text: string}[];
 }
 export interface Person {
@@ -157,7 +158,7 @@ export function referencesFor(record: unknown): SourceRef[] {
   return result;
 }
 export function refLabel(ref: SourceRef) {
-  return `卷${Number(ref.volume)} · ${ref.kind === "peizhu" ? `裴注引 ${ref.sourceBook ?? "文献"}` : "陈寿正文"}`;
+  return `卷${Number(ref.volume)} · ${ref.kind === "peizhu" ? `裴注${/裴松之|评论|按语/.test(ref.sourceBook ?? "") ? " · " : "引 "}${ref.sourceBook ?? "文献"}` : "陈寿正文"}`;
 }
 export function personById(id: string) {
   return people.find((p) => p.id === id)!;

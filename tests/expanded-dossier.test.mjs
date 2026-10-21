@@ -18,3 +18,11 @@ test('expanded introduction and timeline require titled sourced entries',()=>{
   assert.ok(errors.some(x=>x.includes('introduction')));
   assert.ok(errors.some(x=>x.includes('career')));
 });
+
+test('expanded career event links cannot send an early battle to a later same-place battle',async()=>{
+  const {validatePersonEventLinks}=await import('../scripts/content-validation.mjs');
+  const person={id:'sunquan',dossier:{expanded:true},paragraphs:[],milestones:[{when:'208—209年',eventIds:['hefei']}],eventIds:['hefei']};
+  const event={id:'hefei',year:215,endYear:215,participants:[{personId:'sunquan'}]};
+  assert.ok(validatePersonEventLinks([person],[event]).some(x=>x.includes('date')));
+  assert.deepEqual(validatePersonEventLinks([{...person,milestones:[{when:'215年',eventIds:['hefei']}]}],[event]),[]);
+});

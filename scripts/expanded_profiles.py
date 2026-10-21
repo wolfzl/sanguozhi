@@ -26,13 +26,15 @@ def apply(people, events, R, include_six=True):
 
     def entry(record):
         r = deepcopy(record)
-        r['refs'] = [resolve(s) for s in r.pop('sources', r.pop('refs', []))]
+        sources = r.pop('sources', None)
+        if sources is None: sources = r.pop('refs', [])
+        r['refs'] = [resolve(s) for s in sources]
         return r
 
     def caocao():
         flatten = lambda groups: [dict(r,group=title) for title, rows in groups for r in rows]
         original = next(p for p in people if p['id']=='caocao')
-        links = [('兖州', 'qingzhou-army'),('迎汉献帝迁都许','welcome-emperor'),('官渡','guandu'),('赤壁','chibi'),('汉中','hanzhong')]
+        links = [('兖州', 'qingzhou-army'),('迎汉献帝迁都许','welcome-emperor'),('官渡','guandu'),('赤壁','chibi'),('219年又失去汉中','hanzhong')]
         intro = deepcopy(cao.intro)
         for label, eid in links:
             target = next(r for r in intro if label in r['text'])
@@ -57,6 +59,7 @@ def apply(people, events, R, include_six=True):
             intro=intro,careers=careers,civil=flatten(cao.civil),military=flatten(cao.military),setbacks=cao.setbacks,
             scholarship=cao.scholarship,assessment=[cao.assessment],readingNotes=cao.reading,
             contextRelations=[dict(title=r['title'],text=r['text'],category=r['when'],refs=r['refs']) for r in cao.relations],
+            relatedEventNotes=[dict(eventId=eid,label=label,text=text) for eid,label,text in cao.related_events],
             glossary=cao.glossary,appendixBlocks=[b['id'] for v in book['volumes'] if v['id']=='001' for b in v['blocks']],
             sourceScope='以卷一《武帝纪》全部正文与122条裴注为基础，按关键问题交叉核查相关本纪、列传。附录保留卷一全部有文字的正文段落与全部注释，以及本文引用的其他卷材料。音训、引典、旁及人物、星占和方术异闻保留在原文中，不逐条列为功绩。本页不声称穷尽全书所有提及曹操之处。')
 
@@ -82,6 +85,7 @@ def apply(people, events, R, include_six=True):
         for key in ['civilNote','militaryNote','setbacksNote']:
             d[key]=data.get(key,'本书现有记载不足以单列此类事迹；请结合生平、史料辨析与原文阅读。')
         d['glossary']=[dict(term=r[0],text=r[1]) if isinstance(r,(list,tuple)) else r for r in data['glossary']]
+        if 'relatedEventNotes' in data: d['relatedEventNotes']=deepcopy(data['relatedEventNotes'])
         if 'factDetails' in data: d['factDetails']=[entry(r) for r in data['factDetails']]
         if 'contextRelations' in data:
             d['contextRelations']=[entry(r) for r in data['contextRelations']]
@@ -95,11 +99,13 @@ def apply(people, events, R, include_six=True):
                 r=entry(r)
                 if r['name'] in name_to_id and name_to_id[r['name']]!=pid:
                     p['relations'].append(dict(personId=name_to_id[r['name']],label=r['label'],refs=r['refs']))
-                else:d['extraRelations'].append(r)
+                else:
+                    r['people']=[dict(name=name,personId=oid) for name,oid in name_to_id.items() if name in r['name'] and oid!=pid]
+                    d['extraRelations'].append(r)
         # Put complete biography material after cited evidence. Empty bodies aren't excerpts.
         d['appendixRefs']=[]
         for bid in data.get('appendixBlocks',[]):
             b=blocks[bid]
-            for sid in [bid]+[n['id'] for n in b['notes']]:
+            for sid in dict.fromkeys([bid]+[n['id'] for n in b['notes']]):
                 if (notes[sid]['text'] if sid in notes else blocks[sid]['mainText']).strip():
                     d['appendixRefs'].append(full_ref(sid))

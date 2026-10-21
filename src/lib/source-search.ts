@@ -25,7 +25,11 @@ if (root) {
   window.addEventListener('hashchange',()=>reveal(location.hash,true));
   document.addEventListener('click',event=>{
     const anchor=(event.target as Element).closest<HTMLAnchorElement>('a[href^="#source-"]');
-    if (anchor) reveal(anchor.hash,true);
+    if (anchor) {
+      // Repeating the current fragment has no hashchange event to restore focus.
+      if (anchor.hash === location.hash) event.preventDefault();
+      reveal(anchor.hash,true);
+    }
   });
   filter();
   reveal(location.hash);

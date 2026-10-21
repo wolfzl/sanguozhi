@@ -13,12 +13,12 @@ const refs = referencesFor(p);
 const sections = [
   {id:'civil-achievements',title:'文治功绩',eyebrow:'治理与谋划',records:d.civil,note:d.civilNote},
   {id:'military-achievements',title:'武功功绩',eyebrow:'征战中的贡献',records:d.military,note:d.militaryNote},
-  {id:'setbacks',title:'失误与挫折',eyebrow:'看见经历中的得失',records:d.setbacks,note:d.setbacksNote},
+  {id:'setbacks',title:d.expanded?'失误、挫折与争议':'失误与挫折',eyebrow:'看见经历中的得失',records:d.setbacks,note:d.setbacksNote},
 ];
 const recordGroups = (rows: DossierRecord[]) => Array.from(new Set(rows.map(r=>r.group ?? ''))).map(title=>({title,rows:rows.filter(r=>(r.group ?? '')===title)}));
 const navigation = [
   ['life','人物介绍'],['milestones','生平履历'],
-  ...sections.map(s=>[s.id,s.title]),...(d.scholarship?.length ? [['scholarship','治学与个人侧面']] : []),...(d.assessment?.length ? [['assessment','史家评价']] : []),['relations','人物关系'],...(d.readingNotes?.length || p.note?[['reading-note',d.expanded?'阅读提示与史料辨析':'阅读提示']]:[]),
+  ...sections.map(s=>[s.id,s.title]),...(d.scholarship?.length ? [['scholarship','治学与个人侧面']] : []),...(d.assessment?.length ? [['assessment','史家评价']] : []),['relations','人物关系'],...((d.expanded?d.readingNotes?.length:p.note)?[['reading-note',d.expanded?'阅读提示与史料辨析':'阅读提示']]:[]),
   ['related-events','相关事件'],['sources','原文依据'],
 ];
 ---
@@ -97,7 +97,7 @@ const navigation = [
         <div class="section-eyebrow">他与谁的故事交织</div><h2>人物关系</h2>
         {d.contextRelations ? <div class="context-relations">{d.contextRelations.map(item=><div class="narrative-part"><span class="section-eyebrow">{item.category}</span><h3>{item.title}</h3><p>{item.text}<Citations refs={item.refs} all={refs}/></p><div class="record-events">{item.people.map(r=><a href={`/people/${r.personId}/`}>{r.name} ↗</a>)}</div></div>)}</div> : <div class="relation-list">
           {p.relations.map(r=><div class="relation"><a href={`/people/${r.personId}/`}>{personById(r.personId).name}<span aria-hidden="true">↗</span></a><p>{r.label}<Citations refs={r.refs} all={refs}/></p></div>)}
-          {d.extraRelations.map(r=><div class="relation"><span class="relation-name">{r.name}</span><p>{r.label}<Citations refs={r.refs} all={refs}/></p></div>)}
+          {d.extraRelations.map(r=><div class="relation"><span class="relation-name">{r.name}</span><p>{r.label}<Citations refs={r.refs} all={refs}/></p>{r.people&&r.people.length>0&&<div class="record-events">{r.people.map(who=><a href={`/people/${who.personId}/`}>{who.name} ↗</a>)}</div>}</div>)}
         </div>}
       </section>
       {!d.expanded&&p.note&&<aside id="reading-note" class="editor-note"><span class="section-eyebrow">阅读提示</span><h3>{p.note.title}</h3><p>{p.note.text}<Citations refs={p.note.refs} all={refs}/></p></aside>}
@@ -106,7 +106,7 @@ const navigation = [
       {d.glossary.length>0&&<details class="glossary"><summary>文中名词 <span>{d.glossary.map(item=>item.term).join(' · ')}</span></summary><dl>{d.glossary.map(item=><><dt>{item.term}</dt><dd>{item.text}</dd></>)}</dl></details>}
       <section id="related-events" class="article-section">
         <div class="section-eyebrow">从人物走向事件</div><h2>相关事件</h2>
-        <div class="event-list compact">{p.eventIds.map(id=><EventRow event={eventById(id)}/>)}</div>
+        <div class="event-list compact">{p.eventIds.map(id=>{const note=d.relatedEventNotes?.find(n=>n.eventId===id); return note?<a class="event-reading-note" href={`/events/${id}/`}><small>{eventById(id).time}</small><h3>{note.label} ↗</h3><p>{note.text}</p></a>:<EventRow event={eventById(id)}/>;})}</div>
       </section>
       <Sources refs={refs} expanded={d.expanded} scope={d.sourceScope}/>
       <section class="original-invite"><span>继续读他的原传</span>{p.reading.map(id=>{const v=volumes.find(x=>x.id===id)!;return <a href={`/read/${id}/`}>{volumeTitle(v)} ↗</a>;})}</section>
@@ -115,6 +115,10 @@ const navigation = [
 </div>
 
 <style>
+  .event-reading-note{display:block;padding:20px 0;border-bottom:1px solid var(--line)}
+  .event-reading-note small{font-size:11px;color:var(--muted)}
+  .event-reading-note h3{font:19px/1.7 var(--serif);margin:6px 0}
+  .event-reading-note p{font-size:13px;margin:0;color:var(--muted)}
   .narrative-part h3,.group-title{font:20px/1.6 var(--serif);margin:25px 0 10px}
   .narrative-part{margin-bottom:24px}
   .group-title{padding:13px 0;border-top:1px solid var(--line);color:var(--red);font-size:18px;margin-top:32px}

@@ -33,7 +33,14 @@ try{
         await citation.click();
         assert.equal(await search.inputValue(),'');
         assert.ok(await page.locator(hash).evaluate(el=>el.open&&!el.hidden));
-        assert.equal(await page.evaluate(()=>document.activeElement?.tagName),'SUMMARY');
+        // Native fragment navigation briefly resets focus before hashchange runs.
+        await page.waitForFunction(hash=>document.querySelector(`${hash} > summary`)===document.activeElement,hash);
+        // Repeating a citation must also reveal a target hidden by a new filter.
+        await search.fill('a-nonexistent-source-query');
+        await citation.click();
+        await page.waitForFunction(hash=>document.querySelector(`${hash} > summary`)===document.activeElement,hash);
+        assert.equal(await search.inputValue(),'');
+        assert.ok(await page.locator(hash).evaluate(el=>el.open&&!el.hidden));
         await page.goto(`${base}/people/${p.id}/${hash}`,{waitUntil:'networkidle'});
         assert.ok(await page.locator(hash).evaluate(el=>el.open));
         await search.fill('裴注');await search.dispatchEvent('input');

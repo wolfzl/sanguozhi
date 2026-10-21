@@ -203,7 +203,7 @@ from dossiers_wu import apply as dossiers_wu
 for expand_dossiers in (dossiers_han, dossiers_wei_jin, dossiers_shu, dossiers_wu):
     expand_dossiers(people, events, R)
 from expanded_profiles import apply as expanded_profiles
-expanded_profiles(people, events, R, include_six=False)
+expanded_profiles(people, events, R)
 for person in people:
     person['courtesy'] = person['courtesy'] or '本书未详'
     # A revised relationship replaces older seeds with the same target.
