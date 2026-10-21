@@ -27,7 +27,7 @@ assert.equal(Math.max(...events.map(e=>e.endYear)),edition.endYear);
 assert.deepEqual(validateTimeline(events,eventRelations),[]);
 assert.deepEqual(validatePersonEventLinks(people,events),[]);
 assert.deepEqual(validatePortraits(people,book),[]);
-assert.deepEqual(validatePersonDossiers(people),[]);
+assert.deepEqual(validatePersonDossiers(people,{requireAll:true}),[]);
 for (const records of [people, events, eventRelations, book.volumes])
   assert.equal(
     new Set(records.map((r) => r.id)).size,

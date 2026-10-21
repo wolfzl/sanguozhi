@@ -36,7 +36,9 @@ export interface PersonDossier {
   civil: DossierRecord[];
   civilNote: string;
   military: DossierRecord[];
+  militaryNote?: string;
   setbacks: DossierRecord[];
+  setbacksNote?: string;
   extraRelations: {name: string; label: string; refs: SourceRef[]}[];
   glossary: {term: string; text: string}[];
 }

@@ -12,12 +12,12 @@ const d = p.dossier!;
 const refs = referencesFor(p);
 const sections = [
   {id:'civil-achievements',title:'文治功绩',eyebrow:'治理与谋划',records:d.civil,note:d.civilNote},
-  {id:'military-achievements',title:'武功功绩',eyebrow:'征战中的贡献',records:d.military},
-  {id:'setbacks',title:'失误与挫折',eyebrow:'看见经历中的得失',records:d.setbacks},
+  {id:'military-achievements',title:'武功功绩',eyebrow:'征战中的贡献',records:d.military,note:d.militaryNote},
+  {id:'setbacks',title:'失误与挫折',eyebrow:'看见经历中的得失',records:d.setbacks,note:d.setbacksNote},
 ];
 const navigation = [
   ['life','人物介绍'],['milestones','生平履历'],
-  ...sections.map(s=>[s.id,s.title]),['relations','人物关系'],['reading-note','阅读提示'],
+  ...sections.map(s=>[s.id,s.title]),['relations','人物关系'],...(p.note?[['reading-note','阅读提示']]:[]),
   ['related-events','相关事件'],['sources','原文依据'],
 ];
 ---
@@ -26,7 +26,7 @@ const navigation = [
   <header class="detail-heading">
     <div>
       <div class="eyebrow">人物 / {p.faction}<span class="reading-tier">{d.tier}</span></div>
-      <h1>{p.name}<span>字 {p.courtesy}</span></h1>
+      <h1>{p.name}<span>{p.courtesy==='本书未详'?'字号未详':`字 ${p.courtesy}`}</span></h1>
       <p class="detail-lead">{p.lead}</p>
     </div>
     <Share />
@@ -45,9 +45,10 @@ const navigation = [
         <dt>最高官职</dt><dd>{d.highestOffice}</dd>
         <dt>最高爵位</dt><dd>{d.highestTitle}</dd>
         <dt>谥号</dt><dd>{d.posthumous}</dd>
-        <dt>常见称谓</dt><dd>{p.aliases.map(a=>a==='桓侯'?'张桓侯':a).join('、')}</dd>
+        <dt>常见称谓</dt><dd>{p.aliases.map(a=>p.id==='zhangfei'&&a==='桓侯'?'张桓侯':a).join('、')||'暂无其他称谓'}</dd>
         <dt>代表事迹</dt><dd>{d.deeds.join('、')}</dd>
       </dl>
+      <div class="profile-evidence">档案依据<Citations refs={d.refs} all={refs}/></div>
       <nav aria-label="本页目录">
         {navigation.map(([id,title],index)=><a href={`#${id}`}>{title}<span>{String(index+1).padStart(2,'0')}</span></a>)}
       </nav>
@@ -60,7 +61,7 @@ const navigation = [
       <section id="milestones" class="article-section">
         <div class="section-eyebrow">沿着经历看变化</div><h2>生平履历</h2>
         <table class="dossier-table career-table">
-          <caption class="sr-only">张飞的重要经历与官职、爵位变化</caption>
+          <caption class="sr-only">{p.name}的重要经历与官职、爵位变化</caption>
           <thead><tr><th scope="col">时间</th><th scope="col">重要经历</th><th scope="col">官职、爵位变化</th></tr></thead>
           <tbody>{p.milestones.map(m=><tr>
             <th scope="row" data-label="时间"><span class="milestone-date">{m.when}</span></th>
@@ -90,7 +91,7 @@ const navigation = [
         </div>
       </section>
       {p.note&&<aside id="reading-note" class="editor-note"><span class="section-eyebrow">阅读提示</span><h3>{p.note.title}</h3><p>{p.note.text}<Citations refs={p.note.refs} all={refs}/></p></aside>}
-      <details class="glossary"><summary>文中名词 <span>领 · 假节 · 追谥</span></summary><dl>{d.glossary.map(item=><><dt>{item.term}</dt><dd>{item.text}</dd></>)}</dl></details>
+      {d.glossary.length>0&&<details class="glossary"><summary>文中名词 <span>{d.glossary.map(item=>item.term).join(' · ')}</span></summary><dl>{d.glossary.map(item=><><dt>{item.term}</dt><dd>{item.text}</dd></>)}</dl></details>}
       <section id="related-events" class="article-section">
         <div class="section-eyebrow">从人物走向事件</div><h2>相关事件</h2>
         <div class="event-list compact">{p.eventIds.map(id=><EventRow event={eventById(id)}/>)}</div>
@@ -103,6 +104,7 @@ const navigation = [
 
 <style>
   .reading-tier{display:inline-block;margin-left:14px;padding:3px 9px;border:1px solid var(--line);color:var(--red);font-size:10px;letter-spacing:1px}
+  .profile-evidence{font-size:10px;color:var(--muted);margin:12px 0 20px;line-height:1.9}
   .lifespan-evidence{margin-top:5px;font-size:10px;color:var(--muted)}
   .lifespan-evidence summary{cursor:pointer;width:fit-content}
   .lifespan-evidence p{margin-top:6px;line-height:1.9}

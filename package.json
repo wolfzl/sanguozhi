@@ -14,7 +14,8 @@
     "test:control": "python3 scripts/check-site-control.py",
     "extract": "python3 scripts/extract_epub.py",
     "test:portraits": "node scripts/portrait-browser-check.mjs",
-    "test:dossier": "node scripts/dossier-browser-check.mjs"
+    "test:dossier": "node scripts/dossier-browser-check.mjs",
+    "test:dossiers": "node scripts/all-dossiers-browser-check.mjs"
   },
   "dependencies": {
     "astro": "^5.16.0",

@@ -196,6 +196,12 @@ for revise in (portraits_han, portraits_wei_jin, portraits_shu, portraits_wu):
     revise(people, events, R)
 from zhangfei_profile import apply as apply_zhangfei_profile
 apply_zhangfei_profile(people, events, R)
+from dossiers_han import apply as dossiers_han
+from dossiers_wei_jin import apply as dossiers_wei_jin
+from dossiers_shu import apply as dossiers_shu
+from dossiers_wu import apply as dossiers_wu
+for expand_dossiers in (dossiers_han, dossiers_wei_jin, dossiers_shu, dossiers_wu):
+    expand_dossiers(people, events, R)
 for person in people:
     person['courtesy'] = person['courtesy'] or '本书未详'
     # A revised relationship replaces older seeds with the same target.

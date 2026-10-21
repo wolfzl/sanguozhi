@@ -70,11 +70,21 @@ export function validatePersonEventLinks(people, events) {
   return errors;
 }
 
-export function validatePersonDossiers(people) {
+export function validatePersonDossiers(people, {requireAll=false} = {}) {
   const errors = [];
   for (const person of people) {
     const d = person.dossier;
-    if (!d) continue;
+    if (!d) {
+      if (requireAll) errors.push(`Missing dossier ${person.id}`);
+      continue;
+    }
+    if (requireAll) {
+      if (!d.refs?.length) errors.push(`Missing profile evidence ${person.id}`);
+      for (const m of person.milestones ?? []) if (!m.office?.trim()) errors.push(`Missing career office ${person.id}`);
+      for (const group of ['civil','military','setbacks']) {
+        if (!d[group]?.length && !d[`${group}Note`]?.trim()) errors.push(`Missing evidence explanation ${person.id}/${group}`);
+      }
+    }
     if (!['核心人物','拓展人物','背景人物'].includes(d.tier)) errors.push(`Invalid reading tier ${person.id}`);
     for (const key of ['hometown','highestOffice','highestTitle','posthumous']) {
       if (!d[key]?.trim()) errors.push(`Missing dossier fact ${person.id}/${key}`);
