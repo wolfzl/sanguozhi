@@ -1,0 +1,9 @@
+---
+interface Props { text: string }
+const {text} = Astro.props;
+const paragraphs = text.split(/\n{2,}/).filter(Boolean);
+---
+{paragraphs.map(paragraph => <p>{paragraph.split(/(\[[^\]]+\]\(https?:\/\/[^)]+\))/g).map(part => {
+  const link = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)]+)\)$/);
+  return link ? <a href={link[2]} target="_blank" rel="noopener">{link[1]}</a> : part;
+})}</p>)}

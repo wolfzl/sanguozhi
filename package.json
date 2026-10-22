@@ -11,6 +11,7 @@
     "validate": "node scripts/validate-content.mjs",
     "test:browser": "node scripts/browser-check.mjs",
     "test:reader": "node scripts/reader-check.mjs",
+    "test:baihua": "node scripts/baihua-reader-check.mjs",
     "test:control": "python3 scripts/check-site-control.py",
     "extract": "python3 scripts/extract_epub.py",
     "test:portraits": "node scripts/portrait-browser-check.mjs",

@@ -1256,6 +1256,21 @@ em {
 .hide-notes .peizhu {
   display: none;
 }
+.original-text > .baihua-block {
+  text-indent: 0;
+}
+.baihua-block p {
+  margin-block: 12px;
+  text-indent: 2em;
+}
+.baihua-block .peizhu p {
+  text-indent: 0;
+}
+.baihua-note-label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
 .reader-pagination {
   display: grid;
   grid-template-columns: 1fr 1fr;
