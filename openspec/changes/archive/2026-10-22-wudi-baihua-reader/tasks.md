@@ -8,4 +8,4 @@
 
 - [x] 2.1 Pass full tests, build, existing reader checks and new vernacular checks.
 - [x] 2.2 Inspect desktop/mobile screenshots and review the patch.
-- [ ] 2.3 Merge into the website checkout, rebuild and verify the live local page.
+- [x] 2.3 Merge into the website checkout, rebuild and verify the live local page.
