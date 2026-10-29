@@ -3,12 +3,12 @@ import Base from '../../layouts/Base.astro';
 import {volumes,volumeTitle} from '../../lib/catalog';
 import type {Volume} from '../../lib/catalog';
 import BaihuaText from '../../components/BaihuaText.astro';
-import wudiTranslation from '../../data/translations/001.json';
-import wendiTranslation from '../../data/translations/002.json';
+import type wudiTranslation from '../../data/translations/001.json';
+const translations = Object.values(import.meta.glob<typeof wudiTranslation>('../../data/translations/*.json', {eager:true, import:'default'}));
 export function getStaticPaths(){return volumes.map((volume,index)=>({params:{volume:volume.id},props:{volume,index}}));}
 interface Props {volume: Volume; index: number}
 const {volume:v,index}=Astro.props;const prev=volumes[index-1];const next=volumes[index+1];
-const translation = [wudiTranslation, wendiTranslation].find(item => item.volumeId === v.id);
+const translation = translations.find(item => item.volumeId === v.id);
 const sectionTitles = new Map(translation?.sections.map(section => [section.startsAt, section.title]));
 ---
 <Base title={volumeTitle(v)} description={`${v.title}，陈寿正文与裴松之注，支持简繁${translation?'及白话':''}切换，保留来源与修订信息。`} active="read">

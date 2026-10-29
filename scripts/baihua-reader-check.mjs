@@ -52,7 +52,7 @@ try {
   }
   await page.reload({waitUntil:'networkidle'});
   assert.equal(await button('白话').getAttribute('aria-pressed'), 'true', 'Vernacular preference survives refresh');
-  await page.goto(base + '/read/003/', {waitUntil:'networkidle'});
+  await page.goto(base + '/read/031/', {waitUntil:'networkidle'});
   assert.equal(await button('白话').count(), 0, 'Untranslated volumes do not offer unavailable content');
   assert.equal(await button('简体').getAttribute('aria-pressed'), 'true');
   await page.goto(base + '/read/001/', {waitUntil:'networkidle'});
@@ -132,8 +132,29 @@ try {
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), width + 'px Wendi no overflow');
     if ([390,1440].includes(width)) await page.screenshot({path:`work/reader-wendi-baihua-${width}.png`});
   }
+  const translatedFiles = fs.readdirSync('src/data/translations').filter(file => /^\d{3}\.json$/.test(file)).sort();
+  for (const file of translatedFiles.filter(file => !['001.json', '002.json'].includes(file))) {
+    const translation = JSON.parse(fs.readFileSync(`src/data/translations/${file}`, 'utf8'));
+    await page.setViewportSize({width:390, height:900});
+    await page.goto(`${base}/read/${translation.volumeId}/`, {waitUntil:'networkidle'});
+    await button('繁体').click();
+    const original = await page.locator('[data-reader]').innerHTML();
+    await button('白话').click();
+    const rendered = await page.locator('[data-reader] .baihua-block').evaluateAll(elements => elements.map(element => ({
+      id: element.id,
+      translation: element.querySelector('[data-baihua-main]')?.textContent || '',
+      notes: [...element.querySelectorAll('.peizhu')].map(note => ({id:note.id, translation:note.querySelector('[data-baihua-note]').textContent})),
+    })));
+    const normalized = blocks => blocks.map(block => ({id:block.id, translation:normalize(block.translation), notes:block.notes.map(note => ({id:note.id, translation:normalize(note.translation)}))}));
+    assert.deepEqual(normalized(rendered), normalized(translation.blocks), file + ' renders all translations');
+    const activeIds = await page.locator('[id]').evaluateAll(elements => elements.map(element => element.id));
+    assert.equal(activeIds.length, new Set(activeIds).size, file + ' has no duplicate IDs');
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), file + ' fits mobile');
+    await button('繁体').click();
+    assert.equal(await page.locator('[data-reader]').innerHTML(), original, file + ' restores source exactly');
+  }
   assert.deepEqual(errors, []);
-  console.log('PASS: Wudi 123 main translations / 122 annotations; Wendi 39 / 47; source restoration, preferences, anchors, notes, 4 viewport sizes, denied storage.');
+  console.log(`PASS: ${translatedFiles.length} translated volumes render completely; Wudi 123/122, Wendi 39/47; source restoration, preferences, anchors, notes, responsive layout, denied storage.`);
 } finally {
   await browser.close();
 }
