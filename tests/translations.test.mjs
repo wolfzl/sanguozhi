@@ -21,7 +21,10 @@ for (const file of fs.readdirSync(directory).filter(file => file.endsWith('.json
       const original = source.blocks[index];
       assert.equal(Boolean(block.translation.trim()), Boolean(original.mainText.trim()), block.id);
       assert.deepEqual(block.notes.map(note => note.id), original.notes.map(note => note.id), block.id);
-      for (const note of block.notes) assert.ok(note.translation.trim(), note.id + ' has a translation');
+      for (const [noteIndex, note] of block.notes.entries()) {
+        // a source note that is itself empty (e.g. v018-b0048-n01) keeps an empty translation
+        assert.equal(Boolean(note.translation.trim()), Boolean(original.notes[noteIndex].text.trim()), note.id + ' translation matches source emptiness');
+      }
     }
     const blockIds = new Set(source.blocks.map(block => block.id));
     const sectionIds = translation.sections.map(section => section.startsAt);

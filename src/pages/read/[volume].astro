@@ -36,7 +36,7 @@ const sectionTitles = new Map(translation?.sections.map(section => [section.star
         {sectionTitles.has(block.id) && <h2>{sectionTitles.get(block.id)}</h2>}
         <div id={block.id} class="baihua-block">
           {block.translation && <div data-baihua-main><BaihuaText text={block.translation}/></div>}
-          {block.notes.map(note => <aside id={note.id} class="peizhu"><strong class="baihua-note-label">裴注白话</strong><div data-baihua-note><BaihuaText text={note.translation}/></div></aside>)}
+          {block.notes.filter(note => note.translation.trim()).map(note => <aside id={note.id} class="peizhu"><strong class="baihua-note-label">裴注白话</strong><div data-baihua-note><BaihuaText text={note.translation}/></div></aside>)}
         </div>
       </>)}
     </template>}
