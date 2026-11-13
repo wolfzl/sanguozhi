@@ -131,6 +131,52 @@ export function validatePersonDossiers(people, {requireAll=false} = {}) {
   return errors;
 }
 
+// v3 人物卡规则（docs/person-template-v3.md §4、§7）。只检查 dossier.schema === 'v3' 的人物。
+export const V3_LIMITS = {
+  A: {introCount:[6,9], introChars:[800,1300], careers:[15,30], records:[5,15], relations:[10,18], readingNotes:[5,12], facts:['lifespan','hometown','identity','office','title','posthumous','names','deeds']},
+  B: {introCount:[3,5], introChars:[400,700], careers:[8,15], records:[2,6], relations:[4,10], readingNotes:[2,5], facts:['hometown','identity','office','posthumous','deeds']},
+  C: {introCount:[1,2], introChars:[300,450], careers:[3,6], records:[1,6], relations:[2,4], readingNotes:[0,2], facts:['hometown','identity','office','posthumous']},
+};
+export const V3_MAX_QUOTE = 120;
+export const GENERIC_SECTION_NOTE = '本书现有记载不足以单列此类事迹；请结合生平、史料辨析与原文阅读。';
+const FACT_LABELS = {lifespan:'生卒年',hometown:'籍贯',identity:'主要身份',office:'最高官职',title:'最高爵位',posthumous:'身后称号',names:'常见称谓',deeds:'代表事迹'};
+export function validateV3Profiles(people) {
+  const errors = [];
+  for (const person of people) {
+    const d = person.dossier;
+    if (d?.schema !== 'v3') continue;
+    const id = person.id;
+    const limit = V3_LIMITS[d.contentTier];
+    if (!limit) { errors.push(`Invalid v3 content tier ${id}/${d.contentTier}`); continue; }
+    const within = (name, value, [min, max]) => { if (value < min || value > max) errors.push(`v3 ${name} out of range ${id}: ${value} not in ${min}-${max}`); };
+    for (const ref of collectReferences(person)) {
+      if (ref.quote.length > V3_MAX_QUOTE) errors.push(`v3 quote too long ${id}/${ref.blockId}: ${ref.quote.length}`);
+    }
+    const labels = new Set((d.factDetails ?? []).map(f => f.label));
+    for (const key of limit.facts) if (!labels.has(FACT_LABELS[key])) errors.push(`v3 missing fact ${id}/${key}`);
+    for (const f of d.factDetails ?? []) if (!f.refs?.length) errors.push(`v3 fact without evidence ${id}/${f.label}`);
+    within('introduction count', person.paragraphs.length, limit.introCount);
+    within('introduction chars', person.paragraphs.reduce((n, p) => n + p.text.length, 0), limit.introChars);
+    within('career count', person.milestones.length, limit.careers);
+    const careerIds = person.milestones.map(m => m.id);
+    if (careerIds.some(x => !x) || new Set(careerIds).size !== careerIds.length) errors.push(`v3 career ids missing or duplicated ${id}`);
+    for (const group of ['civil', 'military', 'setbacks']) {
+      const rows = d[group] ?? [];
+      if (rows.length) within(`${group} records`, rows.length, limit.records);
+      const note = d[`${group}Note`]?.trim();
+      if (!rows.length && (!note || note === GENERIC_SECTION_NOTE)) errors.push(`v3 empty section needs a person-specific note ${id}/${group}`);
+      for (const r of rows) if (r.careerRef && !careerIds.includes(r.careerRef)) errors.push(`v3 unknown careerRef ${id}/${r.careerRef}`);
+    }
+    if (!(d.setbacks?.length) && !d.setbacksNote?.trim()) errors.push(`v3 setbacks required ${id}`);
+    within('relation count', d.contextRelations?.length ?? 0, limit.relations);
+    for (const r of d.contextRelations ?? []) if (!r.category?.trim()) errors.push(`v3 relation without category ${id}/${r.title}`);
+    if (d.contentTier !== 'C' && !d.assessment?.length) errors.push(`v3 assessment required ${id}`);
+    within('reading note count', d.readingNotes?.length ?? 0, limit.readingNotes);
+    if (d.appendixRefs?.length) errors.push(`v3 profiles link to the reader instead of embedding appendix excerpts ${id}`);
+  }
+  return errors;
+}
+
 export function validateTimeline(events, relations) {
   const errors = [];
   const ids = new Set(events.map(e => e.id));

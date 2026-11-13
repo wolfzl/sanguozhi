@@ -7,6 +7,7 @@ import {
   validatePersonEventLinks,
   validatePortraits,
   validatePersonDossiers,
+  validateV3Profiles,
 } from "./content-validation.mjs";
 const book = JSON.parse(fs.readFileSync("src/data/book.json", "utf8"));
 const edition = JSON.parse(fs.readFileSync("src/data/edition.json", "utf8"));
@@ -28,6 +29,7 @@ assert.deepEqual(validateTimeline(events,eventRelations),[]);
 assert.deepEqual(validatePersonEventLinks(people,events),[]);
 assert.deepEqual(validatePortraits(people,book),[]);
 assert.deepEqual(validatePersonDossiers(people,{requireAll:true}),[]);
+assert.deepEqual(validateV3Profiles(people),[]);
 for (const records of [people, events, eventRelations, book.volumes])
   assert.equal(
     new Set(records.map((r) => r.id)).size,

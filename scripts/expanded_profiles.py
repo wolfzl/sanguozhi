@@ -68,6 +68,9 @@ def apply(people, events, R, include_six=True):
         for module_name in ['profiles_shu_expanded','profiles_wu_expanded','profiles_other_expanded']:
             module = __import__(module_name)
             profiles.update(module.PROFILES)
+    import profile_v3
+    v3 = profile_v3.load()
+    profiles.update({pid: profile_v3.to_expanded(seed) for pid, seed in v3.items()})
     name_to_id = {p['name']:p['id'] for p in people}
     for pid, data in profiles.items():
         p=next(p for p in people if p['id']==pid)
@@ -109,3 +112,5 @@ def apply(people, events, R, include_six=True):
             for sid in dict.fromkeys([bid]+[n['id'] for n in b['notes']]):
                 if (notes[sid]['text'] if sid in notes else blocks[sid]['mainText']).strip():
                     d['appendixRefs'].append(full_ref(sid))
+        if pid in v3:
+            profile_v3.finish(p, v3[pid], R)
