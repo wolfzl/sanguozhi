@@ -3,7 +3,6 @@ from copy import deepcopy
 from pathlib import Path
 import json
 import re
-import profile_caocao_content as cao
 
 
 def apply(people, events, R, include_six=True):
@@ -31,39 +30,7 @@ def apply(people, events, R, include_six=True):
         r['refs'] = [resolve(s) for s in sources]
         return r
 
-    def caocao():
-        flatten = lambda groups: [dict(r,group=title) for title, rows in groups for r in rows]
-        original = next(p for p in people if p['id']=='caocao')
-        links = [('兖州', 'qingzhou-army'),('迎汉献帝迁都许','welcome-emperor'),('官渡','guandu'),('赤壁','chibi'),('219年又失去汉中','hanzhong')]
-        intro = deepcopy(cao.intro)
-        for label, eid in links:
-            target = next(r for r in intro if label in r['text'])
-            target.setdefault('eventLinks', []).append(dict(label=label,eventId=eid))
-        for r in intro:
-            r['eventLinks'] = sorted(r.get('eventLinks',[]),key=lambda x:r['text'].index(x['label']))
-        careers = deepcopy(cao.career)
-        # Retain the established event associations on their corresponding year.
-        for old in original['milestones']:
-            for eid in old.get('eventIds',[]):
-                ev = next(e for e in events if e['id']==eid)
-                candidates=[]
-                for i, row in enumerate(careers):
-                    years = [int(y) for y in re.findall(r'\d{3}',row['when'])]
-                    if years and min(years)<=ev['year']<=max(years): candidates.append(i)
-                if not candidates: raise ValueError(f'No career match: {eid}')
-                careers[candidates[-1]].setdefault('eventIds',[]).append(eid)
-        return dict(lead=cao.lead,role='汉丞相、魏王，曹魏政权的奠基者',
-            facts=dict(hometown='沛国谯县',highestOffice='汉丞相，兼领冀州牧',highestTitle='魏王，216年进封；生前没有称帝',posthumous='220年先谥武王；曹丕称帝后追尊武皇帝，庙号太祖',deeds=['立足兖州','迎帝都许','兴办屯田','官渡破袁','平定河北','北征乌桓','进取关中','建立魏国']),
-            factsSources=list(dict.fromkeys(s for _,_,ss in cao.facts for s in ss)),
-            factDetails=[dict(label=label,text=text,refs=ss) for label,text,ss in cao.facts],
-            intro=intro,careers=careers,civil=flatten(cao.civil),military=flatten(cao.military),setbacks=cao.setbacks,
-            scholarship=cao.scholarship,assessment=[cao.assessment],readingNotes=cao.reading,
-            contextRelations=[dict(title=r['title'],text=r['text'],category=r['when'],refs=r['refs']) for r in cao.relations],
-            relatedEventNotes=[dict(eventId=eid,label=label,text=text) for eid,label,text in cao.related_events],
-            glossary=cao.glossary,appendixBlocks=[b['id'] for v in book['volumes'] if v['id']=='001' for b in v['blocks']],
-            sourceScope='以卷一《武帝纪》全部正文与122条裴注为基础，按关键问题交叉核查相关本纪、列传。附录保留卷一全部有文字的正文段落与全部注释，以及本文引用的其他卷材料。音训、引典、旁及人物、星占和方术异闻保留在原文中，不逐条列为功绩。本页不声称穷尽全书所有提及曹操之处。')
-
-    profiles = {'caocao':caocao()}
+    profiles = {}
     if include_six:
         for module_name in ['profiles_shu_expanded','profiles_wu_expanded','profiles_other_expanded']:
             module = __import__(module_name)

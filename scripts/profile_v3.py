@@ -8,7 +8,7 @@ import importlib
 from copy import deepcopy
 
 # 已按 v3 编写的人物种子模块。顺序不影响结果。
-V3_MODULES = ['profile_v3_guanyu', 'profile_v3_liubei', 'profile_v3_zhang_jiao']
+V3_MODULES = ['profile_v3_guanyu', 'profile_v3_liubei', 'profile_v3_zhang_jiao', 'profile_v3_zhuge_liang', 'profile_v3_zhouyu', 'profile_v3_sima_yi', 'profile_v3_luxun', 'profile_v3_sunquan', 'profile_v3_caocao']
 
 # 人物分级（scripts/person_tiers.py 按史料篇幅计算；改动须同时更新该脚本并通过 --check）。
 TIERS = {
@@ -123,6 +123,15 @@ def finish(person, seed, R):
     if seed.get('appendix'):
         d['appendixVolumes'] = seed['appendix'].get('volumes', [])
     person['reading'] = list(dict.fromkeys(seed.get('reading', person['reading'])))
+    # 经核对的年代可显式同步侧栏；未选择同步的既有样例保持原值。
+    if seed.get('syncLifespan'):
+        life = next(f for f in seed['facts'] if f['key'] == 'lifespan')
+        ref = R(*life['refs'][0])
+        person['lifespan'] = dict(
+            text=life['value'], sourceTitle=f"《三国志》卷{ref['volume']}",
+            sourceUrl=f"/read/{ref['volume']}/#{ref['blockId']}",
+            quote=ref['quote'], note=life['text'],
+        )
     # 行迹时期（docs/atlas-trajectory-guide.md），原样写入；span 转成列表便于 JSON 校验。
     if seed.get('trajectory'):
         t = deepcopy(seed['trajectory'])
