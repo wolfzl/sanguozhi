@@ -16,9 +16,16 @@ const build = (base, params) => {
 
 const spanOf = phases => [Math.min(...phases.map(p => p.span[0])), Math.max(...phases.map(p => p.span[1]))];
 
-/** 打开某个时期：模式一跳到该时期的第一站，模式二打开代表地点。 */
+/** 时期对应的站号参数：一站写“3”，多站写区间“3-4”（江山时序会把整段路线高亮为实线）。 */
+export function stopParam(stops = []) {
+  if (!stops.length) return undefined;
+  const first = stops[0], last = stops.at(-1);
+  return last > first ? `${first}-${last}` : String(first);
+}
+
+/** 打开某个时期：模式一高亮该时期在江山时序路线上的全部站，模式二打开代表地点。 */
 export function phaseUrl(base, trajectory, phase) {
-  if (trajectory.atlasPerson) return build(base, { person: trajectory.atlasPerson, stop: phase.atlasStops?.[0] });
+  if (trajectory.atlasPerson) return build(base, { person: trajectory.atlasPerson, stop: stopParam(phase.atlasStops) });
   return phase.place ? build(base, { year: phase.place.mapYear, place: phase.place.query }) : '';
 }
 

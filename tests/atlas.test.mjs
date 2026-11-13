@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {validateTrajectory} from '../scripts/content-validation.mjs';
-import {phaseUrl, routeUrl, stripNote, phaseNumeral} from '../src/lib/atlas.mjs';
+import {phaseUrl, routeUrl, stripNote, phaseNumeral, stopParam} from '../src/lib/atlas.mjs';
 
 const {people} = JSON.parse(fs.readFileSync('src/data/cards.json', 'utf8'));
 const sample = people.find(p => p.id === 'liubei');
@@ -50,6 +50,9 @@ test('atlas stops are required in mode one and keep increasing (M4)', () => {
   const q = clone();
   phase(q, 'yizhou').atlasStops = [4];
   failsWith(q, 'atlasStops must increase');
+  const r = clone();
+  phase(r, 'emperor').atlasStops = [10, 12];
+  failsWith(r, 'must be consecutive');
 });
 
 test('mode two needs a place whose name comes from the phase rows (M5)', () => {
@@ -76,7 +79,9 @@ test('trajectory is v3 only and per-row places are retired', () => {
 
 test('mode one links reuse the atlas person route', () => {
   const t = sample.dossier.trajectory;
-  assert.equal(phaseUrl(BASE, t, phase(sample, 'chibi')), `${BASE}?person=liubei&stop=3`);
+  assert.equal(phaseUrl(BASE, t, phase(sample, 'chibi')), `${BASE}?person=liubei&stop=3-4`);
+  assert.equal(phaseUrl(BASE, t, phase(sample, 'xuzhou')), `${BASE}?person=liubei&stop=1`);
+  assert.equal(phaseUrl(BASE, t, phase(sample, 'emperor')), `${BASE}?person=liubei&stop=10-12`);
   const embed = new URL(routeUrl(BASE, t, {embed: true}));
   assert.equal(embed.searchParams.get('embed'), '1');
   assert.equal(embed.searchParams.get('person'), 'liubei');
@@ -101,4 +106,7 @@ test('helpers', () => {
   assert.equal(stripNote('下邳（睢宁）'), '下邳');
   assert.equal(phaseNumeral(0), '一');
   assert.equal(phaseNumeral(6), '七');
+  assert.equal(stopParam([3, 4]), '3-4');
+  assert.equal(stopParam([8]), '8');
+  assert.equal(stopParam([]), undefined);
 });

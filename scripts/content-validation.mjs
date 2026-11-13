@@ -254,6 +254,8 @@ export function validateTrajectory(people) {
       if (atlas) {
         if (!Array.isArray(phase.atlasStops) || !phase.atlasStops.every(n => Number.isInteger(n) && n >= 0)) { errors.push(`trajectory needs atlasStops ${at}`); continue; }
         for (const n of phase.atlasStops) { if (n <= prevStop) errors.push(`trajectory atlasStops must increase ${at}`); prevStop = n; }
+        // 页面链接写成区间 stop=首-末，中间的站都会高亮，所以同一时期的站号必须连续。
+        if (phase.atlasStops.some((n, i) => i > 0 && n !== phase.atlasStops[i - 1] + 1)) errors.push(`trajectory atlasStops must be consecutive ${at}`);
       } else {
         const place = phase.place;
         if (!place) { errors.push(`trajectory needs place ${at}`); continue; }
