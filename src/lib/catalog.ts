@@ -66,12 +66,14 @@ export interface Person {
   aliases: string[];
   tags: string[];
   paragraphs: Paragraph[];
-  milestones: (Paragraph & { when: string; title: string; office?: string; eventIds?: string[] })[];
+  milestones: (Paragraph & { id?: string; when: string; title: string; office?: string; eventIds?: string[]; place?: AtlasPlace })[];
   relations: { personId: string; label: string; refs: SourceRef[] }[];
   reading: string[];
   eventIds: string[];
   note: SourceNote | null;
 }
+/** 生平履历中的行迹地点，见 docs/atlas-trajectory-guide.md。 */
+export interface AtlasPlace { name: string; query: string; province: string; mapYear: number; approx?: boolean }
 export interface Event {
   id: string;
   title: string;

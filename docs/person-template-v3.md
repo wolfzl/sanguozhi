@@ -11,6 +11,7 @@
   | C | 张角 | [profile_v3_zhang_jiao.py](../scripts/profile_v3_zhang_jiao.py) | `/people/zhang-jiao/` |
 
 - 写新人物前，先通读**同级别**的样例；结构、措辞和引文粒度都以它为准。
+- 生平履历的行迹地点（`careers[].place`）另见 [atlas-trajectory-guide.md](atlas-trajectory-guide.md)，样例是刘备。
 
 ---
 

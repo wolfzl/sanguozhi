@@ -214,3 +214,33 @@ export function validateTimeline(events, relations) {
   for (const id of ids) if(!connected.has(id)) errors.push(`Unconnected event ${id}`);
   return errors;
 }
+
+// 人物行迹地点（docs/atlas-trajectory-guide.md 的 M2、M5 与字段格式）。
+// M3、M4 需要江山时序的地名库，由 scripts/atlas-places.mjs check 检查。
+export function validateAtlasPlaces(people) {
+  const errors = [];
+  const yearsIn = when => {
+    const years = (when.match(/\d{2,4}(?=\s*[年—–-])/g) ?? []).map(Number);
+    return years.length ? [Math.min(...years), Math.max(...years)] : null;
+  };
+  for (const person of people) {
+    let previous = -Infinity;
+    for (const row of person.milestones ?? []) {
+      const place = row.place;
+      if (!place) continue;
+      const at = `${person.id}/${row.id ?? row.title}`;
+      if (person.dossier?.schema !== 'v3') { errors.push(`atlas place only allowed on v3 profiles ${at}`); continue; }
+      for (const key of ['name', 'query', 'province']) if (typeof place[key] !== 'string' || !place[key].trim()) errors.push(`atlas place missing ${key} ${at}`);
+      if (!Number.isInteger(place.mapYear)) { errors.push(`atlas mapYear must be an integer ${at}`); continue; }
+      if ('approx' in place && place.approx !== true) errors.push(`atlas approx must be omitted or true ${at}`);
+      const extra = Object.keys(place).filter(k => !['name', 'query', 'province', 'mapYear', 'approx'].includes(k));
+      if (extra.length) errors.push(`atlas place unknown field ${at}: ${extra.join(',')}`);
+      if (place.name && ![row.when, row.title, row.text].some(s => s?.includes(place.name))) errors.push(`atlas place name not in row ${at}: ${place.name}`);
+      const range = yearsIn(row.when ?? '');
+      if (range && (place.mapYear < range[0] || place.mapYear > range[1])) errors.push(`atlas mapYear outside when ${at}: ${place.mapYear} not in ${range.join('-')}`);
+      if (place.mapYear < previous) errors.push(`atlas mapYear goes backwards ${at}: ${place.mapYear} < ${previous}`);
+      previous = place.mapYear;
+    }
+  }
+  return errors;
+}
