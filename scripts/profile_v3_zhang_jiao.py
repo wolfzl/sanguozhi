@@ -74,6 +74,22 @@ PROFILE = dict(
              refs=[SUPPRESS, Q('v046-b0004', '汝穎賊困迫，走保宛城。'), KILLED]),
     ],
 
+    # 模式二：本书只明确记载魏郡起事，传道驻地和被诛地点未详。
+    # span 仅供地图取景；被诛年份仍以 when 的“确年未载”为准。
+    trajectory=dict(
+        phases=[
+            dict(id='taiping', title='传道与联结信众', when='光和年间至起事前，确年未载', span=(178, 184),
+                 careers=['taiping', 'organize'],
+                 unmappedReason='传道范围仅记“东方”，未载具体驻地。'),
+            dict(id='uprising', title='魏郡起事', when='184年', span=(184, 184),
+                 careers=['uprising'],
+                 place=dict(name='魏郡', query='魏郡', province='河北', mapYear=184, approx=True)),
+            dict(id='suppressed', title='遭讨击与被诛', when='184年起事后，确年未载', span=(184, 184),
+                 careers=['suppressed'],
+                 unmappedReason='本书未载张角被诛的具体时间、地点。'),
+        ],
+    ),
+
     records=[
         dict(section='military', when='184年', title='约期同时起事', category='组织动员', careerRef='uprising', eventIds=['yellow-turbans'],
              text='通过宗教传播事先联结各地信众，约定日期同时发动，造成“天下响应”的局面。本书没有记载张角本人指挥的具体战斗。',

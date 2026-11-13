@@ -126,6 +126,27 @@ PROFILE = dict(
              refs=[SHI, SHI_YEAR, Q('v036-b0007', '子興嗣。')]),
     ],
 
+    # 行迹时期（docs/atlas-trajectory-guide.md）：模式一，复用江山时序的关羽路线。
+    # 第 5 站（219 年陆逊屯陆口致书关羽）主角是陆逊，不挂；身后追谥也不挂行迹站。
+    # 早年 span 仅供地图取景和站号校验，显示时间仍保留“确年未载”。
+    trajectory=dict(
+        atlasPerson='guanyu',
+        phases=[
+            dict(id='early', title='早年追随刘备', when='早年，确年未载', span=(184, 199),
+                 careers=['early', 'pingyuan', 'xiapi'], atlasStops=[0]),
+            dict(id='caocao', title='在曹营立功后归刘', when='200年', span=(200, 200),
+                 careers=['captured', 'baima', 'return'], atlasStops=[1, 2]),
+            dict(id='jingzhou', title='接应与镇守荆州', when='208—215年', span=(208, 215),
+                 careers=['dangyang', 'xiangyang', 'jingzhou', 'yiyang'], atlasStops=[3]),
+            dict(id='fancheng', title='北攻樊城', when='219年', span=(219, 219),
+                 careers=['qianjiang', 'fancheng'], atlasStops=[4]),
+            dict(id='defeat', title='荆州失守与败亡', when='219年', span=(219, 219),
+                 careers=['defeat', 'death'], atlasStops=[6]),
+            dict(id='posthumous', title='身后追谥', when='260年', span=(260, 260),
+                 careers=['posthumous'], atlasStops=[]),
+        ],
+    ),
+
     records=[
         # 文治：材料少，只列有原文支撑的两条。
         dict(section='civil', when='211—219年', title='镇守荆州，恩信大行', category='镇守经营', careerRef='jingzhou',

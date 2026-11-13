@@ -15,7 +15,7 @@
 ## 0. 执行者须知（先读）
 
 1. **只做 v3 人物。** 时期写在 v3 种子文件的 `trajectory` 字段里。还没迁到 v3 的人物（诸葛亮、孙权、周瑜、陆逊、司马懿、曹操）等迁移时再做。
-2. **一次只改一个人物**，只改 `scripts/profile_v3_<id>.py`。不要改 `src/components/`、`src/lib/`、校验脚本和江山时序项目。
+2. **一次只改一个人物**，通常只改 `scripts/profile_v3_<id>.py`。不要改 `src/components/`、`src/lib/`、校验脚本和江山时序项目；需要支持新情况时先说明原因并获得授权。2026-11-13 经用户确认，模式二已支持“地点未详”的时期，见 §6。
 3. **不要提交 git，不要执行 `npm run build`**（理由同人物卡指南 §0）。
 4. **先查江山时序有没有这个人的路线**（§5）。有就用模式一，没有才用模式二。
 5. 遇到下列情况就停下汇报：江山时序路线中的某站和本书记载明显冲突；模式二的代表地点在地图上解析错位，换几个查询名都不行。
@@ -27,7 +27,7 @@
 | 模式 | 适用 | 地图上的路线 | 本站负责 |
 |---|---|---|---|
 | 一：复用江山时序路线 | 江山时序已有路线的 15 人（§5） | 江山时序自己的人物路线（`?person=<key>`） | 时期划分、每个时期对应路线的哪几站 |
-| 二：本站时期路线 | 其余人物 | 每个时期一个代表地点，连成路线（`?year=…&place=…`） | 时期划分、代表地点 |
+| 二：本站时期路线 | 其余人物 | 已知时期的代表地点连成路线（`?year=…&place=…`），地点未详的时期不标点 | 时期划分、代表地点或未标点原因 |
 
 两种模式下，**本站页面上的文字都只来自本书**：时期名称、年份、履历内容。江山时序路线里的文字（例如“与关羽、张飞于涿县募兵”）只显示在江山时序里，本站不转述。
 
@@ -39,7 +39,7 @@
 | M2 | 时期数：A 级 5–8，B 级 3–6，C 级 2–4。每个时期至少 1 行。 | `validateTrajectory` |
 | M3 | `span` 是两个整数 `(起, 止)`，起 ≤ 止；时期之间不倒退（后一期的起年不早于前一期的起年）。 | `validateTrajectory` |
 | M4 | 模式一：`atlasPerson` 写江山时序的人物 key；每个时期的 `atlasStops` 是路线中的站号（从 0 数），站点年份必须落在本时期 `span` 内；站号全程递增。和本人关系不大的站可以不挂。页面链接按首站到末站生成区间，所以同一时期的站号必须连续。 | `validateTrajectory` + `atlas-places.mjs check` |
-| M5 | 模式二：每个时期一个 `place`；`name` 必须出现在本时期某一行的 `when`、`title` 或 `text` 中；`mapYear` 落在 `span` 内且不倒退；查询名、省份、近似标记规则见 §6。 | `validateTrajectory` + `atlas-places.mjs check` |
+| M5 | 模式二：每个时期提供 `place` 或非空的 `unmappedReason`，二者互斥；全程至少有一个已知地点。`place.name` 必须出现在本时期某一行的 `when`、`title` 或 `text` 中；`mapYear` 落在 `span` 内且不倒退；查询名、省份、近似标记规则见 §6。 | `validateTrajectory` + `atlas-places.mjs check` |
 | M6 | 时期名称概括本期的发展阶段或重大事件，不超过 10 个字，不写本书没有的事。 | 人工审查 |
 
 ## 3. 数据格式
@@ -81,7 +81,8 @@ trajectory=dict(
 | `phases[].span` | 是 | `(起, 止)` 整数年，只用于校验和地图取景，不显示。 |
 | `phases[].careers` | 是 | 本时期包含的年表行 id，按顺序。 |
 | `phases[].atlasStops` | 模式一 | 对应江山时序路线的站号列表（从 0 数）；可以为空列表。 |
-| `phases[].place` | 模式二 | 代表地点 `dict(name, query, province, mapYear, approx=True?)`，含义同 §6。 |
+| `phases[].place` | 模式二，地点已知时 | 代表地点 `dict(name, query, province, mapYear, approx=True?)`，含义同 §6。 |
+| `phases[].unmappedReason` | 模式二，地点未详时 | 非空字符串，解释史料未载地点的情况；与 `place` 互斥，不生成地图站点或时期地图链接。 |
 
 数据流向：种子 `trajectory` → `profile_v3.finish()` 原样写入 `cards.json` 的 `people[].dossier.trajectory` → 页面。
 
@@ -120,6 +121,8 @@ node scripts/atlas-places.mjs person liubei
 
 每个时期选一个最能代表这一时期的地点，一般是本人在这一时期主要驻扎或决定命运的地方，**标本人所在地**，不标部将作战地、出使目的地或只是建议攻打的地方。
 
+**史料未载地点时**，保留时期和履历，以 `unmappedReason` 说明缺失，不写 `place`。页面显示“地点未详”及原因，保留跳回履历的链接；地图仅标已知地点，全程至少需要一个。只有一个已知地点时展示单点，不补造路线。若确年也未载，`when` 必须注明，`span` 只用于取景范围，不作为事件年份依据。样例为 `profile_v3_zhang_jiao.py`：传道与联结信众、魏郡起事、遭讨击与被诛三期，仅第二期在魏郡标点，地图近似解析为元城（大名）。
+
 江山时序的地名库以名城、名关为主，三国县邑不全：
 
 | 情况 | 例子 | 处理 |
@@ -144,7 +147,7 @@ node scripts/atlas-places.mjs lookup 安喜 中山 平原 平原郡 --year 184
 1. **生平履历按时期分组。** 每个时期前有一行标题：“一 · 争夺徐州 · 193—199年 · 在地图上看 ↗”。点链接会在新窗口打开江山时序：模式一用 `?person=<key>&stop=<首站>-<末站>` 把本期所有站和路线一起高亮为实线（只有一站时写 `stop=<站号>`），模式二打开代表地点。
 2. **行迹地图**（`#trajectory`，紧接生平履历，并加入侧栏目录）：
    - 嵌入地图。模式一嵌入江山时序的人物路线，和在江山时序里搜这个人看到的完全一样；模式二嵌入各时期代表地点连成的路线。
-   - 下方是时期清单：序号 · 时期名 · 时间 · 地图第几站（模式一）或代表地点（模式二），以及本期包含的履历条目（点击可跳回履历）。
+   - 下方是时期清单：序号 · 时期名 · 时间 · 地图第几站（模式一）或代表地点／地点未详说明（模式二），以及本期包含的履历条目（点击可跳回履历）。地点未详的时期没有“在地图上看”链接。
    - “在江山时序中打开 ↗”。
 
 地图地址由 `src/lib/atlas.mjs` 统一生成。本地默认 `http://127.0.0.1:8000/`，发布时用环境变量 `PUBLIC_ATLAS_BASE` 指定。
@@ -200,7 +203,8 @@ npx astro build --outDir /tmp/sgz-dist
 | `trajectory span goes backwards` | 后一期的起年早于前一期。 |
 | `trajectory atlasStops must increase` | 站号没有全程递增。 |
 | `trajectory atlasStops must be consecutive` | 同一时期的站号不连续。区间链接会把中间的站一起高亮，所以要么把中间的站也挂进来，要么拆成两个时期。 |
-| `trajectory needs atlasStops` / `needs place` | 模式一的时期缺 `atlasStops`，或模式二的时期缺 `place`。 |
+| `trajectory needs atlasStops` / `needs place or unmappedReason` | 模式一的时期缺 `atlasStops`，或模式二的时期既无 `place` 也无有效的 `unmappedReason`。 |
+| `trajectory has both place and unmappedReason` / `needs at least one mapped place` | 模式二的时期同时提供两种地点状态，或全程没有一个已知地点。 |
 | `atlas stop year outside span` | 站点年份不在时期 `span` 内。多半是上游新增事件导致站号后移，重新用 `person` 命令查站号。 |
 | `atlas place name not in phase` | 模式二的 `name` 不在本时期任何一行中。 |
 | `未识别` / `province mismatch` / `approx should be …` | 见 §6。 |

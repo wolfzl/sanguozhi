@@ -83,8 +83,14 @@ if (command === 'person') {
       if (unused.length) console.log(`  未挂的站：${unused.map(e => `${e.index} ${e.year} ${e.site}`).join('；')}`);
     } else {
       console.log(`\n${p.name}（${p.id}）：模式二，${t.phases.length} 个时期`);
+      if (!t.phases.some(ph => ph.place)) errors.push(`${p.id}: 没有可标点的地点`);
       for (const [i, ph] of t.phases.entries()) {
         const pl = ph.place;
+        if (!pl) {
+          if (typeof ph.unmappedReason !== 'string' || !ph.unmappedReason.trim()) errors.push(`${p.id}/${ph.id}: 缺少地点或未标点原因`);
+          console.log(`  ${i + 1}. ${ph.title}（${ph.when}）地点未详：${ph.unmappedReason || '未说明原因'}`);
+          continue;
+        }
         const r = resolve(pl.query, pl.mapYear);
         const at = `${p.id}/${ph.id}`;
         let flag = '';

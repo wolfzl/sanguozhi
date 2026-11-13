@@ -102,6 +102,51 @@ test('mode two links use the phase places', () => {
   assert.equal(routeUrl(BASE, {phases: []}), '');
 });
 
+const sparseRoute = () => {
+  const p = structuredClone(people.find(p => p.id === 'zhang-jiao'));
+  p.dossier.trajectory = {phases: [
+    {id: 'taiping', title: '传道与联结信众', when: '起事前，确年未载', span: [178, 184],
+      careers: ['taiping', 'organize'], unmappedReason: '只记东方，具体驻地未载。'},
+    {id: 'uprising', title: '魏郡起事', when: '184年', span: [184, 184],
+      careers: ['uprising'], place: {name: '魏郡', query: '魏郡', province: '河北', mapYear: 184, approx: true}},
+    {id: 'suppressed', title: '遭讨击与被诛', when: '起事后，确年未载', span: [184, 184],
+      careers: ['suppressed'], unmappedReason: '被诛地点未载。'},
+  ]};
+  return p;
+};
+
+test('mode two accepts unknown locations with an explicit reason', () => {
+  assert.deepEqual(validateTrajectory([sparseRoute()]), []);
+  const p = sparseRoute();
+  p.dossier.trajectory.phases[0].unmappedReason = ' ';
+  failsWith(p, 'needs place');
+  p.dossier.trajectory.phases[0].unmappedReason = true;
+  failsWith(p, 'needs place');
+});
+
+test('an unknown-location reason cannot accompany a mapped place', () => {
+  const p = sparseRoute();
+  p.dossier.trajectory.phases[1].unmappedReason = '地点未载。';
+  failsWith(p, 'both place and unmappedReason');
+});
+
+test('mode two requires at least one supported location', () => {
+  const p = sparseRoute();
+  delete p.dossier.trajectory.phases[1].place;
+  p.dossier.trajectory.phases[1].unmappedReason = '地点未载。';
+  failsWith(p, 'needs at least one mapped place');
+});
+
+test('unknown periods keep their careers without adding map stops or links', () => {
+  const t = sparseRoute().dossier.trajectory;
+  assert.equal(phaseUrl(BASE, t, t.phases[0]), '');
+  assert.equal(phaseUrl(BASE, t, t.phases[2]), '');
+  const url = new URL(routeUrl(BASE, t, {embed: true}));
+  assert.equal(url.searchParams.get('place'), '魏郡');
+  assert.equal(url.searchParams.get('year'), '184');
+  assert.equal(routeUrl(BASE, {phases: [t.phases[0], t.phases[2]]}), '');
+});
+
 test('helpers', () => {
   assert.equal(stripNote('下邳（睢宁）'), '下邳');
   assert.equal(phaseNumeral(0), '一');

@@ -18178,6 +18178,109 @@
           "civil": "文治功绩",
           "military": "武功功绩",
           "setback": "失误、挫折与争议"
+        },
+        "trajectory": {
+          "atlasPerson": "guanyu",
+          "phases": [
+            {
+              "id": "early",
+              "title": "早年追随刘备",
+              "when": "早年，确年未载",
+              "span": [
+                184,
+                199
+              ],
+              "careers": [
+                "early",
+                "pingyuan",
+                "xiapi"
+              ],
+              "atlasStops": [
+                0
+              ]
+            },
+            {
+              "id": "caocao",
+              "title": "在曹营立功后归刘",
+              "when": "200年",
+              "span": [
+                200,
+                200
+              ],
+              "careers": [
+                "captured",
+                "baima",
+                "return"
+              ],
+              "atlasStops": [
+                1,
+                2
+              ]
+            },
+            {
+              "id": "jingzhou",
+              "title": "接应与镇守荆州",
+              "when": "208—215年",
+              "span": [
+                208,
+                215
+              ],
+              "careers": [
+                "dangyang",
+                "xiangyang",
+                "jingzhou",
+                "yiyang"
+              ],
+              "atlasStops": [
+                3
+              ]
+            },
+            {
+              "id": "fancheng",
+              "title": "北攻樊城",
+              "when": "219年",
+              "span": [
+                219,
+                219
+              ],
+              "careers": [
+                "qianjiang",
+                "fancheng"
+              ],
+              "atlasStops": [
+                4
+              ]
+            },
+            {
+              "id": "defeat",
+              "title": "荆州失守与败亡",
+              "when": "219年",
+              "span": [
+                219,
+                219
+              ],
+              "careers": [
+                "defeat",
+                "death"
+              ],
+              "atlasStops": [
+                6
+              ]
+            },
+            {
+              "id": "posthumous",
+              "title": "身后追谥",
+              "when": "260年",
+              "span": [
+                260,
+                260
+              ],
+              "careers": [
+                "posthumous"
+              ],
+              "atlasStops": []
+            }
+          ]
         }
       }
     },
@@ -25598,6 +25701,56 @@
           "civil": "文治功绩",
           "military": "武功功绩",
           "setback": "失误、挫折与争议"
+        },
+        "trajectory": {
+          "phases": [
+            {
+              "id": "taiping",
+              "title": "传道与联结信众",
+              "when": "光和年间至起事前，确年未载",
+              "span": [
+                178,
+                184
+              ],
+              "careers": [
+                "taiping",
+                "organize"
+              ],
+              "unmappedReason": "传道范围仅记“东方”，未载具体驻地。"
+            },
+            {
+              "id": "uprising",
+              "title": "魏郡起事",
+              "when": "184年",
+              "span": [
+                184,
+                184
+              ],
+              "careers": [
+                "uprising"
+              ],
+              "place": {
+                "name": "魏郡",
+                "query": "魏郡",
+                "province": "河北",
+                "mapYear": 184,
+                "approx": true
+              }
+            },
+            {
+              "id": "suppressed",
+              "title": "遭讨击与被诛",
+              "when": "184年起事后，确年未载",
+              "span": [
+                184,
+                184
+              ],
+              "careers": [
+                "suppressed"
+              ],
+              "unmappedReason": "本书未载张角被诛的具体时间、地点。"
+            }
+          ]
         }
       }
     },

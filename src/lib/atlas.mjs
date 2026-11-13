@@ -1,7 +1,7 @@
 // 人物行迹地图：把人物卡的 trajectory（按时期分组）转成江山时序（jiangshan-map）的深链。
 // 规则见 docs/atlas-trajectory-guide.md。本文件同时被页面和 Node 脚本使用，保持纯 JS。
 //   模式一：trajectory.atlasPerson 存在，地图用江山时序自己的人物路线（?person=…&stop=…）。
-//   模式二：每个时期一个代表地点 place，连成本站路线（?year=…&place=…）。
+//   模式二：已知时期的代表地点 place 连成本站路线；地点未详的时期不标点。
 
 export const DEFAULT_ATLAS_BASE = 'http://127.0.0.1:8000/';
 
@@ -38,6 +38,7 @@ export function routeUrl(base, trajectory, { embed = false } = {}) {
   const head = embed ? { embed: 1 } : {};
   if (trajectory.atlasPerson) return build(base, { ...head, person: trajectory.atlasPerson, ...range });
   const placed = phases.filter(p => p.place);
+  if (!placed.length) return '';
   return build(base, {
     ...head,
     year: placed.map(p => p.place.mapYear).join(','),

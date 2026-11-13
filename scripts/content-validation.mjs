@@ -236,6 +236,7 @@ export function validateTrajectory(people) {
     const careerIds = person.milestones.map(m => m.id);
     if (covered.join('|') !== careerIds.join('|')) errors.push(`trajectory careers not covered in order ${id}`);
     const atlas = typeof t.atlasPerson === 'string' && t.atlasPerson.trim();
+    if (!atlas && !phases.some(ph => ph.place)) errors.push(`trajectory needs at least one mapped place ${id}`);
     const extraTop = Object.keys(t).filter(k => !['atlasPerson', 'phases'].includes(k));
     if (extraTop.length) errors.push(`trajectory unknown field ${id}: ${extraTop.join(',')}`);
     let prevStart = -Infinity, prevStop = -Infinity, prevYear = -Infinity;
@@ -248,7 +249,7 @@ export function validateTrajectory(people) {
       if (!Array.isArray(span) || span.length !== 2 || !span.every(Number.isInteger) || span[0] > span[1]) { errors.push(`trajectory invalid span ${at}`); continue; }
       if (span[0] < prevStart) errors.push(`trajectory span goes backwards ${at}`);
       prevStart = span[0];
-      const allowed = ['id', 'title', 'when', 'span', 'careers', atlas ? 'atlasStops' : 'place'];
+      const allowed = ['id', 'title', 'when', 'span', 'careers', ...(atlas ? ['atlasStops'] : ['place', 'unmappedReason'])];
       const extra = Object.keys(phase).filter(k => !allowed.includes(k));
       if (extra.length) errors.push(`trajectory phase unknown field ${at}: ${extra.join(',')}`);
       if (atlas) {
@@ -258,7 +259,11 @@ export function validateTrajectory(people) {
         if (phase.atlasStops.some((n, i) => i > 0 && n !== phase.atlasStops[i - 1] + 1)) errors.push(`trajectory atlasStops must be consecutive ${at}`);
       } else {
         const place = phase.place;
-        if (!place) { errors.push(`trajectory needs place ${at}`); continue; }
+        if (!place) {
+          if (typeof phase.unmappedReason !== 'string' || !phase.unmappedReason.trim()) errors.push(`trajectory needs place or unmappedReason ${at}`);
+          continue;
+        }
+        if ('unmappedReason' in phase) errors.push(`trajectory has both place and unmappedReason ${at}`);
         for (const key of ['name', 'query', 'province']) if (typeof place[key] !== 'string' || !place[key].trim()) errors.push(`atlas place missing ${key} ${at}`);
         if ('approx' in place && place.approx !== true) errors.push(`atlas approx must be omitted or true ${at}`);
         const extraPlace = Object.keys(place).filter(k => !['name', 'query', 'province', 'mapYear', 'approx'].includes(k));
