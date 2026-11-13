@@ -1,47 +1,43 @@
-// 人物行迹地图：把生平履历中的 place 字段转成江山时序（jiangshan-map）的深链。
+// 人物行迹地图：把人物卡的 trajectory（按时期分组）转成江山时序（jiangshan-map）的深链。
 // 规则见 docs/atlas-trajectory-guide.md。本文件同时被页面和 Node 脚本使用，保持纯 JS。
+//   模式一：trajectory.atlasPerson 存在，地图用江山时序自己的人物路线（?person=…&stop=…）。
+//   模式二：每个时期一个代表地点 place，连成本站路线（?year=…&place=…）。
 
 export const DEFAULT_ATLAS_BASE = 'http://127.0.0.1:8000/';
 
 /** 去掉地图解析名里的括号注释，例如“下邳（睢宁）”→“下邳”。 */
 export const stripNote = (name = '') => name.replace(/[（(][^）)]*[）)]/g, '').trim();
 
-/** 生平履历中有地点的行，按顺序合并相邻的同一查询地点。 */
-export function trajectoryStops(milestones = []) {
-  const stops = [];
-  for (const row of milestones) {
-    const place = row.place;
-    if (!place) continue;
-    const last = stops.at(-1);
-    if (last && last.query === place.query) { last.rows.push(row); continue; }
-    stops.push({ query: place.query, name: place.name, year: place.mapYear, approx: Boolean(place.approx), rows: [row] });
-  }
-  return stops.map((stop, i) => ({ ...stop, index: i + 1 }));
-}
-
-const join = (base, params) => {
+const build = (base, params) => {
   const url = new URL(base);
   for (const [k, v] of Object.entries(params)) if (v !== undefined && v !== null && v !== '') url.searchParams.set(k, String(v));
   return url.toString();
 };
 
-/** 单个地点：打开那一年、那个地方。 */
-export const placeUrl = (base, place) => join(base, { year: place.mapYear, place: place.query });
+const spanOf = phases => [Math.min(...phases.map(p => p.span[0])), Math.max(...phases.map(p => p.span[1]))];
 
-/** 全程路线。embed=true 时生成嵌入用地址，并把时间轴限定在首末站之间。 */
-export function routeUrl(base, stops, { embed = false } = {}) {
-  if (!stops.length) return '';
-  const years = stops.map(s => s.year);
-  return join(base, {
-    ...(embed ? { embed: 1 } : {}),
-    year: years.join(','),
-    place: stops.map(s => s.query).join(','),
-    ...(embed ? { from: Math.min(...years), to: Math.max(...years) } : {}),
+/** 打开某个时期：模式一跳到该时期的第一站，模式二打开代表地点。 */
+export function phaseUrl(base, trajectory, phase) {
+  if (trajectory.atlasPerson) return build(base, { person: trajectory.atlasPerson, stop: phase.atlasStops?.[0] });
+  return phase.place ? build(base, { year: phase.place.mapYear, place: phase.place.query }) : '';
+}
+
+/** 整条路线。embed=true 时生成嵌入用地址，并把时间轴限定在各时期的起止年之间。 */
+export function routeUrl(base, trajectory, { embed = false } = {}) {
+  const phases = trajectory?.phases ?? [];
+  if (!phases.length) return '';
+  const [from, to] = spanOf(phases);
+  const range = embed ? { from, to } : {};
+  const head = embed ? { embed: 1 } : {};
+  if (trajectory.atlasPerson) return build(base, { ...head, person: trajectory.atlasPerson, ...range });
+  const placed = phases.filter(p => p.place);
+  return build(base, {
+    ...head,
+    year: placed.map(p => p.place.mapYear).join(','),
+    place: placed.map(p => p.place.query).join(','),
+    ...range,
   });
 }
 
-/** 从 when 文字中取出年份区间；没有年份时返回 null。 */
-export function whenRange(when = '') {
-  const years = (when.match(/\d{2,4}(?=\s*[年—–-])/g) ?? []).map(Number);
-  return years.length ? [Math.min(...years), Math.max(...years)] : null;
-}
+/** 时期序号用的中文数字（时期最多 8 个）。 */
+export const phaseNumeral = i => '一二三四五六七八九十'[i] ?? String(i + 1);

@@ -5,6 +5,7 @@
 新增人物：写 scripts/profile_v3_<id>.py，定义 PROFILE，并把模块名加入 V3_MODULES。
 """
 import importlib
+from copy import deepcopy
 
 # 已按 v3 编写的人物种子模块。顺序不影响结果。
 V3_MODULES = ['profile_v3_guanyu', 'profile_v3_liubei', 'profile_v3_zhang_jiao']
@@ -122,6 +123,12 @@ def finish(person, seed, R):
     if seed.get('appendix'):
         d['appendixVolumes'] = seed['appendix'].get('volumes', [])
     person['reading'] = list(dict.fromkeys(seed.get('reading', person['reading'])))
+    # 行迹时期（docs/atlas-trajectory-guide.md），原样写入；span 转成列表便于 JSON 校验。
+    if seed.get('trajectory'):
+        t = deepcopy(seed['trajectory'])
+        for ph in t['phases']:
+            ph['span'] = list(ph['span'])
+        d['trajectory'] = t
     # 有页面的人物同时写入 relations，供其他页面和关系检索使用。
     person['relations'] = [
         dict(personId=r['personId'], label=r['label'], refs=[R(*s) for s in r['refs']])

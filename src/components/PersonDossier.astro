@@ -5,7 +5,7 @@ import Share from './Share.astro';
 import EventRow from './EventRow.astro';
 import PersonNarrative from './PersonNarrative.astro';
 import { personById, eventById, referencesFor, volumes, volumeTitle } from '../lib/catalog';
-import { DEFAULT_ATLAS_BASE, trajectoryStops, placeUrl, routeUrl } from '../lib/atlas.mjs';
+import { DEFAULT_ATLAS_BASE, phaseUrl, routeUrl, phaseNumeral } from '../lib/atlas.mjs';
 import type { Person, DossierRecord } from '../lib/catalog';
 interface Props { person: Person }
 const { person: p } = Astro.props;
@@ -17,9 +17,12 @@ const sections = [
   {id:'setbacks',title:d.expanded?'失误、挫折与争议':'失误与挫折',eyebrow:'看见经历中的得失',records:d.setbacks,note:d.setbacksNote},
 ];
 const atlasBase = import.meta.env.PUBLIC_ATLAS_BASE || DEFAULT_ATLAS_BASE;
-const stops = trajectoryStops(p.milestones);
-const hasTrajectory = stops.length >= 2;
-const approxStops = stops.filter(s=>s.approx);
+const trajectory = d.trajectory;
+const phases = trajectory?.phases ?? [];
+const hasTrajectory = phases.length > 0;
+const phaseStart = new Map(phases.map((ph,i)=>[ph.careers[0],{ph,i}]));
+const careerTitle = new Map(p.milestones.map(m=>[m.id,m]));
+const stopLabel = (ph: {atlasStops?: number[]}) => ph.atlasStops?.length ? `地图第 ${ph.atlasStops.map(n=>n+1).join('、')} 站` : '地图未单列此期';
 const recordGroups = (rows: DossierRecord[]) => Array.from(new Set(rows.map(r=>r.group ?? ''))).map(title=>({title,rows:rows.filter(r=>(r.group ?? '')===title)}));
 const navigation = [
   ['life','人物介绍'],['milestones','生平履历'],...(hasTrajectory ? [['trajectory','行迹地图']] : []),
@@ -70,22 +73,22 @@ const navigation = [
         <table class="dossier-table career-table">
           <caption class="sr-only">{p.name}的重要经历与官职、爵位变化</caption>
           <thead><tr><th scope="col">时间</th><th scope="col">重要经历</th><th scope="col">官职、爵位变化</th></tr></thead>
-          <tbody>{p.milestones.map(m=><tr id={m.id?`career-${m.id}`:undefined}>
+          <tbody>{p.milestones.map(m=><Fragment>{m.id&&phaseStart.has(m.id)&&(()=>{const {ph,i}=phaseStart.get(m.id)!;return <tr id={`phase-${ph.id}`} class="phase-row"><th colspan="3" scope="rowgroup"><span class="phase-no">{phaseNumeral(i)}</span><strong>{ph.title}</strong><span class="phase-when">{ph.when}</span><a href={phaseUrl(atlasBase,trajectory!,ph)} target="_blank" rel="noopener">在地图上看 ↗</a></th></tr>;})()}<tr id={m.id?`career-${m.id}`:undefined}>
             <th scope="row" data-label="时间"><span class="milestone-date">{m.when}</span></th>
-            <td data-label="重要经历">{d.expanded&&<strong>{m.title}</strong>}<p>{m.text}<Citations refs={m.refs} all={refs}/></p>{m.place&&<a class="atlas-place" href={placeUrl(atlasBase,m.place)} target="_blank" rel="noopener" title={m.place.approx?`地图上标在“${m.place.query}”一带，位置为近似`:`在江山时序中查看${m.place.name}`}>📍 {m.place.name} · {m.place.approx?'地图近似':'在地图上看'} ↗</a>}{m.eventIds && m.eventIds.length>0&&<div class="record-events">{m.eventIds.map(id=><a href={`/events/${id}/`}>{eventById(id).title} ↗</a>)}</div>}</td>
+            <td data-label="重要经历">{d.expanded&&<strong>{m.title}</strong>}<p>{m.text}<Citations refs={m.refs} all={refs}/></p>{m.eventIds && m.eventIds.length>0&&<div class="record-events">{m.eventIds.map(id=><a href={`/events/${id}/`}>{eventById(id).title} ↗</a>)}</div>}</td>
             <td data-label="官职、爵位变化" class:list={{'office-change':m.office!=='—','no-change':m.office==='—'}}>{m.office}</td>
-          </tr>)}</tbody>
+          </tr></Fragment>)}</tbody>
         </table>
       </section>
       {hasTrajectory&&<section id="trajectory" class="article-section trajectory">
         <div class="section-eyebrow">把经历放回地图</div><h2>行迹地图</h2>
-        <p class="evidence-note">按生平履历的顺序连成 {stops.length} 站，相邻同地已合并。地图由<a href={routeUrl(atlasBase,stops)} target="_blank" rel="noopener">江山时序</a>绘制，站名用的是它的地名，疆域为示意性近似；下表列出本书写法。{approxStops.length>0&&`其中 ${approxStops.length} 站地图只能标在附近，表中注“近似”。`}</p>
-        <div class="atlas-frame"><iframe src={routeUrl(atlasBase,stops,{embed:true})} title={`${p.name}行迹地图`} loading="lazy"></iframe></div>
-        <a class="atlas-open" href={routeUrl(atlasBase,stops)} target="_blank" rel="noopener">在江山时序中打开完整地图 ↗</a>
-        <ol class="trajectory-list">{stops.map(stop=><li>
-          <span class="stop-index">{stop.index}</span>
-          <div><a href={placeUrl(atlasBase,{query:stop.query,mapYear:stop.year})} target="_blank" rel="noopener"><strong>{stop.name}</strong>{stop.approx&&<small class="approx">近似 · 地图标在{stop.query}一带</small>}</a>
-          <p>{stop.rows.map(row=><span class="stop-row"><a href={`#career-${row.id}`}>{row.when} · {row.title}</a></span>)}</p></div>
+        <p class="evidence-note">{p.name}一生分为 {phases.length} 个时期。{trajectory!.atlasPerson?<Fragment>地图直接使用<a href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">江山时序</a>的{p.name}路线，与在江山时序中搜索{p.name}看到的相同；地图上的说明文字出自江山时序，本站内容以下表和生平履历为准。</Fragment>:<Fragment>每个时期取一个代表地点，由<a href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">江山时序</a>连成路线；站名用的是它的地名。</Fragment>}疆域为示意性近似。</p>
+        <div class="atlas-frame"><iframe src={routeUrl(atlasBase,trajectory!,{embed:true})} title={`${p.name}行迹地图`} loading="lazy"></iframe></div>
+        <a class="atlas-open" href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">在江山时序中打开 ↗</a>
+        <ol class="trajectory-list">{phases.map((ph,i)=><li>
+          <span class="stop-index">{phaseNumeral(i)}</span>
+          <div><a href={phaseUrl(atlasBase,trajectory!,ph)} target="_blank" rel="noopener"><strong>{ph.title}</strong><small class="phase-meta">{ph.when} · {trajectory!.atlasPerson?stopLabel(ph):`${ph.place!.name}${ph.place!.approx?'（地图近似）':''}`} ↗</small></a>
+          <p>{ph.careers.map(id=>careerTitle.get(id)).map(row=>row&&<a class="stop-row" href={`#career-${row.id}`}>{row.title}</a>)}</p></div>
         </li>)}</ol>
       </section>}
       {sections.map(section=><section id={section.id} class="article-section">
@@ -168,7 +171,11 @@ const navigation = [
   .record-category{font-size:11px;color:var(--muted)}
   .record-events{display:flex;flex-wrap:wrap;gap:3px 12px;margin-top:7px}
   .record-events a{font-size:10px;color:var(--red);text-decoration:underline;text-underline-offset:3px}
-  .atlas-place{display:inline-block;margin-top:7px;font-size:10px;color:var(--red);text-decoration:underline;text-underline-offset:3px}
+  .phase-row th{padding:26px 0 10px!important;border-bottom:1px solid var(--red)!important;background:none!important;color:var(--ink,inherit)!important;font-size:12px!important}
+  .phase-row strong{font:18px var(--serif);color:var(--red);margin:0 12px 0 8px}
+  .phase-no{display:inline-block;width:22px;height:22px;border:1px solid var(--red);border-radius:50%;color:var(--red);font-size:11px;line-height:20px;text-align:center}
+  .phase-when{color:var(--muted);font-size:11px;margin-right:12px}
+  .phase-row a{font-size:11px;color:var(--red);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
   .trajectory .evidence-note{font-size:12px;line-height:1.95;margin-bottom:20px}
   .trajectory .evidence-note a{color:var(--red)}
   .atlas-frame{position:relative;width:100%;height:min(78vh,760px);min-height:520px;border:1px solid var(--line);background:rgba(120,90,55,.035)}
@@ -178,9 +185,10 @@ const navigation = [
   .trajectory-list li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
   .stop-index{width:22px;height:22px;border:1px solid var(--red);border-radius:50%;color:var(--red);font-size:11px;line-height:20px;text-align:center}
   .trajectory-list strong{font:16px var(--serif);color:var(--red)}
-  .trajectory-list .approx{margin-left:10px;font-size:10px;color:var(--muted)}
+  .trajectory-list .phase-meta{margin-left:10px;font-size:11px;color:var(--muted)}
   .trajectory-list p{margin:3px 0 0;color:var(--muted)}
-  .stop-row{display:block}
+  .stop-row{display:inline-block;margin-right:14px;color:var(--muted)}
+  .stop-row:hover{color:var(--red)}
   .career-table tr{scroll-margin-top:30px}
   .evidence-note{padding:18px 22px;border-left:2px solid var(--line);background:rgba(120,90,55,.035);color:var(--muted)}
   .relation-name{font:19px var(--serif)}
@@ -202,7 +210,10 @@ const navigation = [
     .achievement-table td:nth-child(2)::before,.achievement-table td:nth-child(3)::before{display:none}
     .achievement-table td:nth-child(2){font-size:16px;padding-bottom:0}
     .achievement-table td:nth-child(3){padding-top:0}
-    .record-events a,.atlas-place{font-size:11px}
+    .record-events a{font-size:11px}
+    .dossier-table tr.phase-row{padding:22px 0 8px;border-bottom:1px solid var(--red)}
+    .phase-row th{padding:0!important}
+    .phase-row strong{display:inline-block;margin:0 8px}
     .atlas-frame{height:80vh;min-height:560px}
     .record-category{font-size:11px}
     .evidence-note{padding:15px 17px}

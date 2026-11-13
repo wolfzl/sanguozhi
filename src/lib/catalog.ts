@@ -28,6 +28,7 @@ export interface DossierRecord extends Paragraph {
   eventIds?: string[];
 }
 export interface PersonDossier {
+  trajectory?: Trajectory;
   expanded?: boolean;
   sourceScope?: string;
   factDetails?: {label: string; text: string; refs: SourceRef[]}[];
@@ -66,14 +67,16 @@ export interface Person {
   aliases: string[];
   tags: string[];
   paragraphs: Paragraph[];
-  milestones: (Paragraph & { id?: string; when: string; title: string; office?: string; eventIds?: string[]; place?: AtlasPlace })[];
+  milestones: (Paragraph & { id?: string; when: string; title: string; office?: string; eventIds?: string[] })[];
   relations: { personId: string; label: string; refs: SourceRef[] }[];
   reading: string[];
   eventIds: string[];
   note: SourceNote | null;
 }
-/** 生平履历中的行迹地点，见 docs/atlas-trajectory-guide.md。 */
+/** 行迹时期，见 docs/atlas-trajectory-guide.md。 */
 export interface AtlasPlace { name: string; query: string; province: string; mapYear: number; approx?: boolean }
+export interface TrajectoryPhase { id: string; title: string; when: string; span: [number, number]; careers: string[]; atlasStops?: number[]; place?: AtlasPlace }
+export interface Trajectory { atlasPerson?: string; phases: TrajectoryPhase[] }
 export interface Event {
   id: string;
   title: string;

@@ -1,84 +1,104 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {validateAtlasPlaces} from '../scripts/content-validation.mjs';
-import {trajectoryStops, placeUrl, routeUrl, stripNote, whenRange} from '../src/lib/atlas.mjs';
+import {validateTrajectory} from '../scripts/content-validation.mjs';
+import {phaseUrl, routeUrl, stripNote, phaseNumeral} from '../src/lib/atlas.mjs';
 
 const {people} = JSON.parse(fs.readFileSync('src/data/cards.json', 'utf8'));
 const sample = people.find(p => p.id === 'liubei');
 const clone = () => structuredClone(sample);
-const row = (p, id) => p.milestones.find(m => m.id === id);
-const failsWith = (person, fragment) => assert.ok(validateAtlasPlaces([person]).some(e => e.includes(fragment)), fragment);
+const phase = (p, id) => p.dossier.trajectory.phases.find(x => x.id === id);
+const failsWith = (person, fragment) => assert.ok(validateTrajectory([person]).some(e => e.includes(fragment)), fragment);
 const BASE = 'http://127.0.0.1:8000/';
 
-test('Liu Bei is the trajectory sample and passes every place rule', () => {
-  assert.deepEqual(validateAtlasPlaces([sample]), []);
-  assert.equal(sample.milestones.filter(m => m.place).length, 25);
-  assert.equal(trajectoryStops(sample.milestones).length, 23);
+test('Liu Bei is the trajectory sample: 7 phases on the atlas route', () => {
+  assert.deepEqual(validateTrajectory([sample]), []);
+  const t = sample.dossier.trajectory;
+  assert.equal(t.atlasPerson, 'liubei');
+  assert.equal(t.phases.length, 7);
+  assert.ok(sample.milestones.every(m => !('place' in m)));
 });
 
-test('rows that the guide says to skip stay unmarked', () => {
-  for (const id of ['youth', 'xuxi', 'longzhong']) assert.equal(row(sample, id).place, undefined, id);
-});
-
-test('place name must come from the row itself (M2)', () => {
+test('phases cover every career row once and in order (M1)', () => {
   const p = clone();
-  row(p, 'longzhong').place = {name: '隆中', query: '隆中', province: '湖北', mapYear: 207};
-  failsWith(p, 'name not in row');
-});
-
-test('mapYear stays inside when and never goes backwards (M5)', () => {
-  const p = clone();
-  row(p, 'chengdu').place.mapYear = 215;
-  failsWith(p, 'outside when');
+  phase(p, 'xuzhou').careers.pop();
+  failsWith(p, 'not covered in order');
   const q = clone();
-  row(q, 'bowang').place.mapYear = 200;
-  failsWith(q, 'goes backwards');
+  phase(q, 'early').careers.reverse();
+  failsWith(q, 'not covered in order');
 });
 
-test('place fields are complete and closed', () => {
+test('phase count follows the tier (M2)', () => {
   const p = clone();
-  delete row(p, 'chibi').place.province;
-  failsWith(p, 'missing province');
-  const q = clone();
-  row(q, 'chibi').place.note = 'x';
-  failsWith(q, 'unknown field');
-  const r = clone();
-  row(r, 'chibi').place.approx = false;
-  failsWith(r, 'approx must be omitted or true');
+  p.dossier.trajectory.phases = p.dossier.trajectory.phases.slice(0, 4);
+  failsWith(p, 'phase count out of range');
 });
 
-test('places are only allowed on v3 profiles', () => {
-  const p = structuredClone(people.find(x => x.id === 'zhuge-liang'));
-  p.milestones[1].place = {name: '隆中', query: '隆中', province: '湖北', mapYear: 207};
+test('spans are valid and never go backwards (M3)', () => {
+  const p = clone();
+  phase(p, 'chibi').span = [199, 210];
+  failsWith(p, 'span goes backwards');
+  const q = clone();
+  phase(q, 'chibi').span = [210, 208];
+  failsWith(q, 'invalid span');
+});
+
+test('atlas stops are required in mode one and keep increasing (M4)', () => {
+  const p = clone();
+  delete phase(p, 'yizhou').atlasStops;
+  failsWith(p, 'needs atlasStops');
+  const q = clone();
+  phase(q, 'yizhou').atlasStops = [4];
+  failsWith(q, 'atlasStops must increase');
+});
+
+test('mode two needs a place whose name comes from the phase rows (M5)', () => {
+  const p = clone();
+  delete p.dossier.trajectory.atlasPerson;
+  for (const ph of p.dossier.trajectory.phases) delete ph.atlasStops;
+  failsWith(p, 'needs place');
+  const q = structuredClone(p);
+  for (const ph of q.dossier.trajectory.phases) ph.place = {name: '成都', query: '成都', province: '四川', mapYear: ph.span[0]};
+  failsWith(q, 'name not in phase');
+  const r = structuredClone(q);
+  phase(r, 'yizhou').place.mapYear = 230;
+  failsWith(r, 'mapYear outside span');
+});
+
+test('trajectory is v3 only and per-row places are retired', () => {
+  const p = clone();
+  p.dossier.schema = 'expanded';
   failsWith(p, 'only allowed on v3');
+  const q = clone();
+  q.milestones[0].place = {name: '安喜'};
+  failsWith(q, 'per-row place is retired');
 });
 
-test('consecutive rows at the same place merge into one stop', () => {
-  const stops = trajectoryStops(sample.milestones);
-  assert.deepEqual(stops[0].rows.map(r => r.id), ['yellow', 'duyou']);
-  assert.equal(stops[0].name, '安喜');
-  assert.deepEqual(stops.map(s => s.index), stops.map((_, i) => i + 1));
-  const chengdu = stops.find(s => s.rows.some(r => r.id === 'liufeng'));
-  assert.deepEqual(chengdu.rows.map(r => r.id), ['liufeng', 'accession']);
-});
-
-test('links follow the atlas URL protocol', () => {
-  assert.equal(placeUrl(BASE, row(sample, 'yiling').place), `${BASE}?year=222&place=${encodeURIComponent('夷陵')}`);
-  const stops = trajectoryStops(sample.milestones);
-  const embed = new URL(routeUrl(BASE, stops, {embed: true}));
+test('mode one links reuse the atlas person route', () => {
+  const t = sample.dossier.trajectory;
+  assert.equal(phaseUrl(BASE, t, phase(sample, 'chibi')), `${BASE}?person=liubei&stop=3`);
+  const embed = new URL(routeUrl(BASE, t, {embed: true}));
   assert.equal(embed.searchParams.get('embed'), '1');
-  assert.equal(embed.searchParams.get('from'), '184');
+  assert.equal(embed.searchParams.get('person'), 'liubei');
+  assert.equal(embed.searchParams.get('from'), '175');
   assert.equal(embed.searchParams.get('to'), '223');
-  assert.equal(embed.searchParams.get('place').split(',').length, stops.length);
-  assert.equal(embed.searchParams.get('year').split(',').length, stops.length);
-  assert.equal(new URL(routeUrl(BASE, stops)).searchParams.has('embed'), false);
-  assert.equal(routeUrl(BASE, []), '');
+  assert.equal(routeUrl(BASE, t), `${BASE}?person=liubei`);
+});
+
+test('mode two links use the phase places', () => {
+  const t = {phases: [
+    {id: 'a', span: [191, 199], place: {query: '邺', mapYear: 191}},
+    {id: 'b', span: [200, 202], place: {query: '官渡', mapYear: 200}},
+  ]};
+  assert.equal(phaseUrl(BASE, t, t.phases[1]), `${BASE}?year=200&place=${encodeURIComponent('官渡')}`);
+  const url = new URL(routeUrl(BASE, t, {embed: true}));
+  assert.equal(url.searchParams.get('place'), '邺,官渡');
+  assert.equal(url.searchParams.get('year'), '191,200');
+  assert.equal(routeUrl(BASE, {phases: []}), '');
 });
 
 test('helpers', () => {
   assert.equal(stripNote('下邳（睢宁）'), '下邳');
-  assert.deepEqual(whenRange('212—214年'), [212, 214]);
-  assert.deepEqual(whenRange('约220年前后，确切月日未载'), [220, 220]);
-  assert.equal(whenRange('寄居荆州期间，确年未载'), null);
+  assert.equal(phaseNumeral(0), '一');
+  assert.equal(phaseNumeral(6), '七');
 });

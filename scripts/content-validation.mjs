@@ -215,31 +215,58 @@ export function validateTimeline(events, relations) {
   return errors;
 }
 
-// 人物行迹地点（docs/atlas-trajectory-guide.md 的 M2、M5 与字段格式）。
-// M3、M4 需要江山时序的地名库，由 scripts/atlas-places.mjs check 检查。
-export function validateAtlasPlaces(people) {
+// 人物行迹时期（docs/atlas-trajectory-guide.md 的 M1–M5）。
+// 站点年份、地名解析需要江山时序的数据，由 scripts/atlas-places.mjs check 检查。
+export const TRAJECTORY_PHASE_LIMITS = { A: [5, 8], B: [3, 6], C: [2, 4] };
+export function validateTrajectory(people) {
   const errors = [];
-  const yearsIn = when => {
-    const years = (when.match(/\d{2,4}(?=\s*[年—–-])/g) ?? []).map(Number);
-    return years.length ? [Math.min(...years), Math.max(...years)] : null;
-  };
   for (const person of people) {
-    let previous = -Infinity;
-    for (const row of person.milestones ?? []) {
-      const place = row.place;
-      if (!place) continue;
-      const at = `${person.id}/${row.id ?? row.title}`;
-      if (person.dossier?.schema !== 'v3') { errors.push(`atlas place only allowed on v3 profiles ${at}`); continue; }
-      for (const key of ['name', 'query', 'province']) if (typeof place[key] !== 'string' || !place[key].trim()) errors.push(`atlas place missing ${key} ${at}`);
-      if (!Number.isInteger(place.mapYear)) { errors.push(`atlas mapYear must be an integer ${at}`); continue; }
-      if ('approx' in place && place.approx !== true) errors.push(`atlas approx must be omitted or true ${at}`);
-      const extra = Object.keys(place).filter(k => !['name', 'query', 'province', 'mapYear', 'approx'].includes(k));
-      if (extra.length) errors.push(`atlas place unknown field ${at}: ${extra.join(',')}`);
-      if (place.name && ![row.when, row.title, row.text].some(s => s?.includes(place.name))) errors.push(`atlas place name not in row ${at}: ${place.name}`);
-      const range = yearsIn(row.when ?? '');
-      if (range && (place.mapYear < range[0] || place.mapYear > range[1])) errors.push(`atlas mapYear outside when ${at}: ${place.mapYear} not in ${range.join('-')}`);
-      if (place.mapYear < previous) errors.push(`atlas mapYear goes backwards ${at}: ${place.mapYear} < ${previous}`);
-      previous = place.mapYear;
+    const d = person.dossier;
+    if (person.milestones?.some(m => m.place)) errors.push(`trajectory: per-row place is retired, use dossier.trajectory ${person.id}`);
+    const t = d?.trajectory;
+    if (!t) continue;
+    const id = person.id;
+    if (d.schema !== 'v3') { errors.push(`trajectory only allowed on v3 profiles ${id}`); continue; }
+    const phases = t.phases ?? [];
+    const [min, max] = TRAJECTORY_PHASE_LIMITS[d.contentTier] ?? [2, 8];
+    if (phases.length < min || phases.length > max) errors.push(`trajectory phase count out of range ${id}: ${phases.length} not in ${min}-${max}`);
+    const ids = phases.map(p => p.id);
+    if (ids.some(x => !x) || new Set(ids).size !== ids.length) errors.push(`trajectory phase ids missing or duplicated ${id}`);
+    const covered = phases.flatMap(p => p.careers ?? []);
+    const careerIds = person.milestones.map(m => m.id);
+    if (covered.join('|') !== careerIds.join('|')) errors.push(`trajectory careers not covered in order ${id}`);
+    const atlas = typeof t.atlasPerson === 'string' && t.atlasPerson.trim();
+    const extraTop = Object.keys(t).filter(k => !['atlasPerson', 'phases'].includes(k));
+    if (extraTop.length) errors.push(`trajectory unknown field ${id}: ${extraTop.join(',')}`);
+    let prevStart = -Infinity, prevStop = -Infinity, prevYear = -Infinity;
+    for (const phase of phases) {
+      const at = `${id}/${phase.id}`;
+      for (const key of ['title', 'when']) if (typeof phase[key] !== 'string' || !phase[key].trim()) errors.push(`trajectory phase missing ${key} ${at}`);
+      if (phase.title?.length > 10) errors.push(`trajectory phase title too long ${at}`);
+      if (!phase.careers?.length) errors.push(`trajectory phase without careers ${at}`);
+      const span = phase.span;
+      if (!Array.isArray(span) || span.length !== 2 || !span.every(Number.isInteger) || span[0] > span[1]) { errors.push(`trajectory invalid span ${at}`); continue; }
+      if (span[0] < prevStart) errors.push(`trajectory span goes backwards ${at}`);
+      prevStart = span[0];
+      const allowed = ['id', 'title', 'when', 'span', 'careers', atlas ? 'atlasStops' : 'place'];
+      const extra = Object.keys(phase).filter(k => !allowed.includes(k));
+      if (extra.length) errors.push(`trajectory phase unknown field ${at}: ${extra.join(',')}`);
+      if (atlas) {
+        if (!Array.isArray(phase.atlasStops) || !phase.atlasStops.every(n => Number.isInteger(n) && n >= 0)) { errors.push(`trajectory needs atlasStops ${at}`); continue; }
+        for (const n of phase.atlasStops) { if (n <= prevStop) errors.push(`trajectory atlasStops must increase ${at}`); prevStop = n; }
+      } else {
+        const place = phase.place;
+        if (!place) { errors.push(`trajectory needs place ${at}`); continue; }
+        for (const key of ['name', 'query', 'province']) if (typeof place[key] !== 'string' || !place[key].trim()) errors.push(`atlas place missing ${key} ${at}`);
+        if ('approx' in place && place.approx !== true) errors.push(`atlas approx must be omitted or true ${at}`);
+        const extraPlace = Object.keys(place).filter(k => !['name', 'query', 'province', 'mapYear', 'approx'].includes(k));
+        if (extraPlace.length) errors.push(`atlas place unknown field ${at}: ${extraPlace.join(',')}`);
+        const rows = person.milestones.filter(m => phase.careers?.includes(m.id));
+        if (place.name && !rows.some(r => [r.when, r.title, r.text].some(s => s?.includes(place.name)))) errors.push(`atlas place name not in phase ${at}: ${place.name}`);
+        if (!Number.isInteger(place.mapYear) || place.mapYear < span[0] || place.mapYear > span[1]) errors.push(`atlas mapYear outside span ${at}`);
+        else if (place.mapYear < prevYear) errors.push(`atlas mapYear goes backwards ${at}`);
+        else prevYear = place.mapYear;
+      }
     }
   }
   return errors;
