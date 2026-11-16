@@ -8,7 +8,14 @@ import importlib
 from copy import deepcopy
 
 # 已按 v3 编写的人物种子模块。顺序不影响结果。
-V3_MODULES = ['profile_v3_guanyu', 'profile_v3_liubei', 'profile_v3_zhang_jiao', 'profile_v3_zhuge_liang', 'profile_v3_zhouyu', 'profile_v3_sima_yi', 'profile_v3_luxun', 'profile_v3_sunquan', 'profile_v3_caocao']
+V3_MODULES = [
+    'profile_v3_guanyu', 'profile_v3_liubei', 'profile_v3_zhang_jiao',
+    'profile_v3_zhuge_liang', 'profile_v3_zhouyu', 'profile_v3_sima_yi',
+    'profile_v3_luxun', 'profile_v3_sunquan', 'profile_v3_caocao',
+    'profile_v3_zhangfei', 'profile_v3_zhaoyun', 'profile_v3_ma_chao',
+    'profile_v3_pang_tong', 'profile_v3_fa_zheng', 'profile_v3_liu_shan',
+    'profile_v3_jiang_wan', 'profile_v3_fei_yi', 'profile_v3_jiang_wei',
+]
 
 # 人物分级（scripts/person_tiers.py 按史料篇幅计算；改动须同时更新该脚本并通过 --check）。
 TIERS = {
