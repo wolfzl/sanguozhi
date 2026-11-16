@@ -187,3 +187,23 @@ test('Shu homonyms do not fall on unrelated provinces or conflate Ji and Shanggu
   assert.ok(Math.abs(ji.coord[0]-shang.coord[0])>0.3);
   const ta=stops.find(s=>s.ancientZh==='沓中'); assert.ok(ta.coord[0]<105&&ta.coord[1]>33);
 });
+
+test('a new site release changes atlas document URLs while preserving map options', async () => {
+  const {versionedAtlasBase} = await import('../src/lib/atlas.mjs');
+  const oldBase=versionedAtlasBase(BASE,'release-old');
+  const newBase=versionedAtlasBase(BASE,'release-new');
+  const t=sample.dossier.trajectory;
+  const oldEmbed=new URL(routeUrl(oldBase,t,{embed:true}));
+  const newEmbed=new URL(routeUrl(newBase,t,{embed:true}));
+  assert.notEqual(oldEmbed.href,newEmbed.href,'cached iframe document must not survive a deployment');
+  assert.equal(newEmbed.searchParams.get('sgz_rev'),'release-new');
+  for(const name of ['person','embed','from','to']) assert.equal(newEmbed.searchParams.get(name),oldEmbed.searchParams.get(name));
+  const standalone=new URL(routeUrl(newBase,t));
+  const phase=new URL(phaseUrl(newBase,t,t.phases.find(p=>p.atlasStops.length>1)));
+  assert.equal(standalone.searchParams.get('sgz_rev'),'release-new');
+  assert.equal(phase.searchParams.get('sgz_rev'),'release-new');
+  assert.ok(phase.searchParams.get('stop').includes('-'));
+  const configured=new URL(versionedAtlasBase(BASE+'?lang=zh#map','release-new'));
+  assert.equal(configured.searchParams.get('lang'),'zh');
+  assert.equal(configured.hash,'#map');
+});

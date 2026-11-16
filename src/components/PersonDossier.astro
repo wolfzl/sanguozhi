@@ -5,7 +5,7 @@ import Share from './Share.astro';
 import EventRow from './EventRow.astro';
 import PersonNarrative from './PersonNarrative.astro';
 import { personById, eventById, referencesFor, volumes, volumeTitle } from '../lib/catalog';
-import { DEFAULT_ATLAS_BASE, phaseUrl, routeUrl, phaseNumeral } from '../lib/atlas.mjs';
+import { DEFAULT_ATLAS_BASE, versionedAtlasBase, phaseUrl, routeUrl, phaseNumeral } from '../lib/atlas.mjs';
 import type { Person, DossierRecord } from '../lib/catalog';
 interface Props { person: Person }
 const { person: p } = Astro.props;
@@ -16,7 +16,12 @@ const sections = [
   {id:'military-achievements',title:'武功功绩',eyebrow:'征战中的贡献',records:d.military,note:d.militaryNote},
   {id:'setbacks',title:d.expanded?'失误、挫折与争议':'失误与挫折',eyebrow:'看见经历中的得失',records:d.setbacks,note:d.setbacksNote},
 ];
-const atlasBase = import.meta.env.PUBLIC_ATLAS_BASE || DEFAULT_ATLAS_BASE;
+// Static rendering stamps all map links on this page with the same release token.
+// A cached iframe HTML otherwise keeps loading its old hashed JS/data bundles.
+const atlasBase = versionedAtlasBase(
+  import.meta.env.PUBLIC_ATLAS_BASE || DEFAULT_ATLAS_BASE,
+  import.meta.env.PUBLIC_ATLAS_REVISION || Date.now().toString(36),
+);
 const trajectory = d.trajectory;
 const phases = trajectory?.phases ?? [];
 const hasTrajectory = phases.length > 0;

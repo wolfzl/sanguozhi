@@ -5,6 +5,13 @@
 
 export const DEFAULT_ATLAS_BASE = 'http://127.0.0.1:8000/';
 
+/** Refresh the atlas HTML as well as its hashed assets after a site deployment. */
+export function versionedAtlasBase(base, revision) {
+  const url = new URL(base);
+  url.searchParams.set('sgz_rev', revision);
+  return url.toString();
+}
+
 /** 去掉地图解析名里的括号注释，例如“下邳（睢宁）”→“下邳”。 */
 export const stripNote = (name = '') => name.replace(/[（(][^）)]*[）)]/g, '').trim();
 
