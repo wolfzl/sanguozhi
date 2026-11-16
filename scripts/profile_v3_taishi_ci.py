@@ -1,0 +1,125 @@
+"""太史慈：B 级人物卡；以本传206年卒为依据，不引入后世合肥情节。"""
+from profile_v3 import Q
+
+HOME=Q('v049-b0010','太史慈字子義，東萊黃人也。少好學，仕郡奏曹史。')
+LUOYANG=Q('v049-b0010','慈年二十一，以選行，晨夜取道，到洛陽，詣公車門')
+DOCUMENT=Q('v049-b0010','慈已先懷刀，便截敗之。')
+SUCCESS=Q('v049-b0010','慈既與出城，因遁還通郡章。')
+EXILE=Q('v049-b0010','由是知名，而為州家所疾，恐受其禍，乃避之遼東。')
+KONG=Q('v049-b0011','北海相孔融聞而奇之，數遣人訊問其母，并致餉遺。')
+SIEGE=Q('v049-b0011','時融以黃巾寇暴，出屯都昌，為賊管亥所圍。')
+MOTHER=Q('v049-b0011','汝與孔北海未嘗相見，至汝行後，贍恤殷勤，過於故舊，今為賊所圍，汝宜赴之。')
+DONGCHANG=Q('v049-b0011','慈留三日，單步徑至都昌。')
+ENTER=Q('v049-b0011','時圍尚未密，夜伺閒隙，得入見融，因求兵出斫賊。')
+REQUEST=Q('v049-b0011','融欲告急平原相劉備，城中人無由得出，慈自請求行。')
+BREAK=Q('v049-b0011','明晨復出如此，無復起者，於是下鞭馬直突圍中馳去。')
+PINGYUAN=Q('v049-b0011','遂到平原，說備曰')
+RESCUE=Q('v049-b0011','即遣精兵三千人隨慈。賊聞兵至，解圍散走。')
+FRIEND=Q('v049-b0011','融既得濟，益奇貴慈，曰：「卿吾之少友也。」')
+HAPPY=Q('v049-b0011','我喜汝有以報孔北海也。')
+LIUYAO=Q('v049-b0012','暫渡江到曲阿見繇，未去，會孫策至。')
+SCOUT=Q('v049-b0012','我若用子義，許子將不當笑我邪？')
+RECON=Q('v049-b0012','但使慈偵視輕重。')
+DUEL=Q('v049-b0012','策刺慈馬，而攬得慈項上手戟，慈亦得策兜鍪。')
+SEPARATE=Q('v049-b0012','會兩家兵騎並各來赴，於是解散。')
+WUHU=Q('v049-b0013','慈當與繇俱奔豫章，而遁於蕪湖，亡入山中，稱丹楊太守。')
+JINGXIAN=Q('v049-b0013','慈因進住涇縣，立屯府，大為山越所附。策躬自攻討，遂見囚執。')
+RELEASE=Q('v049-b0013','策即解縛，捉其手曰：「寧識神亭時邪？若卿爾時得我云何？」')
+RECRUIT=Q('v049-b0013','今日之事，當與卿共之。')
+OFFICE=Q('v049-b0013','即署門下督，還吳授兵，拜折衝中郎將。')
+PACIFY=Q('v049-b0013','後劉繇亡於豫章，士眾萬餘人未有所附，策命慈往撫安焉。')
+TRUST=Q('v049-b0013','子義捨我，當復與誰？')
+SIXTY=Q('v049-b0013','答曰：「不過六十日。」果如期而反。')
+PEOPLE=Q('v049-b0013-n02','部曲乐来者便与俱来，不乐来者且安慰之。','《江表传》')
+SMALL=Q('v049-b0013-n02','今并息兵，兵不宜多，将数十人，自足以往还也。','《江表传》')
+REPORT=Q('v049-b0013-n03','华子鱼良德也，然非筹略才，无他方规，自守而已。','《江表传》')
+HAIHUN=Q('v049-b0014','策於是分海昏、建昌左右六縣，以慈為建昌都尉，治海昏，并督諸將拒磐。')
+LIUPAN=Q('v049-b0014','劉表從子磐，驍勇，數為寇於艾、西安諸縣。')
+NO_MORE=Q('v049-b0014','磐絕跡不復為寇。')
+ARROW=Q('v049-b0015','慈引弓射之，矢貫手著棼，圍外萬人莫不稱善。')
+MABAO=Q('v049-b0015','嘗從策討麻保賊')
+CAO=Q('v049-b0015','曹公聞其名，遺慈書，以篋封之，發省無所道，而但貯當歸。')
+SUNQUAN=Q('v049-b0015','孫權統事，以慈能制磐，遂委南方之事。')
+DEATH=Q('v049-b0015','年四十一，建安十一年卒。')
+SON=Q('v049-b0015','子享，官至越騎校尉。')
+LAST=Q('v049-b0015-n01','今所志未从，奈何而死乎！','《吴书》')
+MOURN=Q('v049-b0015-n01','权甚悼惜之。','《吴书》')
+PING=Q('v049-b0025','太史慈信義篤烈，有古人之分。')
+WULI=Q('v049-b0013-n01','慈於神亭战败，为策所执。','《吴历》')
+PEI=Q('v049-b0013-n01','吴历云慈於神亭战败，为策所得，与本传大异，疑为谬误。','《吴历》；裴松之案')
+SUNCE=Q('v049-b0013-n01','太史子义，青州名士，以信义为先，终不欺策。','《吴历》')
+BING=Q('v011-b0032','時東萊太史慈當歸，原因以政付之。')
+LVFAN=Q('v056-b0021','又從攻祖郎於陵陽，太史慈於勇裡。')
+YEAR195=Q('v046-b0014-n02','策渡江攻繇牛渚營，盡得邸閣糧穀、戰具，是歳興平二年也。','《江表传》')
+YEAR200=Q('v047-b0003','五年。策薨，以事授權')
+YEAR203=Q('v047-b0005','太史慈領海昏')
+
+PROFILE=dict(
+ id='taishi-ci',tier='B',reading=['049'],syncLifespan=True,role='孙氏镇守海昏的建昌都尉',
+ lead='东莱黄县人，以替郡府上章、突围救孔融而知名。先依刘繇，与孙策交战，泾县被俘后获解缚任用；受命安抚刘繇余众，又治海昏、拒刘磐，孙权继事后仍委南方防务。正文记206年卒，年四十一。',
+ facts=[
+  dict(key='lifespan',label='生卒年',value='生年未详—206年',text='本传明确记建安十一年卒、年四十一；生年未直接记载，本页不把按虚岁倒推的年份写作原文明载。',refs=[DEATH]),
+  dict(key='hometown',label='籍贯',value='东莱黄县',text='字子义，东莱郡黄县人，少年好学，曾仕本郡奏曹史。',refs=[HOME]),
+  dict(key='identity',label='主要身份',value='孙策、孙权麾下将领',text='先暂依刘繇，与孙策作战；被俘后受任，后来统南方边防，孙权继事后沿用。',refs=[LIUYAO,JINGXIAN,OFFICE,SUNQUAN]),
+  dict(key='office',label='最高官职',value='建昌都尉，督诸将',text='归孙策后先署门下督、拜折冲中郎将，后为建昌都尉、治海昏，督诸将拒刘磐。“称丹杨太守”是自称，不能与孙策正式任命混同。',refs=[OFFICE,HAIHUN,WUHU]),
+  dict(key='posthumous',label='身后称号',value='本传未载谥号',text='正文以卒年、享年及子太史享官职收束；裴注引《吴书》记孙权悼惜，均未载太史慈谥号。',refs=[DEATH,SON,MOURN]),
+  dict(key='deeds',label='代表事迹',items=['突围救孔融','神亭遇孙策','安抚刘繇众','海昏拒刘磐'],text='北海突围求援、与孙策交锋后归附、招抚故众、镇海昏拒敌。',refs=[BREAK,RESCUE,DUEL,PACIFY,HAIHUN,NO_MORE]),
+ ],
+ intro=[
+  dict(title='才勇初显，也因事避祸',text='太史慈字子义，东莱黄县人，少年好学，任郡奏曹史。州、郡因争讼要抢先上章时，他二十一岁受郡府选派到洛阳，骗取州吏文书并割坏，再设辞诱州吏一同离去，自己回去递交郡章。事情令他知名，也使州府忌恨，他便避居辽东。本传没有把这段经历只写成机智成功，避祸流离也是同一行动的后果。',refs=[HOME,LUOYANG,DOCUMENT,SUCCESS,EXILE]),
+  dict(title='为孔融出重围求援',text='孔融听到他的名声，曾多次照顾其母；孔融被管亥围在都昌时，母亲让他去报答。太史慈入城后自请突围，先接连出城设靶射箭，使围兵逐渐不再戒备，再纵马冲出，到平原向刘备求援。刘备派三千精兵随他前往，围兵闻援至而散。这里的勇气与观察、准备相连，也以母亲、孔融之间的恩义为起点。',refs=[KONG,SIEGE,MOTHER,ENTER,REQUEST,BREAK,PINGYUAN,RESCUE]),
+  dict(title='从孙策敌手成为部下',text='他渡江到曲阿见同郡刘繇，未获重任，只被派去侦察，途中与孙策交战，双方互夺手戟、兜鍪，援军到来后分开。刘繇败后，他经芜湖入山，自称丹杨太守，又在泾县立屯，最终被孙策亲征俘获。孙策解缚任用，让他还吴授兵；后来再遣他安抚刘繇留下的万余部众，面对众人疑虑仍相信他，太史慈也按约六十日返回。',refs=[LIUYAO,RECON,DUEL,SEPARATE,WUHU,JINGXIAN,OFFICE,PACIFY,TRUST,SIXTY],eventLinks=[dict(label='与孙策交战',eventId='sun-ce-jiangdong')]),
+  dict(title='海昏边防与未竟之志',text='孙策后来命太史慈为建昌都尉，治海昏、督诸将抵御刘表从子刘磐，使其不再侵扰。孙权继事后因这项能力继续把南方防务交给他。正文记他206年、四十一岁去世；裴注引《吴书》保存其临终慨叹志愿未遂、孙权悼惜的记载。陈寿以信义篤烈评价他，这种信义可以从报孔融之恩、受孙策信任而守约的具体行动中理解。',refs=[HAIHUN,LIUPAN,NO_MORE,SUNQUAN,DEATH,LAST,MOURN,PING],eventLinks=[dict(label='孙权继事',eventId='sun-quan-succession')]),
+ ],
+ careers=[
+  dict(id='document',when='二十一岁时，确年未载',title='赴洛阳毁州章',office='郡奏曹史',text='受本郡选派到洛阳，骗取并毁坏州府上章文书，再使郡章先达；由此知名，也招来州府忌恨。',refs=[HOME,LUOYANG,DOCUMENT,SUCCESS,EXILE]),
+  dict(id='liaodong',when='毁州章后，确年未载',title='避祸辽东',office='—',text='恐受州府报复而避居辽东。《邴原传》另记其将归时，邴原曾托付刘政，由他协助离境；不补定其在辽东的居县。',refs=[EXILE,BING]),
+  dict(id='kongrong',when='刘备任平原相时，确年未载',title='从都昌突围，往平原求援',office='—',text='辽东归来后依母命赴孔融之急。进入都昌，反复出城习射使围兵松懈，再突围到平原向刘备求救，随三千精兵回援，管亥解围。',refs=[MOTHER,DONGCHANG,ENTER,REQUEST,BREAK,PINGYUAN,RESCUE]),
+  dict(id='liuyao',when='195年前后',title='曲阿见刘繇，与孙策相斗',office='侦察之任',text='暂渡江见刘繇，未去而孙策军至；与一骑侦察时遇孙策，交锋互有所得，双方部众赶来后分开。孙策渡江讨刘繇，裴注引《江表传》系于兴平二年。',refs=[LIUYAO,RECON,DUEL,SEPARATE,YEAR195],eventIds=['sun-ce-jiangdong']),
+  dict(id='jingxian',when='刘繇败后，确年未载',title='经芜湖据泾县，战败被俘',office='自称丹杨太守',text='没有随刘繇一同去豫章，而在芜湖入山，进住泾县立屯，山越多来依附。孙策亲自攻讨，将其俘获。',refs=[WUHU,JINGXIAN]),
+  dict(id='sunce',when='被孙策俘获后，确年未载',title='解缚受任，还吴授兵',office='门下督、折冲中郎将',text='孙策解开捆缚，追叙神亭相遇，决定与之共事。先署门下督，回吴后授兵并拜折冲中郎将。',refs=[RELEASE,RECRUIT,OFFICE]),
+  dict(id='yuzhang',when='刘繇卒后，确年未载',title='奉命往抚刘繇余众',office='—',text='刘繇死于豫章，万余士众未有所附，孙策遣太史慈抚安；孙策力排疑议，太史慈按约六十日返回。裴注另述宣慰部曲与观察当地情况的使命。',refs=[PACIFY,TRUST,SIXTY,PEOPLE,SMALL]),
+  dict(id='haihun',when='孙策在世时，确年未载',title='治海昏，督诸将拒刘磐',office='建昌都尉',text='孙策划海昏、建昌左右六县交其统领，驻治海昏，抵御刘磐对艾、西安诸县的侵扰，刘磐此后不再来犯。',refs=[LIUPAN,HAIHUN,NO_MORE]),
+  dict(id='mabao',when='孙策在世时，确年未载',title='随讨麻保，以射术著称',office='—',text='随孙策讨麻保贼，射中敌人持楼棼的手，箭贯手钉在楼木上，围外众人称善。本传末段补叙射术，未明此役与治海昏的先后，此处仅归组；也未交代麻保的可靠地理位置，不据名称补行迹。',refs=[MABAO,ARROW]),
+  dict(id='sunquan',when='200年起，后续确年未载',title='孙权续委南方防务',office='继续统南方防务',text='孙权承接孙策之事，认为太史慈能制刘磐，继续委任南方事务；《吴主传》建安八年条仍记太史慈领海昏。',refs=[SUNQUAN,YEAR200,YEAR203],eventIds=['sun-quan-succession']),
+  dict(id='death',when='206年',title='四十一岁卒',office='—',text='建安十一年卒，年四十一。裴注引《吴书》写其临终叹志未从、孙权悼惜；本传未记卒地。子太史享后来官至越骑校尉。',refs=[DEATH,LAST,MOURN,SON]),
+ ],
+ trajectory=dict(atlasPerson='taishici',phases=[
+  dict(id='north',title='郡吏与避祸',when='二十一岁及其后，确年未载',span=(186,192),careers=['document','liaodong'],atlasStops=[0,1]),
+  dict(id='rescue',title='突围救孔融',when='刘备任平原相时，确年未载',span=(190,194),careers=['kongrong'],atlasStops=[2]),
+  dict(id='change',title='由敌手到受任',when='195年前后及其后',span=(195,198),careers=['liuyao','jingxian','sunce'],atlasStops=[3,4,5]),
+  dict(id='south',title='镇守南方与卒',when='刘繇卒后至206年，早期确年未载',span=(198,206),careers=['yuzhang','haihun','mabao','sunquan','death'],atlasStops=[6,7]),
+ ]),
+ records=[
+  dict(section='civil',when='刘繇卒后，确年未载',title='安抚未有所附的故众',category='部众招抚',careerRef='yuzhang',text='受孙策派遣，抚安刘繇留下的万余士众，并在约定期限内返回。正文没有说这万余人全被他带回，不能把规模直接改写成实际归附人数。',refs=[PACIFY,SIXTY]),
+  dict(section='civil',when='同次豫章使命中，确年未载',title='宣慰自愿，观察地方',category='宣慰与情报',careerRef='yuzhang',text='裴注引《江表传》记孙策命令部曲愿来则偕来、不愿来则安慰，并观察华歆治理及庐陵、鄱阳亲附情况；太史慈认为少带数十人即可往返，后回报地方形势。',refs=[PEOPLE,SMALL,REPORT]),
+  dict(section='military',when='刘备任平原相时，确年未载',title='习射麻痹围兵后突围',category='突围求援',careerRef='kongrong',text='先反复出城习射，让围兵习以为常，再突然纵马驰出求援，终于以刘备援军解孔融之围。勇力与欺敌准备在此相互配合。',refs=[BREAK,PINGYUAN,RESCUE]),
+  dict(section='military',when='孙策在世时，确年未载',title='督诸将阻止刘磐侵扰',category='边防统军',careerRef='haihun',text='以建昌都尉治海昏、督诸将拒刘磐，本传明确记刘磐不再来寇。防区中的艾、西安是被侵扰县，不等于本书记他逐一驻屯。',refs=[LIUPAN,HAIHUN,NO_MORE]),
+  dict(section='military',when='随孙策讨麻保时，确年未载',title='射手贯棼',category='临阵射术',careerRef='mabao',text='敌人登楼持木谩骂，他射穿对方手掌、将其钉在楼木上，围外众人称善；这是本传说明其射术的具体片段。',refs=[MABAO,ARROW]),
+  dict(section='setback',when='二十一岁及其后',title='毁章成功，继而避祸',category='违法与流亡',careerRef='document',text='以毁坏州府章书使郡章先达，虽为本郡办成事，却引来州府忌恨，只得避辽东。不能只取计谋成功而略去后果。',refs=[DOCUMENT,SUCCESS,EXILE]),
+  dict(section='setback',when='195年前后',title='在刘繇处未获重用',category='任用局限',careerRef='liuyao',text='有人建议刘繇以太史慈为大将军，刘繇却以许子将可能耻笑为由拒绝，只让他侦察。这里记的是上级的人事判断，不是太史慈本人的军事失败。',refs=[SCOUT,RECON]),
+  dict(section='setback',when='刘繇败后，确年未载',title='据泾县而被孙策俘获',category='战败与转事',careerRef='jingxian',text='自称丹杨太守、在泾县聚众，最终在孙策亲征下被俘；被解缚受任后，才转入孙氏集团。',refs=[WUHU,JINGXIAN,RELEASE,OFFICE]),
+ ],
+ relations=[
+  dict(category='旧识',name='孔融',label='报答母亲所受关照',text='孔融多次照顾太史慈母亲，太史慈依母命赴急、为其求得援兵；孔融称其为少友。',refs=[KONG,MOTHER,RESCUE,FRIEND]),
+  dict(category='旧识',name='刘备',personId='liubei',label='平原求得三千援兵',text='突破都昌围兵后到平原求援，刘备遣三千精兵随行，解孔融之围。',refs=[PINGYUAN,RESCUE]),
+  dict(category='旧主',name='刘繇',label='同郡而未获重任',text='渡江暂见同郡刘繇，仅被使侦察；刘繇败后没有随其一同退往豫章。',refs=[Q('v049-b0012','揚州刺史劉繇與慈同郡'),LIUYAO,RECON,WUHU]),
+  dict(category='君臣',name='孙策',personId='sun-ce',label='敌手转为信任之臣',text='先交战互夺兵器，后被俘解缚，受任领兵；再奉命安抚故众、守约而返。',refs=[DUEL,JINGXIAN,OFFICE,PACIFY,SIXTY]),
+  dict(category='君臣',name='孙权',personId='sunquan',label='续委南方',text='因太史慈能制刘磐而继续委任南方事务。裴注引《吴书》记其卒后孙权甚悼惜。',refs=[SUNQUAN,MOURN]),
+  dict(category='敌对',name='刘磐',label='海昏边防的对手',text='刘表从子刘磐侵扰艾、西安诸县，太史慈治海昏督诸将拒之，使其不再来寇。',refs=[LIUPAN,HAIHUN,NO_MORE]),
+  dict(category='旧识',name='邴原',label='辽东返乡时受托',text='《邴原传》记太史慈将归时，邴原把刘政交其协助离境；本页不据此虚构两人长期师友关系。',refs=[BING]),
+  dict(category='亲族',name='太史慈母',label='劝报孔融之恩',text='母亲告诉他孔融对自己的照顾，并劝他赴急，获救后又表示欣慰。',refs=[MOTHER,HAPPY]),
+  dict(category='敌对',name='吕范',personId='lv-fan',label='孙策征讨中的对手',text='吕范传另记其随孙策攻太史慈于勇里，可与本传泾县被俘经过互参，地名不强行视作同一点。',refs=[LVFAN,JINGXIAN]),
+ ],
+ assessment=[
+  dict(title='陈寿：信义篤烈，有古人之分',text='陈寿评其信义坚定炽烈，有古人的风度。正文中救孔融、受孙策任使而如期归来，是理解这一评语的直接材料。',refs=[PING,RESCUE,SIXTY]),
+  dict(title='孙策：以信义为先',text='裴注引《吴历》记孙策相信太史慈重信、不欺己；但这段与正文的被俘地点、归来期限不同，具体经过应依裴松之辨析分开阅读。',refs=[SUNCE,PEI]),
+ ],
+ readingNotes=[
+  dict(title='神亭交战与被俘不是一事',text='正文记与孙策交战后双方分开，后来在泾县立屯才被孙策俘获。《吴历》把被俘放在神亭，裴松之明确说与本传大异、疑为谬误，不能合并成神亭单战被擒。',refs=[SEPARATE,JINGXIAN,WULI,PEI]),
+  dict(title='如期返回的两种叙事',text='正文的豫章招抚使命约定不超过六十日；裴注引《吴历》则接在神亭被俘之后，约次日中午返回。由于前提与期限皆不同，本页以正文为履历主线，不拼接两说。',refs=[SIXTY,Q('v049-b0013-n01','明日中，望君来还。','《吴历》'),PEI]),
+  dict(title='206年卒，后世合肥情节另属改编',text='本传明确记建安十一年即206年卒，材料中没有太史慈参加后来合肥之战的记载。因此不把读者熟悉的后世合肥受伤情节纳入本书履历，也不以那类情节推迟卒年。',refs=[DEATH]),
+  dict(title='本传与裴注中的字形',text='本页引文逐字保留电子底本：正文多用繁体，太史慈传若干裴注则使用简体字形。这是底本文字差异，不能为了表面统一而改写引文；正文解释统一采用简体。',refs=[PING,SUNCE,PEI]),
+ ],
+ sourceScope='以卷四十九《太史慈传》正文及全部裴注为基础，交叉检索并核对卷十一邴原、卷四十六《孙策传》、卷四十七《吴主传》、卷五十五程普、卷五十六吕范等。神亭被俘与招抚返期的异说按正文和裴注分开处理；卒年直接以正文建安十一年为准。本页不声称穷尽全书所有提及太史慈之处。',
+)

@@ -1,0 +1,126 @@
+"""张昭：B 级人物卡；正文与裴注分层，地点仅取本人活动。"""
+from profile_v3 import Q
+
+ORIGIN=Q('v052-b0002','張昭字子布，彭城人也。')
+STUDY=Q('v052-b0002','少好學，善隸書，從白侯子安受《左氏春秋》，博覽眾書')
+TAO=Q('v052-b0002','刺史陶謙舉茂才，不應，謙以爲輕己，遂見拘執。昱傾身營救，方以得免。')
+SOUTH=Q('v052-b0002','漢末大亂，徐方士民多避難揚土，昭皆南渡江。')
+APPOINT=Q('v052-b0002','孫策創業，命昭爲長史、撫軍中郎將')
+TRUST=Q('v052-b0002','升堂拜母，如比肩之舊，文武之事，一以委昭。')
+PRAISE=Q('v052-b0002','昭每得北方士大夫書疏，專歸美於昭')
+CE=Q('v052-b0002','今子布賢，我能用之，其功名獨不在我乎!')
+ENTRUST=Q('v052-b0003','策臨亡，以弟權托昭，昭率群僚立而輔之。')
+ORDER=Q('v052-b0003','上表漢室，下移屬城，中外將校，各令奉職')
+HORSE=Q('v052-b0003','乃身自扶權上馬，陳兵而出，然後眾心知有所歸。')
+ADVISER=Q('v052-b0003','昭復爲權長史，授任如前。後劉備表權行車騎將軍，昭爲軍師。')
+HUNT=Q('v052-b0003','權每田獵，常乘馬射虎，虎常突前攀持馬鞍。昭變色而前曰：')
+HUNT_RESULT=Q('v052-b0003','昭雖諫爭，常笑而不答。')
+XING=Q('v052-b0003','魏黃初二年，遣使者邢貞拜權爲呉王。貞入門，不下車。')
+DESCEND=Q('v052-b0003','貞即遽下車。拜昭爲綏遠將軍，封由拳侯。')
+WUCHANG=Q('v052-b0003','權於武昌，臨釣台，飲酒大醉。')
+WINE=Q('v052-b0003','昔紂爲糟丘酒池長夜之飲，當時亦以爲樂，不以爲惡也。')
+WINE_END=Q('v052-b0003','權默然。有慚色，遂罷酒。')
+FIRST_PM=Q('v052-b0004','初，權當置丞相，眾議歸昭。')
+PM=Q('v052-b0004','領丞相事煩，而此公性剛，所言不從，怨咎將興，非所以益之也。')
+GU=Q('v052-b0004','乃用顧雍。')
+RETIRE=Q('v052-b0005','權既稱尊號，昭以老病，上還官位及所統領。')
+FINAL=Q('v052-b0005','更拜輔呉將軍，班亞三司，改封婁侯，食邑萬戸。')
+BOOKS=Q('v052-b0005','在裡宅無事，乃著《春秋左氏傳》解及《論語》注。')
+CHIBI=Q('v052-b0005-n01','如张公之计，今已乞食矣。','《江表传》')
+PEI=Q('v052-b0005-n01','鼎峙之计，本非其志也。','《江表传》；裴松之案')
+PEI_MOTIVE=Q('v052-b0005-n01','上籓汉室，下保民物','《江表传》；裴松之案')
+FRANK=Q('v052-b0006','昭每朝見，辭氣壯厲，義形於色，曾以直言逆旨，中不進見。')
+LOYAL=Q('v052-b0006','若乃變心易慮，以偷榮取容，此臣所不能也。')
+LIAO=Q('v052-b0007','若淵改圖，欲自明於魏，兩使不反，不亦取笑於天下乎?')
+SWORD=Q('v052-b0007','權不能堪，案刀而怒')
+CLOSED=Q('v052-b0007','昭忿言之不用，稱疾不朝。權恨之，土塞其門，昭又於內以土封之。')
+KILLED=Q('v052-b0007','淵果殺彌，晏。')
+FIRE=Q('v052-b0007','權燒其門，欲以恐之，昭更閉門戸。')
+RECONCILE=Q('v052-b0007','權載以還宮，深自克責。昭不得已，然後朝會。')
+XI=Q('v052-b0007-n01','乃追忿不用，归罪於君，闭户拒命，坐待焚灭，岂不悖哉！','习凿齿论')
+DEATH=Q('v052-b0008','年八十一，嘉禾五年卒。')
+BURIAL=Q('v052-b0008','遺令幅巾素棺，斂以時服。權素服臨吊，謚曰文侯。')
+HEIR=Q('v052-b0008','長子承已自封侯，少子休襲爵。')
+PING=Q('v052-b0054','評曰：張昭受遺輔佐，功勳克舉，忠謇方直，動不爲己。')
+PING_LIMIT=Q('v052-b0054','而以嚴見憚，以高見外，既不處宰相，又不登師保')
+DANGTU=Q('v047-b0009','權自率眾圍合肥，使張昭攻九江之當塗。昭兵不利')
+SUPPRESS=Q('v052-b0003-n02','权征合肥，命昭别讨匡琦，又督领诸将，攻破豫章贼率周凤等於南城。','《吴书》')
+STAY=Q('v052-b0003-n02','权每出征，留昭镇守，领幕府事。','《吴书》')
+RITUAL=Q('v052-b0003-n03','昭与孙绍、滕胤、郑礼等，采周、汉，撰定朝仪。','《吴录》')
+ZHOU=Q('v054-b0004','瑜將兵赴喪，遂留吳，以中護軍與長史張昭共掌眾事。')
+LUSU=Q('v054-b0020','張昭非肅謙下不足，頗訾毀之，云肅年少粗疏，未可用。')
+GAN=Q('v055-b0037','吳下業業，若軍果行，恐必致亂。')
+HAN=Q('v059-b0002','乃令休從昭受讀，還以授登。')
+SHARED=Q('v053-b0002-n03','纮與張昭並與參謀，常令一人居守，一人從征討','《吴书》')
+RECOMMEND=Q('v054-b0028','張昭薦蒙代當，拜別部司馬。')
+
+PROFILE=dict(
+ id='zhang-zhao',tier='B',syncLifespan=True,reading=['052'],
+ lead='孙策、孙权两代重臣。由避乱南渡的儒士成为江东长史，孙策临终托孤后稳定孙权继位；守府、定朝仪并以直谏著称。赤壁迎曹之议与两度未任丞相，又使他的忠直、政治取向和君臣关系成为本传主线。',
+ role='孙吴受遗辅政重臣',
+ facts=[
+  dict(key='hometown',label='籍贯',value='彭城',text='字子布，彭城人；汉末避乱南渡，不将籍贯直接当作可定位的出生行迹。',refs=[ORIGIN,SOUTH]),
+  dict(key='lifespan',label='生卒年',value='生年未详—236年',text='本传载嘉禾五年（236）卒，年八十一；本页不据享年反推确切出生年。',refs=[DEATH]),
+  dict(key='identity',label='主要身份',value='孙氏两代受遗辅臣',text='孙策委以文武政务，临终托付孙权；张昭率群僚辅立孙权。',refs=[TRUST,ENTRUST]),
+  dict(key='office',label='最高官职',value='辅吴将军，班亚三司',text='历长史、抚军中郎将、军师、绥远将军；孙权称帝后授辅吴将军，班位次于三司，并未拜丞相。',refs=[APPOINT,ADVISER,DESCEND,FINAL,FIRST_PM,PM,GU]),
+  dict(key='title',label='最高爵位',value='娄侯',text='先封由拳侯，孙权称尊号后改封娄侯，食邑万户。',refs=[DESCEND,FINAL]),
+  dict(key='posthumous',label='身后称号',value='文侯',text='嘉禾五年卒，孙权素服临吊，谥文侯。',refs=[DEATH,BURIAL]),
+  dict(key='names',label='常见称谓',value='张子布、张公',text='字子布，孙权称其张公；与广陵张纮是不同人物。',refs=[ORIGIN,Q('v052-b0008','孤與張公言，不敢妄也。'),SHARED]),
+  dict(key='deeds',label='代表事迹',items=['受遗辅权','留守幕府','撰定朝仪','力谏辽东','著注经传'],text='受遗辅政、留守、礼仪编定、辽东谏争与经学著述，各有本传正文或注引依据。',refs=[ENTRUST,STAY,RITUAL,LIAO,BOOKS]),
+ ],
+ intro=[
+  dict(title='南渡儒士进入幕府',text='张昭字子布，彭城人，少时好学，向白侯子安学习《左氏春秋》，又博览群书。他拒绝陶谦征举而被拘，赖赵昱营救才得免。汉末避乱南渡，孙策创业时任他为长史、抚军中郎将，文武事务多委付于他；北方士人的来信偏重张昭功劳，孙策却以能用贤才也是自己的功名相宽慰。',refs=[ORIGIN,STUDY,TAO,SOUTH,APPOINT,TRUST,PRAISE,CE]),
+  dict(title='辅立孙权与守府',text='200年孙策去世，张昭承受托付，率群僚拥立孙权，向汉廷与属城通报，令内外将校各守职。他扶悲伤不视事的孙权上马，陈兵出巡，使众人知道新的归属。此后与周瑜共掌众事，继续担任长史；他的角色包含留守幕府与军务，并非只在朝中议论。赤壁之后攻当涂失利，也应放在实际履历中看。',refs=[ENTRUST,ORDER,HORSE,ZHOU,ADVISER,STAY,DANGTU],eventLinks=[dict(label='200年孙策去世',eventId='sun-quan-succession')]),
+  dict(title='直谏与不任丞相',text='张昭对孙权射虎、武昌纵酒都直接进谏；面对不下车的魏使邢贞，也迫使对方改正礼节。然而威望与资历没有换来丞相之位，孙权解释他性格刚强，意见不被采用容易生怨。赤壁前迎曹的主张又长期留下隔阂：注引记孙权称帝后以此当面责他；裴松之则从辅汉保民的取向替他辩护，不能把这场争论只写成怯战。',refs=[HUNT,HUNT_RESULT,XING,DESCEND,WUCHANG,WINE,WINE_END,PM,CHIBI,PEI,PEI_MOTIVE]),
+  dict(title='晚年谏争与经学',text='孙权称尊号后，张昭以老病交还旧任，改授辅吴将军、娄侯，在家著《左氏传》解与《论语》注。辽东公孙渊称藩时，他预警使者可能遇害，与孙权争至对泣，又因不听劝而闭门。使者果被杀，孙权亲往道歉，两人才重新朝会。236年张昭八十一岁去世，遗命素棺时服，谥文侯；他的声望与难以相容的刚直始终并存。',refs=[RETIRE,FINAL,BOOKS,LIAO,SWORD,CLOSED,KILLED,FIRE,RECONCILE,DEATH,BURIAL]),
+ ],
+ careers=[
+  dict(id='learning',when='早年，确年未载',title='治学拒举，遭陶谦拘执',office='未就征举',text='学《左氏春秋》，博览众书；拒陶谦举茂才被拘，赵昱营救后获免。',refs=[STUDY,TAO]),
+  dict(id='south',when='汉末至孙策创业时，确年未载',title='南渡任孙策长史',office='长史、抚军中郎将',text='避乱南渡后受孙策任用，文武政务委付；孙策不以士人称誉张昭为嫌。',refs=[SOUTH,APPOINT,TRUST,PRAISE,CE],eventIds=['sun-ce-jiangdong']),
+  dict(id='succession',when='200年',title='受遗辅立孙权',office='长史',text='孙策临终托付孙权，张昭率群僚辅立，督令将校奉职，扶权上马巡军；与周瑜留吴共掌众事。',refs=[ENTRUST,ORDER,HORSE,ZHOU,Q('v047-b0003','五年。策薨，以事授權')],eventIds=['sun-quan-succession']),
+  dict(id='court',when='孙权统事后，确年未载',title='留守与劝止射虎',office='长史，后为军师',text='裴注引《吴书》记其留守领幕府。正文记他劝孙权停止亲射猛虎；孙权虽谢过，仍不能完全听从。',refs=[STAY,ADVISER,HUNT,HUNT_RESULT]),
+  dict(id='chibi',when='208年',title='主张迎曹，与拒曹者异议',office='—',text='注引《江表传》把张昭列入迎曹议论者；此议未被采用，孙权后来仍以之责昭。裴松之另从天下统一、辅汉保民角度为其立论辩护。',refs=[Q('v054-b0007-n01','子布、文表諸人，各顧妻子，挾持私慮，深失所望','《江表传》'),CHIBI,PEI,PEI_MOTIVE],eventIds=['chibi']),
+  dict(id='dangtu',when='赤壁战后，208年条下',title='攻当涂失利，另有平叛',office='—',text='孙权围合肥时命张昭攻九江当涂，兵不利。裴注《吴书》另记讨匡琦、南城周凤等，此后很少再任将帅，常为谋臣；二处叙述不强行合并为同一战果。',refs=[DANGTU,SUPPRESS,Q('v052-b0003-n02','自此希复将帅，常在左右，为谋谟臣。','《吴书》')]),
+  dict(id='king',when='221年及其后，部分确年未载',title='折魏使，谏武昌酣饮',office='绥远将军、由拳侯',text='邢贞奉魏命拜孙权为吴王，张昭斥其入门不下车。后在武昌钓台以商纣纵酒为戒，使孙权罢饮；又参与编定朝仪。',refs=[XING,DESCEND,WUCHANG,WINE,WINE_END,RITUAL]),
+  dict(id='premier',when='置丞相至孙邵卒后，确年未载',title='两度被推举，均未为相',office='未任丞相',text='初置丞相及孙邵死后群臣两次举张昭，孙权均不用，后用顾雍；其解释着重性刚、言不见从易生怨。',refs=[FIRST_PM,PM,GU]),
+  dict(id='retirement',when='229年称尊号后',title='交还旧任，改授辅吴将军',office='辅吴将军、娄侯',text='以老病还官与所领，另受辅吴将军、娄侯，班亚三司、食邑万户。在家撰写经学著述；直谏也曾使他一度不获进见。',refs=[RETIRE,FINAL,BOOKS,FRANK]),
+  dict(id='liaodong',when='公孙渊称藩时，确年未载',title='谏使辽东与闭门冲突',office='—',text='反对拜公孙渊为燕王，警告其可能转投魏而杀吴使。孙权仍派使，张昭称病闭门；使者果被杀，孙权亲来致歉，最终载昭还宫。',refs=[LIAO,SWORD,CLOSED,KILLED,FIRE,RECONCILE]),
+  dict(id='death',when='236年',title='八十一岁卒，谥文侯',office='谥文侯',text='嘉禾五年卒，遗命幅巾素棺、以时服入殓；孙权素服临吊，少子张休袭爵。',refs=[DEATH,BURIAL,HEIR]),
+ ],
+ trajectory=dict(atlasPerson='zhangzhao',phases=[
+  dict(id='south',title='南渡与事策',when='早年至孙策创业，确年未载',span=(180,199),careers=['learning','south'],atlasStops=[]),
+  dict(id='succession',title='辅权与军务',when='200—208年及其后，部分确年未载',span=(200,220),careers=['succession','court','chibi','dangtu'],atlasStops=[0,1,2]),
+  dict(id='senior',title='重臣与直谏',when='221—229年前后，部分确年未载',span=(221,229),careers=['king','premier','retirement'],atlasStops=[3]),
+  dict(id='late',title='辽东谏争与终年',when='称尊号后至236年，部分确年未载',span=(229,236),careers=['liaodong','death'],atlasStops=[]),
+ ]),
+ records=[
+  dict(section='civil',when='200年',title='使交接有序',category='受遗辅政',careerRef='succession',text='向朝廷、属城通报并令将校奉职，把孙策死后的悲恸转为可见的主政秩序；孙权出巡使人心有归。',refs=[ORDER,HORSE],eventIds=['sun-quan-succession']),
+  dict(section='civil',when='孙权统事后，确年未载',title='留守与编定礼仪',category='幕府礼制',careerRef='king',text='裴注分别引《吴书》记留守领幕府，引《吴录》记与孙绍等采周汉撰定朝仪，显示军事后方与国家礼仪的双重事务。',refs=[STAY,RITUAL]),
+  dict(section='civil',when='公孙渊称藩时，确年未载',title='预见远使风险',category='外交建言',careerRef='liaodong',text='抓住公孙渊求援出于畏魏而非稳定归附的条件，警告使者可能被杀；后来结果符合这一警告。',refs=[LIAO,KILLED]),
+  dict(section='military',when='孙权统事后，确年未载',title='督诸将平南城周凤',category='平叛统军',careerRef='dangtu',text='裴注《吴书》明确记张昭督领诸将攻破豫章周凤等，不能因其文臣形象抹去统军经历；正文没有这次平叛的详细战术。',refs=[SUPPRESS]),
+  dict(section='military',when='孙权统事后，确年未载',title='讨平黄巾余部',category='平叛',careerRef='court',text='裴注《吴书》称其讨平黄巾贼，提供他实际用兵的另一记载；原文不载确年与地点，不向地图补点。',refs=[Q('v052-b0003-n02','后黄巾贼起，昭讨平之。','《吴书》')]),
+  dict(section='setback',when='208年',title='迎曹之议未被采纳',category='战略分歧',careerRef='chibi',text='孙权与周瑜、鲁肃采取拒曹路线，后来以迎曹议责昭；裴松之却肯定其辅汉保民取向，须保留评价立场的差异。',refs=[CHIBI,PEI,PEI_MOTIVE],eventIds=['chibi']),
+  dict(section='setback',when='208年条下',title='当涂兵不利',category='战事失利',careerRef='dangtu',text='《吴主传》直接记张昭攻九江当涂不利；本传注文另记平叛之功，不能据后者改写这次失败。',refs=[DANGTU]),
+  dict(section='setback',when='两度议相时，确年未载',title='性刚与宰相之位',category='政治限制',careerRef='premier',text='两次获群臣推举却均未任相，孙权担忧他意见不从便生怨；陈寿把其见疏与威严清高联系，批评孙权待之不及孙策。',refs=[FIRST_PM,PM,GU,PING_LIMIT]),
+  dict(section='setback',when='辽东谏争后，确年未载',title='闭门拒朝引起批评',category='君臣冲突',careerRef='liaodong',text='使者被害证明警告有据，却不自动证明闭门拒朝的行为无可议论；习凿齿批评他在君主改过求见时仍执怨拒命。',refs=[CLOSED,FIRE,RECONCILE,XI]),
+ ],
+ scholarship=[dict(title='经学与传授',text='早年受学《左氏春秋》，晚年撰《春秋左氏传》解及《论语》注。孙权欲太子孙登读《汉书》，命张休先从父受读再教太子，反映其师法地位。',refs=[STUDY,BOOKS,HAN])],
+ assessment=[dict(title='陈寿：忠謇方直而见外',text='陈寿肯定其受遗辅佐、功勋与不为己的动机，又指出他因严见惮、因高见外，未居宰相师保，以此说明孙权待臣不及孙策。',refs=[PING,PING_LIMIT,Q('v052-b0054','以此明權之不及策也。')])],
+ relations=[
+  dict(category='君臣',name='孙策',personId='sun-ce',label='创业时委任，临终托孤',text='文武之事委付张昭，容纳士人归美于昭，又在临终托付孙权。',refs=[TRUST,CE,ENTRUST]),
+  dict(category='君臣',name='孙权',personId='sunquan',label='受托辅立，长期谏争',text='从扶上马巡军到辽东闭门争执，恩礼与冲突并存；张昭坚持不能取容偷荣。',refs=[HORSE,LOYAL,CLOSED,RECONCILE]),
+  dict(category='同僚',name='周瑜',personId='zhouyu',label='共掌众事，拒曹意见不同',text='200年两人共掌众事；迎曹与拒曹之议又形成重大分歧。',refs=[ZHOU,Q('v054-b0007-n01','獨卿與子敬與孤同耳','《江表传》'),CHIBI]),
+  dict(category='同僚',name='鲁肃',personId='lusu',label='曾受张昭贬抑',text='张昭认为鲁肃年轻粗疏、谦下不足，孙权没有因此轻弃鲁肃。',refs=[LUSU,Q('v054-b0020','極不以介意，益貴重之')]),
+  dict(category='同僚',name='张纮',label='同参谋而各司留守征行',text='裴注《吴书》称二人同参谋，常一人居守一人从征，张昭不能与张纮的文章与经历混写。',refs=[SHARED]),
+  dict(category='部属',name='吕蒙',personId='lumeng',label='荐代邓当',text='邓当死后张昭推荐吕蒙接掌其部，吕蒙因此为别部司马。',refs=[RECOMMEND]),
+  dict(category='旧识',name='陶谦、赵昱',personId='tao-qian',label='拒举被拘，赖友救免',text='陶谦以拒举为轻己而拘昭，友人赵昱尽力救出。',refs=[TAO]),
+  dict(category='亲族',name='张承、张休',label='长子自封，少子嗣爵',text='长子张承已有封爵，少子张休嗣娄侯，张休亦从父受《汉书》转授孙登。',refs=[HEIR,HAN]),
+ ],
+ readingNotes=[
+  dict(title='迎曹之议的两种评价',text='《江表传》记孙权以“乞食”反诘张昭，含有成功者回看旧议的立场。裴松之明言鼎峙并非昭志，认为辅汉保民、促成统一也可视为忠正；两者不是同一评价标准。',refs=[CHIBI,PEI,PEI_MOTIVE]),
+  dict(title='张昭并非始终不领兵',text='正文《吴主传》记当涂不利，注引《吴书》记黄巾、匡琦及南城用兵，并说此后很少再任将帅。宜保留材料层次，不以“文臣”概括消除实战。',refs=[DANGTU,SUPPRESS,Q('v052-b0003-n02','自此希复将帅，常在左右，为谋谟臣。','《吴书》')]),
+  dict(title='谏言有验与闭门可议',text='公孙渊杀使验证了张昭的风险判断；习凿齿批评的却是君主悔过求见后仍闭门拒命，属于对臣礼与政治行为的另一层判断。',refs=[LIAO,KILLED,RECONCILE,XI]),
+ ],
+ glossary=[('受遗','接受临终托付。'),('班亚三司','朝廷班位次于三司，不等于实任三公。')],
+ sourceScope='以卷五十二张昭本传及裴注为基础，交叉核对卷四十七吴主传、卷五十三张纮传、卷五十四周瑜鲁肃吕蒙传、卷五十五甘宁传与卷五十九孙登传。迎曹及君臣争论分别保留注引作者与裴松之的判断。本页不声称穷尽全书所有提及张昭之处。',
+)

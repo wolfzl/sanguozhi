@@ -15,6 +15,9 @@ V3_MODULES = [
     'profile_v3_zhangfei', 'profile_v3_zhaoyun', 'profile_v3_ma_chao',
     'profile_v3_pang_tong', 'profile_v3_fa_zheng', 'profile_v3_liu_shan',
     'profile_v3_jiang_wan', 'profile_v3_fei_yi', 'profile_v3_jiang_wei',
+    'profile_v3_sun_jian', 'profile_v3_sun_ce', 'profile_v3_sun_hao',
+    'profile_v3_lusu', 'profile_v3_lumeng', 'profile_v3_taishi_ci',
+    'profile_v3_zhang_zhao', 'profile_v3_zhu_zhi', 'profile_v3_lv_fan',
 ]
 
 # 人物分级（scripts/person_tiers.py 按史料篇幅计算；改动须同时更新该脚本并通过 --check）。

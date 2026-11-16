@@ -1,0 +1,122 @@
+"""朱治：B 级人物卡；与朱然的独立事迹严格区分。"""
+from profile_v3 import Q
+
+ORIGIN=Q('v056-b0002','朱治字君理，丹楊故鄣人也。')
+CLERK=Q('v056-b0002','初為縣吏，後察孝廉，州辟從事，隨孫堅征伐。')
+SIMA=Q('v056-b0002','中平五年，拜司馬。')
+THREE=Q('v056-b0002','從討長沙、零、桂等三郡賊周朝、蘇馬等。有功，堅表治行都尉。')
+DONG=Q('v056-b0002','從破董卓於陽人，入洛陽。')
+XUZHOU=Q('v056-b0002','表治行督軍校尉，特將步騎，東助徐州牧陶謙討黃巾。')
+CE=Q('v056-b0002','會堅薨，治扶冀策，依就袁術。')
+YUAN=Q('v056-b0002','後知術政德不立，乃勸策還平江東。')
+MA=Q('v056-b0002','時太傅馬日碑在壽春，辟治為掾，遷吳郡都尉。')
+RISK=Q('v056-b0002','而策家門盡在州下，治乃使人於曲阿迎太妃及權兄弟。')
+PROTECT=Q('v056-b0002','所以供奉輔護，甚有恩紀。')
+QIANTANG=Q('v056-b0002','治從錢唐欲進到吳，吳郡太守許貢拒之於由拳，治與戰，大破之。')
+WU=Q('v056-b0002','貢南就山賊嚴自虎，治遂入郡，領太守事。')
+XIAOLIAN=Q('v056-b0002','權年十五，治舉為孝廉。')
+SUCCESSION=Q('v056-b0002','後策薨，治與張昭等共尊奉權。')
+TAISHOU=Q('v056-b0003','建安七年，權表治為〔吳郡〕太守，行扶義將軍')
+COUNTIES=Q('v056-b0003','割婁、由拳、無錫。毗陵為奉邑，置長吏。')
+SOUTHEAST=Q('v056-b0003','征討夷越，佐定東南，禽截黃巾餘類陳敗、萬秉等。')
+FIRST_TITLE=Q('v056-b0003','黃武元年，封毗陵侯，領郡如故。')
+FINAL=Q('v056-b0004','二年，拜安國將軍，金印紫綬，徙封故鄣。')
+HONOR=Q('v056-b0004','治每進見，權常親迎。執版交拜，饗宴贈賜，恩敬特隆')
+OFFICIALS=Q('v056-b0004','至從行吏，皆得奉贄私覿')
+YI=Q('v056-b0005','初，權弟翊，性峭急，喜怒快意，治數責數，諭以道義。')
+BEN=Q('v056-b0005','及曹公破荊州，威震南土，賁畏懼，欲遣子入質。')
+PERSUADE=Q('v056-b0005','治聞之，求往見賁，為陳安危，賁由此遂止。')
+DILIGENT=Q('v056-b0005','權常歎治憂勤王事。')
+FRUGAL=Q('v056-b0005','性儉約，雖在富貴，車服惟供事。')
+DOCUMENTS=Q('v056-b0005','權優異之，自令督軍御史典屬城文書，治領四縣租稅而已。')
+MANY=Q('v056-b0005','然公族子弟及吳四姓多出仕郡，郡吏常以千數')
+RECOMMEND=Q('v056-b0005','治率數年一遣詣王府。所遣數百人')
+GIFTS=Q('v056-b0005','每歲時貢獻御，權答報過厚。')
+UNREST=Q('v056-b0005','是時丹楊深地，頗有奸叛')
+HOME=Q('v056-b0005','亦以年向老，思戀土風，自表屯故鄣，鎮扶山越。')
+ELDERS=Q('v056-b0005','諸父老故人，莫不詣門，治皆引進，與共飲宴，鄉黨以為榮。')
+RETURN=Q('v056-b0005','在故鄣歲餘，還吳。')
+DEATH=Q('v056-b0005','黃武三年卒，在郡三十一年，年六十九。')
+SON=Q('v056-b0006','子才，素為校尉領兵，既嗣父爵，遷偏將軍。')
+JI=Q('v056-b0006','才弟紀，權以策女妻之，亦以校尉領兵。')
+RAN=Q('v056-b0008','朱然字義封，治姊子也，本姓施氏。')
+ADOPT=Q('v056-b0008','初治未有子，然年十三，乃啟策乞以為嗣。')
+ADOPT_WU=Q('v056-b0008','策命丹楊郡以羊酒召然，然到吳，策優以禮賀。')
+DISPLEASE=Q('v052-b0030','呉郡太守朱治，權舉將也，權曾有以望之，而素加敬，難自詰讓，忿忿不解。')
+JIN=Q('v052-b0030','瑾揣知其故，而不敢顯陳，乃乞以意私自問')
+RELEASE=Q('v052-b0030','孤意解矣。顏氏之德，使人加親，豈謂此耶？')
+YI_XIAOLIAN=Q('v051-b0019','太守朱治舉孝廉，司空辟。')
+BEN_NOTE=Q('v056-b0005-n01','將軍當斯時也，而欲背骨肉之親，違萬安之計','《江表传》')
+BEN_CAUSE=Q('v056-b0005-n01','為一女子，改慮易圖，失機毫釐，差以千里，豈不惜哉！','《江表传》')
+PING=Q('v056-b0037','評曰：朱治、呂範以舊臣任用')
+CE_TAISHOU=Q('v046-b0015','丹揚朱治爲呉郡太守。')
+
+PROFILE=dict(
+ id='zhu-zhi',tier='B',syncLifespan=True,reading=['056'],
+ lead='先后追随孙坚、孙策、孙权的江东旧臣。从长沙诸郡与讨董战事起家，劝孙策脱离袁术、进取江东，又破许贡入吴郡；长期领郡、举荐孙权并辅其继业，晚年返故鄣镇抚山越，后还吴而卒。',
+ role='孙氏三世旧臣、吴郡太守',
+ facts=[
+  dict(key='hometown',label='籍贯',value='丹杨郡故鄣县',text='字君理，丹杨故鄣人。晚年自请屯故鄣，不能因此把籍贯另作一次出生站。',refs=[ORIGIN,HOME]),
+  dict(key='lifespan',label='生卒年',value='生年未详—224年',text='本传载黄武三年卒、年六十九；不据享年反推确切出生年。',refs=[DEATH]),
+  dict(key='identity',label='主要身份',value='孙氏三世旧臣、地方军政长官',text='随孙坚征伐，辅孙策经营江东，后与张昭等奉孙权；长期在吴郡任职。',refs=[CLERK,CE,SUCCESSION,DEATH]),
+  dict(key='office',label='最高官职',value='安国将军，领吴郡太守',text='早年行都尉、督军校尉，后为吴郡都尉、太守、行扶义将军；黄武二年拜安国将军，领郡如故。',refs=[THREE,XUZHOU,MA,TAISHOU,FIRST_TITLE,FINAL]),
+  dict(key='title',label='最高爵位',value='故鄣侯',text='黄武元年封毗陵侯，次年徙封故鄣；爵位名称不等于任内一直居住该地。',refs=[FIRST_TITLE,FINAL]),
+  dict(key='posthumous',label='身后称号',value='本传未载谥号',text='本传记卒年、享年与朱才嗣爵，没有给朱治另列谥号；不把养子朱然的谥号移给他。',refs=[DEATH,SON]),
+  dict(key='names',label='常见称谓',value='朱君理',text='本传记字君理。朱然本姓施，系其姊子、收养为嗣，是另一人物。',refs=[ORIGIN,RAN,ADOPT]),
+  dict(key='deeds',label='代表事迹',items=['从讨董卓','劝策江东','破贡入吴','举荐孙权','镇扶故鄣'],text='从征、进言、吴郡经营与故鄣镇抚，构成本传的主要履历。',refs=[DONG,YUAN,QIANTANG,WU,XIAOLIAN,HOME]),
+ ],
+ intro=[
+  dict(title='从县吏到孙坚部将',text='朱治字君理，丹杨故鄣人，早年为县吏，察孝廉、受州辟后随孙坚征伐。188年拜司马，从讨长沙、零陵、桂阳三郡周朝、苏马等，因功行都尉。他又随孙坚在阳人击破董卓军、进入洛阳，此后独领步骑东助陶谦讨黄巾。这里的朱治有实际从军经历，不能与后来以勇烈著称的朱然合为一人。',refs=[ORIGIN,CLERK,SIMA,THREE,DONG,XUZHOU,RAN]),
+  dict(title='辅策取吴与奉权',text='孙坚去世后，朱治扶助孙策依附袁术；看出袁术政德不足，又劝孙策回平江东。刘繇与袁孙生隙时，他派人从曲阿迎护孙家。随后从钱唐向吴进军，在由拳大破许贡，进入吴郡领太守事。他举十五岁的孙权为孝廉，孙策死后又与张昭等共同尊奉孙权，使军事开拓、地方控制与孙氏内部的接续连接起来。',refs=[CE,YUAN,RISK,PROTECT,QIANTANG,WU,XIAOLIAN,SUCCESSION],eventLinks=[dict(label='从钱唐向吴进军',eventId='sun-ce-jiangdong'),dict(label='孙策死后',eventId='sun-quan-succession')]),
+  dict(title='久领吴郡与宗族协调',text='202年孙权表朱治为吴郡太守、行扶义将军，另给四县奉邑，并有征讨夷越、捕获黄巾余部的记载。他多次责劝性情急躁的孙翊，曹操破荆州后，又劝止孙贲送子入质。孙权对他恩敬甚厚，属城文书另由督军御史处理；郡中公族与吴地大姓子弟众多，朱治隔数年遣数百郡吏到王府，其角色也包含地方与府廷的人事联结。',refs=[TAISHOU,COUNTIES,SOUTHEAST,YI,BEN,PERSUADE,HONOR,DOCUMENTS,MANY,RECOMMEND]),
+  dict(title='晚年返乡与史料留白',text='朱治以俭约著称，黄武初先封毗陵侯，后拜安国将军、徙封故鄣。丹杨深地仍有不安，他既年老思乡，也自请屯故鄣镇扶山越，父老故人来见都予接待；一年多后还吴，224年六十九岁卒。本传称他在郡三十一年，显示长期任用，却未逐年列出治绩；诸葛瑾传还记孙权曾对他不满，提醒我们不要把优礼写成从无波折。',refs=[FRUGAL,FIRST_TITLE,FINAL,UNREST,HOME,ELDERS,RETURN,DEATH,DISPLEASE,JIN,RELEASE]),
+ ],
+ careers=[
+  dict(id='early',when='早年至188年',title='县吏入仕，从征三郡',office='司马、行都尉',text='县吏起家，察孝廉、州辟从事后随孙坚；中平五年拜司马，从讨长沙、零陵、桂阳诸部，以功行都尉。',refs=[CLERK,SIMA,THREE]),
+  dict(id='dong',when='讨董卓时，确年未载',title='从破阳人，入洛阳',office='行督军校尉',text='随孙坚在阳人击破董卓军，进入洛阳；后特领步骑东助陶谦讨黄巾，授职与东援的确年未载。',refs=[DONG,XUZHOU],eventIds=['anti-dong-coalition']),
+  dict(id='yuan',when='孙坚卒后，确年未载',title='辅孙策而劝还江东',office='太傅掾，后吴郡都尉',text='辅孙策依袁术，后知术政德不立，劝策还平江东。马日碑在寿春辟治为掾，后迁吴郡都尉。',refs=[CE,YUAN,MA]),
+  dict(id='wu',when='孙策渡江前后，确年未载',title='迎护孙家，破许贡入吴',office='领吴郡太守事',text='派人赴曲阿迎孙策母与孙权兄弟；本人从钱唐进吴，在由拳破许贡后入郡领太守事。孙策传亦记以治为吴郡太守。',refs=[RISK,PROTECT,QIANTANG,WU,CE_TAISHOU],eventIds=['sun-ce-jiangdong']),
+  dict(id='support',when='孙权十五岁至200年，举荐确年未载',title='举权孝廉，共奉继业',office='吴郡太守',text='孙权十五岁时由朱治举为孝廉；200年孙策去世，朱治与张昭等奉孙权。',refs=[XIAOLIAN,SUCCESSION,Q('v047-b0003','五年。策薨，以事授權')],eventIds=['sun-quan-succession']),
+  dict(id='governor',when='202年起',title='表为吴郡太守，兼行扶义将军',office='吴郡太守、行扶义将军',text='孙权表授太守与将军，给四县奉邑、置长吏；本传并记征讨夷越，捕截陈败、万秉等，具体作战年月未载。',refs=[TAISHOU,COUNTIES,SOUTHEAST]),
+  dict(id='clan',when='孙权统事后至曹操破荆州时，部分确年未载',title='责劝孙翊，止孙贲送质',office='—',text='对孙翊急躁作风屡加责劝。曹操破荆州，孙贲畏惧欲送子为质，朱治求见陈说安危，使其停止。',refs=[YI,BEN,PERSUADE]),
+  dict(id='administration',when='久领吴郡期间，确年未载',title='联系郡吏与王府',office='领四县租税',text='孙权令督军御史处理属城文书，朱治仅领四县租税；郡中公族、吴四姓子弟众多，数年一遣数百郡吏赴王府。另曾因不详原因使孙权不满，由诸葛瑾委婉排解。',refs=[DOCUMENTS,MANY,RECOMMEND,DISPLEASE,JIN,RELEASE]),
+  dict(id='honor',when='222—223年',title='受封毗陵，进安国将军',office='安国将军，徙封故鄣侯',text='黄武元年封毗陵侯，仍领郡；次年拜安国将军、金印紫绶，徙封故鄣。孙权每次见他常亲迎交拜，连随行属吏也得私觌。',refs=[FIRST_TITLE,FINAL,HONOR,OFFICIALS]),
+  dict(id='home',when='晚年，确年未载',title='自请屯故鄣镇扶山越',office='—',text='丹杨深地有奸叛，朱治又年老思乡，自表屯故鄣，镇扶山越；父老故人来访，皆接待共宴。',refs=[UNREST,HOME,ELDERS]),
+  dict(id='death',when='224年，返吴确月未载',title='居故鄣岁余，还吴后卒',office='朱才嗣爵',text='在故鄣一年多后还吴，黄武三年卒，年六十九；本传概称在郡三十一年，子朱才嗣爵。',refs=[RETURN,DEATH,SON]),
+ ],
+ trajectory=dict(atlasPerson='zhuzhi',phases=[
+  dict(id='early',title='从坚与辅策',when='早年至孙策渡江前，部分确年未载',span=(188,195),careers=['early','dong','yuan'],atlasStops=[0]),
+  dict(id='wu',title='取吴与奉权',when='孙策渡江前后至200年，部分确年未载',span=(195,200),careers=['wu','support'],atlasStops=[1]),
+  dict(id='governor',title='久领吴郡',when='202—223年，部分确年未载',span=(202,223),careers=['governor','clan','administration','honor'],atlasStops=[]),
+  dict(id='late',title='返乡与终年',when='晚年至224年，屯故鄣确年未载',span=(223,224),careers=['home','death'],atlasStops=[2,3]),
+ ]),
+ records=[
+  dict(section='civil',when='孙策起事前后，确年未载',title='劝策选择江东',category='形势建言',careerRef='yuan',text='发现袁术政德不立，转而劝孙策还平江东；本传只记判断与建议，不把后续全部开拓归为朱治一人的谋划。',refs=[YUAN]),
+  dict(section='civil',when='孙权十五岁至200年',title='举荐与维护接续',category='举荐辅政',careerRef='support',text='先举孙权孝廉，后在孙策死后共同尊奉；与迎护孙家的记录相接，显示其在孙氏内部的长期信用。',refs=[XIAOLIAN,SUCCESSION,PROTECT],eventIds=['sun-quan-succession']),
+  dict(section='civil',when='曹操破荆州时，确年未载',title='劝止宗室遣质',category='内部协调',careerRef='clan',text='面对孙贲畏魏欲送子的举动，求见说明安危，使其收回计划；裴注《江表传》补充诉诸骨肉亲属与形势判断的说辞。',refs=[BEN,PERSUADE,BEN_NOTE,BEN_CAUSE]),
+  dict(section='civil',when='领郡期间，确年未载',title='遣郡吏赴王府',category='人事联系',careerRef='administration',text='吴郡任职者多有公族与地方大姓子弟，朱治隔数年遣数百人到王府。原文可证输送与联结，未列出这些人的逐项仕途。',refs=[MANY,RECOMMEND]),
+  dict(section='military',when='188年及讨董卓时',title='随孙坚从征',category='从军立功',careerRef='dong',text='从讨长沙等三郡有功，继而参与阳人破董卓军、进入洛阳，并曾独领步骑东援陶谦。个人战术细节未载，宜写协同与领兵事实。',refs=[THREE,DONG,XUZHOU],eventIds=['anti-dong-coalition']),
+  dict(section='military',when='孙策渡江前后，确年未载',title='由拳破许贡，取得吴郡',category='独立进军',careerRef='wu',text='从钱唐向吴进军，在由拳大破拦阻的太守许贡，随后进入吴郡领太守事，是本传最清楚的独立战果。',refs=[QIANTANG,WU],eventIds=['sun-ce-jiangdong']),
+  dict(section='military',when='202年起及晚年，确年未载',title='镇讨东南与故鄣',category='区域镇抚',careerRef='home',text='本传记征讨夷越、捕截陈败万秉，晚年又自请屯故鄣镇扶山越；不把这些概述补写成未载的具体战役。',refs=[SOUTHEAST,UNREST,HOME]),
+  dict(section='setback',when='领吴郡期间，确年未载',title='一度受到孙权不满',category='君臣波折',careerRef='administration',text='诸葛瑾传记孙权对朱治有所怨望，却因尊敬而难以直接责问；诸葛瑾以拟书方式开解。原文没有交代朱治犯了什么错，不据此虚构罪责。',refs=[DISPLEASE,JIN,RELEASE]),
+  dict(section='setback',when='晚年，确年未载',title='辖境仍有不安',category='地方治理限制',careerRef='home',text='丹杨深地仍有奸叛，促成朱治自请返乡镇扶。长期领郡与恩礼不能据以推断东南已经完全安定；原文也未把这些动乱归罪于他的过失。',refs=[UNREST,HOME]),
+ ],
+ assessment=[dict(title='陈寿：以旧臣任用',text='陈寿把朱治、吕范归为以旧臣受任用，把朱然、朱桓另列为以勇烈著闻。这是对任用特点的概括，不表示朱治没有从军与独立进攻的功绩。',refs=[PING,Q('v056-b0037','朱然、朱桓以勇烈著聞'),DONG,QIANTANG])],
+ relations=[
+  dict(category='旧主',name='孙坚',personId='sun-jian',label='从征起家的主将',text='随孙坚讨三郡与董卓，因功受表行都尉、督军校尉。',refs=[THREE,DONG,XUZHOU]),
+  dict(category='君臣',name='孙策',personId='sun-ce',label='扶助进取江东',text='扶助孙策依袁术，又劝其还平江东，并迎护家属、经营吴郡。',refs=[CE,YUAN,RISK,QIANTANG]),
+  dict(category='君臣',name='孙权',personId='sunquan',label='举主与长期旧臣',text='举十五岁的孙权为孝廉，后尊奉继业；孙权对他亲迎交拜，但也曾有不满。',refs=[XIAOLIAN,SUCCESSION,HONOR,DISPLEASE]),
+  dict(category='同僚',name='张昭',personId='zhang-zhao',label='共奉孙权',text='孙策去世后，与张昭等共同尊奉孙权。',refs=[SUCCESSION]),
+  dict(category='同僚',name='诸葛瑾',label='代为开解君臣',text='诸葛瑾揣知孙权怨望，以委婉书辞开解，帮助缓和与朱治的关系。',refs=[DISPLEASE,JIN,RELEASE]),
+  dict(category='亲族',name='朱然',label='姊子，收养为嗣',text='朱然本姓施，为朱治姊子；朱治初无子，请孙策允许立为嗣。朱然的战事另属本人。',refs=[RAN,ADOPT,ADOPT_WU]),
+  dict(category='亲族',name='朱才、朱纪',label='嗣爵与孙氏联姻',text='朱才嗣父爵、迁偏将军；朱纪娶孙策女，也以校尉领兵。',refs=[SON,JI]),
+  dict(category='旧识',name='孙翊、孙贲',label='宗室中的劝导对象',text='多次责劝孙翊克制急躁，又劝止孙贲送子为质。',refs=[YI,BEN,PERSUADE,YI_XIAOLIAN]),
+ ],
+ readingNotes=[
+  dict(title='朱治与朱然不能混写',text='朱治是丹杨故鄣旧臣；朱然本姓施，为其姊子兼养子。陈寿篇末也分别概括二人的任用特点。朱然本人的勇烈与战事不移入朱治年表。',refs=[ORIGIN,RAN,ADOPT,PING,Q('v056-b0037','朱然、朱桓以勇烈著聞')]),
+  dict(title='在郡三十一年不宜反推每年实任',text='本传既有早期领太守事、202年表为太守，也在卒条概称在郡三十一年；孙策传另记授吴郡太守。这里保留各处叙述，不用总结年数倒推出每次任命的确切年。',refs=[WU,TAISHOU,CE_TAISHOU,DEATH]),
+  dict(title='劝孙贲的正文与扩充说辞',text='正文只说朱治陈安危而孙贲停止遣质；裴注《江表传》详述亲族、曹操与形势论辩。前者是结果记录，后者是注引扩充，两层分别标注。',refs=[PERSUADE,BEN_NOTE,BEN_CAUSE]),
+ ],
+ glossary=[('行','代理或暂行某官职。'),('奉邑','用于提供租税收入的封授县邑，不等于本人实际驻地。')],
+ sourceScope='以卷五十六朱治本传正文及《江表传》注引为基础，连读朱然开篇与朱才附记，并交叉核对卷四十六孙策传、卷四十七吴主传、卷五十一孙翊传、卷五十二诸葛瑾传。领郡年数、无谥记载与孙权不满的留白均不补写为确切事实。本页不声称穷尽全书所有提及朱治之处。',
+)

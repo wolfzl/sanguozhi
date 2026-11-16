@@ -1,0 +1,128 @@
+"""吕范：B 级人物卡；留守与出征、授官与追赠分别写明。"""
+from profile_v3 import Q
+
+ORIGIN=Q('v056-b0020','呂範字子衡，汝南細陽人也。')
+CLERK=Q('v056-b0020','少為縣吏，有容觀姿貌。')
+MARRIAGE=Q('v056-b0020','觀呂子衡，寧當久貧者邪?')
+SHOUCHUN=Q('v056-b0020','後避亂壽春，孫策見而異之，範遂自委暱，將私客百人歸策。')
+JIANGDU=Q('v056-b0020','時太妃在江都，策遣範迎之。')
+CAPTURE=Q('v056-b0020','徐州牧陶謙謂範為袁氏覘候，諷縣掠考範，範親客健兒篡取以歸。')
+HE=Q('v056-b0020','時唯範與孫河常從策，跨涉辛苦，危難不避')
+FAMILY=Q('v056-b0020','策亦親戚待之，每與升堂飲宴於太妃前。')
+CROSS=Q('v056-b0020','後從策攻破廬江，還俱東渡，到橫江、當利，破長英、於麋，下小丹楊、湖孰，領湖孰相。')
+TROOPS=Q('v056-b0020','策定秣陵、曲阿，收笮融，劉繇餘眾，增範兵二千，騎五十匹。')
+WANLING=Q('v056-b0020','後領宛陵令，討破丹楊賊，還吳，遷都督。')
+REQUEST=Q('v056-b0020-n01','範原蹔領都督，佐將軍部分之。','《江表传》')
+BOAT=Q('v056-b0020-n01','猶同舟涉海，一事不牢，即俱受其敗。','《江表传》')
+DISCIPLINE=Q('v056-b0020-n01','由是軍中肅睦，威禁大行。','《江表传》')
+HAIXI=Q('v056-b0021','別遣範與徐逸攻瑀於海西，梟其大將陳牧。')
+LINGYANG=Q('v056-b0021','又從攻祖郎於陵陽，太史慈於勇裡。')
+SEVEN=Q('v056-b0021','七縣平定，拜征虜中郎將，征江夏，還平鄱陽。')
+FUNERAL=Q('v056-b0021','策薨，奔喪於吳。')
+STAY=Q('v056-b0021','後權復征江夏，範與張昭留守。')
+CHIBI=Q('v056-b0021','曹公至赤壁，與周瑜等俱拒破之，拜裨將軍，領彭澤太守')
+ESTATES=Q('v056-b0021','以彭澤、柴桑、歷陽為奉邑。')
+LIU=Q('v056-b0021','劉備詣京見權，範密請留備。')
+CHAISANG=Q('v056-b0021','後遷平南將軍，屯柴桑。')
+JIANYE=Q('v056-b0022','今當上取之，卿為我守建業。')
+REGRET=Q('v056-b0022','權討關羽，過範館。謂曰：「昔早從卿言，無此勞也。')
+GOVERNOR=Q('v056-b0022','權破羽還，都武昌，拜範建威將軍，封宛陵候，領丹楊太守，治建業')
+COAST=Q('v056-b0022','督扶州以下至海，轉以溧陽、懷安、寧國為奉邑。')
+DONGKOU=Q('v056-b0022','曹休、張遼，臧霸等來伐，範督徐盛、全琮、孫韶等，以舟師拒休等於洞口。')
+QIAN=Q('v056-b0022','遷前將軍，假節，改封南昌候。')
+STORM=Q('v056-b0022','時遭大風，船人覆溺，死者數千，還軍，拜揚州牧。')
+GRAND=Q('v056-b0023','性好威儀，州民如陸遜、全琮及貴公子，皆修敬虔肅，不敢輕脫。')
+LUXURY=Q('v056-b0023','其居處服飾，於時奢靡，然勤事奉法，故權悅其忠，不怪其侈。')
+FINANCE=Q('v056-b0023','初策使範曲主財計，權時年少，私從有求，範必關白，不敢專許')
+DISLIKE=Q('v056-b0023','當時以此見望。')
+ZHOU=Q('v056-b0023','功曹周谷輒為傅著薄書，使無譴問。')
+TRUST=Q('v056-b0023','及後統事，以範忠誠，厚見信任，以谷能欺更簿書，不用也。')
+REPORT=Q('v056-b0023-n01','人有白範與賀齊奢麗夸綺，服飾僭擬王者','《江表传》')
+DEFEND=Q('v056-b0023-n01','但其器械精好，舟車嚴整耳，此適足作軍容，何損於治哉？','《江表传》')
+DEATH=Q('v056-b0024','黃武七年，範遷大司馬，印綬未下，疾卒。')
+SEAL=Q('v056-b0024','權素服舉哀，遣使者追贈印綬。')
+TOMB=Q('v056-b0024','及還都建業，權過範墓呼曰：「子衡！」言及流涕，祀以太牢。')
+JU=Q('v056-b0024','範長子先卒，次子據嗣。')
+COMPARE=Q('v056-b0024-n01','呂子衡忠篤亮直，性雖好奢，然以憂公為先，不足為損','《江表传》')
+YAN=Q('v056-b0024-n01','臣未解指趣，謂肅、範受饒，褒嘆過實。','《江表传》')
+PING=Q('v056-b0037','評曰：朱治、呂範以舊臣任用')
+PING_LIMIT=Q('v056-b0037','若範、桓之越隘，得以吉終')
+MONTH=Q('v047-b0025','冬十一月，大風。呂範等兵溺死者數千，餘軍還江南。')
+WEI=Q('v028-b0003','吳將呂範等船漂至北岸。凌與諸將逆擊，捕斬首虜，獲舟船')
+YEAR=Q('v060-b0015','黃武元年，魏以舟軍大出洞口，權使呂範督諸將拒之')
+LUSU=Q('v054-b0024-n01','呂範勸留備，肅曰：「不可。','《汉晋春秋》')
+ADOPT_LIU=Q('v054-b0024-n01','多操之敵，而自為樹黨，計之上也。」權即從之。','《汉晋春秋》')
+
+PROFILE=dict(
+ id='lv-fan',tier='B',syncLifespan=True,reading=['056'],
+ lead='孙策、孙权两代将臣，能带兵征战，也经手财计与军中纲纪。随孙策渡江、与周瑜等拒曹于赤壁，后镇柴桑、守建业，督舟师拒魏于洞口而遭风损失。晚年领扬州牧，迁大司马未及受印即卒。',
+ role='孙吴统军兼理财计的旧臣',
+ facts=[
+  dict(key='hometown',label='籍贯',value='汝南郡细阳县',text='字子衡，汝南细阳人；避乱寿春后归孙策。',refs=[ORIGIN,SHOUCHUN]),
+  dict(key='lifespan',label='生卒年',value='生年未详—228年',text='本传不记生年与享年，记黄武七年迁大司马、印绶未下而病卒。',refs=[DEATH]),
+  dict(key='identity',label='主要身份',value='孙氏旧臣、统军与财计担当',text='以百名私客归孙策，征战之外曾主财计，后奉孙权守建业、领丹杨太守并统舟师。',refs=[SHOUCHUN,FINANCE,JIANYE,GOVERNOR,DONGKOU]),
+  dict(key='office',label='最高官职',value='迁大司马，印绶未下而卒',text='历都督、诸将军、丹杨太守、扬州牧；黄武七年迁大司马，病卒时尚未收到印绶，孙权随后追赠。',refs=[WANLING,GOVERNOR,QIAN,STORM,DEATH,SEAL]),
+  dict(key='title',label='最高爵位',value='南昌侯',text='由宛陵侯改封南昌侯。原文“候”字照引，不静默修订原文。',refs=[GOVERNOR,QIAN]),
+  dict(key='posthumous',label='身后称号',value='追赠大司马印绶；谥号未载',text='本传记素服举哀、追赠印绶与过墓流涕，未另记吕范谥号。追赠的是已迁官职的印绶，不说他生前已持大司马印。',refs=[DEATH,SEAL,TOMB]),
+  dict(key='names',label='常见称谓',value='吕子衡',text='本传记字子衡，篇内称范或子衡。',refs=[ORIGIN]),
+  dict(key='deeds',label='代表事迹',items=['从策渡江','整饬军纪','主财守法','赤壁拒曹','守卫建业','洞口统军'],text='从征、军纪、财计、赤壁协同与东部留守、统军均有明确记载。',refs=[CROSS,DISCIPLINE,FINANCE,CHIBI,JIANYE,DONGKOU]),
+ ],
+ intro=[
+  dict(title='避乱从策与渡江',text='吕范字子衡，汝南细阳人，少为县吏，避乱寿春后带百名私客归孙策。奉命迎孙策母时，被陶谦疑为袁氏探子而遭拘拷，亲客将他救出。他与孙河长期追随孙策，共历危难，获亲族般礼遇。其后从攻庐江、东渡长江，参与横江、当利等战事，领湖孰相，又领宛陵令、迁都督，逐渐拥有更多部众。',refs=[ORIGIN,CLERK,SHOUCHUN,JIANGDU,CAPTURE,HE,FAMILY,CROSS,TROOPS,WANLING],eventLinks=[dict(label='东渡长江',eventId='sun-ce-jiangdong')]),
+  dict(title='军纪与财计的坚持',text='吕范的旧臣地位也来自日常事务。裴注《江表传》记他主动请求领都督整顿军中纲纪，认为同舟涉海不能容一事不牢，孙策最终委以众事，军中肃睦。正文记他主财计时，孙权私下求财，必须先报孙策，不肯擅许，因而一度受到怨望。孙权掌权后反认其忠诚，反倒不用替自己改簿书的周谷，显示一时讨好与长期信用的差别。',refs=[REQUEST,BOAT,DISCIPLINE,FINANCE,DISLIKE,ZHOU,TRUST]),
+  dict(title='从孙权留守到洞口',text='孙策死后吕范奔丧于吴，后与张昭留守；赤壁时又与周瑜等共同拒破曹军。刘备来见孙权，他密请扣留，后来任平南将军屯柴桑。219年孙权取关羽，命他守建业，未随军到荆州；孙权都武昌后，他仍治建业、领丹杨太守，统督东部。222年督徐盛、全琮、孙韶等拒魏于洞口，遭大风覆舟，死者数千，战后还军、拜扬州牧。',refs=[FUNERAL,STAY,CHIBI,LIU,CHAISANG,REGRET,JIANYE,GOVERNOR,COAST,DONGKOU,YEAR,STORM],eventLinks=[dict(label='赤壁时',eventId='chibi'),dict(label='219年孙权取关羽',eventId='jingzhou')]),
+  dict(title='奢侈争议与身后礼遇',text='吕范好威仪，居处服饰被本传称为奢靡；孙权因其勤事奉法而容之，注引还记有人指其僭拟王者，孙权以军容严整辩护。陈寿既概括他以旧臣任用，也留下“越隘”的批评，不能只写优容的一面。228年迁大司马，印绶未下即病卒，孙权追赠印绶，后来经过其墓呼子衡而流泪，次子吕据嗣爵。',refs=[GRAND,LUXURY,REPORT,DEFEND,PING,PING_LIMIT,DEATH,SEAL,TOMB,JU]),
+ ],
+ careers=[
+  dict(id='shouchun',when='早年，确年未载',title='避乱寿春，带客归孙策',office='早年县吏',text='少为县吏，后避乱寿春，孙策异之，带百名私客归附；奉命迎孙策母遭拘拷，赖亲客救出。',refs=[CLERK,SHOUCHUN,JIANGDU,CAPTURE]),
+  dict(id='cross',when='孙策开拓江东时，确年未载',title='从攻庐江，渡江领湖孰',office='湖孰相、宛陵令，后都督',text='随孙策攻破庐江，东渡经横江当利，攻下小丹杨、湖孰。后增部众、领宛陵令，讨丹杨贼，还吴迁都督。',refs=[CROSS,TROOPS,WANLING],eventIds=['sun-ce-jiangdong']),
+  dict(id='discipline',when='孙策时，确年未载',title='主财计，整顿军中纲纪',office='都督、经管财计',text='主财计时不肯擅给孙权财物；裴注《江表传》补记主动请领都督，受托整顿军纪，军中肃睦。',refs=[FINANCE,DISLIKE,REQUEST,BOAT,DISCIPLINE]),
+  dict(id='campaigns',when='孙策时，确年未载',title='攻陈瑀、祖郎与太史慈',office='征虏中郎将',text='与徐逸攻陈瑀于海西，斩陈牧；从攻祖郎于陵阳、太史慈于勇里，七县平定后拜征虏中郎将，征江夏、还平鄱阳。',refs=[HAIXI,LINGYANG,SEVEN]),
+  dict(id='funeral',when='200年及其后，留守确年未载',title='奔丧吴县，辅权留守',office='—',text='孙策卒后奔丧于吴；孙权再征江夏时，与张昭留守。孙权早年私求财物的旧怨，在统事后转为对吕范的信任。',refs=[FUNERAL,STAY,TRUST,Q('v047-b0003','五年。策薨，以事授權')]),
+  dict(id='chibi',when='208年',title='赤壁与周瑜等拒破曹军',office='裨将军，领彭泽太守',text='曹操至赤壁，与周瑜等共同拒破，拜裨将军、领彭泽太守，以彭泽柴桑历阳为奉邑；未详载他个人的具体战术。',refs=[CHIBI,ESTATES],eventIds=['chibi']),
+  dict(id='liubei',when='赤壁后，确年未载',title='密请留刘备，后屯柴桑',office='平南将军',text='刘备至京见孙权时，吕范密请扣留；裴注《汉晋春秋》说鲁肃反对、孙权从肃。后迁平南将军，驻柴桑。',refs=[LIU,LUSU,ADOPT_LIU,CHAISANG]),
+  dict(id='jianye',when='219年',title='取荆州时留守建业',office='—',text='孙权西讨关羽，过其馆舍，追述昔日建议，并令吕范为守建业。他承担后方留守，不把关羽战地当其本人足迹。',refs=[REGRET,JIANYE],eventIds=['jingzhou']),
+  dict(id='danyang',when='孙权都武昌后，授职确年未载',title='治建业，督东部至海',office='建威将军、丹杨太守、宛陵侯',text='孙权取关羽还而后都武昌，吕范受建威将军、领丹杨太守，治建业，督扶州以下至海，改以溧阳怀安宁国为奉邑。',refs=[GOVERNOR,COAST]),
+  dict(id='dongkou',when='222年',title='督舟师拒魏，遭风覆舟',office='前将军、假节、南昌侯；后扬州牧',text='督徐盛全琮孙韶等在洞口拒曹休张辽臧霸，进前将军、假节、改封南昌侯。冬十一月大风，覆溺死者数千；魏方又记漂船至北岸受击。还军后拜扬州牧。',refs=[DONGKOU,QIAN,YEAR,MONTH,STORM,WEI]),
+  dict(id='conduct',when='任职期间，确年未载',title='守法与服饰奢靡并见',office='—',text='以威仪使陆逊全琮等敬肃；居处服饰奢靡，孙权仍因其勤事奉法而不怪，注引另有僭拟王者的指控与孙权辩护。',refs=[GRAND,LUXURY,REPORT,DEFEND]),
+  dict(id='death',when='228年',title='迁大司马，未受印而卒',office='大司马，身后追赠印绶',text='黄武七年迁大司马，印绶未下即病卒；孙权素服举哀、追赠印绶，后过墓流涕祭以太牢，吕据嗣。',refs=[DEATH,SEAL,TOMB,JU]),
+ ],
+ trajectory=dict(atlasPerson='lvfan',phases=[
+  dict(id='ce',title='从策与军纪',when='早年至孙策在世，部分确年未载',span=(190,199),careers=['shouchun','cross','discipline','campaigns'],atlasStops=[0,1,2]),
+  dict(id='quan',title='留守与赤壁',when='200—208年，留守确年未载',span=(200,208),careers=['funeral','chibi'],atlasStops=[3,4]),
+  dict(id='east',title='柴桑与建业',when='赤壁后至孙权都武昌，部分确年未载',span=(209,221),careers=['liubei','jianye','danyang'],atlasStops=[5,6]),
+  dict(id='late',title='洞口与晚年',when='222—228年，服饰争议确年未载',span=(222,228),careers=['dongkou','conduct','death'],atlasStops=[7]),
+ ]),
+ records=[
+  dict(section='civil',when='孙策时，确年未载',title='财计先行关白',category='财计守法',careerRef='discipline',text='孙权私求财物时坚持报告孙策，未因私交擅许，曾受怨望而终获继主信任；与周谷改簿的结局对读，功在守职。',refs=[FINANCE,DISLIKE,ZHOU,TRUST]),
+  dict(section='civil',when='孙策时，确年未载',title='主动整顿军中纲纪',category='军府治理',careerRef='discipline',text='注引《江表传》记他主动请求任都督，以同舟涉海说明细务关乎全军安危；受委任后军中肃睦、威禁大行。',refs=[REQUEST,BOAT,DISCIPLINE]),
+  dict(section='civil',when='219年及其后',title='守建业而统东部',category='后方留守',careerRef='jianye',text='取荆州时受命守建业，孙权都武昌后仍治建业、领丹杨太守，督扶州以下至海。材料可证职责，未详其逐项地方政策。',refs=[JIANYE,GOVERNOR,COAST],eventIds=['jingzhou']),
+  dict(section='military',when='孙策开拓江东时，确年未载',title='随军渡江与平七县',category='开拓从征',careerRef='cross',text='从庐江东渡，参与横江当利等作战，之后攻陈瑀、祖郎、太史慈，逐渐增长部曲，七县平定后进中郎将。',refs=[CROSS,TROOPS,HAIXI,LINGYANG,SEVEN],eventIds=['sun-ce-jiangdong']),
+  dict(section='military',when='208年',title='赤壁协同拒曹',category='协同作战',careerRef='chibi',text='本传明确把吕范列入与周瑜等共同拒破曹军者；没有独立展开他的战术，不附会火攻指挥等角色。',refs=[CHIBI],eventIds=['chibi']),
+  dict(section='military',when='222年',title='统诸将舟师拒魏',category='舟师统领',careerRef='dongkou',text='在洞口督徐盛全琮孙韶等拒曹休诸军，是明确的统军任务。大风损失与部将之后的反击分别见诸传，不把全琮斩尹卢直接写成吕范亲斩。',refs=[DONGKOU,YEAR,Q('v060-b0015','琮擊破之，梟其將軍尹盧。')]),
+  dict(section='setback',when='早年，确年未载',title='迎母途中遭拘拷',category='受拘险境',careerRef='shouchun',text='陶谦疑他是袁氏探子而使县中掠考，赖亲客武力救回。这里是外部拘害与险境，不强作其个人判断失误。',refs=[JIANGDU,CAPTURE]),
+  dict(section='setback',when='222年',title='洞口风灾与受击',category='重大军损',careerRef='dongkou',text='大风导致舟船覆溺、数千人死亡；王凌传补记漂到北岸的吴船被魏将迎击。损失确凿，史文未将风灾直接归咎其指挥。',refs=[MONTH,STORM,WEI]),
+  dict(section='setback',when='任职期间，确年未载',title='奢靡与僭拟的争议',category='生活礼制',careerRef='conduct',text='正文直书服饰居处奢靡，注引记有人指其僭拟王者；孙权以忠勤和军容为辩护，陈寿仍用“越隘”概括其不足，须并存呈现。',refs=[LUXURY,REPORT,DEFEND,PING_LIMIT]),
+ ],
+ assessment=[
+  dict(title='陈寿：旧臣任用而有越隘',text='陈寿以旧臣任用概括吕范与朱治，又说吕范、朱桓虽有越隘仍得吉终，与后辈遭祸作时遇之比较。评语兼有肯定与保留，不宜只摘其受重用。',refs=[PING,PING_LIMIT,Q('v056-b0037','所遇之時殊也。')]),
+  dict(title='孙权的称比与严畯的异议',text='注引《江表传》记孙权以吕范比吴汉，严畯起初认为褒奖过实；孙权解释他以忧公为先、主动理军，因此相比，严畯方服。此为君主与臣下的具体评论。',refs=[YAN,COMPARE,Q('v056-b0024-n01','與吳漢相類，故方之。','《江表传》')]),
+ ],
+ relations=[
+  dict(category='君臣',name='孙策',personId='sun-ce',label='带客归附，共历艰险',text='百客归策，随之征战，得亲族般礼遇，兼经管财计与军纪。',refs=[SHOUCHUN,HE,FAMILY,FINANCE,REQUEST]),
+  dict(category='君臣',name='孙权',personId='sunquan',label='由一时怨望到深信',text='年轻时求财遭关白而不悦，统事后反信任吕范；命守建业，身后又追赠印绶、过墓哭祭。',refs=[FINANCE,DISLIKE,TRUST,JIANYE,SEAL,TOMB]),
+  dict(category='同僚',name='张昭',personId='zhang-zhao',label='共同留守',text='孙权再征江夏时，两人留守；不将留守写成参加这次前线征讨。',refs=[STAY]),
+  dict(category='同僚',name='周瑜',personId='zhouyu',label='赤壁同军',text='与周瑜等共同拒破曹军，战后拜裨将军。',refs=[CHIBI]),
+  dict(category='同僚',name='鲁肃',personId='lusu',label='留备意见相反',text='吕范密请留刘备，注引《汉晋春秋》记鲁肃反对、孙权从肃，反映对联刘策略的不同判断。',refs=[LIU,LUSU,ADOPT_LIU]),
+  dict(category='敌对',name='刘备',personId='liubei',label='建议留其人而未从',text='刘备诣京见孙权时，吕范密请扣留；孙权取关羽前又回顾早年未从其言。',refs=[LIU,REGRET]),
+  dict(category='部属',name='徐盛、全琮、孙韶',label='洞口受督诸将',text='洞口拒魏时受吕范统督，全琮、徐盛另有反击记载；分别保留统督与部将战绩。',refs=[DONGKOU,Q('v047-b0025','將軍全琮、徐盛追斬魏將尹盧。')]),
+  dict(category='亲族',name='吕据',label='次子嗣爵',text='长子先卒，次子吕据嗣爵，吕据后来的用兵与遇害不充作吕范经历。',refs=[JU]),
+ ],
+ readingNotes=[
+  dict(title='守建业不等于随军取荆州',text='孙权明确说“卿为我守建业”，吕范在219年事件中的角色是后方留守；地图因此标建业，不因事件关联把江陵或关羽被擒地加进其路线。',refs=[REGRET,JIANYE]),
+  dict(title='大司马授官与追印绶',text='本传先说迁大司马，再说印绶未下而卒、身后追赠印绶。最高官职可以记“迁大司马”，但必须保留未及受印这一限制；追赠也不作为本人新的足迹。',refs=[DEATH,SEAL]),
+  dict(title='风灾与军事失败的层次',text='吴主传给出冬十一月大风、数千人溺亡，王凌传记漂船至北岸遭截击。二者可以互补，不能由天灾直接推断吕范有某项未载战术错误，也不把后续吴将反击抹去。',refs=[MONTH,WEI,Q('v047-b0025','將軍全琮、徐盛追斬魏將尹盧。')]),
+ ],
+ glossary=[('关白','向主管者报告、请示。'),('都督','此处兼指整饬军中事务的职任，不能一律套成后世固定品级。'),('假节','受赐符节，取得特定军事权限。')],
+ sourceScope='以卷五十六吕范本传及裴注《江表传》为基础，交叉核对卷四十七吴主传、卷二十八王凌传、卷五十四鲁肃传及卷六十全琮传。留刘备、奢侈和称比等评论注明注引层次，洞口风灾并读魏吴两方记录。本页不声称穷尽全书所有提及吕范之处。',
+)

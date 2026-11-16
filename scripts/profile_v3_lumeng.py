@@ -1,0 +1,143 @@
+"""吕蒙：B 级人物卡；地图不以作战计划代替实际到达。"""
+from profile_v3 import Q
+
+HOME=Q('v054-b0028','呂蒙字子明，汝南富陂人也。少南渡，依姊夫鄧當。')
+YOUTH=Q('v054-b0028','蒙年十五六，竊隨當擊賊，當顧見大驚，呵叱不能禁止。')
+KILL=Q('v054-b0028','蒙大怒，引刀殺吏，出走，逃邑子鄭長家。')
+PARDON=Q('v054-b0028','出因校尉袁雄自首，承間為言，策召見奇之，引置左右。')
+FIRST=Q('v054-b0028','數歲，鄧當死，張昭薦蒙代當，拜別部司馬。')
+TRAIN=Q('v054-b0028','蒙陰賒貰，為兵作絳衣行滕，及簡日，陳列赫然，兵人練習，權見之大悅，增其兵。')
+GUANGDE=Q('v054-b0028','從討丹楊，所向有功，拜平北都尉，領廣德長。')
+CHEN=Q('v054-b0028','蒙勒前鋒，親梟就首，將士乘勝，進攻其城。')
+HUANG=Q('v054-b0028','以蒙為橫野中郎將，賜錢千萬。')
+CHIBI=Q('v054-b0029','是歲，又與周瑜、程普等西破曹公於烏林，圍曹仁於南郡。')
+RESPECT=Q('v054-b0029','蒙盛稱肅有膽用。且慕化遠來，於義宜益不宜奪也。權善其言，還肅兵。')
+YILING=Q('v054-b0029','軍到夷陵，即日交戰，所殺過半。')
+RELIEF=Q('v054-b0029','瑜使甘寧前據夷陵，曹仁分眾圍寧，寧困急，使使請救。')
+HORSES=Q('v054-b0029','兵追蹙擊，獲馬三百匹，方船載還。')
+NANJUN=Q('v054-b0029','曹仁退走。遂據南郡，撫定荊州。還，拜偏將軍，領尋陽令。')
+STRATEGY=Q('v054-b0030','因為肅畫五策。')
+LU=Q('v054-b0030','呂子明，吾不知卿才畧所及乃至於此也。')
+ORPHANS=Q('v054-b0030','陳啟顧等皆勤勞國事，子弟雖小，不可廢也。書三上，權乃聽。蒙於是又為擇師，使輔導之')
+STUDY=Q('v054-b0030-n01','蒙始就學，篤志不倦，其所覽見，舊儒不勝。','《江表传》')
+AMENG=Q('v054-b0030-n01','學識英博，非復吳下阿蒙。','《江表传》')
+THREE=Q('v054-b0030-n01','密為肅陳三策，肅敬受之，秘而不宣。','《江表传》')
+RUXU=Q('v054-b0031','後從權拒曹公於濡須，數近奇計，又勸權夾水口立塢，所以備禦甚精，曹公不能下而退。')
+RISKS=Q('v054-b0031-n01','兵有利鈍，戰無百勝，如有邂逅，敵步騎蹙人，不暇及水，其得入船乎？','《吴录》')
+WAN=Q('v054-b0032','蒙乃薦甘寧為升城督，督攻在前，蒙以精銳繼之。')
+DRUM=Q('v054-b0032','侵晨進攻，蒙手執枹鼓，士卒皆騰踴自升，食時破之。')
+LUJIANG=Q('v054-b0032','權嘉其功，即拜廬江太守')
+XUNYANG=Q('v054-b0032','蒙還尋陽，未期而盧陵賊起')
+LULING=Q('v054-b0032','蒙至，誅其首惡，餘皆釋放，復為平民。')
+THREEJUN=Q('v054-b0033','權命蒙西取長沙、零、桂三郡。蒙移書二郡，望風歸服，惟零陵太守郝普城守不降。')
+LING=Q('v054-b0033','蒙既定長沙，當之零陵，過酃，載南陽鄧玄之')
+DECEIVE=Q('v054-b0035','普見書，知備在公安，而羽在益陽，慚恨入地。')
+YIYANG=Q('v054-b0035','即日引軍赴益陽。劉備請盟，權乃歸普等。割湘水，以零陵還之。')
+HEFEI=Q('v054-b0036','師還，遂徵合肥，既撤兵，為張遼等所襲，蒙與淩統以死扦衛。')
+HEFEIYEAR=Q('v055-b0041','建安二十年，從攻合肥')
+SECOND_RUXU=Q('v054-b0036','權以蒙為督，據前所立塢，置強弩萬張於其上，以拒曹公。')
+OFFICE=Q('v054-b0036','拜蒙左護軍、虎威將軍。')
+LUKOU=Q('v054-b0037','魯肅卒，蒙西屯陸口，肅軍人馬萬餘盡以屬蒙。又拜漢昌太守')
+WARPLAN=Q('v054-b0037','不如取羽，全據長江，形勢益張。')
+JIAN=Q('v054-b0038','蒙常有病，乞分士眾還建業，以治疾為名。')
+WITHDRAW=Q('v054-b0038','羽果信之，稍撤兵以赴樊。')
+HIDDEN=Q('v054-b0038','蒙至尋陽，盡伏其精兵𦩷𦪇中，使白衣搖櫓，作商賈人服，晝夜兼行')
+TAKE=Q('v047-b0018','先遣呂蒙襲公安，獲將軍士仁。蒙到南郡，南郡太守糜芳以城降，蒙據江陵')
+DISCIPLINE=Q('v054-b0038','約令軍中不得乾歷人家，有所求取。')
+HAT=Q('v054-b0038','不可以鄉里故而廢法，遂垂涕斬之。')
+CARE=Q('v054-b0038','蒙旦暮使親近存卹耆老，問所不足，疾病者給醫藥，饑寒者賜衣糧。')
+FAMILY=Q('v054-b0038','咸知家門無恙，見待過於平時，故羽吏士無鬬心。')
+TITLE=Q('v054-b0039','以蒙為南郡太守，封孱陵候')
+UNISSUED=Q('v054-b0039','封爵未下。會蒙疾發，權時在公安，迎置內殿。')
+DEATH=Q('v054-b0039','年四十二，遂卒於內殿。')
+RETURN_GOLD=Q('v054-b0039','所得金寶諸賜盡付府藏，敕主者命絕之日皆上還，喪事務約。')
+CAI=Q('v054-b0040','蒙因薦遺奉職佳吏')
+NING=Q('v054-b0040','天下未定，鬥將如寧難得，宜容忍之。')
+SUCCESSOR=Q('v056-b0010','朱然膽守有餘，愚以為可任。')
+PING=Q('v054-b0044','呂蒙勇而有謀，斷識軍計，譎郝普，禽關羽，最其妙者。')
+PING2=Q('v054-b0044','初雖輕果妄殺，終於克己，有國士之量，豈徒武將而已乎！')
+FAN=Q('v057-b0006','蒙未據郡城而作樂沙上。')
+FAN2=Q('v057-b0006','蒙即從之。時城中有伏計，賴翻謀不行。')
+SINGLE=Q('v051-b0009','以卿為大督，命皎為後繼。')
+LU_XUN=Q('v058-b0005','陸遜意思深長，才堪負重，觀其規慮，終可大任。')
+
+PROFILE=dict(
+ id='lumeng',tier='B',reading=['054'],syncLifespan=True,role='孙权麾下方面统将',
+ lead='由少年从军成长为孙权麾下统将。破黄祖前锋，参与乌林、南郡与濡须诸役；经进学而筹略日益受到重视，继鲁肃屯陆口。219年以隐蔽舟师袭公安、江陵，安抚关羽将士家属，夺取荆州后病卒。',
+ facts=[
+  dict(key='lifespan',label='生卒年',value='生年未详，卒年四十二岁',text='本传记夺取荆州后病卒于内殿、年四十二，未在卒句另系年月。袭荆州由《吴主传》系于219年，本页不据此补成确定卒月或生年。',refs=[DEATH,Q('v047-b0018','二十四年，關羽圍曹仁於襄陽'),UNISSUED]),
+  dict(key='hometown',label='籍贯',value='汝南富陂',text='字子明，汝南郡富陂人，少年南渡依姊夫邓当。',refs=[HOME]),
+  dict(key='identity',label='主要身份',value='孙氏将领，荆州方面统将',text='先从孙策，后受孙权统任，继鲁肃驻陆口，并主持袭取关羽后方。',refs=[PARDON,TRAIN,LUKOU,HIDDEN]),
+  dict(key='office',label='最高官职',value='左护军、虎威将军，南郡太守',text='历别部司马、横野中郎将、偏将军，曾任庐江与汉昌太守，督濡须后拜左护军、虎威将军，取荆州后为南郡太守。',refs=[FIRST,HUANG,NANJUN,LUJIANG,LUKOU,OFFICE,TITLE]),
+  dict(key='title',label='最高爵位',value='孱陵侯（本传记封爵未下）',text='取荆州后获封孱陵侯，但紧接记封爵未下而疾发；本页保留这一办理状态，不改写为已完成受封仪式。',refs=[TITLE,UNISSUED]),
+  dict(key='posthumous',label='身后称号',value='本传未载谥号',text='本传记孙权哀痛、吕霸袭爵，未记吕蒙谥号。',refs=[DEATH,Q('v054-b0040','蒙子霸襲爵，與守塚三百家，復田五十頃。')]),
+  dict(key='deeds',label='代表事迹',items=['破黄祖前锋','夷陵救甘宁','濡须立坞','袭取荆州'],text='前锋斩陈就、救夷陵、建议濡须立坞，最后主持袭公安、江陵。',refs=[CHEN,YILING,RUXU,TAKE]),
+ ],
+ intro=[
+  dict(title='从少年冒险到领兵',text='吕蒙少年南渡，依姊夫邓当，十五六岁便私自随军。他因受职吏侮辱而杀人、逃亡，后经袁雄自首并转达孙策，才得以进入孙策左右。邓当死后，张昭荐他接领部众。孙权准备合并兵少而用处不大的小将时，吕蒙借钱给士卒置办服装、整饬训练，检阅时让孙权看到军容与熟练程度，反而获得增兵。',refs=[HOME,YOUTH,KILL,PARDON,FIRST,TRAIN]),
+  dict(title='战功与学识并进',text='208年征黄祖，他亲斩水军前锋陈就，随后又参加乌林破曹与南郡围曹仁。甘宁在夷陵被围时，他劝周瑜分兵救援，并设法截断敌军退路，获得战马。鲁肃接替周瑜途中来访，吕蒙为其筹画防备关羽，令鲁肃改变旧有看法。裴注引《江表传》补记孙权劝学、吕蒙笃志不倦的经过；这与正文以筹略让鲁肃折服，属于互相照应而细节不全相同的记载。',refs=[CHEN,CHIBI,RELIEF,YILING,HORSES,STRATEGY,LU,STUDY],eventLinks=[dict(label='乌林破曹',eventId='chibi')]),
+  dict(title='统军更看重形势',text='吕蒙建议在濡须水口立坞，考虑的是战事不利时不能保证及时退回船上。214年攻皖，他推荐甘宁先登，自己率精锐接进，破城后任庐江太守。215年西取三郡，以误导郝普的消息促其降服，又在合肥撤军遇袭时与凌统死战护卫孙权。继鲁肃屯陆口后，他认为应控制长江上游，转而主张夺取关羽所据之地。',refs=[RUXU,RISKS,WAN,DRUM,LUJIANG,DECEIVE,HEFEI,LUKOU,WARPLAN]),
+  dict(title='袭荆州与生命终点',text='219年，吕蒙借治病之名离开前线，使关羽逐渐撤走后方守兵，再把精兵藏在舟中、伪装商人上溯。公安、江陵相继失守后，他约束士卒、慰问老人、供应衣粮医药，并让关羽使者确认将士家属安好，瓦解其军心。随后获任南郡太守、封孱陵侯，封爵尚未下达便病发，孙权迎入公安内殿治疗，终于四十二岁而卒。陈寿既赞其谋略，也没有省略少年妄杀的过失。',refs=[JIAN,WITHDRAW,HIDDEN,TAKE,DISCIPLINE,CARE,FAMILY,TITLE,UNISSUED,DEATH,PING2],eventLinks=[dict(label='公安、江陵相继失守',eventId='jingzhou')]),
+ ],
+ careers=[
+  dict(id='youth',when='少年至孙策在世时，确年未载',title='随邓当从军，杀吏后自首',office='别部司马',text='十五六岁私随邓当从军，受职吏侮辱后杀之逃亡，经袁雄自首而得见孙策。邓当死后，张昭荐其代领部众。',refs=[YOUTH,KILL,PARDON,FIRST]),
+  dict(id='training',when='孙权统事后，确年未载',title='整军获增兵，领广德',office='平北都尉、广德长',text='以借钱置装、训练士卒应对检阅，获孙权增兵；随讨丹杨有功，拜平北都尉，领广德长。',refs=[TRAIN,GUANGDE]),
+  dict(id='huangzu',when='208年',title='破黄祖水军前锋',office='横野中郎将',text='征黄祖时统前锋，亲斩陈就，促成攻城；孙权认为先得陈就是获胜关键。',refs=[CHEN,HUANG,Q('v047-b0009','十三年春，權復征黃祖，祖先遣舟兵拒軍，都尉呂蒙破其前鋒。')]),
+  dict(id='chibi',when='208年',title='乌林破曹',office='—',text='与周瑜、程普等西破曹操于乌林，随后围曹仁于南郡。',refs=[CHIBI],eventIds=['chibi']),
+  dict(id='nanjun',when='208—209年',title='夷陵解围，任寻阳令',office='偏将军、寻阳令',text='劝周瑜、程普救被围的甘宁，并分兵柴断险道。军到夷陵交战，追获敌军弃马三百；曹仁退走后吴军据南郡，吕蒙还拜偏将军、领寻阳令。',refs=[YILING,HORSES,NANJUN,Q('v054-b0029','又說瑜分遣三百人柴斷險道，賊走可得其馬。')],eventIds=['nanjun-campaign']),
+  dict(id='study',when='鲁肃继周瑜后，确年未载',title='为鲁肃筹防，保全故将子弟',office='—',text='鲁肃来访，吕蒙为其筹画备羽五策；又三次上书拒绝兼并成当、宋定、徐顾故部，保全其子弟并择师辅导。裴注另记劝学。',refs=[STRATEGY,LU,ORPHANS,STUDY]),
+  dict(id='ruxu',when='213年前后',title='濡须拒曹，建议立坞',office='—',text='随孙权在濡须拒曹，建议夹水口设坞作为保障，曹军未能攻下而退。年份据《吴主传》建安十八年濡须之战。',refs=[RUXU,RISKS,Q('v047-b0013','十八年正月，曹公攻濡須，權與相拒月餘。')]),
+  dict(id='wan',when='214年及随后，后事确年未载',title='破皖，返回寻阳后平庐陵',office='庐江太守',text='荐甘宁为升城督，亲率精锐继进、执鼓催军，迅速破皖。还寻阳后受命讨庐陵，诛首恶、释其余为平民。',refs=[WAN,DRUM,LUJIANG,XUNYANG,LULING,Q('v047-b0014','十九年五月，權征皖城。閏月，克之。')]),
+  dict(id='three-jun',when='215年',title='西取三郡，赴益阳',office='奉邑寻阳、阳新',text='长沙、桂阳望风归服，零陵郝普独守。吕蒙过酃载邓玄之，用错误援军消息诱降郝普后赶赴益阳。孙刘讲和，零陵归刘备，以寻阳、阳新为吕蒙奉邑。',refs=[THREEJUN,LING,DECEIVE,YIYANG,Q('v054-b0035','以尋陽、陽新為蒙奉邑。'),Q('v032-b0019','乃遣呂蒙襲奪長沙、零陵、桂陽三郡。')],eventIds=['jingzhou-boundary']),
+  dict(id='hefei',when='215年',title='合肥撤军时护卫孙权',office='—',text='从益阳战事返回后征合肥，撤军被张辽等袭击，与凌统拼死护卫。甘宁传将这次合肥战事系于建安二十年。',refs=[HEFEI,HEFEIYEAR],eventIds=['hefei']),
+  dict(id='second-ruxu',when='216年冬以后，确年未另载',title='督濡须，再拒曹军',office='左护军、虎威将军',text='曹操再次进攻濡须，吕蒙为督，利用旧坞与强弩拒守，击破尚未立稳的曹军前锋。',refs=[SECOND_RUXU,OFFICE,Q('v054-b0036','曹公前鋒屯未就，蒙攻破之，曹公引退。'),Q('v047-b0015','二十一年冬，曹公次於居巢，遂攻濡須。')]),
+  dict(id='lukou',when='217年后',title='接鲁肃军，西屯陆口',office='汉昌太守',text='鲁肃卒后西屯陆口，尽领其万余军马。与关羽结好为表，内陈取羽、控制长江之策；襄阳等仅见于计划，不能作本人到达地。',refs=[LUKOU,WARPLAN,Q('v054-b0037','及蒙代肅，初至陸口，外倍修恩厚，與羽結好。'),Q('v054-b0026','肅年四十六，建安二十二年卒。')]),
+  dict(id='jingzhou',when='219年',title='称病返建业，袭公安、江陵',office='南郡太守；封孱陵侯未下',text='称病离陆口回建业，荐陆逊继任。关羽撤备兵后，吕蒙从寻阳以隐蔽舟师上溯，袭公安、据江陵；约束军纪、慰问居民及将士家属，使关羽军失去斗志。',refs=[JIAN,LU_XUN,HIDDEN,TAKE,DISCIPLINE,CARE,FAMILY,TITLE,Q('v047-b0018','二十四年，關羽圍曹仁於襄陽')],eventIds=['jingzhou']),
+  dict(id='death',when='取荆州后，卒月未载',title='病卒公安内殿',office='—',text='孙权时在公安，迎病重吕蒙入内殿，四方求医，仍年四十二而卒。吕蒙命将所赐金宝归公、薄葬；临病荐朱然接任。',refs=[UNISSUED,DEATH,RETURN_GOLD,SUCCESSOR]),
+ ],
+ trajectory=dict(atlasPerson='lumeng',phases=[
+  dict(id='rise',title='从军与整兵',when='少年至208年',span=(190,208),careers=['youth','training','huangzu'],atlasStops=[]),
+  dict(id='west',title='乌林与南郡',when='208—209年',span=(208,209),careers=['chibi','nanjun'],atlasStops=[0,1]),
+  dict(id='command',title='进学与拒曹',when='鲁肃继任后至214年',span=(210,214),careers=['study','ruxu','wan'],atlasStops=[2,3]),
+  dict(id='contests',title='争郡与濡须',when='215—217年',span=(215,217),careers=['three-jun','hefei','second-ruxu'],atlasStops=[4,5,6]),
+  dict(id='jingzhou',title='陆口与袭荆州',when='217年后至取荆州后',span=(217,220),careers=['lukou','jingzhou','death'],atlasStops=[7,8,9,10,11]),
+ ]),
+ records=[
+  dict(section='civil',when='鲁肃继周瑜后，确年未载',title='保全故将部众与幼子',category='军中人事',careerRef='study',text='拒绝将成当、宋定、徐顾的兵全并给自己，三次上书使其幼子得继，并为之择师。其目标是保全有功旧人的后嗣。',refs=[ORPHANS]),
+  dict(section='civil',when='平庐陵时，确年未载',title='区分首恶与其余民众',category='招抚处置',careerRef='wan',text='受命平庐陵后诛其首恶，释放其余人回归平民身份；不将这次处置扩写成没有记载的长期地方施政。',refs=[LULING]),
+  dict(section='civil',when='219年',title='江陵禁扰与救济',category='占领治理',careerRef='jingzhou',text='进入江陵后禁止侵扰民家，按令处置违规士卒，问候老人，供应病者医药、饥寒者衣粮；同时封存府藏等待孙权。',refs=[DISCIPLINE,HAT,CARE,Q('v054-b0038','羽府藏財寶，皆封閉以待權至。')]),
+  dict(section='civil',when='顾邵卒后，确年未载',title='不计旧怨推荐蔡遗',category='人才任用',text='蔡遗曾上报吕蒙部曲之事，吕蒙没有怨恨，孙权问豫章太守人选时仍荐其为奉职佳吏。',refs=[CAI,Q('v054-b0040','常以部曲事為江夏太守蔡遺所白，蒙無恨意。')]),
+  dict(section='military',when='208年',title='亲斩陈就，打开前锋',category='前锋作战',careerRef='huangzu',text='斩黄祖水军都督陈就，促使吴军乘胜攻城；孙权明确把破敌关键归于先获陈就。',refs=[CHEN,Q('v054-b0028','事之克，由陳就先獲也。')]),
+  dict(section='military',when='208—209年',title='夷陵救援兼断退路',category='援军筹划',careerRef='nanjun',text='在兵少的条件下主张留凌统守后方、主力救甘宁，又安排柴断险道，使敌军退却时弃马。体现其同时考虑救援与战果的筹划。',refs=[YILING,HORSES,Q('v054-b0029','留凌公績，蒙與君行，解圍釋急，勢亦不久，蒙保公績能十日守也。')]),
+  dict(section='military',when='213年前后及后一次濡须战',title='以水口坞垒保障进退',category='阵地防御',careerRef='ruxu',text='考虑败退时可能来不及登舟，建议立坞；后任督时继续利用旧坞、强弩拒敌，显示防御准备并非一次权宜。',refs=[RUXU,RISKS,SECOND_RUXU]),
+  dict(section='military',when='214年',title='攻皖迅速破城',category='攻城决断',careerRef='wan',text='荐甘宁先登，自己以精锐继进并亲执鼓，清晨开战、食时破城。裴注引《吴书》补述其反对耗日造土山攻具。',refs=[WAN,DRUM,Q('v054-b0032-n01','治攻具及土山，必曆日乃成，城備既脩，外救必至，不可圖也。','《吴书》')]),
+  dict(section='military',when='219年',title='隐蔽突袭与瓦解军心',category='夺取后方',careerRef='jingzhou',text='以称病、舟中伏兵、商人服装降低关羽警觉，再善待其将士家属，使来使传回安好消息。这一战的关键不止夺城，也在于拆散对方军心。',refs=[JIAN,HIDDEN,TAKE,FAMILY]),
+  dict(section='setback',when='少年，确年未载',title='受辱杀吏与逃亡',category='妄杀',careerRef='youth',text='因职吏轻辱而杀人逃亡，是本传明记的过失。陈寿评价从“轻果妄杀”到克己，不应把少年经历只包装成勇气。',refs=[KILL,PING2]),
+  dict(section='setback',when='215年',title='合肥撤军遭袭',category='战场挫折',careerRef='hefei',text='征合肥未能取城，撤军时主帅所在部队被张辽突袭；吕蒙与凌统死战护卫。史料既记护主，也保留吴军的险境。',refs=[HEFEI,Q('v047-b0014','合肥未下，徹軍還。')]),
+  dict(section='setback',when='215年',title='以误导消息诱郝普',category='诈术与争议',careerRef='three-jun',text='隐去召还军书，以刘备受围、关羽受困等说辞使郝普放弃待援。正文随即写郝普看到书信才知刘备在公安、关羽在益阳，羞恨不已；不能把诈称当作真实战况。',refs=[DECEIVE,Q('v054-b0033','及被書當還，蒙秘之。')]),
+  dict(section='setback',when='219年',title='降城后险忽伏计',category='警戒疏漏',careerRef='jingzhou',text='虞翻传记吕蒙在麋芳降后尚未据城，先在沙上作乐，受虞翻提醒后急入城控制门户，才使城中伏计不能实施。',refs=[FAN,FAN2]),
+ ],
+ relations=[
+  dict(category='君臣',name='孙权',personId='sunquan',label='从增兵到委任大督',text='孙权检阅后为其增兵，后来以大督委以袭南郡之任；吕蒙病时又迎入内殿求医。',refs=[TRAIN,SINGLE,UNISSUED]),
+  dict(category='旧主',name='孙策',personId='sun-ce',label='自首后收置左右',text='经袁雄自首得见孙策，被认为有奇才而置于左右。',refs=[PARDON]),
+  dict(category='亲族',name='邓当',label='姊夫与初从军对象',text='少年南渡依姊夫邓当，私随其作战；邓当卒后继领其兵。',refs=[HOME,YOUTH,FIRST]),
+  dict(category='同僚',name='周瑜',personId='zhouyu',label='南郡协同作战',text='与周瑜、程普共破曹操，围南郡时提出救夷陵与柴断险道之策。',refs=[CHIBI,YILING,HORSES]),
+  dict(category='同僚',name='鲁肃',personId='lusu',label='筹防结友，继领其军',text='鲁肃听其备羽方略后改观、结友；鲁肃死后吕蒙接领万余军马、屯陆口。',refs=[LU,LUKOU]),
+  dict(category='敌对',name='关羽',personId='guanyu',label='邻境结好与袭其后方',text='继驻陆口时表面加厚交好，后借称病与隐蔽舟师袭取公安、江陵。',refs=[LUKOU,JIAN,HIDDEN,TAKE]),
+  dict(category='同僚',name='陆逊',personId='luxun',label='荐代陆口',text='称病返建业时向孙权推荐陆逊，认为其可负重任且名声未著、关羽不忌。',refs=[LU_XUN,Q('v058-b0005','而未有遠名，非羽所忌，無復是過。')]),
+  dict(category='同僚',name='甘宁',label='荐先登并为之陈请',text='攻皖荐甘宁为升城督；甘宁粗暴违令时，又以难得的斗将为由请孙权容忍。',refs=[WAN,NING]),
+  dict(category='同僚',name='虞翻',label='随军与入城警告',text='请兼知医术的虞翻随自己回建业，也有为其解徙的用意；取江陵时听从其入城警告。',refs=[FAN,FAN2,Q('v057-b0006','以翻兼知醫術，請以自隨，亦欲因此令翻得釋也。')]),
+ ],
+ assessment=[
+  dict(title='陈寿：勇而有谋，终于克己',text='陈寿称其能断识军计，把诱郝普、擒关羽列为最妙之处；同时记其少年轻果妄杀而后克己，认为有国士之量，超出单纯武将。',refs=[PING,PING2]),
+  dict(title='孙权：学问开益，筹略奇至',text='孙权回顾吕蒙从果敢有胆到学问增长、筹略突出的变化，认为可次于周瑜，但言议英发不及；这是有层次的比较。',refs=[Q('v054-b0042','及身長大，學問開益，籌略奇至，可以次於公瑾，但言議英發不及之耳。')]),
+ ],
+ readingNotes=[
+  dict(title='吴下阿蒙见于哪一层材料',text='正文记吕蒙为鲁肃画五策而令其改观；“吴下阿蒙”、士别三日及劝学长篇来自裴注引《江表传》，该注又作密陈三策。两层可互参，策数不混写成同一段原话。',refs=[STRATEGY,AMENG,THREE]),
+  dict(title='死于取荆州后，卒句未另系年',text='《吴主传》明确把袭荆州放在建安二十四年；吕蒙传则在封赏后接述病卒、年四十二，没有卒日月。这里不根据享年倒推出确定出生年月，也不把卒句扩写成书中没有的日历日期。',refs=[Q('v047-b0018','二十四年，關羽圍曹仁於襄陽'),UNISSUED,DEATH]),
+  dict(title='郝普受骗的话不是战况说明',text='诱降说辞把刘备、关羽描绘为无暇救援；正文随后揭示二人实际分别在公安、益阳。因此引用说辞时必须标明吕蒙在施诈，而非据以补写刘备被夏侯渊围困。',refs=[DECEIVE,Q('v054-b0034','左將軍在漢中，為夏侯淵所圍。關羽在南郡，今至尊身自臨之。')]),
+  dict(title='袭取荆州不等于亲到樊襄',text='吕蒙曾在方案中说自己可前据襄阳；真正出兵时，正文及《吴主传》所记是寻阳出发、袭公安、据江陵。地图据实际行军，不画关羽在樊城的北征地，也不把朱然、潘璋截路地转给吕蒙。',refs=[HIDDEN,TAKE,Q('v054-b0037','蒙為國家前據襄陽'),Q('v054-b0038','權使朱然、潘璋斷其徑路')]),
+ ],
+ scholarship=[dict(title='进学是注中明确的转变',text='裴注引《江表传》写吕蒙在孙权劝勉后笃志读书、学识进益；正文则保留其少年不修书传、议大事常口占箋疏的早期状态。',refs=[STUDY,Q('v054-b0040','蒙少不修書傳，每陳大事，常口占為箋疏。')])],
+ sourceScope='以卷五十四《吕蒙传》正文及全部裴注为基础，并通读同卷鲁肃相关段落，交叉核对卷三十二《先主传》、卷四十廖立、卷四十七《吴主传》、卷五十一孙皎、卷五十五甘宁与凌统、卷五十六朱然、卷五十七虞翻、卷五十八陆逊等。注引书与异说分别标明，史料中人物的诈称和作战计划均不当作既成事实。本页不声称穷尽全书所有提及吕蒙之处。',
+)

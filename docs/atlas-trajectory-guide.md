@@ -102,7 +102,7 @@ trajectory=dict(
 node scripts/atlas-places.mjs person liubei
 ```
 
-截至 2026-11-16，本站 65 人中有 21 人在江山时序里有路线：
+截至 2026-11-16，本站 65 人中有 30 人在配套的本地江山时序版本里有路线：
 
 | 本站 id | `atlasPerson` | 站数 | 本站 id | `atlasPerson` | 站数 |
 |---|---|---|---|---|---|
@@ -117,6 +117,11 @@ node scripts/atlas-places.mjs person liubei
 | pang-tong | pangtong | 5 | fa-zheng | fazheng | 4 |
 | liu-shan | liushan | 6 | jiang-wan | jiangwan | 5 |
 | fei-yi | feiyi | 9 | | | |
+| sun-jian | sunjian | 10 | sun-ce | sunce | 8 |
+| sun-hao | sunhao | 8 | lusu | lusu | 9 |
+| lumeng | lumeng | 12 | taishi-ci | taishici | 8 |
+| zhang-zhao | zhangzhao | 4 | zhu-zhi | zhuzhi | 4 |
+| lv-fan | lvfan | 8 | | | |
 
 本轮九名蜀汉人物使用带原文引用的独立人物站点（`curatedOnly`），不再混入只提及姓名的公共事件。详见 [核对数据](shu-trajectory-audit.json)。其他人物仍沿用既有路线。上游新增事件后，站号可能整体后移；`atlas-places.mjs check` 会按年份核对，发现错位就报错。
 
@@ -262,3 +267,20 @@ npx astro build --outDir /tmp/sgz-dist
 姜维的六个时期保持不变，对应站数为1、3、3、2、2、1。合并上邽—冀城、254—255年狄道—襄武—狄道、257—258年芒水出兵—还成都、262年侯和败退—驻沓中。南安撤围、段谷大败、剑阁拒敌、涪县投降、成都兵变分别保留。
 
 合并点取一处明确注明的代表地点；详情逐项说明地点、年份与先后关系，不把不同年份的战役写成一次。`mergedLocations`保留原站的地点、坐标、年份和正文条目ID，`careerIds`及`sourceRefs`保留合并条目的全部依据。界面使用`dateLabelZh/En`显示年代范围，排序用结束年份。正文全部履历、引文和事件关联不变。
+
+## 孙吴九人独立人物路线
+
+孙坚、孙策、孙皓、鲁肃、吕蒙、太史慈、张昭、朱治、吕范均使用 `curatedOnly` 的独立人物路线，共42个时期、71站。配套地图必须包含这九人的新人物数据；旧地图不能仅靠本站的时期链接显示新路线。数据见 [wu-trajectory-audit.json](wu-trajectory-audit.json)，内容与审查说明见 [wu-b-profile-review.md](wu-b-profile-review.md)。
+
+每站保留 `phaseId`、`careerId` 或 `careerIds`、逐句 `sourceRefs`；必要时用 `mergedLocations` 留存合并前地点。地图数字年份可为排序值，确年未载时必须显示 `dateLabelZh/En` 并在说明中解释。期内没有可靠地理定位的履历仍保留，时期不强行标点。孙坚、孙策229年的身后追尊均无站点。
+
+线型直接复用既有 A 类绘制：概览为虚线，选中时期的到达路段为实线，其他路段为虚线。无需增加孙吴专用渲染逻辑。对照正文归并相邻经历，同时保留鲁阳往返、故鄣返吴、建业返寻阳等关键转折；合并点的坐标是代表位置，不表示同名多地重合。
+
+联动验收：
+
+```bash
+JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/check-wu-trajectories.mjs
+JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/atlas-places.mjs check sun-jian sun-ce sun-hao lusu lumeng taishi-ci zhang-zhao zhu-zhi lv-fan
+```
+
+第一条额外核对站点引文在本书中的逐字匹配、履历和时期归属，以及地图原始数据和运行时站点与本站审计文件的一致性。
