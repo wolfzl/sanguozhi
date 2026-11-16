@@ -170,10 +170,11 @@ test('all nine corrected Shu routes preserve sourced careers and exact phase sto
     assert.deepEqual(t.phases.flatMap(ph=>ph.atlasStops),route.stops.map((_,i)=>i),id);
     for (const [i,stop] of route.stops.entries()) {
       const ph=t.phases.find(ph=>ph.id===stop.phaseId);
-      const career=p.milestones.find(m=>m.id===stop.careerId);
-      assert.ok(ph.careers.includes(career.id));
+      const careers=(stop.careerIds||[stop.careerId]).map(id=>p.milestones.find(m=>m.id===id));
+      assert.ok(careers.every(career=>ph.careers.includes(career.id)));
       assert.ok(ph.atlasStops.includes(i));
-      assert.deepEqual(stop.sourceRefs,career.refs);
+      const refs=careers.flatMap(c=>c.refs).filter((r,i,all)=>all.findIndex(x=>JSON.stringify(x)===JSON.stringify(r))===i);
+      assert.deepEqual(stop.sourceRefs,refs);
       assert.ok(stop.coord.every(Number.isFinite));
       assert.ok(stop.year>=ph.span[0]&&stop.year<=ph.span[1]);
     }
@@ -183,7 +184,8 @@ test('Shu homonyms do not fall on unrelated provinces or conflate Ji and Shanggu
   const stops=Object.values(shuAudit).flatMap(r=>r.stops);
   for (const s of stops.filter(s=>s.ancientZh==='江州')) assert.ok(s.coord[0]<108&&s.coord[1]<30);
   for (const s of stops.filter(s=>s.ancientZh==='汉寿')) assert.ok(s.coord[0]<107&&s.coord[1]>32);
-  const ji=stops.find(s=>s.ancientZh==='冀城'), shang=stops.find(s=>s.ancientZh==='上邽');
+  const locations=stops.flatMap(s=>s.mergedLocations||[s]);
+  const ji=locations.find(s=>s.ancientZh==='冀城'), shang=locations.find(s=>s.ancientZh==='上邽');
   assert.ok(Math.abs(ji.coord[0]-shang.coord[0])>0.3);
   const ta=stops.find(s=>s.ancientZh==='沓中'); assert.ok(ta.coord[0]<105&&ta.coord[1]>33);
 });
@@ -206,4 +208,16 @@ test('a new site release changes atlas document URLs while preserving map option
   const configured=new URL(versionedAtlasBase(BASE+'?lang=zh#map','release-new'));
   assert.equal(configured.searchParams.get('lang'),'zh');
   assert.equal(configured.hash,'#map');
+});
+
+test('Jiang Wei has 12 map points while preserving merged episodes and six narrative periods', () => {
+  const route=shuAudit['jiang-wei'];
+  assert.equal(route.stops.length,12);
+  const t=people.find(p=>p.id==='jiang-wei').dossier.trajectory;
+  assert.deepEqual(t.phases.map(p=>p.atlasStops.length),[1,3,3,2,2,1]);
+  assert.equal(route.stops.flatMap(s=>s.mergedLocations||[s]).length,17);
+  const joint=route.stops.find(s=>s.dateLabelZh==='254—255年');
+  assert.deepEqual(joint.careerIds,['xiangwu','taoxi']);
+  assert.ok(joint.descZh.includes('254年')&&joint.descZh.includes('255年'));
+  assert.deepEqual(route.stops.slice(-3).map(s=>s.ancientZh),['剑阁','涪县','成都']);
 });

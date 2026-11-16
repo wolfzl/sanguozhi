@@ -110,7 +110,7 @@ node scripts/atlas-places.mjs person liubei
 | liubei | liubei | 13 | sima-yi | simayi | 6 |
 | zhuge-liang | zhugeliang | 11 | zhouyu | zhouyu | 5 |
 | sunquan | sunquan | 7 | zhangfei | zhangfei | 10 |
-| guanyu | guanyu | 7 | jiang-wei | jiangwei | 17 |
+| guanyu | guanyu | 7 | jiang-wei | jiangwei | 12 |
 | du-yu | duyu | 7 | yuanshao | yuanshao | 3 |
 | zhaoyun | zhaoyun | 9 | deng-ai | dengai | 3 |
 | lv-bu | lvbu | 3 | ma-chao | machao | 7 |
@@ -256,3 +256,9 @@ npx astro build --outDir /tmp/sgz-dist
 人物页构建时用 `versionedAtlasBase` 为嵌入、全图及分期链接统一加上 `sgz_rev`；默认使用构建时的时间标识。若指定 `PUBLIC_ATLAS_REVISION`，每次联动发布必须更换其值。此参数只更新文档缓存键，不改变人物、时期、站点范围和时间轴参数。
 
 发布验收应在曾经加载旧页面的浏览器上下文中直接打开运行站点，核对 iframe 内实际的站点列表与独立地图一致。不用拦截替换资源，也不清空缓存；只检查 HTTP 文件一致不足以发现此问题。
+
+## 姜维地图按正文合并为12点
+
+姜维的六个时期保持不变，对应站数为1、3、3、2、2、1。合并上邽—冀城、254—255年狄道—襄武—狄道、257—258年芒水出兵—还成都、262年侯和败退—驻沓中。南安撤围、段谷大败、剑阁拒敌、涪县投降、成都兵变分别保留。
+
+合并点取一处明确注明的代表地点；详情逐项说明地点、年份与先后关系，不把不同年份的战役写成一次。`mergedLocations`保留原站的地点、坐标、年份和正文条目ID，`careerIds`及`sourceRefs`保留合并条目的全部依据。界面使用`dateLabelZh/En`显示年代范围，排序用结束年份。正文全部履历、引文和事件关联不变。

@@ -2167,57 +2167,13 @@
       {
         "year": 228,
         "coord": [
-          105.72,
-          34.58
-        ],
-        "ancientZh": "上邽",
-        "modernZh": "甘肃天水秦州一带",
-        "titleZh": "进退失据，归诸葛亮",
-        "descZh": "随天水太守出行，太守疑其有异心而退保上邽，不纳姜维等人；回冀也不得入，只得归诸葛亮。街亭败后随军撤入蜀，与母分离，获授官爵，诸葛亮称许其才。后续升迁的确年未载。 年代说明：太守拒纳，未入城；标示行至城外。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
-        "quoteZh": "v044-b0018：太守聞蜀軍垂至而諸縣響應，疑維等皆有異心，於是夜亡保上邽。維等覺太守去，追遲，至城門，城門已閉，不納。維等相率還冀，冀亦不入維。維等乃俱詣諸葛亮。；v044-b0018：會馬謖敗於街亭。亮拔將西縣千餘家及維等還，故維遂與母相失。亮辟維為倉曹掾，加奉義將軍，封當陽亭侯，時年二十七。；v044-b0018：須先教中虎步兵五六千人。姜伯約甚敏於軍事，既有膽義，深解兵意。此人心存漢室而才兼於人，畢教軍事，當遣詣宮，覲見主上。；v044-b0018：後遷中監軍、征西將軍。",
-        "sourceRefs": [
-          {
-            "volume": "044",
-            "blockId": "v044-b0018",
-            "kind": "body",
-            "quote": "太守聞蜀軍垂至而諸縣響應，疑維等皆有異心，於是夜亡保上邽。維等覺太守去，追遲，至城門，城門已閉，不納。維等相率還冀，冀亦不入維。維等乃俱詣諸葛亮。"
-          },
-          {
-            "volume": "044",
-            "blockId": "v044-b0018",
-            "kind": "body",
-            "quote": "會馬謖敗於街亭。亮拔將西縣千餘家及維等還，故維遂與母相失。亮辟維為倉曹掾，加奉義將軍，封當陽亭侯，時年二十七。"
-          },
-          {
-            "volume": "044",
-            "blockId": "v044-b0018",
-            "kind": "body",
-            "quote": "須先教中虎步兵五六千人。姜伯約甚敏於軍事，既有膽義，深解兵意。此人心存漢室而才兼於人，畢教軍事，當遣詣宮，覲見主上。"
-          },
-          {
-            "volume": "044",
-            "blockId": "v044-b0018",
-            "kind": "body",
-            "quote": "後遷中監軍、征西將軍。"
-          }
-        ],
-        "phaseId": "join",
-        "careerId": "join",
-        "ancientEn": "Shanggui",
-        "modernEn": "Approximate historical location; see source note.",
-        "titleEn": "Shanggui",
-        "descEn": "Was refused entry to Shanggui; the point marks the city approached, not a garrison inside. Lines connect known stops in sequence; they do not reconstruct ancient roads."
-      },
-      {
-        "year": 228,
-        "coord": [
           105.33,
           34.74
         ],
         "ancientZh": "冀城",
         "modernZh": "甘肃甘谷一带；与上邽分开",
-        "titleZh": "进退失据，归诸葛亮",
-        "descZh": "随天水太守出行，太守疑其有异心而退保上邽，不纳姜维等人；回冀也不得入，只得归诸葛亮。街亭败后随军撤入蜀，与母分离，获授官爵，诸葛亮称许其才。后续升迁的确年未载。 年代说明：回冀亦不得入，后归诸葛亮；非城内驻军。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "titleZh": "上邽拒纳，回冀归蜀",
+        "descZh": "上邽拒纳后回冀城，冀城也不纳，姜维只得归诸葛亮。合并展示228年同一段进退失据的经历，地图取冀城城外为代表点，不表示曾入城驻军。 地点为近似定位；连线表示概括后的经历顺序，不复原完整行军道路。",
         "quoteZh": "v044-b0018：太守聞蜀軍垂至而諸縣響應，疑維等皆有異心，於是夜亡保上邽。維等覺太守去，追遲，至城門，城門已閉，不納。維等相率還冀，冀亦不入維。維等乃俱詣諸葛亮。；v044-b0018：會馬謖敗於街亭。亮拔將西縣千餘家及維等還，故維遂與母相失。亮辟維為倉曹掾，加奉義將軍，封當陽亭侯，時年二十七。；v044-b0018：須先教中虎步兵五六千人。姜伯約甚敏於軍事，既有膽義，深解兵意。此人心存漢室而才兼於人，畢教軍事，當遣詣宮，覲見主上。；v044-b0018：後遷中監軍、征西將軍。",
         "sourceRefs": [
           {
@@ -2249,8 +2205,33 @@
         "careerId": "join",
         "ancientEn": "Jicheng",
         "modernEn": "Approximate historical location; see source note.",
-        "titleEn": "Jicheng",
-        "descEn": "Was also refused entry to Jicheng, then joined Zhuge Liang. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+        "titleEn": "Refused at Shanggui and Jicheng",
+        "descEn": "Refused entry to Shanggui and then Jicheng, Jiang Wei joined Zhuge Liang. This point groups the two approaches in 228 and uses the vicinity of Jicheng; it does not imply entry into either city. The location is approximate; lines summarize the sequence, not the full marching route.",
+        "mergedLocations": [
+          {
+            "year": 228,
+            "ancientZh": "上邽",
+            "coord": [
+              105.72,
+              34.58
+            ],
+            "careerId": "join"
+          },
+          {
+            "year": 228,
+            "ancientZh": "冀城",
+            "coord": [
+              105.33,
+              34.74
+            ],
+            "careerId": "join"
+          }
+        ],
+        "careerIds": [
+          "join"
+        ],
+        "dateLabelZh": "228年",
+        "dateLabelEn": "228 CE"
       },
       {
         "year": 234,
@@ -2420,70 +2401,6 @@
         "descEn": "Besieged Nanan in present-day Gansu, then withdrew for lack of supplies. Lines connect known stops in sequence; they do not reconstruct ancient roads."
       },
       {
-        "year": 254,
-        "coord": [
-          103.86,
-          35.38
-        ],
-        "ancientZh": "狄道",
-        "modernZh": "甘肃临洮",
-        "titleZh": "受狄道降，进击襄武",
-        "descZh": "狄道长李简举城降，姜维进围襄武，与徐质交锋获胜；随后迁狄道、河关、临洮三县居民入蜀。《后主传》记安置于绵竹、繁县。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
-        "quoteZh": "v044-b0020：明年，加督中外軍事。復出隴西，守狄道長李簡舉城降。進圍襄武，與魏將徐質交鋒，斬首破敵，魏軍敗退。；v033-b0033：冬，拔狄道、（河間）[河關]、臨洮三縣民，居於綿竹、繁縣。",
-        "sourceRefs": [
-          {
-            "volume": "044",
-            "blockId": "v044-b0020",
-            "kind": "body",
-            "quote": "明年，加督中外軍事。復出隴西，守狄道長李簡舉城降。進圍襄武，與魏將徐質交鋒，斬首破敵，魏軍敗退。"
-          },
-          {
-            "volume": "033",
-            "blockId": "v033-b0033",
-            "kind": "body",
-            "quote": "冬，拔狄道、（河間）[河關]、臨洮三縣民，居於綿竹、繁縣。"
-          }
-        ],
-        "phaseId": "campaigns",
-        "careerId": "xiangwu",
-        "ancientEn": "Didao",
-        "modernEn": "Approximate historical location; see source note.",
-        "titleEn": "Didao",
-        "descEn": "Received the surrender of Didao. Lines connect known stops in sequence; they do not reconstruct ancient roads."
-      },
-      {
-        "year": 254,
-        "coord": [
-          104.64,
-          35.0
-        ],
-        "ancientZh": "襄武",
-        "modernZh": "甘肃陇西一带",
-        "titleZh": "受狄道降，进击襄武",
-        "descZh": "狄道长李简举城降，姜维进围襄武，与徐质交锋获胜；随后迁狄道、河关、临洮三县居民入蜀。《后主传》记安置于绵竹、繁县。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
-        "quoteZh": "v044-b0020：明年，加督中外軍事。復出隴西，守狄道長李簡舉城降。進圍襄武，與魏將徐質交鋒，斬首破敵，魏軍敗退。；v033-b0033：冬，拔狄道、（河間）[河關]、臨洮三縣民，居於綿竹、繁縣。",
-        "sourceRefs": [
-          {
-            "volume": "044",
-            "blockId": "v044-b0020",
-            "kind": "body",
-            "quote": "明年，加督中外軍事。復出隴西，守狄道長李簡舉城降。進圍襄武，與魏將徐質交鋒，斬首破敵，魏軍敗退。"
-          },
-          {
-            "volume": "033",
-            "blockId": "v033-b0033",
-            "kind": "body",
-            "quote": "冬，拔狄道、（河間）[河關]、臨洮三縣民，居於綿竹、繁縣。"
-          }
-        ],
-        "phaseId": "campaigns",
-        "careerId": "xiangwu",
-        "ancientEn": "Xiangwu",
-        "modernEn": "Approximate historical location; see source note.",
-        "titleEn": "Xiangwu",
-        "descEn": "Attacked Xiangwu. Lines connect known stops in sequence; they do not reconstruct ancient roads."
-      },
-      {
         "year": 255,
         "coord": [
           103.86,
@@ -2491,10 +2408,22 @@
         ],
         "ancientZh": "狄道",
         "modernZh": "甘肃临洮",
-        "titleZh": "洮西破王经，围狄道",
-        "descZh": "与夏侯霸等出狄道，在洮西大破王经，魏军死者数万人。王经退保狄道，张翼劝止进军，姜维不听，继续围城；陈泰救至后退住钟题。 年代说明：洮西战后围狄道。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
-        "quoteZh": "v044-b0020：後十八年，復與車騎將軍夏侯霸等俱出狄道，大破魏雍州刺史王經於洮西，經眾死者數萬人。經退保狄道城，維圍之。；v045-b0009：翼曰：「可止矣，不宜復進，進或毀此大功。」；v044-b0020：魏徵西將軍陳泰進兵解圍，維卻住鐘題。",
+        "titleZh": "狄道、襄武与洮西连战",
+        "descZh": "254年狄道长李简举城降，姜维进击襄武，随后迁三县居民入蜀；255年又在洮西大破王经，继而围狄道，陈泰救至后退军。合并同一时期的狄道—襄武—狄道往返，地图取狄道为代表点。两年战事分别叙述，不合写成一次战役，也不表示此间一直驻在狄道。 地点为近似定位；连线表示概括后的经历顺序，不复原完整行军道路。",
+        "quoteZh": "v044-b0020：明年，加督中外軍事。復出隴西，守狄道長李簡舉城降。進圍襄武，與魏將徐質交鋒，斬首破敵，魏軍敗退。；v033-b0033：冬，拔狄道、（河間）[河關]、臨洮三縣民，居於綿竹、繁縣。；v044-b0020：後十八年，復與車騎將軍夏侯霸等俱出狄道，大破魏雍州刺史王經於洮西，經眾死者數萬人。經退保狄道城，維圍之。；v045-b0009：翼曰：「可止矣，不宜復進，進或毀此大功。」；v044-b0020：魏徵西將軍陳泰進兵解圍，維卻住鐘題。",
         "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0020",
+            "kind": "body",
+            "quote": "明年，加督中外軍事。復出隴西，守狄道長李簡舉城降。進圍襄武，與魏將徐質交鋒，斬首破敵，魏軍敗退。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0033",
+            "kind": "body",
+            "quote": "冬，拔狄道、（河間）[河關]、臨洮三縣民，居於綿竹、繁縣。"
+          },
           {
             "volume": "044",
             "blockId": "v044-b0020",
@@ -2518,8 +2447,43 @@
         "careerId": "taoxi",
         "ancientEn": "Didao",
         "modernEn": "Approximate historical location; see source note.",
-        "titleEn": "Didao",
-        "descEn": "Defeated Wang Jing west of the Tao River and besieged Didao. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+        "titleEn": "Campaigns around Didao and Xiangwu",
+        "descEn": "In 254, Didao surrendered and Jiang Wei advanced on Xiangwu, then moved residents to Shu. In 255 he defeated Wang Jing west of the Tao River, besieged Didao and withdrew when Chen Tai brought relief. Didao represents these separate campaigns and the Didao-Xiangwu-Didao sequence; it was not a continuous stay. The location is approximate; lines summarize the sequence, not the full marching route.",
+        "mergedLocations": [
+          {
+            "year": 254,
+            "ancientZh": "狄道",
+            "coord": [
+              103.86,
+              35.38
+            ],
+            "careerId": "xiangwu"
+          },
+          {
+            "year": 254,
+            "ancientZh": "襄武",
+            "coord": [
+              104.64,
+              35.0
+            ],
+            "careerId": "xiangwu"
+          },
+          {
+            "year": 255,
+            "ancientZh": "狄道",
+            "coord": [
+              103.86,
+              35.38
+            ],
+            "careerId": "taoxi"
+          }
+        ],
+        "careerIds": [
+          "xiangwu",
+          "taoxi"
+        ],
+        "dateLabelZh": "254—255年",
+        "dateLabelEn": "254–255 CE"
       },
       {
         "year": 256,
@@ -2554,50 +2518,6 @@
         "descEn": "Suffered defeat at Duangu; the battlefield location is approximate. Lines connect known stops in sequence; they do not reconstruct ancient roads."
       },
       {
-        "year": 257,
-        "coord": [
-          108.1,
-          34.2
-        ],
-        "ancientZh": "芒水",
-        "modernZh": "陕西周至一带，河道未定，仅作区域示意",
-        "titleZh": "乘隙至芒水，返成都复职",
-        "descZh": "诸葛诞反魏，关中兵东调，姜维欲乘虚向秦川，率数万人出骆谷，驻芒水。司马望、邓艾守长城，不应挑战；闻诸葛诞败，于258年还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
-        "quoteZh": "v044-b0022：二十年，魏徵東大將軍諸葛誕反於淮南，分關中兵東下。；v044-b0022：維欲乘虛向秦川，復率數萬人出駱谷，逕至沈嶺。；v044-b0022：維前住芒水，皆倚山為營。望、艾傍渭堅圍，維數下挑戰，望、艾不應。；v044-b0022：景耀元年，維聞誕破敗，乃還成都。復拜大將軍。",
-        "sourceRefs": [
-          {
-            "volume": "044",
-            "blockId": "v044-b0022",
-            "kind": "body",
-            "quote": "二十年，魏徵東大將軍諸葛誕反於淮南，分關中兵東下。"
-          },
-          {
-            "volume": "044",
-            "blockId": "v044-b0022",
-            "kind": "body",
-            "quote": "維欲乘虛向秦川，復率數萬人出駱谷，逕至沈嶺。"
-          },
-          {
-            "volume": "044",
-            "blockId": "v044-b0022",
-            "kind": "body",
-            "quote": "維前住芒水，皆倚山為營。望、艾傍渭堅圍，維數下挑戰，望、艾不應。"
-          },
-          {
-            "volume": "044",
-            "blockId": "v044-b0022",
-            "kind": "body",
-            "quote": "景耀元年，維聞誕破敗，乃還成都。復拜大將軍。"
-          }
-        ],
-        "phaseId": "late",
-        "careerId": "mangshui",
-        "ancientEn": "Mang River",
-        "modernEn": "Approximate historical location; see source note.",
-        "titleEn": "Mang River",
-        "descEn": "Advanced through Luo Valley and camped by the Mang River; the location is regional and approximate. Lines connect known stops in sequence; they do not reconstruct ancient roads."
-      },
-      {
         "year": 258,
         "coord": [
           104.07,
@@ -2605,8 +2525,8 @@
         ],
         "ancientZh": "成都",
         "modernZh": "四川成都",
-        "titleZh": "乘隙至芒水，返成都复职",
-        "descZh": "诸葛诞反魏，关中兵东调，姜维欲乘虚向秦川，率数万人出骆谷，驻芒水。司马望、邓艾守长城，不应挑战；闻诸葛诞败，于258年还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "titleZh": "芒水出兵，返成都",
+        "descZh": "257年乘诸葛诞反魏之机，姜维出骆谷至芒水，与司马望、邓艾相持；258年闻诸葛诞败，回成都复职。合并正文同一履历条目中的出兵与返回，地图取返回地成都为代表点；芒水仍保留在说明中，不表示出征发生在成都。 地点为近似定位；连线表示概括后的经历顺序，不复原完整行军道路。",
         "quoteZh": "v044-b0022：二十年，魏徵東大將軍諸葛誕反於淮南，分關中兵東下。；v044-b0022：維欲乘虛向秦川，復率數萬人出駱谷，逕至沈嶺。；v044-b0022：維前住芒水，皆倚山為營。望、艾傍渭堅圍，維數下挑戰，望、艾不應。；v044-b0022：景耀元年，維聞誕破敗，乃還成都。復拜大將軍。",
         "sourceRefs": [
           {
@@ -2638,40 +2558,33 @@
         "careerId": "mangshui",
         "ancientEn": "Chengdu",
         "modernEn": "Approximate historical location; see source note.",
-        "titleEn": "Chengdu",
-        "descEn": "Returned to Chengdu. Lines connect known stops in sequence; they do not reconstruct ancient roads."
-      },
-      {
-        "year": 262,
-        "coord": [
-          103.77,
-          34.99
-        ],
-        "ancientZh": "侯和",
-        "modernZh": "甘肃临洮南一带，战址有争议，仅作区域示意",
-        "titleZh": "侯和失利，留住沓中",
-        "descZh": "出兵侯和被邓艾击破，退住沓中；黄皓与阎宇相结，暗欲废维立宇，姜维自疑惧而不再还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
-        "quoteZh": "v044-b0024：五年，維率眾出漢、侯和，為鄧艾所破，還住沓中。；v044-b0024：而宦官黃皓等弄權於內，右大將軍閻宇與皓協比，而皓陰欲廢維樹宇。維亦疑之，故自危懼，不復還成都。",
-        "sourceRefs": [
+        "titleEn": "Mang River campaign and return",
+        "descEn": "In 257 Jiang Wei advanced through Luo Valley to the Mang River and confronted Sima Wang and Deng Ai. In 258 he returned to Chengdu after Zhuge Dan was defeated. Chengdu marks the return at the end of this episode, not the battlefield. The location is approximate; lines summarize the sequence, not the full marching route.",
+        "mergedLocations": [
           {
-            "volume": "044",
-            "blockId": "v044-b0024",
-            "kind": "body",
-            "quote": "五年，維率眾出漢、侯和，為鄧艾所破，還住沓中。"
+            "year": 257,
+            "ancientZh": "芒水",
+            "coord": [
+              108.1,
+              34.2
+            ],
+            "careerId": "mangshui"
           },
           {
-            "volume": "044",
-            "blockId": "v044-b0024",
-            "kind": "body",
-            "quote": "而宦官黃皓等弄權於內，右大將軍閻宇與皓協比，而皓陰欲廢維樹宇。維亦疑之，故自危懼，不復還成都。"
+            "year": 258,
+            "ancientZh": "成都",
+            "coord": [
+              104.07,
+              30.66
+            ],
+            "careerId": "mangshui"
           }
         ],
-        "phaseId": "late",
-        "careerId": "tazhong",
-        "ancientEn": "Houhe",
-        "modernEn": "Approximate historical location; see source note.",
-        "titleEn": "Houhe",
-        "descEn": "Was defeated at Houhe; the battlefield location is disputed. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+        "careerIds": [
+          "mangshui"
+        ],
+        "dateLabelZh": "257—258年",
+        "dateLabelEn": "257–258 CE"
       },
       {
         "year": 262,
@@ -2681,8 +2594,8 @@
         ],
         "ancientZh": "沓中",
         "modernZh": "甘肃舟曲西北一带，地域范围近似",
-        "titleZh": "侯和失利，留住沓中",
-        "descZh": "出兵侯和被邓艾击破，退住沓中；黄皓与阎宇相结，暗欲废维立宇，姜维自疑惧而不再还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "titleZh": "侯和败退，留驻沓中",
+        "descZh": "262年姜维出兵侯和，为邓艾所破，退住沓中；又因黄皓、阎宇排挤而不再还成都。合并同一段正文中的战败与退驻，地图取沓中为代表点，侯和战场保留在说明中。 地点为近似定位；连线表示概括后的经历顺序，不复原完整行军道路。",
         "quoteZh": "v044-b0024：五年，維率眾出漢、侯和，為鄧艾所破，還住沓中。；v044-b0024：而宦官黃皓等弄權於內，右大將軍閻宇與皓協比，而皓陰欲廢維樹宇。維亦疑之，故自危懼，不復還成都。",
         "sourceRefs": [
           {
@@ -2702,8 +2615,33 @@
         "careerId": "tazhong",
         "ancientEn": "Tazhong",
         "modernEn": "Approximate historical location; see source note.",
-        "titleEn": "Tazhong",
-        "descEn": "Retreated to Tazhong and remained there. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+        "titleEn": "Defeat at Houhe and retreat to Tazhong",
+        "descEn": "Defeated by Deng Ai at Houhe in 262, Jiang Wei withdrew to Tazhong and did not return to Chengdu amid court opposition. Tazhong represents the end of this episode; the battle took place at Houhe. The location is approximate; lines summarize the sequence, not the full marching route.",
+        "mergedLocations": [
+          {
+            "year": 262,
+            "ancientZh": "侯和",
+            "coord": [
+              103.77,
+              34.99
+            ],
+            "careerId": "tazhong"
+          },
+          {
+            "year": 262,
+            "ancientZh": "沓中",
+            "coord": [
+              104.15,
+              33.88
+            ],
+            "careerId": "tazhong"
+          }
+        ],
+        "careerIds": [
+          "tazhong"
+        ],
+        "dateLabelZh": "262年",
+        "dateLabelEn": "262 CE"
       },
       {
         "year": 263,
