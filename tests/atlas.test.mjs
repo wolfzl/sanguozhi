@@ -155,3 +155,35 @@ test('helpers', () => {
   assert.equal(stopParam([8]), '8');
   assert.equal(stopParam([]), undefined);
 });
+
+test('a period with no personal location does not link to the entire unrelated itinerary', () => {
+  const t = {atlasPerson:'zhaoyun',phases:[{id:'after',span:[229,261],atlasStops:[]}]};
+  assert.equal(phaseUrl(BASE,t,t.phases[0]),'');
+});
+
+const shuAudit = JSON.parse(fs.readFileSync('docs/shu-trajectory-audit.json','utf8'));
+test('all nine corrected Shu routes preserve sourced careers and exact phase stop ranges', () => {
+  assert.equal(Object.keys(shuAudit).length,9);
+  for (const [id,route] of Object.entries(shuAudit)) {
+    const p=people.find(p=>p.id===id), t=p.dossier.trajectory;
+    assert.equal(t.atlasPerson,route.atlasPerson);
+    assert.deepEqual(t.phases.flatMap(ph=>ph.atlasStops),route.stops.map((_,i)=>i),id);
+    for (const [i,stop] of route.stops.entries()) {
+      const ph=t.phases.find(ph=>ph.id===stop.phaseId);
+      const career=p.milestones.find(m=>m.id===stop.careerId);
+      assert.ok(ph.careers.includes(career.id));
+      assert.ok(ph.atlasStops.includes(i));
+      assert.deepEqual(stop.sourceRefs,career.refs);
+      assert.ok(stop.coord.every(Number.isFinite));
+      assert.ok(stop.year>=ph.span[0]&&stop.year<=ph.span[1]);
+    }
+  }
+});
+test('Shu homonyms do not fall on unrelated provinces or conflate Ji and Shanggui', () => {
+  const stops=Object.values(shuAudit).flatMap(r=>r.stops);
+  for (const s of stops.filter(s=>s.ancientZh==='江州')) assert.ok(s.coord[0]<108&&s.coord[1]<30);
+  for (const s of stops.filter(s=>s.ancientZh==='汉寿')) assert.ok(s.coord[0]<107&&s.coord[1]>32);
+  const ji=stops.find(s=>s.ancientZh==='冀城'), shang=stops.find(s=>s.ancientZh==='上邽');
+  assert.ok(Math.abs(ji.coord[0]-shang.coord[0])>0.3);
+  const ta=stops.find(s=>s.ancientZh==='沓中'); assert.ok(ta.coord[0]<105&&ta.coord[1]>33);
+});

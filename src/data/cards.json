@@ -16797,7 +16797,8 @@
                 "xiapi"
               ],
               "atlasStops": [
-                0
+                0,
+                1
               ]
             },
             {
@@ -16813,7 +16814,8 @@
                 "nanjun"
               ],
               "atlasStops": [
-                1
+                2,
+                3
               ]
             },
             {
@@ -16832,8 +16834,11 @@
                 "right"
               ],
               "atlasStops": [
-                2,
-                3
+                4,
+                5,
+                6,
+                7,
+                8
               ]
             },
             {
@@ -16849,7 +16854,7 @@
                 "death"
               ],
               "atlasStops": [
-                4
+                9
               ]
             },
             {
@@ -17943,7 +17948,11 @@
                 "shu",
                 "land"
               ],
-              "atlasStops": []
+              "atlasStops": [
+                1,
+                2,
+                3
+              ]
             },
             {
               "id": "hanshui",
@@ -17958,7 +17967,9 @@
                 "jiangzhou"
               ],
               "atlasStops": [
-                1
+                4,
+                5,
+                6
               ]
             },
             {
@@ -17975,7 +17986,8 @@
                 "jigu"
               ],
               "atlasStops": [
-                2
+                7,
+                8
               ]
             },
             {
@@ -30973,13 +30985,9 @@
                 "prince",
                 "crown"
               ],
-              "place": {
-                "name": "长阪",
-                "query": "当阳",
-                "province": "湖北",
-                "mapYear": 208,
-                "approx": true
-              }
+              "atlasStops": [
+                0
+              ]
             },
             {
               "id": "regency",
@@ -30995,12 +31003,9 @@
                 "mandate",
                 "succession"
               ],
-              "place": {
-                "name": "成都",
-                "query": "成都",
-                "province": "四川",
-                "mapYear": 223
-              }
+              "atlasStops": [
+                1
+              ]
             },
             {
               "id": "court",
@@ -31015,12 +31020,10 @@
                 "fei",
                 "huang"
               ],
-              "place": {
-                "name": "成都",
-                "query": "成都",
-                "province": "四川",
-                "mapYear": 236
-              }
+              "atlasStops": [
+                2,
+                3
+              ]
             },
             {
               "id": "fall",
@@ -31034,12 +31037,9 @@
                 "warning",
                 "surrender"
               ],
-              "place": {
-                "name": "成都",
-                "query": "成都",
-                "province": "四川",
-                "mapYear": 263
-              }
+              "atlasStops": [
+                4
+              ]
             },
             {
               "id": "luoyang",
@@ -31053,14 +31053,12 @@
                 "luoyang",
                 "death"
               ],
-              "place": {
-                "name": "洛阳",
-                "query": "洛阳",
-                "province": "河南",
-                "mapYear": 264
-              }
+              "atlasStops": [
+                5
+              ]
             }
-          ]
+          ],
+          "atlasPerson": "liushan"
         }
       }
     },
@@ -37527,13 +37525,10 @@
                 "dismissal",
                 "shangshu-lang"
               ],
-              "place": {
-                "name": "广都",
-                "query": "成都",
-                "province": "四川",
-                "mapYear": 214,
-                "approx": true
-              }
+              "atlasStops": [
+                0,
+                1
+              ]
             },
             {
               "id": "government",
@@ -37549,7 +37544,9 @@
                 "government",
                 "general"
               ],
-              "unmappedReason": "这些条目记丞相府与中央任职，未逐项明载本人所在城邑，故不据官名补地点。"
+              "atlasStops": [
+                2
+              ]
             },
             {
               "id": "hanzhong",
@@ -37563,12 +37560,9 @@
                 "hanzhong",
                 "east-plan"
               ],
-              "place": {
-                "name": "汉中",
-                "query": "汉中",
-                "province": "陕西",
-                "mapYear": 238
-              }
+              "atlasStops": [
+                3
+              ]
             },
             {
               "id": "fu",
@@ -37582,15 +37576,12 @@
                 "fu",
                 "death"
               ],
-              "place": {
-                "name": "涪",
-                "query": "绵阳",
-                "province": "四川",
-                "mapYear": 243,
-                "approx": true
-              }
+              "atlasStops": [
+                4
+              ]
             }
-          ]
+          ],
+          "atlasPerson": "jiangwan"
         }
       }
     },
@@ -39384,7 +39375,7 @@
                 "youth",
                 "palace"
               ],
-              "unmappedReason": "只载游学入蜀、留居益土及宫廷任职，没有明确记下这些经历所处的具体城邑。"
+              "atlasStops": []
             },
             {
               "id": "envoy",
@@ -39399,7 +39390,7 @@
                 "staff",
                 "mediator"
               ],
-              "unmappedReason": "使吴所至的具体城邑与调停争执的地点未明载；诸葛亮北驻汉中是入府背景，不据此代定费祎的常驻城邑。"
+              "atlasStops": []
             },
             {
               "id": "government",
@@ -39415,12 +39406,12 @@
                 "general",
                 "xingshi"
               ],
-              "place": {
-                "name": "成都",
-                "query": "成都",
-                "province": "四川",
-                "mapYear": 244
-              }
+              "atlasStops": [
+                0,
+                1,
+                2,
+                3
+              ]
             },
             {
               "id": "hanzhong",
@@ -39435,12 +39426,11 @@
                 "restraint",
                 "hanzhong"
               ],
-              "place": {
-                "name": "汉中",
-                "query": "汉中",
-                "province": "陕西",
-                "mapYear": 248
-              }
+              "atlasStops": [
+                4,
+                5,
+                6
+              ]
             },
             {
               "id": "hanshou",
@@ -39455,15 +39445,13 @@
                 "open-office",
                 "death"
               ],
-              "place": {
-                "name": "汉寿",
-                "query": "葭萌",
-                "province": "四川",
-                "mapYear": 251,
-                "approx": true
-              }
+              "atlasStops": [
+                7,
+                8
+              ]
             }
-          ]
+          ],
+          "atlasPerson": "feiyi"
         }
       }
     },
@@ -41284,7 +41272,8 @@
                 "join"
               ],
               "atlasStops": [
-                0
+                0,
+                1
               ]
             },
             {
@@ -41300,7 +41289,11 @@
                 "hanzhong",
                 "xiping"
               ],
-              "atlasStops": []
+              "atlasStops": [
+                2,
+                3,
+                4
+              ]
             },
             {
               "id": "campaigns",
@@ -41317,7 +41310,11 @@
                 "duangu"
               ],
               "atlasStops": [
-                1
+                5,
+                6,
+                7,
+                8,
+                9
               ]
             },
             {
@@ -41333,7 +41330,12 @@
                 "defence",
                 "tazhong"
               ],
-              "atlasStops": []
+              "atlasStops": [
+                10,
+                11,
+                12,
+                13
+              ]
             },
             {
               "id": "fall",
@@ -41348,7 +41350,8 @@
                 "jiange"
               ],
               "atlasStops": [
-                2
+                14,
+                15
               ]
             },
             {
@@ -41363,7 +41366,7 @@
                 "rebellion"
               ],
               "atlasStops": [
-                3
+                16
               ]
             }
           ]
@@ -52620,12 +52623,9 @@
                 "pingyang",
                 "army"
               ],
-              "place": {
-                "name": "平阳",
-                "query": "平阳",
-                "province": "山西",
-                "mapYear": 202
-              }
+              "atlasStops": [
+                0
+              ]
             },
             {
               "id": "west",
@@ -52639,12 +52639,10 @@
                 "tongguan",
                 "jicheng"
               ],
-              "place": {
-                "name": "潼关",
-                "query": "潼关",
-                "province": "陕西",
-                "mapYear": 211
-              }
+              "atlasStops": [
+                1,
+                2
+              ]
             },
             {
               "id": "shu",
@@ -52659,12 +52657,12 @@
                 "chengdu",
                 "xiabian"
               ],
-              "place": {
-                "name": "成都",
-                "query": "成都",
-                "province": "四川",
-                "mapYear": 214
-              }
+              "atlasStops": [
+                3,
+                4,
+                5,
+                6
+              ]
             },
             {
               "id": "late",
@@ -52679,7 +52677,7 @@
                 "office",
                 "death"
               ],
-              "unmappedReason": "本传此段记官爵、卒年与遗疏，未明载各事发生地点；领凉州牧也不能作为身在凉州的依据。"
+              "atlasStops": []
             },
             {
               "id": "shi",
@@ -52692,9 +52690,10 @@
               "careers": [
                 "shi"
               ],
-              "unmappedReason": "追谥是身后授予的名号，不是马超本人的行迹。"
+              "atlasStops": []
             }
-          ]
+          ],
+          "atlasPerson": "machao"
         }
       }
     },
@@ -54068,12 +54067,10 @@
                 "review",
                 "wu"
               ],
-              "place": {
-                "name": "襄阳",
-                "query": "襄阳",
-                "province": "湖北",
-                "mapYear": 200
-              }
+              "atlasStops": [
+                0,
+                1
+              ]
             },
             {
               "id": "jingzhou",
@@ -54087,13 +54084,9 @@
                 "leiyang",
                 "advisor"
               ],
-              "place": {
-                "name": "耒阳",
-                "query": "耒阳",
-                "province": "湖南",
-                "mapYear": 210,
-                "approx": true
-              }
+              "atlasStops": [
+                2
+              ]
             },
             {
               "id": "shu",
@@ -54109,15 +54102,13 @@
                 "feast",
                 "death"
               ],
-              "place": {
-                "name": "涪",
-                "query": "绵阳",
-                "province": "四川",
-                "mapYear": 211,
-                "approx": true
-              }
+              "atlasStops": [
+                3,
+                4
+              ]
             }
-          ]
+          ],
+          "atlasPerson": "pangtong"
         }
       }
     },
@@ -55524,13 +55515,9 @@
                 "exile",
                 "early-office"
               ],
-              "place": {
-                "name": "新都",
-                "query": "成都",
-                "province": "四川",
-                "mapYear": 200,
-                "approx": true
-              }
+              "atlasStops": [
+                0
+              ]
             },
             {
               "id": "take-shu",
@@ -55546,7 +55533,7 @@
                 "zheng-du",
                 "letter"
               ],
-              "unmappedReason": "本期记载往来出使与劝说，未明确标出法正在各次建言、致书时的所在地；雒城是围军所在，不据此确定其本人位置。"
+              "atlasStops": []
             },
             {
               "id": "chengdu",
@@ -55561,12 +55548,9 @@
                 "revenge",
                 "shuke"
               ],
-              "place": {
-                "name": "成都",
-                "query": "成都",
-                "province": "四川",
-                "mapYear": 214
-              }
+              "atlasStops": [
+                1
+              ]
             },
             {
               "id": "hanzhong",
@@ -55581,13 +55565,10 @@
                 "dingjun",
                 "high-office"
               ],
-              "place": {
-                "name": "汉中",
-                "query": "汉中",
-                "province": "陕西",
-                "mapYear": 219,
-                "approx": true
-              }
+              "atlasStops": [
+                2,
+                3
+              ]
             },
             {
               "id": "death",
@@ -55600,9 +55581,10 @@
               "careers": [
                 "death"
               ],
-              "unmappedReason": "本传记去世、追谥及刘备哀悼，没有记法正去世的地点。"
+              "atlasStops": []
             }
-          ]
+          ],
+          "atlasPerson": "fazheng"
         }
       }
     },

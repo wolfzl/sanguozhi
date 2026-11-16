@@ -18,6 +18,7 @@ if (!fs.existsSync(serverPath)) {
 }
 const mcp = createRequire(import.meta.url)(serverPath);
 const runtime = mcp.createMcpRuntime();
+const shuAudit = JSON.parse(fs.readFileSync(new URL('../docs/shu-trajectory-audit.json', import.meta.url), 'utf8'));
 
 /** 解析一个地名；识别不了时返回 null。 */
 function resolve(place, year) {
@@ -68,6 +69,16 @@ if (command === 'person') {
     if (t.atlasPerson) {
       const route = personRoute(t.atlasPerson);
       if (!route) { errors.push(`${p.id}: 江山时序中没有人物 ${t.atlasPerson}`); continue; }
+      const expected = shuAudit[p.id];
+      if (expected) {
+        if (route.length !== expected.stops.length) errors.push(`${p.id}: sourced route stop count differs; update atlas and site together`);
+        expected.stops.forEach((stop, i) => {
+          const actual = route[i];
+          if (!actual || actual.year !== stop.year || actual.site !== stop.ancientZh || JSON.stringify(actual.coord) !== JSON.stringify(stop.coord)) {
+            errors.push(`${p.id}: sourced route mismatch at stop ${i} (${stop.ancientZh})`);
+          }
+        });
+      }
       const used = new Set(t.phases.flatMap(ph => ph.atlasStops));
       console.log(`\n${p.name}（${p.id}）：模式一，江山时序 ${t.atlasPerson} 共 ${route.length} 站，挂上 ${used.size} 站，${t.phases.length} 个时期`);
       for (const [i, ph] of t.phases.entries()) {

@@ -1,0 +1,2842 @@
+{
+  "zhangfei": {
+    "atlasPerson": "zhangfei",
+    "stops": [
+      {
+        "year": 184,
+        "coord": [
+          115.97,
+          39.48
+        ],
+        "ancientZh": "涿郡",
+        "modernZh": "河北涿州一带",
+        "titleZh": "在涿郡追随刘备",
+        "descZh": "与关羽同事刘备，关羽年长，张飞以兄事之。 年代说明：少年从刘，确年未载；184仅为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0009：張飛字益德，涿郡人也，少與關羽俱事先主。羽年長數歲，飛兄事之。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "張飛字益德，涿郡人也，少與關羽俱事先主。羽年長數歲，飛兄事之。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "early",
+        "ancientEn": "Zhuo commandery",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Zhuo commandery",
+        "descEn": "Followed Liu Bei in Zhuo commandery; the exact year is unknown. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "少年，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 198,
+        "coord": [
+          117.95,
+          34.11
+        ],
+        "ancientZh": "下邳",
+        "modernZh": "江苏睢宁古下邳一带",
+        "titleZh": "受拜中郎将",
+        "descZh": "随刘备从曹操破吕布，还后受曹操任命。 年代说明：破吕布所在，系于建安三年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0009：先主從曹公破呂布，隨還計，曹公拜飛為中郎將。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "先主從曹公破呂布，隨還計，曹公拜飛為中郎將。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "xiapi",
+        "ancientEn": "Xiapi",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Xiapi",
+        "descEn": "Accompanied Liu Bei in the campaign against Lu Bu at Xiapi. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 208,
+        "coord": [
+          111.79,
+          30.83
+        ],
+        "ancientZh": "长坂",
+        "modernZh": "湖北当阳一带",
+        "titleZh": "长坂率二十骑断后",
+        "descZh": "曹操入荆州，刘备南走；张飞在当阳长坂据水断桥，拒住追兵。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v032-b0012：及於當陽之長坂。；v036-b0009：飛據水斷橋，瞋目橫矛曰：「身是張益德也，可來共決死！」敵皆無敢近者，故遂得免。；v036-b0009：使飛將二十騎拒後。；v036-b0009：表卒，曹公入荊州，先主奔江南。",
+        "sourceRefs": [
+          {
+            "volume": "032",
+            "blockId": "v032-b0012",
+            "kind": "body",
+            "quote": "及於當陽之長坂。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "飛據水斷橋，瞋目橫矛曰：「身是張益德也，可來共決死！」敵皆無敢近者，故遂得免。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "使飛將二十騎拒後。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "表卒，曹公入荊州，先主奔江南。"
+          }
+        ],
+        "phaseId": "jingzhou",
+        "careerId": "changban",
+        "ancientEn": "Changban",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Changban",
+        "descEn": "Held off pursuers at Changban. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 210,
+        "coord": [
+          112.24,
+          30.33
+        ],
+        "ancientZh": "南郡",
+        "modernZh": "湖北江陵一带",
+        "titleZh": "任宜都太守，转南郡",
+        "descZh": "刘备定江南后授官封侯，后转在南郡。 年代说明：转在南郡确年未载；210为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0009：以飛為宜都太守、征虜將軍，封新亭侯，後轉在南郡。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "以飛為宜都太守、征虜將軍，封新亭侯，後轉在南郡。"
+          }
+        ],
+        "phaseId": "jingzhou",
+        "careerId": "nanjun",
+        "ancientEn": "Nanjun",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Nanjun",
+        "descEn": "Was transferred to Nanjun; the exact year is unknown. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "定江南后，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 214,
+        "coord": [
+          106.55,
+          29.56
+        ],
+        "ancientZh": "江州",
+        "modernZh": "重庆渝中一带",
+        "titleZh": "溯江入蜀，义释严颜",
+        "descZh": "在江州擒严颜，壮其不屈而释放，随后与刘备会于成都。 年代说明：入蜀进军至214年间。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0009：至江州，破璋將巴郡太守嚴顏，生獲顏。；v036-b0009：飛壯而釋之，引為賓客。；v036-b0009：與先主會於成都。；v036-b0009：飛與諸葛亮等溯流而上，分定郡縣。；v036-b0009：我州但有斷頭將軍，無有降將軍也。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "至江州，破璋將巴郡太守嚴顏，生獲顏。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "飛壯而釋之，引為賓客。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "與先主會於成都。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "飛與諸葛亮等溯流而上，分定郡縣。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "我州但有斷頭將軍，無有降將軍也。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "jiangzhou",
+        "ancientEn": "Jiangzhou",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Jiangzhou",
+        "descEn": "Captured Yan Yan at Jiangzhou in present-day Chongqing. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 214,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "溯江入蜀，义释严颜",
+        "descZh": "在江州擒严颜，壮其不屈而释放，随后与刘备会于成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0009：至江州，破璋將巴郡太守嚴顏，生獲顏。；v036-b0009：飛壯而釋之，引為賓客。；v036-b0009：與先主會於成都。；v036-b0009：飛與諸葛亮等溯流而上，分定郡縣。；v036-b0009：我州但有斷頭將軍，無有降將軍也。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "至江州，破璋將巴郡太守嚴顏，生獲顏。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "飛壯而釋之，引為賓客。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "與先主會於成都。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "飛與諸葛亮等溯流而上，分定郡縣。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0009",
+            "kind": "body",
+            "quote": "我州但有斷頭將軍，無有降將軍也。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "jiangzhou",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Joined Liu Bei at Chengdu. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 216,
+        "coord": [
+          106.97,
+          30.83
+        ],
+        "ancientZh": "宕渠",
+        "modernZh": "四川渠县土溪一带，战场近似",
+        "titleZh": "宕渠击破张郃",
+        "descZh": "张郃从汉中入巴西欲迁其民，双方相拒五十余日；张飞利用山道邀击，张郃败还南郑。 年代说明：215年后，确年未载；216为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0010：飛率精卒萬餘人，從他道邀郃軍交戰，山道迮狹，前後不得相救，飛遂破郃。；v032-b0019：先主令張飛進兵宕渠，與郃等戰於瓦口，破郃等，收兵還南鄭。；v036-b0010：郃別督諸軍下巴西，欲徙其民於漢中，進軍宕渠、蒙頭、蕩石，與飛相拒五十餘日。；v036-b0010：引軍還南鄭",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0010",
+            "kind": "body",
+            "quote": "飛率精卒萬餘人，從他道邀郃軍交戰，山道迮狹，前後不得相救，飛遂破郃。"
+          },
+          {
+            "volume": "032",
+            "blockId": "v032-b0019",
+            "kind": "body",
+            "quote": "先主令張飛進兵宕渠，與郃等戰於瓦口，破郃等，收兵還南鄭。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0010",
+            "kind": "body",
+            "quote": "郃別督諸軍下巴西，欲徙其民於漢中，進軍宕渠、蒙頭、蕩石，與飛相拒五十餘日。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0010",
+            "kind": "body",
+            "quote": "引軍還南鄭"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "dangqu",
+        "ancientEn": "Dangqu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Dangqu",
+        "descEn": "Defeated Zhang He near Dangqu after 215; the exact year is unknown. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "215年后，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 217,
+        "coord": [
+          105.68,
+          33.74
+        ],
+        "ancientZh": "下辩",
+        "modernZh": "甘肃成县一带，古县治近似",
+        "titleZh": "屯下辩后退往汉中",
+        "descZh": "《武帝纪》记张飞、马超、吴兰屯下辩；曹洪破吴兰后，张飞、马超于218年三月退汉中。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v001-b0108：劉備遣張飛、馬超、吳蘭等屯下辯；v001-b0110：三月，張飛、馬超走漢中；v001-b0110：曹洪破吳蘭，斬其將任夔等。",
+        "sourceRefs": [
+          {
+            "volume": "001",
+            "blockId": "v001-b0108",
+            "kind": "body",
+            "quote": "劉備遣張飛、馬超、吳蘭等屯下辯"
+          },
+          {
+            "volume": "001",
+            "blockId": "v001-b0110",
+            "kind": "body",
+            "quote": "三月，張飛、馬超走漢中"
+          },
+          {
+            "volume": "001",
+            "blockId": "v001-b0110",
+            "kind": "body",
+            "quote": "曹洪破吳蘭，斬其將任夔等。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "xiabian",
+        "ancientEn": "Xiabian",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Xiabian",
+        "descEn": "Stationed at Xiabian with Ma Chao and Wu Lan. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 218,
+        "coord": [
+          107.02,
+          33.07
+        ],
+        "ancientZh": "汉中",
+        "modernZh": "陕西汉中，郡域示意",
+        "titleZh": "屯下辩后退往汉中",
+        "descZh": "《武帝纪》记张飞、马超、吴兰屯下辩；曹洪破吴兰后，张飞、马超于218年三月退汉中。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v001-b0108：劉備遣張飛、馬超、吳蘭等屯下辯；v001-b0110：三月，張飛、馬超走漢中；v001-b0110：曹洪破吳蘭，斬其將任夔等。",
+        "sourceRefs": [
+          {
+            "volume": "001",
+            "blockId": "v001-b0108",
+            "kind": "body",
+            "quote": "劉備遣張飛、馬超、吳蘭等屯下辯"
+          },
+          {
+            "volume": "001",
+            "blockId": "v001-b0110",
+            "kind": "body",
+            "quote": "三月，張飛、馬超走漢中"
+          },
+          {
+            "volume": "001",
+            "blockId": "v001-b0110",
+            "kind": "body",
+            "quote": "曹洪破吳蘭，斬其將任夔等。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "xiabian",
+        "ancientEn": "Hanzhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Hanzhong",
+        "descEn": "Retreated from Xiabian to Hanzhong. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 221,
+        "coord": [
+          105.97,
+          31.56
+        ],
+        "ancientZh": "阆中",
+        "modernZh": "四川阆中",
+        "titleZh": "阆中遇害，未及东征",
+        "descZh": "将率万人从阆中会江州，临行被部将张达、范彊所杀；《先主传》系于章武元年六月。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0011：飛當率兵萬人，自閬中會江州。；v036-b0011：臨發，其帳下將張達、范彊殺飛，持其首，順流而奔孫權。；v032-b0035：六月，以子永為魯王，理為梁王。車騎將軍張飛為其左右所害。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0011",
+            "kind": "body",
+            "quote": "飛當率兵萬人，自閬中會江州。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0011",
+            "kind": "body",
+            "quote": "臨發，其帳下將張達、范彊殺飛，持其首，順流而奔孫權。"
+          },
+          {
+            "volume": "032",
+            "blockId": "v032-b0035",
+            "kind": "body",
+            "quote": "六月，以子永為魯王，理為梁王。車騎將軍張飛為其左右所害。"
+          }
+        ],
+        "phaseId": "death",
+        "careerId": "death",
+        "ancientEn": "Langzhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Langzhong",
+        "descEn": "Was killed at Langzhong before the planned march to Jiangzhou. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      }
+    ]
+  },
+  "zhaoyun": {
+    "atlasPerson": "zhaoyun",
+    "stops": [
+      {
+        "year": 208,
+        "coord": [
+          111.79,
+          30.83
+        ],
+        "ancientZh": "长坂",
+        "modernZh": "湖北当阳一带",
+        "titleZh": "长坂保护甘夫人与刘禅",
+        "descZh": "在当阳长坂抱幼主、护甘夫人，使二人免难。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0021：雲身抱弱子，即後主也，保護甘夫人，即後主母也，皆得免難。；v036-b0021：遷為牙門將軍。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0021",
+            "kind": "body",
+            "quote": "雲身抱弱子，即後主也，保護甘夫人，即後主母也，皆得免難。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0021",
+            "kind": "body",
+            "quote": "遷為牙門將軍。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "changban",
+        "ancientEn": "Changban",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Changban",
+        "descEn": "Protected Liu Shan and Lady Gan at Changban. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 214,
+        "coord": [
+          106.55,
+          29.56
+        ],
+        "ancientZh": "江州",
+        "modernZh": "重庆渝中一带",
+        "titleZh": "由江阳会军成都",
+        "descZh": "随诸葛亮溯江，至江州后分军走江阳，会于成都，战后升翊军将军。 年代说明：溯江入蜀至214年间。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0022：至江州，分遣雲從外水上江陽，與亮會於成都。成都既定，以雲為翊軍將軍。；v036-b0022：亮率雲與張飛等俱溯江西上，平定郡縣。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0022",
+            "kind": "body",
+            "quote": "至江州，分遣雲從外水上江陽，與亮會於成都。成都既定，以雲為翊軍將軍。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0022",
+            "kind": "body",
+            "quote": "亮率雲與張飛等俱溯江西上，平定郡縣。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "shu",
+        "ancientEn": "Jiangzhou",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Jiangzhou",
+        "descEn": "Reached Jiangzhou while advancing upstream into Yi province. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 214,
+        "coord": [
+          105.44,
+          28.89
+        ],
+        "ancientZh": "江阳",
+        "modernZh": "四川泸州",
+        "titleZh": "由江阳会军成都",
+        "descZh": "随诸葛亮溯江，至江州后分军走江阳，会于成都，战后升翊军将军。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0022：至江州，分遣雲從外水上江陽，與亮會於成都。成都既定，以雲為翊軍將軍。；v036-b0022：亮率雲與張飛等俱溯江西上，平定郡縣。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0022",
+            "kind": "body",
+            "quote": "至江州，分遣雲從外水上江陽，與亮會於成都。成都既定，以雲為翊軍將軍。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0022",
+            "kind": "body",
+            "quote": "亮率雲與張飛等俱溯江西上，平定郡縣。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "shu",
+        "ancientEn": "Jiangyang",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Jiangyang",
+        "descEn": "Led a separate force through Jiangyang. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 214,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "由江阳会军成都",
+        "descZh": "随诸葛亮溯江，至江州后分军走江阳，会于成都，战后升翊军将军。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0022：至江州，分遣雲從外水上江陽，與亮會於成都。成都既定，以雲為翊軍將軍。；v036-b0022：亮率雲與張飛等俱溯江西上，平定郡縣。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0022",
+            "kind": "body",
+            "quote": "至江州，分遣雲從外水上江陽，與亮會於成都。成都既定，以雲為翊軍將軍。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0022",
+            "kind": "body",
+            "quote": "亮率雲與張飛等俱溯江西上，平定郡縣。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "shu",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Joined Liu Bei at Chengdu. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 219,
+        "coord": [
+          106.68,
+          33.15
+        ],
+        "ancientZh": "汉水",
+        "modernZh": "陕西勉县汉水一带，营地未精确定位",
+        "titleZh": "汉水迎救与开营退敌",
+        "descZh": "《云别传》记赵云迎视黄忠，返救负伤张著，归营后大开营门，使追兵疑伏而退，再以弩射击。 年代说明：裴注引《云别传》。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0022-n01：將張著被創，雲復馳馬還營迎著。；v036-b0022-n01：而雲入營，更大開門，偃旗息鼓。公軍疑雲有伏兵，引去。；v036-b0022-n01：忠過期不還，雲將數十騎輕行出圍，迎視忠等。；v036-b0022-n01：雲雷鼓震天，惟以戎弩於後射公軍",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0022-n01",
+            "kind": "peizhu",
+            "quote": "將張著被創，雲復馳馬還營迎著。",
+            "sourceBook": "《云别传》"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0022-n01",
+            "kind": "peizhu",
+            "quote": "而雲入營，更大開門，偃旗息鼓。公軍疑雲有伏兵，引去。",
+            "sourceBook": "《云别传》"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0022-n01",
+            "kind": "peizhu",
+            "quote": "忠過期不還，雲將數十騎輕行出圍，迎視忠等。",
+            "sourceBook": "《云别传》"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0022-n01",
+            "kind": "peizhu",
+            "quote": "雲雷鼓震天，惟以戎弩於後射公軍",
+            "sourceBook": "《云别传》"
+          }
+        ],
+        "phaseId": "hanshui",
+        "careerId": "hanshui",
+        "ancientEn": "Han River",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Han River",
+        "descEn": "Rescued comrades and repelled pursuers near the Han River, according to the Yun Biezhuan cited in the commentary. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 221,
+        "coord": [
+          106.55,
+          29.56
+        ],
+        "ancientZh": "江州",
+        "modernZh": "重庆渝中一带",
+        "titleZh": "谏伐吴，督江州",
+        "descZh": "《云别传》记赵云劝先讨魏，刘备未听；留赵云督江州，败后赵云进至永安。 年代说明：东征前后，确年未载；221为取景排序年；裴注引《云别传》。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0022-n01：不應置魏，先與吳戰；兵勢一交，不得卒解。；v036-b0022-n01：先主不聽，遂東征，留雲督江州。先主失利於秭歸，雲進兵至永安，吳軍已退。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0022-n01",
+            "kind": "peizhu",
+            "quote": "不應置魏，先與吳戰；兵勢一交，不得卒解。",
+            "sourceBook": "《云别传》"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0022-n01",
+            "kind": "peizhu",
+            "quote": "先主不聽，遂東征，留雲督江州。先主失利於秭歸，雲進兵至永安，吳軍已退。",
+            "sourceBook": "《云别传》"
+          }
+        ],
+        "phaseId": "hanshui",
+        "careerId": "jiangzhou",
+        "ancientEn": "Jiangzhou",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Jiangzhou",
+        "descEn": "Remained at Jiangzhou during the eastern campaign, according to the Yun Biezhuan; the exact year is uncertain. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "刘备东征前后，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 222,
+        "coord": [
+          109.46,
+          31.02
+        ],
+        "ancientZh": "永安",
+        "modernZh": "重庆奉节",
+        "titleZh": "谏伐吴，督江州",
+        "descZh": "《云别传》记赵云劝先讨魏，刘备未听；留赵云督江州，败后赵云进至永安。 年代说明：刘备败后进军；裴注引《云别传》。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0022-n01：不應置魏，先與吳戰；兵勢一交，不得卒解。；v036-b0022-n01：先主不聽，遂東征，留雲督江州。先主失利於秭歸，雲進兵至永安，吳軍已退。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0022-n01",
+            "kind": "peizhu",
+            "quote": "不應置魏，先與吳戰；兵勢一交，不得卒解。",
+            "sourceBook": "《云别传》"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0022-n01",
+            "kind": "peizhu",
+            "quote": "先主不聽，遂東征，留雲督江州。先主失利於秭歸，雲進兵至永安，吳軍已退。",
+            "sourceBook": "《云别传》"
+          }
+        ],
+        "phaseId": "hanshui",
+        "careerId": "jiangzhou",
+        "ancientEn": "Yongan",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Yongan",
+        "descEn": "Advanced to Yongan after Liu Bei was defeated, according to the Yun Biezhuan. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 227,
+        "coord": [
+          107.02,
+          33.07
+        ],
+        "ancientZh": "汉中",
+        "modernZh": "陕西汉中，郡域示意",
+        "titleZh": "随诸葛亮驻汉中",
+        "descZh": "建兴五年随诸葛亮驻军汉中。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0022：五年，隨諸葛亮駐漢中。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0022",
+            "kind": "body",
+            "quote": "五年，隨諸葛亮駐漢中。"
+          }
+        ],
+        "phaseId": "north",
+        "careerId": "hanzhong",
+        "ancientEn": "Hanzhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Hanzhong",
+        "descEn": "Accompanied Zhuge Liang to Hanzhong. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 228,
+        "coord": [
+          106.92,
+          33.25
+        ],
+        "ancientZh": "箕谷",
+        "modernZh": "陕西汉中褒城北，谷道示意",
+        "titleZh": "箕谷失利，退军被贬",
+        "descZh": "与邓芝为疑军拒曹真，兵弱敌强而失利，收众固守后退军，被贬。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0022：雲、芝兵弱敵強，失利於箕谷，然斂眾固守，不至大敗。軍退，貶為鎮軍將軍。；v035-b0012：使趙雲、鄧芝為疑軍，據箕谷",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0022",
+            "kind": "body",
+            "quote": "雲、芝兵弱敵強，失利於箕谷，然斂眾固守，不至大敗。軍退，貶為鎮軍將軍。"
+          },
+          {
+            "volume": "035",
+            "blockId": "v035-b0012",
+            "kind": "body",
+            "quote": "使趙雲、鄧芝為疑軍，據箕谷"
+          }
+        ],
+        "phaseId": "north",
+        "careerId": "jigu",
+        "ancientEn": "Jigu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Jigu",
+        "descEn": "Fought at Jigu with Deng Zhi, then withdrew after a reverse. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      }
+    ]
+  },
+  "ma-chao": {
+    "atlasPerson": "machao",
+    "stops": [
+      {
+        "year": 202,
+        "coord": [
+          111.52,
+          36.08
+        ],
+        "ancientZh": "平阳",
+        "modernZh": "山西临汾一带",
+        "titleZh": "随钟繇讨郭援",
+        "descZh": "在平阳参战，部将庞德斩郭援。 年代说明：本传未系确年；202为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0013：騰遣超隨繇討郭援、高幹於平陽，超將龐德親斬援首。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0013",
+            "kind": "body",
+            "quote": "騰遣超隨繇討郭援、高幹於平陽，超將龐德親斬援首。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "pingyang",
+        "ancientEn": "Pingyang",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Pingyang",
+        "descEn": "Fought Guo Yuan near Pingyang; the biography does not specify the year. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "早年，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 211,
+        "coord": [
+          110.25,
+          34.54
+        ],
+        "ancientZh": "潼关",
+        "modernZh": "陕西潼关",
+        "titleZh": "潼关联军败于曹操",
+        "descZh": "与韩遂等进据潼关，被离间后联军大败。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0014：曹公用賈詡謀，離間超、遂，更相猜疑，軍以大敗。；v036-b0014-n02：建安十六年，超與關中諸將；v036-b0014：超既統眾，遂與韓遂合從，及楊秋、李堪、成宜等相結，進軍至潼關。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0014",
+            "kind": "body",
+            "quote": "曹公用賈詡謀，離間超、遂，更相猜疑，軍以大敗。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0014-n02",
+            "kind": "peizhu",
+            "quote": "建安十六年，超與關中諸將",
+            "sourceBook": "《典略》"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0014",
+            "kind": "body",
+            "quote": "超既統眾，遂與韓遂合從，及楊秋、李堪、成宜等相結，進軍至潼關。"
+          }
+        ],
+        "phaseId": "west",
+        "careerId": "tongguan",
+        "ancientEn": "Tong Pass",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Tong Pass",
+        "descEn": "The coalition was defeated by Cao Cao at Tong Pass. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 213,
+        "coord": [
+          105.33,
+          34.74
+        ],
+        "ancientZh": "冀城",
+        "modernZh": "甘肃甘谷一带；与上邽分开",
+        "titleZh": "据冀城后失城",
+        "descZh": "攻陇上杀韦康，据冀城；杨阜等反击，马超出战不能下，返城被拒。 年代说明：潼关败后，确年未载；213为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0014：殺涼州刺史韋康，據冀城，有其眾。；v036-b0014：寬、衢閉冀城門，超不得入。進退狼狽，乃奔漢中依張魯。；v036-b0014：超自稱征西將軍，領并州牧，督涼州軍事。；v036-b0014：康故吏民楊阜、姜敘、梁寬、趙衢等，合謀擊超。阜、敘起於鹵城，超出攻之，不能下；",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0014",
+            "kind": "body",
+            "quote": "殺涼州刺史韋康，據冀城，有其眾。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0014",
+            "kind": "body",
+            "quote": "寬、衢閉冀城門，超不得入。進退狼狽，乃奔漢中依張魯。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0014",
+            "kind": "body",
+            "quote": "超自稱征西將軍，領并州牧，督涼州軍事。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0014",
+            "kind": "body",
+            "quote": "康故吏民楊阜、姜敘、梁寬、趙衢等，合謀擊超。阜、敘起於鹵城，超出攻之，不能下；"
+          }
+        ],
+        "phaseId": "west",
+        "careerId": "jicheng",
+        "ancientEn": "Jicheng",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Jicheng",
+        "descEn": "Occupied Jicheng but later lost access to it; the exact year is not given in this biography. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "潼关败后，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 214,
+        "coord": [
+          107.02,
+          33.07
+        ],
+        "ancientZh": "汉中",
+        "modernZh": "陕西汉中，郡域示意",
+        "titleZh": "投张鲁于汉中",
+        "descZh": "失去冀城后依张鲁，后向围成都的刘备秘密请降。 年代说明：归蜀前，确年未载；214为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0014：寬、衢閉冀城門，超不得入。進退狼狽，乃奔漢中依張魯。；v036-b0014：聞先主圍劉璋於成都，密書請降。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0014",
+            "kind": "body",
+            "quote": "寬、衢閉冀城門，超不得入。進退狼狽，乃奔漢中依張魯。"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0014",
+            "kind": "body",
+            "quote": "聞先主圍劉璋於成都，密書請降。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "zhanglu",
+        "ancientEn": "Hanzhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Hanzhong",
+        "descEn": "Sought refuge with Zhang Lu in Hanzhong before joining Liu Bei. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "归蜀前，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 214,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "兵临成都，刘璋投降",
+        "descZh": "刘备派人迎接，马超领兵到成都城下，城中震怖，刘璋出降。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0015：先主遣人迎超，超將兵徑到城下。城中震怖，璋即稽首，以超為平西將軍，督臨沮，因為前都亭侯。",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0015",
+            "kind": "body",
+            "quote": "先主遣人迎超，超將兵徑到城下。城中震怖，璋即稽首，以超為平西將軍，督臨沮，因為前都亭侯。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "chengdu",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Appeared outside Chengdu before Liu Zhang surrendered. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 217,
+        "coord": [
+          105.68,
+          33.74
+        ],
+        "ancientZh": "下辩",
+        "modernZh": "甘肃成县一带，古县治近似",
+        "titleZh": "屯下辩，退汉中",
+        "descZh": "《武帝纪》记刘备遣张飞、马超、吴兰屯下辩；曹洪破吴兰，张飞、马超退汉中。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v001-b0108：劉備遣張飛、馬超、吳蘭等屯下辯；v001-b0110：三月，張飛、馬超走漢中；v001-b0110：曹洪破吳蘭，斬其將任夔等。",
+        "sourceRefs": [
+          {
+            "volume": "001",
+            "blockId": "v001-b0108",
+            "kind": "body",
+            "quote": "劉備遣張飛、馬超、吳蘭等屯下辯"
+          },
+          {
+            "volume": "001",
+            "blockId": "v001-b0110",
+            "kind": "body",
+            "quote": "三月，張飛、馬超走漢中"
+          },
+          {
+            "volume": "001",
+            "blockId": "v001-b0110",
+            "kind": "body",
+            "quote": "曹洪破吳蘭，斬其將任夔等。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "xiabian",
+        "ancientEn": "Xiabian",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Xiabian",
+        "descEn": "Stationed at Xiabian with Zhang Fei and Wu Lan. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 218,
+        "coord": [
+          107.02,
+          33.07
+        ],
+        "ancientZh": "汉中",
+        "modernZh": "陕西汉中，郡域示意",
+        "titleZh": "屯下辩，退汉中",
+        "descZh": "《武帝纪》记刘备遣张飞、马超、吴兰屯下辩；曹洪破吴兰，张飞、马超退汉中。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v001-b0108：劉備遣張飛、馬超、吳蘭等屯下辯；v001-b0110：三月，張飛、馬超走漢中；v001-b0110：曹洪破吳蘭，斬其將任夔等。",
+        "sourceRefs": [
+          {
+            "volume": "001",
+            "blockId": "v001-b0108",
+            "kind": "body",
+            "quote": "劉備遣張飛、馬超、吳蘭等屯下辯"
+          },
+          {
+            "volume": "001",
+            "blockId": "v001-b0110",
+            "kind": "body",
+            "quote": "三月，張飛、馬超走漢中"
+          },
+          {
+            "volume": "001",
+            "blockId": "v001-b0110",
+            "kind": "body",
+            "quote": "曹洪破吳蘭，斬其將任夔等。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "xiabian",
+        "ancientEn": "Hanzhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Hanzhong",
+        "descEn": "Retreated to Hanzhong after the defeat of Wu Lan. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      }
+    ]
+  },
+  "pang-tong": {
+    "atlasPerson": "pangtong",
+    "stops": [
+      {
+        "year": 200,
+        "coord": [
+          112.14,
+          32.04
+        ],
+        "ancientZh": "襄阳",
+        "modernZh": "湖北襄阳",
+        "titleZh": "襄阳士人获司马徽赏识",
+        "descZh": "本为襄阳人，与司马徽长谈后渐有声名。 年代说明：早年，确年未载；200为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v037-b0002：龐統字士元，襄陽人也。；v037-b0002：統弱冠往見徽",
+        "sourceRefs": [
+          {
+            "volume": "037",
+            "blockId": "v037-b0002",
+            "kind": "body",
+            "quote": "龐統字士元，襄陽人也。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0002",
+            "kind": "body",
+            "quote": "統弱冠往見徽"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "young",
+        "ancientEn": "Xiangyang",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Xiangyang",
+        "descEn": "Became known among the scholars of Xiangyang; the year is uncertain. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "弱冠前后，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 210,
+        "coord": [
+          120.62,
+          31.3
+        ],
+        "ancientZh": "吴县",
+        "modernZh": "江苏苏州",
+        "titleZh": "送丧至吴，与士人交游",
+        "descZh": "送周瑜丧至吴，返程时与陆绩、顾劭、全琮等相会品评。 年代说明：周瑜卒后送丧至吴，确年未载；210为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v037-b0002：瑜卒，統送喪至吳，吳人多聞其名。；v037-b0002：及當西還，並會昌門，陸勣、顧劭、全琮皆往。",
+        "sourceRefs": [
+          {
+            "volume": "037",
+            "blockId": "v037-b0002",
+            "kind": "body",
+            "quote": "瑜卒，統送喪至吳，吳人多聞其名。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0002",
+            "kind": "body",
+            "quote": "及當西還，並會昌門，陸勣、顧劭、全琮皆往。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "wu",
+        "ancientEn": "Wu county",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Wu county",
+        "descEn": "Escorted Zhou Yu's coffin to Wu and met local scholars. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "周瑜卒后，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 210,
+        "coord": [
+          112.86,
+          26.42
+        ],
+        "ancientZh": "耒阳",
+        "modernZh": "湖南耒阳",
+        "titleZh": "耒阳任内不治而免",
+        "descZh": "以从事代理县令，在县不治，被免。 年代说明：入蜀前，确年未载；210为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v037-b0003：統以從事守耒陽令，在縣不治，免官。",
+        "sourceRefs": [
+          {
+            "volume": "037",
+            "blockId": "v037-b0003",
+            "kind": "body",
+            "quote": "統以從事守耒陽令，在縣不治，免官。"
+          }
+        ],
+        "phaseId": "jingzhou",
+        "careerId": "leiyang",
+        "ancientEn": "Leiyang",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Leiyang",
+        "descEn": "Served as acting magistrate of Leiyang, then was dismissed; the exact year is uncertain. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "刘备领荆州后，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 211,
+        "coord": [
+          104.75,
+          31.46
+        ],
+        "ancientZh": "涪县",
+        "modernZh": "四川绵阳一带",
+        "titleZh": "涪会建议拘执刘璋",
+        "descZh": "建议利用会面擒刘璋，刘备以恩信未著拒绝。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v037-b0004：益州牧劉璋與先主會涪，統進策曰：「今因此會，便可執之，則將軍無用兵之勞而坐定一州也。」；v032-b0016：謀臣龐統進說，便可於會所襲璋。；v037-b0004：初入他國，恩信未著，此不可也。",
+        "sourceRefs": [
+          {
+            "volume": "037",
+            "blockId": "v037-b0004",
+            "kind": "body",
+            "quote": "益州牧劉璋與先主會涪，統進策曰：「今因此會，便可執之，則將軍無用兵之勞而坐定一州也。」"
+          },
+          {
+            "volume": "032",
+            "blockId": "v032-b0016",
+            "kind": "body",
+            "quote": "謀臣龐統進說，便可於會所襲璋。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0004",
+            "kind": "body",
+            "quote": "初入他國，恩信未著，此不可也。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "fu",
+        "ancientEn": "Fu county",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Fu county",
+        "descEn": "Proposed seizing Liu Zhang at the meeting in Fu. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 214,
+        "coord": [
+          104.28,
+          30.98
+        ],
+        "ancientZh": "雒县",
+        "modernZh": "四川广汉一带",
+        "titleZh": "中流矢而卒",
+        "descZh": "率众攻雒县，中流矢而死，年三十六；刘备痛惜。 年代说明：围雒县时中矢，确年未载；214为围城末年，不定为确切卒年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v037-b0005：進圍雒縣，統率眾攻城，為流矢所中，卒，時年三十六。；v037-b0005：追賜統爵關內侯，諡曰靖侯。；v032-b0018：十九年夏，雒城破；v037-b0005：先主痛惜，言則流涕。",
+        "sourceRefs": [
+          {
+            "volume": "037",
+            "blockId": "v037-b0005",
+            "kind": "body",
+            "quote": "進圍雒縣，統率眾攻城，為流矢所中，卒，時年三十六。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0005",
+            "kind": "body",
+            "quote": "追賜統爵關內侯，諡曰靖侯。"
+          },
+          {
+            "volume": "032",
+            "blockId": "v032-b0018",
+            "kind": "body",
+            "quote": "十九年夏，雒城破"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0005",
+            "kind": "body",
+            "quote": "先主痛惜，言則流涕。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "death",
+        "ancientEn": "Luo county",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Luo county",
+        "descEn": "Died from an arrow wound while besieging Luo; 214 is the siege end-year, not a firmly dated death. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "围雒县时，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      }
+    ]
+  },
+  "fa-zheng": {
+    "atlasPerson": "fazheng",
+    "stops": [
+      {
+        "year": 200,
+        "coord": [
+          104.16,
+          30.82
+        ],
+        "ancientZh": "新都",
+        "modernZh": "四川成都新都",
+        "titleZh": "任新都令、军议校尉",
+        "descZh": "久后任新都令，再被召署军议校尉；不得重用，且遭同为侨客者毁谤，与张松相善而同叹刘璋不足以有为。 年代说明：入蜀后任县令，确年未载；200为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v037-b0007：建安初，天下饑荒，正與同郡孟達俱入蜀依劉璋，久之為新都令，後召署軍議校尉。；v037-b0007：既不任用，又為其州邑俱僑客者所謗無行，志意不得。；v037-b0007：益州別駕張松與正相善，忖璋不足與有為，常竊嘆息。",
+        "sourceRefs": [
+          {
+            "volume": "037",
+            "blockId": "v037-b0007",
+            "kind": "body",
+            "quote": "建安初，天下饑荒，正與同郡孟達俱入蜀依劉璋，久之為新都令，後召署軍議校尉。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0007",
+            "kind": "body",
+            "quote": "既不任用，又為其州邑俱僑客者所謗無行，志意不得。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0007",
+            "kind": "body",
+            "quote": "益州別駕張松與正相善，忖璋不足與有為，常竊嘆息。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "early-office",
+        "ancientEn": "Xindu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Xindu",
+        "descEn": "Served as magistrate of Xindu in Sichuan; the exact year is unknown. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "入蜀后，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 214,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "成都平定，内为谋主",
+        "descZh": "刘璋降后，刘备轻视曾欲逾城投降的许靖，法正劝以礼遇许靖的声望安远近之心，刘备从之。法正受任蜀郡太守、扬武将军，外统都畿、内为谋主。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v037-b0008：十九年，進圍成都；v037-b0008：先主以此薄靖不用也。；v037-b0008：宜加敬重，以眩遠近，追昔燕王之待郭隗。；v037-b0008：先主於是乃厚待靖。；v037-b0008：以正為蜀郡太守、揚武將軍，外統都畿，內為謀主。",
+        "sourceRefs": [
+          {
+            "volume": "037",
+            "blockId": "v037-b0008",
+            "kind": "body",
+            "quote": "十九年，進圍成都"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0008",
+            "kind": "body",
+            "quote": "先主以此薄靖不用也。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0008",
+            "kind": "body",
+            "quote": "宜加敬重，以眩遠近，追昔燕王之待郭隗。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0008",
+            "kind": "body",
+            "quote": "先主於是乃厚待靖。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0008",
+            "kind": "body",
+            "quote": "以正為蜀郡太守、揚武將軍，外統都畿，內為謀主。"
+          }
+        ],
+        "phaseId": "chengdu",
+        "careerId": "chengdu",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Became administrator of Shu commandery after Chengdu fell. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 217,
+        "coord": [
+          107.02,
+          33.07
+        ],
+        "ancientZh": "汉中",
+        "modernZh": "陕西汉中，郡域示意",
+        "titleZh": "建策并随军进汉中",
+        "descZh": "法正判断曹操北还应有内忧，劝刘备攻夏侯渊、张郃，并提出取汉中后积谷待机、进取雍凉或守险持久的安排。刘备采纳，法正随军进入汉中。 年代说明：随刘备进汉中，217年为建策起年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v037-b0009：二十二年，正說先主曰；v037-b0009：必將內有憂偪故耳。；v037-b0009：之克〔克之〕之日，廣農積谷，觀釁伺隙；v037-b0009：中可以蠶食雍、涼，廣拓境土，下可以固守要害，為持久之計。；v037-b0009：先主善其策，乃率諸將進兵漢中，正亦從行。",
+        "sourceRefs": [
+          {
+            "volume": "037",
+            "blockId": "v037-b0009",
+            "kind": "body",
+            "quote": "二十二年，正說先主曰"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0009",
+            "kind": "body",
+            "quote": "必將內有憂偪故耳。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0009",
+            "kind": "body",
+            "quote": "之克〔克之〕之日，廣農積谷，觀釁伺隙"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0009",
+            "kind": "body",
+            "quote": "中可以蠶食雍、涼，廣拓境土，下可以固守要害，為持久之計。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0009",
+            "kind": "body",
+            "quote": "先主善其策，乃率諸將進兵漢中，正亦從行。"
+          }
+        ],
+        "phaseId": "hanzhong",
+        "careerId": "hanzhong-plan",
+        "ancientEn": "Hanzhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Hanzhong",
+        "descEn": "Proposed the Hanzhong campaign in 217 and accompanied Liu Bei there. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 219,
+        "coord": [
+          106.67,
+          33.13
+        ],
+        "ancientZh": "定军山",
+        "modernZh": "陕西勉县定军山一带",
+        "titleZh": "定军山建议出击",
+        "descZh": "刘备由阳平南渡沔水，沿山前进设营。夏侯渊来争地，法正认为可以进击，刘备命黄忠居高攻击，夏侯渊等战死。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v037-b0009：二十四年，先主自陽平南渡沔水，緣山稍前，於定軍、興勢作營。；v037-b0009：正曰：「可擊矣。」先主命黃忠乘高鼓譟攻之，大破淵軍，淵等授首。",
+        "sourceRefs": [
+          {
+            "volume": "037",
+            "blockId": "v037-b0009",
+            "kind": "body",
+            "quote": "二十四年，先主自陽平南渡沔水，緣山稍前，於定軍、興勢作營。"
+          },
+          {
+            "volume": "037",
+            "blockId": "v037-b0009",
+            "kind": "body",
+            "quote": "正曰：「可擊矣。」先主命黃忠乘高鼓譟攻之，大破淵軍，淵等授首。"
+          }
+        ],
+        "phaseId": "hanzhong",
+        "careerId": "dingjun",
+        "ancientEn": "Mount Dingjun",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Mount Dingjun",
+        "descEn": "Recommended an attack at Mount Dingjun in 219. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      }
+    ]
+  },
+  "liu-shan": {
+    "atlasPerson": "liushan",
+    "stops": [
+      {
+        "year": 208,
+        "coord": [
+          111.79,
+          30.83
+        ],
+        "ancientZh": "长坂",
+        "modernZh": "湖北当阳一带",
+        "titleZh": "长阪脱险",
+        "descZh": "幼年随父母遭遇曹军追击于当阳长阪，赵云抱护刘禅并保护甘夫人，一同脱险。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v036-b0021：及先主為曹公所追於當陽長阪；v036-b0021：雲身抱弱子，即後主也，保護甘夫人，即後主母也，皆得免難。；v033-b0002-n02：十三年敗於長阪，備棄妻子走",
+        "sourceRefs": [
+          {
+            "volume": "036",
+            "blockId": "v036-b0021",
+            "kind": "body",
+            "quote": "及先主為曹公所追於當陽長阪"
+          },
+          {
+            "volume": "036",
+            "blockId": "v036-b0021",
+            "kind": "body",
+            "quote": "雲身抱弱子，即後主也，保護甘夫人，即後主母也，皆得免難。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0002-n02",
+            "kind": "peizhu",
+            "quote": "十三年敗於長阪，備棄妻子走",
+            "sourceBook": "《魏略》；裴松之案"
+          }
+        ],
+        "phaseId": "youth",
+        "careerId": "rescue",
+        "ancientEn": "Changban",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Changban",
+        "descEn": "Was rescued by Zhao Yun at Changban as a child. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 223,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "成都即位，与吴通好",
+        "descZh": "刘备去世后，刘禅五月在成都继位，改元建兴。朝廷遣邓芝恢复与孙权的往来，军政委任诸葛亮。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0002：五月，後主襲位於成都，時年十七；v033-b0003：遣尚書（郎）鄧芝固好於吳，吳王孫權與蜀和親使聘，是歲通好。；v035-b0008：政事無巨細，咸決於亮。",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0002",
+            "kind": "body",
+            "quote": "五月，後主襲位於成都，時年十七"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0003",
+            "kind": "body",
+            "quote": "遣尚書（郎）鄧芝固好於吳，吳王孫權與蜀和親使聘，是歲通好。"
+          },
+          {
+            "volume": "035",
+            "blockId": "v035-b0008",
+            "kind": "body",
+            "quote": "政事無巨細，咸決於亮。"
+          }
+        ],
+        "phaseId": "regency",
+        "careerId": "accession",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Acceded to the throne at Chengdu. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 236,
+        "coord": [
+          103.62,
+          31.03
+        ],
+        "ancientZh": "湔县",
+        "modernZh": "四川都江堰一带；汉代湔县、观坂位置仅作近似",
+        "titleZh": "出游湔县，十日还成都",
+        "descZh": "刘禅至湔县，登观坂看汶水，十日后返回成都。同条还记徙武都氐王苻健与四百余户氐民到成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0016：後主至湔，登觀坂，看汶水之流，旬日還成都。；v033-b0016：徙武都氐王苻健及氐民四百餘戶於成都。",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0016",
+            "kind": "body",
+            "quote": "後主至湔，登觀坂，看汶水之流，旬日還成都。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0016",
+            "kind": "body",
+            "quote": "徙武都氐王苻健及氐民四百餘戶於成都。"
+          }
+        ],
+        "phaseId": "court",
+        "careerId": "tour",
+        "ancientEn": "Jian county",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Jian county",
+        "descEn": "Visited Jian county to view the Min River; the historical location is approximate. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 236,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "出游湔县，十日还成都",
+        "descZh": "刘禅至湔县，登观坂看汶水，十日后返回成都。同条还记徙武都氐王苻健与四百余户氐民到成都。 年代说明：十日后还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0016：後主至湔，登觀坂，看汶水之流，旬日還成都。；v033-b0016：徙武都氐王苻健及氐民四百餘戶於成都。",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0016",
+            "kind": "body",
+            "quote": "後主至湔，登觀坂，看汶水之流，旬日還成都。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0016",
+            "kind": "body",
+            "quote": "徙武都氐王苻健及氐民四百餘戶於成都。"
+          }
+        ],
+        "phaseId": "court",
+        "careerId": "tour",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Returned to Chengdu after ten days. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 263,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "成都出降，下敕诸军",
+        "descZh": "邓艾击破绵竹后，刘禅听从谯周策，遣使奉书印绶请降。邓艾至成都城北，刘禅舆榇自缚到军门；随后下敕守军投降，仍暂居故宫。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0042：用光祿大夫譙周策，降於艾；v033-b0044：艾至城北，後主興櫬自縛，詣軍壘門。；v033-b0044：諸圍守悉被後主敕，然後降下。；v033-b0044：艾使後主止其故宮",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0042",
+            "kind": "body",
+            "quote": "用光祿大夫譙周策，降於艾"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0044",
+            "kind": "body",
+            "quote": "艾至城北，後主興櫬自縛，詣軍壘門。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0044",
+            "kind": "body",
+            "quote": "諸圍守悉被後主敕，然後降下。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0044",
+            "kind": "body",
+            "quote": "艾使後主止其故宮"
+          }
+        ],
+        "phaseId": "fall",
+        "careerId": "surrender",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Surrendered at Chengdu; this does not place him on his generals' battlefields. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 264,
+        "coord": [
+          112.65,
+          34.72
+        ],
+        "ancientZh": "洛阳",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "titleZh": "东迁洛阳，封安乐县公",
+        "descZh": "钟会在成都作乱后，刘禅举家东迁洛阳。三月受魏策命为安乐县公，食邑万户；郤正随行，引导其礼仪举止。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0045：後主舉家東遷，既至洛陽；v033-b0046：惟景元五年三月丁亥，皇帝臨軒，使太常嘉命劉禪為安樂縣公。；v033-b0048：食邑萬戶；v042-b0054：後主賴正相導宜適，舉動無闕",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0045",
+            "kind": "body",
+            "quote": "後主舉家東遷，既至洛陽"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0046",
+            "kind": "body",
+            "quote": "惟景元五年三月丁亥，皇帝臨軒，使太常嘉命劉禪為安樂縣公。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0048",
+            "kind": "body",
+            "quote": "食邑萬戶"
+          },
+          {
+            "volume": "042",
+            "blockId": "v042-b0054",
+            "kind": "body",
+            "quote": "後主賴正相導宜適，舉動無闕"
+          }
+        ],
+        "phaseId": "luoyang",
+        "careerId": "luoyang",
+        "ancientEn": "Luoyang",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Luoyang",
+        "descEn": "Moved to Luoyang after the fall of Shu Han. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      }
+    ]
+  },
+  "jiang-wan": {
+    "atlasPerson": "jiangwan",
+    "stops": [
+      {
+        "year": 214,
+        "coord": [
+          104.05,
+          30.51
+        ],
+        "ancientZh": "广都",
+        "modernZh": "四川成都双流华阳一带，古县治近似",
+        "titleZh": "随刘备入蜀，任广都长",
+        "descZh": "以州书佐随刘备入蜀，后任广都长；本传未把任县长另系确年。 年代说明：入蜀后任县长，确年未载；214为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0002：琬以州書佐隨先主入蜀，除廣都長。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0002",
+            "kind": "body",
+            "quote": "琬以州書佐隨先主入蜀，除廣都長。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "enter-shu",
+        "ancientEn": "Guangdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Guangdu",
+        "descEn": "Served as magistrate of Guangdu after entering Shu; the exact appointment year is unknown. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "211—214年",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 218,
+        "coord": [
+          104.17,
+          31.13
+        ],
+        "ancientZh": "什邡",
+        "modernZh": "四川什邡一带",
+        "titleZh": "因醉与废事免官",
+        "descZh": "刘备突至广都，见事务未理且蒋琬沉醉，欲治死罪；诸葛亮以安民之才相救，刘备只免其官，后来起用为什邡令。 年代说明：免广都长后任什邡令，确年未载；218为取景排序年。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0002：見琬眾事不理，時又沉醉，先主大怒，將加罪戮。；v044-b0002：蔣琬，社稷之器，非百里之才也。其為政以安民為本，不以修飾為先，願主公重加察之。；v044-b0002：倉卒但免官而已。；v044-b0002：頃之，為什邡令。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0002",
+            "kind": "body",
+            "quote": "見琬眾事不理，時又沉醉，先主大怒，將加罪戮。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0002",
+            "kind": "body",
+            "quote": "蔣琬，社稷之器，非百里之才也。其為政以安民為本，不以修飾為先，願主公重加察之。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0002",
+            "kind": "body",
+            "quote": "倉卒但免官而已。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0002",
+            "kind": "body",
+            "quote": "頃之，為什邡令。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "dismissal",
+        "ancientEn": "Shifang",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Shifang",
+        "descEn": "Served as magistrate of Shifang after dismissal from Guangdu; the year is uncertain. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "任广都长时，确年未载",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 227,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "统理留府，供应兵粮",
+        "descZh": "227年与张裔统留府事，230年代张裔为长史、加抚军将军；诸葛亮出征时，常供足粮食和兵员，因而被密表推荐接续后事。 年代说明：留府所在，结合诸葛亮北驻汉中；位置为上下文推定。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0003：五年，亮住漢中，琬與長史張裔統留府事。八年，代裔為長史，加撫軍將軍。；v044-b0003：亮數外出，琬常足食足兵以相供給。；v044-b0003：臣若不幸，後事宜以付琬。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0003",
+            "kind": "body",
+            "quote": "五年，亮住漢中，琬與長史張裔統留府事。八年，代裔為長史，加撫軍將軍。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0003",
+            "kind": "body",
+            "quote": "亮數外出，琬常足食足兵以相供給。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0003",
+            "kind": "body",
+            "quote": "臣若不幸，後事宜以付琬。"
+          }
+        ],
+        "phaseId": "government",
+        "careerId": "retained-office",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Managed the rear headquarters while Zhuge Liang was in Hanzhong; Chengdu is inferred from context. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 238,
+        "coord": [
+          106.68,
+          33.15
+        ],
+        "ancientZh": "沔阳",
+        "modernZh": "陕西勉县一带",
+        "titleZh": "出屯汉中，进大司马",
+        "descZh": "238年冬出屯汉中，奉诏等待吴国举动以求东西呼应；王平传又记他住沔阳。获命开府，239年三月进大司马。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0018：冬十一月，大將軍蔣琬出屯漢中。；v044-b0004：須吳舉動，東西掎角；v043-b0019：延熙元年，大將軍蔣琬住沔陽；v044-b0004：又命琬開府；v033-b0019：二年春三月，進蔣琬位為大司馬。",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0018",
+            "kind": "body",
+            "quote": "冬十一月，大將軍蔣琬出屯漢中。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0004",
+            "kind": "body",
+            "quote": "須吳舉動，東西掎角"
+          },
+          {
+            "volume": "043",
+            "blockId": "v043-b0019",
+            "kind": "body",
+            "quote": "延熙元年，大將軍蔣琬住沔陽"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0004",
+            "kind": "body",
+            "quote": "又命琬開府"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0019",
+            "kind": "body",
+            "quote": "二年春三月，進蔣琬位為大司馬。"
+          }
+        ],
+        "phaseId": "hanzhong",
+        "careerId": "hanzhong",
+        "ancientEn": "Mianyang",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Mianyang",
+        "descEn": "Stationed at Mianyang in Hanzhong, as recorded in Wang Ping's biography. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 243,
+        "coord": [
+          104.75,
+          31.46
+        ],
+        "ancientZh": "涪县",
+        "modernZh": "四川绵阳一带",
+        "titleZh": "还住涪，改议为姜维后援",
+        "descZh": "与费祎等商议，以姜维领凉州刺史、经营河右，自己统军作为后继；以涪水陆四通便于应急，243年十月还住涪。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0007：宜以姜維為涼州刺史。若維征行，銜持河右，臣當帥軍為維鎮繼。；v044-b0007：今涪水陸四通，惟急是應。若東北有虞，赴之不難。；v033-b0022：六年冬十月，大司馬蔣琬自還漢中，住涪。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0007",
+            "kind": "body",
+            "quote": "宜以姜維為涼州刺史。若維征行，銜持河右，臣當帥軍為維鎮繼。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0007",
+            "kind": "body",
+            "quote": "今涪水陸四通，惟急是應。若東北有虞，赴之不難。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0022",
+            "kind": "body",
+            "quote": "六年冬十月，大司馬蔣琬自還漢中，住涪。"
+          }
+        ],
+        "phaseId": "fu",
+        "careerId": "fu",
+        "ancientEn": "Fu county",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Fu county",
+        "descEn": "Moved back to Fu in 243 and later died there; the planned expedition to Weixing and Shangyong was not carried out. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      }
+    ]
+  },
+  "fei-yi": {
+    "atlasPerson": "feiyi",
+    "stops": [
+      {
+        "year": 241,
+        "coord": [
+          107.02,
+          33.07
+        ],
+        "ancientZh": "汉中",
+        "modernZh": "陕西汉中，郡域示意",
+        "titleZh": "代掌尚书，赴汉中议事",
+        "descZh": "不久代蒋琬为尚书令，具体接任年份未载；241年十月赴汉中与蒋琬商议事计，年底返回。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0014：亮卒，禕為後軍師。頃之，代蔣琬為尚書令。；v033-b0021：四年冬十月，尚書令費禕至漢中，與蔣琬咨論事計，歲盡還。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0014",
+            "kind": "body",
+            "quote": "亮卒，禕為後軍師。頃之，代蔣琬為尚書令。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0021",
+            "kind": "body",
+            "quote": "四年冬十月，尚書令費禕至漢中，與蔣琬咨論事計，歲盡還。"
+          }
+        ],
+        "phaseId": "government",
+        "careerId": "secretariat",
+        "ancientEn": "Hanzhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Hanzhong",
+        "descEn": "Visited Jiang Wan in Hanzhong to discuss affairs. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 244,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "率援军北上御曹爽",
+        "descZh": "曹爽军至兴势，费祎受节从成都率援军北上；临行与来敏围棋仍神色如常。与涪诸军相继赶到后，魏军退，封成乡侯；九月还成都。蒋琬固让州职后，又领益州刺史。 年代说明：受节率援军出发。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0015：延熙七年，魏軍次於興勢，假禕節，率眾往御之。；v044-b0015：光祿大夫來敏至禕許別，求共圍棋。；v044-b0015：禕與敏留意對戲，色無厭倦。；v043-b0020：涪諸軍及費禕自成都相繼而至，魏軍退還，如平本策。；v044-b0015：禕至，敵遂退，封成鄉侯。；v033-b0023：秋九月，禕還成都。；v044-b0015：琬固讓州職，禕復領益州刺史。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "延熙七年，魏軍次於興勢，假禕節，率眾往御之。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "光祿大夫來敏至禕許別，求共圍棋。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "禕與敏留意對戲，色無厭倦。"
+          },
+          {
+            "volume": "043",
+            "blockId": "v043-b0020",
+            "kind": "body",
+            "quote": "涪諸軍及費禕自成都相繼而至，魏軍退還，如平本策。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "禕至，敵遂退，封成鄉侯。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0023",
+            "kind": "body",
+            "quote": "秋九月，禕還成都。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "琬固讓州職，禕復領益州刺史。"
+          }
+        ],
+        "phaseId": "government",
+        "careerId": "xingshi",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Departed Chengdu with reinforcements. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 244,
+        "coord": [
+          107.55,
+          33.52
+        ],
+        "ancientZh": "兴势",
+        "modernZh": "陕西洋县北一带，援军战区示意",
+        "titleZh": "率援军北上御曹爽",
+        "descZh": "曹爽军至兴势，费祎受节从成都率援军北上；临行与来敏围棋仍神色如常。与涪诸军相继赶到后，魏军退，封成乡侯；九月还成都。蒋琬固让州职后，又领益州刺史。 年代说明：兴势援军战区，非精确行军路线。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0015：延熙七年，魏軍次於興勢，假禕節，率眾往御之。；v044-b0015：光祿大夫來敏至禕許別，求共圍棋。；v044-b0015：禕與敏留意對戲，色無厭倦。；v043-b0020：涪諸軍及費禕自成都相繼而至，魏軍退還，如平本策。；v044-b0015：禕至，敵遂退，封成鄉侯。；v033-b0023：秋九月，禕還成都。；v044-b0015：琬固讓州職，禕復領益州刺史。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "延熙七年，魏軍次於興勢，假禕節，率眾往御之。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "光祿大夫來敏至禕許別，求共圍棋。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "禕與敏留意對戲，色無厭倦。"
+          },
+          {
+            "volume": "043",
+            "blockId": "v043-b0020",
+            "kind": "body",
+            "quote": "涪諸軍及費禕自成都相繼而至，魏軍退還，如平本策。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "禕至，敵遂退，封成鄉侯。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0023",
+            "kind": "body",
+            "quote": "秋九月，禕還成都。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "琬固讓州職，禕復領益州刺史。"
+          }
+        ],
+        "phaseId": "government",
+        "careerId": "xingshi",
+        "ancientEn": "Xingshi",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Xingshi",
+        "descEn": "Reached the Hanzhong relief theatre during the Xingshi campaign; the point marks the region, not an exact marching position. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 244,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "率援军北上御曹爽",
+        "descZh": "曹爽军至兴势，费祎受节从成都率援军北上；临行与来敏围棋仍神色如常。与涪诸军相继赶到后，魏军退，封成乡侯；九月还成都。蒋琬固让州职后，又领益州刺史。 年代说明：九月还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0015：延熙七年，魏軍次於興勢，假禕節，率眾往御之。；v044-b0015：光祿大夫來敏至禕許別，求共圍棋。；v044-b0015：禕與敏留意對戲，色無厭倦。；v043-b0020：涪諸軍及費禕自成都相繼而至，魏軍退還，如平本策。；v044-b0015：禕至，敵遂退，封成鄉侯。；v033-b0023：秋九月，禕還成都。；v044-b0015：琬固讓州職，禕復領益州刺史。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "延熙七年，魏軍次於興勢，假禕節，率眾往御之。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "光祿大夫來敏至禕許別，求共圍棋。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "禕與敏留意對戲，色無厭倦。"
+          },
+          {
+            "volume": "043",
+            "blockId": "v043-b0020",
+            "kind": "body",
+            "quote": "涪諸軍及費禕自成都相繼而至，魏軍退還，如平本策。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "禕至，敵遂退，封成鄉侯。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0023",
+            "kind": "body",
+            "quote": "秋九月，禕還成都。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "琬固讓州職，禕復領益州刺史。"
+          }
+        ],
+        "phaseId": "government",
+        "careerId": "xingshi",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Returned to Chengdu in the ninth month. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 245,
+        "coord": [
+          107.02,
+          33.07
+        ],
+        "ancientZh": "汉中",
+        "modernZh": "陕西汉中，郡域示意",
+        "titleZh": "赴汉中巡视围守",
+        "descZh": "245年十二月至汉中巡视围守，246年六月还成都；同年秋遇大赦，孟光当众责其频施非常之恩，他顾谢踧踖。 年代说明：十二月巡视。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0024：十二月，大將軍費禕至漢中，行圍守。；v033-b0025：九年夏六月，費禕還成都。；v042-b0022：延熙九年秋，大赦，光於眾中責大將軍費禕曰；v042-b0022：禕但顧謝踧踖而已。",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0024",
+            "kind": "body",
+            "quote": "十二月，大將軍費禕至漢中，行圍守。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0025",
+            "kind": "body",
+            "quote": "九年夏六月，費禕還成都。"
+          },
+          {
+            "volume": "042",
+            "blockId": "v042-b0022",
+            "kind": "body",
+            "quote": "延熙九年秋，大赦，光於眾中責大將軍費禕曰"
+          },
+          {
+            "volume": "042",
+            "blockId": "v042-b0022",
+            "kind": "body",
+            "quote": "禕但顧謝踧踖而已。"
+          }
+        ],
+        "phaseId": "hanzhong",
+        "careerId": "inspection",
+        "ancientEn": "Hanzhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Hanzhong",
+        "descEn": "Inspected the Hanzhong defences in the twelfth month. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 246,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "赴汉中巡视围守",
+        "descZh": "245年十二月至汉中巡视围守，246年六月还成都；同年秋遇大赦，孟光当众责其频施非常之恩，他顾谢踧踖。 年代说明：六月还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0024：十二月，大將軍費禕至漢中，行圍守。；v033-b0025：九年夏六月，費禕還成都。；v042-b0022：延熙九年秋，大赦，光於眾中責大將軍費禕曰；v042-b0022：禕但顧謝踧踖而已。",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0024",
+            "kind": "body",
+            "quote": "十二月，大將軍費禕至漢中，行圍守。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0025",
+            "kind": "body",
+            "quote": "九年夏六月，費禕還成都。"
+          },
+          {
+            "volume": "042",
+            "blockId": "v042-b0022",
+            "kind": "body",
+            "quote": "延熙九年秋，大赦，光於眾中責大將軍費禕曰"
+          },
+          {
+            "volume": "042",
+            "blockId": "v042-b0022",
+            "kind": "body",
+            "quote": "禕但顧謝踧踖而已。"
+          }
+        ],
+        "phaseId": "hanzhong",
+        "careerId": "inspection",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Returned to Chengdu in the sixth month. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 248,
+        "coord": [
+          107.02,
+          33.07
+        ],
+        "ancientZh": "汉中",
+        "modernZh": "陕西汉中，郡域示意",
+        "titleZh": "出屯汉中，遥决政务",
+        "descZh": "出屯汉中；本传说蒋琬、费祎虽身在外，国家赏罚仍先远程咨询裁断后施行。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0027：十一年夏五月，大將軍費禕出屯漢中。；v044-b0015：雖自身在外，慶賞刑威，皆遙先咨斷然，後乃行。",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0027",
+            "kind": "body",
+            "quote": "十一年夏五月，大將軍費禕出屯漢中。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "雖自身在外，慶賞刑威，皆遙先咨斷然，後乃行。"
+          }
+        ],
+        "phaseId": "hanzhong",
+        "careerId": "hanzhong",
+        "ancientEn": "Hanzhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Hanzhong",
+        "descEn": "Stationed at Hanzhong. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 251,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "还成都后北驻汉寿",
+        "descZh": "夏天回成都，冬天又北驻汉寿。本传另记当时成都望气者称都邑无宰相位，这是传中解释迁驻的说法。 年代说明：夏还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0030：十四年夏，大將軍費禕還成都。冬，復北駐漢壽。；v044-b0015：成都望氣者云都邑無宰相位",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0030",
+            "kind": "body",
+            "quote": "十四年夏，大將軍費禕還成都。冬，復北駐漢壽。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "成都望氣者云都邑無宰相位"
+          }
+        ],
+        "phaseId": "hanshou",
+        "careerId": "hanshou",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Returned to Chengdu in summer. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 251,
+        "coord": [
+          105.84,
+          32.32
+        ],
+        "ancientZh": "汉寿",
+        "modernZh": "四川广元昭化一带；蜀汉汉寿，非荆州汉寿",
+        "titleZh": "还成都后北驻汉寿",
+        "descZh": "夏天回成都，冬天又北驻汉寿。本传另记当时成都望气者称都邑无宰相位，这是传中解释迁驻的说法。 年代说明：冬北驻汉寿，253年在此遇害。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0030：十四年夏，大將軍費禕還成都。冬，復北駐漢壽。；v044-b0015：成都望氣者云都邑無宰相位",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0030",
+            "kind": "body",
+            "quote": "十四年夏，大將軍費禕還成都。冬，復北駐漢壽。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0015",
+            "kind": "body",
+            "quote": "成都望氣者云都邑無宰相位"
+          }
+        ],
+        "phaseId": "hanshou",
+        "careerId": "hanshou",
+        "ancientEn": "Hanshou",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Hanshou",
+        "descEn": "Moved north to Hanshou in winter and was assassinated there in 253; this is Hanshou in Shu, not Jing province. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      }
+    ]
+  },
+  "jiang-wei": {
+    "atlasPerson": "jiangwei",
+    "stops": [
+      {
+        "year": 228,
+        "coord": [
+          105.72,
+          34.58
+        ],
+        "ancientZh": "上邽",
+        "modernZh": "甘肃天水秦州一带",
+        "titleZh": "进退失据，归诸葛亮",
+        "descZh": "随天水太守出行，太守疑其有异心而退保上邽，不纳姜维等人；回冀也不得入，只得归诸葛亮。街亭败后随军撤入蜀，与母分离，获授官爵，诸葛亮称许其才。后续升迁的确年未载。 年代说明：太守拒纳，未入城；标示行至城外。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0018：太守聞蜀軍垂至而諸縣響應，疑維等皆有異心，於是夜亡保上邽。維等覺太守去，追遲，至城門，城門已閉，不納。維等相率還冀，冀亦不入維。維等乃俱詣諸葛亮。；v044-b0018：會馬謖敗於街亭。亮拔將西縣千餘家及維等還，故維遂與母相失。亮辟維為倉曹掾，加奉義將軍，封當陽亭侯，時年二十七。；v044-b0018：須先教中虎步兵五六千人。姜伯約甚敏於軍事，既有膽義，深解兵意。此人心存漢室而才兼於人，畢教軍事，當遣詣宮，覲見主上。；v044-b0018：後遷中監軍、征西將軍。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0018",
+            "kind": "body",
+            "quote": "太守聞蜀軍垂至而諸縣響應，疑維等皆有異心，於是夜亡保上邽。維等覺太守去，追遲，至城門，城門已閉，不納。維等相率還冀，冀亦不入維。維等乃俱詣諸葛亮。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0018",
+            "kind": "body",
+            "quote": "會馬謖敗於街亭。亮拔將西縣千餘家及維等還，故維遂與母相失。亮辟維為倉曹掾，加奉義將軍，封當陽亭侯，時年二十七。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0018",
+            "kind": "body",
+            "quote": "須先教中虎步兵五六千人。姜伯約甚敏於軍事，既有膽義，深解兵意。此人心存漢室而才兼於人，畢教軍事，當遣詣宮，覲見主上。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0018",
+            "kind": "body",
+            "quote": "後遷中監軍、征西將軍。"
+          }
+        ],
+        "phaseId": "join",
+        "careerId": "join",
+        "ancientEn": "Shanggui",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Shanggui",
+        "descEn": "Was refused entry to Shanggui; the point marks the city approached, not a garrison inside. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 228,
+        "coord": [
+          105.33,
+          34.74
+        ],
+        "ancientZh": "冀城",
+        "modernZh": "甘肃甘谷一带；与上邽分开",
+        "titleZh": "进退失据，归诸葛亮",
+        "descZh": "随天水太守出行，太守疑其有异心而退保上邽，不纳姜维等人；回冀也不得入，只得归诸葛亮。街亭败后随军撤入蜀，与母分离，获授官爵，诸葛亮称许其才。后续升迁的确年未载。 年代说明：回冀亦不得入，后归诸葛亮；非城内驻军。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0018：太守聞蜀軍垂至而諸縣響應，疑維等皆有異心，於是夜亡保上邽。維等覺太守去，追遲，至城門，城門已閉，不納。維等相率還冀，冀亦不入維。維等乃俱詣諸葛亮。；v044-b0018：會馬謖敗於街亭。亮拔將西縣千餘家及維等還，故維遂與母相失。亮辟維為倉曹掾，加奉義將軍，封當陽亭侯，時年二十七。；v044-b0018：須先教中虎步兵五六千人。姜伯約甚敏於軍事，既有膽義，深解兵意。此人心存漢室而才兼於人，畢教軍事，當遣詣宮，覲見主上。；v044-b0018：後遷中監軍、征西將軍。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0018",
+            "kind": "body",
+            "quote": "太守聞蜀軍垂至而諸縣響應，疑維等皆有異心，於是夜亡保上邽。維等覺太守去，追遲，至城門，城門已閉，不納。維等相率還冀，冀亦不入維。維等乃俱詣諸葛亮。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0018",
+            "kind": "body",
+            "quote": "會馬謖敗於街亭。亮拔將西縣千餘家及維等還，故維遂與母相失。亮辟維為倉曹掾，加奉義將軍，封當陽亭侯，時年二十七。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0018",
+            "kind": "body",
+            "quote": "須先教中虎步兵五六千人。姜伯約甚敏於軍事，既有膽義，深解兵意。此人心存漢室而才兼於人，畢教軍事，當遣詣宮，覲見主上。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0018",
+            "kind": "body",
+            "quote": "後遷中監軍、征西將軍。"
+          }
+        ],
+        "phaseId": "join",
+        "careerId": "join",
+        "ancientEn": "Jicheng",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Jicheng",
+        "descEn": "Was also refused entry to Jicheng, then joined Zhuge Liang. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 234,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "参与退军，返成都统军",
+        "descZh": "诸葛亮病重时，参与安排身后的撤军节度，位次在断后的魏延之后；诸葛亮去世后回成都，统诸军并进封。裴注引《汉晋春秋》另记他令杨仪反旗鸣鼓，使追军退却。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v040-b0033：密與長史楊儀、司馬費禕、護軍姜維等作身歿之後退軍節度，令延斷後，姜維次之；v044-b0019：十二年，亮卒，維還成都，為右監軍、輔漢將軍，統諸軍，進封平襄侯。；v035-b0017-n03：姜維令儀反旗鳴鼓，若將向宣王者，宣王乃退，不敢偪。",
+        "sourceRefs": [
+          {
+            "volume": "040",
+            "blockId": "v040-b0033",
+            "kind": "body",
+            "quote": "密與長史楊儀、司馬費禕、護軍姜維等作身歿之後退軍節度，令延斷後，姜維次之"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0019",
+            "kind": "body",
+            "quote": "十二年，亮卒，維還成都，為右監軍、輔漢將軍，統諸軍，進封平襄侯。"
+          },
+          {
+            "volume": "035",
+            "blockId": "v035-b0017-n03",
+            "kind": "peizhu",
+            "quote": "姜維令儀反旗鳴鼓，若將向宣王者，宣王乃退，不敢偪。",
+            "sourceBook": "《汉晋春秋》"
+          }
+        ],
+        "phaseId": "west",
+        "careerId": "retreat",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Returned to Chengdu after Zhuge Liang died. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 238,
+        "coord": [
+          107.02,
+          33.07
+        ],
+        "ancientZh": "汉中",
+        "modernZh": "陕西汉中，郡域示意",
+        "titleZh": "西向经营，与费祎参政",
+        "descZh": "238年随蒋琬住汉中，后任其司马，数率偏军西入；243年迁镇西大将军，247年迁卫将军，与费祎共录尚书事。当年讨平平康夷，又在洮西与魏军交战，迎接并安置来降胡人。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0019：延熙元年，隨大將軍蔣琬住漢中。琬既遷大司馬。以維為司馬，數率偏軍西入。；v044-b0019：六年，遷鎮西大將軍，領涼州刺史。十年，遷衛將軍，與大將軍費禕共錄尚書事。；v044-b0019：是歲，漢山平康夷反，維率眾討定之。；v044-b0019：又出隴西、南安、金城界，與魏大將軍郭淮、夏侯霸等戰於洮西。；v033-b0026：衛將軍姜維迎逆安撫，居之於繁縣。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0019",
+            "kind": "body",
+            "quote": "延熙元年，隨大將軍蔣琬住漢中。琬既遷大司馬。以維為司馬，數率偏軍西入。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0019",
+            "kind": "body",
+            "quote": "六年，遷鎮西大將軍，領涼州刺史。十年，遷衛將軍，與大將軍費禕共錄尚書事。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0019",
+            "kind": "body",
+            "quote": "是歲，漢山平康夷反，維率眾討定之。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0019",
+            "kind": "body",
+            "quote": "又出隴西、南安、金城界，與魏大將軍郭淮、夏侯霸等戰於洮西。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0026",
+            "kind": "body",
+            "quote": "衛將軍姜維迎逆安撫，居之於繁縣。"
+          }
+        ],
+        "phaseId": "west",
+        "careerId": "hanzhong",
+        "ancientEn": "Hanzhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Hanzhong",
+        "descEn": "Accompanied Jiang Wan to Hanzhong. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 249,
+        "coord": [
+          101.78,
+          36.62
+        ],
+        "ancientZh": "西平",
+        "modernZh": "青海西宁一带，郡域示意",
+        "titleZh": "西向作战，兵力受限",
+        "descZh": "本传记延熙十二年假节出西平，不克而还；《后主传》则将西平之役记在十三年，并另记十二年攻雍州无功。姜维欲联结羌、胡争取陇西，费祎限制其兵不过万人。 年代说明：本传249年，《后主传》250年；保留系年分歧。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0019：十二年，假維節復出西平，不克而還。；v033-b0028：秋，衛將軍姜維出攻雍州，不克而還。；v033-b0029：十三年，姜維復出西平，不克而還。；v044-b0019：每欲興軍大舉，費禕常裁製不從，與其兵不過萬人。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0019",
+            "kind": "body",
+            "quote": "十二年，假維節復出西平，不克而還。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0028",
+            "kind": "body",
+            "quote": "秋，衛將軍姜維出攻雍州，不克而還。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0029",
+            "kind": "body",
+            "quote": "十三年，姜維復出西平，不克而還。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0019",
+            "kind": "body",
+            "quote": "每欲興軍大舉，費禕常裁製不從，與其兵不過萬人。"
+          }
+        ],
+        "phaseId": "west",
+        "careerId": "xiping",
+        "ancientEn": "Xiping",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Xiping",
+        "descEn": "Attacked Xiping without success; the sources differ between 249 and 250. Lines connect known stops in sequence; they do not reconstruct ancient roads.",
+        "dateLabelZh": "249—250年间（两传系年有异）",
+        "dateLabelEn": "Date uncertain; map year is approximate"
+      },
+      {
+        "year": 253,
+        "coord": [
+          104.89,
+          34.72
+        ],
+        "ancientZh": "南安",
+        "modernZh": "甘肃陇西东南一带，南安郡治豲道近似",
+        "titleZh": "费祎死后大举围南安",
+        "descZh": "费祎春正月在汉寿被郭循杀害。夏，姜维率数万人出石营，经董亭围南安；陈泰来援，姜维粮尽退军。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v033-b0032：十六年春正月，大將軍費禕為魏降人郭循所殺於漢壽。；v044-b0020：十六年春，禕卒。夏，維率數萬人出石營，經董亭，圍南安。魏雍州刺史陳泰解圍至洛門，維糧盡退還。",
+        "sourceRefs": [
+          {
+            "volume": "033",
+            "blockId": "v033-b0032",
+            "kind": "body",
+            "quote": "十六年春正月，大將軍費禕為魏降人郭循所殺於漢壽。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0020",
+            "kind": "body",
+            "quote": "十六年春，禕卒。夏，維率數萬人出石營，經董亭，圍南安。魏雍州刺史陳泰解圍至洛門，維糧盡退還。"
+          }
+        ],
+        "phaseId": "campaigns",
+        "careerId": "nanan",
+        "ancientEn": "Nanan",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Nanan",
+        "descEn": "Besieged Nanan in present-day Gansu, then withdrew for lack of supplies. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 254,
+        "coord": [
+          103.86,
+          35.38
+        ],
+        "ancientZh": "狄道",
+        "modernZh": "甘肃临洮",
+        "titleZh": "受狄道降，进击襄武",
+        "descZh": "狄道长李简举城降，姜维进围襄武，与徐质交锋获胜；随后迁狄道、河关、临洮三县居民入蜀。《后主传》记安置于绵竹、繁县。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0020：明年，加督中外軍事。復出隴西，守狄道長李簡舉城降。進圍襄武，與魏將徐質交鋒，斬首破敵，魏軍敗退。；v033-b0033：冬，拔狄道、（河間）[河關]、臨洮三縣民，居於綿竹、繁縣。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0020",
+            "kind": "body",
+            "quote": "明年，加督中外軍事。復出隴西，守狄道長李簡舉城降。進圍襄武，與魏將徐質交鋒，斬首破敵，魏軍敗退。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0033",
+            "kind": "body",
+            "quote": "冬，拔狄道、（河間）[河關]、臨洮三縣民，居於綿竹、繁縣。"
+          }
+        ],
+        "phaseId": "campaigns",
+        "careerId": "xiangwu",
+        "ancientEn": "Didao",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Didao",
+        "descEn": "Received the surrender of Didao. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 254,
+        "coord": [
+          104.64,
+          35.0
+        ],
+        "ancientZh": "襄武",
+        "modernZh": "甘肃陇西一带",
+        "titleZh": "受狄道降，进击襄武",
+        "descZh": "狄道长李简举城降，姜维进围襄武，与徐质交锋获胜；随后迁狄道、河关、临洮三县居民入蜀。《后主传》记安置于绵竹、繁县。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0020：明年，加督中外軍事。復出隴西，守狄道長李簡舉城降。進圍襄武，與魏將徐質交鋒，斬首破敵，魏軍敗退。；v033-b0033：冬，拔狄道、（河間）[河關]、臨洮三縣民，居於綿竹、繁縣。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0020",
+            "kind": "body",
+            "quote": "明年，加督中外軍事。復出隴西，守狄道長李簡舉城降。進圍襄武，與魏將徐質交鋒，斬首破敵，魏軍敗退。"
+          },
+          {
+            "volume": "033",
+            "blockId": "v033-b0033",
+            "kind": "body",
+            "quote": "冬，拔狄道、（河間）[河關]、臨洮三縣民，居於綿竹、繁縣。"
+          }
+        ],
+        "phaseId": "campaigns",
+        "careerId": "xiangwu",
+        "ancientEn": "Xiangwu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Xiangwu",
+        "descEn": "Attacked Xiangwu. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 255,
+        "coord": [
+          103.86,
+          35.38
+        ],
+        "ancientZh": "狄道",
+        "modernZh": "甘肃临洮",
+        "titleZh": "洮西破王经，围狄道",
+        "descZh": "与夏侯霸等出狄道，在洮西大破王经，魏军死者数万人。王经退保狄道，张翼劝止进军，姜维不听，继续围城；陈泰救至后退住钟题。 年代说明：洮西战后围狄道。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0020：後十八年，復與車騎將軍夏侯霸等俱出狄道，大破魏雍州刺史王經於洮西，經眾死者數萬人。經退保狄道城，維圍之。；v045-b0009：翼曰：「可止矣，不宜復進，進或毀此大功。」；v044-b0020：魏徵西將軍陳泰進兵解圍，維卻住鐘題。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0020",
+            "kind": "body",
+            "quote": "後十八年，復與車騎將軍夏侯霸等俱出狄道，大破魏雍州刺史王經於洮西，經眾死者數萬人。經退保狄道城，維圍之。"
+          },
+          {
+            "volume": "045",
+            "blockId": "v045-b0009",
+            "kind": "body",
+            "quote": "翼曰：「可止矣，不宜復進，進或毀此大功。」"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0020",
+            "kind": "body",
+            "quote": "魏徵西將軍陳泰進兵解圍，維卻住鐘題。"
+          }
+        ],
+        "phaseId": "campaigns",
+        "careerId": "taoxi",
+        "ancientEn": "Didao",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Didao",
+        "descEn": "Defeated Wang Jing west of the Tao River and besieged Didao. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 256,
+        "coord": [
+          105.9,
+          34.45
+        ],
+        "ancientZh": "段谷",
+        "modernZh": "甘肃天水东南一带，战址未定，仅作区域示意",
+        "titleZh": "段谷大败，请罪自贬",
+        "descZh": "春迁大将军，与胡济约会于上邽，胡济失期未到，姜维在段谷被邓艾击破，士卒大量死散，引起民众怨言及陇西骚动。他承担过失，请求贬削。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0021：十九年春，就遷維為大將軍。更整勒戎馬，與鎮西大將軍胡濟期會上邽。濟失誓不至，故維為魏大將鄧艾所破於段谷，星散流離，死者甚眾。；v044-b0021：眾庶由是怨讟，而隴以西亦騷動不寧。維謝過引負，求自貶削。為後將軍，行大將軍事。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0021",
+            "kind": "body",
+            "quote": "十九年春，就遷維為大將軍。更整勒戎馬，與鎮西大將軍胡濟期會上邽。濟失誓不至，故維為魏大將鄧艾所破於段谷，星散流離，死者甚眾。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0021",
+            "kind": "body",
+            "quote": "眾庶由是怨讟，而隴以西亦騷動不寧。維謝過引負，求自貶削。為後將軍，行大將軍事。"
+          }
+        ],
+        "phaseId": "campaigns",
+        "careerId": "duangu",
+        "ancientEn": "Duangu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Duangu",
+        "descEn": "Suffered defeat at Duangu; the battlefield location is approximate. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 257,
+        "coord": [
+          108.1,
+          34.2
+        ],
+        "ancientZh": "芒水",
+        "modernZh": "陕西周至一带，河道未定，仅作区域示意",
+        "titleZh": "乘隙至芒水，返成都复职",
+        "descZh": "诸葛诞反魏，关中兵东调，姜维欲乘虚向秦川，率数万人出骆谷，驻芒水。司马望、邓艾守长城，不应挑战；闻诸葛诞败，于258年还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0022：二十年，魏徵東大將軍諸葛誕反於淮南，分關中兵東下。；v044-b0022：維欲乘虛向秦川，復率數萬人出駱谷，逕至沈嶺。；v044-b0022：維前住芒水，皆倚山為營。望、艾傍渭堅圍，維數下挑戰，望、艾不應。；v044-b0022：景耀元年，維聞誕破敗，乃還成都。復拜大將軍。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0022",
+            "kind": "body",
+            "quote": "二十年，魏徵東大將軍諸葛誕反於淮南，分關中兵東下。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0022",
+            "kind": "body",
+            "quote": "維欲乘虛向秦川，復率數萬人出駱谷，逕至沈嶺。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0022",
+            "kind": "body",
+            "quote": "維前住芒水，皆倚山為營。望、艾傍渭堅圍，維數下挑戰，望、艾不應。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0022",
+            "kind": "body",
+            "quote": "景耀元年，維聞誕破敗，乃還成都。復拜大將軍。"
+          }
+        ],
+        "phaseId": "late",
+        "careerId": "mangshui",
+        "ancientEn": "Mang River",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Mang River",
+        "descEn": "Advanced through Luo Valley and camped by the Mang River; the location is regional and approximate. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 258,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "乘隙至芒水，返成都复职",
+        "descZh": "诸葛诞反魏，关中兵东调，姜维欲乘虚向秦川，率数万人出骆谷，驻芒水。司马望、邓艾守长城，不应挑战；闻诸葛诞败，于258年还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0022：二十年，魏徵東大將軍諸葛誕反於淮南，分關中兵東下。；v044-b0022：維欲乘虛向秦川，復率數萬人出駱谷，逕至沈嶺。；v044-b0022：維前住芒水，皆倚山為營。望、艾傍渭堅圍，維數下挑戰，望、艾不應。；v044-b0022：景耀元年，維聞誕破敗，乃還成都。復拜大將軍。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0022",
+            "kind": "body",
+            "quote": "二十年，魏徵東大將軍諸葛誕反於淮南，分關中兵東下。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0022",
+            "kind": "body",
+            "quote": "維欲乘虛向秦川，復率數萬人出駱谷，逕至沈嶺。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0022",
+            "kind": "body",
+            "quote": "維前住芒水，皆倚山為營。望、艾傍渭堅圍，維數下挑戰，望、艾不應。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0022",
+            "kind": "body",
+            "quote": "景耀元年，維聞誕破敗，乃還成都。復拜大將軍。"
+          }
+        ],
+        "phaseId": "late",
+        "careerId": "mangshui",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Returned to Chengdu. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 262,
+        "coord": [
+          103.77,
+          34.99
+        ],
+        "ancientZh": "侯和",
+        "modernZh": "甘肃临洮南一带，战址有争议，仅作区域示意",
+        "titleZh": "侯和失利，留住沓中",
+        "descZh": "出兵侯和被邓艾击破，退住沓中；黄皓与阎宇相结，暗欲废维立宇，姜维自疑惧而不再还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0024：五年，維率眾出漢、侯和，為鄧艾所破，還住沓中。；v044-b0024：而宦官黃皓等弄權於內，右大將軍閻宇與皓協比，而皓陰欲廢維樹宇。維亦疑之，故自危懼，不復還成都。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0024",
+            "kind": "body",
+            "quote": "五年，維率眾出漢、侯和，為鄧艾所破，還住沓中。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0024",
+            "kind": "body",
+            "quote": "而宦官黃皓等弄權於內，右大將軍閻宇與皓協比，而皓陰欲廢維樹宇。維亦疑之，故自危懼，不復還成都。"
+          }
+        ],
+        "phaseId": "late",
+        "careerId": "tazhong",
+        "ancientEn": "Houhe",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Houhe",
+        "descEn": "Was defeated at Houhe; the battlefield location is disputed. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 262,
+        "coord": [
+          104.15,
+          33.88
+        ],
+        "ancientZh": "沓中",
+        "modernZh": "甘肃舟曲西北一带，地域范围近似",
+        "titleZh": "侯和失利，留住沓中",
+        "descZh": "出兵侯和被邓艾击破，退住沓中；黄皓与阎宇相结，暗欲废维立宇，姜维自疑惧而不再还成都。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0024：五年，維率眾出漢、侯和，為鄧艾所破，還住沓中。；v044-b0024：而宦官黃皓等弄權於內，右大將軍閻宇與皓協比，而皓陰欲廢維樹宇。維亦疑之，故自危懼，不復還成都。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0024",
+            "kind": "body",
+            "quote": "五年，維率眾出漢、侯和，為鄧艾所破，還住沓中。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0024",
+            "kind": "body",
+            "quote": "而宦官黃皓等弄權於內，右大將軍閻宇與皓協比，而皓陰欲廢維樹宇。維亦疑之，故自危懼，不復還成都。"
+          }
+        ],
+        "phaseId": "late",
+        "careerId": "tazhong",
+        "ancientEn": "Tazhong",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Tazhong",
+        "descEn": "Retreated to Tazhong and remained there. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 263,
+        "coord": [
+          105.53,
+          32.21
+        ],
+        "ancientZh": "剑阁",
+        "modernZh": "四川剑阁剑门关一带",
+        "titleZh": "守剑阁，奉命降于涪",
+        "descZh": "与张翼、廖化等合守剑阁，钟会不能克，议欲还军。邓艾从阴平绕入，破诸葛瞻，刘禅降魏；姜维沿广汉、郪道查明消息，奉后主敕令投戈放甲，至涪降钟会，后获暂还官爵仪仗。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0024：維不答書，列營守險。會不能克，糧運縣遠，將議還歸。；v044-b0024：於是引軍由廣漢、郪道以審虛實。；v044-b0024：尋被後主敕令乃投戈放甲，詣會於涪軍前，將士鹹怒，拔刀斫石。；v044-b0025：會厚待維等，皆權還其印號節蓋。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0024",
+            "kind": "body",
+            "quote": "維不答書，列營守險。會不能克，糧運縣遠，將議還歸。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0024",
+            "kind": "body",
+            "quote": "於是引軍由廣漢、郪道以審虛實。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0024",
+            "kind": "body",
+            "quote": "尋被後主敕令乃投戈放甲，詣會於涪軍前，將士鹹怒，拔刀斫石。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0025",
+            "kind": "body",
+            "quote": "會厚待維等，皆權還其印號節蓋。"
+          }
+        ],
+        "phaseId": "fall",
+        "careerId": "jiange",
+        "ancientEn": "Jiange",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Jiange",
+        "descEn": "Defended Jiange against Zhong Hui. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 263,
+        "coord": [
+          104.75,
+          31.46
+        ],
+        "ancientZh": "涪县",
+        "modernZh": "四川绵阳一带",
+        "titleZh": "守剑阁，奉命降于涪",
+        "descZh": "与张翼、廖化等合守剑阁，钟会不能克，议欲还军。邓艾从阴平绕入，破诸葛瞻，刘禅降魏；姜维沿广汉、郪道查明消息，奉后主敕令投戈放甲，至涪降钟会，后获暂还官爵仪仗。 年代说明：奉后主敕至涪降钟会。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0024：維不答書，列營守險。會不能克，糧運縣遠，將議還歸。；v044-b0024：於是引軍由廣漢、郪道以審虛實。；v044-b0024：尋被後主敕令乃投戈放甲，詣會於涪軍前，將士鹹怒，拔刀斫石。；v044-b0025：會厚待維等，皆權還其印號節蓋。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0024",
+            "kind": "body",
+            "quote": "維不答書，列營守險。會不能克，糧運縣遠，將議還歸。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0024",
+            "kind": "body",
+            "quote": "於是引軍由廣漢、郪道以審虛實。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0024",
+            "kind": "body",
+            "quote": "尋被後主敕令乃投戈放甲，詣會於涪軍前，將士鹹怒，拔刀斫石。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0025",
+            "kind": "body",
+            "quote": "會厚待維等，皆權還其印號節蓋。"
+          }
+        ],
+        "phaseId": "fall",
+        "careerId": "jiange",
+        "ancientEn": "Fu county",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Fu county",
+        "descEn": "Obeyed Liu Shan's surrender order and submitted to Zhong Hui at Fu. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      },
+      {
+        "year": 264,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "modernZh": "四川成都",
+        "titleZh": "随钟会至成都，死于兵变",
+        "descZh": "钟会构陷邓艾后带姜维至成都谋反，拟授兵五万为前驱。《钟会传》记十八日军士攻入，姜维率钟会左右战，手杀五六人后被杀；其妻子儿女也被诛。复蜀谋划见裴注，另列辨析。 地点为历史地点或战区的近似定位；连线仅表示先后关系，不复原古代道路。",
+        "quoteZh": "v044-b0025：會既構鄧艾，艾檻車征，因將維等詣成都，自稱益州牧以叛。；v028-b0064：十八日日中，烈軍兵與烈兒雷鼓出門；v028-b0064：姜維率會左右戰，手殺五六人，眾既格斬維，爭赴殺會。；v044-b0025：欲授維兵五萬人，使為前驅。魏將士憤發，殺會及維，維妻子皆伏誅。",
+        "sourceRefs": [
+          {
+            "volume": "044",
+            "blockId": "v044-b0025",
+            "kind": "body",
+            "quote": "會既構鄧艾，艾檻車征，因將維等詣成都，自稱益州牧以叛。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0064",
+            "kind": "body",
+            "quote": "十八日日中，烈軍兵與烈兒雷鼓出門"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0064",
+            "kind": "body",
+            "quote": "姜維率會左右戰，手殺五六人，眾既格斬維，爭赴殺會。"
+          },
+          {
+            "volume": "044",
+            "blockId": "v044-b0025",
+            "kind": "body",
+            "quote": "欲授維兵五萬人，使為前驅。魏將士憤發，殺會及維，維妻子皆伏誅。"
+          }
+        ],
+        "phaseId": "death",
+        "careerId": "rebellion",
+        "ancientEn": "Chengdu",
+        "modernEn": "Approximate historical location; see source note.",
+        "titleEn": "Chengdu",
+        "descEn": "Accompanied Zhong Hui to Chengdu and died in the mutiny. Lines connect known stops in sequence; they do not reconstruct ancient roads."
+      }
+    ]
+  }
+}

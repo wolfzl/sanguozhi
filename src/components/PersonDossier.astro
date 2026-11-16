@@ -74,7 +74,7 @@ const navigation = [
         <table class="dossier-table career-table">
           <caption class="sr-only">{p.name}的重要经历与官职、爵位变化</caption>
           <thead><tr><th scope="col">时间</th><th scope="col">重要经历</th><th scope="col">官职、爵位变化</th></tr></thead>
-          <tbody>{p.milestones.map(m=><Fragment>{m.id&&phaseStart.has(m.id)&&(()=>{const {ph,i}=phaseStart.get(m.id)!;return <tr id={`phase-${ph.id}`} class="phase-row"><th colspan="3" scope="rowgroup"><span class="phase-no">{phaseNumeral(i)}</span><strong>{ph.title}</strong><span class="phase-when">{ph.when}</span>{phaseUrl(atlasBase,trajectory!,ph)?<a href={phaseUrl(atlasBase,trajectory!,ph)} target="_blank" rel="noopener">在地图上看 ↗</a>:<span class="phase-unmapped">地点未详</span>}</th></tr>;})()}<tr id={m.id?`career-${m.id}`:undefined}>
+          <tbody>{p.milestones.map(m=><Fragment>{m.id&&phaseStart.has(m.id)&&(()=>{const {ph,i}=phaseStart.get(m.id)!;return <tr id={`phase-${ph.id}`} class="phase-row"><th colspan="3" scope="rowgroup"><span class="phase-no">{phaseNumeral(i)}</span><strong>{ph.title}</strong><span class="phase-when">{ph.when}</span>{phaseUrl(atlasBase,trajectory!,ph)?<a href={phaseUrl(atlasBase,trajectory!,ph)} target="_blank" rel="noopener">在地图上看 ↗</a>:<span class="phase-unmapped">{trajectory!.atlasPerson ? "本期未标点" : "地点未详"}</span>}</th></tr>;})()}<tr id={m.id?`career-${m.id}`:undefined}>
             <th scope="row" data-label="时间"><span class="milestone-date">{m.when}</span></th>
             <td data-label="重要经历">{d.expanded&&<strong>{m.title}</strong>}<p>{m.text}<Citations refs={m.refs} all={refs}/></p>{m.eventIds && m.eventIds.length>0&&<div class="record-events">{m.eventIds.map(id=><a href={`/events/${id}/`}>{eventById(id).title} ↗</a>)}</div>}</td>
             <td data-label="官职、爵位变化" class:list={{'office-change':m.office!=='—','no-change':m.office==='—'}}>{m.office}</td>
@@ -83,12 +83,12 @@ const navigation = [
       </section>
       {hasTrajectory&&<section id="trajectory" class="article-section trajectory">
         <div class="section-eyebrow">把经历放回地图</div><h2>行迹地图</h2>
-        <p class="evidence-note">{p.name}一生分为 {phases.length} 个时期。{trajectory!.atlasPerson?<Fragment>地图直接使用<a href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">江山时序</a>的{p.name}路线，与在江山时序中搜索{p.name}看到的相同；地图上的说明文字出自江山时序，本站内容以下表和生平履历为准。</Fragment>:<Fragment>{hasUnmappedPhases?"地图标示本书明确记载的地点，地点未详的时期见下表。地图由":"每个时期取一个代表地点，由"}<a href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">江山时序</a>{hasUnmappedPhases?"提供；":"连成路线；"}站名用的是它的地名。</Fragment>}疆域为示意性近似。</p>
+        <p class="evidence-note">{p.name}一生分为 {phases.length} 个时期。{trajectory!.atlasPerson?<Fragment>地图直接使用<a href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">江山时序</a>的{p.name}路线，与在江山时序中搜索{p.name}看到的相同；地图上的说明文字出自江山时序，本站内容以下表和生平履历为准。</Fragment>:<Fragment>{hasUnmappedPhases?"地图标示本书明确记载的地点，地点未详的时期见下表。地图由":"每个时期取一个代表地点，由"}<a href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">江山时序</a>{hasUnmappedPhases?"提供；":"连成路线；"}站名用的是它的地名。</Fragment>}疆域为示意性近似。连线表示已知地点的先后关系，不是古代道路复原；选中时期的到达路段为实线，其余为虚线，虚实不表示史料可信度。未载地点、未实施的计划与身后追谥不补造足迹。</p>
         <div class="atlas-frame"><iframe src={routeUrl(atlasBase,trajectory!,{embed:true})} title={`${p.name}行迹地图`} loading="lazy"></iframe></div>
         <a class="atlas-open" href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">在江山时序中打开 ↗</a>
         <ol class="trajectory-list">{phases.map((ph,i)=><li>
           <span class="stop-index">{phaseNumeral(i)}</span>
-          <div>{phaseUrl(atlasBase,trajectory!,ph)?<a href={phaseUrl(atlasBase,trajectory!,ph)} target="_blank" rel="noopener"><strong>{ph.title}</strong><small class="phase-meta">{ph.when} · {trajectory!.atlasPerson?stopLabel(ph):`${ph.place!.name}${ph.place!.approx?'（地图近似）':''}`} ↗</small></a>:<Fragment><strong>{ph.title}</strong><small class="phase-meta">{ph.when} · 地点未详</small></Fragment>}
+          <div>{phaseUrl(atlasBase,trajectory!,ph)?<a href={phaseUrl(atlasBase,trajectory!,ph)} target="_blank" rel="noopener"><strong>{ph.title}</strong><small class="phase-meta">{ph.when} · {trajectory!.atlasPerson?stopLabel(ph):`${ph.place!.name}${ph.place!.approx?'（地图近似）':''}`} ↗</small></a>:<Fragment><strong>{ph.title}</strong><small class="phase-meta">{ph.when} · {trajectory!.atlasPerson ? "本期未标点" : "地点未详"}</small></Fragment>}
           {ph.unmappedReason&&<p>{ph.unmappedReason}</p>}
           <p>{ph.careers.map(id=>careerTitle.get(id)).map(row=>row&&<a class="stop-row" href={`#career-${row.id}`}>{row.title}</a>)}</p></div>
         </li>)}</ol>

@@ -25,7 +25,8 @@ export function stopParam(stops = []) {
 
 /** 打开某个时期：模式一高亮该时期在江山时序路线上的全部站，模式二打开代表地点。 */
 export function phaseUrl(base, trajectory, phase) {
-  if (trajectory.atlasPerson) return build(base, { person: trajectory.atlasPerson, stop: stopParam(phase.atlasStops) });
+  if (trajectory.atlasPerson) return phase.atlasStops?.length
+    ? build(base, { person: trajectory.atlasPerson, stop: stopParam(phase.atlasStops) }) : '';
   return phase.place ? build(base, { year: phase.place.mapYear, place: phase.place.query }) : '';
 }
 
