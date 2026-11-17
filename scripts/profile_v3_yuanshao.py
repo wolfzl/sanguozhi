@@ -1,0 +1,95 @@
+"""袁绍：B级人物卡；正文与裴注分层，独立核对行迹。"""
+from profile_v3 import Q
+ORIGIN=Q('v006-b0018','袁紹字本初，汝南汝陽人也。')
+FAMILY=Q('v006-b0018','自安以下四世居三公位，由是勢傾天下。')
+OFFICE=Q('v006-b0024','天子以紹爲太尉，轉爲大將軍，封鄴侯，紹讓侯不受。')
+PALACE=Q('v006-b0019','遂勒兵捕諸閹人，無少長皆殺之。')
+ESCAPE=Q('v006-b0020','紹旣出，遂亡奔冀州。')
+BOHAI=Q('v006-b0020','乃拜紹勃海太守，封邟鄉侯。')
+LEAGUE=Q('v001-b0006','同時俱起兵，衆各數萬，推紹爲盟主。')
+JI=Q('v006-b0021','乃讓紹，紹遂領冀州牧。')
+JIE=Q('v006-b0023-n05','紹自往征瓚，合戰於界橋南二十里。','《英雄记》')
+QU=Q('v006-b0023-n05','紹令麴義以八百兵爲先登，彊弩千張夾承之，紹自以步兵數萬結陣於後。','《英雄记》')
+SHU=Q('v006-b0034','太祖與紹合擊，大破術軍。')
+BLACK=Q('v006-b0023-n05','乃引軍入朝歌鹿場山蒼巖谷討于毒，圍攻五日，破之','《英雄记》')
+YE=Q('v006-b0023-n05','紹復還屯鄴。','《英雄记》')
+EMPEROR=Q('v006-b0024','圖還說紹迎天子都鄴，紹不從。')
+YI=Q('v006-b0024','擊破瓚於易京，井其衆。')
+DELAY=Q('v006-b0025','田豐說紹襲太祖後，紹辭以子疾，不許')
+CROSS=Q('v006-b0026','紹渡河，壁延津南，使劉備、文醜挑戰。')
+GUANDU=Q('v006-b0026','連營稍前，逼官渡，合戰，太祖軍不利，復壁。')
+DEFEAT=Q('v006-b0026','紹衆大潰，紹與譚單騎退渡河。')
+TIAN=Q('v006-b0027','紹還，謂左右曰：「吾不用田豐言，果爲所笑。」遂殺之。')
+DEATH=Q('v006-b0028','冀州城邑多叛，紹復擊定之。自軍敗後發病，七年，憂死。')
+HEIR=Q('v006-b0030','紹愛少子尚，皃美，欲以爲後而未顯。')
+SPLIT=Q('v006-b0030','由是譚、尚有隙。')
+PING=Q('v006-b0046','然皆外寬內忌，好謀無決，有才而不能用，聞善而不能納，廢嫡立庶，舍禮崇愛')
+PROFILE=dict(id='yuanshao',tier='B',reading=['006'],
+ lead='袁绍由汉廷司隶校尉出奔，成为讨董盟主，继而取得冀州、击灭公孙瓒，雄据河北。他在官渡败于曹操，仍曾收复叛离城邑；身后继承未定，诸子内争使其事业继续瓦解。',role='雄据河北的大将军',
+ facts=[
+ dict(key='hometown',label='籍贯',value='汝南汝阳',text='字本初，汝南汝阳人；籍贯不等于本页行迹的出发地点。',refs=[ORIGIN]),
+ dict(key='lifespan',label='生卒年',value='生年未详—202年',text='本传不记生年；建安七年，官渡败后发病而卒。',refs=[DEATH]),
+ dict(key='identity',label='主要身份',value='讨董盟主、河北诸州之主',text='由关东诸军推为盟主，后领冀州牧，分置诸子及高干于青、幽、并州。',refs=[LEAGUE,JI,Q('v006-b0024','又以中子熙爲幽州，甥高幹爲并州。')]),
+ dict(key='office',label='最高官职',value='大将军，领冀州牧',text='朝廷先授太尉，转大将军；冀州是其经营河北的基础。',refs=[OFFICE,JI]),
+ dict(key='title',label='最高爵位',value='邟乡侯；辞鄴侯',text='出奔后董卓拜勃海太守、封邟乡侯；后来朝廷封鄴侯，袁绍辞而不受。',refs=[BOHAI,OFFICE]),
+ dict(key='posthumous',label='身后称号',value='本书未载追谥',text='本传记卒后袁尚承位与兄弟相争，未列本人追谥。',refs=[DEATH,HEIR,SPLIT]),
+ dict(key='deeds',label='代表事迹',items=['关东主盟','取得冀州','界桥破瓒','攻灭易京','官渡败退'],text='由讨董盟主到雄据河北，击败公孙瓒后南向与曹操争衡，官渡失利成为转折。',refs=[LEAGUE,JI,JIE,YI,DEFEAT]),
+ ],
+ intro=[
+ dict(title='名门声望与宫廷变局',text='袁绍字本初，汝南汝阳人，家族四世居三公之位。他能折节下士，士人多依附，仕至司隶校尉。灵帝死后，他与何进谋诛宦官，却因何进被杀而转为大规模搜杀，连无须者也有误死。董卓议废立时，他离席出奔冀州，随后获拜勃海太守。名门声望使他能聚众，宫变中的滥杀也须一并看见。',refs=[ORIGIN,FAMILY,Q('v006-b0018','能折節下士，士多附之'),Q('v006-b0018','稍遷中軍校尉，至司隷。'),PALACE,Q('v006-b0019','或有無鬚而誤死者'),ESCAPE,BOHAI]),
+ dict(title='从主盟到据有河北',text='关东起兵后，诸军推袁绍为盟主。韩馥受公孙瓒南进的压力，又听取袁绍方面劝说，交出冀州，袁绍遂有稳固资粮。界桥交战中，麴义前锋击败公孙瓒，他本人也在后阵；以后又与曹操合击袁术，并在黑山军攻入鄴后出兵讨定。到攻破易京、兼并公孙瓒部众时，他已经成为河北最有实力的争雄者。',refs=[LEAGUE,JI,JIE,QU,SHU,BLACK,YI],eventLinks=[dict(label='攻破易京',eventId='yijing')]),
+ dict(title='南征选择与官渡覆败',text='袁绍未采纳迎天子都鄴之议，曹操迎帝都许后又要求迁帝到鄄城，也遭拒绝。200年曹操东征刘备时，他因儿子患病不肯袭后；正式南征后，又拒绝沮授持久相持的建议，推进官渡。曹操袭破乌巢粮营，张郃、高览等降曹，袁绍与袁谭单骑渡河北退。兵众与地域优势，没有自动变成可持续的战场优势。',refs=[EMPEROR,Q('v006-b0024','紹悔，欲令太祖徙天子都鄄城以自密近，太祖拒之。'),DELAY,Q('v006-b0026','宜徐持久，曠以日月。'),GUANDU,Q('v006-b0026','破瓊等，悉斬之。'),Q('v006-b0026','紹將高覽、張郃等率其衆降。'),DEFEAT]),
+ dict(title='败后恢复与继承裂缝',text='官渡后袁绍并未立即失去全部河北，仍攻定叛离城邑，但发病而于建安七年去世。他在出征前拘系苦谏的田丰，败后又因畏其讥笑而杀之。继承问题同样未定：爱少子袁尚却未公开确立，部属各结袁谭、袁尚，死后遂起争位。陈寿既承认其威容与名望，也把不能用才、偏爱后嗣作为覆亡的原因。',refs=[DEATH,TIAN,HEIR,SPLIT,PING]),
+ ],
+ careers=[
+ dict(id='early',when='早年，确年未载',title='折节下士，入仕汉廷',office='侍御史、中军校尉、司隶校尉',text='凭门第而有声望，仍能折节接纳士人；由大将军掾历迁至司隶。',refs=[FAMILY,Q('v006-b0018','以大將軍掾爲侍御史，稍遷中軍校尉，至司隷。')]),
+ dict(id='palace',when='189年',title='宫变搜杀宦官，出奔冀州',office='勃海太守、邟乡侯',text='何进遇害后捕杀宦官，多有滥杀；董卓议废立，他离席出奔，后获拜勃海太守。',refs=[PALACE,ESCAPE,BOHAI],eventIds=['dong-zhuo-capital']),
+ dict(id='league',when='190年',title='关东举兵，推为盟主',office='自号车骑将军',text='以勃海起兵讨董卓，关东诸军推为盟主；与韩馥另议立刘虞为帝，被刘虞拒绝。',refs=[LEAGUE,Q('v006-b0021','紹自號車騎將軍，主盟'),Q('v006-b0021','虞不敢受。')],eventIds=['anti-dong-coalition']),
+ dict(id='jizhou',when='191年',title='受韩馥让州',office='领冀州牧',text='利用公孙瓒进军造成的压力，使高干、荀谌等劝韩馥让州，取得冀州。',refs=[Q('v006-b0021','使陳留高幹、頴川荀諶等說馥'),JI],eventIds=['yuan-shao-jizhou']),
+ dict(id='jieqiao',when='191—192年间',title='界桥击破公孙瓒',office='—',text='亲往与公孙瓒会战，由麴义以步兵强弩破其骑阵；注引还记袁绍后阵遭游骑围攻而坚持战斗。事件条目的191年与具体战次纪年须区别看待。',refs=[JIE,QU,Q('v006-b0023-n05','瓚部迸騎二千餘匹卒至，便圍紹數重，弓矢雨下。','《英雄记》')],eventIds=['jieqiao']),
+ dict(id='yuan-shu',when='193年',title='与曹操合击袁术',office='—',text='袁术入陈留，袁绍与曹操合击，大破其军，袁术奔九江；本书未由此明确袁绍本人到达各追击地。',refs=[SHU,Q('v006-b0034','術以餘衆奔九江')],eventIds=['yuan-shu-huainan']),
+ dict(id='blackshan',when='初平年间，确年未载',title='鄴乱后讨黑山军',office='—',text='裴注引《英雄记》记鄴城被黑山军等攻入后，袁绍到斥丘、入朝歌山谷讨于毒，沿山北击诸部，再还屯鄴。',refs=[Q('v006-b0023-n05','紹到，遂屯斥丘','《英雄记》'),BLACK,YE]),
+ dict(id='emperor',when='196年',title='不迎天子，转拜大将军',office='大将军；辞鄴侯',text='未从迎天子都鄴之议；曹操迎帝都许后，要求迁都鄄城而不得。朝廷转授大将军，封鄴侯而不受。',refs=[EMPEROR,OFFICE,Q('v006-b0024','紹悔，欲令太祖徙天子都鄄城以自密近，太祖拒之。')],eventIds=['welcome-emperor']),
+ dict(id='yijing',when='199年',title='攻破易京，兼并公孙瓒众',office='—',text='悉军围易京，破公孙瓒并其众，河北的主要对手由此覆灭。',refs=[Q('v008-b0012','建安四年，紹悉軍圍之。'),YI],eventIds=['yijing']),
+ dict(id='opportunity',when='200年',title='错过袭后，准备南征',office='—',text='曹操东击刘备时不听田丰袭后建议；刘备败来归附后，袁绍继续准备南征。',refs=[DELAY,Q('v006-b0025','太祖至，擊破備；備奔紹。')]),
+ dict(id='guandu',when='200年',title='黎阳渡河，官渡败退',office='—',text='进黎阳，遣颜良攻白马；渡河壁延津南，文丑又败。继而逼官渡，粮营失守、将领归降，自己与袁谭渡河北退。',refs=[Q('v006-b0026','紹進軍黎陽，遣顏良攻劉延於白馬。'),CROSS,GUANDU,DEFEAT],eventIds=['guandu']),
+ dict(id='tian',when='官渡败后，200年',title='杀田丰，恢复叛离城邑',office='—',text='败还后杀先前苦谏的田丰；冀州多城邑反叛，又逐一击定。',refs=[TIAN,DEATH]),
+ dict(id='death',when='202年',title='忧病而卒',office='—',text='官渡败后发病，建安七年忧死；未公开确定袁尚为继承者。',refs=[DEATH,HEIR],eventIds=['yuan-succession']),
+ dict(id='heirs',when='202年以后，身后',title='袁谭、袁尚继承相争',office='—',text='审配、逢纪依袁绍生前偏爱奉袁尚，袁谭不能继位而与之生隙；这是身后后果，不作本人行迹。',refs=[Q('v006-b0030','緣紹素意，乃奉尚代紹位。'),SPLIT]),
+ ],
+ trajectory=dict(atlasPerson='yuanshao',phases=[
+ dict(id='court',title='仕汉与出奔',when='早年至189年',span=(180,189),careers=['early','palace'],atlasStops=[0]),
+ dict(id='rise',title='主盟取得冀州',when='190—191年',span=(190,191),careers=['league','jizhou'],atlasStops=[1,2]),
+ dict(id='hebei',title='河北争衡',when='初平年间，部分确年未载',span=(191,195),careers=['jieqiao','yuan-shu','blackshan'],atlasStops=[3,4,5]),
+ dict(id='unify',title='大将军与易京',when='196—199年',span=(196,199),careers=['emperor','yijing'],atlasStops=[6]),
+ dict(id='guandu',title='南征官渡',when='200年',span=(200,200),careers=['opportunity','guandu'],atlasStops=[7,8,9]),
+ dict(id='end',title='败后与继承',when='200—202年及身后',span=(200,207),careers=['tian','death','heirs'],atlasStops=[]),
+ ]),
+ records=[
+ dict(section='civil',when='191年后',title='以冀州为资粮基础',category='经营根据地',careerRef='jizhou',text='由仰赖韩馥供应转为领冀州，得以组织河北兵力；这是控制地域与组织资源，不等于已有具体惠民措施可考。',refs=[JI,Q('v006-b0021-n01','將軍舉大事而仰人資給，不據一州，無以自全。','《英雄记》')]),
+ dict(section='civil',when='领冀州后',title='任用沮授与谋主',category='组织军府',careerRef='emperor',text='采纳沮授争取河北的纲领，表为监军、奋威将军；又组织田丰、荀谌、许攸等谋主，但任用与纳谏并非一事。',refs=[Q('v006-b0023','即表授爲監軍、奮威將軍。'),Q('v006-b0024','田豐、荀諶、許攸爲謀主')]),
+ dict(section='military',when='191—199年',title='击败河北主要对手',category='河北扩张',careerRef='yijing',text='从界桥用麴义破骑阵到易京围攻，终于兼并公孙瓒部众；前锋战绩与袁绍统军应分别理解。',refs=[QU,YI]),
+ dict(section='military',when='初平年间，确年未载',title='讨黑山诸部后回鄴',category='平定后方',careerRef='blackshan',text='《英雄记》记攻破于毒后沿山击诸部，再返鄴；本页保留注引层次，不把全部山地战址逐点坐实。',refs=[BLACK,YE]),
+ dict(section='setback',when='189年',title='宫变中的滥杀',category='政治暴力',careerRef='palace',text='杀宦官不分少长，连无须者也有误死，本传明确批评其滥。',refs=[PALACE,Q('v006-b0019','其濫如此。死者二千餘人。')]),
+ dict(section='setback',when='196年',title='失去迎帝先机',category='政治抉择',careerRef='emperor',text='拒绝迎天子后，曹操得以迎帝都许；袁绍再要求迁帝，已不能自行决定。郭图具体立场的异说另列。',refs=[EMPEROR,Q('v006-b0024','紹悔，欲令太祖徙天子都鄄城以自密近，太祖拒之。')]),
+ dict(section='setback',when='200年',title='不用持久建议而败',category='战略与后勤',careerRef='guandu',text='沮授提出北军利于持久，袁绍不从，又未以别军防曹军袭粮；粮营被破后发生全面溃退。',refs=[Q('v006-b0026','北利在於緩搏。'),Q('v006-b0026','可遣將蔣奇別爲支軍於表，以斷曹公之鈔。'),DEFEAT]),
+ dict(section='setback',when='200—202年',title='杀谏臣与继嗣不定',category='内部人事',careerRef='death',text='杀田丰与未显立袁尚，使军府的意见分歧、亲子偏爱难以纳入稳定秩序；身后出现争位，本传有清楚因果叙述。',refs=[TIAN,HEIR,SPLIT]),
+ ],
+ relations=[
+ dict(category='敌对',name='曹操',personId='caocao',label='少年旧交至官渡敌手',text='少年相交，曾合击袁术，后于官渡争胜负。',refs=[Q('v006-b0018','太祖少與交焉。'),SHU,DEFEAT]),
+ dict(category='亲族',name='袁术',personId='yuan-shu',label='同族而相争',text='双方有隙，各自结交远方势力，袁绍又与曹操击败袁术军。',refs=[Q('v006-b0034','其兄弟攜貳，舍近交遠如此。'),SHU]),
+ dict(category='敌对',name='公孙瓒',personId='gongsun-zan',label='河北最主要对手',text='界桥交锋，最终在易京攻灭其势力。',refs=[JIE,YI]),
+ dict(category='旧主',name='韩馥',label='旧日上司让出冀州',text='韩馥自称袁氏故吏，受劝让州；其后又疑惧袁绍使者而自杀。',refs=[JI,Q('v006-b0023','馥在坐上，謂見圖構，無何起至溷自殺。')]),
+ dict(category='部属',name='沮授',label='纲领获用，谏策多拒',text='表为监军，却未用其持久战建议；官渡后被曹操俘获，谋归袁氏而被杀。',refs=[Q('v006-b0023','即表授爲監軍、奮威將軍。'),Q('v006-b0026','後謀還袁氏，見殺。')]),
+ dict(category='部属',name='田丰',label='苦谏而被杀',text='劝袭曹操之后，又反对决战，因苦谏被系，败后被杀。',refs=[DELAY,TIAN]),
+ dict(category='亲族',name='袁谭',personId='yuan-tan',label='长子与败退同行者',text='官渡与父同退，后来不能承位，与袁尚相争。',refs=[DEFEAT,SPLIT]),
+ dict(category='亲族',name='袁尚',personId='yuan-shang',label='被偏爱的少子',text='袁绍欲立其为后而未公开，审配等遂依此意奉立。',refs=[HEIR,Q('v006-b0030','緣紹素意，乃奉尚代紹位。')]),
+ ],
+ assessment=[dict(title='陈寿：声望不足补用人之失',text='陈寿承认袁绍威容与名望，也批评他外宽内忌、有才不能用、闻善不能纳；尤其认为杀田丰比项羽弃范增之谋更甚。',refs=[Q('v006-b0046','袁紹、劉表咸有威容、器觀，知名當世。'),PING,Q('v006-b0046','紹之殺田豐，乃甚於羽遠矣！')])],
+ readingNotes=[
+ dict(title='郭图究竟劝迎还是反对迎帝',text='正文记郭图劝迎天子，袁绍不从；《献帝传》却记郭图、淳于琼反对沮授的迎帝建议，裴松之指出与本传相违。能确知的是袁绍未迎，不宜把郭图立场写成无争议事实。',refs=[EMPEROR,Q('v006-b0024-n01','郭圖、淳于瓊曰','《献帝传》'),Q('v006-b0024-n01','案此書稱郭圖之計，則與本傳違也。','《献帝传》；裴松之案')]),
+ dict(title='横刀离席不等于注引对骂可信',text='正文确记横刀长揖出走；《献帝春秋》另载与董卓针锋相对的对话，裴松之认为如此挑衅而获容不合情理，斥为妄言。',refs=[Q('v006-b0020','紹不應，橫刀長揖而去。'),Q('v006-b0020-n01','此語，妄之甚矣。','《献帝春秋》；裴松之案')]),
+ dict(title='出生与服丧记载有分歧',text='《魏书》说袁绍为袁逢庶子、出后袁成；《英雄记》的父亡与追服叙述却像袁成亲生，裴松之明确说未详孰是。本页不据其中一说排出无疑谱系。',refs=[Q('v006-b0018-n01','紹即逢之庶子，術異母兄也，出後成爲子。','《魏书》'),Q('v006-b0018-n02','二書未詳孰是。','《英雄记》、《魏书》；裴松之案')]),
+ ],
+ sourceScope='以卷六袁绍本传正文及裴注为基础，交叉核对卷一武帝纪、卷八公孙瓒传及袁术本传的联盟与战事。出生、迎帝与董卓对话异说分别辨明；界桥事件保留站内191年关联而不掩盖战次纪年范围。本页不声称穷尽全书所有提及袁绍之处。',
+)

@@ -1,0 +1,91 @@
+"""刘表：以卷六本传为主，交叉核对官渡时长沙事与刘备寄居。"""
+from profile_v3 import Q
+ORIGIN=Q('v006-b0038','劉表字景升，山陽高平人也。')
+FAME=Q('v006-b0038','少知名，號八俊。')
+APPOINT=Q('v006-b0038','靈帝崩，代王叡爲荊州刺史。')
+XIANGYANG=Q('v006-b0038','是時山東兵起，表亦合兵軍襄陽。')
+YICHENG=Q('v006-b0038-n02','表初到，單馬入宜城','司马彪《战略》')
+RECRUIT=Q('v006-b0038-n02','遂使越遣人誘宗賊，至者五十五人，皆斬之。','司马彪《战略》')
+SUN=Q('v006-b0039','堅爲流矢所中死，軍敗，術遂不能勝表。')
+RANK=Q('v006-b0039','乃以表爲鎮南將軍、荊州牧，封成武侯，假節。')
+GRAIN=Q('v001-b0020','荊州牧劉表斷術糧道')
+ZHANGJI=Q('v006-b0039','使人納其衆；衆聞之喜，遂服從。')
+ZHANGXIU=Q('v001-b0035','繡奔穰，與劉表合。')
+RELIEF=Q('v001-b0038','夏五月，劉表遣兵救繡，以絕軍後。')
+WAIT=Q('v006-b0040','表許之而不至，亦不佐太祖，欲保江漢間，觀天下變。')
+ZHANGXIAN=Q('v006-b0039','長沙太守張羨叛表，表圍之連年不下。')
+CHANGSHA=Q('v022-b0002','而表急攻羡，羡病死。城陷')
+EXTEND=Q('v006-b0039','表遂攻并懌，南收零、桂，北據漢川')
+SCHOOL=Q('v006-b0039-n03','表乃開立學官，博求儒士，使綦毋闓、宋忠等撰五經章句，謂之後定。','《英雄记》')
+LIUBEI=Q('v032-b0010','表自郊迎，以上賓禮待之，益其兵，使屯新野。')
+DOUBT=Q('v032-b0010','荊州豪傑歸先主者日益多，表疑其心，陰禦之。')
+XU=Q('v032-b0011','十二年，曹公北征烏丸，先主說表襲許，表不能用。')
+DEATH=Q('v006-b0041','建安十三年，太祖征表，未至，表病死。')
+SUCCESSION=Q('v006-b0043','初，表及妻愛少子琮，欲以爲後')
+FAMILY=Q('v006-b0043','乃出長子琦爲江夏太守，衆遂奉琮爲嗣。琦與琮遂爲讎隙。')
+SURRENDER=Q('v006-b0043','太祖軍到襄陽，琮舉州降。')
+PING=Q('v006-b0046','然皆外寬內忌，好謀無決，有才而不能用，聞善而不能納')
+PROFILE=dict(
+ id='liu-biao',tier='B',reading=['006'],
+ lead='刘表字景升，山阳高平人，少有名望，入主荆州后以襄阳为据，抗孙坚、收张济部众并兼并荆南。与袁绍相结却在官渡观望，厚待刘备又不能充分任用；208年病卒，偏爱少子所留下的继承裂痕，随刘琮降曹而暴露。',role='据有荆州的镇南将军',
+ facts=[
+ dict(key='hometown',label='籍贯',value='山阳高平',text='名表、字景升，山阳高平人。',refs=[ORIGIN]),
+ dict(key='identity',label='主要身份',value='汉末荆州军政首领',text='接替王叡任荆州刺史，合兵驻襄阳，后来正式领荆州牧。',refs=[APPOINT,XIANGYANG,RANK]),
+ dict(key='office',label='最高官职',value='镇南将军、荆州牧，假节',text='李傕、郭汜入长安后为争取外援，授其镇南将军、荆州牧并假节。授命不表示刘表赴长安。',refs=[Q('v006-b0039','李傕、郭汜入長安，欲連表爲援'),RANK]),
+ dict(key='title',label='最高爵位',value='成武侯',text='与镇南将军、荆州牧之命同时封成武侯。封邑不作本人行迹。',refs=[RANK]),
+ dict(key='posthumous',label='身后称号',value='本书未载谥号',text='本传记建安十三年病死，继叙刘琮继位与举州降曹，没有记正式追谥。',refs=[DEATH,FAMILY,SURRENDER]),
+ dict(key='deeds',label='代表事迹',items=['据守襄阳','接纳军众','兼并荆南','兴学求儒'],text='以襄阳立足，纳张济军众，收荆南州郡；裴注另记兴学与撰五经章句。',refs=[XIANGYANG,ZHANGJI,EXTEND,SCHOOL]),
+ ],
+ intro=[
+ dict(title='由名士入主荆州',text='刘表字景升，少有名望，号八俊，灵帝死后接任荆州刺史，继而合兵驻襄阳。裴注引司马彪《战略》另写他单马入宜城，与蒯良、蒯越、蔡瑁商议，在地方宗贼与袁术势力之间建立统治。这里的名望并未直接变成军事实力：注引材料所记的诱斩宗贼、招纳部众与劝降，是他取得州境控制权的具体方式，不能只以“名士治州”一语略过。',refs=[ORIGIN,FAME,APPOINT,XIANGYANG,YICHENG,Q('v006-b0038-n02','而延中廬人蒯良、蒯越、襄陽人蔡瑁與謀。','司马彪《战略》'),RECRUIT,Q('v006-b0038-n02','表乃使越與龐季單騎往說降之，江南遂悉平。','司马彪《战略》')]),
+ dict(title='经营江汉与荆南',text='袁术使孙坚进攻荆州，孙坚战死后未能夺州；刘表随后获授镇南将军、荆州牧。张济攻穰城身死，他没有随官属庆贺，而表示来客因主人失礼才交战，招纳了其部众。他又攻并张羡父子，南收零陵、桂阳，形成跨据汉南的实力。裴注还记他设置学官、延求儒士与整理五经章句，说明其经营不止于兵众和土地，但这些文教措施来自注引材料。',refs=[SUN,RANK,Q('v006-b0039','牧受弔，不受賀也。'),ZHANGJI,ZHANGXIAN,EXTEND,SCHOOL]),
+ dict(title='观望、用人与继承',text='官渡相持时，刘表答应援袁绍却未出兵，也不助曹操，想守江汉等待变化；劝其抉择的韩嵩反遭猜疑。刘备来投，他以厚礼接纳、增兵，却又防范其影响，207年不采纳袭许建议。208年曹操南征未至，刘表病死。此前偏爱少子、外放长子已使继承出现裂痕，刘琮随后举州降曹。陈寿对他有才不能用、好谋无决的判断，正应放在这些具体选择中理解。',refs=[WAIT,Q('v006-b0040','表疑嵩反爲太祖說，大怒，欲殺嵩'),LIUBEI,DOUBT,XU,DEATH,SUCCESSION,FAMILY,SURRENDER,PING],eventLinks=[dict(label='207年不采纳袭许建议',eventId='wuhuan'),dict(label='刘琮随后举州降曹',eventId='jingzhou-surrender')]),
+ ],
+ careers=[
+ dict(id='early',when='早年，确年未载',title='以名望入仕',office='大将军掾、北军中候',text='少知名、号八俊，曾由大将军掾任北军中候。',refs=[FAME,Q('v006-b0038','以大將軍掾爲北軍中候。')]),
+ dict(id='jingzhou',when='灵帝崩后至关东兵起时',title='入主荆州，军襄阳',office='荆州刺史',text='接替王叡任荆州刺史，合兵驻襄阳；裴注引《战略》记初至时单马入宜城，与蒯氏等商议定州。',refs=[APPOINT,XIANGYANG,YICHENG,Q('v006-b0038-n02','而延中廬人蒯良、蒯越、襄陽人蔡瑁與謀。','司马彪《战略》')]),
+ dict(id='sun-jian',when='192年',title='抗孙坚，受将军牧州之命',office='镇南将军、荆州牧、成武侯，假节',text='袁术使孙坚攻荆州，刘表遣黄祖迎战，孙坚最终战死；其后李傕等为求外援授刘表将军、州牧和侯爵。孙坚卒年另见辨析。',refs=[Q('v046-b0009','初平三年，術使堅征荊州，擊劉表。表遣黃祖逆於樊鄧之間。'),SUN,RANK],eventIds=['sun-jian-xiangyang']),
+ dict(id='grain',when='193年',title='截袁术粮道',office='—',text='《武帝纪》初平四年春记刘表截断袁术粮道，袁术转入陈留，后为曹操击败。记军事行动，不推定刘表本人出现在截粮地点。',refs=[Q('v001-b0020','四年春'),GRAIN,Q('v001-b0020','術引軍入陳留')],eventIds=['yuan-shu-huainan']),
+ dict(id='zhangji',when='张济入荆州时，确年未载',title='纳张济余众',office='—',text='张济攻穰城战死，刘表不受贺而受吊，遣人接纳其军众，众闻之喜而服从。',refs=[Q('v006-b0039','攻穰城，爲流矢所中死。'),Q('v006-b0039','牧受弔，不受賀也。'),ZHANGJI]),
+ dict(id='zhangxiu',when='197—198年',title='联合张绣，遣兵救穰',office='—',text='197年张绣败曹后奔穰，与刘表联合；198年曹操再围张绣，刘表遣兵截其归路，后来联军被击破。',refs=[ZHANGXIU,RELIEF,Q('v001-b0038','繡與表兵合守險'),Q('v001-b0038','乃縱奇兵步騎夾攻，大破之。')],eventIds=['wancheng']),
+ dict(id='guandu',when='200年',title='官渡相持中观望',office='—',text='袁绍求援，刘表答应却未至，也不助曹操；遣韩嵩往观虚实，韩嵩回后劝归曹、送子为质，刘表疑其受曹操指使。',refs=[WAIT,Q('v006-b0040','乃遣嵩詣太祖以觀虛實。'),Q('v006-b0040','表疑嵩反爲太祖說，大怒，欲殺嵩')]),
+ dict(id='changsha',when='官渡相持前后，确年未载',title='攻并张羡父子',office='—',text='桓阶传将张羡举长沙等郡拒表置于官渡相持期间；本传记围攻连年，张羡病死后又攻并其子，收零陵、桂阳。不可把整个过程压成单年战役。',refs=[Q('v022-b0002','後太祖與袁紹相拒於官渡'),Q('v022-b0002','乃舉長沙及旁三郡以拒表'),ZHANGXIAN,CHANGSHA,EXTEND]),
+ dict(id='school',when='平定州界后，确年未载',title='注引记开学官、求儒士',office='—',text='裴注引《英雄记》记州界群寇既尽后开立学官，博求儒士，使綦毋闿、宋忠等撰五经章句。',refs=[Q('v006-b0039-n03','州界羣寇旣盡','《英雄记》'),SCHOOL]),
+ dict(id='liubei',when='刘备南投时，确年未载',title='郊迎刘备，又加防范',office='—',text='以宾礼迎刘备，增其兵、使屯新野；荆州豪杰日益归刘备后又怀疑防范，厚待与信用不宜混同。',refs=[LIUBEI,DOUBT]),
+ dict(id='wuhuan',when='207年',title='未采纳袭许建议',office='—',text='曹操北征乌丸时，刘备劝袭许，刘表未采用。是未实施的建议，不标刘表或刘备到了许。',refs=[XU],eventIds=['wuhuan']),
+ dict(id='death',when='208年',title='病卒，继承分裂后举州降曹',office='—',text='曹操南征未至，刘表病死；此前出刘琦为江夏太守，刘琮被奉为嗣，兄弟成仇。刘琮继位后举州降曹，属于刘表身后的结局。',refs=[DEATH,FAMILY,SURRENDER],eventIds=['jingzhou-surrender']),
+ ],
+ trajectory=dict(atlasPerson='liubiao',phases=[
+ dict(id='establish',title='入荆与立足',when='灵帝崩后至192年',span=(189,192),careers=['early','jingzhou','sun-jian'],atlasStops=[0]),
+ dict(id='alliances',title='制袁与联张',when='193—198年',span=(193,198),careers=['grain','zhangji','zhangxiu'],atlasStops=[]),
+ dict(id='jianghan',title='观望与经营',when='官渡前后，确年未载',span=(200,203),careers=['guandu','changsha','school'],atlasStops=[1]),
+ dict(id='succession',title='用人与继承',when='刘备来投至208年',span=(201,208),careers=['liubei','wuhuan','death'],atlasStops=[]),
+ ]),
+ records=[
+ dict(section='civil',when='张济入荆州时，确年未载',title='不贺敌死，招纳余众',category='安抚军众',careerRef='zhangji',text='刘表将张济之死视为主人未尽礼的结果，表示受吊而不受贺，随后接纳其众；本传明记众喜而服从。',refs=[Q('v006-b0039','濟以窮來，主人無禮'),Q('v006-b0039','牧受弔，不受賀也。'),ZHANGJI]),
+ dict(section='civil',when='平定州界后，确年未载',title='兴学与章句整理',category='文教建设',careerRef='school',text='《英雄记》记设置学官、广求儒士并组织撰五经章句，说明有制度与典籍建设；材料没有记其长期成效，不另作夸大。',refs=[SCHOOL]),
+ dict(section='military',when='192年',title='挡住孙坚夺州',category='守境抗击',careerRef='sun-jian',text='袁术借孙坚之兵攻荆州，刘表使黄祖迎战；孙坚战死、其军败，袁术未能胜表。属于刘表势力守境的结果，不改写为刘表亲射孙坚。',refs=[Q('v046-b0009','表遣黃祖逆於樊鄧之間。'),SUN]),
+ dict(section='military',when='官渡前后，确年未载',title='并长沙，南收零桂',category='区域兼并',careerRef='changsha',text='围张羡连年不下，待其病死后再攻并其子，向南收取零陵、桂阳；成果与长期受阻一并保留。',refs=[ZHANGXIAN,EXTEND]),
+ dict(section='setback',when='200年',title='应援而不至',category='联盟抉择',careerRef='guandu',text='答应袁绍求援而不出，也未归曹；韩嵩、刘先指出不能中立、两怨可能汇集，刘表仍狐疑。',refs=[WAIT,Q('v006-b0040','將軍不得中立矣。'),Q('v006-b0040','表狐疑')]),
+ dict(section='setback',when='200年前后',title='疑韩嵩而刑杀随行者',category='猜忌用人',careerRef='guandu',text='韩嵩回使后称说曹操，刘表疑其怀二心，欲杀韩嵩，并拷杀随行者；正文以此说明外儒雅而内多疑。',refs=[Q('v006-b0040','大怒，欲殺嵩，考殺隨嵩行者'),Q('v006-b0040','表雖外皃儒雅，而心多疑忌')]),
+ dict(section='setback',when='207年',title='不能充分任用刘备',category='用人失机',careerRef='wuhuan',text='虽厚待增兵，却因豪杰归附而暗加防范；曹操北征时又不采用刘备袭许之议。是否实施即可成功，书中没有保证。',refs=[LIUBEI,DOUBT,XU]),
+ dict(section='setback',when='208年前后',title='偏爱少子，继承生隙',category='继承安排',careerRef='death',text='刘表与妻偏爱少子刘琮，刘琦出任江夏太守，兄弟互为仇隙；刘表死后刘琮继立、举州降曹。',refs=[SUCCESSION,FAMILY,SURRENDER]),
+ ],
+ assessment=[dict(title='陈寿：外宽内忌，好谋无决',text='陈寿先承认刘表、袁绍的威容与当世名声，随后共同指出多谋无决、不能用才、偏爱废嫡，并把后嗣倾覆与这些选择相连。',refs=[Q('v006-b0046','袁紹、劉表咸有威容、器觀，知名當世。'),PING,Q('v006-b0046','廢嫡立庶，舍禮崇愛，至于後嗣顛蹙，社稷傾覆')])],
+ relations=[
+ dict(category='部属',name='蒯越、蒯良',label='入荆时的谋议者',text='《战略》记刘表初至宜城延两人与蔡瑁商议，随后用蒯越之计平宗贼。',refs=[YICHENG,Q('v006-b0038-n02','而延中廬人蒯良、蒯越、襄陽人蔡瑁與謀。','司马彪《战略》'),RECRUIT]),
+ dict(category='敌对',name='孙坚',personId='sun-jian',label='袁术遣来的攻州者',text='孙坚奉袁术之意攻州，战死后其军败，未能夺荆州。',refs=[Q('v006-b0039','使堅攻表。'),SUN]),
+ dict(category='邻境',name='袁绍',personId='yuanshao',label='相结而未实援',text='北与袁绍相结，官渡时答应援助却没有出兵。',refs=[Q('v006-b0039','然北與袁紹相結。'),WAIT]),
+ dict(category='邻境',name='袁术',personId='yuan-shu',label='争荆州并被截粮',text='袁术使孙坚攻表，后来刘表截断其粮道。',refs=[Q('v006-b0039','欲襲奪表州，使堅攻表。'),GRAIN]),
+ dict(category='邻境',name='张绣',personId='zhang-xiu',label='穰城的军事合作者',text='张绣与刘表联合，曹操围穰时刘表遣兵援救，联军后来战败。',refs=[ZHANGXIU,RELIEF,Q('v001-b0038','大破之。')]),
+ dict(category='部属',name='刘备',personId='liubei',label='厚待而多疑的客将',text='郊迎、增兵、使屯新野，又暗加防范；北袭许的建议未被采用。',refs=[LIUBEI,DOUBT,XU]),
+ dict(category='部属',name='韩嵩',label='使曹后遭猜忌',text='奉使曹操处察虚实，回后劝归曹、送子入质，反被疑为曹操游说。',refs=[Q('v006-b0040','乃遣嵩詣太祖以觀虛實。'),Q('v006-b0040','說表遣子入質。表疑嵩反爲太祖說')]),
+ dict(category='亲族',name='刘琦、刘琮',label='继承争执的两子',text='刘琦出为江夏太守，刘琮被奉为嗣，两人形成仇隙。',refs=[FAMILY]),
+ ],
+ readingNotes=[
+ dict(title='孙坚卒年不能消去分歧',text='《孙坚传》正文记初平三年，即192年；其裴注《英雄记》另作初平四年。事件沿正文192年挂接，保留异说，不将注引日期当作统一结论。',refs=[Q('v046-b0009','初平三年，術使堅征荊州'),Q('v046-b0009-n01','英雄記曰：「堅以初平四年正月七日死。」','《英雄记》')]),
+ dict(title='长沙之叛与官渡相持',text='本传把攻张羡接在纳张济之后，未给年号；《桓阶传》却把起兵拒表置于官渡相持，并记刘表急攻。故这里只标官渡前后、过程确年未载，不从段落相邻硬定早年。',refs=[ZHANGXIAN,Q('v022-b0002','後太祖與袁紹相拒於官渡'),CHANGSHA]),
+ dict(title='“应绍”不等于已经出援',text='《桓阶传》说刘表“举州以应绍”，本传更具体写许援不至。二者可分别说明政治响应和实际出兵，不能据前一句画出刘表北赴官渡的路线。',refs=[Q('v022-b0002','表舉州以應紹。'),WAIT]),
+ ],glossary=[('假节','授予持节行使一定军政权力。'),('学官','设置以教学、经学传授为务的机构或官职。')],
+ sourceScope='以卷六《刘表传》正文及全部裴注为基础，交叉核对卷一《武帝纪》、卷二十二《桓阶传》、卷三十二《先主传》与卷四十六《孙坚传》。兴学、单马入宜城等注明注引出处；长沙系年和孙坚卒年分歧列入辨析。本页不声称穷尽全书所有提及刘表之处。',
+)

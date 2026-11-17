@@ -1,0 +1,113 @@
+"""张鲁：汉中的宗教组织、地方统治与归曹。"""
+from profile_v3 import Q
+ORIGIN=Q('v008-b0047','張魯字公祺，沛國豐人也。')
+LINE=Q('v008-b0047','陵死，子衡行其道。衡死，魯復行之。')
+ZHANG=Q('v008-b0047','益州牧劉焉以魯為督義司馬，與別部司馬張脩將兵擊漢中太守蘇固')
+KILL=Q('v008-b0047','魯遂襲脩殺之，奪其眾。')
+BREAK=Q('v008-b0047','焉死，子璋代立，以魯不順，盡殺魯母家室。')
+RULE=Q('v008-b0047','魯遂據漢中，以鬼道教民，自號「師君」。')
+PRIEST=Q('v008-b0047','不置長吏，皆以祭酒為治，民夷便樂之。')
+FAITH=Q('v008-b0047','皆教以誠信不欺詐，有病自首其過')
+SHELTER=Q('v008-b0047','又置義米肉，縣於義舍，行路者量腹取足')
+PARDON=Q('v008-b0047','犯法者，三原，然後乃行刑。')
+DURATION=Q('v008-b0047','雄據巴、漢垂三十年。')
+OFFICE=Q('v008-b0048','遂就寵魯為鎮民中郎將，領漢寧太守，通貢獻而已。')
+WANG=Q('v008-b0048','群下欲尊魯為漢寧王。')
+YAN=Q('v008-b0048','原且不稱，勿為禍先。')
+FOLLOW=Q('v008-b0048','魯從之。')
+REFUGE=Q('v008-b0048','韓遂、馬超之亂，關西民從子午谷奔之者數万家。')
+HELP=Q('v025-b0012','而張魯又遣大將楊昂以助之')
+MACH=Q('v036-b0014','進退狼狽，乃奔漢中依張魯。')
+MACHGO=Q('v036-b0014','魯不足與計事，內懷於邑，聞先主圍劉璋於成都，密書請降。')
+WEDDING=Q('v036-b0014-n02','張魯以為都講祭酒，欲妻之以女','《典略》')
+HALT=Q('v036-b0014-n02','有人若此不愛其親，焉能愛人？','《典略》')
+STOP=Q('v036-b0014-n02','魯乃止。','《典略》')
+WAR=Q('v008-b0049','建安二十年，太祖乃自散關出武都征之，至陽平關。')
+WEI=Q('v008-b0049','魯欲舉漢中降，其弟衛不肯，率眾數万人拒關堅守。')
+LOST=Q('v001-b0098','衞等夜遁，魯潰奔巴中。')
+YAN2=Q('v008-b0054','不如依（杜灌）〔杜濩〕赴樸胡相拒，然後委質，功必多。')
+FLEE=Q('v008-b0054','於是乃奔南山入巴中。')
+STORE=Q('v008-b0054','今之走，避銳鋒，非有惡意。寶貨倉庫，國家之有。')
+SEAL=Q('v008-b0054','遂封藏而去。太祖入南鄭，甚嘉之。')
+RETURN=Q('v043-b0002','魯已還南鄭，北降曹公。')
+DATE=Q('v001-b0102','十一月，魯自巴中將其餘衆降。')
+SURRENDER=Q('v008-b0054','魯盡將家出，太祖逆拜魯鎮南將軍，待以客禮，封閬中侯，邑萬戶。')
+HONOR=Q('v008-b0054','封魯五子及閻圃等皆為列侯。為子彭祖取魯女。')
+DEATH=Q('v008-b0055','魯薨，諡之曰原侯。子富嗣。')
+PING=Q('v008-b0057','燕、繡、魯舍群盜，列功臣，去危亡，保宗祀，則於彼為愈焉。')
+PEI=Q('v008-b0054-n01','張魯雖有善心，要為敗而後降，今乃寵以萬戶，五子皆封侯，過矣。','裴松之案')
+XI=Q('v008-b0054-n01','今閻圃諫魯勿王，而太祖追封之，將來之人孰不思順！','习凿齿论')
+DIAN=Q('v008-b0047-n01','及魯在漢中，因其民信行脩業，遂增飾之。','《典略》')
+DIST=Q('v008-b0047-n01','張脩應是張衡，非《典略》之失，則傳寫之誤。','《典略》；裴松之案')
+CUSTOM=Q('v008-b0047-n01','有小過者，當治道百步，則罪除；又依月令，春夏禁殺；又禁酒。','《典略》')
+QIU=Q('v036-b0017-n01','以秋付魯，魯自手殺之。','《典略》')
+PROFILE=dict(id='zhang-lu',tier='B',reading=['008'],syncLifespan=True,
+ lead='张鲁承家传道法，受刘焉任命攻汉中，袭杀张脩并众，后与刘璋交恶而自据巴汉。以祭酒组织统治，设义舍、宽免初犯；215年曹操破关后退入巴中，封藏府库，终率家归降，受封阆中侯。',role='汉中师君、降曹的地方首领',
+ facts=[
+ dict(key='hometown',label='籍贯',value='沛国丰',text='字公祺，沛国丰人；不由籍贯补造出生年或早年赴蜀路线。',refs=[ORIGIN]),
+ dict(key='lifespan',label='生卒年',value='生卒年未详（215年降曹后卒）',text='本传明确建安二十年归曹，继叙卒、谥原侯，未记卒年与享年。',refs=[WAR,SURRENDER,DEATH]),
+ dict(key='identity',label='主要身份',value='据汉中的师君，后归曹操',text='据汉中自号师君，以祭酒为治；汉廷授镇民中郎将、领汉宁太守，归曹后改受镇南将军。',refs=[RULE,PRIEST,OFFICE,SURRENDER]),
+ dict(key='office',label='最高官职',value='镇南将军',text='刘焉先任督义司马，汉廷后授镇民中郎将、领汉宁太守；215年归曹，曹操逆拜镇南将军。',refs=[ZHANG,OFFICE,SURRENDER]),
+ dict(key='title',label='最高爵位',value='阆中侯，邑万户',text='归曹时封阆中侯、邑万户，五子及阎圃等亦封列侯；封邑阆中不当作本人到达证据。',refs=[SURRENDER,HONOR]),
+ dict(key='posthumous',label='身后称号',value='原侯',text='卒谥原侯，子张富嗣。',refs=[DEATH]),
+ dict(key='deeds',label='代表事迹',items=['据有汉中','祭酒为治','义舍供食','止称汉宁王','封藏归曹'],text='宗教组织、地方治理与降曹为主要线索；群下曾欲尊为汉宁王，张鲁听谏而止，未曾据此称王。',refs=[RULE,PRIEST,SHELTER,WANG,YAN,FOLLOW,SEAL,SURRENDER]),
+ ],
+ intro=[
+ dict(title='家传道法与夺据汉中',text='张鲁字公祺，沛国丰人。正文记祖父张陵在蜀传道、父张衡继行，张鲁再承其道。他受刘焉任命为督义司马，与张脩领兵击汉中太守苏固，随后袭杀张脩、夺其部众。刘焉死后，刘璋因张鲁不服统属，杀其母与家室，张鲁遂独据汉中，自号师君。宗教传承与袭杀并众都在正文，不能只以教化首领的形象概括。',refs=[ORIGIN,LINE,ZHANG,KILL,BREAK,RULE],eventLinks=[dict(label='受刘焉任命',eventId='liu-yan-yizhou'),dict(label='刘焉死后',eventId='liu-zhang-succession')]),
+ dict(title='祭酒组织与地方秩序',text='张鲁不设通常长吏，以祭酒组织治理，让信众诚信不欺诈、有病自首其过；祭酒又设义舍，放米肉供行路者取食，犯法者三次宽原后才行刑。本传说民夷便乐，汉廷无力征讨，授他镇民中郎将、领汉宁太守，维持贡献。部下欲拥汉宁王，阎圃劝其不必称王招祸，他接受建议；关西战乱时又有数万家经子午谷投来。',refs=[PRIEST,FAITH,SHELTER,PARDON,OFFICE,WANG,YAN,FOLLOW,REFUGE]),
+ dict(title='汉中战争与退入巴中',text='215年曹操进攻汉中，张鲁原想举汉中降，弟张卫却不同意，率众据阳平关拒守。关破之后，阎圃认为仓促归降功轻，劝先依杜濩、樸胡，再行委质，张鲁因而南奔巴中。他阻止左右烧毁宝货仓库，说明只是避锋，并无恶意，将府库封存而去；曹操进入南郑后嘉许此举，遣人慰喻。守阳平的是张卫，不应把曹军的行军与守关位置都移给张鲁。',refs=[WAR,WEI,YAN2,FLEE,STORE,SEAL,Q('v008-b0054','又以魯本有善意，遣人慰喻。')]),
+ dict(title='归曹受封与评价分歧',text='《武帝纪》将归降记在同年十一月，黄权传补记张鲁已还南郑、北降曹操。他带全家归命，获镇南将军、阆中侯、邑万户，五子与阎圃等也封侯，女儿嫁曹操之子彭祖。死后谥原侯，张富继爵，确切卒年未载。陈寿着眼去危亡、保宗祀；裴松之却认为败后才降而赏过厚，习凿齿则从奖劝归顺解释封赏，三种评价各有着眼。',refs=[DATE,RETURN,SURRENDER,HONOR,DEATH,PING,PEI,XI],eventLinks=[dict(label='归降',eventId='zhanglu-surrender')]),
+ ],
+ careers=[
+ dict(id='lineage',when='早年，确年未载',title='承张衡所传道法',office='本书未载此时官职',text='祖父张陵传道，父张衡继行，张鲁再承行其道。鹄鸣山是祖父学道处，不据此断言张鲁本人也在该山活动。',refs=[LINE,Q('v008-b0047','祖父陵，客蜀，學道鵠鳴山中')]),
+ dict(id='hanzhong',when='刘焉在益州时，194年刘焉卒前，确年未载',title='攻汉中，袭杀张脩并众',office='督义司马',text='受刘焉命，与张脩领兵攻苏固，随后袭杀张脩、夺其众；刘焉传又记住汉中、断谷阁、杀汉使。',refs=[ZHANG,KILL,Q('v031-b0005','故焉遣魯為督義司馬，住漢中，斷絕谷閣，殺害漢使。')],eventIds=['liu-yan-yizhou']),
+ dict(id='break',when='194年刘焉卒后，交恶确年未载',title='与刘璋决裂',office='自号师君',text='刘焉卒、刘璋继位后，因不承顺而母及家室被杀，遂据汉中；交恶的具体年月不详。',refs=[BREAK,RULE,Q('v031-b0007','興平元年，癰疽發背而卒。')],eventIds=['liu-zhang-succession']),
+ dict(id='govern',when='据汉中时，确年未载',title='以祭酒为治，设义舍与宽刑',office='师君',text='以祭酒代长吏，教诚信、病者首过；义舍供食，犯法三原后行刑。本传称民夷便乐，不能替代对每一措施实际效果的逐项考察。',refs=[PRIEST,FAITH,SHELTER,PARDON]),
+ dict(id='han-office',when='汉末，确年未载',title='受汉廷官号，通贡献',office='镇民中郎将、领汉宁太守',text='汉廷无力征讨，授官维持贡献；不是张鲁此时入朝或汉廷全面恢复当地控制的记载。',refs=[Q('v008-b0048','漢末，力不能征'),OFFICE]),
+ dict(id='no-king',when='据汉中时，确年未载',title='听阎圃谏，不称汉宁王',office='未称王',text='民得玉印，群下欲尊其为汉宁王；阎圃认为现有权势已足，不必称王先招祸，张鲁从之。',refs=[Q('v008-b0048','民有地中得玉印者'),WANG,YAN,FOLLOW]),
+ dict(id='refugees',when='韩遂、马超之乱时，确年未载',title='关西数万家奔汉中',office='—',text='关西民从子午谷奔汉中数万家。投奔方向、道路有明文，不能由此添加张鲁本人到子午谷或关西的站点。',refs=[REFUGE]),
+ dict(id='machao',when='马超在陇上与来汉中时，214年以前',title='遣兵助马超，后收留马超',office='—',text='杨阜传记派杨昂助马超；马超后来败奔汉中，又因不足共计事转投刘备。注引《典略》另记张鲁欲以女妻之，听人劝而止。',refs=[HELP,MACH,MACHGO,WEDDING,HALT,STOP]),
+ dict(id='yangping',when='215年',title='欲降曹操，张卫据关拒守',office='—',text='曹操至阳平关，张鲁欲举汉中降，张卫不肯，率众拒关；战败后张鲁退走。本人未见在关城统战的明确记载。',refs=[WAR,WEI,LOST]),
+ dict(id='bazhong',when='215年阳平关破后',title='封藏府库，南奔巴中',office='—',text='听阎圃建议先依杜濩、樸胡，拒绝烧毁仓库，封藏而去，奔南山入巴中。巴中指当时巴地范围，不直接套今巴中市。',refs=[YAN2,STORE,SEAL,FLEE]),
+ dict(id='return',when='215年归降前，确月未载',title='由巴中还南郑',office='—',text='黄权传记刘备使黄权迎张鲁，但张鲁已还南郑、北降曹操，补出从巴中返回汉中这一关键回转。',refs=[Q('v043-b0002','率諸將迎魯，魯已還南鄭，北降曹公。')]),
+ dict(id='surrender',when='215年十一月',title='率家归曹，受封万户侯',office='镇南将军、阆中侯',text='武帝纪记十一月自巴中率余众归降；本传记尽将家出，受镇南将军、阆中侯，五子及阎圃等封列侯，并与曹氏结亲。两传分别补充归程与归降起点。',refs=[DATE,SURRENDER,HONOR,RETURN],eventIds=['zhanglu-surrender']),
+ dict(id='death',when='215年降曹后，卒年未载',title='卒谥原侯，张富继爵',office='谥原侯',text='本传未载确切卒年月、卒地或享年，仅记谥原侯、子张富嗣。',refs=[DEATH]),
+ ],
+ trajectory=dict(atlasPerson='zhanglu',phases=[
+ dict(id='rise',title='入汉中与决裂',when='刘焉时至194年以后，部分确年未载',span=(180,195),careers=['lineage','hanzhong','break'],atlasStops=[0]),
+ dict(id='rule',title='师君据巴汉',when='据汉中时至214年以前，确年未载',span=(194,214),careers=['govern','han-office','no-king','refugees','machao'],atlasStops=[]),
+ dict(id='retreat',title='关破入巴中',when='215年',span=(215,215),careers=['yangping','bazhong'],atlasStops=[1]),
+ dict(id='surrender',title='还南郑归曹',when='215年至卒年未载',span=(215,230),careers=['return','surrender','death'],atlasStops=[2]),
+ ]),
+ records=[
+ dict(section='civil',when='据汉中时，确年未载',title='祭酒组织代地方长吏',category='地方组织',careerRef='govern',text='以祭酒治理而不设通常长吏，正文称民夷便乐；这说明一种宗教组织与地方统治相合的形式，不等于本书证明其每项教说。',refs=[RULE,PRIEST]),
+ dict(section='civil',when='据汉中时，确年未载',title='义舍供食与三原后刑',category='供给与刑罚',careerRef='govern',text='义舍为行路者供米肉，犯罪者三次宽原后再行刑。供食与宽刑是具体措施；正文的过取受病之说属于鬼道信念，不能当成已验证的因果。',refs=[SHELTER,PARDON,Q('v008-b0047','若過多，鬼道輒病之。')]),
+ dict(section='civil',when='称王建议提出时，确年未载',title='接受阎圃劝止称王',category='政治克制',careerRef='no-king',text='面对群下尊王的建议，听阎圃认为不必先招祸而止；是明确未实行的称号选择，不能改成汉宁王的既成身份。',refs=[WANG,YAN,FOLLOW]),
+ dict(section='military',when='刘焉在益州时，194年刘焉卒前',title='攻苏固后袭杀张脩并众',category='军事夺权',careerRef='hanzhong',text='受命参与攻汉中，旋以袭杀同军张脩取得其众。扩大实力的途径有据，评价时须保留袭杀同伴的暴力性质。',refs=[ZHANG,KILL]),
+ dict(section='military',when='刘璋继位后，确年未载',title='抵抗刘璋屡次攻军',category='根据地防御',careerRef='break',text='刘璋传记屡遣庞羲等攻张鲁，数为所破，确证张鲁一方抵御攻军的胜果；本书未逐次详记张鲁亲自指挥的地点与战术，不把部众胜果扩写为本人逐战亲征。',refs=[Q('v031-b0009','璋累遣龐羲等攻魯，〔數為〕所破。')]),
+ dict(section='setback',when='刘璋继位后，确年未载',title='与益州决裂，母家遇害',category='统属冲突',careerRef='break',text='刘璋以其不顺杀母及家室，两家结仇；本传记后据汉中，刘璋传又记屡遣军攻鲁败。不能只用独立自治的结果掩去家属被杀与长期交兵。',refs=[BREAK,RULE,Q('v031-b0009','璋累遣龐羲等攻魯，〔數為〕所破。')]),
+ dict(section='setback',when='215年',title='欲降而张卫拒关，败后南退',category='统率分歧',careerRef='yangping',text='张鲁欲降、张卫坚持拒守，决定并未一致；曹军破关后张鲁退入巴中。关防失败不能全部写成张鲁亲自在关上指挥失误。',refs=[WEI,LOST,FLEE]),
+ dict(section='setback',when='215年',title='败后降曹而受厚赏的争议',category='封赏争议',careerRef='surrender',text='封藏府库体现善意，但裴松之仍认为败后才降、万户与五子封侯过厚；习凿齿则重在奖顺。两种判断都须指明论者。',refs=[SEAL,SURRENDER,HONOR,PEI,XI]),
+ dict(section='setback',when='降曹后，确年未载',title='注引《典略》记杀马秋',category='暴力争议',text='马超传注引《典略》记马超留依张鲁的儿子马秋被曹操付与张鲁，张鲁亲手杀之。这是注引材料，不能因陈寿说保宗祀便略去其针对他人家属的暴力。',refs=[Q('v036-b0017-n01','其庶妻董及子秋，留依張魯。','《典略》'),QIU,PING]),
+ ],
+ assessment=[dict(title='陈寿：去危亡，保宗祀',text='陈寿将张鲁与张燕、张绣并评，认为他们舍群盗、列功臣，较被灭者能去危亡、保宗祀。这是结局比较，不能当成对治理与每一行为的全盘褒奖。',refs=[PING,KILL])],
+ relations=[
+ dict(category='亲族',name='张陵、张衡',label='祖父、父亲与道法传承',text='正文记祖父张陵、父张衡相继传道，张鲁复行其道；鹄鸣山学道的主语是张陵。',refs=[LINE,Q('v008-b0047','祖父陵，客蜀，學道鵠鳴山中')]),
+ dict(category='旧主',name='刘焉',personId='liu-yan',label='任命并遣攻汉中',text='刘焉任督义司马、命与张脩攻苏固，刘焉传又记遣住汉中断道。',refs=[ZHANG,Q('v031-b0005','故焉遣魯為督義司馬，住漢中，斷絕谷閣，殺害漢使。')]),
+ dict(category='敌对',name='张脩',label='同军后遭袭杀',text='原同领军攻苏固，张鲁随后袭杀并其部众。',refs=[ZHANG,KILL]),
+ dict(category='敌对',name='刘璋',personId='liu-zhang',label='继位后交恶',text='因不顺刘璋而母家被杀，长期相敌，刘璋所派攻军屡败。',refs=[BREAK,Q('v031-b0009','璋累遣龐羲等攻魯，〔數為〕所破。')]),
+ dict(category='部属',name='阎圃',label='止称王、谋退后归降',text='先谏不称汉宁王，又劝破关后先退巴中再归降，后来亦封列侯。',refs=[YAN,FOLLOW,YAN2,HONOR]),
+ dict(category='亲族',name='张卫',label='不肯归降的弟弟',text='张鲁欲举汉中降曹，张卫率众拒守阳平关；二人的意向有别。',refs=[WEI]),
+ dict(category='旧识',name='马超',personId='ma-chao',label='援助、收留后转投刘备',text='遣兵助马超，后收留其败后投奔；马超又因不足共计事转投刘备。',refs=[HELP,MACH,MACHGO]),
+ dict(category='君臣',name='曹操',personId='caocao',label='由征讨到受降结亲',text='曹操攻汉中后接纳归降，授官封侯，并为子彭祖娶张鲁女。',refs=[WAR,SURRENDER,HONOR]),
+ ],
+ readingNotes=[
+ dict(title='张脩与张衡不能擅自合成一人',text='正文的张脩是与张鲁共攻汉中、后被袭杀者；《典略》又将五斗米道传授归给张脩，裴松之认为应是张衡、或属传写误。这里保留正文名分与注文疑议，不私自改字合并。',refs=[ZHANG,KILL,DIAN,DIST]),
+ dict(title='“垂三十年”不是可倒推的纪年',text='本传称雄据巴汉垂三十年，又明记215年征讨；刘焉任命与入汉中的确年却未标明。概数不能替代明确起始年，更不能据此造出生年与逐年路线。',refs=[DURATION,ZHANG,WAR]),
+ dict(title='宗教治病观念与史书立场',text='正文把有病首过、过取受病写为其教法，《典略》又说因民信行张脩之业而增饰，并带贬斥立场。可据此研究组织与观念，不能把宗教病因解释转成已证实的医疗结论。',refs=[FAITH,Q('v008-b0047','若過多，鬼道輒病之。'),DIAN,Q('v008-b0047-n01','實無益於治病，但為淫妄','《典略》')]),
+ dict(title='归降起点与返回南郑的交叉记载',text='武帝纪概称十一月自巴中率众降；黄权传细记已还南郑、北降曹操。路线据后者保留巴中至南郑的回转，不把封邑阆中或曹操散关、阳平行程当作张鲁实到。',refs=[DATE,RETURN,SURRENDER,WAR]),
+ dict(title='封赏过厚还是奖劝归顺',text='裴松之认为败后降而五子皆侯过厚，习凿齿则认为追封阎圃能劝后来者思顺。后者是裴注所录评论，注中未标其著作书名，本页不擅题书名。',refs=[PEI,XI]),
+ ],
+ glossary=[('祭酒','本页指张鲁道教组织中领众并治理的称号。'),('三原','三次宽原之后才行刑。'),('委质','交付信物或自表臣服，此处指归降。')],
+ sourceScope='以卷八张鲁本传正文、全部裴注与篇末评语为基础，交叉核对卷一武帝纪、卷二十五杨阜、卷三十一刘二牧、卷三十六马超及卷四十三黄权。张脩名分、归降行程和封赏评价分层列示；不将宗教病因观念写成医学事实。本页不声称穷尽全书所有提及张鲁之处。',
+)

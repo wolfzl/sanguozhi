@@ -1,0 +1,97 @@
+"""吕布：本传正文、裴注与武帝纪交叉核对的 B 类人物卡。"""
+from profile_v3 import Q
+ORIGIN=Q('v007-b0002','呂布字奉先，五原郡九原人也。')
+DING=Q('v007-b0002','布斬原首詣卓，卓以布為騎都尉，甚愛信之，誓為父子。')
+FLY=Q('v007-b0003','布便弓馬，膂力過人，號為飛將。')
+CONFLICT=Q('v007-b0003','嘗小失意，拔手戟擲布。')
+CONCUBINE=Q('v007-b0003','布與卓侍婢私通，恐事發覺，心不自安。')
+KILL=Q('v007-b0004','布遂許之，手刃刺卓。')
+HONOR=Q('v007-b0004','允以布為（奮威）〔奮武〕將軍，假節，儀比三司，進封溫侯，共秉朝政。')
+ESCAPE=Q('v007-b0004','將數百騎出武關，欲詣袁術。')
+CHANGSHAN=Q('v007-b0005','北詣袁紹，紹與布擊張燕于常山。')
+BREAK=Q('v007-b0005','常與其親近成廉、魏越等陷鋒突陳，遂破燕軍。')
+HENEI=Q('v007-b0005','事露，布走河內，與張楊合。')
+PUYANG=Q('v007-b0008','遂以其衆東迎布爲兖州牧，據濮陽。')
+JUYE=Q('v001-b0027','夏，布將薛蘭、李封屯鉅野，太祖攻之，布救蘭，蘭敗，布走')
+LIUBEI=Q('v007-b0008','布東奔劉備。')
+XIAPI=Q('v007-b0010','備東擊術，布襲取下邳，備還歸布。布遣備屯小沛。布自稱徐州刺史。')
+RESCUE=Q('v007-b0010','便嚴步兵千、騎二百，馳往赴備。')
+SHOT=Q('v007-b0010','布舉弓射戟，正中小支。')
+BREAKMARRIAGE=Q('v007-b0011','女已在塗，追還絕婚，械送韓胤，梟首許市。')
+LEFT=Q('v007-b0011','會使者至，拜布左將軍。')
+ZHANGXUN=Q('v007-b0013','於是暹、奉從之，勳大破敗。')
+ZHONGLI=Q('v007-b0013-n01','到鍾離，大獲而還。','《英雄记》')
+JURETURN=Q('v007-b0013-n01','布不能拔，引還下邳。','《英雄记》')
+WAR=Q('v007-b0014','建安三年，布復叛爲術，遣高順攻劉備於沛，破之。')
+DEATH=Q('v007-b0014','於是縊殺布。布與宮、順等皆梟首送許，然後葬之。')
+PING=Q('v007-b0028','評曰：呂布有虓虎之勇，而無英奇之略，輕狡反覆，唯利是視。')
+PROFILE=dict(
+ id='lv-bu',tier='B',reading=['007'],
+ lead='吕布字奉先，五原九原人，以弓马勇力著称。先杀丁原归董卓，后与王允合谋诛董；辗转投奔后入兖州与曹操争夺，失败再据徐州，曾射戟解刘备之围。反复变更联盟与内部离心，使他最终在198年下邳被俘缢杀。',role='辗转争据兖徐的温侯',
+ facts=[
+ dict(key='hometown',label='籍贯',value='五原郡九原',text='本传记名布、字奉先、五原郡九原人。',refs=[ORIGIN]),
+ dict(key='identity',label='主要身份',value='汉末将领、割据首领',text='曾与王允共秉朝政，后被迎为兖州牧，又自称徐州刺史；其政治位置随兵力与联盟变动。',refs=[HONOR,PUYANG,XIAPI]),
+ dict(key='office',label='最高官职',value='左将军；曾任奋武将军',text='王允授奋武将军、假节，仪比三司；在徐州时又受拜左将军，兖州牧与自称徐州刺史分别注明。',refs=[HONOR,LEFT,PUYANG,XIAPI]),
+ dict(key='title',label='最高爵位',value='温侯',text='董卓时封都亭侯，诛卓后进封温侯。',refs=[Q('v007-b0003','稍遷至中郎將，封都亭侯。'),HONOR]),
+ dict(key='posthumous',label='身后称号',value='本书未载谥号',text='本传记缢杀后与陈宫、高顺等首级送许，随后安葬，未载追谥。温侯是生前封爵。',refs=[DEATH,HONOR]),
+ dict(key='deeds',label='代表事迹',items=['参与诛董','常山破燕','争据兖州','射戟解围'],text='参与杀董卓，在常山击破张燕，争夺兖州，并以射戟促使纪灵与刘备罢兵。',refs=[KILL,BREAK,PUYANG,SHOT,Q('v007-b0010','然後各罷。')]),
+ ],
+ intro=[
+ dict(title='勇力与两次改主',text='吕布以弓马便利、膂力过人著称，号为飞将，起初深受丁原亲待，却受董卓引诱杀丁原，归董后又与之誓为父子。董卓常让他自卫，却曾因小事向他掷戟；加上私通侍婢的恐惧，吕布转而接受王允之谋，亲手刺董。这里既有董卓对亲信的威胁，也有吕布自身的不安，不能只用勇武或父子名分解释这一转折。',refs=[FLY,Q('v007-b0002','以布為主簿，大見親待。'),Q('v007-b0002','卓以布見信於原，誘布令殺原。'),DING,Q('v007-b0003','行止常以布自衛。'),CONFLICT,CONCUBINE,KILL],eventLinks=[dict(label='亲手刺董',eventId='dong-zhuo-assassination')]),
+ dict(title='从流徙到争州',text='诛董后吕布受封温侯，与王允共秉朝政；但李傕等攻陷长安，他只得带数百骑出武关。袁术拒收，他又北投袁绍，在常山突阵破张燕，却因求兵与部众钞掠招忌，脱身后投张杨。194年张邈、陈宫乘曹操东征迎他入兖州，濮阳争战延续百余日；翌年失利，吕布再向东投刘备。取得一州没有使他获得稳定根基。',refs=[HONOR,ESCAPE,Q('v007-b0005','術惡其反覆，拒而不受。'),CHANGSHAN,BREAK,Q('v007-b0005','而求益兵眾，將士鈔掠，紹患忌之。'),HENEI,PUYANG,Q('v007-b0008','相持百餘日。'),LIUBEI],eventLinks=[dict(label='迎他入兖州',eventId='yanzhou-struggle')]),
+ dict(title='徐州的联盟与败亡',text='吕布乘刘备与袁术交战袭取下邳，自称徐州刺史，又因不愿陷入袁术包围而救刘备，以射戟促成罢兵；他与刘备的关系并非一直敌对。此后他受陈珪劝说，与袁术绝婚，转而接受汉廷左将军之命，却于198年再为袁术攻刘备。曹操围下邳时，求救不得、部众离心，诸将投降，他登白门楼后被俘缢杀。陈寿以有勇无略、轻狡反复概括其失败，指向的是持续的决策与统御问题。',refs=[XIAPI,Q('v007-b0010','吾爲在術圍中，不得不救也。'),RESCUE,SHOT,BREAKMARRIAGE,LEFT,WAR,Q('v007-b0014','太祖塹圍之三月，上下離心'),Q('v007-b0014','布與其麾下登白門樓。'),DEATH,PING]),
+ ],
+ careers=[
+ dict(id='early',when='早年至189年',title='从丁原到董卓',office='主簿、骑都尉',text='原为丁原主簿，董卓入京后诱使他杀丁原；归董卓，受拜骑都尉并誓为父子。',refs=[Q('v007-b0002','以布為主簿，大見親待。'),DING]),
+ dict(id='kill-dong',when='192年四月',title='诛董卓，与王允秉政',office='奋武将军、假节、温侯',text='因受董卓威胁与自身不安，接受王允之谋，亲手刺董，受将军与温侯之封。',refs=[CONFLICT,CONCUBINE,KILL,HONOR,Q('v006-b0008','三年四月')],eventIds=['dong-zhuo-assassination']),
+ dict(id='escape',when='192年',title='长安失守，出武关',office='—',text='李傕等反攻长安，吕布不能拒，只带数百骑出武关欲投袁术；袁术因其反复拒收。',refs=[Q('v007-b0004','布不能拒，傕等遂入長安。'),ESCAPE,Q('v007-b0005','術惡其反覆，拒而不受。')],eventIds=['changan-counterattack']),
+ dict(id='changshan',when='出长安后，确年未载',title='投袁绍，常山破张燕',office='—',text='北投袁绍，与其在常山攻张燕，率成廉、魏越等陷阵破敌；随后求益兵众，部下钞掠，袁绍转而忌惮。',refs=[CHANGSHAN,BREAK,Q('v007-b0005','而求益兵眾，將士鈔掠，紹患忌之。')]),
+ dict(id='henei',when='入兖州前，确年未载',title='避袁绍追杀，走河内',office='—',text='察觉袁绍欲害自己，求去后又遭夜袭，脱逃到河内与张杨会合。',refs=[Q('v007-b0005','遣壯士夜掩殺布，不獲。'),HENEI]),
+ dict(id='yanzhou',when='194年',title='入兖州，据濮阳争战',office='被迎为兖州牧',text='张邈、陈宫等迎吕布据濮阳，与回师的曹操相持百余日，随后因旱蝗缺粮东屯山阳。',refs=[Q('v007-b0008','興平元年'),PUYANG,Q('v007-b0008','相持百餘日。'),Q('v007-b0008','布東屯山陽。')],eventIds=['yanzhou-struggle']),
+ dict(id='defeat-yan',when='195年',title='巨野等地败战，东奔刘备',office='—',text='在定陶、巨野等地与曹操交战失利；救薛兰失败，后再与陈宫战败，终于东奔刘备。',refs=[Q('v001-b0027','會呂布至，又擊破之。'),JUYE,Q('v001-b0027','布復從東緍與陳宮將萬餘人來戰'),LIUBEI]),
+ dict(id='take-xiapi',when='196年',title='袭取下邳，安置刘备于小沛',office='自称徐州刺史',text='乘刘备东击袁术袭下邳，刘备归来后依附他，被遣屯小沛；本年据《先主传》建安元年记载。',refs=[XIAPI,Q('v032-b0005','是歲建安元年也。先主與術相持經月，呂布乘虛襲下邳。')],eventIds=['lv-bu-xuzhou']),
+ dict(id='shot',when='196年',title='赴小沛，以射戟解围',office='—',text='纪灵率军攻刘备，吕布为避免袁术北连太山、合围自己，驰赴小沛，射中戟支令双方解兵。',refs=[Q('v007-b0010','術若破備，則北連太山諸將'),RESCUE,Q('v007-b0010','布於沛西南一里安屯'),SHOT,Q('v007-b0010','然後各罷。')]),
+ dict(id='marriage',when='197年',title='绝婚袁术，受左将军',office='左将军',text='袁术欲称帝并迎娶吕布女，吕布听陈珪之劝追回女儿，拘韩胤送许；汉使随后拜他为左将军。',refs=[BREAKMARRIAGE,LEFT,Q('v001-b0036','袁術欲稱帝於淮南，使人告呂布。布收其使，上其書。')],eventIds=['yuan-shu-emperor']),
+ dict(id='zhangxun',when='197年',title='离间韩暹、杨奉，破张勋',office='—',text='袁术遣张勋等攻来，吕布采纳陈珪之策，使韩暹、杨奉倒戈，共破张勋军。',refs=[Q('v007-b0013','布用珪策，遣人說暹、奉，使與己并力共擊術軍'),ZHANGXUN]),
+ dict(id='zhongli',when='破张勋后，确年未载',title='注引记至钟离而还',office='—',text='裴注引《英雄记》记吕布随后与韩暹、杨奉水陆并进，所过虏掠，到钟离后渡淮北还；记的是钟离实到，并非到寿春。',refs=[Q('v007-b0013-n01','布後又與暹、奉二軍向壽春，水陸並進，所過虜略。','《英雄记》'),ZHONGLI,Q('v007-b0013-n01','旣渡淮北，留書與術','《英雄记》')]),
+ dict(id='ju',when='居徐州期间，确年未载',title='注引记攻莒不克，还下邳',office='—',text='裴注引《英雄记》记萧建被臧霸袭破后，吕布亲率步骑向莒，不听高顺劝阻，未攻下而返回下邳。',refs=[Q('v007-b0013-n01','布聞之，自將步騎向莒。','《英雄记》'),Q('v007-b0013-n01','布不從。霸畏布鈔暴，果登城拒守。','《英雄记》'),JURETURN]),
+ dict(id='last-war',when='198年',title='再与袁术合作，进攻刘备',office='—',text='再次为袁术所用，派高顺攻破刘备及援军夏侯惇；这些战场由高顺率军，不能当作吕布本人行程。',refs=[WAR,Q('v007-b0014','太祖遣夏侯惇救備，爲順所敗。')]),
+ dict(id='death',when='198年',title='下邳被围，被俘缢杀',office='—',text='曹操进围下邳，吕布自率千余骑出战而败，退守城中；诸将投降后，他在白门楼被俘，终遭缢杀。',refs=[Q('v007-b0014','自將千餘騎出戰，敗走，還保城，不敢出。'),Q('v007-b0014','其將侯成、宋憲、魏續縛陳宮，將其衆降。'),Q('v007-b0014','布與其麾下登白門樓。'),DEATH],eventIds=['xiapi']),
+ ],
+ trajectory=dict(atlasPerson='lvbu',phases=[
+ dict(id='dong',title='从董与诛董',when='早年至192年',span=(180,192),careers=['early','kill-dong'],atlasStops=[0]),
+ dict(id='wander',title='东出与投奔',when='192—194年间',span=(192,194),careers=['escape','changshan','henei'],atlasStops=[1,2,3]),
+ dict(id='yanzhou',title='争夺兖州',when='194—195年',span=(194,195),careers=['yanzhou','defeat-yan'],atlasStops=[4,5]),
+ dict(id='xuzhou',title='据徐与转盟',when='196—198年间',span=(196,198),careers=['take-xiapi','shot','marriage','zhangxun','zhongli','ju'],atlasStops=[6,7,8,9]),
+ dict(id='death',title='下邳败亡',when='198年',span=(198,198),careers=['last-war','death'],atlasStops=[10]),
+ ]),
+ records=[
+ dict(section='military',when='出长安后，确年未载',title='常山突阵',category='骑兵突击',careerRef='changshan',text='与成廉、魏越等反复冲锋，击破有精兵万余、骑数千的张燕军，体现其临阵勇力。',refs=[Q('v007-b0005','燕精兵萬餘，騎數千。'),BREAK]),
+ dict(section='military',when='196年',title='射戟促成罢兵',category='武力调停',careerRef='shot',text='吕布以单次射戟作罢兵条件，射中后纪灵与刘备各罢；动机是防止袁术势力包围自己。',refs=[SHOT,Q('v007-b0010','吾爲在術圍中，不得不救也。'),Q('v007-b0010','然後各罷。')]),
+ dict(section='military',when='197年',title='采用陈珪的离间计',category='拆解联盟',careerRef='zhangxun',text='让临时联合的韩暹、杨奉转向自己，许以军资，遂破张勋；具体计谋来自陈珪，不独归吕布。',refs=[Q('v007-b0013','布用珪策'),Q('v007-b0013','軍資所有，悉許暹、奉。'),ZHANGXUN]),
+ dict(section='setback',when='依袁绍期间，确年未载',title='部众钞掠损害依托',category='军纪与联盟',careerRef='changshan',text='立功后求增兵众，部下劫掠，袁绍因此忌惮；从依托走向追杀，勇功未能换来稳定信任。',refs=[Q('v007-b0005','而求益兵眾，將士鈔掠，紹患忌之。'),Q('v007-b0005','遣壯士夜掩殺布，不獲。')]),
+ dict(section='setback',when='194—195年',title='兖州立足失败',category='争州败退',careerRef='defeat-yan',text='虽一度据濮阳、得到郡县响应，最终仍被曹操收复诸城，自己败走刘备。',refs=[PUYANG,Q('v007-b0008','郡縣皆應'),Q('v007-b0008','太祖乃盡復收諸城'),LIUBEI]),
+ dict(section='setback',when='居徐州期间，确年未载',title='轻出攻莒无功',category='拒谏用兵',careerRef='ju',text='《英雄记》记高顺劝他不要轻率亲自出军，以免失利损名；吕布不从，攻莒不能拔。',refs=[Q('v007-b0013-n01','不宜輕自出軍；如或不捷，損名非小。','《英雄记》'),JURETURN]),
+ dict(section='setback',when='198年',title='多疑而不能制党',category='统御失败',careerRef='death',text='本传直接指出吕布无谋、多猜忌、不能制御其党；下邳被围时诸将各怀疑虑，离心投降。',refs=[Q('v007-b0014','布雖驍猛，然無謀而多猜忌，不能制御其黨'),Q('v007-b0014','太祖塹圍之三月，上下離心')]),
+ ],
+ sections={'civil':{'note':'吕布本传集中于从属变更、争州、作战与联盟，没有可独立列为地方治理成果的具体措施；自称刺史、请求州牧和受拜左将军是政治身份，不能代替施政实绩。'}},
+ assessment=[dict(title='陈寿：虓虎之勇，无英奇之略',text='陈寿承认吕布勇力，却以无略、反复、唯利是视解释其覆亡；评价并未抹去常山与射戟的具体能力，而是把勇与决断、信用分开衡量。',refs=[PING,BREAK,SHOT])],
+ relations=[
+ dict(category='旧主',name='丁原',label='亲待而遭吕布杀害',text='丁原任他为主簿并深加亲待，吕布后杀原归董卓。',refs=[Q('v007-b0002','以布為主簿，大見親待。'),DING]),
+ dict(category='旧主',name='董卓',personId='dong-zhuo',label='誓父子而后刺杀',text='受董卓信任并誓为父子，后因积怨与恐惧，接受王允之谋刺董。',refs=[DING,CONFLICT,CONCUBINE,KILL]),
+ dict(category='同僚',name='王允',label='诛董后共同秉政',text='王允厚加接纳，告以诛董之谋，事后与吕布共秉朝政。',refs=[Q('v007-b0004','厚接納之。'),HONOR]),
+ dict(category='旧主',name='袁绍',personId='yuanshao',label='共同破燕后转为猜忌',text='与袁绍破张燕后因兵众与军纪生嫌，遭夜袭，逃往河内。',refs=[CHANGSHAN,Q('v007-b0005','而求益兵眾，將士鈔掠，紹患忌之。'),HENEI]),
+ dict(category='旧识',name='张杨',label='河内的接纳者',text='吕布避袁绍到河内相合；裴注引《英雄记》说张杨表面应李傕、郭汜悬赏，实际保护吕布。',refs=[HENEI,Q('v007-b0005-n03','楊於是外許汜、傕，內實保護布。','《英雄记》')]),
+ dict(category='同僚',name='陈宫',label='迎入兖州与同遭杀害',text='陈宫参与迎吕布入兖州，后来在下邳阻其降曹，最终同遭诛杀。',refs=[Q('v007-b0008','遂以其衆東迎布爲兖州牧'),Q('v007-b0014','陳宮等自以負罪深，沮其計。'),DEATH]),
+ dict(category='邻境',name='刘备',personId='liubei',label='投奔、相攻与救援',text='吕布失兖州投刘备，后袭其下邳，又救其小沛之围；末年再遣高顺攻破刘备。',refs=[LIUBEI,XIAPI,RESCUE,WAR]),
+ dict(category='邻境',name='袁术',personId='yuan-shu',label='拒收、结亲与反复合作',text='袁术起初拒收，后来求婚结援，绝婚后交兵，198年吕布又转为其用。',refs=[Q('v007-b0005','術惡其反覆，拒而不受。'),BREAKMARRIAGE,ZHANGXUN,WAR]),
+ dict(category='敌对',name='曹操',personId='caocao',label='争兖州并围下邳',text='在濮阳争战，又遣使授吕布左将军，最终亲自围下邳并杀之。',refs=[Q('v007-b0008','太祖引軍還，與布戰於濮陽'),LEFT,DEATH]),
+ ],
+ readingNotes=[
+ dict(title='侍婢未记姓名',text='本传写吕布与董卓侍婢私通，未给姓名；诛董动机应连同掷戟与王允谋划读，不能用后世人物故事替代。',refs=[CONCUBINE,CONFLICT,KILL]),
+ dict(title='“六旬”败走受到校正',text='正文说董卓死后六旬吕布败，裴松之据《英雄记》列四月二十三日至六月一日，指出无闰、不足六旬；页面只系192年，不把六旬换算成精确日期。',refs=[Q('v007-b0004','卓死後六旬，布亦敗。'),Q('v007-b0004-n02','布以四月二十三日殺卓，六月一日敗走，時又無閏，不及六旬。','《英雄记》；裴松之案')]),
+ dict(title='温侯不等于驻温县',text='温侯是封爵；亲自出武关、在常山作战和走河内有独立动词证据。路线不因温侯、领司隶或颍川太守等名号补造驻地。',refs=[HONOR,ESCAPE,CHANGSHAN,HENEI]),
+ dict(title='钟离、莒之行来自裴注',text='钟离往返与攻莒还下邳均见《英雄记》，正文未给确年；其编排在破张勋与末次下邳之战之间，地图排序年仅供展示。',refs=[ZHONGLI,JURETURN,WAR]),
+ ],glossary=[('假节','授予持节处置军务的权限。'),('反复','在本传中具体表现为从属与联盟的多次改变。')],
+ sourceScope='以卷七《吕布传》正文及全部裴注为基础，交叉核对卷一《武帝纪》、卷六董卓及卷三十二《先主传》的相关系年与事件。常山、河内及《英雄记》所记钟离、莒之行保留确年未载；部将行军不当作本人到达。本页不声称穷尽全书所有提及吕布之处。',
+)

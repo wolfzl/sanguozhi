@@ -1,0 +1,97 @@
+"""袁术：B级人物卡，保留正文与注文异说。"""
+from profile_v3 import Q
+ORIGIN=Q('v006-b0034','袁術字公路，司空逢子，紹之從弟也。')
+EARLY=Q('v006-b0034','舉孝廉，除郎中，歷職內外，後爲折衝校尉、虎賁中郎將。')
+NAN=Q('v006-b0034','術亦畏卓之禍，出奔南陽。')
+TAX=Q('v006-b0034','南陽戶口數百萬，而術奢淫肆欲，徵斂無度，百姓苦之。')
+LEAGUE=Q('v001-b0006','同時俱起兵，衆各數萬，推紹爲盟主。')
+ALLY=Q('v006-b0034','旣與紹有隙，又與劉表不平而北連公孫瓚')
+JIAN=Q('v006-b0039','袁術之在南陽也，與孫堅合從，欲襲奪表州，使堅攻表。')
+JIAN_END=Q('v006-b0039','堅爲流矢所中死，軍敗，術遂不能勝表。')
+RETREAT=Q('v001-b0020','術退保封丘，遂圍之，未合，術走襄邑，追到太壽，決渠水灌城。走寧陵，又追之，走九江。')
+OFFICE=Q('v006-b0034','以術爲左將軍，封陽翟侯，假節')
+MA=Q('v006-b0034','術奪日磾節，拘留不遣。')
+SHOUCHUN=Q('v046-b0014','壽春，術已據之')
+CE=Q('v046-b0014','術表策爲折衝校尉，行殄寇將軍，兵財千餘，騎數十匹')
+LU=Q('v046-b0013','策攻康，拔之。術復用其故吏劉勳爲太守，策益失望。')
+XU=Q('v007-b0010','術遣將紀靈等步騎三萬攻備，備求救於布。')
+YAN=Q('v006-b0036','興平二年冬，天子敗於曹陽。')
+EMPEROR=Q('v006-b0036','用河內張烱之符命，遂僭號，以九江太守爲淮南尹。置公卿，祠南北郊。')
+LUXURY=Q('v006-b0036','而士卒凍餒，江淮間空盡，人民相食。')
+BROKEN=Q('v007-b0011','女已在塗，追還絕婚，械送韓胤，梟首許市。')
+CHEN=Q('v001-b0036','術聞公自來，棄軍走，留其將橋蕤、李豐、梁綱、樂就')
+HUAI=Q('v001-b0036','術走渡淮。')
+QIAN=Q('v006-b0036','奔其部曲雷薄、陳蘭於灊山，復爲所拒')
+DEATH=Q('v006-b0036','將歸帝號於紹，欲至青州從袁譚，發病道死。')
+JTING=Q('v006-b0036-n03','乃還至江亭，去壽春八十里。','《吴书》')
+PING=Q('v006-b0046','袁術奢淫放肆，榮不終己，自取之也。')
+PROFILE=dict(id='yuan-shu',tier='B',reading=['006'],
+ lead='袁术在董卓乱政后出据南阳，与孙坚合从，败于曹操后转入淮南，曾借孙策拓展江东。他在淮南僭号，屡受军事打击，终被旧部拒纳，北投袁氏未成而病死，家属后归孙氏。',role='割据南阳、淮南的袁氏军阀',
+ facts=[
+ dict(key='hometown',label='籍贯',value='本传未独立详载',text='本传明确其为袁逢之子、袁绍从弟，未另列本人籍贯；不只凭同族关系补入汝阳。',refs=[ORIGIN]),
+ dict(key='lifespan',label='生卒年',value='生年未详—199年',text='生年未载；《武帝纪》建安四年记曹操遣刘备截阻其北上，适逢袁术病死。',refs=[Q('v001-b0044','會術病死。'),DEATH]),
+ dict(key='identity',label='主要身份',value='汉将，后据淮南僭号',text='曾任汉将，后置公卿、祭南北郊，不能把僭号当作汉朝授予的官职。',refs=[EARLY,OFFICE,EMPEROR]),
+ dict(key='office',label='最高官职',value='左将军，假节',text='董卓曾授后将军；李傕为结援又授左将军、假节，本传亦记其自行领扬州。',refs=[Q('v006-b0034','以術爲後將軍'),OFFICE,Q('v006-b0034','領其州。')]),
+ dict(key='title',label='最高爵位',value='阳翟侯',text='李傕为援结袁术而授，遣马日磾持节拜授；袁术随后反夺其节。',refs=[OFFICE,MA]),
+ dict(key='posthumous',label='身后称号',value='本书未载追谥',text='本传在卒后续记妻子与子女归宿，未见为其追谥；“仲氏”是生前僭号。',refs=[Q('v006-b0036','妻子依術故吏廬江太守劉勳'),Q('v006-b0036-n01','乃建號稱仲氏。','《典略》')]),
+ dict(key='deeds',label='代表事迹',items=['出据南阳','转入淮南','遣策渡江','淮南僭号','北归未成'],text='从南阳转入淮南，遣孙策开拓江东，继而僭号；后因败战与旧部拒纳而衰亡。',refs=[NAN,RETREAT,CE,EMPEROR,DEATH]),
+ ],
+ intro=[
+ dict(title='出据南阳与远交',text='袁术字公路，袁逢之子，以侠气闻名，历任郎中、折冲校尉和虎贲中郎将。董卓欲废帝时授他后将军，他却因畏祸出奔南阳。孙坚杀南阳太守张咨后，他得以据有其郡，但赋敛无度，百姓深受其苦。与袁绍、刘表的矛盾，又使他远结公孙瓒，关东讨董的共同名义很快让位于诸军争衡。',refs=[ORIGIN,EARLY,NAN,Q('v006-b0034','會長沙太守孫堅殺南陽太守張咨，術得據其郡。'),TAX,ALLY,LEAGUE]),
+ dict(title='败走淮南，借将开拓',text='袁术遣孙坚攻刘表未能成功，后来粮道又被刘表断绝，转军陈留而败于曹操，一路退向九江。他在寿春立足，孙策来投时交还孙坚旧部，随后准其渡江。可是答应孙策取得庐江便让其为太守，事成后却改用刘勋。扩张并未形成稳固的君臣合作，孙策的失望是本书明确保留的关系裂缝。',refs=[JIAN_END,Q('v001-b0020','荊州牧劉表斷術糧道'),RETREAT,SHOUCHUN,Q('v046-b0013','術甚奇之，以堅部曲還策。'),CE,LU]),
+ dict(title='僭号引发盟友离散',text='兴平二年冬，袁术向群下提出应天顺民之意，阎象以周文王尚服事殷劝止，他默然不悦。后来仍用符命僭号，设置公卿、南北郊祭祀。欲与吕布结亲时，又因称帝之议而被绝婚，出兵攻布则遭击败。奢侈宫廷与士卒冻馁、江淮人民相食并列，陈寿以此揭出政权内部的失衡。',refs=[YAN,Q('v006-b0036','術嘿然不恱。'),EMPEROR,BROKEN,Q('v007-b0013','勳大破敗。'),LUXURY],eventLinks=[dict(label='僭号',eventId='yuan-shu-emperor')]),
+ dict(title='失势后无处可归',text='袁术侵陈时听闻曹操亲来，弃军逃走，留下桥蕤等将领而后渡淮。此后投雷薄、陈兰于灊山，又遭旧部拒绝，只得打算归帝号于袁绍，北往青州投袁谭，北投未成而病死途中。正文只记发病道死，《吴书》注引补写还至江亭、求蜜不得而呕血的末路情景；两层叙述应分开阅读。',refs=[CHEN,HUAI,QIAN,DEATH,JTING,Q('v006-b0036-n03','因頓伏牀下，嘔血斗餘，遂死。','《吴书》')]),
+ ],
+ careers=[
+ dict(id='early',when='早年，确年未载',title='由郎中历任虎贲中郎将',office='折冲校尉、虎贲中郎将',text='以侠气闻名，举孝廉后历仕；董卓欲废帝时授后将军。',refs=[EARLY,Q('v006-b0034','以俠氣聞。'),Q('v006-b0034','以術爲後將軍')]),
+ dict(id='nanyang',when='190年前后',title='出奔南阳，参与讨董',office='后将军',text='畏董卓而出奔南阳，孙坚杀张咨后据其郡；与关东诸军同起兵。',refs=[NAN,Q('v006-b0034','會長沙太守孫堅殺南陽太守張咨，術得據其郡。'),LEAGUE],eventIds=['anti-dong-coalition']),
+ dict(id='alliance',when='191年',title='结公孙瓒，与袁绍分争',office='—',text='与袁绍有隙，北结公孙瓒；袁绍则南连刘表，双方远交近争。公孙越助孙坚攻周昂而死，矛盾又牵连公孙瓒。',refs=[ALLY,Q('v006-b0034','紹與瓚不和而南連劉表。'),Q('v008-b0006','術遣越與堅攻昂，不勝，越為流矢所中死。')],eventIds=['jieqiao']),
+ dict(id='xiangyang',when='192年',title='遣孙坚攻刘表而失利',office='—',text='与孙坚合从，令其攻刘表；孙坚中流矢死，袁术未能胜刘表。此役不是袁术亲到襄阳的证据。',refs=[JIAN,JIAN_END],eventIds=['sun-jian-xiangyang']),
+ dict(id='huainan',when='193年',title='封丘败后转入九江',office='自领扬州；左将军、阳翟侯、假节',text='粮道被断后入陈留，救刘详而败，退封丘、襄邑一线，又经宁陵走九江。其后领扬州，受李傕封授却夺马日磾之节。',refs=[Q('v001-b0020','太祖擊詳，術救之，與戰，大破之。'),RETREAT,OFFICE,MA],eventIds=['yuan-shu-huainan']),
+ dict(id='ce',when='194—195年',title='遣孙策攻庐江、渡江',office='—',text='孙策投来后交还孙坚旧部，遣攻庐江却不兑现太守之许；又表其官职，准以兵千余、骑数十渡江。',refs=[Q('v046-b0013','術甚奇之，以堅部曲還策。'),LU,CE],eventIds=['sun-ce-jiangdong']),
+ dict(id='proposal',when='195年冬',title='议僭号，阎象劝止',office='—',text='天子败于曹阳后召群下问应天顺民之意，阎象以文王服殷作比，袁术不悦。',refs=[YAN,Q('v006-b0036','猶服事殷。'),Q('v006-b0036','術嘿然不恱。')]),
+ dict(id='xuzhou',when='196年',title='攻刘备，借吕布牵制徐州',office='—',text='刘备东击袁术时吕布袭下邳；袁术再遣纪灵攻刘备，被吕布以射戟解兵。',refs=[Q('v007-b0010','備東擊術，布襲取下邳'),XU,Q('v007-b0010','然後各罷。')],eventIds=['lv-bu-xuzhou']),
+ dict(id='emperor',when='197年',title='僭号称帝，吕布绝婚',office='自置公卿，非汉朝官职',text='用张烱符命僭号，以九江太守为淮南尹；吕布听称帝之议后绝婚，送韩胤至许被杀。',refs=[EMPEROR,BROKEN],eventIds=['yuan-shu-emperor']),
+ dict(id='defeats',when='197年',title='攻吕布而联军反转',office='—',text='遣张勋与韩暹、杨奉攻布，二将倒向吕布，张勋大败。',refs=[Q('v007-b0013','暹、奉從之，勳大破敗。')]),
+ dict(id='huai-front',when='吕布破张勋后，确年未载',title='亲将五千扬兵淮上',office='—',text='《英雄记》记吕布与韩暹、杨奉进至钟离、渡淮北后，袁术自率步骑五千扬兵淮上；本段不明具体渡口与军营。',refs=[Q('v007-b0013-n01','布渡畢，術自將步騎五千揚兵淮上','《英雄记》')]),
+ dict(id='chen',when='197年',title='侵陈而弃军渡淮',office='—',text='秋侵陈遇曹操亲征，袁术弃军走，留下桥蕤等被击破，自己渡淮退走。',refs=[Q('v001-b0036','秋九月，術侵陳，公東征之。'),CHEN,HUAI]),
+ dict(id='collapse',when='199年',title='旧部拒纳，北归未成而卒',office='—',text='投灊山雷薄、陈兰被拒，欲归帝号于袁绍、北投袁谭；曹操令刘备等截阻，适逢袁术病死。',refs=[QIAN,DEATH,Q('v001-b0044','公遣劉備、朱靈要之。會術病死。')],eventIds=['yuan-shu-collapse']),
+ dict(id='family',when='199年以后，身后',title='妻子先依刘勋，后归孙氏',office='子袁耀拜郎中',text='妻子依刘勋，孙策破刘勋后收视；女入孙权宫，子袁耀为郎中。',refs=[Q('v006-b0036','孫策破勳，復見收視。術女入孫權宮，子燿拜郎中')]),
+ ],
+ trajectory=dict(atlasPerson='yuanshu',phases=[
+ dict(id='nanyang',title='仕汉与据南阳',when='早年至192年',span=(180,192),careers=['early','nanyang','alliance','xiangyang'],atlasStops=[0]),
+ dict(id='huainan',title='败走淮南',when='193年',span=(193,193),careers=['huainan'],atlasStops=[1,2,3,4]),
+ dict(id='expansion',title='遣策与图僭号',when='194—196年',span=(194,196),careers=['ce','proposal','xuzhou'],atlasStops=[]),
+ dict(id='emperor',title='僭号与败战',when='197年',span=(197,197),careers=['emperor','defeats','huai-front','chen'],atlasStops=[5,6]),
+ dict(id='end',title='失势败亡',when='199年及身后',span=(199,200),careers=['collapse','family'],atlasStops=[7]),
+ ]),
+ records=[
+ dict(section='military',when='南阳时期，确年未载',title='以孙坚为前锋对抗董卓',category='遣将作战',careerRef='nanyang',text='袁术遣孙坚屯阳城抵抗董卓，这是直接的遣将记载；不将孙坚入洛阳写为袁术亲征。',refs=[Q('v008-b0006','術遣孫堅屯陽城拒卓')]),
+ dict(section='military',when='194—195年',title='借孙策扩张江东',category='授兵遣将',careerRef='ce',text='交还孙坚部曲，并准孙策带兵渡江，其所授兵力成为孙策扩张的起点；亲自作战之功应归孙策。',refs=[Q('v046-b0013','以堅部曲還策。'),CE]),
+ dict(section='setback',when='据南阳与淮南期间',title='征敛与奢侈消耗民生',category='财政与民生',careerRef='emperor',text='在南阳征敛无度，至淮南僭号后宫廷绮食与士卒冻馁、人民相食形成直接反差。',refs=[TAX,LUXURY]),
+ dict(section='setback',when='193年后，确年未载',title='夺节并拘朝廷使者',category='对朝廷关系',careerRef='huainan',text='受封拜后反夺马日磾之节，拘留不遣；《献帝春秋》另记马日磾因失节屈辱而忧死。',refs=[MA,Q('v006-b0034-n03','旣以失節屈辱，憂恚而死。','《献帝春秋》')]),
+ dict(section='setback',when='194—197年',title='失信与绝婚破坏合作',category='盟友关系',careerRef='ce',text='未兑现对孙策的庐江太守承诺，后又因僭号之议与吕布绝婚，外部合作相继受挫。',refs=[LU,BROKEN]),
+ dict(section='setback',when='197—199年',title='连败后被旧部拒纳',category='权力瓦解',careerRef='collapse',text='陈地败退后日益困窘，雷薄、陈兰也不接纳，归帝号与北投均未能实现。',refs=[Q('v001-b0044','袁術自敗於陳，稍困'),QIAN,DEATH]),
+ ],
+ sections={'civil':{'note':'袁术传记有自领扬州、设置公卿与任用郡守，却没有足以单列的惠民治理措施；南阳征敛、淮南奢侈及其后果在得失栏按原文记述，不将设官本身当作文治成绩。'}},
+ assessment=[
+ dict(title='陈寿：奢淫放肆，自取覆亡',text='陈寿以奢淫放肆、荣不终己概括袁术之败，强调其行为与结局的关系。',refs=[PING]),
+ dict(title='裴松之：僭逆之罪更应指出',text='裴松之认为只说奢淫尚不足见其大恶，特别补出妄自尊立的政治责任。此为裴氏对陈寿评语的补充。',refs=[Q('v006-b0046-n02','而猖狂于時，妄自尊立','裴松之案'),Q('v006-b0046-n02','未足見其大惡。','裴松之案')]),
+ ],
+ relations=[
+ dict(category='亲族',name='袁绍',personId='yuanshao',label='同族竞争，末路求归',text='早有嫌隙，各结异方；袁术末路欲归帝号于袁绍。',refs=[ORIGIN,ALLY,DEATH]),
+ dict(category='同僚',name='孙坚',personId='sun-jian',label='合从攻刘表',text='孙坚杀张咨使袁术得据南阳，后受令攻刘表而战死。',refs=[Q('v006-b0034','會長沙太守孫堅殺南陽太守張咨，術得據其郡。'),JIAN,JIAN_END]),
+ dict(category='部属',name='孙策',personId='sun-ce',label='授兵却失信于其',text='交还旧部、准其渡江，却两次不兑现太守之许，孙策益失望。',refs=[Q('v046-b0013','術初許策爲九江太守，已而更用丹楊陳紀。'),LU,CE]),
+ dict(category='敌对',name='曹操',personId='caocao',label='封丘与陈地的对手',text='在陈留被其击败，后侵陈又因曹操亲来而弃军走。',refs=[RETREAT,CHEN]),
+ dict(category='邻境',name='吕布',personId='lv-bu',label='求婚与交战相继',text='企图结亲联合，绝婚后遣军攻布，反被击败。',refs=[BROKEN,Q('v007-b0013','勳大破敗。')]),
+ dict(category='敌对',name='刘表',personId='liu-biao',label='南阳、荆州之争',text='遣孙坚攻表未胜，后粮道又被刘表断绝。',refs=[JIAN_END,Q('v001-b0020','荊州牧劉表斷術糧道')]),
+ ],
+ readingNotes=[
+ dict(title='陈温之死，正文与英雄记不同',text='正文说袁术杀扬州刺史陈温；裴松之据《英雄记》指出陈温自病死，袁术后来攻拒纳自己的陈瑀。两说不可合写成同一件确定事实，履历仅写取得淮南与领州。',refs=[Q('v006-b0034','殺楊州刺史陳溫，領其州。'),Q('v006-b0034-n02','先爲楊州刺史，自病死。','《英雄记》；裴松之案'),Q('v006-b0034-n02','則溫不爲術所殺，與本傳不同。','《英雄记》；裴松之案')]),
+ dict(title='议僭号与实行僭号有时序',text='本传从兴平二年冬的群下会议写至最终僭号，不能把同段所有事情都压成195年；《武帝纪》在建安二年记欲称帝于淮南，履历据此分开议论与实行。',refs=[YAN,EMPEROR,Q('v001-b0036','袁術欲稱帝於淮南')]),
+ dict(title='江亭末路属于吴书补记',text='正文只说发病道死；《吴书》补写被雷薄拒后回江亭、缺蜜而死。江亭离寿春八十里却不能据里数唯一确定故址，路线只取灊山地区为末期代表点，不补造江亭坐标。',refs=[DEATH,JTING]),
+ dict(title='兄弟称谓不抹去谱系异说',text='袁术正文称袁绍从弟关系；袁绍注《魏书》又说绍为逢庶子、出后成。称兄弟与严格血缘、出继关系不是同一层次，不能据称呼强作无争议谱系。',refs=[ORIGIN,Q('v006-b0018-n01','紹即逢之庶子，術異母兄也，出後成爲子。','《魏书》')]),
+ ],
+ glossary=[('假节','授予将领持节处置军务的权力。'),('僭号','超越臣下身份自立君号。')],
+ sourceScope='以卷六袁术本传及全部裴注为基础，交叉核对卷一武帝纪、卷七吕布、卷八公孙瓒、卷四十六孙坚与孙策等记载。杀陈温与江亭死地等分别保留正文、注引层次；未以同族籍贯或部将行动补本人履历。本页不声称穷尽全书所有提及袁术之处。',
+)

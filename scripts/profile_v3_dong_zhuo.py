@@ -1,0 +1,80 @@
+"""董卓：卷六本传与帝纪交叉核对；独立行迹站点见同名审计文件。"""
+from profile_v3 import Q
+ORIGIN=Q('v006-b0002','董卓字仲穎，隴西臨洮人也。')
+EARLY=Q('v006-b0002','少好俠，甞游羌中，盡與諸豪帥相結。')
+REWARD=Q('v006-b0002','賜縑九千匹，卓悉以分與吏士。')
+DEFEAT=Q('v006-b0002','遷中郎將，討黃巾，軍敗抵罪。')
+ESCAPE=Q('v006-b0002','卓獨全衆而還，屯住扶風。')
+CAPITAL=Q('v006-b0003','卓遂將其衆迎帝于北芒，還宮。')
+SOLDIERS=Q('v006-b0003','卓又使呂布殺執金吾丁原，并其衆，故京都兵權唯在卓。')
+DEPOSE=Q('v006-b0005','遂廢帝爲弘農王。尋又殺王及何太后。立靈帝少子陳留王，是爲獻帝。')
+XIANG=Q('v006-b0005','卓遷相國，封郿侯，贊拜不名，劒履上殿')
+MIGRATE=Q('v006-b0007','初平元年二月，乃徙天子都長安。焚燒洛陽宮室，悉發掘陵墓，取寶物。')
+STAY=Q('v001-b0007','卓留屯洛陽，遂焚宮室。')
+CHANGAN=Q('v001-b0013','夏四月，卓還長安。')
+TEACHER=Q('v006-b0007','卓至西京，爲太師，號曰尚父。')
+MEI=Q('v006-b0007','築郿塢，高與長安城埒，積穀爲三十年儲')
+VISIT=Q('v006-b0007','甞至郿行塢，公卿已下祖道於橫門外。')
+COIN=Q('v006-b0007','於是貨輕而物貴，穀一斛至數十萬。自是後錢貨不行。')
+DEATH=Q('v006-b0008','三年四月，司徒王允、尚書僕射士孫瑞、卓將呂布共謀誅卓。')
+PALACE=Q('v006-b0008','是時，天子有疾新愈，大會未央殿。')
+KILL=Q('v006-b0008','布曰「有詔」，遂殺卓，夷三族。')
+PING=Q('v006-b0046','評曰：董卓狼戾賊忍，暴虐不仁，自書契以來，殆未之有也。')
+PROFILE=dict(
+ id='dong-zhuo',tier='B',reading=['006'],
+ lead='董卓字仲颖，陇西临洮人，早年从军征讨羌胡，曾全军脱围；189年入洛阳控制兵权，废立皇帝，后迫迁长安并焚毁洛阳。由相国至太师，以严刑、私家势力和积储固权，192年在长安被王允、吕布等诛杀。',role='控制汉廷的相国、太师',
+ facts=[
+ dict(key='hometown',label='籍贯',value='陇西临洮',text='字仲颖，陇西临洮人；籍贯不直接作本人早年旅行起点。',refs=[ORIGIN]),
+ dict(key='identity',label='主要身份',value='汉廷权臣、军事首领',text='入京兼并何进、何苗及丁原部众，控制京都兵权并擅行废立。',refs=[Q('v006-b0003','進、苗部曲無所屬，皆詣卓。'),SOLDIERS,DEPOSE]),
+ dict(key='office',label='最高官职',value='太师；此前为相国',text='先历司空、太尉、相国，后至西京为太师。',refs=[Q('v006-b0005','策免司空劉弘而卓代之，俄遷太尉'),XIANG,TEACHER]),
+ dict(key='title',label='最高爵位',value='郿侯',text='入京后封郿侯；此前曾封斄乡侯。',refs=[XIANG,Q('v006-b0002','拜前將軍，封斄鄉侯')]),
+ dict(key='posthumous',label='身后称号',value='本书未载谥号',text='本传以遭诛、夷三族收束，未记正式追谥；“尚父”属于生前称号。',refs=[TEACHER,KILL]),
+ dict(key='deeds',label='代表事迹',items=['全军脱围','控制京师','废立皇帝','焚洛迁都'],text='边地征战后入京掌权，废少帝、立献帝，又迁天子于长安并焚毁洛阳。',refs=[ESCAPE,SOLDIERS,DEPOSE,MIGRATE]),
+ ],
+ intro=[
+ dict(title='边地积累的兵力',text='董卓字仲颖，陇西临洮人，少年游历羌中，与当地豪帅相结，后来又以良家子进入羽林。他从张奂出征并州有功，将所得赏赐全部分给吏士；讨黄巾却因军败抵罪。再次西拒韩遂时，他利用筑堰蓄水、决水阻追脱离包围，保全部众回屯扶风。这些记载把他的勇力、笼络部下与军事实践连在一起，也说明他进入京师之前已经拥有自己的军队基础。',refs=[ORIGIN,EARLY,Q('v006-b0002','以六郡良家子爲羽林郎。'),Q('v006-b0002','從中郎將張奐征并州有功'),REWARD,DEFEAT,ESCAPE,Q('v006-b0002','默從堰下過其軍而決堰。')]),
+ dict(title='入京与废立',text='何进召他入京，原想借外兵逼迫太后同意诛除宦官；董卓尚未到，何进已死。他迎天子回宫，再接收何进、何苗的部曲，并诱使吕布杀丁原，遂独占京都兵权。接着他废少帝、杀少帝与何太后，立献帝，自升至相国。控制皇帝和武库财物使他威震天下，但本传同时记他以严刑胁众，个人的权势扩张伴随着朝廷秩序的破坏。',refs=[Q('v006-b0003','進乃召卓使將兵詣京師'),Q('v006-b0003','卓未至，進敗。'),CAPITAL,SOLDIERS,DEPOSE,XIANG,Q('v006-b0005','遂以嚴刑脅衆，睚眦之隙必報，人不自保。')],eventLinks=[dict(label='诱使吕布杀丁原',eventId='dong-zhuo-capital')]),
+ dict(title='迁都后的统治',text='关东兵起，董卓迫使天子西迁长安，自己先留洛阳，至次年四月才回长安，不能把两者合写为同日西行。他在西京任太师，又筑郿坞积储粮谷，将宗族安排在朝廷和军队之中；法令酷烈、滥杀与恶钱造成的物价腾贵，构成这一时期的重要后果。192年，王允、士孙瑞与吕布合谋，在他入宫赴会时将其诛杀。陈寿的严厉评语应与这些具体行为一同阅读。',refs=[MIGRATE,STAY,CHANGAN,TEACHER,MEI,Q('v006-b0007','宗族內外並列朝廷。'),Q('v006-b0007','冤死者千數。'),COIN,DEATH,PALACE,KILL,PING]),
+ ],
+ careers=[
+ dict(id='early',when='早年，确年未载',title='游羌中，入羽林并从军',office='羽林郎、军司马、郎中等',text='少年与羌中豪帅相结，汉桓帝末入羽林，后从张奂征并州立功，将赏赐分给吏士。',refs=[EARLY,Q('v006-b0002','漢桓帝末，以六郡良家子爲羽林郎。'),Q('v006-b0002','從中郎將張奐征并州有功，拜郎中'),REWARD]),
+ dict(id='yellow',when='讨黄巾时，确年未载',title='讨黄巾失利',office='中郎将',text='历任地方与边职后，以中郎将讨黄巾，因军败抵罪。',refs=[DEFEAT]),
+ dict(id='western',when='入京前，确年未载',title='望垣峡脱围，屯扶风',office='前将军、斄乡侯；征为并州牧',text='西拒韩遂时，在望垣峡北被羌胡围困，以蓄水断追之法脱身，保全部众还屯扶风。',refs=[Q('v006-b0002','於望垣硤北爲羌、胡數萬人所圍，糧食乏絕。'),Q('v006-b0002','默從堰下過其軍而決堰。'),ESCAPE,Q('v006-b0002','拜前將軍，封斄鄉侯，徵爲并州牧。')]),
+ dict(id='capital',when='189年',title='迎帝洛阳，兼并京都兵众',office='司空、太尉',text='何进死后率军在北芒迎帝还宫，兼并何氏部曲并令吕布杀丁原，取得京都兵权。',refs=[CAPITAL,SOLDIERS,Q('v006-b0005','策免司空劉弘而卓代之，俄遷太尉')],eventIds=['dong-zhuo-capital']),
+ dict(id='depose',when='189年',title='废少帝，立献帝',office='相国、郿侯',text='废少帝为弘农王，继而杀王与何太后，立陈留王为献帝；升相国，封郿侯。',refs=[DEPOSE,XIANG]),
+ dict(id='migration',when='190年',title='迫迁天子，留屯并焚洛阳',office='—',text='关东联盟兴兵后，二月迁天子都长安，董卓仍留屯洛阳，焚烧宫室，并发掘陵墓取财。',refs=[Q('v001-b0006','初平元年春正月'),MIGRATE,STAY],eventIds=['anti-dong-coalition']),
+ dict(id='changan',when='191年',title='还长安，任太师',office='太师',text='《武帝纪》记次年夏四月还长安；本传接记至西京任太师、尊尚父，宗族内外遍列朝廷。',refs=[CHANGAN,TEACHER,Q('v006-b0007','宗族內外並列朝廷。')]),
+ dict(id='mei',when='长安掌权期间，确年未载',title='巡视郿坞，积谷专权',office='—',text='筑郿坞，积三十年之粮，曾亲至巡视；苛法滥杀和改铸恶钱均见于同段，后两事不另造行迹。',refs=[MEI,VISIT,Q('v006-b0007','法令苛酷，愛憎淫刑'),COIN]),
+ dict(id='death',when='192年四月',title='在长安入宫时被诛',office='—',text='王允、士孙瑞与吕布合谋，乘天子疾愈大会，安排伏兵于掖门；董卓到后被杀，三族遭夷。',refs=[DEATH,PALACE,Q('v006-b0008','偽著衞士服守掖門。'),KILL],eventIds=['dong-zhuo-assassination']),
+ ],
+ trajectory=dict(atlasPerson='dongzhuo',phases=[
+ dict(id='western',title='边地从军',when='入京以前，部分确年未载',span=(160,189),careers=['early','yellow','western'],atlasStops=[0]),
+ dict(id='luoyang',title='入洛与废立',when='189—190年',span=(189,190),careers=['capital','depose','migration'],atlasStops=[1]),
+ dict(id='guanzhong',title='长安与郿坞',when='191—192年间',span=(191,192),careers=['changan','mei'],atlasStops=[2,3]),
+ dict(id='death',title='入宫遭诛',when='192年',span=(192,192),careers=['death'],atlasStops=[4]),
+ ]),
+ records=[
+ dict(section='military',when='入京前，确年未载',title='筑堰断追而全军',category='脱围保军',careerRef='western',text='先使水积成池，再从堰下隐蔽渡军、决堰阻追，保全了本部；本传以其余五军败绩相对照。',refs=[Q('v006-b0002','使水渟滿數十里，默從堰下過其軍而決堰。'),Q('v006-b0002','時六軍上隴西，五軍敗績，卓獨全衆而還')]),
+ dict(section='military',when='迁都前后，确年未载',title='绕击河阳津兵',category='分兵袭后',text='面对王匡屯河阳津之军，以平阴疑兵吸引注意，再潜遣锐众从小平北渡，绕后击破。正文主语是遣兵，不写董卓亲至津北。',refs=[Q('v006-b0007','卓遣疑兵若將於平陰渡者，潛遣銳衆從小平北渡，繞擊其後，大破之津北')]),
+ dict(section='setback',when='入京以后',title='以暴刑维持权势',category='暴虐政治',careerRef='depose',text='遣军在阳城社日屠杀平民、劫取妇女财物，回洛后冒称攻贼大获；这是本传指控的具体暴行。',refs=[Q('v006-b0005','民各在其社下，悉就斷其男子頭'),Q('v006-b0005','連軫而還洛，云攻賊大獲')]),
+ dict(section='setback',when='190年',title='焚毁洛阳并掘陵',category='迁都破坏',careerRef='migration',eventIds=['anti-dong-coalition'],text='以迁都应对关东兵起，伴随焚烧宫室、掘陵取宝；所毁包括政治与礼制空间，不能只记为更换都城。',refs=[MIGRATE]),
+ dict(section='setback',when='长安掌权期间，确年未载',title='苛刑与恶钱',category='刑政货币',careerRef='mei',text='爱憎施刑导致冤死者以千数，毁五铢钱改铸小钱后，货轻物贵，最终钱货不行。',refs=[Q('v006-b0007','法令苛酷，愛憎淫刑，更相被誣，冤死者千數。'),Q('v006-b0007','及壞五銖錢。更鑄爲小錢'),COIN]),
+ dict(section='setback',when='192年',title='亲信参与刺杀',category='内部分裂',careerRef='death',text='董卓倚吕布自卫，却曾掷手戟几乎伤及吕布；吕布积怨且惧私通事泄，最终转为王允内应。',refs=[Q('v007-b0003','行止常以布自衛。'),Q('v007-b0003','拔手戟擲布。'),Q('v007-b0003','布與卓侍婢私通，恐事發覺，心不自安。'),KILL]),
+ ],
+ sections={'civil':{'note':'董卓本传详记废立、迁都、苛刑与改铸恶钱，但没有足以单列为文治功绩的具体治理成果；这些有明确后果的施政行为列入履历与得失，不以任用官员或占据朝廷本身充作善政。'}},
+ assessment=[dict(title='陈寿：暴虐不仁',text='陈寿把残忍、暴虐作为董卓的核心特征，甚至称书契以来罕有；本页以废杀、屠掠、焚陵与滥刑说明这一判断所依托的叙事。',refs=[PING,DEPOSE,MIGRATE,Q('v006-b0007','冤死者千數。')])],
+ relations=[
+ dict(category='旧识',name='何进',label='召外兵入京者',text='何进为迫使太后同意诛宦官召董卓；董卓未至，何进已败。',refs=[Q('v006-b0003','進乃召卓使將兵詣京師'),Q('v006-b0003','卓未至，進敗。')]),
+ dict(category='部属',name='吕布',personId='lv-bu',label='从亲信到诛杀者',text='令吕布杀丁原并其众，后以吕布自卫；吕布最终参与诛卓。',refs=[SOLDIERS,Q('v007-b0003','行止常以布自衛。'),KILL]),
+ dict(category='敌对',name='袁绍',personId='yuanshao',label='关东联盟推举的盟主',text='关东诸州郡起兵反董，推袁绍为盟主；董卓因之迁天子都长安。',refs=[Q('v001-b0006','推紹爲盟主。'),MIGRATE]),
+ dict(category='敌对',name='王允',label='合谋诛杀董卓',text='与士孙瑞、吕布共同策划，利用入宫赴会执行刺杀。',refs=[DEATH,PALACE,KILL]),
+ dict(category='君臣',name='汉献帝',label='被董卓拥立与劫迁',text='董卓废少帝而立献帝，次年迫迁天子都长安。',refs=[DEPOSE,MIGRATE]),
+ dict(category='敌对',name='孙坚',personId='sun-jian',label='进军击破董卓军',text='孙坚在阳人击破董卓军，董卓曾遣李傕求和亲而被拒。',refs=[Q('v046-b0007','合戰於陽人，大破卓軍'),Q('v046-b0007','卓憚堅猛壯，乃遣將軍李傕等來求和親。')]),
+ ],
+ readingNotes=[
+ dict(title='迁天子与董卓西行相隔一年',text='本传把迁都与“卓至西京”接叙，《武帝纪》明确190年留屯洛阳、191年四月还长安。地图依交叉记载区分天子的迁都与董卓本人的到达。',refs=[MIGRATE,STAY,CHANGAN]),
+ dict(title='“尚父”称号存在不同记法',text='正文记太师号尚父；裴注引《献帝纪》则说蔡邕劝待关东平定后再议，董卓乃止。保留正文称法，同时说明注引材料的不同，不强行调和。',refs=[TEACHER,Q('v006-b0007-n02','宜須關東悉定，車駕東還，然後議之。」乃止。','《献帝纪》')]),
+ dict(title='蔡邕叹卓之死：裴松之不信',text='裴注引谢承《后汉书》记蔡邕闻卓死叹惜，裴松之认为蔡邕不会在王允座上如此，直斥有关叙述诬罔。此说不作为蔡邕拥护董卓的定论。',refs=[Q('v006-b0008-n02','聞卓死，有歎惜之音。','谢承《后汉书》'),Q('v006-b0008-n02','此皆誣罔不通之甚者。','谢承《后汉书》；裴松之案')]),
+ ],glossary=[('太师','地位极尊的辅政名号；本传与尚父称号连叙。'),('郿坞','董卓在郿营建的堡垒与储粮处。')],
+ sourceScope='以卷六《董卓传》正文及全部裴注为基础，交叉核对卷一《武帝纪》、卷七《吕布传》及卷四十六《孙破虏讨逆传》的相关记载。迁都和本人西行分别系年，称尚父与蔡邕叹惜等异说列入辨析。本页不声称穷尽全书所有提及董卓之处。',
+)

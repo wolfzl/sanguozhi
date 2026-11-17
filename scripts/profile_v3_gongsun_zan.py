@@ -1,0 +1,94 @@
+"""公孙瓒：B级人物卡；边地战功与易京败亡分层核对。"""
+from profile_v3 import Q
+ORIGIN=Q('v008-b0002','公孫瓚字伯珪，遼西令支人也。')
+STUDY=Q('v008-b0002','遣詣涿郡盧植讀經。')
+LIU=Q('v008-b0002','及劉徙日南，瓚具米肉，於北芒上祭先人')
+PARDON=Q('v008-b0002','劉道得赦還。')
+FRONT=Q('v008-b0002','除遼東屬國長史。')
+FIGHT=Q('v008-b0002','馳出刺胡，殺傷數十人，亦亡其從騎半，遂得免。')
+JI=Q('v008-b0002','軍到薊中')
+ZHANG=Q('v008-b0002','瓚將所領，追討純等有功，遷騎都尉。')
+HOU=Q('v008-b0002','遷中郎將，封都亭侯，進屯屬國')
+FAIL=Q('v008-b0002','丘力居等鈔略青、徐、幽、冀，四州被其害，瓚不能禦。')
+BEIPING=Q('v008-b0004','但留瓚將步騎萬人屯右北平。')
+FEN=Q('v008-b0004','瓚奮武將軍，封薊侯。')
+SOUTH=Q('v006-b0021','瓚遂引兵入冀州，以討卓爲名，內欲襲馥。')
+YUAN=Q('v008-b0006','瓚怒曰：「余弟死，禍起於紹。」遂出軍屯磐河，將以報紹。')
+JIE=Q('v006-b0023-n05','紹自往征瓚，合戰於界橋南二十里。','《英雄记》')
+WHITE=Q('v006-b0023-n05','因虜所忌，簡其白馬數千匹，選騎射之士，號爲白馬義從','《英雄记》')
+RET=Q('v008-b0008','瓚軍敗走勃海，與範俱還薊')
+JU=Q('v008-b0009','瓚攻拔居庸，生獲虞，執虞還薊。')
+OFFICE=Q('v008-b0009','瓚遷前將軍，封易侯。')
+KILL=Q('v008-b0009','瓚誣虞欲稱尊號，脅訓斬虞。')
+YI=Q('v008-b0009','瓚軍數敗，乃走還易京固守。')
+KEEP=Q('v008-b0009','不如休兵，力田畜谷。')
+SIEGE=Q('v008-b0012','建安四年，紹悉軍圍之。')
+STAY=Q('v008-b0012','瓚遂止不出。')
+TRAP=Q('v008-b0012','紹設伏擊，大破之，復還守。')
+DEATH=Q('v008-b0012','瓚自知必敗，盡殺其妻子，乃自殺。')
+PING=Q('v008-b0057','公孫瓚保京，坐待夷滅。')
+PROFILE=dict(id='gongsun-zan',tier='B',reading=['008'],
+ lead='公孙瓒起自郡吏，以边地骑战受封，后南下与袁绍争河北，又杀幽州牧刘虞。他在连败后筑易京自守，企图凭高楼积谷待时，终于被袁绍围破，杀妻子后自杀。',role='幽州军事首领、前将军',
+ facts=[
+ dict(key='hometown',label='籍贯',value='辽西令支',text='字伯珪，辽西郡令支人；不以籍贯替代实际求学或出征行迹。',refs=[ORIGIN]),
+ dict(key='lifespan',label='生卒年',value='生年未详—199年',text='本传不记生年；建安四年袁绍围易京，其后城破自杀。',refs=[SIEGE,DEATH]),
+ dict(key='identity',label='主要身份',value='由汉将而割据幽州',text='以边地军事起家，后与袁绍争河北、杀刘虞，退保易京；不能把他一度设置三州刺史等同于实际占有三州。',refs=[HOU,KILL,YI,Q('v008-b0008','以嚴綱為冀州，田楷為青州，單經為兗州')]),
+ dict(key='office',label='最高官职',value='前将军',text='先为奋武将军，后迁前将军；地方自置官属与朝廷授官分开。',refs=[FEN,OFFICE]),
+ dict(key='title',label='最高爵位',value='易侯',text='先封都亭侯、薊侯，最后迁前将军时封易侯。',refs=[HOU,FEN,OFFICE]),
+ dict(key='posthumous',label='身后称号',value='本书未载追谥',text='本传记城破后杀妻子、自杀，未列本人追谥；“白马义从”是骑兵称号。',refs=[DEATH,WHITE]),
+ dict(key='deeds',label='代表事迹',items=['塞外骑战','追讨张纯','争衡河北','杀幽州牧','易京固守'],text='军事声势由边地骑战而起，南争河北受挫，最终退保易京。',refs=[FIGHT,ZHANG,JIE,KILL,YI]),
+ ],
+ intro=[
+ dict(title='郡吏出身与边地骑战',text='公孙瓒字伯珪，辽西令支人。郡太守赏识其姿仪与才干，以女相配，又送他到涿郡从卢植读经。他为获罪的刘太守御车，准备随往日南，并在北芒祭别先人，因刘氏途中获赦而未至日南。后来出任辽东属国长史，曾率少数骑兵突围鲜卑，也付出半数从骑伤亡的代价，勇决与损失同时见于本传。',refs=[ORIGIN,Q('v008-b0002','侯太守器之，以女妻焉'),STUDY,LIU,PARDON,FRONT,FIGHT]),
+ dict(title='边功不能平息边患',text='公孙瓒奉命统幽州突骑，到薊中遇张纯、丘力居等起事，追讨有功，迁中郎将、封都亭侯。他与胡部交战多年，却不能阻止其侵扰四州。刘虞来牧幽州，以招抚使胡部归附，公孙瓒反暗中截杀使者。边地治理既有战与和的路线差别，也有争功与权势之争，两人的裂痕逐渐扩大。',refs=[JI,ZHANG,HOU,FAIL,Q('v008-b0004','丘力居等聞虞至，喜，各遣譯自歸。'),Q('v008-b0004','瓚害虞有功，乃陰使人徼殺胡使。')]),
+ dict(title='河北争衡与杀刘虞',text='关东纷争中，公孙瓒以讨董为名进入冀州，实际要袭韩馥；又因公孙越战死而归咎袁绍。界桥交锋败后退回薊，与刘虞相近而互相怨恨。刘虞举兵袭击反被击败，公孙瓒追攻居庸、擒回刘虞，诬称其欲僭号，胁使者杀之。刘虞旧部与袁绍军随后合击，公孙瓒数败，退入易京。',refs=[SOUTH,YUAN,JIE,RET,JU,KILL,YI]),
+ dict(title='高楼积谷仍待不来转机',text='退保易京后，公孙瓒筑多重壕堑高楼，积谷自守，想以时间耗退袁绍。建安四年重围到来，他一度想亲率骑兵外出联黑山军，却听关靖之言留守。救援约期的书信落入袁绍手中，出击又中伏；袁军挖地道毁楼，城势不可挽回，他杀妻子后自杀。陈寿以“保京，坐待夷灭”概括其末路。',refs=[YI,KEEP,SIEGE,STAY,TRAP,Q('v008-b0012','紹為地道，突壞其樓，稍至中京。'),DEATH,PING],eventLinks=[dict(label='重围到来',eventId='yijing')]),
+ ],
+ careers=[
+ dict(id='study',when='早年，确年未载',title='为郡吏，从卢植读经',office='郡门下书佐',text='太守以女妻之，并遣至涿郡从卢植读经；后复为郡吏。',refs=[Q('v008-b0002','為郡門下書佐。'),Q('v008-b0002','侯太守器之，以女妻焉'),STUDY]),
+ dict(id='attendant',when='早年，确年未载',title='奉刘太守赴罪，北芒祭别',office='郡吏',text='刘太守获罪时御车服役，欲随徙日南，在北芒祭别先人；刘氏途中获赦，日南不作实际到达点。',refs=[LIU,PARDON,Q('v008-b0002','瓚為御車，身執徒養。')]),
+ dict(id='frontier',when='早年，确年未载',title='出任属国长史，塞外突围',office='辽东属国长史；后迁涿令',text='举孝廉为郎，出任属国长史；遇鲜卑数百骑突围，杀伤数十人，己方亦损半数从骑。',refs=[FRONT,FIGHT,Q('v008-b0002','遷為涿令。')]),
+ dict(id='zhangchun',when='光和年间以后，确年未载',title='统突骑讨张纯，长期与胡部交战',office='骑都尉、中郎将、都亭侯',text='奉命率幽州突骑三千，军到薊中后追讨张纯等，逐级迁封，屯属国与胡部交战五六年，却未能阻止四州受害。',refs=[Q('v008-b0002','發幽州突騎三千人'),JI,ZHANG,HOU,FAIL]),
+ dict(id='liuyu',when='刘虞牧幽州至189年',title='留屯右北平，与刘虞生隙',office='奋武将军、薊侯',text='刘虞招抚胡部，公孙瓒暗截使者；罢诸屯兵后仍领万人屯右北平，董卓入洛阳时迁封。',refs=[Q('v008-b0004','瓚害虞有功，乃陰使人徼殺胡使。'),BEIPING,FEN]),
+ dict(id='jizhou',when='191年',title='以讨董为名，南入冀州',office='—',text='韩馥军败于公孙瓒，公孙瓒继而南进，内欲袭馥；韩馥受威胁，最终把州让袁绍。',refs=[SOUTH,Q('v006-b0021','乃讓紹，紹遂領冀州牧。')],eventIds=['yuan-shao-jizhou']),
+ dict(id='jieqiao',when='191—192年间',title='因越之死讨袁绍，界桥败退',office='自置三州刺史',text='归咎袁绍害死公孙越，出军磐河；随后进界桥，自置严纲等为州刺史，却被麴义击败，逃勃海后还薊。',refs=[YUAN,JIE,RET,Q('v008-b0008','以嚴綱為冀州，田楷為青州，單經為兗州')],eventIds=['jieqiao']),
+ dict(id='kill-liuyu',when='董卓死后，确年未载',title='擒刘虞于居庸，返薊杀之',office='前将军、易侯',text='刘虞袭军不成，退居庸；公孙瓒攻拔其城，执虞还薊，诬其欲称尊号，胁段训杀之。',refs=[JU,OFFICE,KILL]),
+ dict(id='yijing',when='数败之后，确年未载',title='退守易京，筑楼积谷',office='—',text='刘虞旧部与袁绍遣军联合进攻，公孙瓒数败还易京，重堑高楼、积谷自守，企图耗退对方。',refs=[Q('v008-b0009','袁紹又遣麴義及虞子和，將兵與輔合擊瓚。'),YI,KEEP]),
+ dict(id='siege',when='199年',title='重围中止外出，救援约期泄露',office='—',text='袁绍悉军围攻；公孙瓒想亲出联合黑山，听关靖谏而留下。约子内外合击之信被截，出战中伏而败。',refs=[SIEGE,STAY,TRAP],eventIds=['yijing']),
+ dict(id='death',when='199年',title='易京被破，杀妻子后自杀',office='—',text='袁绍以地道毁楼，迫近中京；公孙瓒自知必败，杀妻子后自杀。',refs=[Q('v008-b0012','紹為地道，突壞其樓，稍至中京。'),DEATH]),
+ ],
+ trajectory=dict(atlasPerson='gongsunzan',phases=[
+ dict(id='early',title='郡吏与边将',when='早年，确年未载',span=(170,184),careers=['study','attendant','frontier'],atlasStops=[0,1]),
+ dict(id='border',title='讨张纯与边争',when='光和年间至189年，部分确年未载',span=(184,189),careers=['zhangchun','liuyu'],atlasStops=[2,3]),
+ dict(id='hebei',title='南争河北',when='191—192年间',span=(191,192),careers=['jizhou','jieqiao'],atlasStops=[4,5]),
+ dict(id='liuyu',title='杀刘虞失众',when='董卓死后，确年未载',span=(192,195),careers=['kill-liuyu'],atlasStops=[6,7]),
+ dict(id='yijing',title='退保易京败亡',when='数败以后至199年',span=(195,199),careers=['yijing','siege','death'],atlasStops=[8]),
+ ]),
+ records=[
+ dict(section='military',when='属国长史任内，确年未载',title='少骑突围，但损失严重',category='边地战斗',careerRef='frontier',text='以少数骑兵冲出鲜卑包围，并使其后有所戒惧；本传同时记从骑半亡，不能只留勇武而删掉代价。',refs=[FIGHT,Q('v008-b0002','鮮卑懲艾，後不敢復入塞。')]),
+ dict(section='military',when='讨张纯期间，确年未载',title='追讨受封，白马骑兵著称',category='骑军组织',careerRef='zhangchun',text='追讨张纯有功迁封；《英雄记》又记其因胡人畏惧白马，选骑射者组白马义从，属于注引的骑军特色。',refs=[ZHANG,HOU,WHITE]),
+ dict(section='setback',when='刘虞牧幽州时',title='阻挠招抚而积怨',category='政治与边务',careerRef='liuyu',text='因害刘虞立功，截杀来归胡使，使地方招抚与军事力量互相抵牾。',refs=[Q('v008-b0004','瓚害虞有功，乃陰使人徼殺胡使。')]),
+ dict(section='setback',when='董卓死后，确年未载',title='杀刘虞激起联合反击',category='政治暴力',careerRef='kill-liuyu',text='诬杀刘虞后，又驕矜害人，刘虞旧部联胡汉与袁绍军报复，最终迫其退守。',refs=[KILL,Q('v008-b0009','瓚遂驕矜，記過忘善，多所賊害。'),YI]),
+ dict(section='setback',when='易京固守期间',title='拒救别营削弱相援',category='军中关系',careerRef='yijing',text='《英雄记》记其以不救一营逼诸将自勉，反令边营自知无援而自溃或被破，坚城外的防线随之削弱。',refs=[Q('v008-b0009-n03','瓚別將有為敵所圍，義不救也。','《英雄记》'),Q('v008-b0009-n03','遂令紹軍徑至其門。','《英雄记》')]),
+ dict(section='setback',when='199年',title='恃守待退而不能脱困',category='战略困局',careerRef='siege',text='听关靖留守后未能组织有效外援，约期泄露又导致出击中伏；陈寿将末路概括为保京坐待。',refs=[STAY,TRAP,PING]),
+ ],
+ sections={'civil':{'note':'公孙瓒本传集中记边地战斗、争权与易京守御，未详载涿令任内的治理措施；“力田畜谷”是退保时自述的军事持久打算，不据此补出惠民政绩。'}},
+ scholarship=[dict(title='受遣从卢植读经',text='本传有从卢植读经的求学经历，未列著述或学术主张，不由求学扩写经学成就。',refs=[STUDY])],
+ assessment=[dict(title='陈寿：保京而坐待夷灭',text='陈寿的短评集中于退保易京的末路；它可与本传早年骑战勇决并看，不能用末路一句替代全部生涯。',refs=[PING,FIGHT])],
+ relations=[
+ dict(category='敌对',name='袁绍',personId='yuanshao',label='界桥至易京的对手',text='因公孙越战死而归咎袁绍，后长期交战，终于易京败亡。',refs=[YUAN,JIE,SIEGE]),
+ dict(category='同僚',name='刘虞',label='由共治到被其杀害',text='幽州牧刘虞以招抚得人心，公孙瓒与之争执，最终追擒、诬杀。',refs=[Q('v008-b0004','丘力居等聞虞至，喜，各遣譯自歸。'),JU,KILL]),
+ dict(category='师友',name='卢植',label='涿郡读经之师',text='早年由郡太守遣去受学。',refs=[STUDY]),
+ dict(category='部属',name='刘备',personId='liubei',label='表为别部司马',text='刘备来投，公孙瓒表为别部司马，使与田楷共同对抗袁绍。',refs=[Q('v032-b0004','瓚表為別部司馬，使與青州刺史田楷以拒冀州牧袁紹。')]),
+ dict(category='邻境',name='袁术',personId='yuan-shu',label='结援牵动河北战局',text='遣从弟公孙越往结袁术，越与孙坚攻周昂而死，引出对袁绍的报复。',refs=[Q('v008-b0005','亦遣其從弟越將千騎詣術以自結'),Q('v008-b0006','越為流矢所中死。'),YUAN]),
+ dict(category='部属',name='关靖',label='主张留守易京',text='劝其不要离城外出，公孙瓒采纳，随后仍未能守住。',refs=[Q('v008-b0012','長史關靖說瓚曰'),STAY,DEATH]),
+ ],
+ readingNotes=[
+ dict(title='没有到达日南',text='本传写准备随刘太守流徙，在北芒祭别，却紧接着记刘氏在路上获赦。日南是拟去之地，不能连成已经到达的路线。',refs=[LIU,PARDON]),
+ dict(title='白马义从有不同释名',text='《英雄记》既记以胡人所忌而选白马骑射，又记胡夷健者常乘白马，故以为号。两种解释都在同一注文中，不能只选一种说成无异说事实。',refs=[WHITE,Q('v006-b0023-n05','一曰胡夷健者常乘白馬','《英雄记》')]),
+ dict(title='界桥事件年份与战次',text='本书公孙瓒传以相对次序叙述界桥，未在此明确逐年；本站191年事件页概括河北争衡。履历写191—192年间，既保留关联，也不把事件页年份冒充本传明确纪年。',refs=[Q('v008-b0006','兵益盛；進軍界橋。'),JIE]),
+ dict(title='童谣不作胜负解释',text='《英雄记》将固守易京联系于童谣，裴松之却说此记似若无征，并指出他曾主动置三州刺史、图灭袁氏。因果仍应回到行动与判断，不用童谣证明命定败亡。',refs=[Q('v008-b0009-n03','至如此記，似若無徵。','《英雄记》；裴松之案'),Q('v008-b0009-n03','遂置三州刺史，圖滅袁氏，所以致敗也。','《英雄记》；裴松之案')]),
+ ],
+ glossary=[('属国','汉代安置、统治边地归附部众的一种区域建制。'),('易京','公孙瓒依托高楼壕堑营建的防御据点。')],
+ sourceScope='以卷八公孙瓒传正文与全部裴注为基础，交叉核对卷六袁绍传与《英雄记》界桥记载、卷三十二先主传。白马义从、易京童谣及拒救别营均标明注引层次；朝廷任官、计划外出及日南流徙不当作实际到达。本页不声称穷尽全书所有提及公孙瓒之处。',
+)

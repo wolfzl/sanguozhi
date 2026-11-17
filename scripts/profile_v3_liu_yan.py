@@ -1,0 +1,103 @@
+"""刘焉：由朝臣领益州，宽惠、威刑与异志并见。"""
+from profile_v3 import Q
+ORIGIN=Q('v031-b0002','劉焉字君郎，江夏竟陵人也，漢魯恭王之後裔')
+STUDY=Q('v031-b0003','以宗室拜中郎，後以師祝公喪去官。 居陽城山，積學教授')
+OFFICES=Q('v031-b0003','舉賢良方正，闢司徒府，歷雒陽令、冀州刺史、南陽太守、宗正、太常。')
+PROPOSE=Q('v031-b0003','可選清名重臣以為牧伯，鎮安方夏。')
+JIAO=Q('v031-b0003','焉內求交阯牧，欲避世難。')
+DONG=Q('v031-b0003','京師將亂，益州分野有天子氣。')
+CHANGE=Q('v031-b0003','焉聞扶言，意更在益州。')
+APPOINT=Q('v031-b0004','出為監軍使者，領益州牧，封陽城侯，當收儉治罪')
+WELCOME=Q('v031-b0005','龍乃選吏卒迎焉。焉徙治綿竹，撫納離叛，務行寬惠，陰圖異計。')
+MA=Q('v031-b0005','攻相等，數日破走，州界清靜。')
+LU=Q('v031-b0005','故焉遣魯為督義司馬，住漢中，斷絕谷閣，殺害漢使。')
+PRETEXT=Q('v031-b0005','焉上書言米賊斷道，不得複通')
+KILL=Q('v031-b0005','又託他事殺州中豪強王咸、李權等十馀人，以立威刑。')
+REVOLT=Q('v031-b0005','犍為太守任岐及賈龍由此反攻焉，焉擊殺岐、龍。')
+QIANG=Q('v031-b0005-n02','焉出青羌與戰，故能破殺。','《英雄记》')
+SELF=Q('v031-b0005-n02','劉焉起兵，不與天下討董卓，保州自守。','《英雄记》')
+ROYAL=Q('v031-b0006','焉意漸盛，造作乘輿車具千馀乘。')
+BIAO=Q('v031-b0006','荊州牧劉表表上焉有似子夏在西河疑聖人之論。')
+SONS=Q('v031-b0006','時焉子範為左中郎將，誕治書御史，璋為奉車都尉，皆從獻帝在長安')
+ZHANG=Q('v031-b0006','獻帝使璋曉諭焉，焉留璋不遣。')
+ATTACK=Q('v031-b0006','焉及範與騰通謀，引兵襲長安。')
+GENERAL=Q('v031-b0006-n03','焉使校尉孫肇將兵往助之，敗於長安。','《英雄记》')
+LOSS=Q('v031-b0006','範應時見殺，於是收誕行刑。')
+XI=Q('v031-b0006','議郎河南龐羲與焉通家，乃募將焉諸孫入蜀。')
+FIRE=Q('v031-b0007','時焉被天火燒城，車具蕩盡，延及民家。焉徙治成都')
+DEATH=Q('v031-b0007','既痛其子，又感祅災，興平元年，癰疽發背而卒。')
+SUCCESSION=Q('v031-b0007','州大吏趙韙等貪璋溫仁，共上璋為益州刺史')
+REN=Q('v038-b0019-n01','州牧劉焉表薦安味精道度，厲節高邈','《益部耆旧传》')
+NOAPPOINT=Q('v038-b0019-n01','王塗隔塞，遂無聘命。','《益部耆旧传》')
+MENG=Q('v042-b0021','獻帝遷都長安，遂逃人蜀，劉焉父子待以客禮。')
+WU=Q('v034-b0007','焉有異志，而聞善相者相后當大貴。焉時將子瑁自隨，遂為瑁納后。')
+PING=Q('v031-b0014','而劉焉聞董扶之辭則心存益土，聽相者之言則求婚吳氏，遽造輿服，圖竊神器，其惑甚矣。')
+ROAD=Q('v031-b0004-n02','焉受命而行，以道路不通，住荊州東界。','《汉灵帝纪》')
+DATES=Q('v031-b0004-n02','然後劉表為荊州，不與焉同時也。','《续汉书》；裴松之案')
+PROFILE=dict(id='liu-yan',tier='B',reading=['031'],syncLifespan=True,
+ lead='刘焉由汉廷重臣出领益州，倡议以清名重臣为州牧，入蜀后迁治绵竹，招抚百姓又诛地方豪强。派张鲁断道、制作乘舆车具及联马腾攻长安，显出其异志；失子与火灾之后迁成都，194年病卒。',role='汉末益州牧、汉室宗亲',
+ facts=[
+ dict(key='hometown',label='籍贯',value='江夏竟陵',text='字君郎，江夏竟陵人，汉鲁恭王后裔。',refs=[ORIGIN]),
+ dict(key='lifespan',label='生卒年',value='生年未详—194年',text='本传记兴平元年背疽发而卒，未记生年、享年；不由官历倒推。',refs=[DEATH]),
+ dict(key='identity',label='主要身份',value='汉室宗亲、据益州的州牧',text='由宗室中郎历朝官而出领益州；正文同时写招抚与“阴图异计”，不能只用避乱概括其经营。',refs=[STUDY,APPOINT,WELCOME]),
+ dict(key='office',label='最高官职',value='监军使者、益州牧',text='曾任宗正、太常，出为监军使者、领益州牧。',refs=[OFFICES,APPOINT]),
+ dict(key='title',label='最高爵位',value='阳城侯',text='出领益州时封阳城侯；封爵不等于在封邑活动的证据。',refs=[APPOINT]),
+ dict(key='posthumous',label='身后称号',value='本书未载追谥',text='本传止于背疽卒、刘璋继位，未载刘焉谥号；阳城侯是生前封爵。',refs=[DEATH,SUCCESSION,APPOINT]),
+ dict(key='deeds',label='代表事迹',items=['倡议牧伯','迁治绵竹','抚纳离叛','遣鲁断道','徙治成都'],text='州牧建议、绵竹经营与成都迁治构成主线；遣鲁断道列作重要行动，须与政治后果并读。',refs=[PROPOSE,WELCOME,LU,FIRE]),
+ ],
+ intro=[
+ dict(title='朝臣求牧，避难生变',text='刘焉字君郎，江夏竟陵人，是汉鲁恭王的后裔。早年以宗室拜中郎，为师服丧去官后，居阳城山积学教授，又经察举、辟召历任地方与中央官职，官至太常。他以刺史、太守货赂为官、割剥百姓为由，建议选清名重臣出为牧伯；自己原想求交阯避乱，听董扶说益州有天子气后才改求益州。制度建议与个人打算，在传中同时展开。',refs=[ORIGIN,STUDY,OFFICES,Q('v031-b0003','刺史、太守，貨賂為官，割剝百姓，以致離叛。'),PROPOSE,JIAO,DONG,CHANGE]),
+ dict(title='绵竹经营的两面',text='刘焉入州之前，郤俭已被马相等杀害，平定乱事、派人迎接刘焉的是州从事贾龙。刘焉迁治绵竹，招抚离叛、务行宽惠，却又借故诛杀王咸、李权等豪强以立威，终于引来任岐、贾龙反攻。他击杀二人，保住州中权位。因而，平乱迎牧与后来反牧是贾龙的两段经历，不能把此前讨马相的功劳算给刘焉。',refs=[Q('v031-b0005','攻益州殺儉'),MA,WELCOME,KILL,REVOLT],eventLinks=[dict(label='入州',eventId='liu-yan-yizhou')]),
+ dict(title='断道、僭拟与父子之谋',text='刘焉派张鲁住汉中，断绝谷阁、杀害汉使，自己又以米贼断道为由向朝廷解释，形成内外不同的说辞。他还造乘舆车具千余乘，受到刘表上奏指斥。刘璋从长安来晓谕，被父亲留住；刘焉又与刘范、马腾谋攻长安，注引《英雄记》具体说由校尉孙肇领兵援助。兵败使刘范、刘诞被杀，派兵之事不等于刘焉亲到长安。',refs=[LU,PRETEXT,ROYAL,BIAO,SONS,ZHANG,ATTACK,GENERAL,LOSS]),
+ dict(title='成都终局与传评',text='绵竹发生火灾，乘舆车具尽毁，延及民家，刘焉迁治成都；本传把丧子、感灾与背疽发作连写，记他在194年去世。赵韪等看中刘璋温仁，拥立刘璋继位。陈寿的评语则集中批评刘焉迷信图谶、相术并图窃神器；另一面，他曾荐任安、礼遇入蜀的孟光。士人交往有具体材料，却不能据此抹去割据经营的强制与僭拟。',refs=[FIRE,DEATH,SUCCESSION,PING,REN,MENG],eventLinks=[dict(label='拥立刘璋',eventId='liu-zhang-succession')]),
+ ],
+ careers=[
+ dict(id='study',when='早年，确年未载',title='中郎去官，居山教授',office='宗室中郎后去官',text='以宗室拜中郎，为师祝公之丧去官，居阳城山积学教授。山的确址本页不作推定。',refs=[STUDY]),
+ dict(id='offices',when='领益州前，确年未载',title='由察举辟召至太常',office='历雒阳令、冀州刺史、南阳太守、宗正、太常',text='举贤良方正，辟司徒府，历地方与中央官职；职名本身不逐一转为实到地点。',refs=[OFFICES]),
+ dict(id='proposal',when='灵帝末，确年未载',title='建议清名重臣为牧',office='太常',text='以地方吏治腐败为由建议设置牧伯，内求交阯避难；听董扶论益州天子气后改求益州。',refs=[PROPOSE,JIAO,DONG,CHANGE]),
+ dict(id='appointment',when='灵帝末，确年未载',title='出领益州，封阳城侯',office='监军使者、益州牧、阳城侯',text='获任出领益州，原奉命治郤俭罪，董扶、赵韪等随行。注引《汉灵帝纪》另记道路不通、停在荆州东界，未详具体县邑。',refs=[APPOINT,Q('v031-b0004','巴西趙韙去官，俱隨焉。'),ROAD],eventIds=['liu-yan-yizhou']),
+ dict(id='mianzhu',when='出领益州后，确年未载',title='贾龙迎入，迁治绵竹',office='益州牧',text='马相之乱由贾龙平定，贾龙选吏卒迎刘焉；刘焉迁治绵竹，抚纳离叛、务行宽惠，又阴图异计。',refs=[MA,WELCOME]),
+ dict(id='zhanglu',when='在益州时，194年卒前，确年未载',title='遣张鲁住汉中并断道',office='—',text='遣张鲁为督义司马住汉中，断谷阁、杀汉使，自己上书称米贼阻断交通。',refs=[LU,PRETEXT]),
+ dict(id='rebellion',when='在益州时，确年未载',title='诛豪强，击杀任岐、贾龙',office='—',text='借他事诛王咸、李权等十余人，任岐、贾龙因而反攻，被刘焉击杀；注引《英雄记》另述出青羌交战。',refs=[KILL,REVOLT,QIANG]),
+ dict(id='royal',when='在益州时，确年未载',title='制作乘舆车具，刘表上奏',office='—',text='造乘舆车具千余乘，刘表上奏指斥其僭拟；并为刘瑁纳相者称当大贵的吴氏。',refs=[ROYAL,BIAO,WU]),
+ dict(id='retain-zhang',when='献帝在长安时，194年卒前',title='留住奉使晓谕的刘璋',office='—',text='刘范、刘诞、刘璋都在长安侍从献帝，刘璋奉命来晓谕，被父亲留住不遣。',refs=[SONS,ZHANG]),
+ dict(id='changan-plan',when='马腾屯郿反时，194年卒前',title='与刘范、马腾谋攻长安',office='—',text='父子与马腾通谋，注引《英雄记》记刘焉派孙肇领兵助战，兵败；刘范、刘诞遭杀，庞羲将刘焉诸孙接入蜀。',refs=[ATTACK,GENERAL,LOSS,XI]),
+ dict(id='chengdu',when='194年卒前，迁治确年未载',title='火灾后迁治成都',office='益州牧',text='城中火灾烧尽车具，波及民家，刘焉迁治成都；本传接着叙其痛子、感灾。',refs=[FIRE,DEATH]),
+ dict(id='death',when='194年',title='背疽卒，刘璋受拥立',office='刘璋继领益州',text='兴平元年背疽发而卒，赵韪等拥立刘璋，朝廷继而任命监军使者、领益州牧。',refs=[DEATH,SUCCESSION,Q('v031-b0007','詔書因以為監軍使者，領益州牧')],eventIds=['liu-zhang-succession']),
+ ],
+ trajectory=dict(atlasPerson='liuyan',phases=[
+ dict(id='court',title='朝臣与求牧',when='早年至出领益州，确年未载',span=(150,188),careers=['study','offices','proposal','appointment'],atlasStops=[]),
+ dict(id='mianzhu',title='绵竹经营',when='出领益州后至194年卒前，确年未载',span=(188,194),careers=['mianzhu','zhanglu','rebellion','royal','retain-zhang','changan-plan'],atlasStops=[0]),
+ dict(id='end',title='迁成都与身后',when='迁治确年未载—194年',span=(194,194),careers=['chengdu','death'],atlasStops=[1]),
+ ]),
+ sections={'military':{'note':'本书可确证刘焉击杀任岐、贾龙，但没有第二项可独立列示的成功战绩；该战仍见生平履历“诛豪强，击杀任岐、贾龙”。孙肇援长安兵败列入得失，不充作武功功绩。'}},
+ records=[
+ dict(section='civil',when='灵帝末，确年未载',title='以吏治为由建议牧伯',category='制度建言',careerRef='proposal',text='建议用清名重臣安定地方，针对的是货赂为官、割剥百姓；同时内求远牧避难，不能把公开理由与私人动机混为一项纯粹善政。',refs=[Q('v031-b0003','刺史、太守，貨賂為官，割剝百姓，以致離叛。'),PROPOSE,JIAO]),
+ dict(section='civil',when='迁治绵竹后，确年未载',title='招抚离叛，务行宽惠',category='地方安抚',careerRef='mianzhu',text='正文确记抚纳离叛、务行宽惠，是入州后的施政取向；同句又记阴图异计，不能由宽惠推成无条件的安民定论。',refs=[WELCOME]),
+ dict(section='civil',when='在益州时，确年未载',title='荐任安、礼遇孟光',category='士人延纳',text='注引《益部耆旧传》记刘焉上表荐任安，因道路阻隔未获聘命；孟光传记刘焉父子以客礼相待。荐举与礼遇有据，不扩大成已实现的制度建设。',refs=[REN,NOAPPOINT,MENG]),
+ dict(section='setback',when='在益州时，194年卒前',title='遣鲁断道又向朝廷推诿',category='政治隔绝',careerRef='zhanglu',text='命张鲁断谷阁、杀汉使，再上书以米贼阻道解释交通中断。主动制造隔绝与对朝廷的说辞相反，是其割据经营的具体手段。',refs=[LU,PRETEXT]),
+ dict(section='setback',when='在益州时，确年未载',title='诛豪强引发反攻',category='内部冲突',careerRef='rebellion',text='杀王咸、李权等以立威刑，招致任岐、贾龙反攻。不能只从最后获胜描述这次权力整合，也须看到反抗因诛杀而起。',refs=[KILL,REVOLT]),
+ dict(section='setback',when='在益州时，确年未载',title='僭拟乘舆，寄望谶相',category='政治僭越',careerRef='royal',text='造乘舆车具、受刘表指斥，并因相者之言为子娶吴氏；陈寿据此批评其图窃神器、惑于谶相。天子气与贵相是当事人的信念，不能当成命运已经证实。',refs=[ROYAL,BIAO,WU,PING]),
+ dict(section='setback',when='194年卒前',title='援长安失败，失子并遭火灾',category='晚年挫折',careerRef='changan-plan',text='援马腾兵败，刘范、刘诞被杀；又遭火灾波及民家。正文连写痛子、感灾与病卒，保留叙述关系，不把灾异当作医学病因。',refs=[GENERAL,LOSS,FIRE,DEATH]),
+ ],
+ scholarship=[dict(title='居阳城山积学教授',text='为师丧去官后居阳城山积学教授；本传未列其著作书名，不据此虚列著述。',refs=[STUDY])],
+ assessment=[dict(title='陈寿：图窃神器，其惑甚矣',text='陈寿把求益州、为子娶吴氏及造舆服相连，批评刘焉寄望谶相、图窃神器。评语针对政治企图与迷惑，不等同于否认其所有安抚或延纳士人之举。',refs=[PING,WELCOME,REN])],
+ relations=[
+ dict(category='同僚',name='董扶',label='以谶语促其求益州',text='董扶私言益州有天子气，刘焉因而改求益州；出领时董扶亦求蜀郡属国都尉随行。',refs=[DONG,CHANGE,Q('v031-b0004','扶亦求為蜀郡西部屬國都尉')]),
+ dict(category='部属',name='贾龙、任岐',label='迎牧者转为反攻者',text='贾龙先平马相、迎刘焉；后与任岐因刘焉诛豪强反攻，被刘焉击杀。',refs=[MA,WELCOME,REVOLT]),
+ dict(category='部属',name='张鲁',personId='zhang-lu',label='遣往汉中并断道',text='任张鲁督义司马，令住汉中断谷阁、杀汉使。',refs=[LU]),
+ dict(category='邻境',name='刘表',personId='liu-biao',label='上奏指斥僭拟',text='刘表以其造乘舆车具上奏指斥；不是两人在西河实际相会的记载。',refs=[ROYAL,BIAO]),
+ dict(category='亲族',name='刘璋',personId='liu-zhang',label='奉使来见，后继其位',text='刘璋奉使晓谕被父留住；刘焉卒后由赵韪等拥立继位。',refs=[ZHANG,DEATH,SUCCESSION]),
+ dict(category='亲族',name='刘范、刘诞',label='留长安而遇害的二子',text='二子从献帝在长安；刘范与马腾通谋败后被杀，刘诞也被收捕行刑。',refs=[SONS,ATTACK,LOSS]),
+ dict(category='邻境',name='马腾',personId='ma-teng',label='谋攻长安的合作者',text='与马腾、刘范通谋，遣孙肇领兵助战而败。',refs=[ATTACK,GENERAL]),
+ dict(category='部属',name='赵韪',label='随行入蜀，后拥刘璋',text='赵韪去官随刘焉入蜀，刘焉卒后参与拥立刘璋。',refs=[Q('v031-b0004','巴西趙韙去官，俱隨焉。'),SUCCESSION]),
+ ],
+ readingNotes=[
+ dict(title='入州平乱不能移功于刘焉',text='本传先写贾龙破马相，再写选吏卒迎刘焉。后来刘焉击杀贾龙是另一事件，不能合并成刘焉平马相后诛部将的简单叙事。',refs=[MA,WELCOME,REVOLT]),
+ dict(title='州牧并非各州同时改置',text='注引《续汉书》将刘虞、刘焉、刘表等并列，裴松之指出刘表任荆州在灵帝崩、孙坚杀王叡之后，与刘焉不同时间。不能把刘焉建议写成四州同日完成的统一改制。',refs=[Q('v031-b0004-n02','是時用劉虞為幽州，劉焉為益州，劉表為荊州，賈琮為冀州。','《续汉书》'),DATES]),
+ dict(title='攻长安是遣军，不是刘焉亲至',text='正文“引兵袭长安”须与注引《英雄记》合读，后者明确是刘焉使孙肇领兵。长安是作战目标及儿子所在，不能画成刘焉亲历站。',refs=[ATTACK,GENERAL,SONS]),
+ dict(title='刘巴祖父举刘焉的说法被驳',text='《零陵先贤传》称刘焉曾受刘巴父刘祥举孝廉；裴松之以刘焉早已历宗正、太常，刘祥此后才任江夏太守，指出年代乖错。本页不把此说写入早年官历。',refs=[Q('v039-b0006-n01','璋父焉昔為巴父祥所舉孝廉','《零陵先贤传》'),Q('v039-b0006-n01','不得舉焉為孝廉，明也。','《零陵先贤传》；裴松之案')]),
+ ],
+ glossary=[('牧伯','对掌一州军政长官的称呼。'),('乘舆','本页指天子使用的车舆器具。')],
+ sourceScope='以卷三十一刘焉本传正文、全部裴注和篇末评语为基础，交叉核对卷三十四吴氏、卷三十八任安材料、卷三十九刘巴注及卷四十二孟光。谶相为当事人及传评中的说法，裴注异文、年代辨驳另列阅读提示。本页不声称穷尽全书所有提及刘焉之处。',
+)

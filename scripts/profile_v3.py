@@ -32,6 +32,17 @@ V3_MODULES = [
     'profile_v3_xun_you',
     'profile_v3_guo_jia',
     'profile_v3_cheng_yu',
+    'profile_v3_yuanshao',
+    'profile_v3_yuan_shu',
+    'profile_v3_gongsun_zan',
+    'profile_v3_han_sui',
+    'profile_v3_dong_zhuo',
+    'profile_v3_lv_bu',
+    'profile_v3_liu_biao',
+    'profile_v3_tao_qian',
+    'profile_v3_liu_yan',
+    'profile_v3_liu_zhang',
+    'profile_v3_zhang_lu',
 ]
 
 # 人物分级（scripts/person_tiers.py 按史料篇幅计算；改动须同时更新该脚本并通过 --check）。

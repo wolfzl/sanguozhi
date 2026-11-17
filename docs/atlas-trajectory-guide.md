@@ -102,7 +102,7 @@ trajectory=dict(
 node scripts/atlas-places.mjs person liubei
 ```
 
-截至 2026-11-17，本站 65 人中有 43 人在配套的本地江山时序版本里有路线：
+截至 2026-11-17，本站 65 人中有 52 人在配套的本地江山时序版本里有路线：
 
 | 本站 id | `atlasPerson` | 站数 | 本站 id | `atlasPerson` | 站数 |
 |---|---|---|---|---|---|
@@ -111,9 +111,9 @@ node scripts/atlas-places.mjs person liubei
 | zhuge-liang | zhugeliang | 11 | zhouyu | zhouyu | 5 |
 | sunquan | sunquan | 7 | zhangfei | zhangfei | 10 |
 | guanyu | guanyu | 7 | jiang-wei | jiangwei | 12 |
-| du-yu | duyu | 7 | yuanshao | yuanshao | 3 |
+| du-yu | duyu | 7 | yuanshao | yuanshao | 10 |
 | zhaoyun | zhaoyun | 9 | deng-ai | dengai | 13 |
-| lv-bu | lvbu | 3 | ma-chao | machao | 7 |
+| lv-bu | lvbu | 11 | ma-chao | machao | 7 |
 | pang-tong | pangtong | 5 | fa-zheng | fazheng | 4 |
 | liu-shan | liushan | 6 | jiang-wan | jiangwan | 5 |
 | fei-yi | feiyi | 9 | | | |
@@ -129,6 +129,11 @@ node scripts/atlas-places.mjs person liubei
 | xun-yu | xunyu | 6 | xun-you | xunyou | 8 |
 | guo-jia | guojia | 8 | cheng-yu | chengyu | 7 |
 | jia-xu | jiaxu | 5 | | | |
+| dong-zhuo | dongzhuo | 5 | yuan-shu | yuanshu | 8 |
+| gongsun-zan | gongsunzan | 9 | han-sui | hansui | 10 |
+| liu-biao | liubiao | 2 | tao-qian | taoqian | 2 |
+| liu-yan | liuyan | 2 | liu-zhang | liuzhang | 7 |
+| zhang-lu | zhanglu | 3 | | | |
 
 本轮九名蜀汉人物使用带原文引用的独立人物站点（`curatedOnly`），不再混入只提及姓名的公共事件。详见 [核对数据](shu-trajectory-audit.json)。其他人物仍沿用既有路线。上游新增事件后，站号可能整体后移；`atlas-places.mjs check` 会按年份核对，发现错位就报错。
 
@@ -309,3 +314,19 @@ JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/atlas-places.mjs chec
 ```
 
 专项检查核对110站的本书引句、正文/裴注层次、时期与履历归属、无重复分配，以及地图原始数据与运行时路线和本站审计数据的一致性。地图侧原先“邓艾263年仅两站”的断言已改为检验阴平先于成都，允许有证据的中间站；A类绘图规则不变。
+
+
+## 汉末十一人独立人物路线
+
+袁绍、袁术、公孙瓒、韩遂、董卓、吕布、刘表、陶谦、刘焉、刘璋、张鲁均使用 `curatedOnly` 独立路线，共50个时期、69站、42个有地图入口的时期。数据见 [han-trajectory-audit.json](han-trajectory-audit.json)，内容审查与验收见 [han-b-profile-review.md](han-b-profile-review.md)。原有三国势力人物路线与A类绘制规则不变。
+
+不为满足站数补造足迹：刘焉、刘表、陶谦目前各只有2处有依据的区域落点。地图全量校验允许少于3站的独立路线，但要求非空、运行时站数与种子一致，并且每站均有格式正确的原文短引依据；其他从公共事件推得的路线仍保留至少3站的要求。本站专项检查继续逐句核对本书、时期、履历与地图运行时。
+
+关键取舍：董卓保留扶风—洛阳—长安—郿坞—长安；吕布保留武关东出与莒—下邳；袁术本人淮上活动与孙坚、孙策出征分开；韩遂补西讨张猛的武威郡区域；公孙瓒保留两次返薊；刘璋保留涪—成都往返及公安、秭归；张鲁保留巴地—南郑返回。任官封邑、部将战场、未实施计划不作本人落点。确年未载、区域坐标和陶谦“剡／郯”的文本与定位限制写在说明中，未静默校改原文。
+
+日期列保持短标签，排序年份与合并经历的完整说明放在详情。嵌入、独立图与分期链接仍统一带 `sgz_rev`，地图资源内容哈希随文件变化同步。
+
+```bash
+JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/check-han-trajectories.mjs
+JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/atlas-places.mjs check yuanshao yuan-shu gongsun-zan han-sui dong-zhuo lv-bu liu-biao tao-qian liu-yan liu-zhang zhang-lu
+```

@@ -1,0 +1,123 @@
+"""刘璋：继领益州、引援失地与开城之择。"""
+from profile_v3 import Q
+NAME=Q('v031-b0009','璋字季玉，既襲焉位')
+ORIGIN=Q('v031-b0002','劉焉字君郎，江夏竟陵人也')
+COURT=Q('v031-b0006','璋為奉車都尉，皆從獻帝在長安')
+STAY=Q('v031-b0006','獻帝使璋曉諭焉，焉留璋不遣。')
+DIFF=Q('v031-b0006-n02','焉託疾召璋，璋自表省焉，焉遂留璋不還。','《典略》')
+SUCCEED=Q('v031-b0007','州大吏趙韙等貪璋溫仁，共上璋為益州刺史，詔書因以為監軍使者，領益州牧')
+DATE=Q('v031-b0007','興平元年，癰疽發背而卒。')
+KILL=Q('v031-b0009','璋殺魯母及弟，遂為讎敵。')
+LU=Q('v031-b0009','璋累遣龐羲等攻魯，〔數為〕所破。')
+XI=Q('v031-b0009','故以羲為巴西太守，領兵禦魯。後羲與璋情好攜隙')
+WEI=Q('v031-b0009-n02','趙韙素得人心，璋委任之。韙因民怨謀叛','《英雄记》')
+EAST=Q('v031-b0009-n02','東州人侵暴舊民，璋不能禁，政令多闕，益州頗怨。','《英雄记》')
+DEFEND=Q('v031-b0009-n02','璋馳入成都城守，東州人畏（威），咸同心並力助璋，皆殊死戰，遂破反者','《英雄记》')
+DEFEAT=Q('v031-b0009-n02','進攻韙於江州。韙將龐樂、李異反殺韙軍，斬韙。','《英雄记》')
+CAO=Q('v031-b0010','遣河內陰溥致敬於曹公。加璋振威將軍')
+ZHANGSU=Q('v031-b0010','璋復遣別駕從事蜀郡張肅送叟兵三百人並雜御物於曹公')
+SONG=Q('v031-b0010','松還，疵毀曹公，勸璋自絕')
+CONTACT=Q('v031-b0010','遣法正連好先主，尋又令正及孟達送兵數千助先主守禦')
+FEAR=Q('v032-b0016','十六年，益州牧劉璋遙聞曹公將遣鍾繇等向漢中討張魯，內懷恐懼。')
+INVITE=Q('v031-b0010','璋又從之，遣法正請先主。')
+WARN=Q('v031-b0010','璋主簿黃權陳其利害，從事廣漢王累自倒縣於州門以諫，璋一無所納')
+HUANG=Q('v043-b0002','欲以賓客禮待，則一國不容二君。')
+FU=Q('v031-b0010','璋率步騎三萬馀人，車乘帳幔，精光曜日，往就與會')
+FU_LOC=Q('v032-b0016','至涪，璋自出迎，相見甚歡。')
+BANQUET=Q('v031-b0010','歡飲百馀日。璋資給先主，使討張魯，然後分別。')
+TITLE=Q('v032-b0016','先主亦推璋行鎮西大將軍，領益州牧。')
+RETURN=Q('v032-b0016','是歲，璋還成都。')
+BREAK=Q('v032-b0017','璋但許兵四千，其餘皆給半。')
+KILLSONG=Q('v032-b0017','於是璋收斬松，嫌隙始構矣。')
+GUARD=Q('v032-b0017','璋敕關戍諸將文書勿複關通先主。')
+WAR=Q('v032-b0017','璋遣劉璝、冷苞、張任、鄧賢等拒先主於涪，皆破敗，退保綿竹。')
+LIYAN=Q('v040-b0023','建安十八年，署嚴為護軍，拒先主於綿竹。嚴率眾降先主')
+LUO=Q('v032-b0017','先主進軍圍雒；時璋子循守城，被攻且一年。')
+SURRENDER=Q('v031-b0011','十九年，進圍成都數十日，城中尚有精兵三萬人，谷帛支一年，吏民咸欲死戰。')
+SPEECH=Q('v031-b0011','百姓攻戰三年，肌膏草野者，以璋故也，何心能安！')
+OPEN=Q('v031-b0011','遂開城出降，群下莫不流涕。')
+JIANYONG=Q('v038-b0014','璋遂與雍同輿而載，出城歸命。')
+GONGAN=Q('v031-b0011','先主遷璋於南郡公安，盡歸其財物及故佩振威將軍印綬。')
+ZIGUI=Q('v031-b0011','孫權殺關羽，取荊州，以璋為益州牧，駐秭歸。')
+DEATH=Q('v031-b0012','璋卒，南中豪率雍闓據益郡反，附於吳。')
+SON=Q('v031-b0012','權復以璋子闡為益州刺史，處交、益界首。')
+FAMILY=Q('v031-b0012','是以璋二子之後，分在吳、蜀。')
+DONGHE=Q('v039-b0002','益州牧劉璋以為牛鞞、江原長、成都令。')
+KEEP=Q('v039-b0002','吏民老弱相攜乞留和者數千人，璋聽留二年')
+SCHOLARS=Q('v042-b0021','獻帝遷都長安，遂逃人蜀，劉焉父子待以客禮。')
+WANG=Q('v038-b0006-n01','璋從其言，乃拒絕之。','《益州耆旧传》')
+MACH=Q('v038-b0006-n01','今之益部，士美民豐，寶物所出，斯乃狡夫所欲傾覆，超等所以西望也。','《益州耆旧传》')
+PING=Q('v031-b0014','璋才非人雄，而據土亂世，負乘致寇，自然之理，其見奪取，非不幸也。')
+FAN=Q('v031-b0014-n02','劉璋愚弱而守善言，斯亦宋襄公、徐偃王之徒，未為無道之主也。','张璠论')
+FAN2=Q('v031-b0014-n02','而兩端攜貳，為謀不忠，罪之次也。','张璠论')
+PROFILE=dict(id='liu-zhang',tier='B',reading=['031'],syncLifespan=True,
+ lead='刘璋承刘焉掌益州，与张鲁交恶，内部又有将领与豪强难制。为借刘备抗张鲁而迎其入蜀，终由援军转成敌手；214年成都仍有兵粮时，因不忍百姓再战而出降，后迁公安，又受孙权任命驻秭归。',role='继领益州、后失地的州牧',
+ facts=[
+ dict(key='hometown',label='籍贯',value='本传未单列（父为江夏竟陵人）',text='本传记字季玉，刘焉之子；父传记江夏竟陵籍，不能把父籍、本人出生地与实际行迹直接画等号。',refs=[NAME,ORIGIN,COURT]),
+ dict(key='lifespan',label='生卒年',value='生卒年未详',text='本传叙孙权取荆州后任其益州牧、驻秭归，继叙其卒，未记享年及确切卒年。',refs=[ZIGUI,DEATH]),
+ dict(key='identity',label='主要身份',value='刘焉继任者、汉末益州牧',text='受赵韪等拥立继领益州，出降后失去益州实地；孙权后来所授益州牧不能写成恢复统治益州。',refs=[SUCCEED,OPEN,ZIGUI]),
+ dict(key='office',label='最高官职',value='行镇西大将军、领益州牧',text='早任奉车都尉，继任监军使者、益州牧，加振威将军；211年刘备推其行镇西大将军，应保留“推”与“行”的性质。',refs=[COURT,SUCCEED,CAO,TITLE]),
+ dict(key='posthumous',label='身后称号',value='本书未载追谥',text='本传仅记卒、孙权续用刘阐及两子后人在吴蜀，未记刘璋谥号。',refs=[DEATH,SON,FAMILY]),
+ dict(key='deeds',label='代表事迹',items=['继领益州','抗张鲁失利','涪县会刘备','开成都降','东徙公安'],text='继位、引援、交战与开城构成主要转折；抗鲁列作重要经历，不能当作胜绩。',refs=[SUCCEED,LU,FU_LOC,OPEN,GONGAN]),
+ ],
+ intro=[
+ dict(title='继位之后的内外压力',text='刘璋字季玉，早任奉车都尉，随献帝在长安，来蜀后被父亲刘焉留下。194年刘焉卒，赵韪等看中他的温仁，拥立继领益州。张鲁不承顺，他杀张鲁母、弟，结成仇敌，屡遣庞羲等进攻又败。州内也并不安稳：庞羲与他生隙，赵韪更反攻。注引《英雄记》说东州兵侵暴旧民、刘璋不能禁，后来却又靠东州兵死战守住成都。',refs=[NAME,COURT,STAY,DATE,SUCCEED,KILL,LU,XI,WEI,EAST,DEFEND],eventLinks=[dict(label='拥立继领益州',eventId='liu-zhang-succession')]),
+ dict(title='从通曹到邀刘',text='刘璋曾向曹操致敬、送兵送物，张松出使受冷遇后又劝他自绝曹操、结好刘备。211年听说曹操将向汉中讨张鲁，他担心益州接着受威胁，于是接受张松主张，遣法正迎刘备。黄权提醒，以部曲相待难满刘备之心，以宾客礼待又一国不容二君；王累也谏，刘璋均未听。他亲到涪县相会，供给军资，使刘备讨鲁，然后自己还成都。',refs=[CAO,ZHANGSU,SONG,CONTACT,FEAR,INVITE,WARN,HUANG,FU_LOC,BANQUET,RETURN],eventLinks=[dict(label='遣法正迎刘备',eventId='enter-shu')]),
+ dict(title='援军反成攻城者',text='次年刘备借救吴与关羽之名索取援兵，刘璋只给所求的一部分；张松内通事发被杀，双方关系破裂。刘璋所遣诸将败于涪，李严又在绵竹率众降，儿子刘循守雒近一年，仍未能阻止刘备进围成都。214年城内尚有精兵三万、谷帛可支一年，吏民愿死战，他却说父子在州未有恩德，不愿百姓继续因自己死于草野，遂开城出降。',refs=[BREAK,KILLSONG,GUARD,WAR,LIYAN,LUO,SURRENDER,SPEECH,OPEN]),
+ dict(title='失地后的身份与评价',text='刘备将刘璋迁到南郡公安，归还财物与振威将军印绶；孙权取得荆州后，又授他益州牧、驻秭归，本传随后记卒，未写确年。陈寿以才非人雄、负乘致寇解释失地；裴注保存张璠较温和的评价，称其愚弱而守善，并责张松、法正谋不忠。能力不足、君臣责任与最终止战的选择，需要放在不同层次理解。',refs=[GONGAN,ZIGUI,DEATH,PING,FAN,FAN2,SPEECH]),
+ ],
+ careers=[
+ dict(id='changan',when='献帝在长安时，194年父卒前，确年未载',title='奉车都尉来蜀，被父留住',office='奉车都尉',text='随献帝在长安，奉命来晓谕刘焉，刘焉留他不遣；注引《典略》改说父托疾召、刘璋上表省父。',refs=[COURT,STAY,DIFF]),
+ dict(id='succession',when='194年',title='刘焉卒，受拥立继领益州',office='监军使者、领益州牧',text='兴平元年刘焉卒，赵韪等因其温仁共推为刺史，诏命监军使者、领益州牧。',refs=[DATE,SUCCEED],eventIds=['liu-zhang-succession']),
+ dict(id='zhanglu',when='继位后，确年未载',title='与张鲁交恶，屡攻失利',office='—',text='因张鲁不承顺，杀其母、弟，双方为仇；遣庞羲等进攻屡败，又以庞羲领巴西兵抵御。',refs=[KILL,LU,XI]),
+ dict(id='zhaowei',when='赵韪反攻时，确年未载',title='驰入成都，依东州兵守城',office='益州牧',text='注引《英雄记》记赵韪借民怨反攻，刘璋驰入成都，东州兵殊死助守而破反者，追攻江州；不据军队追击反推刘璋亲至江州。',refs=[EAST,WEI,DEFEND,DEFEAT]),
+ dict(id='appointments',when='主益州时，确年未载',title='听留董和，延纳士人',office='—',text='董和历牛鞞、江原长与成都令，遭豪强请徙；吏民乞留，刘璋听留二年。刘焉父子亦以客礼待入蜀孟光。',refs=[DONGHE,KEEP,SCHOLARS]),
+ dict(id='caocao',when='曹操征定荆州前后，208年前后',title='通曹使者往返，继转交好刘备',office='加振威将军',text='遣阴溥致敬曹操，送兵与御物；张松归来劝绝曹，刘璋遂遣法正结好刘备并送兵援助。此处的往返者是使者。',refs=[CAO,ZHANGSU,SONG,CONTACT]),
+ dict(id='invite',when='211年',title='忧汉中而迎刘备',office='—',text='闻曹操拟遣钟繇向汉中讨鲁而恐惧，遣法正迎刘备；黄权、王累反对，未获采纳。',refs=[FEAR,INVITE,WARN,HUANG],eventIds=['enter-shu']),
+ dict(id='fu',when='211年',title='率众到涪，资给刘备',office='刘备推行镇西大将军、领益州牧',text='亲率步骑三万余人到涪会刘备，欢饮百余日，资给刘备使讨张鲁。双方互推官职，应与朝廷正式任命区别。',refs=[FU,FU_LOC,BANQUET,TITLE]),
+ dict(id='return',when='211年',title='由涪还成都',office='—',text='与刘备分别后，同年回成都；刘备则北到葭萌，未即讨张鲁。双方行程分开记录。',refs=[RETURN,Q('v032-b0016','先主北到葭萌，未即討魯')]),
+ dict(id='break',when='212年',title='斩张松，断关戍通书',office='—',text='刘备求万兵、资财，刘璋减给；张肃告发张松内通，刘璋斩松，命关戍勿再通刘备。',refs=[BREAK,KILLSONG,GUARD]),
+ dict(id='war',when='212—214年',title='诸军败退，刘循守雒',office='—',text='派诸将拒刘备于涪而败退，213年任李严护军拒于绵竹，李严率众降；刘循守雒被围近一年，214年城破。战场不是刘璋本人行迹。',refs=[WAR,LIYAN,LUO,Q('v032-b0018','十九年夏，雒城破')]),
+ dict(id='surrender',when='214年',title='成都有兵粮而开城出降',office='失去益州实地',text='成都被围数十日，尚有精兵三万、谷帛支一年，吏民欲战；刘璋以百姓三年死伤为忧，开城出降，简雍传记二人同舆出城。',refs=[SURRENDER,SPEECH,OPEN,JIANYONG]),
+ dict(id='gongan',when='214年出降后',title='迁居南郡公安',office='归还振威将军印绶',text='刘备迁刘璋于南郡公安，尽归财物与原佩振威将军印绶。',refs=[GONGAN]),
+ dict(id='zigui',when='孙权取荆州后，219年以后，确年未载',title='孙权授益州牧，驻秭归',office='益州牧（孙权所授）',text='孙权杀关羽、取荆州后，使刘璋为益州牧，驻秭归；授号没有使他重新据有益州。',refs=[ZIGUI]),
+ dict(id='death',when='驻秭归后，卒年未载',title='卒后两子支属分在吴蜀',office='—',text='本传继驻秭归记卒；孙权后任刘阐为益州刺史，刘循先留蜀任职，二子后裔分在吴蜀。不补具体卒年、卒地。',refs=[DEATH,SON,Q('v031-b0012','先主以為奉車中郎將。'),FAMILY]),
+ ],
+ trajectory=dict(atlasPerson='liuzhang',phases=[
+ dict(id='court',title='在朝与继位',when='献帝在长安时—194年',span=(190,194),careers=['changan','succession'],atlasStops=[0]),
+ dict(id='province',title='立足益州',when='194年后—208年前后',span=(194,210),careers=['zhanglu','zhaowei','appointments','caocao'],atlasStops=[1]),
+ dict(id='invite',title='引援与反目',when='211—214年',span=(211,214),careers=['invite','fu','return','break','war'],atlasStops=[2,3]),
+ dict(id='surrender',title='开城与东徙',when='214年',span=(214,214),careers=['surrender','gongan'],atlasStops=[4,5]),
+ dict(id='wu',title='吴地晚年',when='孙权取荆州后，确年未载',span=(219,230),careers=['zigui','death'],atlasStops=[6]),
+ ]),
+ sections={'military':{'note':'注引《英雄记》可证刘璋据成都、靠东州兵击破赵韪反攻，仍见生平履历；本书不足以再列第二项成功战绩。攻张鲁屡败、涪与绵竹防御失利均列履历及得失，不以败战填充武功。'}},
+ records=[
+ dict(section='civil',when='主益州时，确年未载',title='顺民意留董和任职',category='地方用人',careerRef='appointments',text='豪强忌董和严法，劝调其职，数千吏民相携请留；刘璋听留二年。这是有明确反应与结果的用人决定，不概括为始终能任贤。',refs=[DONGHE,Q('v039-b0002','然縣界豪強憚和嚴法，說璋轉和為巴東屬國都尉。'),KEEP]),
+ dict(section='civil',when='主益州时，确年未载',title='礼待学人，并曾听从拒马超之谏',category='延纳与建言',text='孟光受刘焉父子客礼。注引《益州耆旧传》还记王商提醒引马超近之如养虎，刘璋听从拒绝；有此采纳，不宜把“不纳谏”写成一生无例外。',refs=[SCHOLARS,MACH,WANG]),
+ dict(section='setback',when='继位后，确年未载',title='杀张鲁母弟，长期交兵失利',category='邻境冲突',careerRef='zhanglu',text='以张鲁不顺而杀其母弟，双方由不服统属变成仇敌；屡攻不克，又须依庞羲防御，未能解决北面问题。',refs=[KILL,LU,XI]),
+ dict(section='setback',when='赵韪反攻前后，确年未载',title='不能禁东州兵侵暴',category='内部治理',careerRef='zhaowei',text='注引《英雄记》将东州兵侵暴旧民、政令多阙与民怨、赵韪反攻相连。后来东州兵保住刘璋，不等于此前治理问题因此消失。',refs=[EAST,WEI,DEFEND]),
+ dict(section='setback',when='211年',title='以刘备为援，未纳容不下二君之谏',category='引援风险',careerRef='invite',text='因惧曹操借汉中入蜀而迎刘备，又不纳黄权等谏。黄权指出的是客军与州主的权力关系，后来失地须结合这一具体风险理解。',refs=[FEAR,INVITE,WARN,HUANG]),
+ dict(section='setback',when='214年',title='失益州与停止战斗的两面',category='失地与止战',careerRef='surrender',text='陈寿以才能不足解释其被夺取；刘璋自己的开城理由却是不忍百姓继续为己死伤。失去州土与减少继续战斗，是同一决定的不同评价层次。',refs=[PING,SURRENDER,SPEECH,OPEN]),
+ ],
+ assessment=[dict(title='陈寿：才非人雄，负乘致寇',text='陈寿认为刘璋才不足以据乱世之土，被夺取并非偶然不幸；裴注保存张璠“未为无道之主”的异评，可与开城止战的自述并读。',refs=[PING,FAN,SPEECH])],
+ relations=[
+ dict(category='亲族',name='刘焉',personId='liu-yan',label='父亲与益州前任',text='奉使见父而被留，194年父卒后受推继领益州。',refs=[STAY,DATE,SUCCEED]),
+ dict(category='敌对',name='张鲁',personId='zhang-lu',label='不顺而结为仇敌',text='杀张鲁母弟，屡遣军攻鲁失利。',refs=[KILL,LU]),
+ dict(category='部属',name='赵韪',label='拥立者后来反攻',text='先拥立刘璋，又借民怨反攻；最后被自己部将所杀。',refs=[SUCCEED,WEI,DEFEAT]),
+ dict(category='部属',name='庞羲',label='守巴西而互疑',text='任巴西太守御鲁，后来双方情好生隙；王畿材料又记刘璋因谗言疑羲。',refs=[XI,Q('v045-b0067','有讒於璋，說羲欲叛者，璋陰疑之。')]),
+ dict(category='部属',name='张松、法正',personId='fa-zheng',label='促成引援，内谋取州',text='张松劝迎、法正出使，法正又向刘备陈益州可取之策；张松事泄后被刘璋斩。',refs=[INVITE,Q('v032-b0016','正因陳益州可取之策。'),KILLSONG]),
+ dict(category='部属',name='黄权',label='谏迎客军，后守城尽职',text='谏一国不容二君，不被采纳；后来闭城坚守，待刘璋出降才降刘备。',refs=[HUANG,Q('v043-b0002','權閉城堅守，須劉璋稽服，乃詣降先主。')]),
+ dict(category='敌对',name='刘备',personId='liubei',label='由援军首领到夺州者',text='相会涪县、资给讨鲁，后双方交战，刘璋出降并被迁公安。',refs=[FU_LOC,BANQUET,OPEN,GONGAN]),
+ dict(category='旧识',name='简雍',label='说降并同舆出城',text='刘璋初见简雍甚爱之，成都被围时经其劝说，与之同舆出降。',refs=[Q('v038-b0014','先主入益州，劉璋見雍，甚愛之。'),JIANYONG]),
+ dict(category='君臣',name='孙权',personId='sunquan',label='荆州失守后另授牧号',text='孙权取荆州后授其益州牧、驻秭归，刘璋卒后又任刘阐为刺史。',refs=[ZIGUI,SON]),
+ ],
+ readingNotes=[
+ dict(title='来蜀是奉使还是省父',text='正文说献帝使刘璋晓谕刘焉；注引《典略》则说刘焉托病召、刘璋上表省父。两说都记父亲留璋不还，来意有别，分层保留。',refs=[STAY,DIFF]),
+ dict(title='“已定汉中”不能前移到赤壁以前',text='刘璋传通曹一段有“已定汉中”，但同段张松出使接赤壁；《武帝纪》明记建安二十年才攻定汉中。本页不据此句把215年之事移到208年，也不擅改本书文字。',refs=[Q('v031-b0010','璋聞曹公徵荊州，已定漢中'),Q('v031-b0010','會曹公軍不利於赤壁'),Q('v008-b0049','建安二十年，太祖乃自散關出武都征之')]),
+ dict(title='张璠评语不等于陈寿本评',text='陈寿批评其才不足据土，裴注所录张璠却说未为无道之主，并责张松、法正两端携贰。二者评价着眼点不同，不并写成全书一致的结论。',refs=[PING,FAN,FAN2]),
+ dict(title='开城有止战理由，也仍有兵粮',text='本传明确说精兵三万、谷帛支一年及吏民欲战，紧接刘璋不忍百姓继续牺牲的言语。不能写成因粮尽而被迫献城，也不能据其善言推论此前治理一贯良好。',refs=[SURRENDER,SPEECH,OPEN,EAST]),
+ ],
+ relatedEventNotes=[dict(eventId='liu-yan-yizhou',text='此为刘焉入蜀、建立益州事业的背景事件；刘璋本人继位见194年履历，不据188年的事件起年认定他已任州牧。')],
+ glossary=[('行镇西大将军','刘备所推的代理官号；保留“推”“行”，不写成汉廷正式册命。'),('东州兵','本传裴注所说由南阳、三辅流入益州之人组成的军队。')],
+ sourceScope='以卷三十一刘璋本传、刘焉末段及全部相关裴注为基础，交叉核对卷三十二先主、卷三十八简雍与王商注、卷三十九董和、卷四十李严、卷四十一张裔、卷四十二孟光、卷四十三黄权及卷四十五王畿。通曹段“已定汉中”的时序冲突、来蜀异说和张璠异评另列辨析。本页不声称穷尽全书所有提及刘璋之处。',
+)

@@ -1,0 +1,91 @@
+"""陶谦：卷八本传、吴书异说与武帝纪、先主传互校。"""
+from profile_v3 import Q
+ORIGIN=Q('v008-b0015','陶謙字恭祖，丹楊人。')
+STUDY=Q('v008-b0015','少好學，爲諸生')
+EARLY=Q('v008-b0015','舉茂才，除盧令，遷幽州剌史，徵拜議郎')
+WEST=Q('v008-b0015','參車騎將軍張溫軍事，西討韓遂。')
+YELLOW=Q('v008-b0015','會徐州黃巾起，以謙爲徐州剌史，擊黃巾，破走之。')
+TRIBUTE=Q('v008-b0016','謙遣使間行致貢獻，遷安東將軍、徐州牧，封溧陽侯。')
+REFUGE=Q('v008-b0016','是時，徐州百姓殷盛，穀米封贍，流民多歸之。')
+MISRULE=Q('v008-b0016','刑政失和，良善多被其害，由是漸亂。')
+QUEXUAN=Q('v008-b0016','下邳闕宣自稱天子，謙初與合從寇鈔，後遂殺宣，并其衆。')
+FAGAN=Q('v001-b0019','陶謙屯發干，以逼紹。')
+DEFEAT=Q('v001-b0019','太祖與紹會擊，皆破之。')
+PENGCHENG=Q('v008-b0017','初平四年，太祖征謙，攻拔十餘城，至彭城大戰。')
+RETREAT=Q('v008-b0017','謙退守剡。太祖以糧少引軍還。')
+SECOND=Q('v008-b0018','興平元年，復東征，略定琅邪、東海諸縣。')
+PLAN=Q('v008-b0018','謙恐，欲走歸丹楊。')
+STOP=Q('v008-b0018','會張邈叛迎呂布，太祖還擊布。')
+DEATH=Q('v008-b0018','是歲，謙病死。')
+AGE=Q('v008-b0018-n01','謙死時，年六十三','《吴书》')
+SUPPORT=Q('v032-b0005','謙以丹楊兵四千益先主，先主遂去楷歸謙。')
+RECOMMEND=Q('v032-b0005','謙病篤，謂別駕麋竺曰：「非劉備不能安此州也。」')
+FOLLOW=Q('v032-b0005','謙死，竺率州人迎先主')
+PING=Q('v008-b0057','陶謙昏亂而憂死')
+PROFILE=dict(
+ id='tao-qian',tier='B',reading=['008'],
+ lead='陶谦字恭祖，丹杨人，早年好学出仕，曾从张温西讨韩遂，后任徐州刺史击退黄巾。通贡朝廷而升州牧、安东将军，却因疏忠任佞而使刑政渐乱；193—194年连续受曹操攻伐，临终向麋竺推荐刘备，194年病卒。',role='安东将军、徐州牧',
+ facts=[
+ dict(key='lifespan',label='生卒年',value='约132—194年',text='卒于兴平元年，即194年；裴注引《吴书》记六十三岁，按传统虚岁倒推约132年，出生年不是正文直接记载。',refs=[SECOND,DEATH,AGE]),
+ dict(key='hometown',label='籍贯',value='丹杨',text='本传记丹杨人、字恭祖；“欲归丹杨”仅为后来的避难打算。',refs=[ORIGIN,PLAN]),
+ dict(key='identity',label='主要身份',value='汉末徐州军政首领',text='因徐州黄巾起事受任刺史，后升州牧，兼安东将军。',refs=[YELLOW,TRIBUTE]),
+ dict(key='office',label='最高官职',value='安东将军、徐州牧',text='此前历县令、幽州刺史、议郎及张温参军事，任徐州刺史后因间使进贡而升迁。',refs=[EARLY,WEST,YELLOW,TRIBUTE]),
+ dict(key='title',label='最高爵位',value='溧阳侯',text='与安东将军、徐州牧之命同时受封溧阳侯。封邑本身不证明亲至。',refs=[TRIBUTE]),
+ dict(key='posthumous',label='身后称号',value='本书未载谥号',text='本传记病卒，裴注保存张昭等所作哀辞；哀辞称颂与正式追谥应当分开。',refs=[DEATH,Q('v008-b0018-n01','張昭等爲之哀辭曰','《吴书》')]),
+ dict(key='deeds',label='代表事迹',items=['击退黄巾','间使进贡','增兵刘备','临终荐备'],text='击退徐州黄巾，遣间使进贡，资助刘备兵力，并于病重时向麋竺推荐刘备安徐州。',refs=[YELLOW,TRIBUTE,SUPPORT,RECOMMEND]),
+ ],
+ intro=[
+ dict(title='从诸生到徐州刺史',text='陶谦字恭祖，丹杨人，少时好学，为诸生，后由州郡入仕，经县令、幽州刺史、议郎，又参与张温西讨韩遂。徐州黄巾兴起，他受任刺史并击退之。裴注《吴书》还保存他刚直、不愿屈从上官的故事，但这些个人侧面的褒扬不能代替正文对其后来治州的记载；早年的学问、任官与从军，应作为经历分看，不一概写成地方政绩。',refs=[ORIGIN,STUDY,EARLY,WEST,YELLOW,Q('v008-b0015-n02','謙性剛直，有大節','《吴书》')]),
+ dict(title='富庶州境与任人失当',text='董卓之乱中，四方与长安朝廷的联系阻绝，陶谦仍派使者间行进贡，因此升为安东将军、徐州牧，封溧阳侯。当时徐州人口与谷米充足，流民多来归附；这说明他掌握过较好的州境条件。正文随即批评他疏远忠直的赵昱、亲任曹宏等人，刑政不和、良善受害，又先与自称天子的阙宣合兵寇掠，再杀宣并众。富庶的起点与治理中的破坏，在本传中形成鲜明的先后对照。',refs=[Q('v008-b0016','天子都長安，四方斷絕'),TRIBUTE,REFUGE,Q('v008-b0016','廣陵太守琅邪趙昱，徐方名士也，以忠直見疏'),Q('v008-b0016','曹宏等，讒慝小人也，謙親任之。'),MISRULE,QUEXUAN]),
+ dict(title='两次受攻与身后交接',text='193年曹操进攻徐州，陶谦在彭城战败后退守，曹操因粮少撤军；翌年再来，他一度想归丹杨，却因张邈迎吕布、曹操回师而免于继续受攻。刘备在救徐州时得到陶谦四千丹杨兵，遂归附陶谦。194年陶谦病重，向麋竺说只有刘备能安此州，死后麋竺等迎刘备接掌徐州。推荐属临终安排，不能反过来抹去用人失误、寇掠及战败；陈寿对他的总评依然严厉。',refs=[PENGCHENG,RETREAT,SECOND,PLAN,STOP,SUPPORT,RECOMMEND,FOLLOW,DEATH,PING],eventLinks=[dict(label='193年曹操进攻徐州',eventId='xuzhou-campaign'),dict(label='迎刘备接掌徐州',eventId='liu-bei-xuzhou')]),
+ ],
+ careers=[
+ dict(id='early',when='早年，确年未载',title='诸生出仕，历县令与刺史',office='卢令、幽州刺史、议郎等',text='少好学、为诸生，仕州郡后举茂才，任卢令，迁幽州刺史，又征为议郎。',refs=[STUDY,EARLY]),
+ dict(id='shu',when='早年，确年未载',title='注引记舒令任内与张磐不合',office='舒令（注引所载）',text='裴注引《吴书》另记陶谦任舒令，因不肯屈从郡守张磐而失和，最后弃官；与正文早期官历分别列明。',refs=[Q('v008-b0015-n02','拜尚書郎，除舒令。','《吴书》'),Q('v008-b0015-n02','而謙恥爲之屈。','《吴书》'),Q('v008-b0015-n02','謙委官而去。','《吴书》')]),
+ dict(id='western',when='任徐州刺史前，确年未载',title='从张温西讨韩遂',office='车骑将军参军事',text='为张温参军事，随军西讨韩遂；本段没有逐一记载其到达城邑，不据官名补地图。',refs=[WEST]),
+ dict(id='yellow',when='徐州黄巾起时，确年未载',title='任徐州刺史，击退黄巾',office='徐州刺史',text='徐州黄巾起，陶谦受任刺史并击破、逐走之；本段未列战场。',refs=[YELLOW]),
+ dict(id='tribute',when='董卓乱后，确年未载',title='间使进贡，升州牧封侯',office='安东将军、徐州牧、溧阳侯',text='天子都长安，四方断绝，陶谦派使者间行通贡，得升将军、州牧并封侯。',refs=[Q('v008-b0016','天子都長安，四方斷絕'),TRIBUTE]),
+ dict(id='fagan',when='192年',title='屯发干逼袁绍而败',office='—',text='《武帝纪》初平三年记陶谦屯发干，与公孙瓒所遣刘备、单经共同逼迫袁绍；曹操与袁绍会击，皆被击破。',refs=[Q('v001-b0016','三年春'),Q('v001-b0019','瓚使劉備屯高唐，單經屯平原'),FAGAN,DEFEAT]),
+ dict(id='quexuan',when='193年及前后',title='与阙宣合兵后杀并其众',office='—',text='本传记先与自称天子的阙宣合兵寇掠，后杀宣并众；《武帝纪》把二人共同侵取华、费、任城列在193年曹操东征之前。',refs=[QUEXUAN,Q('v001-b0021','徐州牧陶謙與共舉兵，取泰山華、費，略任城。')]),
+ dict(id='first-war',when='193年',title='彭城败退，退守剡',office='—',text='曹操攻下十余城，至彭城大战，陶谦兵败，死者万数；退守地正文作“剡”，郯、剡异文另见辨析。曹操因粮少撤军。',refs=[PENGCHENG,Q('v008-b0017','謙兵敗走，死者萬數'),RETREAT],eventIds=['xuzhou-campaign']),
+ dict(id='second-war',when='194年',title='再受东征，欲归丹杨',office='—',text='曹操再定琅邪、东海诸县，陶谦恐惧，想逃回丹杨；适逢张邈迎吕布，曹操回师，正文未说陶谦已到丹杨。',refs=[SECOND,PLAN,STOP]),
+ dict(id='liubei',when='救徐州期间，确年未载',title='增兵刘备，表为豫州刺史',office='—',text='刘备随田楷来救，陶谦以四千丹杨兵增益，刘备转而归附；陶谦表其为豫州刺史，屯小沛。',refs=[Q('v032-b0005','楷與先主俱救之。'),SUPPORT,Q('v032-b0005','謙表先主為豫州刺史，屯小沛。')]),
+ dict(id='death',when='194年',title='病卒前荐刘备安徐州',office='—',text='病重时向麋竺推荐刘备，卒后麋竺率州人迎刘备；裴注《吴书》记陶谦六十三岁，张昭等作哀辞。',refs=[RECOMMEND,FOLLOW,DEATH,AGE],eventIds=['liu-bei-xuzhou']),
+ ],
+ trajectory=dict(atlasPerson='taoqian',phases=[
+ dict(id='early',title='读书与出仕',when='早年，确年未载',span=(150,189),careers=['early','shu','western'],atlasStops=[]),
+ dict(id='xuzhou',title='入徐与通贡',when='黄巾起后，确年未载',span=(188,192),careers=['yellow','tribute'],atlasStops=[]),
+ dict(id='fagan',title='外争与寇掠',when='192—193年',span=(192,193),careers=['fagan','quexuan'],atlasStops=[0]),
+ dict(id='last',title='困战与荐备',when='193—194年',span=(193,194),careers=['first-war','second-war','liubei','death'],atlasStops=[1]),
+ ]),
+ records=[
+ dict(section='civil',when='董卓乱后，确年未载',title='维持对长安的贡使',category='朝廷联系',careerRef='tribute',text='四方阻绝时仍能派间使进贡，保持与汉廷的联系；这是外交与名义秩序上的作为，不是本人到了长安。',refs=[Q('v008-b0016','天子都長安，四方斷絕'),TRIBUTE]),
+ dict(section='civil',when='194年',title='临终荐备与州事交接',category='继任安排',careerRef='death',text='向麋竺明确推荐刘备安州，卒后麋竺与州人迎刘备；此处只肯定有明确人选安排，不把州人推迎写成陶谦生前已正式让位。',refs=[RECOMMEND,FOLLOW]),
+ dict(section='setback',when='治徐州期间，确年未载',title='疏忠任佞，刑政渐乱',category='人事刑政',text='赵昱以忠直见疏，曹宏等受亲任，良善多受其害；本传将州境渐乱归结到具体用人和刑政失和。',refs=[Q('v008-b0016','廣陵太守琅邪趙昱，徐方名士也，以忠直見疏'),Q('v008-b0016','曹宏等，讒慝小人也，謙親任之。'),MISRULE]),
+ dict(section='setback',when='192年',title='屯发干外争失利',category='军事失利',careerRef='fagan',text='与公孙瓒一方共同逼袁绍，终为曹操、袁绍会军击败，未取得这次外出争夺的胜果。',refs=[FAGAN,DEFEAT]),
+ dict(section='setback',when='193年及前后',title='先附阙宣寇掠',category='政治与军纪',careerRef='quexuan',text='先与自称天子的阙宣合从寇掠，后杀并其众；不能只写消灭僭号者而隐去此前合作。',refs=[QUEXUAN]),
+ dict(section='setback',when='193—194年',title='连续受攻，依靠外变解围',category='州境受创',careerRef='second-war',text='193年彭城兵败，翌年又被进攻，一度欲走丹杨；曹操回师缘于张邈、吕布之变，不是陶谦击退曹军。',refs=[PENGCHENG,Q('v008-b0017','謙兵敗走，死者萬數'),SECOND,PLAN,STOP]),
+ ],
+ sections={'military':{'note':'本传可确认的成功战果只有击退徐州黄巾一项，尚不足单列两条武功；西讨韩遂仅记参军，发干与彭城则为败绩。因此黄巾保留在履历，不将任官、出征或曹操因他事撤军拆凑为战功。'}},
+ scholarship=[dict(title='诸生与刚直的不同侧面',text='正文记少好学、为诸生；《吴书》则以刚直有节描写他与张磐、张温的冲突。学问与性格记载不等于有现存著述，本书此处没有陶谦著作目录。',refs=[STUDY,Q('v008-b0015-n02','謙性剛直，有大節','《吴书》'),Q('v008-b0015-n03','而謙輕其行事，心懷不服。','《吴书》')])],
+ assessment=[
+ dict(title='陈寿：昏乱而忧死',text='陈寿将陶谦概括为“昏乱而忧死”，与正文疏忠任佞、刑政失和和困于东征的叙述一致，评价相当严厉。',refs=[PING,MISRULE,PLAN]),
+ dict(title='张昭等哀辞：另一种评价语境',text='裴注《吴书》录张昭等哀辞，称刚直温仁、县令与州牧有遗爱；这是哀辞的褒扬，与陈寿正文及总评立场不同，应并列阅读。',refs=[Q('v008-b0018-n01','體足剛直，守以溫仁。令舒及盧，遺愛于民；牧幽曁徐，甘棠是均。','《吴书》'),PING]),
+ ],
+ relations=[
+ dict(category='旧主',name='张温',label='所从西征的上官',text='陶谦参与张温军务、西讨韩遂；裴注《吴书》另记轻辱张温、徙边复召的冲突。',refs=[WEST,Q('v008-b0015-n03','謙衆辱溫。溫怒，徙謙於邊。','《吴书》'),Q('v008-b0015-n03','乃追還謙。','《吴书》')]),
+ dict(category='部属',name='赵昱',label='因忠直见疏',text='广陵太守赵昱为徐方名士，本传说他因忠直而遭疏远。',refs=[Q('v008-b0016','廣陵太守琅邪趙昱，徐方名士也，以忠直見疏')]),
+ dict(category='部属',name='曹宏',label='亲任的讒慝者',text='本传批评曹宏等为讒慝小人而受亲任，与赵昱被疏相对照。',refs=[Q('v008-b0016','曹宏等，讒慝小人也，謙親任之。')]),
+ dict(category='同僚',name='阙宣',label='合从寇掠后被杀',text='阙宣在下邳自称天子，陶谦先与之合兵，随后杀之、兼并部众。',refs=[QUEXUAN]),
+ dict(category='敌对',name='曹操',personId='caocao',label='两征徐州的对手',text='193、194年两度来攻，陶谦兵败并一度欲归丹杨。',refs=[PENGCHENG,SECOND,PLAN]),
+ dict(category='部属',name='刘备',personId='liubei',label='来援而归附的继任人选',text='陶谦给刘备四千丹杨兵并表为豫州刺史，病重时向麋竺荐其安徐州。',refs=[SUPPORT,Q('v032-b0005','謙表先主為豫州刺史'),RECOMMEND]),
+ dict(category='部属',name='麋竺',personId='mi-zhu',label='执行临终荐备安排',text='以别驾身份受陶谦临终嘱语，卒后率州人迎刘备。',refs=[RECOMMEND,FOLLOW]),
+ ],
+ readingNotes=[
+ dict(title='曹嵩被害有不同归责',text='《武帝纪》正文说曹嵩为陶谦所害，裴注《世语》作陶谦密遣骑兵，《吴书》却作张闿护送中杀人取财、曹操归咎陶谦。存在不同责任叙述，不把其中一种扩写成已核定的完整经过。',refs=[Q('v001-b0023','爲陶謙所害'),Q('v001-b0023-n01','陶謙密遣數千騎掩捕。','《世语》'),Q('v001-b0023-n01','闓於泰山華、費間殺嵩，取財物，因奔淮南。太祖歸咎於陶謙','《吴书》')]),
+ dict(title='罢兵诏不能算曹操朝命',text='《吴书》说曹操表令州郡罢兵而陶谦拒绝，裴松之指出天子当时在长安、曹操未秉政，这份罢兵诏不能由曹氏发出；因此不将该故事写成确定的诏令往返。',refs=[Q('v008-b0017-n01','乃表令州郡一時罷兵。','《吴书》'),Q('v008-b0017-n01','此時天子在長安，曹公尚未秉政。罷兵之詔，不得由曹氏出。','《吴书》；裴松之案')]),
+ dict(title='退守地“剡”与“郯”',text='本传此段写“剡”，《武帝纪》同一徐州战事的次年记曹军过“郯”，曹豹、刘备屯郯。正文忠实保留剡字；地图以徐州郯城地域作有说明的近似位置，不误指浙东剡县，也不声称完成异文定本。',refs=[RETREAT,Q('v001-b0023','還過郯，謙將曹豹與劉備屯郯東')]),
+ dict(title='欲归丹杨不是已经归乡',text='194年正文明确是“欲走归丹杨”，随后曹操因兖州之变回师，并无陶谦已到丹杨的记载；同理，派贡使到长安也不构成本人西行。',refs=[PLAN,STOP,TRIBUTE]),
+ ],glossary=[('诸生','从事经学学习的士人。'),('间行','避开阻隔、经由隐蔽或迂回路线行进。')],
+ sourceScope='以卷八《陶谦传》正文及全部裴注为基础，交叉核对卷一《武帝纪》与卷三十二《先主传》的外争、两征徐州、曹嵩案及刘备接州记载。曹嵩案、罢兵诏与退守地剡郯异文列入辨析，出生年按注引年龄仅作约数。本页不声称穷尽全书所有提及陶谦之处。',
+)

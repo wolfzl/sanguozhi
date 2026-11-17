@@ -1,0 +1,96 @@
+"""韩遂：无独立本传的B级人物；按正文与注引交叉恢复。"""
+from profile_v3 import Q
+RISE=Q('v001-b0005','金城邊章、韓遂殺刺史郡守以叛，衆十餘萬，天下騷動。')
+CHANG=Q('v036-b0013','初平三年，遂、騰率眾詣長安。')
+OFFICE=Q('v036-b0013','漢朝以遂為鎮西將軍，遣還金城')
+CHENCANG=Q('v006-b0013-n01','馬騰、韓遂之敗，樊稠追至陳倉。','《九州春秋》')
+TALK=Q('v006-b0013-n01','俱郤騎前接馬，交臂相加，共語良久而別。','《九州春秋》')
+BROTHER=Q('v036-b0013-n01','而與鎮西將軍韓遂結為異姓兄弟，始甚相親','《典略》')
+FEUD=Q('v036-b0013-n01','騰攻遂，遂走，合眾還攻騰，殺騰妻子，連兵不解。','《典略》')
+HOSTAGE=Q('v013-b0003','騰、遂各遣子入侍。')
+ENVOY=Q('v015-b0026-n01','至十四年，為約所使詣太祖','《魏略》')
+WAIT=Q('v015-b0026-n01','約曰：「且可復觀望數歲中！」','《魏略》')
+MENG=Q('v018-b0040-n01','至十五年，將軍韓遂自上討猛','《典略》')
+DEFEATMENG=Q('v018-b0040-n01','其吏民畏遂，乃反共攻猛。','《典略》')
+MA=Q('v015-b0026-n01','而馬超等結反謀，舉約為都督。','《魏略》')
+HUAYIN=Q('v015-b0026-n01','乃東詣華陰。','《魏略》')
+TONG=Q('v036-b0014','超既統眾，遂與韓遂合從，及楊秋、李堪、成宜等相結，進軍至潼關。')
+MEET=Q('v001-b0077','韓遂請與公相見')
+DOUBT=Q('v001-b0077','他日，公又與遂書，多所點竄，如遂改定者；超等愈疑遂。')
+WEST=Q('v001-b0077','遂、超等走涼州')
+JIN=Q('v006-b0016','遂奔金城，爲其將所殺。')
+XIAN=Q('v009-b0009','韓遂在顯親，淵欲襲取之，遂走。')
+CHANGLI=Q('v009-b0009','遂果救長離，與淵軍对陣。')
+LOST=Q('v009-b0009','乃鼓之，大破遂軍，得其旌麾')
+XIPING=Q('v001-b0089','遂走西平。')
+HUANG=Q('v015-b0026-n01','韓遂在湟中，其壻閻行欲殺遂以降，夜攻遂，不下。','《典略》')
+PLAN=Q('v015-b0026-n01','當從羌中西南詣蜀耳。','《典略》')
+STAY=Q('v015-b0026-n01','遂從其計，時隨從者男女尚數千人。','《典略》')
+HEAD=Q('v001-b0098','西平、金城諸將麴演、蔣石等共斬送韓遂首。')
+DEATH_ALT=Q('v015-b0026-n01','會遂死，英降太祖。','《典略》')
+NAME=Q('v001-b0098-n01','遂字文約','《典略》')
+AGE=Q('v001-b0098-n01','積三十二年，至是乃死，年七十餘矣。','《典略》')
+CAPITAL=Q('v001-b0098-n01','遂奉計詣京師，何進宿聞其名，特與相見','《典略》')
+PROFILE=dict(id='han-sui',tier='B',reading=['006','001','009','015'],
+ lead='韩遂是汉末凉州长期拥兵的首领，曾受镇西将军，先与马腾结盟又相攻。211年与马超联军拒曹操，渭南败后转回西州，继续联结羌胡，后败于夏侯渊，终在215年被送首。',role='凉州军事首领、镇西将军',
+ facts=[
+ dict(key='hometown',label='籍贯',value='本书未详',text='本书散见记其金城起兵、败还金城及湟中活动，未找到直接界定本人籍贯的句子；金城活动不等于籍贯已明。',refs=[RISE,JIN,HUANG]),
+ dict(key='lifespan',label='生卒年',value='生年未详—215年',text='《武帝纪》建安二十年记麴演等斩送其首；《典略》记年七十余，不能倒推出唯一生年。',refs=[HEAD,AGE]),
+ dict(key='identity',label='主要身份',value='凉州长期拥兵首领',text='由西州起兵而获得汉廷将军名号，后与关中诸将联合拒曹操，不能只以一个官名概括其实际势力。',refs=[RISE,OFFICE,TONG]),
+ dict(key='office',label='最高官职',value='镇西将军',text='初平三年入长安后受授，遣还金城；注引又记马超等结谋时推他为都督，属于联军推举。',refs=[OFFICE,MA]),
+ dict(key='posthumous',label='身后称号',value='本书未载追谥',text='本书记被部将所杀及首级被送来，未列追谥；注文以韩文约称之，是姓名称谓。',refs=[JIN,HEAD,NAME]),
+ dict(key='names',label='常见称谓',value='韩遂、韩约、韩文约',text='正文多称韩遂，《魏略》注引常称韩约，《典略》明确记字文约；不据称谓差别另造生平变名经过。',refs=[OFFICE,Q('v015-b0026-n01','中平末，隨韓約為腹心。','《魏略》'),NAME]),
+ dict(key='deeds',label='代表事迹',items=['西州起兵','受镇西号','联军潼关','长离救战','末路送首'],text='主要行迹与权力转折见于西州起兵、长安受授、潼关联军、长离败战与末年结局。',refs=[RISE,OFFICE,TONG,CHANGLI,HEAD]),
+ ],
+ intro=[
+ dict(title='从西州起兵到汉廷受授',text='韩遂没有独立本传，生涯须由帝纪、马超及夏侯渊等传交叉恢复。《武帝纪》早段记金城边章、韩遂起兵，杀刺史郡守，聚众十余万。初平三年，他与马腾率众到长安，汉廷授镇西将军，遣还金城。官号并没有消除其地方武装的独立性，关中诸将此后仍各拥强兵而争。',refs=[RISE,CHANG,OFFICE,Q('v013-b0003','時關中諸將馬騰、韓遂等，各擁彊兵相與爭。')]),
+ dict(title='结盟相攻与归附观望',text='裴注引《典略》记韩遂与马腾结为异姓兄弟，后来因部曲相侵而反目，韩遂还攻并杀马腾妻子。钟繇到长安后向诸将陈说利害，两人各遣子入侍，形成暂时妥协。《魏略》又记阎行奉命见曹操、回来劝早归附，韩遂仍欲再观望数年；他在强权间保留余地，内部关系却已带着裂痕。',refs=[BROTHER,FEUD,HOSTAGE,ENVOY,WAIT]),
+ dict(title='与马超合军而失互信',text='《魏略》记韩遂西讨张猛期间，马超等结谋推他为都督；他回来后不听阎行反对，东到华阴。正文记联军进潼关，曹操后来与韩遂交马谈京都旧事，又用涂改书信使马超等增疑，终于在渭南破军。两军实力之外，联盟内部的疑惧与不能统一指挥，也是原文反复显出的脆弱处。',refs=[MENG,MA,HUAYIN,TONG,MEET,DOUBT,Q('v001-b0077','莫相歸服，軍無適主，一舉可滅')],eventLinks=[dict(label='潼关',eventId='tongguan')]),
+ dict(title='败后仍战与末路异说',text='韩遂败后回凉州、金城，后来在显亲避夏侯渊袭击，又为救长离诸羌而出战，大败后走西平。注引另记他留湟中、受阎行攻击，本想入蜀，却听成公英之议留羌中，仍企图重新结集。215年《武帝纪》记麴演等斩送韩遂首；《典略》只说会遂死。死亡经过并非每种来源同样详细，不能抹平差别。',refs=[WEST,JIN,XIAN,CHANGLI,LOST,XIPING,HUANG,PLAN,STAY,HEAD,DEATH_ALT]),
+ ],
+ careers=[
+ dict(id='capital',when='起兵前，确年未载',title='奉计诣京师，见何进',office='奉计之任（注引）',text='《典略》记奉计诣京师，何进闻名而见，韩遂劝诛宦官未被采纳，乃求归；不由此推为宫变亲历者。',refs=[CAPITAL,Q('v001-b0098-n01','遂說進使誅諸閹人，進不從，乃求歸。','《典略》')]),
+ dict(id='rise',when='灵帝末，确年未载',title='与边章等起兵西州',office='—',text='金城边章、韩遂起兵，杀刺史郡守，众十余万；本条不用本书未明确系出的单一年份。',refs=[RISE]),
+ dict(id='changan',when='192年',title='率众到长安，受镇西将军',office='镇西将军',text='与马腾率众诣长安，受汉廷官号后遣还金城；不将李傕、郭汜攻城本身写成韩遂战功。',refs=[CHANG,OFFICE],eventIds=['changan-counterattack']),
+ dict(id='chencang',when='马腾攻长安败后，确年未载',title='败至陈仓，与樊稠交马语',office='—',text='《九州春秋》记马腾、韩遂败走，樊稠追至陈仓，韩遂以同州之情与之谈别；这段交谈后来使李傕疑樊稠。',refs=[CHENCANG,TALK,Q('v006-b0013-n01','傕以是疑稠與韓遂私和而有異意。','《九州春秋》')]),
+ dict(id='feud',when='建安初前后，确年未载',title='与马腾结盟又相攻',office='—',text='《典略》记先结异姓兄弟，后因部曲互侵而交战，韩遂被逐又反攻，杀马腾妻子。',refs=[BROTHER,FEUD]),
+ dict(id='hostage',when='钟繇镇关中后，确年未载',title='遣子入侍，接受暂时和解',office='镇西将军',text='钟繇移书陈祸福，韩遂、马腾各遣子入侍；这是约束诸将的政治安排，不证明韩遂本人到了许都。',refs=[HOSTAGE,Q('v013-b0003','繇至長安，移書騰、遂等，爲陳禍福')]),
+ dict(id='envoy',when='209年',title='遣阎行见曹操，仍欲观望',office='—',text='《魏略》记阎行奉命诣曹操，归来转达劝其早附的意思；韩遂欲再观望，后来遣子与阎行父母东行。',refs=[ENVOY,WAIT,Q('v015-b0026-n01','後遂遣其子，與行父母俱東。','《魏略》')]),
+ dict(id='zhangmeng',when='210年',title='西讨武威张猛',office='—',text='《典略》记韩遂讨张猛，武威吏民畏韩遂而反攻张猛，张猛登楼自焚；不把战地补为武威城内确切地点。',refs=[MENG,DEFEATMENG,Q('v018-b0040-n01','乃登樓自燒而死。','《典略》')]),
+ dict(id='tongguan',when='211年',title='东至华阴，联军潼关、渭南',office='联军推为都督（注引）',text='《魏略》记马超等推为都督，韩遂东至华阴；正文记与诸将进潼关。曹操与其谈旧、涂改书信，联军互疑，战败走凉州。',refs=[MA,HUAYIN,TONG,DOUBT,WEST],eventIds=['tongguan']),
+ dict(id='return',when='211年败后，确年未载',title='回金城、湟中，与阎行失和',office='—',text='正文记败奔金城；《魏略》《典略》分别补记回金城、留湟中及与阎行互攻。本书未明确这些末年经历彼此的逐年先后。',refs=[JIN,HUANG,Q('v015-b0026-n01','及超等破走，行隨約還金城。','《魏略》')]),
+ dict(id='changli',when='214年',title='显亲避袭，救长离而败',office='—',text='夏侯渊欲袭显亲，韩遂避走；渊转攻长离羌屯，韩遂来救，交战大败，随后走西平。',refs=[XIAN,CHANGLI,LOST,XIPING]),
+ dict(id='plan',when='末年，确年未载',title='入蜀之议未行，留羌中待变',office='—',text='《典略》记欲西南入蜀，成公英劝暂留羌中、招集故人，他听从；此为未实施计划，不作入蜀行迹。',refs=[PLAN,STAY,Q('v015-b0026-n01','且息肩於羌中，以須其去。','《典略》')]),
+ dict(id='death',when='215年',title='被送首，死法细节有别',office='—',text='《武帝纪》记西平、金城诸将麴演、蒋石等斩送其首，卷六称为其将所杀；《典略》只记会遂死，不具体说明死法。',refs=[HEAD,JIN,DEATH_ALT]),
+ ],
+ trajectory=dict(atlasPerson='hansui',phases=[
+ dict(id='rise',title='西州起兵',when='灵帝末，确年未载',span=(180,191),careers=['capital','rise'],atlasStops=[0]),
+ dict(id='court',title='长安受号与败还',when='192年及其后，部分确年未载',span=(192,195),careers=['changan','chencang'],atlasStops=[1,2]),
+ dict(id='alliances',title='和战与观望',when='建安初至210年',span=(196,210),careers=['feud','hostage','envoy','zhangmeng'],atlasStops=[3]),
+ dict(id='tongguan',title='潼关联军败退',when='211年',span=(211,211),careers=['tongguan'],atlasStops=[4,5]),
+ dict(id='end',title='西还与末路',when='211年败后至215年，部分确年未载',span=(211,215),careers=['return','changli','plan','death'],atlasStops=[6,7,8,9]),
+ ]),
+ records=[
+ dict(section='setback',when='灵帝末及与马腾相争时',title='起兵杀吏与长期互攻',category='地区动乱',careerRef='feud',text='正文记杀刺史郡守起兵；注引又记与马腾连兵不解，军事集团的争斗持续损害地方秩序。',refs=[RISE,FEUD]),
+ dict(section='setback',when='211年',title='联盟缺乏互信',category='联军困局',careerRef='tongguan',text='曹操谈旧、改书后马超等更疑韩遂，最终联军被破；原文既记离间手段，也记诸部莫相归服。',refs=[DOUBT,Q('v001-b0077','莫相歸服，軍無適主，一舉可滅')]),
+ dict(section='setback',when='败还后，确年未载',title='子在朝廷，部属与婚姻失和',category='内部关系',careerRef='return',text='《魏略》记联军败后其在京子孙被诛，韩遂又强以女妻阎行欲一其心，终仍相攻；《典略》补记湟中夜攻。',refs=[Q('v015-b0026-n01','故但誅約子孫在京師者。','《魏略》'),Q('v015-b0026-n01','乃彊以少女妻行，行不獲已。','《魏略》'),HUANG]),
+ dict(section='setback',when='214—215年',title='救长离而败，终至送首',category='军事衰败',careerRef='changli',text='为救长离羌屯被迫野战，败失旌麾；次年本纪记部将斩送其首，地方军事生涯终结。',refs=[CHANGLI,LOST,HEAD]),
+ ],
+ sections={'military':{'note':'韩遂的军事材料以地方相争、拒曹败战及末路反击为主；讨张猛仅有一项独立结果可核对，已在履历记明。合众反攻马腾并杀其妻子属于暴力与失和，不列为武功，也不为满足条数把同一事拆成两功。'},'civil':{'note':'韩遂没有独立本传，本书散见材料主要是拥兵、盟约、战斗与末年部属关系；虽有遣子入侍及羌胡故旧，未详载可单列的行政、赋役或民生措施，不以镇西将军官号补造文治。'}},
+ assessment=[dict(title='陈寿未为韩遂另立专评',text='卷六篇末评语未单评韩遂。本页仅依据陈寿正文记下起兵、受授、联军败退及被部将所杀的主线，不借用对二袁或其他将领的评语。',refs=[RISE,OFFICE,WEST,JIN])],
+ relations=[
+ dict(category='同僚',name='马腾',personId='ma-teng',label='异姓兄弟转为仇敌',text='先结异姓兄弟，后因部曲侵入相争，交战长期不解。',refs=[BROTHER,FEUD]),
+ dict(category='同僚',name='马超',personId='ma-chao',label='潼关联军而互疑',text='结诸军东进，曹操离间后马超等怀疑韩遂，联军终败。',refs=[TONG,DOUBT]),
+ dict(category='敌对',name='曹操',personId='caocao',label='交马谈旧的战场对手',text='曹操与韩遂父同岁孝廉，又与韩遂为同时辈，利用谈旧与书信离间其联盟。',refs=[Q('v001-b0077','公與遂父同歲孝廉，又與遂同時儕輩'),DOUBT]),
+ dict(category='部属',name='阎行',label='将领、女婿与反叛者',text='奉使见曹操后力劝早附，后被迫娶韩遂女，终与韩遂互攻。',refs=[ENVOY,Q('v015-b0026-n01','乃彊以少女妻行，行不獲已。','《魏略》'),HUANG]),
+ dict(category='部属',name='成公英',label='末路仍相随',text='部党散去仍独从，劝韩遂留羌中等待，韩遂死后降曹。',refs=[Q('v015-b0026-n01','部黨散去，唯英獨從。','《魏略》'),STAY,DEATH_ALT]),
+ dict(category='敌对',name='夏侯渊',label='显亲、长离追击者',text='欲袭显亲迫其走，继而攻长离羌屯，使其救援野战而败。',refs=[XIAN,CHANGLI,LOST]),
+ ],
+ readingNotes=[
+ dict(title='韩遂无专传，不能补造籍贯专评',text='现有材料分散在帝纪与诸将传注，金城、湟中均是活动地点的证据，不能自动证明籍贯；陈寿也未在卷六末为其单立评语。',refs=[RISE,JIN,HUANG]),
+ dict(title='被杀与会遂死，详略不同',text='卷六正文称为部将所杀，本纪列出送首的麴演、蒋石等；《典略》只说会遂死，没有交代死亡方式。正文可据以写被杀，不能把注文当成另一种明确的病死说。',refs=[JIN,HEAD,DEATH_ALT]),
+ dict(title='入蜀只是末路打算',text='《典略》记韩遂提议往蜀，随即听成公英劝留羌中；本页不标成都或蜀地站点，也不把此事补成投刘备。',refs=[PLAN,STAY]),
+ dict(title='离间有原文，不必添断臂故事',text='《武帝纪》记谈旧、涂改书信与马超等增疑，战败后走凉州；本页据此解释联军互信，不增写本次已查材料之外的决裂情节。',refs=[DOUBT,WEST]),
+ ],
+ sourceScope='本书无独立本传。以卷一《武帝纪》、卷六董卓及关中诸将散见记载、卷九《夏侯渊传》、卷十三《钟繇传》、卷三十六《马超传》正文为基础，交叉读卷十五成公英、阎行注文与卷十八张猛注文；《魏略》《典略》《九州春秋》的细节分别标明。籍贯、专评和末年未定年序均保留限制。本页不声称穷尽全书所有提及韩遂之处。',
+)
