@@ -1,0 +1,93 @@
+"""曹丕：据文帝纪正文制作的 B 类人物卡。"""
+from profile_v3 import Q
+ORIGIN=Q('v002-b0001','文皇帝諱丕，字子桓，武帝太子也。中平四年冬，生于譙。')
+OFFICE=Q('v002-b0001','建安十六年，爲五官中郎將、副丞相。二十二年，立爲魏太子。')
+SUCCESSION=Q('v002-b0001','太祖崩，嗣位爲丞相、魏王。')
+QIAO=Q('v002-b0011','甲午，軍次于譙，大饗六軍及譙父老百姓于邑東。')
+THRONE=Q('v002-b0014','乃爲壇於繁陽。庚午，王升壇即阼，百官陪位。')
+LUOYANG=Q('v002-b0015','十二月，初營洛陽宮，戊午幸洛陽。')
+TAX=Q('v002-b0017','初令郡國口滿十萬者，歲察孝廉一人；其有秀異，無拘戶口。')
+CONFUCIUS=Q('v002-b0018','令魯郡脩起舊廟，置百戶吏卒以守衞之，又於其外廣爲室屋以居學者。')
+WU=Q('v002-b0020','丁巳，使太常邢貞持節拜權爲大將軍，封吳王，加九錫。')
+XUCHANG=Q('v002-b0021','庚午，行幸許昌宮。')
+WAN=Q('v002-b0028','帝自許昌南征，諸軍兵並進，權臨江拒守。十一月辛丑，行幸宛。')
+RETURN=Q('v002-b0029','三月丙申，行自宛還洛陽宮。')
+SCHOOL=Q('v002-b0032','夏四月，立太學，制五經課試之法，置春秋穀梁博士。')
+SHOUCHUN=Q('v002-b0032','八月，爲水軍，親御龍舟，循蔡、頴，浮淮，幸壽春。')
+GL224=Q('v002-b0032','九月，遂至廣陵，赦青、徐二州，改易諸將守。')
+XURETURN=Q('v002-b0032','行還許昌宮。')
+QIAO225=Q('v002-b0034','辛未，帝爲舟師東征。五月戊申，幸譙。')
+GL225=Q('v002-b0036','冬十月，行幸廣陵故城，臨江觀兵，戎卒十餘萬，旌旗數百里。')
+ICE=Q('v002-b0036','是歲大寒，水道冰，舟不得入江，乃引還。')
+END=Q('v002-b0037','丁巳，帝崩于嘉福殿，時年四十。')
+LASTRETURN=Q('v002-b0037','壬子，行還洛陽宮。')
+GU=Q('v002-b0037','召中軍大將軍曹真、鎮軍大將軍陳羣、征東大將軍曹休、撫軍大將軍司馬宣王，並受遺詔輔嗣主。')
+LITERATURE=Q('v002-b0038','初，帝好文學，以著述爲務，自所勒成垂百篇。')
+HUANGLAN=Q('v002-b0038','又使諸儒撰集經傳，隨類相從，凡千餘篇，號曰《皇覽》。')
+PING=Q('v002-b0039','若加之曠大之度，勵以公平之誠，邁志存道，克廣德心，則古之賢主，何遠之有哉！')
+PROFILE=dict(
+ id='cao-pi',tier='B',reading=['002'],syncLifespan=True,
+ lead='曹操之子，字子桓。由五官中郎将、魏太子继为魏王，220年在繁阳受禅称帝，建立曹魏；在位时设太学、编《皇览》，多次南征和临江观兵，未能平定孙吴，226年卒于洛阳。',
+ role='曹魏开国皇帝',
+ facts=[
+ dict(key='lifespan',label='生卒年',value='187—226年',text='本纪记中平四年冬生，黄初七年五月卒，享年四十；依年号换算为187—226年。',refs=[ORIGIN,END]),
+ dict(key='hometown',label='籍贯',value='生于谯',text='本纪明确记出生于谯，此处采用出生地，不把出生记载扩写成少年时期的旅行。',refs=[ORIGIN]),
+ dict(key='identity',label='主要身份',value='魏王，后为曹魏皇帝',text='曹操太子，继魏王后受汉帝禅让，改元黄初。',refs=[ORIGIN,SUCCESSION,THRONE,Q('v002-b0014','改延康爲黃初，大赦。')]),
+ dict(key='office',label='最高官职',value='皇帝；此前为丞相',text='建安年间为五官中郎将、副丞相；220年继为丞相、魏王，同年称帝。帝位与此前官职分列。',refs=[OFFICE,SUCCESSION,THRONE]),
+ dict(key='title',label='最高爵位',value='称帝前为魏王',text='先立魏太子，曹操卒后继魏王，随后升坛即帝位。',refs=[OFFICE,SUCCESSION,THRONE]),
+ dict(key='posthumous',label='身后称号',value='文皇帝',text='本纪以文皇帝称之；226年六月葬首阳陵。',refs=[ORIGIN,Q('v002-b0037','六月戊寅，葬首陽陵。')]),
+ dict(key='names',label='常见称谓',value='曹子桓、魏文帝',text='名丕，字子桓；文帝为本纪及篇末评语所用称号。',refs=[ORIGIN,Q('v002-b0039','評曰：文帝天資文藻，下筆成章，博聞彊識，才藝兼該；')]),
+ dict(key='deeds',label='代表事迹',items=['繁阳受禅','建立太学','编纂皇览','临江观兵'],text='受禅称帝，建立太学与课试制度，令诸儒编《皇览》，并以舟师临江观兵。',refs=[THRONE,SCHOOL,HUANGLAN,GL225]),
+ ],
+ intro=[
+ dict(title='从魏太子到皇帝',text='曹丕字子桓，是曹操的儿子，中平四年冬生于谯。建安十六年任五官中郎将、副丞相，二十二年立为魏太子。曹操去世后，他先继承丞相与魏王之位，再于220年在繁阳升坛受禅，改元黄初。由汉朝封国的继承者变为新朝皇帝，是理解其一生的主线；“受禅”是本纪对这场政权转移采用的叙述方式。',refs=[ORIGIN,OFFICE,SUCCESSION,THRONE,Q('v002-b0014','改延康爲黃初，大赦。')],eventLinks=[dict(label='在繁阳升坛受禅',eventId='wei-founding')]),
+ dict(title='制度与文教的经营',text='称帝后，曹丕开始营建洛阳宫，调整察举条件，允许秀异人才不受户口数量限制；又令修复孔子旧庙、安置学者，继而建立太学，制定五经课试办法。他本人喜好文学、重视著述，还命诸儒分类汇集经传，编为《皇览》。这些记载展示了新朝建立制度与整理典籍的一面，不能只用皇位争夺概括他。',refs=[LUOYANG,TAX,CONFUCIUS,SCHOOL,LITERATURE,HUANGLAN]),
+ dict(title='吴王封号与南征',text='对孙权，他一度授大将军、封吴王并加九锡，随后又因孙权“复叛”从许昌南征，驻于宛；此后两度以舟师东行，到达寿春、广陵等地。225年临江陈兵十余万，却因严寒、水道结冰而引还。任命、远征与观兵都属于其皇帝职权下的行动，但部将的战果不能直接等同于曹丕本人到过那些战场。',refs=[WU,Q('v002-b0028','是月，孫權復叛。'),WAN,SHOUCHUN,GL224,GL225,ICE]),
+ dict(title='才艺与君主的尺度',text='226年曹丕回到洛阳，病重时命曹真、陈群、曹休、司马懿共同辅佐继承人，随后卒于嘉福殿。陈寿肯定他的文采、强记与才艺，同时把宽大、公平和德心列作尚待补足的条件。这一评语既承认其能力，也提醒读者：文章与才艺上的出众，并不能自动转化为处理政务和对待臣下时的公允。',refs=[LASTRETURN,GU,END,Q('v002-b0039','評曰：文帝天資文藻，下筆成章，博聞彊識，才藝兼該；'),PING]),
+ ],
+ careers=[
+ dict(id='early',when='187—217年',title='生于谯，任副丞相并立魏太子',office='五官中郎将、副丞相；魏太子',text='187年冬生于谯；211年为五官中郎将、副丞相，217年立为魏太子。早年官职不单独标作旅行。',refs=[ORIGIN,OFFICE]),
+ dict(id='succession',when='220年',title='继丞相、魏王',office='丞相、魏王',text='曹操去世后继丞相、魏王，改建安二十五年为延康元年。',refs=[SUCCESSION,Q('v002-b0001','改建安二十五年爲延康元年。')]),
+ dict(id='qiao',when='220年',title='南征军次谯',office='—',text='六月南征，七月军至谯，宴飨六军及当地父老百姓。',refs=[Q('v002-b0008','六月辛亥，治兵于東郊，庚午，遂南征。'),QIAO]),
+ dict(id='throne',when='220年',title='繁阳受禅，至洛阳',office='皇帝',text='在繁阳升坛即位，改元黄初；十二月开始营洛阳宫并亲至洛阳。',refs=[THRONE,Q('v002-b0014','改延康爲黃初，大赦。'),LUOYANG],eventIds=['wei-founding']),
+ dict(id='govern',when='221年',title='调整察举，修孔庙',office='—',text='规定按郡国人口举孝廉，秀异者不拘户口，又令鲁郡修孔庙并设置学者居舍。',refs=[TAX,CONFUCIUS]),
+ dict(id='wu',when='221年',title='遣使封孙权为吴王',office='—',text='孙权遣使奉章并送还于禁等，曹丕派邢贞封其为吴王。属于朝廷授命，不作本人到吴地。',refs=[Q('v002-b0020','秋八月，孫權遣使奉章，并遣于禁等還。'),WU]),
+ dict(id='southern-war',when='222—223年',title='自许昌南征，幸宛后还洛阳',office='—',text='222年先到许昌，十月因孙权复叛而南征，十一月到宛；223年三月自宛返回洛阳。',refs=[XUCHANG,WAN,RETURN]),
+ dict(id='school',when='224年',title='立太学，定课试',office='—',text='四月建立太学，制定五经课试法，并置《春秋穀梁》博士。',refs=[SCHOOL]),
+ dict(id='fleet224',when='224年',title='舟行寿春、广陵，返许昌',office='—',text='七月东巡到许昌，八月亲御龙舟循蔡、颍入淮至寿春，九月至广陵，十月返回许昌。',refs=[Q('v002-b0032','秋七月，行東巡，幸許昌宮。'),SHOUCHUN,GL224,XURETURN]),
+ dict(id='fleet225',when='225年',title='由谯东征，广陵临江引还',office='—',text='五月到谯；八月舟师由谯循涡入淮，又从陆路到徐，十月到广陵故城观兵。因严寒水道结冰，船不能入江而退。',refs=[QIAO225,Q('v002-b0036','八月，帝遂以舟師自譙循渦入淮，從陸道幸徐。'),GL225,ICE]),
+ dict(id='death',when='226年',title='返洛阳，托孤与去世',office='—',text='正月返回洛阳；五月命曹真等四人受遗诏辅佐继承人，随后卒于嘉福殿，六月葬首阳陵。',refs=[LASTRETURN,GU,END,Q('v002-b0037','六月戊寅，葬首陽陵。')]),
+ ],
+ trajectory=dict(atlasPerson='caopi',phases=[
+ dict(id='heir',title='由太子继魏王',when='187—220年',span=(187,220),careers=['early','succession'],atlasStops=[]),
+ dict(id='founding',title='南行与受禅',when='220年',span=(220,220),careers=['qiao','throne'],atlasStops=[0,1,2]),
+ dict(id='consolidate',title='文教与南征',when='221—223年',span=(221,223),careers=['govern','wu','southern-war'],atlasStops=[3,4,5]),
+ dict(id='east224',title='太学与舟师东巡',when='224年',span=(224,224),careers=['school','fleet224'],atlasStops=[6,7,8]),
+ dict(id='last',title='临江引还与托孤',when='225—226年',span=(225,226),careers=['fleet225','death'],atlasStops=[9,10,11]),
+ ]),
+ records=[
+ dict(section='civil',when='221年',title='察举与文教建设',category='文教制度',careerRef='govern',text='察举兼顾人口与秀异之才，修孔庙并置学舍；后来太学课试是同一时期文教制度建设的延续。',refs=[TAX,CONFUCIUS,SCHOOL]),
+ dict(section='civil',when='222、224年',title='饥荒赈济与限制诬告',category='民政刑政',text='冀州饥荒时遣杜畿开仓赈济；224年又限制反逆以外的相互告发，妄告者反坐其罪。是具体政令，效果不作超出记载的推断。',refs=[Q('v002-b0025','秋七月，冀州大蝗，民饑，使尚書杜畿持節開倉廩以振之。'),Q('v002-b0032','五年春正月，初令謀反大逆乃得相告，其餘皆勿聽治；敢妄相告，以其罪罪之。')]),
+ dict(section='setback',when='220年',title='因狩猎进谏震怒',category='纳谏限度',text='戴陵进谏不宜屡次弋猎，曹丕大怒，戴陵被减死罪一等。这与陈寿要求其宽大、公平的评价可以参照阅读。',refs=[Q('v002-b0016','是歲，長水校尉戴陵諫不宜數行弋獵，帝大怒；陵減死罪一等。'),PING]),
+ dict(section='setback',when='221—222年',title='封王未换来稳定臣服',category='对吴关系',careerRef='southern-war',text='封孙权为吴王之后，本纪翌年仍书“孙权复叛”，随后再发南征；这项授封未能建立持久的臣属秩序。',refs=[WU,Q('v002-b0028','是月，孫權復叛。'),WAN]),
+ dict(section='setback',when='225年',title='广陵舟师未能入江',category='远征受阻',careerRef='fleet225',text='观兵规模虽大，严寒使水道冻结，舟船无法入江，只得引还；不把展示军威写作攻灭孙吴的战果。',refs=[GL225,ICE]),
+ ],
+ sections={'military':{'note':'本纪记曹丕数次亲征与临江观兵，但所据本人行动没有可单列的成功战果；225年又因水道结冰引还。具体行程保留履历，对吴关系与远征受阻列入得失，不把出征或检阅本身当作武功。'}},
+ scholarship=[dict(title='著述与《皇览》',text='本纪记本人所成著述近百篇，又命诸儒分类撰集经传千余篇，名《皇览》；应区分本人著作与朝廷组织的汇编。',refs=[LITERATURE,HUANGLAN])],
+ assessment=[dict(title='陈寿：才艺兼该，尚欠宽公',text='陈寿肯定曹丕的文藻、强记和多方面才艺，再用条件语气要求宽大之度、公平之诚与德心；这是带有明确保留的君主评价。',refs=[Q('v002-b0039','評曰：文帝天資文藻，下筆成章，博聞彊識，才藝兼該；'),PING])],
+ relations=[
+ dict(category='亲族',name='曹操',personId='caocao',label='父亲与前任魏王',text='由曹操太子继丞相、魏王，是接续其政治基础的继承人。',refs=[ORIGIN,OFFICE,SUCCESSION]),
+ dict(category='亲族',name='曹叡',personId='cao-rui',label='儿子与继承人',text='曹丕为平原王叡之父；病重后立其为皇太子，曹叡随即即位。',refs=[Q('v003-b0001','明皇帝諱叡，字元仲，文帝太子也。'),Q('v003-b0001','七年夏五月，帝病篤，乃立爲皇太子。丁巳，即皇帝位，大赦。')]),
+ dict(category='君臣',name='汉献帝',label='受禅前的汉帝',text='汉帝遣张音奉玺绶禅位，曹丕即位后以山阳邑奉其为山阳公。',refs=[Q('v002-b0013','使兼御史大夫張音持節奉璽綬禪位'),Q('v002-b0015','黃初元年十一月癸酉，以河內之山陽邑萬戶奉漢帝爲山陽公')]),
+ dict(category='邻境',name='孙权',personId='sunquan',label='受封吴王后再交兵',text='先授将军、王号与九锡，继而因关系破裂南征；部将作战与皇帝本人的行程分别记录。',refs=[WU,WAN]),
+ dict(category='君臣',name='司马懿',personId='sima-yi',label='受托辅嗣主',text='以抚军大将军身份与曹真、陈群、曹休同受遗诏。',refs=[GU]),
+ dict(category='君臣',name='陈群、曹真、曹休',label='共同受遗诏',text='曹丕临终以三人与司马懿共同辅佐嗣主，不把托孤写成一人独受。',refs=[GU]),
+ ],
+ readingNotes=[
+ dict(title='生于谯与本人旅行',text='187年“生于谯”用于档案；地图另取220、225年明确的军次与行幸，不以籍贯或出生地点补造出发路线。',refs=[ORIGIN,QIAO,QIAO225]),
+ dict(title='受禅叙事的范围',text='本纪以汉帝禅位、繁阳升坛为顺序，并保存大段册命。页面据此呈现政权转移的行动，不把册命中的德性宣称直接当作独立验证的结论。',refs=[Q('v002-b0013','使兼御史大夫張音持節奉璽綬禪位'),THRONE]),
+ dict(title='亲征不等于遍临各战场',text='本纪明确曹丕由许昌到宛，又到寿春、广陵；各军并进及诸将的战绩不表示曹丕本人到了江陵、濡须。地图仅标亲自行幸。',refs=[WAN,SHOUCHUN,GL225]),
+ ],
+ glossary=[('即阼','登上帝位。'),('课试','按所学内容进行考核。')],
+ sourceScope='以卷二《文帝纪》正文为基础，交叉核对卷三《明帝纪》的父子与继位记载。本人著述与诸儒汇编、亲征驻地与部将战场分别处理。本页不声称穷尽全书所有提及曹丕之处。',
+)

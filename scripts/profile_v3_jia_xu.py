@@ -1,0 +1,111 @@
+"""贾诩：权变、长安之祸与审慎自处。"""
+from profile_v3 import Q
+ORIGIN=Q('v010-b0042','賈詡字文和，武威姑臧人也。')
+QIAN=Q('v010-b0042','察孝廉爲郎，疾病去官，西還至汧，道遇叛氐，同行數十人皆爲所執。')
+ESCAPE=Q('v010-b0042','詡實非段甥，權以濟事，咸此類也。')
+SHAN=Q('v010-b0043','卓壻中郎將牛輔屯陝，詡在輔軍。')
+CHANG=Q('v010-b0043','不如率衆而西，所在收兵，以攻長安，爲董公報仇')
+REFUSE=Q('v010-b0043','此救命之計，何功之有！')
+CIVIL=Q('v010-b0043','乃更拜詡尚書，典選舉，多所匡濟，傕等親而憚之。')
+PROTECT=Q('v010-b0043','傕等和，出天子，祐護大臣，詡有力焉。')
+CHANGAN_ACTUAL=Q('v006-b0013-n03','於是天子一乘，貴人伏氏一乘，賈詡、左靈一乘，其餘皆步從。','《献帝起居注》')
+HUAYIN=Q('v010-b0043','是時將軍段煨屯華陰，與詡同郡，遂去傕託煨。')
+DANGER=Q('v010-b0043','煨内恐其見奪，而外奉詡禮甚備，詡愈不自安。')
+NANYANG=Q('v010-b0044','張繡在南陽，詡陰結繡，繡遣人迎詡。')
+GO=Q('v010-b0044','詡遂往，繡執子孫禮，煨果善視其家。')
+ALLY=Q('v010-b0044','詡説繡與劉表連和。')
+CHASE1=Q('v010-b0044','不可追也，追必敗。')
+CHASE2=Q('v010-b0044','促更追之，更戰必勝。')
+CHASE_LOSE=Q('v010-b0044','繡不從，進兵交戰，大敗而還。')
+CHASE_WIN=Q('v010-b0044','繡信之，遂收散卒赴追，大戰，果以勝還。')
+CHASE_CAUSE=Q('v010-b0044','曹公必自斷後')
+JOIN=Q('v010-b0044','繡從之，率衆歸太祖。')
+JOIN_REASON=Q('v010-b0044','曹公衆弱，其得我必喜，其宜從二也。')
+OFFICE=Q('v010-b0044','表詡爲執金吾，封都亭侯，遷冀州牧。冀州未平，留參司空軍事。')
+GUANDU=Q('v010-b0044','必決其機，須臾可定也。')
+WUCHAO=Q('v010-b0037','唯攸與賈詡勸太祖。')
+TAIZHONG=Q('v010-b0045','太祖領冀州牧，徙詡爲太中大夫。')
+JING=Q('v010-b0045','撫安百姓，使安土樂業，則可不勞衆而江東稽服矣。')
+JING_END=Q('v010-b0045','太祖不從，軍遂無利。')
+TONGGUAN=Q('v010-b0045','詡曰：「離之而已。」太祖曰：「解。」一承用詡謀。')
+SUCCESS=Q('v010-b0045','卒破遂、超，詡本謀也。')
+PI=Q('v010-b0046','願將軍恢崇德度，躬素士之業，朝夕孜孜，不違子道。如此而已。')
+SUCCESSION=Q('v010-b0046','思袁本初、劉景升父子也。')
+QUIET=Q('v010-b0046','闔門自守，退無私交，男女嫁娶，不結髙門')
+TAIWEI=Q('v010-b0047','文帝即位，以詡爲太尉，進爵魏壽鄕侯')
+PEACE=Q('v010-b0047','臣以爲當今宜先文後武。')
+IGNORE=Q('v010-b0047','文帝不納。後興江陵之役，士卒多死。')
+DEATH=Q('v010-b0047','詡年七十七，薨，諡曰肅侯。子穆嗣，歴位郡守。')
+DATE=Q('v002-b0031','甲申，太尉賈詡薨。')
+PING=Q('v010-b0050','荀攸、賈詡，庶乎筭無遺策，經達權變，其良、平之亞與！')
+PEI_SIN=Q('v010-b0043-n01','豈不由賈詡片言乎？詡之罪也，一何大哉！','裴松之案')
+PEI_JING=Q('v010-b0045-n01','臣松之以爲詡之此謀，未合當時之宜。','裴松之案')
+PEI_CMP=Q('v010-b0050-n01','其照雖均，質則異焉。','裴松之案')
+PROFILE=dict(id='jia-xu',tier='B',syncLifespan=True,reading=['010'],
+ lead='贾诩历牛辅、李傕、段煨、张绣而归曹操，善于判断局势与人的反应，在官渡及离间韩遂、马超中献策。魏初位至太尉；劝攻长安造成的祸乱，受到裴松之严厉追责，不能以权变之名略过。',role='曹魏太尉、历事多主的谋臣',
+ facts=[
+ dict(key='hometown',label='籍贯',value='武威姑臧',text='字文和，武威姑臧人。不把籍贯自动画为出生或任职行程。',refs=[ORIGIN]),
+ dict(key='lifespan',label='生卒年',value='生年未详—223年',text='文帝纪在黄初四年六月载其薨，本传记年七十七；不据享年倒推精确出生年。',refs=[DATE,DEATH]),
+ dict(key='identity',label='主要身份',value='历事多主的谋臣、魏初太尉',text='先在牛辅军，后依李傕、段煨、张绣，劝张绣归曹后参与军谋，魏初任太尉。',refs=[SHAN,HUAYIN,GO,JOIN,TAIWEI]),
+ dict(key='office',label='最高官职',value='太尉',text='历尚书、参司空军事、太中大夫，曹丕即位后升太尉。',refs=[CIVIL,OFFICE,TAIZHONG,TAIWEI]),
+ dict(key='title',label='最高爵位',value='魏寿乡侯',text='归曹后先封都亭侯，曹丕即位后进魏寿乡侯。',refs=[OFFICE,TAIWEI]),
+ dict(key='posthumous',label='身后称号',value='肃侯',text='卒谥肃侯，子贾穆嗣爵。',refs=[DEATH]),
+ dict(key='deeds',label='代表事迹',items=['权变脱险','劝绣归曹','官渡决机','离间韩马','建言德化'],text='既列重要谋议，也须与长安动乱的政治责任并读。',refs=[ESCAPE,JOIN,GUANDU,TONGGUAN,PEACE,PEI_SIN]),
+ ],
+ intro=[
+ dict(title='权变求生与长安之祸',text='贾诩字文和，武威姑臧人。去官西还到汧遇叛氐，借称段颎外孙脱险，正文以此显示其应变。后来在牛辅军中，董卓、牛辅死后，李傕等欲散归，贾诩却劝其聚众西攻长安。他后来辞谢以此功封侯，称只是救命之计；然而自保之计造成朝廷与百姓的灾难，裴松之严加追责，不能只以谋略成功衡量。',refs=[ORIGIN,QIAN,ESCAPE,SHAN,CHANG,REFUSE,PEI_SIN],eventLinks=[dict(label='聚众西攻长安',eventId='changan-counterattack')]),
+ dict(title='离开猜忌，转依张绣',text='在李傕政权中，贾诩为尚书掌选举，也参与护持天子、大臣。离李傕后依华阴段煨，虽受礼遇，却感到段煨内心忌惮；于是转赴南阳张绣处，留下的家属果然仍受段煨善待。他又劝张绣联刘表，曹操退军时，先劝勿追、再劝速追，区别曹操亲自断后与诸将断后的形势，张绣照第二次建议取得胜利。',refs=[CIVIL,PROTECT,HUAYIN,DANGER,NANYANG,GO,ALLY,CHASE1,CHASE2,CHASE_WIN,CHASE_CAUSE]),
+ dict(title='归曹后的军谋与自守',text='袁曹相争时，贾诩劝张绣不要依强大的袁绍，而应投需要援助、又有释怨志向的曹操。归曹后授执金吾、封都亭侯，虽迁冀州牧，因当地未平而留参军事。官渡劝决机，韩遂、马超之役又主张离间。与此同时，他自知非旧臣、谋深易惹疑，闭门少交，不以婚姻结高门；这种谨慎是他在多次易主后的自处方式。',refs=[JOIN_REASON,JOIN,OFFICE,GUANDU,WUCHAO,TONGGUAN,SUCCESS,QUIET]),
+ dict(title='太尉的建言与争议',text='曹丕争储时，贾诩劝其修德守子道，又以袁绍、刘表父子的教训回应曹操。曹丕即位，贾诩升太尉、进魏寿乡侯；对先攻吴还是蜀的问题，他强调量敌与文德，认为宜先文后武，未被采纳。223年去世，年七十七，谥肃侯。陈寿称其通达权变，裴松之却反对将他与荀攸等量齐观，能力与行事后果应分开衡量。',refs=[PI,SUCCESSION,TAIWEI,PEACE,IGNORE,DATE,DEATH,PING,PEI_CMP]),
+ ],
+ careers=[
+ dict(id='qian',when='早年，确年未载',title='西还到汧，假称段甥脱险',office='孝廉为郎后去官',text='病去官西还，到汧与同行者被叛氐所执，假称段颎外孙而获释；本传明说并非真有此亲缘。',refs=[QIAN,ESCAPE]),
+ dict(id='shan',when='董卓掌政时，确年未载',title='在陕随牛辅军',office='平津都尉、讨虏校尉',text='董卓入洛阳后历任平津都尉、讨虏校尉；牛辅屯陕，贾诩在其军。入洛阳一句的主语是董卓，不据此给贾诩加洛阳站。',refs=[Q('v010-b0043','詡以太尉掾爲平津都尉，遷討虜校尉。'),SHAN]),
+ dict(id='changan',when='192年',title='劝李傕等聚兵攻长安',office='后为左冯翊、尚书',text='劝李傕等别散归乡里，而聚众攻长安。后辞封侯与尚书仆射，改任尚书掌选举；攻城战果不能只当作个人谋功而略过乱源。',refs=[CHANG,REFUSE,CIVIL],eventIds=['changan-counterattack']),
+ dict(id='protect',when='李傕、郭汜交争时，确年未载',title='在长安朝廷护持天子与大臣',office='光禄大夫、宣义将军',text='天子出与大臣得护，贾诩有力。注引《献帝起居注》另记天子受劫迁时，贾诩与左灵同乘随行，确有在场依据。',refs=[PROTECT,CHANGAN_ACTUAL,Q('v010-b0043','拜光祿大夫。傕、汜等鬬長安中，傕復請詡爲宣義將軍。')]),
+ dict(id='huayin',when='天子出后，确年未载',title='还印绶，依段煨于华阴',office='还印绶',text='天子出后交还印绶，离李傕依华阴段煨；见其外礼内疑，转谋离去。',refs=[Q('v010-b0043','天子旣出，詡上還印綬。'),HUAYIN,DANGER]),
+ dict(id='zhangxiu',when='张绣在南阳时，确年未载',title='赴南阳依张绣，劝联刘表',office='张绣谋主',text='张绣遣人迎，贾诩前往，受子孙礼，并劝其与刘表连和；家属仍留段煨处受善待。',refs=[NANYANG,GO,ALLY]),
+ dict(id='chase',when='曹操征张绣退军时，确年未载',title='分别劝勿追与速追',office='—',text='首次劝不追不被听从，张绣败归；随即劝再追，张绣胜还。所析为前后断后者与兵势的变化，本人未见亲率追击记载。',refs=[CHASE1,CHASE_LOSE,CHASE2,CHASE_WIN,CHASE_CAUSE]),
+ dict(id='join',when='袁曹相拒时，归曹确年未载',title='拒袁绍，劝张绣归曹',office='执金吾、都亭侯，留参司空军事',text='劝依奉天子且急需援助的曹操，张绣率众归曹。授冀州牧而未赴任，因为冀州尚未平。',refs=[JOIN_REASON,JOIN,OFFICE]),
+ dict(id='guandu',when='200年',title='劝曹操决机，赞成袭粮',office='参司空军事',text='官渡粮少，劝曹操抓住战机；荀攸传并记与贾诩赞成用许攸的情报出击。记谋议，不据问答擅定贾诩当时坐标。',refs=[GUANDU,WUCHAO],eventIds=['guandu']),
+ dict(id='jing',when='208年',title='劝先安荆州，暂缓东下',office='太中大夫',text='先前转太中大夫；建安十三年曹操破荆州后，贾诩劝安民蓄力、使江东服，曹操不从而军无利。裴松之另批此议不合时宜。',refs=[TAIZHONG,JING,JING_END,PEI_JING]),
+ dict(id='tongguan',when='211年',title='主张离间韩遂、马超',office='—',text='建议对方求和可假许，再用离间使其互疑；本传称破韩马以其为本谋，不等于记其亲临每一战场。',refs=[TONGGUAN,SUCCESS],eventIds=['tongguan']),
+ dict(id='succession',when='曹丕为五官将时，确年未载',title='劝曹丕守子道，示袁刘父子之戒',office='—',text='劝曹丕自修德行，不作非分争夺；曹操问继承事时，以袁绍、刘表父子教训作答。平日自守少交、不结高门。',refs=[PI,SUCCESSION,QUIET]),
+ dict(id='taiwei',when='曹丕即位后',title='升太尉，谏先文后武',office='太尉、魏寿乡侯',text='升太尉、进爵魏寿乡侯；对于吴蜀先后，主张量敌与文德，不宜急战，未被采纳。',refs=[TAIWEI,PEACE,IGNORE]),
+ dict(id='death',when='223年',title='七十七岁卒，谥肃侯',office='贾穆嗣爵',text='文帝纪记黄初四年六月甲申薨，本传记年七十七、谥肃侯，子贾穆嗣。确切卒地未载。',refs=[DATE,DEATH]),
+ ],
+ trajectory=dict(atlasPerson='jiaxu',phases=[
+ dict(id='west',title='西行与长安',when='早年至李郭交争，部分确年未载',span=(170,195),careers=['qian','shan','changan','protect'],atlasStops=[0,1,2]),
+ dict(id='transition',title='华阴至南阳',when='天子出后至依张绣，确年未载',span=(195,199),careers=['huayin','zhangxiu','chase'],atlasStops=[3,4]),
+ dict(id='cao',title='归曹与军谋',when='归曹至211年，部分确年未载',span=(199,211),careers=['join','guandu','jing','tongguan'],atlasStops=[]),
+ dict(id='late',title='继承与魏初',when='曹丕为五官将至223年',span=(211,223),careers=['succession','taiwei','death'],atlasStops=[]),
+ ]),
+ records=[
+ dict(section='civil',when='李傕掌权时，确年未载',title='尚书掌选举与匡济',category='人事与朝政',careerRef='changan',text='本传在其辞尚书仆射后，明确说改任尚书典选举、多所匡济。这些作为不能抹去先前鼓动攻城之责，两者分别记述。',refs=[CIVIL,PEI_SIN]),
+ dict(section='civil',when='李郭交争时及曹丕即位后',title='护持朝臣，主张先文后武',category='政治建言',careerRef='taiwei',text='曾护持天子与大臣；魏初又劝以文德安抚、等待吴蜀内部变化，强调量敌论将。这是建议，未被采纳，不写成已实现的治理效果。',refs=[PROTECT,PEACE,IGNORE]),
+ dict(section='civil',when='曹丕为五官将时',title='以修德与前车之鉴论继承',category='储位建言',careerRef='succession',text='答曹丕以修德守子道，答曹操以袁刘父子为戒；不将太子确定的全部原因简化为一句答语。',refs=[PI,SUCCESSION]),
+ dict(section='military',when='征张绣退军时，确年未载',title='区分两次追击的兵势',category='敌情判断',careerRef='chase',text='一次劝止、一次劝速追，依据是曹操本人断后与主军轻进后的改变；执行追击者是张绣。',refs=[CHASE1,CHASE_LOSE,CHASE2,CHASE_WIN,CHASE_CAUSE]),
+ dict(section='military',when='200年与211年',title='官渡决机与分化韩马',category='战略与离间',careerRef='tongguan',text='在官渡支持决机袭粮，韩马战时主张离间；本传将后者列为本谋，但不是贾诩亲自统率战斗的记载。',refs=[GUANDU,WUCHAO,TONGGUAN,SUCCESS]),
+ dict(section='setback',when='192年',title='攻长安之议引发的祸乱责任',category='重大政治后果',careerRef='changan',text='劝李傕等由散归转为聚兵西攻，造成朝廷与百姓受难。裴松之直接追责其片言兆乱；辞功不能抵销建议的后果。',refs=[CHANG,REFUSE,PEI_SIN]),
+ dict(section='setback',when='208年',title='荆州缓进建议受到裴松之批评',category='策略争议',careerRef='jing',text='正文连写曹操不纳与军无利；裴松之却认为当时应乘新胜取吴，批其建议不合时宜。两说分层，不把战败直接当作贾诩必然正确的证明。',refs=[JING,JING_END,PEI_JING]),
+ dict(section='setback',when='依段煨与归曹后，确年未载',title='谋深而惧疑，依附并非安稳',category='政治处境',careerRef='huayin',text='段煨礼厚而内忌，迫使他另求外援；归曹后仍闭门少交。自保有其处境，不能从长寿反推从未受风险。',refs=[DANGER,QUIET]),
+ ],
+ assessment=[dict(title='陈寿：通达权变，裴松之重辨其质',text='陈寿把贾诩与荀攸同评为算无遗策、经达权变；裴松之认为二人才照或均、品质不同，并严斥攻长安之议。读者应兼看谋略效果与政治后果。',refs=[PING,PEI_CMP,PEI_SIN])],
+ relations=[
+ dict(category='旧主',name='董卓、牛辅',personId='dong-zhuo',label='早期任职与军中归属',text='董卓掌政时任职，实际在牛辅屯陕之军；不由董卓入洛阳反推贾诩行迹。',refs=[SHAN]),
+ dict(category='旧主',name='李傕',label='劝其聚兵，后离去',text='劝李傕西攻长安，后来在其朝廷任尚书，也护持大臣，最终交还印绶离开。',refs=[CHANG,CIVIL,PROTECT,HUAYIN]),
+ dict(category='旧主',name='段煨',label='外礼内疑的依托',text='到华阴依段煨，因其忌惮而离开；家属仍受善待。',refs=[HUAYIN,DANGER,GO]),
+ dict(category='旧主',name='张绣',personId='zhang-xiu',label='谋主并劝归曹',text='受子孙礼，劝联刘表，又促成归曹。',refs=[GO,ALLY,JOIN]),
+ dict(category='君臣',name='曹操',personId='caocao',label='归曹后参与军谋',text='归曹受官爵，在官渡与韩马之役献策。',refs=[OFFICE,GUANDU,TONGGUAN]),
+ dict(category='君臣',name='曹丕',personId='cao-pi',label='由争储建言至太尉',text='劝修德守子道，即位后升太尉，却未能说服他暂停伐吴。',refs=[PI,TAIWEI,PEACE,IGNORE]),
+ dict(category='同僚',name='荀攸',personId='xun-you',label='同赞官渡袭粮',text='与荀攸共同支持袭取淳于琼粮军。',refs=[WUCHAO]),
+ ],
+ readingNotes=[
+ dict(title='救命之计与政治责任',text='贾诩辞封侯时自称救命之计，是他对建议目的的解释；裴松之从其造成的祸乱追责，是另一评价层次。二者不互相抵消，也不以生存技巧替代道德判断。',refs=[REFUSE,PEI_SIN]),
+ dict(title='冀州牧未赴，谋议未必随征',text='本传明说冀州未平、留参军事，因此不能画到冀州；官渡、荆州、渭南诸问答也未逐处载贾诩到场，地图不把曹操行程整段复制给他。',refs=[OFFICE,GUANDU,JING,TONGGUAN]),
+ dict(title='赤壁之前的缓进不是公认正确',text='正文的“不从、军无利”容易让人直接认定贾诩有先见；裴松之却专门反驳此论。这里保留分歧，不替史料裁定一个无争议的正确答案。',refs=[JING,JING_END,PEI_JING]),
+ dict(title='不将张绣每次作战都当贾诩亲历',text='本传确载其赴南阳、居谋主之位，但追击中的胜败执行者是张绣；也不能仅凭部属关系把每次出兵地点变成谋臣实到站。',refs=[NANYANG,GO,CHASE1,CHASE2]),
+ ],
+ glossary=[('典选举','掌管官员选任。'),('太尉','三公之一；贾诩在曹丕即位后任此职。')],
+ sourceScope='以卷十贾诩本传正文、裴注与篇末评语为基础，交叉核对卷二文帝纪卒年、卷六董卓传《献帝起居注》的本人随乘记载及卷十荀攸传官渡谋议。保留裴松之对长安之祸、荆州缓进和与荀攸并评的异议。本页不声称穷尽全书所有提及贾诩之处。',
+)

@@ -1,0 +1,103 @@
+"""曹叡：以明帝纪为主，正文年寿与裴氏辨析并列。"""
+from profile_v3 import Q
+NAME=Q('v003-b0001','明皇帝諱叡，字元仲，文帝太子也。')
+HEIR=Q('v003-b0001','年十五，封武德侯，黃初二年爲齊公，三年爲平原王。以其母誅，故未建爲嗣。')
+THRONE=Q('v003-b0001','七年夏五月，帝病篤，乃立爲皇太子。丁巳，即皇帝位，大赦。')
+MOTHER=Q('v003-b0001','癸未，追謚母甄夫人曰文昭皇后。')
+ZHUGE=Q('v003-b0006','遣大將軍曹真都督關右，並進兵。右將軍張郃擊亮於街亭，大破之。')
+CHANGAN=Q('v003-b0006','丁未，行幸長安。夏四月丁酉，還洛陽宮。')
+JUSTICE=Q('v003-b0009','帝常言「獄者，天下之性命也」，每斷大獄，常幸觀臨聽之。')
+EAST230=Q('v003-b0012','八月辛巳，行東巡，遣使者以特牛祠中嶽。乙未，幸許昌宮。')
+WEST230=Q('v003-b0012','九月，大雨，伊、洛、河、漢水溢，詔真等班師。冬十月乙卯，行還洛陽宮。')
+WEST231=Q('v003-b0013','諸葛亮寇天水，詔大將軍司馬宣王拒之。')
+XU232=Q('v003-b0015','夏四月壬寅，行幸許昌宮。')
+MOPI232=Q('v003-b0015','九月，行幸摩陂，治許昌宮，起景福、承光殿。')
+MOPI233=Q('v003-b0016','青龍見郟之摩陂井中。二月丁酉，幸摩陂觀龍，於是改年；')
+DEFEND=Q('v003-b0022','但堅壁拒守以挫其鋒，彼進不得志，退無與戰，乆停則糧盡')
+EAST234=Q('v003-b0023','秋七月壬寅，帝親御龍舟東征')
+SHOUCHUN=Q('v003-b0023','遂進軍幸壽春，錄諸將功，封賞各有差。')
+XU234=Q('v003-b0023','辛巳，行還許昌宮。')
+PALACE=Q('v003-b0027','是時，大治洛陽宮，起昭陽、太極殿，築緫章觀。百姓失農時')
+ADVICE=Q('v003-b0027','直臣楊阜、高堂隆等各數切諫，雖不能聽，常優容之。')
+RETURN235=Q('v003-b0028','丁巳，行還洛陽宮。')
+XU235=Q('v003-b0028','十一月丁酉，行幸許昌宮。')
+LAW=Q('v003-b0030','有司其議獄緩死，務從寬簡')
+RETURN237=Q('v003-b0033','五月己巳，行還洛陽宮。')
+LIAODONG=Q('v003-b0037','二年春正月，詔太尉司馬宣王帥衆討遼東。')
+TRUST=Q('v003-b0040','司馬懿臨危制變，擒淵可計日待也。')
+VICTORY=Q('v003-b0040','丙寅，司馬宣王圍公孫淵於襄平，大破之，傳淵首于京都，海東諸郡平。')
+GU=Q('v003-b0043','吾疾甚，以後事屬君，君其與爽輔少子。吾得見君，無所恨！')
+END=Q('v003-b0043','即日，帝崩于嘉福殿，時年三十六。癸丑，葬高平陵。')
+AGE=Q('v003-b0043-n03','明帝應以十年生，計至此年正月，整三十四年耳。','裴松之案')
+PING=Q('v003-b0045','評曰：明帝沉毅斷識，任心而行，蓋有君人之至槩焉。')
+PING2=Q('v003-b0045','而遽追秦皇、漢武，宮館是營，格之遠猷，其殆疾乎！')
+PROFILE=dict(
+ id='cao-rui',tier='B',reading=['003'],syncLifespan=True,
+ lead='曹丕之子，字元仲，226年临危立为太子并即帝位。任内应对诸葛亮北伐、孙权进兵，支持司马懿远征辽东；重视法理与经学，却因大兴宫室使百姓失去农时，239年病逝，托曹爽、司马懿辅少主。',
+ role='曹魏明皇帝',
+ facts=[
+ dict(key='lifespan',label='生卒年',value='生年有异说—239年',text='景初三年卒。正文记享年三十六，裴松之据曹丕纳甄氏时间提出应生于建安十年、实计三十四年；本页保留冲突，不倒推唯一生年。',refs=[END,AGE]),
+ dict(key='hometown',label='籍贯',value='本纪未载县籍',text='本纪从父系、封爵与即位写起，没有明确曹叡自己的出生地与县籍，不以祖籍或封国补足。',refs=[NAME,HEIR]),
+ dict(key='identity',label='主要身份',value='曹魏第二位皇帝',text='曹丕之子，黄初七年立太子，同日序列记即帝位。',refs=[NAME,THRONE]),
+ dict(key='office',label='最高官职',value='皇帝（帝位）',text='本纪记由平原王、皇太子即帝位；帝位为统治身份，不另虚列臣下官职。',refs=[HEIR,THRONE]),
+ dict(key='title',label='最高爵位',value='称帝前为平原王',text='十五岁封武德侯，继为齐公、平原王；封地并非本人实到记录。',refs=[HEIR]),
+ dict(key='posthumous',label='身后称号',value='明皇帝，庙称烈祖',text='本纪称明皇帝；烈祖之号已见237年有司奏议，不能当作死后才议定的谥号。',refs=[NAME,Q('v003-b0034','帝制作興治，爲魏烈祖，樂用章武之舞。')]),
+ dict(key='names',label='常见称谓',value='曹元仲、魏明帝',text='名叡，字元仲，本纪称明皇帝。',refs=[NAME]),
+ dict(key='deeds',label='代表事迹',items=['亲至长安','临听大狱','东征寿春','支持征辽'],text='亲至长安策应战事，临听大狱，东征至寿春，支持司马懿平定辽东。',refs=[CHANGAN,JUSTICE,SHOUCHUN,LIAODONG,VICTORY]),
+ ],
+ intro=[
+ dict(title='晚立的继承人',text='曹叡字元仲，是曹丕的儿子。少时受曹操喜爱，先后封武德侯、齐公、平原王，却因生母甄氏被诛而迟迟未立为嗣。226年曹丕病重，才立他为皇太子，随后即位。他追谥母亲为文昭皇后，开始以新君身份主持朝政。封爵、生母处境和临终立储放在一起，才能看出其继位并非从少年起便毫无波折。',refs=[NAME,Q('v003-b0001','生而太祖愛之，常令在左右。'),HEIR,THRONE,MOTHER]),
+ dict(title='在两线战事间判断',text='228年诸葛亮出兵，曹叡遣曹真都督关右、由张郃在街亭击破蜀军，自己也亲至长安。234年他令司马懿坚壁拒守，同时御龙舟东征，孙权退走后仍进至寿春录功。238年远征辽东又面对兵额和久雨的争论，他坚持给予足够兵力并信任前线统帅。这里能看到的是统筹与判断，不能把将领的每场战斗都算成他的亲历。',refs=[ZHUGE,CHANGAN,DEFEND,EAST234,SHOUCHUN,Q('v003-b0040','遂以四萬人行。'),TRUST,VICTORY],eventLinks=[dict(label='诸葛亮出兵',eventId='first-northern-expedition'),dict(label='远征辽东',eventId='liao-dong-campaign')]),
+ dict(title='司法文教与宫室役',text='曹叡常说监狱关系天下人的性命，亲临听断大案，又要求死刑宽简、保留乞恩机会；他也诏令以经学选士。与此同时，洛阳宫、昭阳太极诸殿及总章观的营建，使百姓错过农时。杨阜、高堂隆多次切谏，他虽优容其人，却没有接受意见。能够容纳直言与实际改变施政，书中在这里留下了明显距离。',refs=[JUSTICE,LAW,Q('v003-b0006','申勑郡國，貢士以經學爲先。'),PALACE,ADVICE]),
+ dict(title='托孤与陈寿的保留',text='239年曹叡病重，召回司马懿，托其与曹爽共同辅佐少子，随即卒于嘉福殿。陈寿称许他沉毅而有决断，却批评他在百姓凋敝、天下分裂时急于追逐秦皇汉武的宫馆。这不是把军政能力一笔抹去，而是把才略放回国家财力与民生承受力之中衡量；读这位皇帝，必须同时看两面。',refs=[GU,END,PING,PING2,Q('v003-b0045','于時百姓彫弊，四海分崩')]),
+ ],
+ careers=[
+ dict(id='early',when='226年以前，确年未载或见年号',title='封侯、齐公与平原王',office='武德侯；齐公；平原王',text='少时受曹操喜爱，十五岁封武德侯，221年为齐公，222年为平原王；因母被诛而未定为嗣。出生与县籍未详。',refs=[Q('v003-b0001','生而太祖愛之，常令在左右。'),HEIR]),
+ dict(id='accession',when='226年',title='立太子并即帝位',office='皇太子；皇帝',text='曹丕病笃时立为皇太子，随后即位；追谥甄夫人为文昭皇后。',refs=[THRONE,MOTHER]),
+ dict(id='changan',when='228年',title='遣将拒蜀，亲至长安',office='—',text='命曹真都督关右，张郃在街亭破蜀军；本人行幸长安，四月返回洛阳。',refs=[ZHUGE,CHANGAN],eventIds=['first-northern-expedition']),
+ dict(id='justice',when='229年',title='设听讼观，临听大狱',office='—',text='把平望观改为听讼观，重视大案，常亲临听审。',refs=[Q('v003-b0009','冬十月，改平望觀曰聽訟觀。'),JUSTICE]),
+ dict(id='east230',when='230年',title='东巡许昌，雨中命伐蜀军还',office='—',text='八月到许昌；曹真、司马懿伐蜀遇大雨，九月诏令班师，十月本人返回洛阳。不能把伐蜀行程移作皇帝路线。',refs=[Q('v003-b0012','詔大司馬曹真、大將軍司馬宣王伐蜀。'),EAST230,WEST230]),
+ dict(id='west231',when='231年',title='命司马懿拒诸葛亮',office='—',text='诸葛亮再攻天水，下诏以司马懿拒之；本条只记录朝廷调遣。',refs=[WEST231]),
+ dict(id='tour232',when='232年',title='幸许昌与摩陂',office='—',text='四月到许昌，九月到摩陂；同时整治许昌宫并起景福、承光殿，十二月返许昌。',refs=[XU232,MOPI232,Q('v003-b0015','十二月，行還許昌宮。')]),
+ dict(id='mopi233',when='233年',title='再幸摩陂观龙改元',office='—',text='本纪因摩陂井中见青龙而记二月行幸观龙、改元青龙。这里记录当时的祥瑞叙事，不把龙的存在作为现代事实证明。',refs=[MOPI233]),
+ dict(id='shouchun',when='234年',title='西线坚守，东征至寿春',office='—',text='命司马懿拒蜀坚壁，自己御龙舟东征；孙权退走后进至寿春，录功大阅，八月返许昌。',refs=[DEFEND,EAST234,SHOUCHUN,XU234]),
+ dict(id='palace',when='235年',title='大治宫室，切谏未纳',office='—',text='大治洛阳宫使百姓失农时，对杨阜、高堂隆切谏未听而优容其人；八月返洛阳，十一月幸许昌。',refs=[PALACE,ADVICE,RETURN235,XU235]),
+ dict(id='law',when='236—237年',title='议狱宽简，返回洛阳',office='—',text='236年要求死罪具狱后及时告知亲属、容许乞恩，务从宽简；237年五月还洛阳。',refs=[LAW,Q('v003-b0030','非謀反及手殺人，亟語其親治，有乞恩者，使與奏當文書俱上'),RETURN237]),
+ dict(id='liaodong',when='238年',title='支持司马懿远征辽东',office='—',text='命司马懿出征，坚持发四万人，不因霖雨轻召其返；襄平被破，公孙渊首级送至京都。本人未见亲至辽东记载。',refs=[LIAODONG,Q('v003-b0040','遂以四萬人行。'),TRUST,VICTORY],eventIds=['liao-dong-campaign']),
+ dict(id='death',when='239年',title='托曹爽、司马懿辅少主后卒',office='—',text='景初三年正月召司马懿入卧内，将后事托付与曹爽共同承担，当日卒于嘉福殿，葬高平陵。',refs=[GU,END],eventIds=['cao-fang-succession']),
+ ],
+ trajectory=dict(atlasPerson='caorui',phases=[
+ dict(id='accession',title='封王与即位',when='226年以前—226年',span=(220,226),careers=['early','accession'],atlasStops=[]),
+ dict(id='defense',title='西征与听讼',when='228—231年',span=(228,231),careers=['changan','justice','east230','west231'],atlasStops=[0,1,2,3]),
+ dict(id='tour',title='许昌与摩陂',when='232—233年',span=(232,233),careers=['tour232','mopi233'],atlasStops=[4,5,6,7]),
+ dict(id='east',title='东征与宫室',when='234—237年',span=(234,237),careers=['shouchun','palace','law'],atlasStops=[8,9,10,11,12]),
+ dict(id='last',title='征辽与托孤',when='238—239年',span=(238,239),careers=['liaodong','death'],atlasStops=[]),
+ ]),
+ records=[
+ dict(section='civil',when='229、236年',title='亲听大狱，议刑宽简',category='司法',careerRef='law',text='亲临听讼，要求死罪文书与乞恩申请并上，显示其重视案件审理和死刑复核；不据政令断言地方已无冤狱。',refs=[JUSTICE,LAW,Q('v003-b0030','有乞恩者，使與奏當文書俱上')]),
+ dict(section='civil',when='228、230年',title='以经学选士',category='文教选官',text='要求博士择能任侍中常侍者，郡国贡士以经学为先；后又规定通经郎吏经课试择优录用。',refs=[Q('v003-b0006','其高選博士，才任侍中常侍者。申勑郡國，貢士以經學爲先。'),Q('v003-b0012','其郎吏學通一經，才任牧民，博士課試，擢其高第者，亟用；')]),
+ dict(section='military',when='228、234年',title='应对蜀军进攻',category='统筹边防',careerRef='changan',text='228年遣曹真、张郃并亲至长安；234年又给司马懿坚壁挫锋、待其粮尽的方略。决策与前线执行分列。',refs=[ZHUGE,CHANGAN,DEFEND]),
+ dict(section='military',when='234年',title='亲御龙舟东征',category='亲征策应',careerRef='shouchun',text='孙权在皇帝军队尚距数百里时已退，曹叡仍进寿春录功；不把“东征”扩写为皇帝亲战合肥。',refs=[EAST234,Q('v003-b0023','帝軍未至數百里，權遁走'),SHOUCHUN]),
+ dict(section='military',when='238年',title='坚持远征辽东',category='用将与后勤',careerRef='liaodong',text='面对费用与霖雨争论仍给四万人，并相信司马懿临危制变，最终平定海东诸郡。战果属统帅与前线军队执行。',refs=[Q('v003-b0040','四千里征伐，雖云用奇，亦當任力，不當稍計役費。'),TRUST,VICTORY],eventIds=['liao-dong-campaign']),
+ dict(section='setback',when='235年',title='宫室营建妨农',category='劳役与财政',careerRef='palace',text='大治宫室使百姓失去农时。对切谏虽不加罪，却未采纳，陈寿又将宫馆是营列作主要批评。',refs=[PALACE,ADVICE,PING2]),
+ dict(section='setback',when='235—239年',title='宠信登女，祈水无验',category='信仰与处置',text='自称天神所下的“登女”获后宫馆舍与优宠；曹叡病中饮水无效，又将其杀死。记载反映其倚赖与迁怒，不把所谓治病效验作医学事实。',refs=[Q('v003-b0042','壽春農民妻自言爲天神所下，命爲登女'),Q('v003-b0042','於是立館後宮，下詔稱揚，甚見優寵。及帝疾，飲水無驗，於是殺焉。')]),
+ ],
+ assessment=[dict(title='陈寿：沉毅有断，宫馆失度',text='陈寿先肯定沉毅断识与君主气概，随后指出百姓凋敝、天下分裂之际急营宫馆，有损长远谋划。能力与资源使用上的失度，是评语并列的两层。',refs=[PING,Q('v003-b0045','于時百姓彫弊，四海分崩'),PING2])],
+ relations=[
+ dict(category='亲族',name='曹丕',personId='cao-pi',label='父亲与前任皇帝',text='曹丕病重时立其为太子，随后承继帝位。',refs=[NAME,THRONE]),
+ dict(category='亲族',name='甄夫人',label='生母，追谥文昭',text='因母被诛而迟立为嗣，即位后追谥文昭皇后。',refs=[HEIR,MOTHER]),
+ dict(category='君臣',name='司马懿',personId='sima-yi',label='用兵与托孤重臣',text='任其拒蜀、征辽，临终又召入卧内托以少主。',refs=[WEST231,LIAODONG,GU]),
+ dict(category='君臣',name='曹爽',personId='cao-shuang',label='临终辅政者',text='病重时以曹爽代曹宇为大将军，继而与司马懿共辅少主。',refs=[Q('v003-b0041','以燕王宇爲大將軍，甲申免，以武衞將軍曹爽代之。'),GU]),
+ dict(category='敌对',name='诸葛亮',personId='zhuge-liang',label='蜀军北伐统帅',text='诸葛亮北出时遣将抵御，并有亲至长安、下诏坚守等不同应对。',refs=[ZHUGE,CHANGAN,DEFEND]),
+ dict(category='敌对',name='孙权',personId='sunquan',label='东线对手',text='孙权进攻合肥新城，曹叡亲御龙舟东征，权退后再至寿春。',refs=[Q('v003-b0023','孫權入居巢湖口，向合肥新城'),EAST234,SHOUCHUN]),
+ dict(category='君臣',name='杨阜、高堂隆',label='切谏宫室的直臣',text='两人多次切谏营建，曹叡优容其人而未听从。',refs=[PALACE,ADVICE]),
+ dict(category='亲族',name='曹芳',label='继位少主',text='卷三称皇子芳，235年立为齐王；卷四说明是养子，宫省事秘，其所由来无人明知。',refs=[Q('v003-b0028','八月庚午，立皇子芳爲齊王'),Q('v004-b0002','明帝無子，養王及秦王詢；宮省事祕，莫有知其所由來者。')]),
+ ],
+ readingNotes=[
+ dict(title='享年与生年有冲突',text='正文记卒年三十六；裴松之以曹丕建安九年纳甄氏为据，认为应十年生，并指出改历也不能足成三十六。本页不把两套算法拼成一个确定生年。',refs=[END,AGE,Q('v003-b0043-n03','時改正朔，以故年十二月爲今年正月，可彊名三十五年，不得三十六也。','裴松之案')]),
+ dict(title='辽东战果与亲征路线',text='辽东一役皇帝的贡献在定兵额、支持统帅；襄平的围攻明确由司马懿执行。地图不替曹叡增加辽东足迹。',refs=[LIAODONG,TRUST,VICTORY]),
+ dict(title='烈祖之号已在生前议定',text='237年有司已奏定曹叡为烈祖，故不能把该庙称简单归入去世后才有的称号。与本纪“明皇帝”分开解释。',refs=[NAME,Q('v003-b0034','帝制作興治，爲魏烈祖，樂用章武之舞。')]),
+ ],
+ glossary=[('具狱','案件审理完毕而形成的完整案卷。'),('坚壁','固守营垒，避免按敌方意图交战。')],
+ sourceScope='以卷三《明帝纪》正文为基础，交叉核对卷四曹芳即位记载，寿数分歧采用裴松之按语单列说明。疆场战事不混作皇帝本人足迹。本页不声称穷尽全书所有提及曹叡之处。',
+)

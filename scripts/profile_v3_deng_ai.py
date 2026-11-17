@@ -1,0 +1,112 @@
+"""邓艾：本传与交叉传记的 B 级人物卡。"""
+from profile_v3 import Q
+ORIGIN=Q('v028-b0028','鄧艾字士載，義陽棘陽人也。')
+EARLY=Q('v028-b0028','少孤，太祖破荊州，徙汝南，為農民養犢。年十二，隨母至潁川')
+STAMMER=Q('v028-b0028','為都尉學士，以口吃，不得作幹佐。為稻田守叢草吏。')
+PATRON=Q('v028-b0028','後為典農綱紀，上計吏，因使見太尉司馬宣王。宣王奇之，辟之為掾，遷尚書郎。')
+INSPECT=Q('v028-b0029','使艾行陳、項已東至壽春。')
+CANAL=Q('v028-b0029','宜開河渠，可以引水澆溉，大積軍糧，又通運漕之道。')
+IMPLEMENT=Q('v028-b0029','宣王善之，事皆施行。正始二年，乃開廣漕渠')
+TAO=Q('v028-b0030','艾即夜潛軍徑到，維果來渡，而艾先至據城，得以不敗。')
+BAISHUI=Q('v028-b0030','嘉平元年，與征西將軍郭淮拒蜀偏將軍姜維。')
+CAMP=Q('v028-b0030','於是留艾屯白水北。')
+HONOR=Q('v028-b0030','賜爵關內侯，加討寇將軍，後遷城陽太守。')
+FARM=Q('v028-b0033','艾所在，荒野開闢，軍民並豐。')
+GOVERN=Q('v028-b0034','今使考績之賞，在於積粟富民，則交遊之路絕，浮華之原塞矣。')
+LEJIA=Q('v028-b0035','艾斬之，兼道進軍，先趣樂嘉城，作浮橋。')
+QIU=Q('v028-b0035','艾追之至丘頭。')
+FUTING=Q('v028-b0035','艾以與賊勢相遠，非要害之地，輒移屯附亭')
+DIDAO=Q('v028-b0035','解雍州刺史王經圍於狄道，姜維退駐鍾提')
+ANXI=Q('v028-b0035','乃以艾為安西將軍，假節、領護東羌校尉。')
+DUAN=Q('v028-b0037','艾與戰於段谷，大破之。')
+WUCHENG=Q('v028-b0037','艾據武城山以相持。')
+DUKE=Q('v028-b0037','今以艾為鎮西將軍、都督隴右諸軍事，進封鄧侯。')
+CHANG=Q('v028-b0037','二年，拒姜維於長城，維退還。遷征西將軍')
+HOU=Q('v028-b0038','景元三年，又破維於侯和，維卻保沓中。')
+YIN=Q('v028-b0039','冬十月，艾自陰平道行無人之地七百餘里，鑿山通道，造作橋閣。')
+JIANG=Q('v028-b0039','先登至江由，蜀守將馬邈降。')
+MIAN=Q('v028-b0039','忠、纂馳還更戰，大破之，斬瞻及尚書張遵等首，進軍到雒。')
+CHENGDU=Q('v028-b0040','艾至成都，禪率太子諸王及群臣六十餘人面縛輿櫬詣軍門')
+MERCY=Q('v028-b0040','檢禦將士，無所虜略，綏納降附，使復舊業，蜀人稱焉。')
+UNAUTH=Q('v028-b0040','輒依鄧禹故事，承制拜禪行驃騎將軍')
+ARROGANCE=Q('v028-b0040','艾深自矜伐')
+TAIWEI=Q('v028-b0041','其以艾為太尉，增邑二萬戶，封子二人亭侯，各食邑千戶。')
+NEW_TITLE=Q('v028-b0035','高貴鄉公即尊位，進封方城亭侯。')
+RU=Q('v028-b0033','遷汝南太守')
+EFFECT=Q('v028-b0029','汎舟而下，達於江、淮，資食有儲而無水害，艾所建也。')
+RISK=Q('v028-b0039','又糧運將匱，頻於危殆。')
+PROPOSAL=Q('v028-b0038','從陰平由邪徑經漢德陽亭趣涪，出劍閣西百里，去成都三百餘里，奇兵衝其腹心。')
+WAIT=Q('v028-b0043','事當須報，不宜輒行。')
+ARREST=Q('v028-b0043','鍾會、胡烈、師纂等皆白艾所作悖逆，變釁以結。詔書檻車徵艾。')
+DEATH=Q('v028-b0044','瓘遣田續等討艾，遇於綿竹西，斬之。子忠與艾俱死')
+YEAR=Q('v004-b0077','是月，鍾會反於蜀，為衆所討；鄧艾亦見殺。')
+UNRECEIVED=Q('v028-b0065','初，艾為太尉，會為司徒，皆持節、都督諸軍如故，咸未受命而斃。')
+PARDON=Q('v028-b0046','今大赦得還，若無子孫者聽使立後，令祭祀不絕。')
+PETITION=Q('v028-b0047','艾性剛急，輕犯雅俗，不能協同朋類，故莫肯理之。')
+DESCEND=Q('v028-b0048','其以嫡孫朗為郎中。')
+WALL=Q('v028-b0049','吏民安全者，皆保艾所築塢焉。')
+PING=Q('v028-b0073','鄧艾矯然強壯，立功立事，然闇於防患，咎敗旋至')
+PROFILE=dict(
+ id='deng-ai',tier='B',syncLifespan=True,reading=['028'],
+ lead='由典农小吏获司马懿拔擢，以淮南水利屯田和陇右御蜀见长。破姜维于段谷、侯和，263年从阴平险道出江由、破绵竹，受刘禅降；因承制任官等事被征，钟会乱后死于绵竹西。',role='屯田建言者与灭蜀将领',
+ facts=[
+ dict(key='hometown',label='籍贯',value='义阳棘阳',text='字士载，义阳棘阳人；幼年迁汝南，后随母至颍川，籍贯与迁居分列。',refs=[ORIGIN,EARLY]),
+ dict(key='lifespan',label='生卒年',value='生年未详—264年',text='本传未详生年；三少帝纪把其见杀系于钟会之乱的264年正月，不据早年十二岁或段灼的概称倒推生年。',refs=[YEAR,EARLY]),
+ dict(key='identity',label='主要身份',value='魏将、屯田与边防经营者',text='从典农系统入仕，参与军粮规划，长期对抗姜维，最后由阴平入蜀。',refs=[PATRON,CANAL,HOU,YIN]),
+ dict(key='office',label='最高官职',value='征西将军；诏拜太尉未受命',text='历安西、镇西、征西将军。灭蜀后诏为太尉，但钟会传明确说二人未受命而死，不能省去此层限制。',refs=[ANXI,DUKE,CHANG,TAIWEI,UNRECEIVED]),
+ dict(key='title',label='最高爵位',value='邓侯',text='先封关内侯、方城亭侯及乡侯，段谷胜后进封邓侯；灭蜀诏增邑二万户。',refs=[HONOR,NEW_TITLE,DUKE,TAIWEI,Q('v028-b0035','進封方城鄉侯')]),
+ dict(key='posthumous',label='身后称号',value='本传未载确定追谥',text='泰始初准家属赦还、立后；段灼请收葬定谥，后来嫡孙为郎中。请谥是建议，不能改写为已经获谥。',refs=[PARDON,Q('v028-b0047','使闔棺定諡，死無餘恨。'),DESCEND]),
+ dict(key='deeds',label='代表事迹',items=['淮南屯田','洮城先据','段谷破维','阴平入蜀','受降成都'],text='兼有后勤经营、边防判断及奇道进军，本传也保留胜后擅制与遭诛的反转。',refs=[CANAL,TAO,DUAN,YIN,CHENGDU,ARREST]),
+ ],
+ intro=[
+ dict(title='典农小吏得到拔擢',text='邓艾字士载，义阳棘阳人，少孤，曹操破荆州后迁到汝南，为农民养犊；十二岁随母至颍川。因口吃不能任干佐，他从稻田守丛草吏做起，却常对山泽规划军营，受到旁人嘲笑。后来以典农纲纪、上计吏的身份出使，见到司马懿，获辟为掾、迁尚书郎。其起点并非世家宿将，而是农业行政与地形观察的积累。',refs=[ORIGIN,EARLY,STAMMER,PATRON,Q('v028-b0028','每見高山大澤，輒規度指畫軍營處所，時人多笑焉。')]),
+ dict(title='把积粮与守边相连',text='奉命巡察陈、项以东至寿春时，邓艾提出开渠引水、灌溉积粮并通漕运，获司马懿采行。进入西部后，他识破廖化在白水南牵制的用意，夜驰洮城抢先据守；又历城阳、汝南等职，主张以积粟富民考核官吏。255年参与乐嘉平乱和狄道解围，翌年在段谷大破姜维，后来进为征西将军，经营陇右的军粮与城坞。',refs=[INSPECT,CANAL,IMPLEMENT,TAO,HONOR,RU,GOVERN,LEJIA,DIDAO,DUAN,CHANG,WALL]),
+ dict(title='险道进军受蜀主降',text='262年在侯和击败姜维后，邓艾次年奉命与姜维相持。钟会受阻剑阁，他提出从阴平绕过防线、直冲腹心；冬十月率军穿行无人险地，粮运将尽，最终抵达江由，继而在绵竹击破诸葛瞻、进至雒县。刘禅请降后，他进入成都，解缚焚榇，约束军队不许虏掠，使降附者恢复旧业。奇袭的成功，也伴随补给濒危的实际风险。',refs=[HOU,PROPOSAL,Q('v028-b0038','鍾會攻維未能克。'),YIN,JIANG,MIAN,CHENGDU,Q('v028-b0040','艾執節解縛焚櫬，受而宥之。'),MERCY,RISK],eventLinks=[dict(label='刘禅请降',eventId='fall-shu')]),
+ dict(title='功成后的擅制与败亡',text='邓艾承制任命刘禅及蜀中官员，又提出安蜀乘吴之策，面对须报中央的告诫仍坚持便宜行事；同时自矜功绩，失去同僚支持。钟会等告其悖逆，朝廷槛车征还。钟会兵变失败后，本营将士迎还邓艾，卫瓘派田续等在绵竹西将他杀死。晋初准其家属赦还，段灼为之申理，陈寿则把立功立事与不知防患并列。',refs=[UNAUTH,WAIT,ARREST,ARROGANCE,DEATH,PARDON,PETITION,PING]),
+ ],
+ careers=[
+ dict(id='early',when='早年，确年未载',title='迁汝南，随母至颍川',office='典农属吏，后尚书郎',text='少孤迁汝南，十二岁随母至颍川；由典农属吏奉使见司马懿而获拔擢，任职与出使确年未载。',refs=[EARLY,STAMMER,PATRON]),
+ dict(id='canals',when='241年及此前，巡察确年未载',title='巡陈项至寿春，建言河渠屯田',office='尚书郎',text='本人巡察陈、项以东至寿春，提出灌溉、屯田与漕运方案；正始二年开广漕渠。',refs=[INSPECT,CANAL,IMPLEMENT]),
+ dict(id='taocheng',when='249年',title='屯白水北，夜驰洮城',office='南安太守，后讨寇将军',text='随郭淮拒姜维后留屯白水北，识破廖化牵制，先至洮城据守，得以不败；后迁城阳太守。',refs=[BAISHUI,CAMP,TAO,HONOR]),
+ dict(id='governance',when='249年后至255年前，部分确年未载',title='历郡开荒，建言积粟富民',office='汝南太守，后兖州刺史、振威将军',text='历城阳、汝南，开辟荒野；后来任兖州刺史，主张把考绩奖励系于积粮富民。',refs=[HONOR,RU,FARM,GOVERN,Q('v028-b0034','遷兗州刺史，加振威將軍。')]),
+ dict(id='lejia',when='255年',title='先据乐嘉，追文钦至丘头',office='长水校尉，后行安西将军',text='斩毌丘俭使者，兼道赴乐嘉搭浮桥；文钦败后追至丘头。面对吴军由肥阳移屯附亭，令诸葛绪拒战于黎浆，后受进封。',refs=[LEJIA,QIU,FUTING,Q('v028-b0035','其年徵拜長水校尉。')],eventIds=['qiu-wen-rebellion']),
+ dict(id='didao',when='255年',title='解狄道围，判断姜维将再来',office='安西将军，假节、领护东羌校尉',text='解王经狄道之围；从己方新败、兵器未复与分守劣势判断姜维仍会再攻，不随众人以为敌已力竭。',refs=[DIDAO,ANXI,Q('v028-b0036','賊有黠數，其來必矣。')],eventIds=['taoxi-battle']),
+ dict(id='duangu',when='256年',title='武城山相持，段谷大破姜维',office='镇西将军、都督陇右诸军事，邓侯',text='在武城山与姜维争险，继而战于段谷大破之，以功受进官爵。',refs=[WUCHENG,DUAN,DUKE],eventIds=['duangu-battle']),
+ dict(id='changcheng',when='257年',title='长城拒姜维',office='后迁征西将军，确年未载',text='甘露二年拒姜维于长城，维退；其后迁征西将军，任命确年未载。长城是陇右战事地名，不作北方万里长城。',refs=[CHANG]),
+ dict(id='houhe',when='262年',title='侯和破维',office='征西将军',text='景元三年破姜维于侯和，姜维退保沓中；沓中是敌军退驻处，不据此标成邓艾此时驻地。',refs=[HOU]),
+ dict(id='yinping',when='263年秋冬',title='由阴平出江由',office='征西将军',text='奉命牵制姜维后追至阴平，提出绕道进军，十月穿无人险地到江由，马邈降。',refs=[YIN,JIANG,Q('v028-b0060','鄧艾追姜維到陰平')],eventIds=['fall-shu']),
+ dict(id='conquest',when='263年冬',title='破绵竹，经雒入成都受降',office='诏拜太尉，未受命',text='绵竹破诸葛瞻后进军雒县，受刘禅请降，继入成都约束军士、安抚降附，承制任官。十二月诏拜太尉，未及受命而死。',refs=[MIAN,CHENGDU,MERCY,UNAUTH,TAIWEI,UNRECEIVED]),
+ dict(id='death',when='264年正月',title='被征与绵竹西遇害',office='被槛车征还',text='坚持便宜行事而遭钟会等告发，被囚送还。钟会死后本营将士迎还，卫瓘遣田续等在绵竹西杀艾及子忠。',refs=[WAIT,ARREST,DEATH,YEAR],eventIds=['zhong-hui-rebellion']),
+ dict(id='aftermath',when='265—273年',title='赦还家属，段灼申理',office='嫡孙邓朗为郎中',text='265年准家属赦还、立后，267年段灼上疏申理；273年以嫡孙邓朗为郎中。请定谥不等于本传记获谥。',refs=[PARDON,PETITION,DESCEND]),
+ ],
+ trajectory=dict(atlasPerson='dengai',phases=[
+ dict(id='early',title='典农与淮南',when='早年至241年，部分确年未载',span=(208,241),careers=['early','canals'],atlasStops=[0,1,2]),
+ dict(id='frontier',title='迁郡与御蜀',when='249年至255年前，部分确年未载',span=(249,254),careers=['taocheng','governance'],atlasStops=[3]),
+ dict(id='huainan',title='平乱与陇右胜战',when='255—262年',span=(255,262),careers=['lejia','didao','duangu','changcheng','houhe'],atlasStops=[4,5,6,7]),
+ dict(id='shu',title='阴平奇袭与受降',when='263年',span=(263,263),careers=['yinping','conquest'],atlasStops=[8,9,10,11]),
+ dict(id='end',title='被征与身后申理',when='264—273年',span=(264,273),careers=['death','aftermath'],atlasStops=[12]),
+ ]),
+ records=[
+ dict(section='civil',when='241年及此前',title='水利屯田与运输合议',category='军粮经营',careerRef='canals',text='把灌溉积粮与水路运输同时规划；司马懿采行后，正文称东南用兵可泛舟而下、有储粮而少水害。',refs=[CANAL,IMPLEMENT,EFFECT]),
+ dict(section='civil',when='历郡与守边期间，确年未载',title='积粟考绩，经营城坞',category='农业边防',careerRef='governance',text='提倡以积粟富民奖励官吏，本传称所到荒野开辟；在西方修治的城坞，后来在羌乱中成为吏民保全之所。',refs=[FARM,GOVERN,WALL]),
+ dict(section='civil',when='263年',title='约束虏掠，复降民旧业',category='安抚降附',careerRef='conquest',text='入成都后约束军士、安纳降附，蜀人称之；这一安抚成效与承制任官的权力争议分列。',refs=[MERCY,UNAUTH]),
+ dict(section='military',when='249年及255—256年',title='识别牵制与预判再攻',category='临敌判断',careerRef='duangu',text='白水对峙时抢先据洮城；狄道解围后不因暂退而松懈，备战并在段谷获胜。具体往返见履历。',refs=[TAO,DIDAO,DUAN]),
+ dict(section='military',when='263年',title='绕过剑阁直入腹心',category='奇道进军',careerRef='yinping',text='以阴平险道绕过正面防线，经江由、绵竹推进成都，促成刘禅投降；正文亦记粮运将匮，不能把冒险写成毫无代价。',refs=[YIN,JIANG,MIAN,CHENGDU,RISK]),
+ dict(section='setback',when='263—264年',title='承制与中央节制冲突',category='权限争议',careerRef='death',text='以安初附为由承制任官，卫瓘传达须报之令后仍坚持不拘常制；钟会等遂告其悖逆。告发与实际谋反不能直接等同。',refs=[UNAUTH,WAIT,ARREST]),
+ dict(section='setback',when='263—264年',title='自矜而失协同，功成遇害',category='关系与防患',careerRef='death',text='胜后自夸使有识者发笑；段灼申理也承认其刚急、不能协同朋类。陈寿以不知防患责之，但这不证明钟会告发都可信。',refs=[ARROGANCE,PETITION,PING,DEATH]),
+ ],
+ assessment=[dict(title='陈寿：立功而暗于防患',text='陈寿肯定邓艾强壮立功立事，却指出他能远见诸葛恪之祸，不能近见自身危机。评价聚焦功业与自保的落差，不抹去安民与用兵事实。',refs=[PING,Q('v028-b0073','豈遠知乎諸葛恪而不能近自見')]),dict(title='段灼：忠而受诛的申理',text='段灼267年上疏否认其反志，强调守边勤劳、平蜀之功，同时承认其性情不善协调。这是为邓艾申理的奏疏，应与陈寿结论分别读。',refs=[PETITION,Q('v028-b0047','艾心懷至忠而荷反逆之名')])],
+ relations=[
+ dict(category='师友',name='司马懿',personId='sima-yi',label='拔擢与采纳屯田',text='因奉使相见获辟，河渠屯田建议又获施行。',refs=[PATRON,IMPLEMENT]),
+ dict(category='君臣',name='司马昭',personId='sima-zhao',label='受节度与被征',text='灭蜀受其节度，后因承制问题被告发征还。',refs=[Q('v028-b0038','大將軍司馬文王皆指授節度'),WAIT,ARREST]),
+ dict(category='同僚',name='郭淮',label='陇右御蜀同袍',text='249年协同拒姜维，郭淮西击羌后留邓艾在白水北备敌。',refs=[BAISHUI,CAMP]),
+ dict(category='敌对',name='姜维',personId='jiang-wei',label='长期陇右对手',text='从洮城争先到段谷、侯和，多次相持交战；不把姜维行经处自动列为邓艾足迹。',refs=[TAO,DUAN,HOU]),
+ dict(category='同僚',name='钟会',personId='zhong-hui',label='共灭蜀而互相倾轧',text='分路进兵，蜀平后钟会告其有反状并接收其军。',refs=[ARREST,Q('v028-b0063','會內有異志，因鄧艾承制專事，密白艾有反狀')]),
+ dict(category='旧识',name='刘禅',personId='liu-shan',label='受降并承制授官',text='受刘禅面缚之降，为之解缚，又承制授行骠骑将军。',refs=[CHENGDU,UNAUTH]),
+ dict(category='同僚',name='卫瓘、田续',label='被征与遇害相关者',text='卫瓘传达须报之令，钟会死后又遣田续等杀艾。',refs=[WAIT,DEATH]),
+ dict(category='亲族',name='邓忠、邓朗',label='从征子与受叙嫡孙',text='邓忠参与绵竹之战而与父同死；嫡孙邓朗后被授郎中。',refs=[MIAN,DEATH,DESCEND]),
+ ],
+ readingNotes=[dict(title='诏拜太尉与未受命',text='邓艾传记诏拜太尉，钟会传却明记两人均未受命而死；最高官职同时保留诏授和未受命两个层次。',refs=[TAIWEI,UNRECEIVED]),dict(title='田续之杀的正文与注引',text='正文只记卫瓘遣田续等于绵竹西杀艾；裴注《汉晋春秋》增叙江由旧怨及杜预批评，属于另一层材料。',refs=[DEATH,Q('v028-b0044-n01','可以報江由之辱矣。','《汉晋春秋》')]),dict(title='身后赦还不等于平反定谥',text='晋初诏仍说矜功失节，同时准家属赦还；段灼请求收葬定谥，但本传没有记录谥号已颁。',refs=[PARDON,Q('v028-b0046','矜功失節，實應大辟。'),Q('v028-b0047','使闔棺定諡，死無餘恨。')])],
+ glossary=[('承制','奉皇帝制度或使命便宜任官；本传的争议正在于是否越权。'),('京观','聚敌尸所筑的战功标志，不等于一般坟墓。')],
+ sourceScope='以卷二十八邓艾本传及其全部裴注为基础，交叉核对同卷钟会传与诸葛诞传、卷四三少帝纪。奏疏的申理、诏书的定罪与陈寿评价分别呈现；战址与确年不明者不补成精确结论。本页不声称穷尽全书所有提及邓艾之处。',
+)

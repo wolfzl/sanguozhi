@@ -102,7 +102,7 @@ trajectory=dict(
 node scripts/atlas-places.mjs person liubei
 ```
 
-截至 2026-11-16，本站 65 人中有 30 人在配套的本地江山时序版本里有路线：
+截至 2026-11-17，本站 65 人中有 43 人在配套的本地江山时序版本里有路线：
 
 | 本站 id | `atlasPerson` | 站数 | 本站 id | `atlasPerson` | 站数 |
 |---|---|---|---|---|---|
@@ -112,7 +112,7 @@ node scripts/atlas-places.mjs person liubei
 | sunquan | sunquan | 7 | zhangfei | zhangfei | 10 |
 | guanyu | guanyu | 7 | jiang-wei | jiangwei | 12 |
 | du-yu | duyu | 7 | yuanshao | yuanshao | 3 |
-| zhaoyun | zhaoyun | 9 | deng-ai | dengai | 3 |
+| zhaoyun | zhaoyun | 9 | deng-ai | dengai | 13 |
 | lv-bu | lvbu | 3 | ma-chao | machao | 7 |
 | pang-tong | pangtong | 5 | fa-zheng | fazheng | 4 |
 | liu-shan | liushan | 6 | jiang-wan | jiangwan | 5 |
@@ -122,6 +122,13 @@ node scripts/atlas-places.mjs person liubei
 | lumeng | lumeng | 12 | taishi-ci | taishici | 8 |
 | zhang-zhao | zhangzhao | 4 | zhu-zhi | zhuzhi | 4 |
 | lv-fan | lvfan | 8 | | | |
+| cao-pi | caopi | 12 | cao-rui | caorui | 13 |
+| cao-mao | caomao | 5 | cao-shuang | caoshuang | 5 |
+| sima-shi | simashi | 4 | sima-zhao | simazhao | 4 |
+| zhong-hui | zhonghui | 7 | zhang-liao | zhangliao | 13 |
+| xun-yu | xunyu | 6 | xun-you | xunyou | 8 |
+| guo-jia | guojia | 8 | cheng-yu | chengyu | 7 |
+| jia-xu | jiaxu | 5 | | | |
 
 本轮九名蜀汉人物使用带原文引用的独立人物站点（`curatedOnly`），不再混入只提及姓名的公共事件。详见 [核对数据](shu-trajectory-audit.json)。其他人物仍沿用既有路线。上游新增事件后，站号可能整体后移；`atlas-places.mjs check` 会按年份核对，发现错位就报错。
 
@@ -284,3 +291,21 @@ JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/atlas-places.mjs chec
 ```
 
 第一条额外核对站点引文在本书中的逐字匹配、履历和时期归属，以及地图原始数据和运行时站点与本站审计文件的一致性。
+
+
+## 曹魏十四人独立人物路线
+
+曹丕、曹叡、曹髦、曹爽、司马师、司马昭、邓艾、钟会、张辽、荀彧、荀攸、郭嘉、程昱、贾诩均采用 `curatedOnly` 独立路线，共65个时期、110站；47个时期有地图入口。逐站依据、时期及履历归属保存在 [wei-trajectory-audit.json](wei-trajectory-audit.json)，完整审查与验证见 [wei-b-profile-review.md](wei-b-profile-review.md)。曹操、司马懿及既有蜀汉、孙吴路线未改。
+
+足迹按正文适度合并相邻经历，并保留曹叡许昌—摩陂往返、程昱范—东阿—范屯等实际回转。没有可靠到达证据的任官、封邑、派军、战略建议、未实施计划与身后追命仍留在履历，不标为本人行迹。确年未载的排序年份通过 `dateLabelZh/En` 明示；合并站在说明及 `mergedLocations` / `includedEpisodesZh` 中保留所含经历，不将代表点声称为全部古址。
+
+历史同名地点单独核对：曹髦驻项指古项县、今沈丘槐店地区；司马师汝阳不是今洛阳汝阳县；汉绵竹、江由、江都不能直接套现代同名市区；邓艾249年白水—洮城不与263年蜀地路线混用。确址未定的丘头军营与长城战地只留文字说明，不补造坐标。
+
+线型复用既有 A 类规则：概览虚线，所选时期的到达路段实线，其余虚线；同地活动不强画连线。空站时期不生成全程代替链接。嵌入、独立图与分期链接统一带 `sgz_rev`，配套地图资源更新后按原规则同步资源内容哈希。
+
+```bash
+JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/check-wei-trajectories.mjs
+JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/atlas-places.mjs check cao-pi cao-rui cao-mao cao-shuang sima-shi sima-zhao deng-ai zhong-hui zhang-liao xun-yu xun-you guo-jia cheng-yu jia-xu
+```
+
+专项检查核对110站的本书引句、正文/裴注层次、时期与履历归属、无重复分配，以及地图原始数据与运行时路线和本站审计数据的一致性。地图侧原先“邓艾263年仅两站”的断言已改为检验阴平先于成都，允许有证据的中间站；A类绘图规则不变。

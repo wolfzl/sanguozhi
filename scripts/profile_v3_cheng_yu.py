@@ -1,0 +1,105 @@
+"""程昱：乡里守城、兖州军政与刚戾争议。"""
+from profile_v3 import Q
+ORIGIN=Q('v014-b0002','程昱字仲德，東郡東阿人也。')
+EARLY=Q('v014-b0002','昱率吏民開城門急擊之，度等破走。東阿由此得全。')
+REVOLT=Q('v014-b0002','黃巾起，縣丞王度反應之，燒倉庫。')
+RESTORE=Q('v014-b0002','求得縣令，遂共城守。')
+TRICK=Q('v014-b0002','乃密遣數騎舉幡於東山上，令房等望見，大呼言「賊已至」')
+LIUDAI=Q('v014-b0003','若棄紹近援而求瓚遠助，此假人於越以救溺子之說也。')
+DECLINE=Q('v014-b0003','岱表昱為騎都尉，昱辭以疾。')
+JOIN=Q('v014-b0004','太祖臨兗州，辟昱。')
+SHOU=Q('v014-b0004','太祖與語，說之，以昱守壽張令。')
+JUAN=Q('v014-b0004','太祖征徐州，使昱與荀彧留守鄄城。')
+FAN=Q('v014-b0004','昱乃歸，過范，說其令靳允曰')
+STOP=Q('v014-b0004','昱又遣別騎絕倉亭津，陳宮至，不得渡。')
+DONGE=Q('v014-b0004','昱至東阿，東阿令棗祗已率厲吏民，拒城堅守。')
+THREE=Q('v014-b0004','又兗州從事薛悌與昱協謀，卒完三城，以待太祖。')
+TUN=Q('v014-b0004','乃表昱為東平相，屯范。')
+FAMILY=Q('v014-b0004','聞呂布執君母弟妻子，孝子誠不可為心！')
+XU=Q('v014-b0004-n01','允宜先救至親。','徐众评')
+NOYUAN=Q('v014-b0005','今兗州雖殘，尚有三城。能戰之士，不下萬人。')
+NOYUAN_END=Q('v014-b0005','太祖乃止。')
+EMPEROR=Q('v001-b0030','太祖將迎天子，諸將或疑，荀彧、程昱勸之')
+OFFICE=Q('v014-b0006','天子都許，以昱為尚書。兗州尚未安集，復以昱為東中郎將，領濟陰太守，都督兗州事。')
+LIU=Q('v014-b0006','今借之以兵，必有異心。')
+SEVEN=Q('v014-b0006','時昱有七百兵守鄄城')
+PLAN=Q('v014-b0006','今見昱兵少，必輕易不來攻。')
+RESULT=Q('v014-b0006','紹聞昱兵少，果不往。')
+LIYANG=Q('v014-b0006','昱收山澤亡命，得精兵數千人，乃引軍與太祖會黎陽，討袁譚、袁尚。')
+TITLE=Q('v014-b0006','譚、尚破走，拜昱奮武將軍，封安國亭侯。')
+GRAIN=Q('v018-b0003','太祖擊譚、尚於黎陽，使典與程昱等以船運軍糧。')
+WATER=Q('v018-b0003','昱亦以為然。遂北渡河，攻蕃，破之，水道得通。')
+SUN=Q('v014-b0007','權雖有謀，不能獨當也。劉備有英名，關羽、張飛皆萬人敵也，權必資之以禦')
+RETIRE=Q('v014-b0007','乃自表歸兵，闔門不出。')
+MERCY=Q('v014-b0007-n01','臣以為不可誅也；縱誅之，宜先啟聞。','《魏书》')
+MERCY_END=Q('v014-b0007-n01','即白太祖，太祖果不誅。','《魏书》')
+TEMPER=Q('v014-b0008','昱性剛戾，與人多迕。')
+REMOVE=Q('v014-b0008','魏國既建，為衛尉，與中尉邢貞爭威儀，免。')
+LAST=Q('v014-b0008','文帝踐阼，復為衛尉，進封安鄉侯，增邑三百戶，並前八百戶。')
+DEATH=Q('v014-b0008','方欲以為公，會薨，帝為流涕，追贈車騎將軍，諡曰肅侯。')
+AGE=Q('v014-b0008-n01','昱時年八十。','《魏书》')
+FLESH=Q('v014-b0008-n01','昱略其本縣，供三日糧，頗雜以人脯，由是失朝望，故位不至公。','《世语》')
+PING=Q('v014-b0103','程昱、郭嘉、董昭、劉曄、蔣濟才策謀略，世之奇士，雖清治德業，殊於荀攸，而籌畫所料，是其倫也。')
+PROFILE=dict(id='cheng-yu',tier='B',reading=['014'],
+ lead='程昱先在东阿率吏民守城，后应曹操征辟，与荀彧保全兖州三城；兼有留守、募兵、运粮与谋议之功。晚年交还兵众，曾因争威仪免官，曹丕即位后复任卫尉，卒谥肃侯。',role='曹操谋臣、兖州军政官员',
+ facts=[
+ dict(key='hometown',label='籍贯',value='东郡东阿',text='字仲德，东郡东阿人；黄巾时本传另有其实际守城行动，地图以行动而非籍贯立站。',refs=[ORIGIN,EARLY]),
+ dict(key='lifespan',label='生卒年',value='本传未列确切生卒年',text='正文记曹丕践阼后复职、后卒，没有列确切年月；《魏书》注引说年八十，不据此倒推出生年。',refs=[LAST,DEATH,AGE]),
+ dict(key='identity',label='主要身份',value='曹操谋臣与领兵官员',text='先领兖州地方军政，也亲率军会黎阳；晚年归兵后入任卫尉。',refs=[OFFICE,LIYANG,RETIRE,REMOVE]),
+ dict(key='office',label='最高官职',value='卫尉；身后赠车骑将军',text='曾为尚书、东中郎将、济阴太守、奋武将军，晚年复为卫尉，车骑将军系追赠。',refs=[OFFICE,TITLE,LAST,DEATH]),
+ dict(key='title',label='最高爵位',value='安乡侯',text='先封安国亭侯，曹丕践阼后进封安乡侯。',refs=[TITLE,LAST]),
+ dict(key='posthumous',label='身后称号',value='肃侯',text='卒后追赠车骑将军，谥肃侯。',refs=[DEATH]),
+ dict(key='deeds',label='代表事迹',items=['守全东阿','保兖三城','七百守城','黎阳运粮','议全降众'],text='乡里动员与守城、军政筹划兼备，降众不诛事来自《魏书》注引。',refs=[EARLY,THREE,SEVEN,GRAIN,MERCY_END]),
+ ],
+ intro=[
+ dict(title='乡里守城与出仕选择',text='程昱字仲德，东郡东阿人。黄巾起时，县丞王度反叛，官民逃散，程昱先侦察敌情，又设计让乡人返城，与县令共同防守，率吏民反击而保全东阿。他曾拒刘岱征辟，却为刘岱分析袁绍、公孙瓒的远近强弱。曹操接领兖州后再辟，他才应召，被任为守寿张令，出仕并非从一开始便只凭一纸名望。',refs=[ORIGIN,REVOLT,TRICK,RESTORE,EARLY,LIUDAI,DECLINE,JOIN,SHOU]),
+ dict(title='三城存亡中的劝说与防守',text='194年曹操征徐州，程昱与荀彧留守鄄城。兖州叛迎吕布后，他奉议归说范、东阿，劝靳允守范，遣别骑断仓亭津，使陈宫不能渡，又到东阿与已坚守的枣祗协力。三城保全后，任东平相、屯范。曹操后来军乏欲依袁绍，他以尚有三城与可用之兵劝止；这一阶段最突出的贡献，是在危局中维持根据地和继续自立的意志。',refs=[JUAN,FAN,STOP,DONGE,THREE,TUN,NOYUAN,NOYUAN_END],eventLinks=[dict(label='194年曹操征徐州',eventId='yanzhou-struggle')]),
+ dict(title='领军留守与形势判断',text='奉迎汉帝时，程昱同荀彧支持曹操，之后为尚书，又回领兖州军政。袁绍将南渡时，他仅以七百人守鄄城，反对增兵，判断敌人会轻视小城而不来攻，果然得免。其后收山泽亡命数千人，亲自引军会黎阳，又与李典运粮通水道。他也善判孙刘相需，认为孙权会借刘备之力抗曹，不会轻易除掉这个盟友。',refs=[EMPEROR,OFFICE,SEVEN,PLAN,RESULT,LIYANG,GRAIN,WATER,SUN]),
+ dict(title='晚年退兵与性格的代价',text='中原渐平后，程昱自请归兵、闭门不出。《魏书》注引又记他劝曹丕不必沿用乱时诛降之法，使降众得全。与此同时，本传直言其刚戾多迕，魏国建立后任卫尉，与邢贞争威仪而免官。曹丕践阼复任卫尉、进安乡侯，未及擢公便去世，谥肃侯。才策、仁恕建言与人际失和都需保留，不能只写一面。',refs=[RETIRE,MERCY,MERCY_END,TEMPER,REMOVE,LAST,DEATH]),
+ ],
+ careers=[
+ dict(id='donge',when='黄巾起时，确年未载',title='率乡里返城，保全东阿',office='—',text='王度反叛后，组织侦察与返城，设计举幡促使官民回防，率吏民击退王度。',refs=[ORIGIN,TRICK,EARLY]),
+ dict(id='liudai',when='初平中，确年未载',title='辞刘岱辟命而为之议事',office='辞骑都尉',text='劝刘岱勿弃袁绍近援求公孙瓒远助，后来仍以病辞骑都尉。',refs=[LIUDAI,DECLINE]),
+ dict(id='join',when='192年',title='应曹操辟，守寿张令',office='守寿张令',text='刘岱为黄巾所杀，曹操临兖州后辟程昱，应召交谈后授守寿张令。',refs=[Q('v014-b0004','劉岱為黃巾所殺。'),JOIN,SHOU],eventIds=['qingzhou-army']),
+ dict(id='three',when='194年',title='由鄄城过范至东阿，完三城',office='东平相，屯范',text='与荀彧留守鄄城后，过范说靳允，遣骑断仓亭津，至东阿协同枣祗等守城。曹操还后表东平相、屯范。',refs=[JUAN,FAN,STOP,DONGE,THREE,TUN],eventIds=['yanzhou-struggle']),
+ dict(id='independent',when='兖州危局后，确年未载',title='劝止曹操迁家依袁绍',office='—',text='曹操军乏拟迁家居邺、连和袁绍，程昱指出尚有三城与可战之兵，不宜屈居人下，曹操停止。',refs=[NOYUAN,NOYUAN_END]),
+ dict(id='emperor',when='196年',title='支持奉迎，复领兖州军政',office='尚书、东中郎将、领济阴太守',text='与荀彧劝迎天子；天子都许后任尚书，因兖州未安，复领地方军政。',refs=[EMPEROR,OFFICE],eventIds=['welcome-emperor']),
+ dict(id='liubei',when='刘备来归至再遣徐州时，部分确年未载',title='主张早图刘备，谏勿假兵',office='振威将军',text='曾劝杀刘备而不听，后又与郭嘉反对给刘备兵众；刘备终反，程昱随后迁振威将军。',refs=[Q('v014-b0006','昱說太祖殺備，太祖不聽。'),LIU,Q('v014-b0006','頃之，昱遷振威將軍。')]),
+ dict(id='juancheng',when='袁绍将南渡时，确年未载',title='七百守鄄城，不受增兵',office='—',text='判断袁绍见兵少便轻视不攻，拒绝增兵二千之议，袁绍果不往。',refs=[SEVEN,PLAN,RESULT]),
+ dict(id='liyang',when='讨袁谭、袁尚时，确年未载',title='募军会黎阳，运粮通河道',office='奋武将军、安国亭侯',text='收山泽亡命数千人，引军会黎阳。李典传又记共以船运粮，赞成击破高蕃、打通水道；袁氏退后进将军、封侯。',refs=[LIYANG,GRAIN,WATER,TITLE]),
+ dict(id='retire',when='曹操征荆州后，确年未载',title='料孙刘相需，自请归兵',office='—',text='判断孙权需刘备抗曹；中夏渐平，自请交还兵众，闭门不出。',refs=[SUN,RETIRE]),
+ dict(id='mercy',when='曹操征马超时，确年未载',title='参留守军事，议不杀降众',office='参军事（注引）',text='《魏书》记曹丕留守时使程昱参军事，程昱认为已定地区不应照旧法杀降，劝先奏曹操，降众得免。',refs=[Q('v014-b0007-n01','太祖征馬超，文帝留守，使昱參軍事。','《魏书》'),MERCY,MERCY_END]),
+ dict(id='late',when='魏国建立后至曹丕践阼后，卒年未详',title='任卫尉而免，复职后卒',office='卫尉、安乡侯；追赠车骑将军',text='曾因与邢贞争威仪免卫尉；曹丕践阼复任、进侯，未及擢公而卒，追赠车骑将军、谥肃侯。',refs=[REMOVE,LAST,DEATH]),
+ ],
+ trajectory=dict(atlasPerson='chengyu',phases=[
+ dict(id='early',title='乡里与出仕',when='黄巾起至192年，部分确年未载',span=(184,192),careers=['donge','liudai','join'],atlasStops=[0]),
+ dict(id='three',title='保全三城',when='194年及其后',span=(194,195),careers=['three','independent'],atlasStops=[1,2,3,4]),
+ dict(id='regional',title='兖州与黎阳',when='196年至讨袁氏时，部分确年未载',span=(196,203),careers=['emperor','liubei','juancheng','liyang'],atlasStops=[5,6]),
+ dict(id='late',title='归兵与晚任',when='征荆州后至曹丕践阼后，卒年未详',span=(208,226),careers=['retire','mercy','late'],atlasStops=[]),
+ ]),
+ records=[
+ dict(section='civil',when='黄巾起时',title='动员乡里恢复城守',category='地方组织',careerRef='donge',text='以侦察为据，设法使流散官民返城，并共守共击，东阿得全；其中也有故作敌至促人回城的权术。',refs=[TRICK,EARLY]),
+ dict(section='civil',when='曹操征马超时，注引',title='反对机械沿用诛降旧法',category='刑政建言',careerRef='mercy',text='《魏书》记其区分乱时与天下略定后的情势，劝曹丕先启曹操，使降众不诛。',refs=[MERCY,MERCY_END]),
+ dict(section='military',when='194年',title='协力守全兖州三城',category='守备谋划',careerRef='three',text='劝范令、遣骑断津、到东阿协同守御，保存曹操根据地；仓亭津为遣骑行动，不作本人到达站。',refs=[FAN,STOP,DONGE,THREE]),
+ dict(section='military',when='袁绍南渡及讨袁氏期间',title='小兵守城，募军运粮',category='守备后勤',careerRef='liyang',text='七百守鄄城以心理判断免攻；其后募得精兵，引军黎阳，并与李典运粮、赞成击高蕃通水道。',refs=[SEVEN,PLAN,RESULT,LIYANG,GRAIN,WATER]),
+ dict(section='setback',when='魏国建立后',title='争威仪而免卫尉',category='人际与官场',careerRef='late',text='本传直言其性刚戾、多与人不合，具体记与中尉邢贞争威仪而免官，才策不能遮蔽此项代价。',refs=[TEMPER,REMOVE]),
+ dict(section='setback',when='194年劝守范时',title='忠主与救亲的紧张',category='伦理争议',careerRef='three',text='靳允家属被吕布控制，程昱仍劝其守范；裴注徐众批评应先救至亲。这是对劝说的伦理异议，不把守城成功等同于毫无代价。',refs=[FAMILY,XU]),
+ dict(section='setback',when='曹操军乏时，注引确年未载',title='世语所载人脯指控',category='注引争议',careerRef='independent',text='《世语》称供粮杂有人脯、因此失朝望；这是严重但孤立的注引记载，正文未如此说明其不至公的原因，不提升为无争议定论。',refs=[FLESH,DEATH]),
+ ],
+ assessment=[dict(title='陈寿：才策奇士，德业有别',text='陈寿把程昱等的筹画才略比于荀攸，仍区分其清治德业；本传所载刚戾、免官也应共同阅读。',refs=[PING,TEMPER,REMOVE])],
+ relations=[
+ dict(category='君臣',name='曹操',personId='caocao',label='危局中受倚重',text='应召出仕，共渡兖州危局，后领地方军政并率军从征。',refs=[JOIN,THREE,OFFICE,LIYANG]),
+ dict(category='同僚',name='荀彧',personId='xun-yu',label='共保三城与劝迎帝',text='留守鄄城而分工维持三城，又共同劝奉迎汉帝。',refs=[JUAN,THREE,EMPEROR]),
+ dict(category='同僚',name='郭嘉',personId='guo-jia',label='共谏勿借兵刘备',text='二人认为给刘备兵众会滋生异心。',refs=[LIU,Q('v014-b0006','昱與郭嘉說太祖曰')]),
+ dict(category='同僚',name='李典',label='黎阳运粮的协作者',text='共同运粮，赞成击高蕃打通河道。',refs=[GRAIN,WATER]),
+ dict(category='君臣',name='曹丕',personId='cao-pi',label='劝全降众，践阼复职',text='注引记为其参军事、劝不杀降；践阼后复任卫尉。',refs=[MERCY,MERCY_END,LAST]),
+ dict(category='旧识',name='刘岱',label='辞辟而为之献策',text='不应辟命，却就袁绍、公孙瓒关系给出判断，仍辞骑都尉。',refs=[LIUDAI,DECLINE]),
+ ],
+ readingNotes=[
+ dict(title='人脯说出自世语',text='同一注文先引《魏书》享年，随后《世语》另述人脯与失朝望，不能把两段都标成《魏书》，也不能用后说覆盖正文的临拟擢公而卒。',refs=[AGE,FLESH,DEATH]),
+ dict(title='徐众不赞成以守范压过救亲',text='徐众的评论认为靳允尚未与曹操成君臣，应先救母；这是对人物选择的另一判断，和本传肯定保城的叙事并列。',refs=[FAMILY,XU]),
+ dict(title='遣骑、建议与亲自到达须分开',text='程昱遣骑断仓亭津、判断孙刘关系，都不能证明本人到了津口或江东。反之过范、至东阿、屯范与率军会黎阳有明确实到语句。',refs=[STOP,FAN,DONGE,TUN,LIYANG,SUN]),
+ ],
+ glossary=[('守','此处为代理或暂行县令职务。'),('归兵','交还所领兵众，并非战败弃军。')],
+ sourceScope='以卷十四程昱本传正文、裴注及篇末陈寿评语为基础，交叉核对卷一武帝纪的奉迎记载与卷十八李典传的运粮通道。徐众伦理评论、《魏书》全降众与《世语》人脯指控分别标示，不替注引作无条件背书。本页不声称穷尽全书所有提及程昱之处。',
+)

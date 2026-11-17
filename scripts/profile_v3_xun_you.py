@@ -1,0 +1,102 @@
+"""荀攸：从行军师的决策与史料保存界限。"""
+from profile_v3 import Q
+NAME=Q('v010-b0033','荀攸字公達，彧從子也。')
+HOME=Q('v013-b0011','徵河南鄭泰、潁川荀攸及歆等。')
+EARLY=Q('v010-b0034','何進秉政，徴海内名士攸等二十餘人。攸到，拜黃門侍郎。')
+PLOT=Q('v010-b0034','事垂就而覺，收顒、攸繫獄，顒憂懼自殺，攸言語飲食自若，會卓死得免。')
+JING=Q('v010-b0034','攸以蜀漢險固，人民殷盛，乃求爲蜀郡太守，道絶不得至，駐荊州。')
+JOIN=Q('v010-b0035','於是徴攸爲汝南太守，入爲尚書。')
+ADVISER=Q('v010-b0035','以爲軍師。建安三年，從征張繡。')
+RANG=Q('v010-b0035','太祖不從，遂進軍之穰，與戰。繡急，表果救之。軍不利。')
+REGRET=Q('v010-b0035','不用君言至是。')
+XIAPI=Q('v010-b0036','是歳，太祖自宛征呂布，至下邳')
+URGE=Q('v010-b0036','今及布氣之未復，宮謀之未定，進急攻之，布可拔也。')
+FLOOD=Q('v010-b0036','乃引沂、泗灌城，城潰，生禽布。')
+BAIMA=Q('v010-b0037','後從救劉延於白馬，攸畫策斬顏良。')
+BAIT=Q('v010-b0037','遂以輜重餌賊，賊競奔之，陣亂。乃縱歩騎撃，大破之，斬其騎將文醜，太祖遂與紹相拒於官渡。')
+GRAIN=Q('v010-b0037','攸曰：「徐晃可。」乃遣晃及史渙邀撃破走之，燒其輜重。')
+CAMP=Q('v010-b0037','唯攸與賈詡勸太祖。太祖乃留攸及曹洪守。')
+ZHANG=Q('v010-b0037','攸謂洪曰：「郃計不用，怒而來，君何疑？」乃受之。')
+LIYANG=Q('v010-b0038','七年，從討袁譚、尚於黎陽。')
+HEBEI=Q('v010-b0038','及其亂而取之，天下定矣，此時不可失也。')
+NANPI=Q('v010-b0038','其後譚叛，從斬譚於南皮。')
+TITLE=Q('v010-b0038','於是封陵樹亭侯。')
+OFFICE=Q('v010-b0038','增邑四百，并前七百戸，轉爲中軍師。魏國初建，爲尚書令。')
+DENSE=Q('v010-b0039','攸深密有智防，自從太祖征伐，常謀謩帷幄，時人及子弟莫知其所言。')
+CAO=Q('v010-b0039','公達外愚内智，外怯内勇，外弱内彊，不伐善，無施勞')
+PI=Q('v010-b0039','攸曾病，世子問病，獨拜牀下，其見尊異如此。')
+ZHONG=Q('v010-b0039','公達前後凡畫奇策十二，唯繇知之。繇撰集未就，會薨，故世不得盡聞也。')
+DEATH=Q('v010-b0039','攸從征孫權，道薨。太祖言則流涕。')
+AGE=Q('v010-b0039-n03','時建安十九年，攸年五十八。','《魏书》')
+PEI=Q('v010-b0039-n02','臣松之案：攸亡後十六年，鍾繇乃卒','裴松之案')
+POST=Q('v010-b0040','正始中，追諡攸曰敬侯。')
+WELCOME=Q('v010-b0035','太祖迎天子都許，遺攸書曰')
+DELIGHT=Q('v010-b0035','太祖素聞攸名，與語大恱')
+TIRED=Q('v010-b0036','攻之不拔，連戰，士卒疲，太祖欲還。')
+FRIEND=Q('v010-b0039','攸與鍾繇善')
+UNITE=Q('v010-b0038','借使二子和睦以守其成業，則天下之難未息也。')
+PROMOTE=Q('v010-b0025-n01','荀攸後爲魏尚書令，亦推賢進士。','《彧别传》')
+PING=Q('v010-b0050','荀攸、賈詡，庶乎筭無遺策，經達權變，其良、平之亞與！')
+PROFILE=dict(id='xun-you',tier='B',syncLifespan=True,reading=['010'],
+ lead='从谋刺董卓入狱，到随曹操征伐的军师，荀攸在下邳、白马、官渡及河北经营中多次献策，后任中军师、魏尚书令。他慎密少言，随征孙权途中去世，十二奇策也未能完整流传。',role='曹操从行军师、魏尚书令',
+ facts=[
+ dict(key='hometown',label='籍贯',value='颍川',text='华歆传称颍川荀攸；本传记字公达、荀彧从子，未在开篇细列其县籍。',refs=[HOME,NAME]),
+ dict(key='lifespan',label='生卒年',value='生年未详—214年',text='正文记随征孙权道薨；裴注《魏书》记建安十九年、年五十八，不由享年反推确切生日。',refs=[AGE,DEATH]),
+ dict(key='identity',label='主要身份',value='曹操军师、魏国中枢官员',text='早为汉黄门侍郎，后被曹操任为军师，魏国初建任尚书令。',refs=[EARLY,ADVISER,OFFICE]),
+ dict(key='office',label='最高官职',value='尚书令',text='先任军师，后转中军师，魏国初建为尚书令。',refs=[ADVISER,OFFICE]),
+ dict(key='title',label='最高爵位',value='陵树亭侯',text='平河北后受封，后来增邑合七百户。',refs=[TITLE,OFFICE]),
+ dict(key='posthumous',label='身后称号',value='敬侯',text='正始年间追谥敬侯，非去世当时即授谥。',refs=[POST]),
+ dict(key='deeds',label='代表事迹',items=['下邳急攻','白马分势','官渡筹谋','取冀建言','慎密自守'],text='主要贡献在战场决策、留守与进言，亲手斩杀颜良或统军烧粮都不是本传对他的记载。',refs=[URGE,BAIMA,GRAIN,CAMP,HEBEI,DENSE]),
+ ],
+ intro=[
+ dict(title='从汉臣到行军谋士',text='荀攸字公达，是荀彧从子。何进征召名士时，他入为黄门侍郎；董卓专政迁都后，参与谋刺董卓，事泄入狱而神色自若，董卓死后得免。他曾求任蜀郡太守，却因道路阻绝停驻荆州。曹操迎汉帝都许后征用荀攸，与之交谈而大为欣赏，任为军师，他此后的事业由朝廷谋议转向长期随军。',refs=[NAME,EARLY,PLOT,JING,WELCOME,JOIN,DELIGHT,ADVISER]),
+ dict(title='把握战机与敌军反应',text='198年征张绣，他判断张绣与刘表相依，宜缓攻待变；曹操不听而遭刘表救兵，后来承认失算。同年围吕布于下邳，士卒疲倦、曹操欲还，荀攸与郭嘉却认为应乘吕布气衰、陈宫谋未定继续急攻，最终水灌城破。两次判断并不矛盾：他看的是具体敌情与战机，缓急没有一成不变的答案。',refs=[ADVISER,RANG,REGRET,XIAPI,TIRED,Q('v010-b0036','攸與郭嘉説曰'),URGE,FLOOD],eventLinks=[dict(label='同年围吕布于下邳',eventId='xiapi')]),
+ dict(title='官渡与河北之谋',text='官渡之役前后，荀攸从救白马，又赞成用辎重诱乱追敌，建议派徐晃等截烧袁军运粮。当曹操决定奇袭淳于琼时，他与贾诩支持决机，自己与曹洪留守营垒；对张郃来降，也劝曹洪接纳。其后从讨袁氏兄弟于黎阳，主张乘内争先取河北，又随攻南皮。谋划、荐将与留守共同构成军师作用，不能合写成每场胜仗都由他亲自统兵。',refs=[BAIMA,BAIT,GRAIN,CAMP,ZHANG,LIYANG,HEBEI,NANPI]),
+ dict(title='慎密声望与未传之策',text='荀攸受封陵树亭侯，转中军师，魏国初建任尚书令。曹操赞其外似愚怯而内有智勇，曹丕问病甚至拜于床下。他与钟繇交好，本传称十二奇策唯钟繇知晓，撰集未成，世人遂不能尽闻。214年随征孙权道中去世，确切卒地未载；后来追谥敬侯。史料本身留下的空白，应保留为未传之事。',refs=[TITLE,OFFICE,CAO,PI,FRIEND,ZHONG,DEATH,AGE,POST]),
+ ],
+ careers=[
+ dict(id='han',when='何进秉政时，确年未载',title='入为黄门侍郎',office='黄门侍郎',text='何进征海内名士，荀攸到任后拜黄门侍郎。',refs=[EARLY]),
+ dict(id='prison',when='董卓迁都后至192年前后',title='谋刺董卓，事泄下狱',office='—',text='在董卓迁都长安后与郑泰、何颙等谋刺；被捕入狱，董卓死后免祸。',refs=[Q('v010-b0034','董卓之亂，關東兵起，卓徙都長安。'),PLOT]),
+ dict(id='jingzhou',when='董卓死后，确年未载',title='求蜀郡不达，停驻荆州',office='任城相未行，求蜀郡太守',text='弃官后复被辟举，任城相不赴；求任蜀郡太守，因道绝停荆州，未曾抵蜀郡。',refs=[Q('v010-b0034','遷任城相，不行。'),JING]),
+ dict(id='join',when='迎帝都许后，确年未载',title='受曹操征召，任军师',office='汝南太守、尚书，后军师',text='曹操书召，先征为汝南太守、入尚书，谈论后任军师。任官记录不等于曾在汝南驻留。',refs=[JOIN,ADVISER]),
+ dict(id='zhangxiu',when='198年',title='谏缓征张绣未被采纳',office='军师',text='随征张绣，认为急攻将促成刘表援救，宜缓待；曹操进至穰，军不利后认其言，另设奇兵获胜。',refs=[ADVISER,RANG,REGRET]),
+ dict(id='xiapi',when='198年',title='与郭嘉劝急攻下邳',office='—',text='随曹操自宛征吕布至下邳，围城疲敝时主张继续急攻，继而引沂泗灌城，吕布被擒。',refs=[XIAPI,URGE,FLOOD],eventIds=['xiapi']),
+ dict(id='baima',when='200年',title='救白马，诱敌败文丑',office='—',text='从救白马而献策；曹操西撤时，以辎重诱袁军争取，乱阵后出兵破敌，继而相拒官渡。',refs=[BAIMA,BAIT]),
+ dict(id='guandu',when='200年',title='截粮与留守官渡营垒',office='—',text='荐徐晃截粮，支持奇袭淳于琼，自己与曹洪留守；又释曹洪之疑，接纳来降的张郃。',refs=[GRAIN,CAMP,ZHANG],eventIds=['guandu']),
+ dict(id='yuan',when='202—203年',title='从讨黎阳，劝趁袁氏内争',office='—',text='建安七年从讨黎阳，次年袁谭求救时，反对先攻刘表，认为不可错过兄弟相争的机会。',refs=[LIYANG,HEBEI],eventIds=['yuan-succession']),
+ dict(id='nanpi',when='袁谭再叛后，确年未载',title='从攻南皮，获封陵树亭侯',office='陵树亭侯',text='袁谭再叛，荀攸随军在南皮斩谭；河北平后封陵树亭侯。',refs=[NANPI,TITLE]),
+ dict(id='office',when='207年及魏国初建时',title='增邑转中军师，后尚书令',office='中军师、尚书令',text='建安十二年论功，增邑合七百户、转中军师；魏国初建为尚书令；《彧别传》注引另记任令时亦推贤进士，未列具体所举名单。',refs=[Q('v010-b0038','十二年，下令大論功行封'),OFFICE,PROMOTE]),
+ dict(id='death',when='214年；追谥在正始中',title='从征道薨，后追谥敬侯',office='追谥敬侯',text='从征孙权途中去世，正文未列确切地点；《魏书》注引载年五十八。正始中追谥敬侯。',refs=[DEATH,AGE,POST]),
+ ],
+ trajectory=dict(atlasPerson='xunyou',phases=[
+ dict(id='han',title='汉廷与避乱',when='早年至投曹前，部分确年未载',span=(189,196),careers=['han','prison','jingzhou','join'],atlasStops=[0,1]),
+ dict(id='campaign',title='从征张吕',when='198年',span=(198,198),careers=['zhangxiu','xiapi'],atlasStops=[2,3]),
+ dict(id='guandu',title='官渡决策',when='200年',span=(200,200),careers=['baima','guandu'],atlasStops=[4,5]),
+ dict(id='hebei',title='平河北与显任',when='202—213年，部分确年未载',span=(202,213),careers=['yuan','nanpi','office'],atlasStops=[6,7]),
+ dict(id='late',title='从征终年',when='214年；追谥在正始中',span=(214,249),careers=['death'],atlasStops=[]),
+ ]),
+ records=[
+ dict(section='military',when='198年',title='依据敌情分别主张缓急',category='临阵谋议',careerRef='xiapi',text='对张绣主缓，对吕布主急，分别着眼援军关系与敌军气势；下邳与郭嘉共同进言，战果不独归一人。',refs=[RANG,REGRET,URGE,FLOOD]),
+ dict(section='military',when='200年',title='官渡期间荐将、决机与留守',category='军师协同',careerRef='guandu',text='参与白马筹划、截粮荐将和袭粮决策，曹操出击时本人留营，并劝曹洪接纳张郃，不将乌巢作其到达点。',refs=[BAIMA,GRAIN,CAMP,ZHANG]),
+ dict(section='military',when='202—203年起',title='把握袁氏分裂的机会',category='作战次序',careerRef='yuan',text='判断袁氏若合则难图，主张乘其乱，促使曹操回兵河北；其后随征南皮。',refs=[UNITE,HEBEI,NANPI]),
+ dict(section='setback',when='董卓迁都后，确年未载',title='谋刺事泄而下狱',category='计划受挫',careerRef='prison',text='刺董计划未成即泄露，何颙自杀，荀攸下狱；遇董卓死才得免，不能将此写为成功诛董。',refs=[PLOT]),
+ dict(section='setback',when='投曹前，确年未载',title='求任蜀郡未能抵达',category='道路阻隔',careerRef='jingzhou',text='求蜀郡太守后，道绝驻荆州。任命或意向与实际到任不同，地图不画入蜀。',refs=[JING]),
+ ],
+ sections={'civil':{'note':'荀攸本传详记从征与军中谋议，尚书令任内的制度与施政未详；《彧别传》仅记亦推贤进士，已在年表注明，不拆分成两项治绩。'}},
+ assessment=[dict(title='陈寿：算无遗策，通达权变',text='陈寿将荀攸、贾诩并评为算无遗策、通达权变，比于张良、陈平。此为总评，年表仍如实保留刺董事泄、道绝不达等受挫经历。',refs=[PING,PLOT,JING])],
+ relations=[
+ dict(category='君臣',name='曹操',personId='caocao',label='长期从行的军师',text='受其任军师，随征献策；曹操赞其内智内勇，道薨后为之流涕。',refs=[ADVISER,CAO,DEATH]),
+ dict(category='亲族',name='荀彧',personId='xun-yu',label='族中长辈与荐主',text='本传称荀彧从子；荀彧向曹操荐其代为军中筹谋。',refs=[NAME,Q('v010-b0006','彧言「荀攸、鍾繇」。')]),
+ dict(category='同僚',name='郭嘉',personId='guo-jia',label='共劝急攻下邳',text='二人在曹操意欲撤围时共劝急攻。',refs=[Q('v010-b0036','攸與郭嘉説曰'),URGE]),
+ dict(category='同僚',name='贾诩',personId='jia-xu',label='共赞官渡奇袭',text='在诸人怀疑许攸情报时，与贾诩支持曹操进击淳于琼。',refs=[CAMP]),
+ dict(category='旧识',name='钟繇',label='知其奇策的友人',text='钟繇与其交善，也是本传所称十二奇策的知情者；未成撰集造成材料失传。',refs=[ZHONG]),
+ dict(category='君臣',name='曹丕',personId='cao-pi',label='东宫礼敬',text='曹操令曹丕尽礼敬荀攸，后者患病时，曹丕拜于床下。',refs=[PI]),
+ ],
+ readingNotes=[
+ dict(title='十二奇策不能按故事补齐',text='本传说唯钟繇知其十二奇策，撰集未成，故世不能尽闻。裴松之又指出二人卒年相距十六年，对迟未成书表示惋惜；不将现存十二条经历擅定为十二奇策。',refs=[ZHONG,PEI]),
+ dict(title='身在官渡，未从袭粮',text='荀攸支持奇袭，但正文明确曹操留他与曹洪守营。决策功劳与实到足迹须分开，乌巢不列为其站点。',refs=[CAMP]),
+ dict(title='亲属称谓与卒年来源',text='本传称荀攸为荀彧从子，并不表示年龄必较小；《魏书》注引载建安十九年五十八岁。本页沿用正文亲属称谓，不凭辈分倒推年龄。',refs=[NAME,AGE]),
+ ],
+ glossary=[('中军师','本传所载军师升转后的官名，侧重军中谋议。'),('道薨','途中去世；本传未交代确切卒地。')],
+ sourceScope='以卷十荀攸本传正文、裴注及篇末评语为基础，交叉核对卷一武帝纪的下邳、白马、官渡与袁氏战事及卷十三华歆传所记颍川籍贯。十二奇策、卒年注引与确切卒地的缺载分别说明。本页不声称穷尽全书所有提及荀攸之处。',
+)

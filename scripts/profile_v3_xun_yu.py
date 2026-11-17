@@ -1,0 +1,103 @@
+"""荀彧：尚书中枢、奉迎汉帝与晚年异议。"""
+from profile_v3 import Q
+ORIGIN=Q('v010-b0002','荀彧字文若，潁川潁陰人也。')
+EARLY=Q('v010-b0004','永漢元年，舉孝廉，拜守宮令。')
+MIGRATE=Q('v010-b0004','彧獨將宗族至冀州。而袁紹已奪馥位，待彧以上賔之禮。')
+JOIN=Q('v010-b0004','時太祖爲奮武將軍，在東郡，初平二年，彧去紹從太祖。')
+JUDGE=Q('v010-b0004','彧度紹終不能成大事')
+YEAR=Q('v010-b0025','十七年，董昭等謂太祖宜進爵國公，九錫備物')
+SIMA=Q('v010-b0004','以爲司馬，時年二十九。')
+YAN=Q('v010-b0004','彧知邈爲亂，即勒兵設備，馳召東郡太守夏侯惇')
+GUO=Q('v010-b0004','貢見彧無懼意，謂鄄城未易攻，遂引兵去。')
+THREE=Q('v010-b0004','又與程昱計，使説范、東阿，卒全三城，以待太祖。')
+BASE=Q('v010-b0005','將軍本以兖州首事，平山東之難，百姓無不歸心恱服。')
+STAY=Q('v010-b0005','太祖乃止。大收麥，復與布戰，分兵平諸縣。布敗走，兖州遂平。')
+EMPEROR=Q('v010-b0006','太祖遂至洛陽，奉迎天子都許。天子拜太祖大將軍，進彧爲漢侍中，守尚書令。')
+CENTRE=Q('v010-b0006','常居中持重，太祖雖征伐在外，軍國事皆與彧籌焉。')
+TALENT=Q('v010-b0006','彧言「荀攸、鍾繇」。先是，彧言策謀士，進戲志才。志才卒，又進郭嘉。')
+LIMIT=Q('v010-b0006','唯嚴象爲楊州，韋康爲涼州，後敗亡。')
+OFFICIAL=Q('v010-b0006-n01','官者所以表才也，若如來言，衆人其謂我何邪！','《典略》')
+WEST=Q('v010-b0015','鍾繇可屬以西事。則公無憂矣。')
+GUANDU=Q('v010-b0018','太祖軍糧方盡，書與彧，議欲還許以引紹。')
+HOLD=Q('v010-b0018','情見勢竭，必將有變，此用奇之時，不可失也。')
+NORTH=Q('v010-b0019','今紹敗，其衆離心，宜乘其困，遂定之；而背兖、豫，遠師江、漢，若紹收其餘燼，承虚以出人後，則公事去矣。')
+TITLE=Q('v010-b0020','八年，太祖録彧前後功，表封彧爲萬歳亭侯。')
+NINE=Q('v010-b0021','天下大定，乃議古制，此社稷長久之利也。')
+NINE_END=Q('v010-b0021','太祖遂寢九州議。')
+FAMILY=Q('v010-b0023','太祖以女妻彧長子惲，後稱安陽公主。')
+FRUGAL=Q('v010-b0023','彧及攸並貴重，皆謙冲節儉，祿賜散之宗族知舊，家無餘財。')
+ENLARGE=Q('v010-b0023','十二年，復增彧邑千戸，合二千戸。')
+JING=Q('v010-b0024','可顯出宛、葉而間行輕進，以掩其不意。')
+DISSENT=Q('v010-b0025','彧以爲太祖本興義兵以匡朝寧國，秉忠貞之誠，守退讓之實；君子愛人以德，不宜如此。')
+HURT=Q('v010-b0025','太祖由是心不能平。')
+QIAO=Q('v010-b0025','會征孫權，表請彧勞軍于譙，因輒留彧，以侍中光祿大夫持節，參丞相軍事。')
+DEATH=Q('v010-b0025','太祖軍至濡須，彧疾留壽春，以憂薨，時年五十。諡曰敬侯。')
+POISON=Q('v010-b0025-n01','《魏氏春秋》曰：太祖饋彧食，發之乃空器也，於是飲藥而卒。','《魏氏春秋》')
+BOOKS=Q('v010-b0025-n01','宜集天下大才通儒，考論六經，刊定傳記，存古今之學','《彧别传》')
+REFUTE=Q('v010-b0025-n01','袁暐虚罔之類，此最爲甚也。','《献帝春秋》；裴松之案')
+SON=Q('v010-b0027','子惲，嗣侯，官至虎賁中郎將。')
+PING=Q('v010-b0049','評曰：荀彧淸秀通雅，有王佐之風，然機鑒先識，未能充其志也。')
+PEI=Q('v010-b0049-n01','劉宗延二紀之祚，豈非荀生之本圖，仁恕之遠致乎？','裴松之案')
+PROFILE=dict(id='xun-yu',tier='B',syncLifespan=True,reading=['010'],
+ lead='以汉侍中、尚书令长期居中筹划的荀彧，既在兖州危局保全根本，也主张奉迎汉帝、坚持官渡和继续经营河北；晚年反对曹操进爵国公与九锡，转赴劳军，病留寿春而卒。',role='汉尚书令、曹操核心谋臣',
+ facts=[
+ dict(key='hometown',label='籍贯',value='颍川颍阴',text='字文若，颍川颍阴人。籍贯不另作出生旅行站。',refs=[ORIGIN]),
+ dict(key='lifespan',label='生卒年',value='生年未详—212年',text='本传记建安十七年病留寿春，以忧薨，年五十；享年不反推精确出生年。',refs=[YEAR,DEATH,DISSENT]),
+ dict(key='identity',label='主要身份',value='汉廷中枢重臣、曹操谋臣',text='以汉侍中、守尚书令居中参与军国筹划，卒在曹操为魏公之前。',refs=[EMPEROR,CENTRE,DEATH]),
+ dict(key='office',label='最高官职',value='汉侍中、守尚书令',text='长期任尚书令；末年转以侍中光禄大夫持节，参丞相军事。',refs=[EMPEROR,QIAO]),
+ dict(key='title',label='最高爵位',value='万岁亭侯',text='建安八年封万岁亭侯，十二年增邑至二千户。',refs=[TITLE,ENLARGE]),
+ dict(key='posthumous',label='身后称号',value='敬侯',text='本传记谥敬侯；荀攸后来也谥敬侯，二人不能因同谥混写。',refs=[DEATH]),
+ dict(key='deeds',label='代表事迹',items=['保全三城','奉迎汉帝','官渡持守','举荐人才','谏阻九锡'],text='守城、朝廷筹划与人才举荐并行，其军事功劳主要体现为决策与留守。',refs=[THREE,EMPEROR,HOLD,TALENT,DISSENT]),
+ ],
+ intro=[
+ dict(title='择主与保全根本',text='荀彧字文若，颍川颍阴人，汉末举孝廉、任守宫令。董卓乱后，他率宗族迁冀州，受袁绍上宾之礼，却判断袁绍不能成大事，191年转投在东郡的曹操。194年曹操出征陶谦，兖州叛迎吕布，荀彧识破借粮之辞，设防并召夏侯惇，又会见郭贡使其退兵，与程昱保全鄄城等三城，为曹操保存归路。',refs=[ORIGIN,EARLY,MIGRATE,JUDGE,JOIN,YAN,GUO,THREE],eventLinks=[dict(label='194年曹操出征陶谦',eventId='yanzhou-struggle')]),
+ dict(title='居中筹划与荐贤',text='此后他劝曹操先稳住兖州，反对根本未固便专取徐州。196年又赞成奉迎汉献帝，任汉侍中、守尚书令；曹操出征在外，军国事务仍与他商议。他推荐荀攸、钟繇、戏志才、郭嘉等，人才判断是其作用的重要一面。裴注《典略》记他不肯为了亲族薄才而授议郎，显示荐举并非只按亲疏。',refs=[BASE,STAY,EMPEROR,CENTRE,TALENT,OFFICIAL]),
+ dict(title='从官渡到河北经营',text='官渡相持时，曹操因粮少想退许，荀彧通过书信劝其坚持，等待敌方势竭生变。袁绍败后，他又劝先定河北，不急于远征刘表；曹操取邺后，他阻止骤改九州制度，担心分夺各方辖境引起恐慌。这些建议围绕根据地、作战次序与政治安定展开，不能把前线斩将、攻城写成他亲自统军完成的战功。',refs=[GUANDU,HOLD,NORTH,NINE,NINE_END]),
+ dict(title='晚年分歧与结局',text='荀彧封万岁亭侯，仍保持谦冲节俭。212年董昭等拟议曹操进爵国公、备九锡，他认为不合匡朝宁国与退让之实，曹操由此不满。出征孙权时，荀彧奉命到谯劳军而被留在军中，后来病留寿春，以忧去世，谥敬侯。正文如此记载；空器、服药的说法来自裴注《魏氏春秋》，不能替代正文成为无争议的死因。',refs=[TITLE,FRUGAL,DISSENT,HURT,QIAO,DEATH,POISON]),
+ ],
+ careers=[
+ dict(id='early',when='189年前后，去官确年未载',title='入仕而避董卓之乱',office='守宫令，除亢父令后弃官',text='永汉元年举孝廉、拜守宫令；董卓乱后求出补吏，除亢父令，随即弃官归。',refs=[EARLY,Q('v010-b0004','除亢父令，遂棄官歸')]),
+ dict(id='join',when='191年，迁冀州确年未载',title='率宗族迁冀州，转投曹操',office='司马',text='先率宗族至冀州，受袁绍上宾礼；初平二年离绍投在东郡的曹操，任司马。',refs=[MIGRATE,JOIN,SIMA]),
+ dict(id='yanzhou',when='194年',title='留守鄄城，保全三城',office='司马',text='识破张邈的欺辞，召夏侯惇定内乱；说退郭贡，与程昱计保范、东阿及鄄城。',refs=[YAN,GUO,THREE],eventIds=['yanzhou-struggle']),
+ dict(id='base',when='195年',title='劝先平兖州，再图徐州',office='—',text='曹操欲先取徐州，荀彧陈说根据地不可弃，劝收麦储粮、先破吕布；曹操采纳。',refs=[BASE,STAY]),
+ dict(id='emperor',when='196年',title='倡奉迎，居尚书中枢',office='汉侍中、守尚书令',text='支持奉迎天子都许，此后居中持重，与外征的曹操共筹军国事务，并举荐多位谋臣。',refs=[EMPEROR,CENTRE,TALENT],eventIds=['welcome-emperor']),
+ dict(id='west',when='官渡战前，确年未载',title='荐钟繇安定关中',office='—',text='主张联络关中诸将、使其自保，推荐钟繇经办西事；是建言与人事安排，不是本人西行。',refs=[WEST]),
+ dict(id='guandu',when='200年',title='书劝坚持官渡',office='—',text='曹操军粮将尽，来书议退许；荀彧以相持已久、敌势将变劝止，曹操留军后用奇获胜。',refs=[GUANDU,HOLD,Q('v010-b0018','太祖乃住。遂以奇兵襲紹別屯')],eventIds=['guandu']),
+ dict(id='north',when='201年',title='阻止南征，劝续定河北',office='—',text='反对在袁绍新败时弃兖豫远征刘表，担心袁绍收余众袭后；曹操改次河上。',refs=[NORTH,Q('v010-b0019','太祖復次于河上。')]),
+ dict(id='title',when='203—207年',title='封侯与谏止骤改州制',office='万岁亭侯，增邑二千户',text='203年封侯；204年取邺后反对骤扩冀州范围，九州议遂寝；207年增邑，曹操又以女妻其长子荀恽。',refs=[TITLE,NINE,NINE_END,ENLARGE,FAMILY]),
+ dict(id='jing',when='南征刘表前，确年未载',title='建言显出宛叶、轻军掩进',office='—',text='建议明出宛叶而间行轻进以出其不意；曹操依计进军，刘表死后刘琮降。只记谋划，不据此把宛叶列为荀彧行迹。',refs=[JING,Q('v010-b0024','表子琮以州逆降。')]),
+ dict(id='dissent',when='212年',title='反对国公九锡，赴谯劳军',office='侍中光禄大夫，持节参丞相军事',text='反对进爵国公与九锡，曹操不满。奉表请赴谯劳军，随即留军任参丞相军事。',refs=[DISSENT,HURT,QIAO]),
+ dict(id='death',when='212年',title='病留寿春，以忧而卒',office='谥敬侯，子荀恽嗣',text='曹操军至濡须，荀彧患病留寿春，年五十而卒；正文记以忧薨，子荀恽嗣侯。',refs=[DEATH,SON]),
+ ],
+ trajectory=dict(atlasPerson='xunyu',phases=[
+ dict(id='early',title='避乱择主',when='早年至191年',span=(189,191),careers=['early','join'],atlasStops=[0,1]),
+ dict(id='base',title='守城与居中',when='194—196年',span=(194,196),careers=['yanzhou','base','emperor'],atlasStops=[2,3]),
+ dict(id='strategy',title='经营北方',when='官渡前至南征前，部分确年未载',span=(197,208),careers=['west','guandu','north','title','jing'],atlasStops=[]),
+ dict(id='late',title='异议与终年',when='212年',span=(212,212),careers=['dissent','death'],atlasStops=[4,5]),
+ ]),
+ records=[
+ dict(section='civil',when='196年起',title='奉迎与中枢协调',category='朝廷筹划',careerRef='emperor',text='奉迎汉帝与居中参与军国之事相连，政治秩序与曹操军事经营共同展开，不能只概括为一次迁都建议。',refs=[EMPEROR,CENTRE]),
+ dict(section='civil',when='居中期间，确年未载',title='荐人兼顾才用',category='人才举荐',careerRef='emperor',text='荐荀攸、钟繇等，并进戏志才、郭嘉；《典略》记其拒以亲缘替薄才求官。正文同时保留严象、韦康败亡的例外。',refs=[TALENT,OFFICIAL,LIMIT]),
+ dict(section='civil',when='204年',title='缓议九州以安人心',category='制度节奏',careerRef='title',text='反对取邺后立即大幅扩张冀州所辖，主张先安河北，再议古制，曹操停止九州之议。',refs=[NINE,NINE_END]),
+ dict(section='military',when='194—195年',title='保全三城与作战根本',category='留守筹防',careerRef='yanzhou',text='设防、请援、说退郭贡，并与程昱保全三城，继而劝先平兖州。这是留守与战略作用，非亲临濮阳斩将。',refs=[YAN,GUO,THREE,BASE]),
+ dict(section='military',when='200—201年',title='坚持相持、续定河北',category='战略建言',careerRef='guandu',text='在粮尽时劝留官渡，胜后又反对轻弃根本南征，帮助保持连续的河北经营。',refs=[GUANDU,HOLD,NORTH]),
+ dict(section='setback',when='212年',title='国公九锡引发分歧',category='政治裂痕',careerRef='dissent',text='以匡朝宁国与守退让之实反对提议，曹操心不能平；此后由居中转为劳军留军，终病留寿春。',refs=[DISSENT,HURT,QIAO,DEATH]),
+ dict(section='setback',when='荐举期间，确年未载',title='荐举并非毫无例外',category='任用限制',careerRef='emperor',text='正文在称荐举多称职后，仍特记严象、韦康后来败亡。没有进一步材料时，不把败亡全归荀彧误识，也不删去这个限制。',refs=[LIMIT]),
+ ],
+ assessment=[dict(title='陈寿：王佐之风，未充其志',text='陈寿肯定荀彧清秀通雅、有王佐风度，又认为其先识未能实现志向。裴松之则以延续汉祚、晚年立异为辩护，两种评价各有着眼点。',refs=[PING,PEI])],
+ relations=[
+ dict(category='君臣',name='曹操',personId='caocao',label='长期共谋而晚年异议',text='自191年相从，长期共筹军国；晚年在国公九锡之议上分歧。',refs=[JOIN,CENTRE,DISSENT,HURT]),
+ dict(category='旧主',name='袁绍',personId='yuanshao',label='受上宾礼而离去',text='率宗族到冀州后受礼遇，随后离绍从曹操。',refs=[MIGRATE,JOIN]),
+ dict(category='同僚',name='程昱',personId='cheng-yu',label='共保兖州三城',text='在兖州叛乱时与程昱计议，保全鄄城、范、东阿。',refs=[THREE]),
+ dict(category='同僚',name='荀攸',personId='xun-you',label='荐为军中谋主',text='推荐荀攸为曹操谋事；二人都以谦冲节俭著称。',refs=[TALENT,FRUGAL]),
+ dict(category='同僚',name='郭嘉',personId='guo-jia',label='继戏志才而荐',text='戏志才卒后向曹操推荐郭嘉。',refs=[TALENT]),
+ dict(category='亲族',name='荀恽',label='嗣爵并与曹氏联姻',text='长子荀恽娶曹操女，后嗣侯、官至虎贲中郎将。',refs=[FAMILY,SON]),
+ ],
+ readingNotes=[
+ dict(title='正文与空器服药说',text='正文写病留寿春、以忧薨；《魏氏春秋》注引另说曹操送来空器后荀彧服药。两层并列，不用后者替换正文，也不据空器故事还原未经证实的对话与动机。',refs=[DEATH,POISON]),
+ dict(title='伏后之事受到裴松之驳斥',text='裴注所引《献帝春秋》将荀彧之死联于伏后事件，裴松之明确斥为虚妄。此说不进入确定年表，地图也不据其中求使到邺的说法新增一站。',refs=[REFUTE]),
+ dict(title='军事建议不等于个人行程',text='官渡材料明确为曹操来书商议；宛叶是荀彧所建议的进军方向。相较之下，谯劳军与病留寿春才有本人到场依据，地图据此区分。',refs=[GUANDU,JING,QIAO,DEATH]),
+ ],
+ glossary=[('守尚书令','暂摄尚书令职务，参与朝廷中枢事务。'),('九锡','表示殊勋的九项礼物，此处关系到曹操地位的进一步提升。')],
+ sourceScope='以卷十荀彧本传正文、裴注及篇末陈寿评语为基础，交叉核对卷一武帝纪的兖州、奉迎与官渡记载。空器服药、伏后故事与裴松之辨析分层保留，荐举和谋划不扩写为本人统兵或行程。本页不声称穷尽全书所有提及荀彧之处。',
+)

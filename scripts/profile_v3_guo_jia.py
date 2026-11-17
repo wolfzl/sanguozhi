@@ -1,0 +1,92 @@
+"""郭嘉：随军决策；十胜、刘备异说与身后追叹分层。"""
+from profile_v3 import Q
+ORIGIN=Q('v014-b0014','郭嘉字奉孝，潁川陽翟人也。')
+YUAN=Q('v014-b0014','多端寡要，好謀無決，欲與共濟天下大難，定霸王之業，難矣！')
+LEAVE=Q('v014-b0014','於是遂去之。')
+JOIN=Q('v014-b0015','彧薦嘉。召見，論天下事。')
+OFFICE=Q('v014-b0015','表為司空軍祭酒。')
+XIAPI=Q('v014-b0018','時士卒疲倦，太祖欲引軍還，嘉說太祖急攻之，遂禽布。')
+TOGETHER=Q('v010-b0036','攸與郭嘉説曰')
+GUANDU=Q('v014-b0020','從破袁紹，紹死，又從討譚、尚於黎陽，連戰數克。')
+WAIT=Q('v014-b0020','急之則相持，緩之而後爭心生。不如南向荊州若征劉表者，以待其變；變成而後擊之，可一舉定也。')
+XIPING=Q('v014-b0020','軍至西平，譚、尚果爭冀州。')
+YE=Q('v014-b0020','太祖還救之，遂從定鄴。又從攻譚於南皮，冀州平。封嘉洧陽亭侯。')
+RECRUIT=Q('v014-b0020-n01','太祖多辟召青、冀、幽、并知名之士，漸臣使之，以為省事掾屬。皆嘉之謀也。','《傅子》')
+NORTH=Q('v014-b0022','因其無備，卒然擊之，可破滅也。')
+BACK=Q('v014-b0022','表，坐談客耳，自知才不足以御備，重任之則恐不能制，輕任之則備不為用')
+YI=Q('v014-b0023','至易，嘉言曰：「兵貴神速。')
+QUICK=Q('v014-b0023','不如留輜重，輕兵兼道以出，掩其不意。')
+WIN=Q('v014-b0023','大破之，斬蹋頓及名王已下。尚及兄熙走遼東。')
+DEATH=Q('v014-b0024','年三十八，自柳城還，疾篤，太祖問疾者交錯。及薨，臨其喪，哀甚')
+TRUST=Q('v014-b0024','唯奉孝為能知孤意。')
+AFTER=Q('v014-b0024','可增邑八百戶，並前千戶。')
+POST=Q('v014-b0024','諡曰貞侯。子奕嗣。')
+CHEN=Q('v014-b0025','初，陳群非嘉不治行檢，數廷訴嘉，嘉意自若。太祖愈益重之，然以群能持正，亦悅焉。')
+REGRET=Q('v014-b0025','郭奉孝在，不使孤至此。')
+SUN=Q('v014-b0019','以吾觀之，必死於匹夫之手。')
+SUN_PEI=Q('v014-b0019-n01','今正以襲許年死，此蓋事之偶合。','《傅子》；裴松之案')
+TEN=Q('v014-b0016','嘉竊料之，紹有十敗，公有十勝，雖兵強，無能為也。','《傅子》')
+LIU_WEI=Q('v014-b0018-n01','今備有英雄名，以窮歸己而害之，是以害賢為名','《魏书》')
+LIU_FU=Q('v014-b0018-n01','宜早為之所。','《傅子》')
+LIU_WARNING=Q('v001-b0044','程昱、郭嘉聞公遣備，言於公曰：「劉備不可縱。」公悔，追之不及。')
+PING=Q('v014-b0103','程昱、郭嘉、董昭、劉曄、蔣濟才策謀略，世之奇士，雖清治德業，殊於荀攸，而籌畫所料，是其倫也。')
+PROFILE=dict(id='guo-jia',tier='B',reading=['014'],
+ lead='郭嘉由荀彧推荐为曹操军祭酒，在下邳主急攻、河北主缓敌，北征乌丸又劝轻兵速进。他的功绩集中于随军谋议，柳城还军后早卒；十胜论与刘备处置异说须按裴注来源辨读。',role='曹操随军谋臣、军祭酒',
+ facts=[
+ dict(key='hometown',label='籍贯',value='颍川阳翟',text='字奉孝，颍川阳翟人，籍贯不作为旅行起点。',refs=[ORIGIN]),
+ dict(key='lifespan',label='生卒年',value='生年未详，北征还军后卒',text='本传记自柳城还、疾笃而卒，年三十八；本条不由享年倒推出生年。',refs=[DEATH]),
+ dict(key='identity',label='主要身份',value='曹操军中谋臣',text='荀彧荐其接续戏志才的筹画之任，官为司空军祭酒。',refs=[JOIN,OFFICE]),
+ dict(key='office',label='最高官职',value='司空军祭酒',text='本传明确记此官职，并在身后表文中仍称军祭酒。',refs=[OFFICE]),
+ dict(key='title',label='最高爵位',value='洧阳亭侯',text='河北平后受封；身后表请增邑，非另一次生前任官。',refs=[YE,AFTER]),
+ dict(key='posthumous',label='身后称号',value='贞侯',text='本传记谥贞侯，子郭奕嗣爵。',refs=[POST]),
+ dict(key='deeds',label='代表事迹',items=['下邳急攻','缓取袁氏','轻兵北征','谋议军机'],text='随军判断与建言是主线，不以谋功冒充亲率先锋、斩蹋顿的战功。',refs=[XIAPI,WAIT,QUICK,WIN]),
+ ],
+ intro=[
+ dict(title='先量其主，再择去就',text='郭嘉字奉孝，颍川阳翟人。早年北见袁绍，认为袁绍徒有礼贤之名，却多端寡要、好谋无决，遂离去。戏志才死后，荀彧向曹操推荐郭嘉，二人谈天下事，各以为遇到可以共事之人，曹操表其为司空军祭酒。这里的择主判断不是后世神机形象的起点，而是本传具体记录的一次去就选择。',refs=[ORIGIN,YUAN,LEAVE,JOIN,OFFICE]),
+ dict(title='下邳之急与河北之缓',text='围下邳时，曹操因士卒疲敝想撤，郭嘉与荀攸认为吕布锐气已衰，主张继续急攻，终于擒吕布。官渡随军破袁绍后，他又从讨袁谭、袁尚于黎阳，却反对一味乘胜追逼，认为兄弟受到共同压力便会相救，稍缓才会生争。他建议转向荆州等待变化，后随军定邺、攻南皮，缓急选择始终以敌方关系为依据。',refs=[XIAPI,TOGETHER,GUANDU,WAIT,XIPING,YE],eventLinks=[dict(label='围下邳时',eventId='xiapi')]),
+ dict(title='北征以速度乘无备',text='北征乌丸前，诸人担心刘表让刘备袭许，郭嘉判断刘表不能充分任用刘备，又指出袁氏尚存、乌丸可资利用，不宜放任北方隐患。军到易，他进一步建议减去辎重，以轻军兼道掩袭。曹操采纳而获胜，郭嘉的作用是推动判断和行军方案，不宜把张辽等前锋将领的临阵行动都移给他。',refs=[NORTH,BACK,YI,QUICK,WIN]),
+ dict(title='早卒与评价的分寸',text='郭嘉从柳城还军后病笃，三十八岁去世，曹操临丧深哀，追增其家食邑，谥贞侯。本传又记陈群数次当廷指责他不治行检，曹操重郭嘉，也认可陈群持正。陈寿把他列为才策奇士，却与荀攸的清治德业作区分。曹操后来败归的追叹可以见其惜才，不能证明郭嘉若在便必能改写所有后续战局。',refs=[DEATH,AFTER,POST,CHEN,PING,REGRET]),
+ ],
+ careers=[
+ dict(id='yuan',when='早年，确年未载',title='见袁绍而离去',office='—',text='向辛评、郭图指出袁绍好谋无决，认为难共成天下事业，遂离去；见绍的具体驻地未载。',refs=[YUAN,LEAVE]),
+ dict(id='join',when='戏志才卒后，确年未载',title='受荀彧荐，任军祭酒',office='司空军祭酒',text='荀彧荐见，与曹操论天下事后受表军祭酒。初见的地点不据曹操其他行程补定。',refs=[JOIN,OFFICE]),
+ dict(id='xiapi',when='198年',title='与荀攸劝急攻下邳',office='—',text='士卒疲倦时劝继续急攻，继而擒吕布；荀攸传明确二人共同进言。',refs=[XIAPI,TOGETHER,Q('v010-b0036','至下邳')],eventIds=['xiapi']),
+ dict(id='liubei',when='199年',title='反对放刘备领兵出行',office='—',text='与程昱听闻曹操遣刘备后进谏，曹操追之不及。此事与早先是否应杀刘备的注引异说分开。',refs=[LIU_WARNING]),
+ dict(id='guandu',when='200年',title='随军破袁绍，料孙策轻而无备',office='—',text='本传记从破袁绍，并载其判断孙策可能死于刺客；后一判断的应验时点，裴松之认为有偶合因素。',refs=[GUANDU,SUN,SUN_PEI],eventIds=['guandu']),
+ dict(id='yuan-split',when='202—203年',title='从讨黎阳，劝缓攻以待内争',office='—',text='袁绍死后从讨袁氏兄弟，主张稍缓压力，南向荆州等待兄弟相争，军到西平而内争果起。',refs=[GUANDU,WAIT,XIPING],eventIds=['yuan-succession']),
+ dict(id='hebei',when='定邺至平河北时，确年未载',title='从定邺、攻南皮，受封',office='洧阳亭侯',text='随军定邺，又从攻南皮，河北平而受封；《傅子》注引另将召用河北名士的建议归于郭嘉。',refs=[YE,RECRUIT]),
+ dict(id='north',when='207年，北征乌丸',title='支持北征，行至易而劝轻军',office='—',text='分析北方袁氏与乌丸的威胁，认为刘表不能任刘备袭后；到易再劝减辎重、轻兵兼道进军。',refs=[NORTH,BACK,YI,QUICK],eventIds=['wuhuan']),
+ dict(id='death',when='北征还军后，确切卒地未载',title='柳城还军，病笃而卒',office='谥贞侯，子郭奕嗣',text='自柳城还，病重，年三十八而卒。曹操临丧哀悼并表请追增食邑，子郭奕嗣爵。',refs=[DEATH,AFTER,POST]),
+ dict(id='after',when='征荆州还军后，身后追叹',title='曹操在败归时追念郭嘉',office='—',text='曹操在巴丘遇疫烧船后，追叹郭奉孝若在不至于此；这是身后评价，非郭嘉到巴丘的证据。',refs=[REGRET,Q('v014-b0025','後太祖征荊州還，於巴丘遇疾疫，燒船')]),
+ ],
+ trajectory=dict(atlasPerson='guojia',phases=[
+ dict(id='early',title='择主入幕',when='早年至任军祭酒，确年未载',span=(190,197),careers=['yuan','join'],atlasStops=[]),
+ dict(id='campaign',title='下邳与官渡',when='198—200年',span=(198,200),careers=['xiapi','liubei','guandu'],atlasStops=[0,1]),
+ dict(id='hebei',title='缓敌定河北',when='202年至平河北，部分确年未载',span=(202,205),careers=['yuan-split','hebei'],atlasStops=[2,3,4,5]),
+ dict(id='north',title='北征与早卒',when='207年北征及其后',span=(207,209),careers=['north','death','after'],atlasStops=[6,7]),
+ ]),
+ records=[
+ dict(section='military',when='198年及袁绍死后',title='因敌情决定进退缓急',category='谋议战机',careerRef='yuan-split',text='下邳劝急攻，袁氏相争时劝缓逼，二者着眼点分别为敌气已衰与内部矛盾。',refs=[XIAPI,WAIT]),
+ dict(section='military',when='207年',title='支持北征与轻兵急进',category='行军谋划',careerRef='north',text='先解除后方顾虑，再劝轻军兼道突袭，属于决策与行动方案；不写成郭嘉亲斩蹋顿。',refs=[BACK,QUICK,WIN]),
+ dict(section='setback',when='随曹操期间，确年未载',title='行检受陈群指责',category='行为争议',careerRef='join',text='陈群屡次当廷指责其不治行检，郭嘉自若；曹操同时重其才、悦陈群之持正，本传并未取消这项批评。',refs=[CHEN]),
+ dict(section='setback',when='北征还军后',title='早卒使事业未终',category='生命与事业',careerRef='death',text='三十八岁疾笃而卒，曹操本欲以后事相属的愿望落空。这里是生涯的中断，不是把疾病说成战略过失。',refs=[DEATH,Q('v014-b0024','欲以後事屬之，而中年夭折，命也夫！')]),
+ ],
+ sections={'civil':{'note':'郭嘉本传集中记军中筹画，未列独立行政措施；《傅子》只有召用河北名士一项建议，已在年表分层记明，不据军祭酒官名补造治绩。'}},
+ assessment=[dict(title='陈寿：才策奇士，德业有别',text='陈寿肯定郭嘉等人的筹画与荀攸同伦，同时指出清治德业不同。评价并不只谈智谋，也保留人格与行为层面的分寸。',refs=[PING,CHEN])],
+ relations=[
+ dict(category='君臣',name='曹操',personId='caocao',label='知其意的随军谋臣',text='表为军祭酒，常共同谋议，早卒后深切追悼。',refs=[OFFICE,TRUST,DEATH]),
+ dict(category='同僚',name='荀彧',personId='xun-yu',label='推荐接续戏志才',text='戏志才死后，荀彧向曹操推荐郭嘉。',refs=[JOIN]),
+ dict(category='同僚',name='荀攸',personId='xun-you',label='共劝下邳急攻',text='围吕布时同进急攻之议。',refs=[TOGETHER,XIAPI]),
+ dict(category='同僚',name='程昱',personId='cheng-yu',label='共同反对纵刘备',text='在曹操遣刘备后共同进谏，认为刘备不可纵。',refs=[LIU_WARNING]),
+ dict(category='同僚',name='陈群',label='行检的批评者',text='数廷诉郭嘉不治行检；曹操既重郭嘉，也悦陈群持正。',refs=[CHEN]),
+ dict(category='旧主',name='袁绍',personId='yuanshao',label='先见而后离去',text='评其好谋无决，离去后转投曹操。',refs=[YUAN,LEAVE,JOIN]),
+ ],
+ readingNotes=[
+ dict(title='十胜论属于傅子注引',text='十胜十败论以裴注《傅子》引文开始，跨及其后分段，不是陈寿正文中独立记下的一番谈话。它与荀彧四胜论各有文本层次，不互相替换。',refs=[TEN]),
+ dict(title='刘备处置有相反注引',text='《魏书》记郭嘉主张不可因害贤而失人望，《傅子》却记他劝早为之所，裴松之明确指出相反。正文可确证的是后来郭嘉与程昱反对纵刘备，不倒推为早先必主杀。',refs=[LIU_WEI,LIU_FU,LIU_WARNING]),
+ dict(title='料孙策不等于预知具体死期',text='正文记郭嘉料孙策轻而无备，终死匹夫之手。裴松之认可见事，却认为恰在欲袭许当年发生是偶合，不能写为能预知年日的神断。',refs=[SUN,SUN_PEI]),
+ dict(title='追叹不能证明反事实战局',text='曹操败归时想起郭嘉，反映失去谋臣的遗憾；这句话不能证明若郭嘉尚在，疾病、风势与敌军行动就必会改变。巴丘也不列为郭嘉生前行迹。',refs=[REGRET,DEATH]),
+ ],
+ glossary=[('军祭酒','曹操军中参与谋议的职官。'),('兼道','加速行军，以非常规日程迅速前进。')],
+ sourceScope='以卷十四郭嘉本传正文、裴注与篇末陈寿评语为基础，交叉核对卷一武帝纪的刘备、下邳和北征记载，以及卷十荀攸传的共同谋议。十胜论、刘备处置异说及裴松之对料孙策的辨析分别标出。本页不声称穷尽全书所有提及郭嘉之处。',
+)

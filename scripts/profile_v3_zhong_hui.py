@@ -1,0 +1,104 @@
+"""钟会：机密谋议、伐蜀与成都兵变分层叙述。"""
+from profile_v3 import Q
+ORIGIN=Q('v028-b0053','鍾會字士季，潁川長社人，太傅繇小子也。')
+STUDY=Q('v028-b0053','及壯，有才數技藝，而博學精練名理，以夜續晝，由是獲聲譽。')
+EARLY=Q('v028-b0054','正始中，以為秘書郎，遷尚書中書侍郎。高貴鄉公即尊位，賜爵關內侯。')
+FOLLOW=Q('v028-b0055','毌丘儉作亂，大將軍司馬景王東征，會從，典知密事')
+XUCHANG=Q('v028-b0055','景王薨於許昌，文王總統六軍，會謀謨帷幄。')
+LUO=Q('v028-b0055','會與嘏謀，使嘏表上，輒與衛將軍俱發，還到雒水南屯住。')
+PROMOTE=Q('v028-b0055','會遷黃門侍郎，封東武亭侯，邑三百戶。')
+SHOUCHUN=Q('v028-b0056','及誕反，車駕住項，文王至壽春，會復從行。')
+RUMOR=Q('v028-b0057','說吳中怒懌等不能拔壽春，欲盡誅諸將家，故逃來歸命。')
+NEXTDAY=Q('v028-b0063','其明日，悉請護軍、郡守、牙門騎督以上及蜀之故官')
+REPLACE=Q('v028-b0063','更使所親信代領諸軍。')
+UPRISING=Q('v028-b0064','十八日日中，烈軍兵與烈兒雷鼓出門，諸軍兵不期皆鼓譟出')
+FORGE=Q('v028-b0057','會建策，密為輝、儀作書')
+QUAN=Q('v028-b0057','懌等恐懼，遂將所領開東城門出降')
+SECRETARY=Q('v028-b0057','以中郎在大將軍府管記室事，為腹心之任。')
+MARQUIS=Q('v028-b0057','以討諸葛誕功，進爵陳侯，屢讓不受。')
+SILI=Q('v028-b0057','遷司隸校尉。雖在外司，時政損益，當世與奪，無不綜典。嵇康等見誅，皆會謀也。')
+WEST=Q('v028-b0058','景元三年冬，以會為鎮西將軍、假節都督關中諸軍事。')
+INVASION=Q('v028-b0058','會統十餘萬眾，分從斜谷、駱谷入。')
+XUYI=Q('v028-b0058','會在後行，而橋穿，馬足陷，於是斬儀。')
+YANGAN=Q('v028-b0058','會徑過，西出陽安口，遣人祭諸葛亮之墓。')
+JIAN=Q('v028-b0060','軍悉屬會，進攻劍閣，不克，引退')
+XU=Q('v028-b0060','會欲專軍勢，密白緒畏懦不進，檻車徵還。')
+FU=Q('v028-b0060','會乃進軍至涪')
+SURRENDER=Q('v028-b0060','便從東道詣會降。')
+DISCIPLINE=Q('v028-b0062','會於是禁檢士眾不得鈔略，虛己誘納，以接蜀之群司，與維情好歡甚。')
+SITU=Q('v028-b0062','其以會為司徒，進封縣侯，增邑萬戶。')
+UNRECEIVED=Q('v028-b0065','初，艾為太尉，會為司徒，皆持節、都督諸軍如故，咸未受命而斃。')
+ACCUSE=Q('v028-b0063','會內有異志，因鄧艾承制專事，密白艾有反狀')
+CHENGDU=Q('v028-b0063','敕會並進軍成都')
+AMBITION=Q('v028-b0063','自謂功名蓋世，不可復為人下')
+ARRIVAL=Q('v028-b0063','會以五年正月十五日至')
+FALSE=Q('v028-b0063','矯太后遺詔，使會起兵廢文王')
+PRISON=Q('v028-b0063','所請群官，悉閉著益州諸曹屋中')
+DEATH=Q('v028-b0064','眾既格斬維，爭赴殺會。會時年四十')
+BIRTH=Q('v028-b0053-n01','黃初六年，生會，恩寵愈隆。','《魏氏春秋》引钟会母传')
+FAMILY=Q('v028-b0065','峻、辿兄弟特原，有官爵者如故。惟毅及邕息伏法。')
+DAO=Q('v028-b0069','於會家得書二十篇，名曰《道論》，而實刑名家也，其文似會。')
+PING=Q('v028-b0073','鍾會精練策數')
+BLAME=Q('v028-b0073','而皆心大志迂，不慮禍難，變如發機，宗族塗地')
+PROFILE=dict(
+ id='zhong-hui',tier='B',reading=['028'],syncLifespan=True,
+ lead='出身钟繇之家，以博学名理入仕，随司马师、司马昭参知机密，并策动寿春城中全氏出降。263年统军伐蜀，在涪受姜维降；随后告发邓艾、入成都称兵，264年死于军众反击。',role='魏廷谋臣与伐蜀统将',
+ facts=[
+ dict(key='hometown',label='籍贯',value='颍川长社',text='字士季，颍川长社人，太傅钟繇幼子。',refs=[ORIGIN]),
+ dict(key='lifespan',label='生卒年',value='225—264年',text='裴注《魏氏春秋》所引母传明记黄初六年出生；正文记景元五年正月被杀，年四十。生年据注引直接记载，不仅凭享年逆推。',refs=[BIRTH,ARRIVAL,DEATH]),
+ dict(key='identity',label='主要身份',value='魏廷机密谋臣、伐蜀将领',text='长期参预军国谋议，后独领大军伐蜀；蜀平后谋反，不能以此前受宠掩盖结局。',refs=[FOLLOW,SECRETARY,INVASION,FALSE]),
+ dict(key='office',label='最高官职',value='镇西将军；诏拜司徒未受命',text='历黄门侍郎、司隶校尉，后为镇西将军、假节都督关中诸军事；蜀平诏拜司徒，未及受命而死。',refs=[PROMOTE,SILI,WEST,SITU,UNRECEIVED]),
+ dict(key='title',label='最高爵位',value='东武亭侯；后诏进县侯',text='实受东武亭侯；寿春功进陈侯而辞不受，蜀平再诏进县侯，与司徒命同见未受命记载。不得把每次诏封均作已接受。',refs=[PROMOTE,MARQUIS,SITU,UNRECEIVED]),
+ dict(key='posthumous',label='身后称号',value='本传未载谥号',text='本传记兵变中被杀及宗族处置，没有记载钟会追谥；不把父亲成侯等称号移给本人。',refs=[DEATH,FAMILY]),
+ dict(key='deeds',label='代表事迹',items=['参知机密','诱全氏降','统军伐蜀','涪县受降','成都称兵'],text='其谋议能力、军事功业与称兵失败都在本传主线之内。',refs=[FOLLOW,FORGE,INVASION,FU,FALSE]),
+ ],
+ intro=[
+ dict(title='才学声誉与机密仕途',text='钟会字士季，是颍川长社人、钟繇幼子。少有敏慧之名，成年以才艺和名理学问知名，正始年间由秘书郎迁尚书、中书侍郎。255年随司马师东征，典知密事；司马师死于许昌后，他又与傅嘏谋议，促成司马昭带军回到雒水南，随后接掌辅政。钟会的影响力先来自机密谋议，而非长期独当一面的战场经历。',refs=[ORIGIN,STUDY,EARLY,FOLLOW,XUCHANG,LUO,PROMOTE]),
+ dict(title='淮南谋功与朝政参与',text='诸葛诞反于寿春，钟会再随司马昭出征，利用全辉、全仪来降的机会密作书信，使城中全怿等误以为家属将受诛而出降。此后他管大将军府记室，亲信日隆，虽辞去进爵与太仆之命，仍逐渐任司隶校尉，参与时政损益。正文同时把嵇康等被杀归为他的谋划，显示参知政务也包括严厉的政治排斥。',refs=[SHOUCHUN,FORGE,RUMOR,QUAN,SECRETARY,MARQUIS,SILI]),
+ dict(title='入蜀有功亦争军权',text='262年冬任镇西将军，翌年统十余万众从斜谷、骆谷入蜀，经汉中西出阳安口。面对剑阁坚守，他密告诸葛绪畏懦，取得其军，随后进攻仍未克。邓艾破绵竹后，钟会才进至涪，接受姜维投降，并约束士卒不得抄掠、接纳蜀地群官。两路共同完成灭蜀，不能把邓艾前线的江由、绵竹或成都受降当作钟会亲历。',refs=[WEST,INVASION,YANGAN,JIAN,XU,FU,SURRENDER,DISCIPLINE]),
+ dict(title='独统大军而终于兵变',text='蜀平后，钟会利用邓艾承制专事告其谋反，奉命进入成都，邓艾被囚后独统大军，自以功名盖世，进一步准备称兵。他借太后发丧，矫称遗诏欲废司马昭，把诸将拘闭、改置亲信；军中传出将被杀的消息，胡烈军与各营相继起兵。264年正月十八日，钟会与姜维先后被杀，诏拜司徒还未来得及受命，功业与权欲在极短时间内一同崩解。',refs=[ACCUSE,CHENGDU,AMBITION,ARRIVAL,NEXTDAY,FALSE,PRISON,REPLACE,UPRISING,DEATH,UNRECEIVED],eventLinks=[dict(label='264年正月十八日',eventId='zhong-hui-rebellion')]),
+ ],
+ careers=[
+ dict(id='early',when='225年至正始年间',title='家学入仕，博学名理',office='秘书郎，后尚书、中书侍郎',text='裴注母传记225年出生；成年以才艺、名理知名，正始间入仕，254年赐关内侯。出生地本传未载，不据籍贯作出生站。',refs=[BIRTH,ORIGIN,STUDY,EARLY]),
+ dict(id='huainan',when='255年',title='随司马师东征，典知密事',office='中书侍郎',text='随军参与平毌丘俭、文钦，负责机密；不因公共事件名称把具体交战点一概归入本人足迹。',refs=[FOLLOW],eventIds=['qiu-wen-rebellion']),
+ dict(id='regency',when='255年',title='许昌谋议，随昭返雒水南',office='黄门侍郎、东武亭侯',text='司马师在许昌去世，钟会与傅嘏谋使司马昭带军还雒水南，朝廷随后拜昭辅政，钟会亦进官封侯。',refs=[XUCHANG,LUO,PROMOTE],eventIds=['sima-zhao-regency']),
+ dict(id='shouchun',when='257—258年',title='随征寿春，诱全氏出降',office='大将军府管记室事',text='257年随司马昭至寿春，密作全氏书信诱全怿等降，城中由此乖离；军还管记室，进陈侯而不受。',refs=[SHOUCHUN,FORGE,RUMOR,QUAN,SECRETARY,MARQUIS],eventIds=['shouchun-siege']),
+ dict(id='politics',when='寿春平后至262年，部分确年未载',title='参与时政与嵇康之诛',office='司隶校尉',text='任司隶校尉后仍参与时政；正文称嵇康等见诛皆会谋，不以裴注中有争论的年份代替明确系年。',refs=[SILI]),
+ dict(id='west',when='262年冬',title='受任镇西，筹谋伐蜀',office='镇西将军，假节都督关中诸军事',text='与司马昭共同考论地形事势，成为统军入蜀主将。任官本身不强作一个确定驻地。',refs=[WEST,Q('v028-b0058','豫共籌度地形，考論事勢。')]),
+ dict(id='hanzhong',when='263年秋',title='由谷道入汉中，西出阳安口',office='镇西将军',text='统十余万分从斜谷、骆谷入，因桥穿杀前治道者许仪；经汉中径过汉乐二城，西出阳安口，派人祭诸葛亮墓。',refs=[INVASION,XUYI,YANGAN],eventIds=['fall-shu']),
+ dict(id='jiange',when='263年秋冬',title='剑阁受阻，夺诸葛绪军',office='合并诸葛绪军',text='密白诸葛绪畏懦而征还，军归于会；进攻剑阁不克引退。部将田章入江由不等于钟会本人到江由。',refs=[XU,JIAN]),
+ dict(id='fuxian',when='263年冬',title='进军涪县，受姜维降',office='诏拜司徒、进县侯，未受命',text='邓艾破绵竹后会至涪，姜维后奉刘禅命来降；会约束抄掠、接纳群官，十二月获诏拜司徒、进县侯。',refs=[FU,SURRENDER,DISCIPLINE,SITU,UNRECEIVED]),
+ dict(id='rebellion',when='264年正月',title='入成都，矫遗诏称兵',office='未受司徒命而亡',text='告邓艾有反状，奉命进军成都，十五日到达，次日拘诸将、矫太后遗诏废司马昭；十八日军众起兵，姜维与会皆死。',refs=[ACCUSE,CHENGDU,ARRIVAL,NEXTDAY,FALSE,PRISON,REPLACE,UPRISING,DEATH],eventIds=['zhong-hui-rebellion']),
+ dict(id='aftermath',when='264年',title='宗族处置与著述遗存',office='—',text='兄子钟邕从会而死，钟毅及邕子伏法，钟峻、钟辿获赦；死后得家藏《道论》，正文只说文似会，不作全部定论。',refs=[FAMILY,DAO]),
+ ],
+ trajectory=dict(atlasPerson='zhonghui',phases=[
+ dict(id='early',title='家学与入仕',when='225年至正始年间',span=(225,249),careers=['early'],atlasStops=[]),
+ dict(id='regency',title='东征与辅政谋议',when='255年',span=(255,255),careers=['huainan','regency'],atlasStops=[0,1]),
+ dict(id='huainan',title='寿春谋功与朝政',when='257—262年',span=(257,262),careers=['shouchun','politics','west'],atlasStops=[2]),
+ dict(id='shu',title='入蜀与涪县受降',when='263年',span=(263,263),careers=['hanzhong','jiange','fuxian'],atlasStops=[3,4,5]),
+ dict(id='end',title='成都称兵与败亡',when='264年',span=(264,264),careers=['rebellion','aftermath'],atlasStops=[6]),
+ ]),
+ records=[
+ dict(section='civil',when='255年至262年',title='机密谋议与记室政务',category='军政谋议',careerRef='politics',text='长期典知机密、管记室，任外司后仍综典时政。这里列其政务参与，不把影响力直接赞成善政。',refs=[FOLLOW,SECRETARY,SILI]),
+ dict(section='civil',when='263年',title='约束抄掠，接纳蜀官',category='安抚降附',careerRef='fuxian',text='蜀降后禁抄略、虚己接纳蜀中官员，形成与姜维亲善的局面；与后来利用蜀兵谋反须分别评价。',refs=[DISCIPLINE]),
+ dict(section='military',when='257—258年',title='利用全氏家事瓦解城守',category='反间谋略',careerRef='shouchun',text='密为来降者作书，使全怿等误判家属将遭诛而出降，城内随之乖离，是寿春战事中明确的谋略贡献。',refs=[FORGE,RUMOR,QUAN]),
+ dict(section='military',when='263年',title='统军汉中，受降于涪',category='协同灭国',careerRef='fuxian',text='统大军经汉中、攻剑阁，蜀主投降后在涪受姜维降；贡献与邓艾奇袭相互衔接，不能独占灭蜀。',refs=[INVASION,JIAN,FU,SURRENDER]),
+ dict(section='setback',when='寿春平后至263年',title='政治杀戮与争夺军权',category='权力运作',careerRef='jiange',text='正文把嵇康等被诛归其谋，记其因桥坏杀许仪、密告诸葛绪以专军；这些行为不能仅以精练策数美化。',refs=[SILI,XUYI,XU]),
+ dict(section='setback',when='264年',title='兵众不附，称兵即败',category='反叛失败',careerRef='rebellion',text='独统军队后企图废昭，以囚禁诸将更换亲信控制部队，却未能使魏兵服从；流言扩散后军众各自起兵，终遭杀死。',refs=[AMBITION,FALSE,PRISON,DEATH]),
+ ],
+ assessment=[dict(title='陈寿：精练策数而不虑祸难',text='陈寿称钟会精练策数，又把他与同卷诸人归为心大志迂、不虑祸难，以宗族受祸责其判断失当。能力与成败都不能只取一面。',refs=[PING,BLAME])],
+ relations=[
+ dict(category='亲族',name='钟繇与张昌蒲',label='父母与家学',text='钟繇幼子，裴注母传保存张昌蒲教育的自述；传为钟会所作，须留意家传视角。',refs=[ORIGIN,BIRTH]),
+ dict(category='君臣',name='司马师',personId='sima-shi',label='东征参机密',text='随司马师平淮南，典知密事。',refs=[FOLLOW]),
+ dict(category='君臣',name='司马昭',personId='sima-zhao',label='腹心转而谋废',text='谋助其接辅政，长期受亲任；入成都后又矫遗诏欲废昭。',refs=[LUO,SECRETARY,FALSE]),
+ dict(category='同僚',name='傅嘏',label='共同谋议辅政',text='司马师死后，与傅嘏谋使司马昭带军回还。',refs=[LUO]),
+ dict(category='同僚',name='邓艾',personId='deng-ai',label='分路灭蜀后倾陷',text='邓艾破绵竹，会进至涪；会又利用其承制专事密告反状。',refs=[FU,ACCUSE]),
+ dict(category='旧识',name='姜维',personId='jiang-wei',label='受降后共同兵变',text='受姜维降后情好甚欢，成都兵变时姜维率其左右抵抗军众，二人先后被杀。',refs=[DISCIPLINE,DEATH]),
+ dict(category='部属',name='诸葛绪、许仪',label='被征与被杀者',text='许仪因治道桥穿被杀；诸葛绪因会欲专军而被密白征还。',refs=[XUYI,XU]),
+ dict(category='部属',name='胡烈、丘建',label='拘将与军变的纽带',text='丘建原属胡烈，获准让亲兵为被拘将领取饮食，消息遂传诸营；胡烈军首先起兵。',refs=[Q('v028-b0063','會帳下督丘建本屬胡烈'),Q('v028-b0064','烈軍兵與烈兒雷鼓出門')]),
+ ],
+ scholarship=[dict(title='名理与《道论》',text='本传记其博学名理、论易与才性同异；死后家中发现二十篇《道论》，称文字似会，只能据此说有相关著述线索。',refs=[STUDY,DAO])],
+ readingNotes=[dict(title='生日有注引直记',text='正文享年四十可作校核，裴注母传另明记黄初六年出生；采用225年而明确注引层级，不把它说成正文所记。',refs=[BIRTH,DEATH]),dict(title='陈侯、县侯与未受命',text='寿春后进陈侯屡让不受，灭蜀后诏进县侯、拜司徒，又记未受命而死。因此分清已受亭侯、辞陈侯与末次诏命。',refs=[PROMOTE,MARQUIS,SITU,UNRECEIVED]),dict(title='定五字获知遇之说被质疑',text='裴注《世语》记为虞松改五字而获司马师知遇，裴松之认为名公之子早已显名，不应至此才被认识，故不拿此故事代替正文仕途。',refs=[Q('v028-b0054-n01','會取視，為定五字。','《世语》'),Q('v028-b0054-n01','景王為相，何容不悉','《世语》；裴松之案')]),dict(title='改邓艾章表是注引说法',text='正文有密告邓艾有反状；裴注《世语》进一步说钟会仿书改章表、改司马昭回书。后者不直接写成正文已证实的细节。',refs=[ACCUSE,Q('v028-b0063-n01','皆易其言，令辭指悖傲，多自矜伐。','《世语》')])],
+ glossary=[('记室','掌文书与机密文字的幕府职务。'),('司隶校尉','监察京畿的官职，本传记其仍参与中枢政事。')],
+ sourceScope='以卷二十八钟会本传正文与全部裴注为基础，连读邓艾、诸葛诞及同卷篇末评语，交叉核对卷四三少帝纪。出生与改书等注引材料明列来源，未受诏命、行军主将与部将分开。本页不声称穷尽全书所有提及钟会之处。',
+)

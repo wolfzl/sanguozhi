@@ -1,0 +1,91 @@
+"""曹爽：本传与王基传交叉，功绩栏目不夸大其辅政与用兵。"""
+from profile_v3 import Q
+NAME=Q('v009-b0034','爽字昭伯，少以宗室謹重，明帝在東宮，甚親愛之。')
+FATHER=Q('v009-b0032','真薨，諡曰元侯。子爽嗣。')
+EARLY=Q('v009-b0034','及即位，爲散騎侍郎，累遷城門校尉，加散騎常侍，轉武衞將軍，寵待有殊。')
+REGENT=Q('v009-b0034','帝寢疾，乃引爽入臥內，拜大將軍，假節鉞，都督中外諸軍事，錄尚書事，與太尉司馬宣王並受遺詔輔少主。')
+TITLE=Q('v009-b0034','明帝崩，齊王即位，加爽侍中，改封武安侯，邑萬二千戶')
+POWER=Q('v009-b0034','外以名號尊之，內欲令尚書奏事，先來由己，得制其輕重也。')
+CLIQUE=Q('v009-b0035','及爽秉政，乃復進叙，任爲腹心。')
+WANG=Q('v027-b0023','大將軍曹爽請爲從事中郎，出爲安豐太守。')
+CHANGAN=Q('v009-b0035','正始五年，爽乃西至長安，大發卒六七萬人，從駱穀入。')
+SUPPLY=Q('v009-b0035','關中及氐、羌轉輸不能供，牛馬騾驢多死，民夷號泣道路。')
+BLOCKED=Q('v009-b0035','入穀行數百里，賊因山爲固，兵不得進。')
+RETREAT=Q('v009-b0035','爽不恱，乃引軍還。')
+WARN=Q('v009-b0035','爽參軍楊偉爲爽陳形勢，宜急還，不然將敗。')
+FIGHT=Q('v009-b0035-n03','費禕進兵據三嶺以截爽，爽爭嶮苦戰，僅乃得過。','《汉晋春秋》')
+POLITICS=Q('v009-b0036','諸事希復由宣王。宣王遂稱疾避爽。')
+LUXURY=Q('v009-b0036','爽飲食車服擬於乘輿，尚方珍玩充牣其家')
+FALSE=Q('v009-b0036','詐作詔書，發才人五十七人送鄴臺')
+XI=Q('v009-b0036','羲深以爲大憂，數諫止之。')
+LISHENG=Q('v009-b0036','九年冬，李勝出爲荊州刺史，往詣宣王。宣王稱疾困篤，示以羸形。勝不能覺，謂之信然。')
+GAOPING=Q('v009-b0037','十年正月，車駕朝高平陵，爽兄弟皆從。')
+BRIDGE=Q('v009-b0037','宣王部勒兵馬，先據武庫，遂出屯洛水浮橋。')
+PLAN=Q('v009-b0038','範說爽使車駕幸許昌，招外兵。爽兄弟猶豫未決')
+YISHUI=Q('v009-b0038-n01','爽留車駕宿伊水南，伐木爲鹿角，發屯甲兵數千人以爲衞。','干宝《晋纪》')
+RETURN=Q('v009-b0038','遂免爽兄弟，以侯還第。')
+OATH=Q('v009-b0038-n02','唯免官而已，以洛水爲誓。爽信之，罷兵。','《世语》')
+KILL=Q('v009-b0040','於是收爽、羲、訓、晏、颺、謐、軌、勝、範、當等，皆伏誅，夷三族。')
+PING=Q('v009-b0059','爽德薄位尊，沈溺盈溢，此固大易所著，道家所忌也。')
+PROFILE=dict(
+ id='cao-shuang',tier='B',reading=['009'],syncLifespan=True,
+ lead='曹真之子，字昭伯。239年与司马懿同受遗诏辅佐曹芳，任大将军、录尚书事，逐渐独揽朝政；244年由骆谷伐蜀无功而还。249年随帝谒高平陵时遭政变，免官还第后与同党被诛，夷三族。',role='曹芳初年的辅政大将军',
+ facts=[
+ dict(key='lifespan',label='生卒年',value='生年未详—249年',text='本传未记生年和享年；卒事见正始十年政变后被诛，卷四以嘉平元年记同一事。',refs=[GAOPING,KILL,Q('v004-b0018','嘉平元年春正月甲午，車駕謁高平陵。')]),
+ dict(key='hometown',label='籍贯',value='本传未载县籍',text='附于曹真之后，本传以宗室、曹真之子及官职起笔，未给曹爽自己的县籍。',refs=[FATHER,NAME]),
+ dict(key='identity',label='主要身份',value='宗室辅政大臣',text='受魏明帝遗诏，与司马懿共同辅佐少主曹芳。',refs=[NAME,REGENT,Q('v004-b0002','大將軍曹爽、太尉司馬宣王輔政。')]),
+ dict(key='office',label='最高官职',value='大将军，录尚书事',text='假节钺、都督中外诸军事、录尚书事，齐王即位后加侍中。',refs=[REGENT,TITLE]),
+ dict(key='title',label='最高爵位',value='武安侯',text='明帝卒、齐王即位后改封武安侯，邑一万二千户；此前嗣父爵。',refs=[FATHER,TITLE]),
+ dict(key='posthumous',label='身后称号',value='本书未载谥号',text='本传结于被诛与夷三族，继记以曹真族孙奉其后，没有记载曹爽谥号，不借父亲元侯之谥。',refs=[KILL,Q('v009-b0040','封真族孫熙爲新昌亭侯，邑三百戶，以奉真後。')]),
+ dict(key='names',label='常见称谓',value='曹昭伯',text='本传记字昭伯；篇末直接以爽评论。',refs=[NAME,PING]),
+ dict(key='deeds',label='代表事迹',items=['受遗辅政','总领尚书','骆谷出师','高平陵罢权'],text='同受托孤，总领朝政，西至长安由骆谷进军，后在高平陵之变中免官被诛。',refs=[REGENT,POWER,CHANGAN,GAOPING,RETURN,KILL]),
+ ],
+ intro=[
+ dict(title='由宗室近臣受托孤',text='曹爽字昭伯，是曹真之子，早年因宗室身份及谨重受到魏明帝亲爱，历任散骑侍郎、城门校尉、武卫将军。239年明帝病重，将他召入卧内，拜大将军，假节钺、录尚书事，与司马懿共同辅佐少主。齐王曹芳即位后，他又加侍中、改封武安侯，获得丰厚封邑与特殊礼遇，骤居朝廷权力的中心。',refs=[NAME,FATHER,EARLY,REGENT,TITLE],eventLinks=[dict(label='共同辅佐少主',eventId='cao-fang-succession')]),
+ dict(title='共同辅政变为独掌',text='丁谧为曹爽画策，把司马懿转为太傅，名号更尊，尚书奏事却先经曹爽，以便由他控制轻重。何晏、邓飏、李胜、毕轨等陆续成为腹心，政事很少再经司马懿；后者于是称病退避。曹爽也曾征辟王基，但这项具体用人不能掩盖本传对其腹心集团专权、夺取官物与土地的批评，更不能把官属的全部治理成绩转算为他的功绩。',refs=[POWER,CLIQUE,POLITICS,WANG,Q('v009-b0036','承勢竊取官物，因緣求欲州郡。')]),
+ dict(title='求威名却困于骆谷',text='244年，邓飏等劝其伐蜀以立威名，曹爽西至长安，大发六七万兵，从骆谷进入。运输难以为继，牲畜大量死亡，军队又被蜀军凭山阻住。参军杨伟力陈应退，曹爽虽不悦，最终还是引还；裴注《汉晋春秋》另记费祎据三岭拦截，魏军争险苦战才脱出。这场出师是其军事失策的具体证据，而不是可夸饰的战功。',refs=[Q('v009-b0035','颺等欲令爽立威名於天下，勸使伐蜀，爽從其言'),CHANGAN,SUPPLY,BLOCKED,WARN,RETREAT,FIGHT],eventLinks=[dict(label='从骆谷进入',eventId='xingshi-defense')]),
+ dict(title='罢兵还第仍遭诛杀',text='249年曹爽兄弟随曹芳谒高平陵，司马懿据武库、屯洛水浮桥发动政变。桓范劝奉天子往许昌、征外兵，曹爽犹豫不决，最终认罪免官，以侯归第。裴注还保存“唯免官”誓言及其相信可以保全富贵的说法；但其后张当供出谋反指控，曹爽与诸腹心一同被诛、夷三族。判断其失误，也须保留这一处罢兵承诺与事后处置的落差。',refs=[GAOPING,BRIDGE,PLAN,RETURN,OATH,Q('v009-b0038-n02','我不失作富家翁。','《魏氏春秋》'),Q('v009-b0040','當陳爽與晏等陰謀反逆'),KILL],eventLinks=[dict(label='发动政变',eventId='gaoping-tombs')]),
+ ],
+ careers=[
+ dict(id='early',when='明帝在位前后，确年未载',title='以宗室亲近，累迁武卫将军',office='散骑侍郎至武卫将军',text='少以宗室谨重获明帝亲爱，历侍郎、城门校尉、散骑常侍而转武卫将军；父曹真卒后嗣爵。',refs=[NAME,EARLY,FATHER]),
+ dict(id='regent',when='239年',title='同受遗诏，辅佐曹芳',office='大将军、录尚书事；侍中、武安侯',text='明帝病中召入卧内，与司马懿同受遗诏；曹芳即位后加侍中、改封武安侯。',refs=[REGENT,TITLE],eventIds=['cao-fang-succession']),
+ dict(id='power',when='239年以后，确年未载',title='尊司马懿为太傅，奏事先由己',office='—',text='用丁谧计，使尚书奏事先经过自己；尊太傅的形式与集中实际权力的意图，在正文中同时出现。',refs=[POWER,Q('v009-b0034','丁謐畫策，使爽白天子，發詔轉宣王爲太傅')]),
+ dict(id='wangji',when='辅政期间，确年未载',title='征辟王基',office='—',text='请王基为从事中郎，王基后出为安丰太守；任郡的清严威惠是王基本人的施政，不移作曹爽亲自治理。',refs=[WANG,Q('v027-b0023','郡接吳寇，爲政清嚴有威惠，明設防備，敵不敢犯。')]),
+ dict(id='campaign',when='244年',title='至长安，经骆谷伐蜀而退',office='—',text='发六七万人自骆谷入，因转输困难、蜀军据险而不能进，听杨伟陈形势后引还；裴注另载三岭争险脱出。',refs=[CHANGAN,SUPPLY,BLOCKED,WARN,RETREAT,FIGHT],eventIds=['xingshi-defense']),
+ dict(id='exclusive',when='244—248年间，部分确年未载',title='腹心专政，拒纳弟谏',office='—',text='何晏等掌要职，司马懿称疾避之。曹爽饮食车服拟天子，并伪作诏书发才人；弟曹羲多次劝止不纳。248年李胜探病未识司马懿示弱之计。',refs=[POLITICS,LUXURY,FALSE,XI,Q('v009-b0036','羲或時以諫喻不納，涕泣而起。'),LISHENG]),
+ dict(id='gaoping',when='249年',title='从帝谒陵，政变中受困',office='—',text='兄弟全随曹芳朝高平陵，司马懿据武库、屯洛水浮桥，奏免曹爽等官；裴注记其留车驾宿伊水南。',refs=[GAOPING,BRIDGE,Q('v009-b0037','黃門令罷爽、羲、訓吏兵，以侯就第'),YISHUI],eventIds=['gaoping-tombs']),
+ dict(id='surrender',when='249年',title='不用桓范计，免官还第',office='免官，以侯归第',text='桓范劝奉帝往许昌招外兵，曹爽兄弟未决，后遣许允、陈泰请罪，获免官而还第。许昌始终只是未实施的建议。',refs=[PLAN,Q('v009-b0038','爽於是遣允、泰詣宣王，歸罪請死'),RETURN,OATH]),
+ dict(id='death',when='249年',title='以谋反指控收杀，夷三族',office='—',text='张当供出其与何晏等阴谋反逆，廷议定为大逆，曹爽及诸腹心被诛、夷三族。记载的是指控及处置，不替审讯之外补造密谋细节。',refs=[Q('v009-b0040','當陳爽與晏等陰謀反逆'),KILL]),
+ ],
+ trajectory=dict(atlasPerson='caoshuang',phases=[
+ dict(id='rise',title='亲近与受托辅政',when='明帝时期—239年',span=(226,239),careers=['early','regent'],atlasStops=[0]),
+ dict(id='power',title='掌权与征辟',when='239年以后，确年未载',span=(239,244),careers=['power','wangji'],atlasStops=[]),
+ dict(id='campaign',title='骆谷进退',when='244年',span=(244,244),careers=['campaign'],atlasStops=[1,2]),
+ dict(id='last',title='专政与高平陵变',when='244—249年',span=(244,249),careers=['exclusive','gaoping','surrender','death'],atlasStops=[3,4]),
+ ]),
+ records=[
+ dict(section='setback',when='239年以后',title='腹心专政与共同辅政失衡',category='权力安排',careerRef='power',text='尚书奏事先由自己，何晏等进用后诸事少由司马懿，削弱共同辅政的实际结构，也累积双方疑防。',refs=[POWER,POLITICS]),
+ dict(section='setback',when='244年',title='求名出师，关中虚耗',category='军事失策',careerRef='campaign',text='出师动机在为曹爽立威名，实际转运难支、牲畜死亡、行军受阻。裴注以关右虚耗总结其后果，须注明出处。',refs=[Q('v009-b0035','颺等欲令爽立威名於天下，勸使伐蜀'),SUPPLY,BLOCKED,Q('v009-b0035-n03','羌、胡怨歎，而關右悉虛耗矣。','《汉晋春秋》')]),
+ dict(section='setback',when='辅政后期，确年未载',title='僭用与拒绝曹羲劝止',category='骄侈失度',careerRef='exclusive',text='饮食车服拟于乘舆，伪作诏书调发才人，曹羲多次劝谏仍不纳。陈寿所谓沉溺盈溢，正可与这些行动对读。',refs=[LUXURY,FALSE,XI,Q('v009-b0036','羲或時以諫喻不納，涕泣而起。'),PING]),
+ dict(section='setback',when='249年',title='政变中弃去兵权',category='危机决断',careerRef='surrender',text='桓范给出奉天子往许昌的方案，曹爽未能决断，转而接受免官还第。《世语》记免官誓言，后来实际诛杀不能省去。',refs=[PLAN,RETURN,OATH,KILL]),
+ ],
+ sections={'civil':{'note':'曹爽虽受录尚书事与共同辅政之任，并曾征辟王基，但前者是职责，后者不足以归纳两项本人治理成果；王基出守安丰的威惠不转算为曹爽治绩。现有材料保留于履历与关系，文治栏不凑条目。'},'military':{'note':'本传明确记曹爽244年亲至长安、从骆谷伐蜀，因供给不足、蜀军据险而无功引还，注引另记苦战脱险。出征和退军是同一失败战事，均已列入履历与得失，不拆成武功；所据材料没有其他可单列的成功战果。'}},
+ assessment=[dict(title='陈寿：德薄位尊，沉溺盈溢',text='陈寿把德行不足而位望过尊、沉溺过度视为曹爽覆败的核心问题，并借《易》与道家戒盈之意归纳。评价应落到专权、僭用和拒谏的具体记载，不把失势本身当作唯一罪证。',refs=[PING,LUXURY,FALSE,XI])],
+ relations=[
+ dict(category='亲族',name='曹真',label='父亲与袭爵来源',text='父曹真卒后由曹爽嗣爵；曹真本人的战功不移入儿子武功。',refs=[FATHER]),
+ dict(category='君臣',name='曹叡',personId='cao-rui',label='亲爱并托孤',text='从东宫时便亲爱曹爽，病重时授大将军并托辅少主。',refs=[NAME,REGENT]),
+ dict(category='君臣',name='曹芳',label='所辅少主',text='曹芳即位后加其侍中、改封武安侯；249年随曹芳朝陵时发生政变。',refs=[TITLE,GAOPING,Q('v004-b0002','大將軍曹爽、太尉司馬宣王輔政。')]),
+ dict(category='同僚',name='司马懿',personId='sima-yi',label='共同受托转为政敌',text='同受遗诏，后被排除实政而称疾；249年司马懿据武库、奏免曹爽。',refs=[REGENT,POWER,POLITICS,BRIDGE]),
+ dict(category='亲族',name='曹羲',label='弟弟与劝谏者',text='任中领军，多次因兄长骄侈而劝止；与兄同遭诛杀。',refs=[Q('v009-b0035','爽弟羲爲中領軍'),XI,KILL]),
+ dict(category='部属',name='何晏、邓飏、丁谧',label='辅政腹心',text='进用为尚书等要职，推动权力集中；邓飏等又劝出兵求名。',refs=[CLIQUE,Q('v009-b0036','乃以晏、颺、謐爲尚書'),Q('v009-b0035','颺等欲令爽立威名於天下，勸使伐蜀')]),
+ dict(category='部属',name='王基',label='曾辟为从事中郎',text='曹爽请其入府，后出为安丰太守；其个人政绩依王基本传另看。',refs=[WANG]),
+ dict(category='同僚',name='桓范',label='政变中的献计者',text='出城南奔曹爽，主张奉车驾到许昌招外兵，未获采纳而同被诛。',refs=[PLAN,KILL]),
+ ],
+ readingNotes=[
+ dict(title='免官誓言与其后诛族',text='正文记以侯还第，裴注《世语》补免官而已、以洛水为誓；《魏氏春秋》另记富家翁之言。数层材料说明罢兵时的期待，不等于此后果真获得保全。',refs=[RETURN,OATH,Q('v009-b0038-n02','我不失作富家翁。','《魏氏春秋》'),KILL]),
+ dict(title='许昌只是未实施的方案',text='桓范建议奉帝幸许昌、招外兵，正文却写兄弟犹豫，最终免官还第。地图不把许昌、外兵集结地或李胜探病路线算成曹爽足迹。',refs=[PLAN,RETURN,LISHENG]),
+ dict(title='谋反供辞是处置依据',text='本传以张当供辞、廷议和诛族接续叙事。可写朝廷以反逆定罪，不能把所有指控自动当作已独立核实的计划细节；也不否认正文明确记载的僭用行为。',refs=[Q('v009-b0040','當陳爽與晏等陰謀反逆'),KILL,FALSE]),
+ ],
+ glossary=[('录尚书事','总领或参与统辖尚书奏事。'),('乘舆','此处指天子及其车服用度。')],
+ sourceScope='以卷九曹真传后曹爽附传正文及陈寿篇末评语为基础，交叉核对卷四曹芳即位、政变记载与卷二十七王基传。裴注《汉晋春秋》《世语》《魏氏春秋》与干宝《晋纪》分别标明，处置指控不补写为密谋细节。本页不声称穷尽全书所有提及曹爽之处。',
+)

@@ -1,0 +1,103 @@
+"""司马师：本书无独立本传，以帝纪及散见正文、注引组织。"""
+from profile_v3 import Q
+HUJUN=Q('v009-b0053-n01','玄旣遷，司馬景王代爲護軍。','《魏略》')
+REFORM=Q('v009-b0053-n01','及景王之代玄，整頓法令，人莫犯者。','《魏略》')
+REGENT=Q('v004-b0021','戊寅，太傅司馬宣王薨，以衞將軍司馬景王為撫軍大將軍，錄尚書事。')
+GENERAL=Q('v004-b0022','四年春正月癸卯，以撫軍大將軍司馬景王為大將軍。')
+DONGXING=Q('v004-b0022','十二月，吳大將軍諸葛恪拒戰，大破衆軍於東關。')
+RESPONSIBLE=Q('v004-b0022-n02','此我過也，諸將何罪？','《汉晋春秋》')
+WANG=Q('v027-b0025','許允、傅嘏、袁侃、崔贊皆一時正士，有直質而無流心，可與同政事者也。')
+PRUDENT=Q('v027-b0025','思慮審定則教令不煩，親用忠良則遠近恊服。')
+ADOPT=Q('v027-b0025','景王納其言。')
+YU=Q('v004-b0023-n01','乃使郭淮、陳泰悉關中之衆，解狄道之圍；勑毌丘儉等案兵自守，以新城委吳。','《汉晋春秋》')
+LIFENG=Q('v004-b0027','中書令李豐與皇后父光祿大夫張緝等謀廢易大臣，以太常夏侯玄為大將軍。事覺，諸所連及者皆伏誅。')
+KILL=Q('v009-b0053-n03','大將軍怒，使勇士以刀環築豐腰，殺之。','《魏氏春秋》')
+DEPOSE=Q('v004-b0027','秋九月，大將軍司馬景王將謀廢帝，以聞皇太后。')
+PRESSURE=Q('v004-b0027-n03','今大將軍意已成，又勒兵于外以備非常，但當順旨','《魏略》')
+NEW=Q('v004-b0028-n01','景王復與羣臣共奏永寧宮','《魏书》')
+HONOR=Q('v004-b0031','假大將軍司馬景王黃鉞，入朝不趨，奏事不名，劒履上殿。')
+XUCHANG=Q('v027-b0026','以基爲行監軍、假節，統許昌軍，適與景王會於許昌。')
+ILL=Q('v021-b0057-n02','是時景王新割目瘤，創甚','《汉晋春秋》')
+EAST=Q('v021-b0057-n02','我請輿疾而東。','《汉晋春秋》')
+RUYANG=Q('v028-b0013','大將軍屯汝陽，使監軍王基督前鋒諸軍據南頓以待之。')
+DEFEND=Q('v028-b0013','今諸軍皆堅壁勿與戰。')
+LEJIA=Q('v028-b0013','大將軍遣兗州刺史鄧艾督泰山諸軍萬餘人至樂嘉，示弱以誘之，大將軍尋自洙至。')
+AI=Q('v028-b0035','先趣樂嘉城，作浮橋。司馬景王至，遂據之。')
+VICTORY=Q('v028-b0013','大將軍縱驍騎追擊，大破之，欽遁走。')
+END=Q('v004-b0032','司馬景王薨于許昌。二月丁巳，以衞將軍司馬文王為大將軍，錄尚書事。')
+AFTER=Q('v004-b0077','癸未，追命舞陽宣文侯為晉宣王，舞陽忠武侯為晉景王。')
+FAMILY=Q('v028-b0013-n02','太傅既亡，然其子師繼承父業','文钦与郭淮书')
+BROTHER=Q('v009-b0036-n02','令師、昭兄弟結君爲友','《魏末传》')
+NAME=Q('v009-b0042-n01','唯幾也，故能成天下之務，司馬子元是也；','《魏氏春秋》')
+PING=Q('v004-b0088','託付不專，必參枝族，終於曹爽誅夷，齊王替位。')
+XI=Q('v004-b0022-n02','司馬大將軍引二敗以為己過，過消而業隆，可謂智矣。','《汉晋春秋》；习凿齿评')
+PROFILE=dict(
+ id='sima-shi',tier='B',reading=['004','028'],syncLifespan=True,
+ lead='本书多称司马景王，注引又见司马子元。251年继司马懿掌政，252年任大将军；东兴败后承担决策责任，254年主导废曹芳、立曹髦。255年亲统军平毌丘俭、文钦，旋卒于许昌，军政转由司马昭承接。',role='曹魏后期掌政大将军',
+ facts=[
+ dict(key='lifespan',label='生卒年',value='生年未详—255年',text='本书未为司马师记完整生年、享年；卷四正元二年记平淮南后卒于许昌，即255年。',refs=[END,Q('v004-b0032','二年春正月乙丑，鎮東將軍毌丘儉、楊州刺史文欽反。')]),
+ dict(key='hometown',label='籍贯',value='所据材料未载本人县籍',text='本书没有独立本传，所据帝纪与相关人物传记记官职、掌政及征行，没有为司马师单列县籍；不以家族常识补写。',refs=[REGENT,XUCHANG,END]),
+ dict(key='identity',label='主要身份',value='继司马懿掌政的辅臣',text='司马懿卒后，由卫将军进为抚军大将军、录尚书事；文钦书亦明确称其子师继承父业，书中敌对文辞不照收为定论。',refs=[REGENT,FAMILY]),
+ dict(key='office',label='最高官职',value='大将军，录尚书事',text='251年为抚军大将军、录尚书事，252年进大将军；曹髦即位后加黄钺及朝礼。',refs=[REGENT,GENERAL,HONOR]),
+ dict(key='title',label='最高爵位',value='舞阳侯',text='264年追命以舞阳忠武侯为晋景王，王号另列身后称号。注引《魏书》的254年奏名写“武阳侯”，与正文后称字面不同，保留各处写法，不自行抹平。',refs=[AFTER,Q('v004-b0027-n02','大將軍武陽侯臣師','《魏书》')]),
+ dict(key='posthumous',label='身后称号',value='舞阳忠武侯；晋景王',text='本纪多预称司马景王；264年正文明确记录追命晋景王，不把追命发生在生前。',refs=[END,AFTER]),
+ dict(key='names',label='常见称谓',value='司马景王、司马子元',text='本纪常称景王，裴注《魏氏春秋》录何晏之语称司马子元；文钦书明载名师。',refs=[REGENT,NAME,FAMILY]),
+ dict(key='deeds',label='代表事迹',items=['整顿护军','继掌朝政','主导废立','乐嘉破敌'],text='护军任内整顿法令，继掌朝政，主导废曹芳立曹髦，255年亲军至乐嘉击破文钦。',refs=[REFORM,REGENT,DEPOSE,NEW,AI,VICTORY]),
+ ],
+ intro=[
+ dict(title='散见材料中的掌政者',text='司马师在本书没有独立本传，主要以“司马景王”散见帝纪及相关人物传记。裴注《魏略》记他接替夏侯玄为护军，整顿武官选举法令；251年司马懿去世，他由卫将军进抚军大将军、录尚书事，次年为大将军。把分散的授官记载连起来，可以看见其掌兵、选将与控制朝政的连续过程，但不能据此补齐书中未载的早年生平。',refs=[HUJUN,REFORM,REGENT,GENERAL]),
+ dict(title='承认失策也选择谋臣',text='252年魏军攻吴，东关战败。裴注《汉晋春秋》记朝议欲贬诸将，司马师承认失在自己，原免诸将；习凿齿因而赞其善于承担过失。王基曾以慎政、用忠良进言，他也接受。次年东西同时有事，注引又记他采用虞松之策，西面急援狄道，东面坚守新城。这里的特点是调度与用人，不能把前线各路地点全画成其亲征路线。',refs=[DONGXING,RESPONSIBLE,XI,PRUDENT,WANG,ADOPT,YU],eventLinks=[dict(label='东关战败',eventId='dongxing-battle')]),
+ dict(title='废立背后的权力压力',text='254年李丰、张缉等谋以夏侯玄替代大将军，事泄被诛；同年九月司马师又向太后提出废曹芳，并参与迎立曹髦。正文保存太后令，裴注《魏略》则写郭芝以大将军兵陈在外催迫太后。两层叙事须对读：朝廷文书呈现了手续与理由，另一记载揭示了权力压力，不能把废立简单描述为没有争议的常规程序。',refs=[LIFENG,DEPOSE,NEW,PRESSURE],eventLinks=[dict(label='废曹芳',eventId='cao-fang-deposition')]),
+ dict(title='亲征淮南与许昌病卒',text='255年毌丘俭、文钦起兵，司马师带病东征，在许昌会王基，继屯汝阳，再至乐嘉会邓艾。诸军坚壁使对方失去进退余地，文钦来袭后又被追击击破。前锋抢占南顿是王基的行动，寿春方向由诸葛诞负责，不能移为主帅足迹。司马师不久卒于许昌，司马昭接掌军队与朝政；本书对这次交接的细节另见钟会传。',refs=[ILL,EAST,XUCHANG,RUYANG,AI,DEFEND,VICTORY,Q('v028-b0013','別使諸葛誕督豫州諸軍從安風津擬壽春'),END,Q('v028-b0055','景王薨於許昌，文王總統六軍')],eventLinks=[dict(label='带病东征',eventId='qiu-wen-rebellion'),dict(label='司马昭接掌军队与朝政',eventId='sima-zhao-regency')]),
+ ],
+ careers=[
+ dict(id='hujun',when='251年以前，确年未载',title='接夏侯玄为护军',office='护军',text='裴注《魏略》记护军主武官选举，前任不能止贿；司马师接任后整顿法令，人不敢犯。不以他书补任官年份。',refs=[HUJUN,Q('v009-b0053-n01','護軍總統諸將，任主武官選舉','《魏略》'),REFORM]),
+ dict(id='regent',when='251年',title='继掌朝政',office='抚军大将军，录尚书事',text='司马懿去世后，以卫将军进抚军大将军、录尚书事。',refs=[REGENT]),
+ dict(id='dongxing',when='252年',title='进大将军，东兴战败',office='大将军',text='正月进大将军，年底三路攻吴，东关军败；注引记司马师认决策之过，原免诸将，仅削监军司马昭爵。',refs=[GENERAL,DONGXING,RESPONSIBLE,Q('v004-b0022-n02','時司馬文王為監軍，統諸軍，唯削文王爵而已。','《汉晋春秋》')],eventIds=['dongxing-battle']),
+ dict(id='advice',when='新统政时及253年',title='纳王基言，采用虞松应敌',office='—',text='接受王基慎政用忠良之言。253年东西同急，裴注记采用虞松建议，命关中军援狄道、东军坚守新城。',refs=[PRUDENT,WANG,ADOPT,YU]),
+ dict(id='lifeng',when='254年',title='李丰、夏侯玄事件',office='—',text='李丰、张缉等谋换大将军，事觉被诛；注引《魏氏春秋》另记李丰受司马师遣勇士击杀，死亡经过须与廷议层次区分。',refs=[LIFENG,KILL]),
+ dict(id='deposition',when='254年',title='废曹芳，迎立曹髦',office='加黄钺及特殊朝礼',text='九月主导废帝、上闻太后，随后与群臣奏迎曹髦。裴注《魏略》记郭芝以兵势催迫太后；曹髦即位后授黄钺等。',refs=[DEPOSE,NEW,PRESSURE,HONOR],eventIds=['cao-fang-deposition']),
+ dict(id='xuchang',when='255年',title='带病亲征，会王基于许昌',office='—',text='毌丘俭、文钦起兵，采傅嘏等意见亲行；裴注记目瘤术后创甚仍请东征，王基带许昌军相会。',refs=[Q('v021-b0057','惟嘏及王肅勸之。景王遂行。'),ILL,EAST,XUCHANG],eventIds=['qiu-wen-rebellion']),
+ dict(id='ruyang',when='255年',title='屯汝阳，前锋据南顿',office='—',text='本人屯汝阳，王基领前锋据南顿，其他各路断归路；诸军坚壁不战，使对方进退失据。南顿与安风津不作本人到达。',refs=[RUYANG,DEFEND,Q('v028-b0013','儉、欽進不得鬥，退恐壽春見襲，不得歸')]),
+ dict(id='lejia',when='255年',title='至乐嘉，击破文钦',office='—',text='邓艾先据乐嘉作浮桥，司马师至而据之。文钦夜袭，天明见大军而退，司马师纵骑追破；毌丘俭随即溃走。',refs=[AI,LEJIA,Q('v028-b0013','會明，見大軍兵馬盛，乃引還。'),VICTORY]),
+ dict(id='death',when='255年',title='卒许昌，司马昭承接',office='—',text='平乱后卒于许昌，司马昭总统六军，随后为大将军、录尚书事。',refs=[END,Q('v028-b0055','景王薨於許昌，文王總統六軍')],eventIds=['sima-zhao-regency']),
+ dict(id='posthumous',when='264年',title='追命晋景王',office='追命晋景王',text='咸熙元年追命舞阳忠武侯为晋景王。此为身后称号，不对应本人旅行。',refs=[AFTER]),
+ ],
+ trajectory=dict(atlasPerson='simashi',phases=[
+ dict(id='early',title='护军任内整顿',when='251年以前，确年未载',span=(239,250),careers=['hujun'],atlasStops=[]),
+ dict(id='regent',title='继掌政与东西应敌',when='251—253年',span=(251,253),careers=['regent','dongxing','advice'],atlasStops=[]),
+ dict(id='deposition',title='诛臣与废立',when='254年',span=(254,254),careers=['lifeng','deposition'],atlasStops=[]),
+ dict(id='campaign',title='淮南亲征与卒',when='255年',span=(255,255),careers=['xuchang','ruyang','lejia','death'],atlasStops=[0,1,2,3]),
+ dict(id='posthumous',title='身后追命',when='264年',span=(264,264),careers=['posthumous'],atlasStops=[]),
+ ]),
+ records=[
+ dict(section='civil',when='任护军时，确年未载',title='整顿武官选举法令',category='官选整饬',careerRef='hujun',text='《魏略》将其接任前的货赂风气与整顿后“人莫犯者”对照。可据以记其官选整饬，不扩大成所有朝政都无贿赂。',refs=[HUJUN,REFORM]),
+ dict(section='civil',when='新统政时，确年未载',title='接受王基慎政用人之言',category='纳言与用人',careerRef='advice',text='王基劝慎思政令、亲用忠良，并举许允、傅嘏等可共政事者，司马师纳其言；原文未逐一列出因此任官的时间。',refs=[PRUDENT,WANG,ADOPT]),
+ dict(section='military',when='253年',title='采用分线应敌策略',category='统筹调度',careerRef='advice',text='裴注《汉晋春秋》记采用虞松策略，西急援狄道、东坚守新城，避免东西同时轻出。前线实际位置属于郭淮、陈泰等。',refs=[YU]),
+ dict(section='military',when='255年',title='坚壁与乐嘉合军破敌',category='亲征平乱',careerRef='lejia',text='统中外军亲行，令各军坚壁；与邓艾军合于乐嘉后击破文钦，迫使毌丘俭溃走。王基抢南顿等分路功劳保留所属。',refs=[RUYANG,DEFEND,AI,VICTORY],eventIds=['qiu-wen-rebellion']),
+ dict(section='setback',when='252年',title='东关大败并承认决策失误',category='对吴失策',careerRef='dongxing',text='正文明确东军败绩；注引《汉晋春秋》记其承担过失而不尽归罪诸将。习凿齿赞承担责任，也不能抹去军事挫败。',refs=[DONGXING,RESPONSIBLE,XI],eventIds=['dongxing-battle']),
+ dict(section='setback',when='254年',title='击杀李丰的程序争议',category='权力与刑杀',careerRef='lifeng',text='《魏氏春秋》记遣勇士杀李丰，夜送尸到廷尉，钟毓以“非法官所治”拒受后才奉命接纳。此与正文谋易辅臣、事觉伏诛的概述须分别读。',refs=[KILL,Q('v009-b0053-n03','夜送豐尸付廷尉，廷尉鍾毓不受','《魏氏春秋》'),Q('v009-b0053-n03','非法官所治也。','《魏氏春秋》'),LIFENG]),
+ dict(section='setback',when='254年',title='废立中的兵势与太后压力',category='君臣秩序',careerRef='deposition',text='正文记谋废曹芳，注引《魏略》则写郭芝称大将军意已定、兵陈在外。不能只复述奏表而略去对太后的催迫。',refs=[DEPOSE,PRESSURE]),
+ ],
+ assessment=[
+ dict(title='陈寿：辅政结构总论，非专评',text='本书无司马师独立传末评语。卷四陈寿论明帝托付不专、必参枝族，终至曹爽被诛与齐王被废；这是辅政背景和后果的总论，不能改写成陈寿对司马师个人的专评。',refs=[PING]),
+ dict(title='习凿齿：引败为过是智术',text='裴注《汉晋春秋》载习凿齿赞其把两败归于自己，既消过又使下属思报。赞的是处理败绩的政治效果，并非说当初调度没有错误。',refs=[XI,RESPONSIBLE]),
+ ],
+ relations=[
+ dict(category='亲族',name='司马懿',personId='sima-yi',label='父亲与掌政前任',text='文钦书明确称太傅之子师继承父业；帝纪也记司马懿卒后由景王进抚军大将军、录尚书事。',refs=[FAMILY,REGENT]),
+ dict(category='亲族',name='司马昭',personId='sima-zhao',label='弟弟与继掌军政者',text='《魏末传》明言师、昭兄弟；东兴败后昭受削爵，师卒后昭接六军并掌政。',refs=[BROTHER,Q('v004-b0022-n02','唯削文王爵而已。','《汉晋春秋》'),END,Q('v028-b0055','文王總統六軍')]),
+ dict(category='君臣',name='曹芳',label='被其主导废位',text='254年向太后提出废位，曹芳被遣归齐藩。',refs=[DEPOSE,Q('v004-b0027','遣芳歸藩于齊，以避皇位。')]),
+ dict(category='君臣',name='曹髦',personId='cao-mao',label='所迎立的新君',text='废曹芳后与群臣奏迎曹髦，继受新君黄钺及朝礼。',refs=[NEW,Q('v004-b0028-n01','臣請徵公詣洛陽宮。','《魏书》'),HONOR]),
+ dict(category='部属',name='王基',label='进言与亲征前锋',text='接受其用人进言，255年会于许昌，命居军前；王基独自抢据南顿的行动不能写成主帅实到。',refs=[PRUDENT,WANG,ADOPT,XUCHANG,Q('v027-b0026','遂輙進據南頓')]),
+ dict(category='部属',name='邓艾',personId='deng-ai',label='乐嘉先驱',text='邓艾先趣乐嘉作浮桥，司马师随后到达据其地。',refs=[AI]),
+ dict(category='部属',name='钟会',personId='zhong-hui',label='东征掌机密',text='255年从征典知密事；司马师卒后参与司马昭回军谋议。',refs=[Q('v028-b0055','會從，典知密事'),Q('v028-b0055','會謀謨帷幄。')]),
+ dict(category='敌对',name='毌丘俭、文钦',label='淮南起兵者',text='两人举兵列数司马师罪状，兵至项；司马师统中外军东讨，乐嘉破文钦后对方溃败。',refs=[Q('v028-b0012','遂矯太后詔，罪狀大將軍司馬景王'),VICTORY]),
+ ],
+ readingNotes=[
+ dict(title='没有独立本传与专评',text='本页从帝纪、王基、毌丘俭、邓艾、钟会等传中重建主线。卷四篇末评语只作背景总论，习凿齿之赞明确标为注引，均不伪托为陈寿的司马师传赞。',refs=[REGENT,XUCHANG,PING,XI]),
+ dict(title='主帅部署不等于本人行迹',text='汝阳和乐嘉明确写大将军屯、至，许昌又有会军与病卒记录。南顿是王基抢据，安风津与寿春由诸葛诞负责；本页只标前者四次到达与返回。',refs=[XUCHANG,RUYANG,AI,END,Q('v028-b0013','別使諸葛誕督豫州諸軍從安風津擬壽春')]),
+ dict(title='王号与侯号的原文层次',text='本纪叙往事时使用景王称谓，但追命晋景王明确在264年；注引254年奏名写武阳侯，264年正文写舞阳忠武侯，保留字面异同，不用前称证明已在世称王。',refs=[REGENT,AFTER,Q('v004-b0027-n02','大將軍武陽侯臣師','《魏书》')]),
+ ],
+ glossary=[('护军','此处统辖诸将并主武官选举。'),('黄钺','朝廷授予重将的特殊军权仪物。')],
+ sourceScope='本书无独立本传。以卷四帝纪为年代主线，交叉核对卷九夏侯玄与何晏等传注、卷二十一傅嘏、卷二十七王基、卷二十八毌丘俭、邓艾、钟会诸传，并分层使用《魏略》《汉晋春秋》《魏氏春秋》《魏末传》及文钦书。无陈寿针对本人独立专评，生年、县籍不从书外补足。本页不声称穷尽全书所有提及司马师之处。',
+)

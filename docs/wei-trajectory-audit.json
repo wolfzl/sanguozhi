@@ -1,0 +1,3929 @@
+{
+  "cao-pi": {
+    "atlasPerson": "caopi",
+    "stops": [
+      {
+        "year": 220,
+        "coord": [
+          115.779,
+          33.844
+        ],
+        "ancientZh": "谯",
+        "ancientEn": "Qiao",
+        "modernZh": "安徽亳州城区一带",
+        "modernEn": "Bozhou area, Anhui",
+        "titleZh": "南征军次谯",
+        "titleEn": "Halted at Qiao on the southern march",
+        "descZh": "七月军次谯，宴飨六军及父老；点为谯城区域，不指认宴飨场地。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Halted at Qiao on the southern march. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0011：甲午，軍次于譙，大饗六軍及譙父老百姓于邑東。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0011",
+            "kind": "body",
+            "quote": "甲午，軍次于譙，大饗六軍及譙父老百姓于邑東。"
+          }
+        ],
+        "phaseId": "founding",
+        "careerId": "qiao"
+      },
+      {
+        "year": 220,
+        "coord": [
+          113.985,
+          34.033
+        ],
+        "ancientZh": "繁阳",
+        "ancientEn": "Fanyang",
+        "modernZh": "河南临颍繁城一带",
+        "modernEn": "Fancheng, Linying, Henan",
+        "titleZh": "繁阳升坛受禅",
+        "titleEn": "Ascended the throne at Fanyang",
+        "descZh": "本纪记于繁阳筑坛、升坛即位；此为颍阴繁阳亭，采用临颍繁城一带，不能误作河北繁阳。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Ascended the throne at Fanyang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0014：乃爲壇於繁陽。庚午，王升壇即阼，百官陪位。；v002-b0015：以潁陰之繁陽亭爲繁昌縣。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0014",
+            "kind": "body",
+            "quote": "乃爲壇於繁陽。庚午，王升壇即阼，百官陪位。"
+          },
+          {
+            "volume": "002",
+            "blockId": "v002-b0015",
+            "kind": "body",
+            "quote": "以潁陰之繁陽亭爲繁昌縣。"
+          }
+        ],
+        "phaseId": "founding",
+        "careerId": "throne"
+      },
+      {
+        "year": 220,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "始营洛阳宫并亲至",
+        "titleEn": "Arrived at Luoyang",
+        "descZh": "十二月开始营建洛阳宫并行幸洛阳；宫殿确址不单独指认。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Arrived at Luoyang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0015：十二月，初營洛陽宮，戊午幸洛陽。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0015",
+            "kind": "body",
+            "quote": "十二月，初營洛陽宮，戊午幸洛陽。"
+          }
+        ],
+        "phaseId": "founding",
+        "careerId": "throne"
+      },
+      {
+        "year": 222,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌汉魏故城一带",
+        "modernEn": "Historical Xu city, Xuchang, Henan",
+        "titleZh": "行幸许昌",
+        "titleEn": "Arrived at Xuchang",
+        "descZh": "正月行幸许昌，后自许昌南征；代表汉魏许城地域。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Arrived at Xuchang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0021：庚午，行幸許昌宮。；v002-b0028：帝自許昌南征，諸軍兵並進，權臨江拒守。十一月辛丑，行幸宛。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0021",
+            "kind": "body",
+            "quote": "庚午，行幸許昌宮。"
+          },
+          {
+            "volume": "002",
+            "blockId": "v002-b0028",
+            "kind": "body",
+            "quote": "帝自許昌南征，諸軍兵並進，權臨江拒守。十一月辛丑，行幸宛。"
+          }
+        ],
+        "phaseId": "consolidate",
+        "careerId": "southern-war"
+      },
+      {
+        "year": 222,
+        "coord": [
+          112.531,
+          32.991
+        ],
+        "ancientZh": "宛",
+        "ancientEn": "Wan",
+        "modernZh": "河南南阳城区一带",
+        "modernEn": "Nanyang area, Henan",
+        "titleZh": "南征驻宛",
+        "titleEn": "Stayed at Wan during the southern expedition",
+        "descZh": "十一月行幸宛；不把部将围攻江陵、濡须当作本人实到。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Stayed at Wan during the southern expedition. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0028：帝自許昌南征，諸軍兵並進，權臨江拒守。十一月辛丑，行幸宛。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0028",
+            "kind": "body",
+            "quote": "帝自許昌南征，諸軍兵並進，權臨江拒守。十一月辛丑，行幸宛。"
+          }
+        ],
+        "phaseId": "consolidate",
+        "careerId": "southern-war"
+      },
+      {
+        "year": 223,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "自宛还洛阳",
+        "titleEn": "Returned from Wan to Luoyang",
+        "descZh": "三月由宛返回洛阳宫，保留此次往返。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Returned from Wan to Luoyang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0029：三月丙申，行自宛還洛陽宮。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0029",
+            "kind": "body",
+            "quote": "三月丙申，行自宛還洛陽宮。"
+          }
+        ],
+        "phaseId": "consolidate",
+        "careerId": "southern-war"
+      },
+      {
+        "year": 224,
+        "coord": [
+          116.787,
+          32.576
+        ],
+        "ancientZh": "寿春",
+        "ancientEn": "Shouchun",
+        "modernZh": "安徽寿县古城一带",
+        "modernEn": "Shou County, Anhui",
+        "titleZh": "亲御龙舟至寿春",
+        "titleEn": "Sailed to Shouchun",
+        "descZh": "七月先幸许昌，八月循蔡、颍浮淮，亲御龙舟至寿春；坐标代表寿春城地区，不指认航道。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Sailed to Shouchun. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0032：秋七月，行東巡，幸許昌宮。；v002-b0032：八月，爲水軍，親御龍舟，循蔡、頴，浮淮，幸壽春。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0032",
+            "kind": "body",
+            "quote": "秋七月，行東巡，幸許昌宮。"
+          },
+          {
+            "volume": "002",
+            "blockId": "v002-b0032",
+            "kind": "body",
+            "quote": "八月，爲水軍，親御龍舟，循蔡、頴，浮淮，幸壽春。"
+          }
+        ],
+        "phaseId": "east224",
+        "careerId": "fleet224"
+      },
+      {
+        "year": 224,
+        "coord": [
+          119.413,
+          32.394
+        ],
+        "ancientZh": "广陵",
+        "ancientEn": "Guangling",
+        "modernZh": "江苏扬州广陵故城地区",
+        "modernEn": "Historical Guangling area, Yangzhou, Jiangsu",
+        "titleZh": "舟师至广陵",
+        "titleEn": "Reached Guangling with the fleet",
+        "descZh": "九月至广陵，赦青徐、调整诸将；与次年的临江引还分列。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Reached Guangling with the fleet. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0032：九月，遂至廣陵，赦青、徐二州，改易諸將守。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0032",
+            "kind": "body",
+            "quote": "九月，遂至廣陵，赦青、徐二州，改易諸將守。"
+          }
+        ],
+        "phaseId": "east224",
+        "careerId": "fleet224"
+      },
+      {
+        "year": 224,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌汉魏故城一带",
+        "modernEn": "Historical Xu city, Xuchang, Henan",
+        "titleZh": "返回许昌宫",
+        "titleEn": "Returned to Xuchang",
+        "descZh": "十月行还许昌宫，记录东巡后的返回。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Returned to Xuchang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0032：行還許昌宮。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0032",
+            "kind": "body",
+            "quote": "行還許昌宮。"
+          }
+        ],
+        "phaseId": "east224",
+        "careerId": "fleet224"
+      },
+      {
+        "year": 225,
+        "coord": [
+          115.779,
+          33.844
+        ],
+        "ancientZh": "谯",
+        "ancientEn": "Qiao",
+        "modernZh": "安徽亳州城区一带",
+        "modernEn": "Bozhou area, Anhui",
+        "titleZh": "再东征行幸谯",
+        "titleEn": "Reached Qiao on another eastern expedition",
+        "descZh": "五月行幸谯，八月舟师由谯循涡入淮；不另补中途未载的营址。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Reached Qiao on another eastern expedition. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0034：辛未，帝爲舟師東征。五月戊申，幸譙。；v002-b0036：八月，帝遂以舟師自譙循渦入淮，從陸道幸徐。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0034",
+            "kind": "body",
+            "quote": "辛未，帝爲舟師東征。五月戊申，幸譙。"
+          },
+          {
+            "volume": "002",
+            "blockId": "v002-b0036",
+            "kind": "body",
+            "quote": "八月，帝遂以舟師自譙循渦入淮，從陸道幸徐。"
+          }
+        ],
+        "phaseId": "last",
+        "careerId": "fleet225"
+      },
+      {
+        "year": 225,
+        "coord": [
+          119.413,
+          32.394
+        ],
+        "ancientZh": "广陵",
+        "ancientEn": "Guangling",
+        "modernZh": "江苏扬州广陵故城地区",
+        "modernEn": "Historical Guangling area, Yangzhou, Jiangsu",
+        "titleZh": "临江观兵，水冰引还",
+        "titleEn": "Reviewed the army at Guangling, then withdrew",
+        "descZh": "循涡入淮后从陆路到徐，十月再至广陵故城临江观兵；水道结冰、舟不能入江而退。此点代表广陵，非徐地或三国江岸的确址。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Reviewed the army at Guangling, then withdrew. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0036：八月，帝遂以舟師自譙循渦入淮，從陸道幸徐。；v002-b0036：冬十月，行幸廣陵故城，臨江觀兵，戎卒十餘萬，旌旗數百里。；v002-b0036：是歲大寒，水道冰，舟不得入江，乃引還。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0036",
+            "kind": "body",
+            "quote": "八月，帝遂以舟師自譙循渦入淮，從陸道幸徐。"
+          },
+          {
+            "volume": "002",
+            "blockId": "v002-b0036",
+            "kind": "body",
+            "quote": "冬十月，行幸廣陵故城，臨江觀兵，戎卒十餘萬，旌旗數百里。"
+          },
+          {
+            "volume": "002",
+            "blockId": "v002-b0036",
+            "kind": "body",
+            "quote": "是歲大寒，水道冰，舟不得入江，乃引還。"
+          }
+        ],
+        "phaseId": "last",
+        "careerId": "fleet225",
+        "includedEpisodesZh": [
+          "循涡入淮后从陆道幸徐；徐地确址未定，不另加坐标。"
+        ]
+      },
+      {
+        "year": 226,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "返洛阳并卒于嘉福殿",
+        "titleEn": "Returned to Luoyang and died",
+        "descZh": "正月返回洛阳，五月卒于嘉福殿；仅标生前返洛阳，不把身后葬首阳陵画作本人行程。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Returned to Luoyang and died. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v002-b0037：壬子，行還洛陽宮。；v002-b0037：丁巳，帝崩于嘉福殿，時年四十。",
+        "sourceRefs": [
+          {
+            "volume": "002",
+            "blockId": "v002-b0037",
+            "kind": "body",
+            "quote": "壬子，行還洛陽宮。"
+          },
+          {
+            "volume": "002",
+            "blockId": "v002-b0037",
+            "kind": "body",
+            "quote": "丁巳，帝崩于嘉福殿，時年四十。"
+          }
+        ],
+        "phaseId": "last",
+        "careerId": "death"
+      }
+    ]
+  },
+  "cao-rui": {
+    "atlasPerson": "caorui",
+    "stops": [
+      {
+        "year": 228,
+        "coord": [
+          108.86,
+          34.36
+        ],
+        "ancientZh": "长安",
+        "ancientEn": "Chang’an",
+        "modernZh": "陕西西安汉长安故城地区",
+        "modernEn": "Han Chang’an area, Xi’an, Shaanxi",
+        "titleZh": "亲至长安策应拒蜀",
+        "titleEn": "Visited Chang’an during the Shu offensive",
+        "descZh": "街亭战后本纪记行幸长安，不指认皇帝亲临街亭战场。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Visited Chang’an during the Shu offensive. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0006：丁未，行幸長安。夏四月丁酉，還洛陽宮。；v003-b0006：遣大將軍曹真都督關右，並進兵。右將軍張郃擊亮於街亭，大破之。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0006",
+            "kind": "body",
+            "quote": "丁未，行幸長安。夏四月丁酉，還洛陽宮。"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0006",
+            "kind": "body",
+            "quote": "遣大將軍曹真都督關右，並進兵。右將軍張郃擊亮於街亭，大破之。"
+          }
+        ],
+        "phaseId": "defense",
+        "careerId": "changan"
+      },
+      {
+        "year": 228,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "自长安返回洛阳",
+        "titleEn": "Returned from Chang’an to Luoyang",
+        "descZh": "四月还洛阳宫，保留西行后返回。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Returned from Chang’an to Luoyang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0006：丁未，行幸長安。夏四月丁酉，還洛陽宮。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0006",
+            "kind": "body",
+            "quote": "丁未，行幸長安。夏四月丁酉，還洛陽宮。"
+          }
+        ],
+        "phaseId": "defense",
+        "careerId": "changan"
+      },
+      {
+        "year": 230,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌汉魏故城一带",
+        "modernEn": "Historical Xu city, Xuchang, Henan",
+        "titleZh": "东巡到许昌",
+        "titleEn": "Visited Xuchang",
+        "descZh": "八月东巡至许昌；同时曹真、司马懿伐蜀，战场行程不作皇帝本人路线。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Visited Xuchang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0012：八月辛巳，行東巡，遣使者以特牛祠中嶽。乙未，幸許昌宮。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0012",
+            "kind": "body",
+            "quote": "八月辛巳，行東巡，遣使者以特牛祠中嶽。乙未，幸許昌宮。"
+          }
+        ],
+        "phaseId": "defense",
+        "careerId": "east230"
+      },
+      {
+        "year": 230,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "东巡后返洛阳",
+        "titleEn": "Returned to Luoyang after the eastern tour",
+        "descZh": "十月行还洛阳宫。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Returned to Luoyang after the eastern tour. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0012：九月，大雨，伊、洛、河、漢水溢，詔真等班師。冬十月乙卯，行還洛陽宮。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0012",
+            "kind": "body",
+            "quote": "九月，大雨，伊、洛、河、漢水溢，詔真等班師。冬十月乙卯，行還洛陽宮。"
+          }
+        ],
+        "phaseId": "defense",
+        "careerId": "east230"
+      },
+      {
+        "year": 232,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌汉魏故城一带",
+        "modernEn": "Historical Xu city, Xuchang, Henan",
+        "titleZh": "行幸许昌",
+        "titleEn": "Arrived at Xuchang",
+        "descZh": "四月行幸许昌；九月又幸摩陂，十二月还许昌，不把宫殿营建等同于皇帝连续居住。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Arrived at Xuchang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0015：夏四月壬寅，行幸許昌宮。；v003-b0015：九月，行幸摩陂，治許昌宮，起景福、承光殿。；v003-b0015：十二月，行還許昌宮。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0015",
+            "kind": "body",
+            "quote": "夏四月壬寅，行幸許昌宮。"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0015",
+            "kind": "body",
+            "quote": "九月，行幸摩陂，治許昌宮，起景福、承光殿。"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0015",
+            "kind": "body",
+            "quote": "十二月，行還許昌宮。"
+          }
+        ],
+        "phaseId": "tour",
+        "careerId": "tour232"
+      },
+      {
+        "year": 232,
+        "coord": [
+          113.22,
+          33.97
+        ],
+        "ancientZh": "摩陂",
+        "ancientEn": "Mopi",
+        "modernZh": "河南郏县地区（地域近似）",
+        "modernEn": "Jia County area, Henan; approximate regional position",
+        "titleZh": "九月行幸摩陂",
+        "titleEn": "Visited Mopi in the ninth month",
+        "descZh": "本纪记九月幸摩陂。采用河南郏县地区代表点，不指认摩陂井或宫馆确址。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Visited Mopi in the ninth month. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0015：九月，行幸摩陂，治許昌宮，起景福、承光殿。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0015",
+            "kind": "body",
+            "quote": "九月，行幸摩陂，治許昌宮，起景福、承光殿。"
+          }
+        ],
+        "phaseId": "tour",
+        "careerId": "tour232"
+      },
+      {
+        "year": 232,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌汉魏故城一带",
+        "modernEn": "Historical Xu city, Xuchang, Henan",
+        "titleZh": "摩陂行后返回许昌",
+        "titleEn": "Returned to Xuchang after visiting Mopi",
+        "descZh": "九月行幸摩陂后，十二月还许昌宫；保留这次返回，再接233年重访摩陂。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Returned to Xuchang after visiting Mopi. Coordinates approximate the historical locality; lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0015：十二月，行還許昌宮。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0015",
+            "kind": "body",
+            "quote": "十二月，行還許昌宮。"
+          }
+        ],
+        "phaseId": "tour",
+        "careerId": "tour232"
+      },
+      {
+        "year": 233,
+        "coord": [
+          113.22,
+          33.97
+        ],
+        "ancientZh": "摩陂",
+        "ancientEn": "Mopi",
+        "modernZh": "河南郏县地区（地域近似）",
+        "modernEn": "Jia County area, Henan; approximate regional position",
+        "titleZh": "再至摩陂观龙改元",
+        "titleEn": "Visited Mopi again and changed the era name",
+        "descZh": "本纪以郏之摩陂井中见青龙记二月行幸改元；祥瑞按当时叙事呈现，不作现代实证。此前十二月曾返许昌，故保留两次摩陂到达。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Visited Mopi again and changed the era name. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0016：青龍見郟之摩陂井中。二月丁酉，幸摩陂觀龍，於是改年；；v003-b0015：十二月，行還許昌宮。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0016",
+            "kind": "body",
+            "quote": "青龍見郟之摩陂井中。二月丁酉，幸摩陂觀龍，於是改年；"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0015",
+            "kind": "body",
+            "quote": "十二月，行還許昌宮。"
+          }
+        ],
+        "phaseId": "tour",
+        "careerId": "mopi233"
+      },
+      {
+        "year": 234,
+        "coord": [
+          116.787,
+          32.576
+        ],
+        "ancientZh": "寿春",
+        "ancientEn": "Shouchun",
+        "modernZh": "安徽寿县古城一带",
+        "modernEn": "Shou County, Anhui",
+        "titleZh": "东征至寿春录功",
+        "titleEn": "Reached Shouchun during the eastern campaign",
+        "descZh": "亲御龙舟东征，孙权在皇帝军队未至数百里时已退，曹叡再幸寿春；不标本人到合肥战场。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Reached Shouchun during the eastern campaign. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0023：秋七月壬寅，帝親御龍舟東征；v003-b0023：帝軍未至數百里，權遁走；v003-b0023：遂進軍幸壽春，錄諸將功，封賞各有差。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0023",
+            "kind": "body",
+            "quote": "秋七月壬寅，帝親御龍舟東征"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0023",
+            "kind": "body",
+            "quote": "帝軍未至數百里，權遁走"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0023",
+            "kind": "body",
+            "quote": "遂進軍幸壽春，錄諸將功，封賞各有差。"
+          }
+        ],
+        "phaseId": "east",
+        "careerId": "shouchun"
+      },
+      {
+        "year": 234,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌汉魏故城一带",
+        "modernEn": "Historical Xu city, Xuchang, Henan",
+        "titleZh": "东征后返回许昌",
+        "titleEn": "Returned to Xuchang after the eastern campaign",
+        "descZh": "八月行还许昌宫，结束本次东征。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Returned to Xuchang after the eastern campaign. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0023：辛巳，行還許昌宮。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0023",
+            "kind": "body",
+            "quote": "辛巳，行還許昌宮。"
+          }
+        ],
+        "phaseId": "east",
+        "careerId": "shouchun"
+      },
+      {
+        "year": 235,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "返回洛阳宫",
+        "titleEn": "Returned to Luoyang Palace",
+        "descZh": "八月行还洛阳宫，处于大治洛阳宫、切谏未纳的阶段。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Returned to Luoyang Palace. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0028：丁巳，行還洛陽宮。；v003-b0027：是時，大治洛陽宮，起昭陽、太極殿，築緫章觀。百姓失農時；v003-b0027：直臣楊阜、高堂隆等各數切諫，雖不能聽，常優容之。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0028",
+            "kind": "body",
+            "quote": "丁巳，行還洛陽宮。"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0027",
+            "kind": "body",
+            "quote": "是時，大治洛陽宮，起昭陽、太極殿，築緫章觀。百姓失農時"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0027",
+            "kind": "body",
+            "quote": "直臣楊阜、高堂隆等各數切諫，雖不能聽，常優容之。"
+          }
+        ],
+        "phaseId": "east",
+        "careerId": "palace"
+      },
+      {
+        "year": 235,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌汉魏故城一带",
+        "modernEn": "Historical Xu city, Xuchang, Henan",
+        "titleZh": "再幸许昌",
+        "titleEn": "Visited Xuchang again",
+        "descZh": "十一月再次行幸许昌，与上次洛阳返回分别记录。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Visited Xuchang again. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0028：十一月丁酉，行幸許昌宮。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0028",
+            "kind": "body",
+            "quote": "十一月丁酉，行幸許昌宮。"
+          }
+        ],
+        "phaseId": "east",
+        "careerId": "palace"
+      },
+      {
+        "year": 237,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "返回洛阳",
+        "titleEn": "Returned to Luoyang",
+        "descZh": "景初元年五月还洛阳宫；238年辽东战事由司马懿领军，239年本纪记曹叡卒于嘉福殿，未补画另一次迁行。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Returned to Luoyang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v003-b0033：五月己巳，行還洛陽宮。；v003-b0037：二年春正月，詔太尉司馬宣王帥衆討遼東。；v003-b0043：即日，帝崩于嘉福殿，時年三十六。癸丑，葬高平陵。",
+        "sourceRefs": [
+          {
+            "volume": "003",
+            "blockId": "v003-b0033",
+            "kind": "body",
+            "quote": "五月己巳，行還洛陽宮。"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0037",
+            "kind": "body",
+            "quote": "二年春正月，詔太尉司馬宣王帥衆討遼東。"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0043",
+            "kind": "body",
+            "quote": "即日，帝崩于嘉福殿，時年三十六。癸丑，葬高平陵。"
+          }
+        ],
+        "phaseId": "east",
+        "careerId": "law"
+      }
+    ]
+  },
+  "cao-mao": {
+    "atlasPerson": "caomao",
+    "stops": [
+      {
+        "year": 254,
+        "coord": [
+          115.15,
+          36.3
+        ],
+        "ancientZh": "元城",
+        "ancientEn": "Yuancheng",
+        "modernZh": "河北大名古元城地区",
+        "modernEn": "Historical Yuancheng area, Daming, Hebei",
+        "titleZh": "使者在元城迎立",
+        "titleEn": "Received the accession delegation at Yuancheng",
+        "descZh": "裴注《魏书》记奉法驾迎公于元城，是本人当时所在地；不把元城写成出生地或封邑。点为河北大名古元城地区近似。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Received the accession delegation at Yuancheng. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v004-b0028-n01：奉法駕，迎公于元城。",
+        "sourceRefs": [
+          {
+            "volume": "004",
+            "blockId": "v004-b0028-n01",
+            "kind": "peizhu",
+            "quote": "奉法駕，迎公于元城。",
+            "sourceBook": "《魏书》"
+          }
+        ],
+        "phaseId": "accession",
+        "careerId": "accession"
+      },
+      {
+        "year": 254,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "入洛阳，于太极前殿即位",
+        "titleEn": "Entered Luoyang and ascended the throne",
+        "descZh": "本纪明确入洛阳，步见太后后即位。玄武馆、掖门与宫殿作为同一次入洛过程合列，坐标不指认各门馆。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Entered Luoyang and ascended the throne. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v004-b0030：庚寅，公入于洛陽；v004-b0030：其日即皇帝位於太極前殿，百寮陪位者欣欣焉。；v004-b0030：十月己丑，公至于玄武館",
+        "sourceRefs": [
+          {
+            "volume": "004",
+            "blockId": "v004-b0030",
+            "kind": "body",
+            "quote": "庚寅，公入于洛陽"
+          },
+          {
+            "volume": "004",
+            "blockId": "v004-b0030",
+            "kind": "body",
+            "quote": "其日即皇帝位於太極前殿，百寮陪位者欣欣焉。"
+          },
+          {
+            "volume": "004",
+            "blockId": "v004-b0030",
+            "kind": "body",
+            "quote": "十月己丑，公至于玄武館"
+          }
+        ],
+        "phaseId": "accession",
+        "careerId": "accession"
+      },
+      {
+        "year": 256,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "亲幸太学问经",
+        "titleEn": "Visited the Imperial Academy",
+        "descZh": "本纪记录亲幸太学，与博士讲《易》《尚书》《礼记》；257年又幸辟雍。以洛阳地区作宫廷文教活动的代表点，不考定太学、辟雍建筑确址。此为在京活动阶段，不表示另一次迁入洛阳。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Visited the Imperial Academy. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v004-b0038：丙辰，帝幸太學；v004-b0039：二義不同，何者為是？；v004-b0047：五月辛未，帝幸辟雍，會命羣臣賦詩。",
+        "sourceRefs": [
+          {
+            "volume": "004",
+            "blockId": "v004-b0038",
+            "kind": "body",
+            "quote": "丙辰，帝幸太學"
+          },
+          {
+            "volume": "004",
+            "blockId": "v004-b0039",
+            "kind": "body",
+            "quote": "二義不同，何者為是？"
+          },
+          {
+            "volume": "004",
+            "blockId": "v004-b0047",
+            "kind": "body",
+            "quote": "五月辛未，帝幸辟雍，會命羣臣賦詩。"
+          }
+        ],
+        "phaseId": "study",
+        "careerIds": [
+          "taixue",
+          "biyong"
+        ],
+        "includedEpisodesZh": [
+          "257年幸辟雍命群臣赋诗；与256年太学问经合列文教阶段，坐标不表示两处建筑相同。"
+        ]
+      },
+      {
+        "year": 257,
+        "coord": [
+          115.06,
+          33.4
+        ],
+        "ancientZh": "项",
+        "ancientEn": "Xiang",
+        "modernZh": "河南沈丘槐店回族镇一带",
+        "modernEn": "Huaidian Hui Town area, Shenqiu, Henan",
+        "titleZh": "随太后临戎，车驾驻项",
+        "titleEn": "Stayed at Xiang during the campaign",
+        "descZh": "正文明确车驾驻项，前线由司马昭临淮指挥。古项县按今沈丘槐店地区近似，非今项城市区或秣陵；不把寿春围攻画为本人到场。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Stayed at Xiang during the campaign. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v004-b0048：今宜皇太后與朕暫共臨戎，速定醜虜，時寧東夏。；v004-b0050：今車駕駐項，大將軍恭行天罰，前臨淮浦。",
+        "sourceRefs": [
+          {
+            "volume": "004",
+            "blockId": "v004-b0048",
+            "kind": "body",
+            "quote": "今宜皇太后與朕暫共臨戎，速定醜虜，時寧東夏。"
+          },
+          {
+            "volume": "004",
+            "blockId": "v004-b0050",
+            "kind": "body",
+            "quote": "今車駕駐項，大將軍恭行天罰，前臨淮浦。"
+          }
+        ],
+        "phaseId": "study",
+        "careerId": "xiang"
+      },
+      {
+        "year": 260,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "出云龙门后遇害",
+        "titleEn": "Killed after leaving Yunlong Gate",
+        "descZh": "本纪记率左右出云龙门、拔刃入阵；裴注《汉晋春秋》记成济刺帝。以洛阳故城地区近似，不定位交战门阙或复原道路；257年后何月返洛未载，不另造返程年月。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Killed after leaving Yunlong Gate. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v004-b0060：此兒便將左右出雲龍門，雷戰鼓，躬自拔刃；v004-b0060-n01：濟即前刺帝，刃出於背。；v004-b0060：五月己丑，高貴鄉公卒，年二十。",
+        "sourceRefs": [
+          {
+            "volume": "004",
+            "blockId": "v004-b0060",
+            "kind": "body",
+            "quote": "此兒便將左右出雲龍門，雷戰鼓，躬自拔刃"
+          },
+          {
+            "volume": "004",
+            "blockId": "v004-b0060-n01",
+            "kind": "peizhu",
+            "quote": "濟即前刺帝，刃出於背。",
+            "sourceBook": "《汉晋春秋》"
+          },
+          {
+            "volume": "004",
+            "blockId": "v004-b0060",
+            "kind": "body",
+            "quote": "五月己丑，高貴鄉公卒，年二十。"
+          }
+        ],
+        "phaseId": "last",
+        "careerId": "death"
+      }
+    ]
+  },
+  "cao-shuang": {
+    "atlasPerson": "caoshuang",
+    "stops": [
+      {
+        "year": 239,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "入卧内受托辅少主",
+        "titleEn": "Received the regency mandate at court",
+        "descZh": "明帝病中引曹爽入卧内授大将军；明帝纪又记当日帝卒嘉福殿。采用洛阳宫廷地域近似，不指认卧内确址。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Received the regency mandate at court. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v009-b0034：帝寢疾，乃引爽入臥內，拜大將軍，假節鉞，都督中外諸軍事，錄尚書事，與太尉司馬宣王並受遺詔輔少主。；v003-b0043：即日，帝崩于嘉福殿",
+        "sourceRefs": [
+          {
+            "volume": "009",
+            "blockId": "v009-b0034",
+            "kind": "body",
+            "quote": "帝寢疾，乃引爽入臥內，拜大將軍，假節鉞，都督中外諸軍事，錄尚書事，與太尉司馬宣王並受遺詔輔少主。"
+          },
+          {
+            "volume": "003",
+            "blockId": "v003-b0043",
+            "kind": "body",
+            "quote": "即日，帝崩于嘉福殿"
+          }
+        ],
+        "phaseId": "rise",
+        "careerId": "regent"
+      },
+      {
+        "year": 244,
+        "coord": [
+          108.86,
+          34.36
+        ],
+        "ancientZh": "长安",
+        "ancientEn": "Chang’an",
+        "modernZh": "陕西西安汉长安故城地区",
+        "modernEn": "Han Chang’an area, Xi’an, Shaanxi",
+        "titleZh": "西至长安集军",
+        "titleEn": "Assembled the army at Chang’an",
+        "descZh": "本传明确曹爽西至长安，大发兵六七万；此点为长安地区，不把关中转输各地都作本人经过。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Assembled the army at Chang’an. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v009-b0035：正始五年，爽乃西至長安，大發卒六七萬人，從駱穀入。",
+        "sourceRefs": [
+          {
+            "volume": "009",
+            "blockId": "v009-b0035",
+            "kind": "body",
+            "quote": "正始五年，爽乃西至長安，大發卒六七萬人，從駱穀入。"
+          }
+        ],
+        "phaseId": "campaign",
+        "careerId": "campaign"
+      },
+      {
+        "year": 244,
+        "coord": [
+          107.93,
+          33.98
+        ],
+        "ancientZh": "骆谷",
+        "ancientEn": "Luo Valley",
+        "modernZh": "陕西周至西南傥骆道北段山区",
+        "modernEn": "Northern Tang–Luo mountain route, southwest of Zhouzhi, Shaanxi",
+        "titleZh": "从骆谷入，受阻引还",
+        "titleEn": "Advanced through Luo Valley and withdrew",
+        "descZh": "由骆谷入数百里后为蜀军据山所阻，最终引还。采用傥骆道北段山区近似点；裴注三岭争险合列为退军经历，不在确址未详处另画战场。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Advanced through Luo Valley and withdrew. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v009-b0035：正始五年，爽乃西至長安，大發卒六七萬人，從駱穀入。；v009-b0035：入穀行數百里，賊因山爲固，兵不得進。；v009-b0035：爽不恱，乃引軍還。；v009-b0035-n03：費禕進兵據三嶺以截爽，爽爭嶮苦戰，僅乃得過。",
+        "sourceRefs": [
+          {
+            "volume": "009",
+            "blockId": "v009-b0035",
+            "kind": "body",
+            "quote": "正始五年，爽乃西至長安，大發卒六七萬人，從駱穀入。"
+          },
+          {
+            "volume": "009",
+            "blockId": "v009-b0035",
+            "kind": "body",
+            "quote": "入穀行數百里，賊因山爲固，兵不得進。"
+          },
+          {
+            "volume": "009",
+            "blockId": "v009-b0035",
+            "kind": "body",
+            "quote": "爽不恱，乃引軍還。"
+          },
+          {
+            "volume": "009",
+            "blockId": "v009-b0035-n03",
+            "kind": "peizhu",
+            "quote": "費禕進兵據三嶺以截爽，爽爭嶮苦戰，僅乃得過。",
+            "sourceBook": "《汉晋春秋》"
+          }
+        ],
+        "phaseId": "campaign",
+        "careerId": "campaign",
+        "includedEpisodesZh": [
+          "裴注《汉晋春秋》记费祎据三岭截退路，曹爽争险苦战而过；三岭确址不详，合列退军经历。"
+        ]
+      },
+      {
+        "year": 249,
+        "coord": [
+          112.52,
+          34.45
+        ],
+        "ancientZh": "高平陵地区",
+        "ancientEn": "Gaoping Mausoleum region",
+        "modernZh": "河南洛阳南部伊洛流域（地域近似）",
+        "modernEn": "Yi–Luo valley south of Luoyang, Henan; regional approximation",
+        "titleZh": "随帝朝陵，政变中受困",
+        "titleEn": "Accompanied the emperor to Gaoping Mausoleum",
+        "descZh": "随曹芳朝高平陵时曹爽兄弟全在外；政变后裴注《晋纪》记留车驾宿伊水南。此点仅取洛阳南部伊洛区域代表，不考定陵址、宿营地或距离。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Accompanied the emperor to Gaoping Mausoleum. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v009-b0037：十年正月，車駕朝高平陵，爽兄弟皆從。；v009-b0038-n01：爽留車駕宿伊水南，伐木爲鹿角，發屯甲兵數千人以爲衞。",
+        "sourceRefs": [
+          {
+            "volume": "009",
+            "blockId": "v009-b0037",
+            "kind": "body",
+            "quote": "十年正月，車駕朝高平陵，爽兄弟皆從。"
+          },
+          {
+            "volume": "009",
+            "blockId": "v009-b0038-n01",
+            "kind": "peizhu",
+            "quote": "爽留車駕宿伊水南，伐木爲鹿角，發屯甲兵數千人以爲衞。",
+            "sourceBook": "干宝《晋纪》"
+          }
+        ],
+        "phaseId": "last",
+        "careerId": "gaoping",
+        "includedEpisodesZh": [
+          "裴注干宝《晋纪》记留车驾宿伊水南；伊水南仅方位，无法另定营地坐标。"
+        ]
+      },
+      {
+        "year": 249,
+        "coord": [
+          112.657,
+          34.725
+        ],
+        "ancientZh": "洛阳",
+        "ancientEn": "Luoyang",
+        "modernZh": "河南洛阳汉魏故城一带",
+        "modernEn": "Han–Wei city site, Luoyang, Henan",
+        "titleZh": "免官后还第，继而被诛",
+        "titleEn": "Returned home after dismissal and was executed",
+        "descZh": "正文记以侯还第，后收杀夷三族；《魏末传》明确返家后洛阳县围其第。此点代表洛阳私第，未定处刑确址。许昌只是未实行的建议，不标旅行。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Returned home after dismissal and was executed. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v009-b0038：遂免爽兄弟，以侯還第。；v009-b0040：於是收爽、羲、訓、晏、颺、謐、軌、勝、範、當等，皆伏誅，夷三族。；v009-b0038-n03：爽兄弟歸家，勑洛陽縣發民八百人",
+        "sourceRefs": [
+          {
+            "volume": "009",
+            "blockId": "v009-b0038",
+            "kind": "body",
+            "quote": "遂免爽兄弟，以侯還第。"
+          },
+          {
+            "volume": "009",
+            "blockId": "v009-b0040",
+            "kind": "body",
+            "quote": "於是收爽、羲、訓、晏、颺、謐、軌、勝、範、當等，皆伏誅，夷三族。"
+          },
+          {
+            "volume": "009",
+            "blockId": "v009-b0038-n03",
+            "kind": "peizhu",
+            "quote": "爽兄弟歸家，勑洛陽縣發民八百人",
+            "sourceBook": "《魏末传》"
+          }
+        ],
+        "phaseId": "last",
+        "careerIds": [
+          "surrender",
+          "death"
+        ]
+      }
+    ]
+  },
+  "sima-shi": {
+    "atlasPerson": "simashi",
+    "stops": [
+      {
+        "year": 255,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌汉魏故城一带",
+        "modernEn": "Historical Xu city, Xuchang, Henan",
+        "titleZh": "东征会王基于许昌",
+        "titleEn": "Met Wang Ji at Xuchang",
+        "descZh": "王基统许昌军，与司马师会于许昌；裴注记司马师目瘤术后仍请东征。点为汉魏许昌故城地域。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Met Wang Ji at Xuchang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v027-b0026：以基爲行監軍、假節，統許昌軍，適與景王會於許昌。；v021-b0057-n02：是時景王新割目瘤，創甚；v021-b0057-n02：我請輿疾而東。",
+        "sourceRefs": [
+          {
+            "volume": "027",
+            "blockId": "v027-b0026",
+            "kind": "body",
+            "quote": "以基爲行監軍、假節，統許昌軍，適與景王會於許昌。"
+          },
+          {
+            "volume": "021",
+            "blockId": "v021-b0057-n02",
+            "kind": "peizhu",
+            "quote": "是時景王新割目瘤，創甚",
+            "sourceBook": "《汉晋春秋》"
+          },
+          {
+            "volume": "021",
+            "blockId": "v021-b0057-n02",
+            "kind": "peizhu",
+            "quote": "我請輿疾而東。",
+            "sourceBook": "《汉晋春秋》"
+          }
+        ],
+        "phaseId": "campaign",
+        "careerId": "xuchang"
+      },
+      {
+        "year": 255,
+        "coord": [
+          114.47,
+          33.7
+        ],
+        "ancientZh": "汝阳",
+        "ancientEn": "Ruyang",
+        "modernZh": "河南商水西北古汝阳县域一带",
+        "modernEn": "Northwestern Shangshui area, Henan; historical Ruyang county",
+        "titleZh": "本人屯汝阳",
+        "titleEn": "Stationed at Ruyang",
+        "descZh": "正文明确大将军屯汝阳，而王基前锋据南顿。此为汝南郡古汝阳县，取今商水西北地域近似，不能误用洛阳西南今汝阳县。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Stationed at Ruyang. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0013：大將軍屯汝陽，使監軍王基督前鋒諸軍據南頓以待之。；v028-b0013：今諸軍皆堅壁勿與戰。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0013",
+            "kind": "body",
+            "quote": "大將軍屯汝陽，使監軍王基督前鋒諸軍據南頓以待之。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0013",
+            "kind": "body",
+            "quote": "今諸軍皆堅壁勿與戰。"
+          }
+        ],
+        "phaseId": "campaign",
+        "careerId": "ruyang"
+      },
+      {
+        "year": 255,
+        "coord": [
+          114.62,
+          33.77
+        ],
+        "ancientZh": "乐嘉",
+        "ancientEn": "Lejia",
+        "modernZh": "河南项城、商水北部沙颍河地区（地域近似）",
+        "modernEn": "Sha–Ying River area north of Xiangcheng and Shangshui, Henan; regional approximation",
+        "titleZh": "会邓艾军于乐嘉",
+        "titleEn": "Joined Deng Ai at Lejia",
+        "descZh": "邓艾先趣乐嘉作浮桥，司马师至而据之，文钦夜袭后为其军击破。乐嘉为淮北沙颍河战区近似点，非四川同名地；城址与浮桥确址未考定，不画古道。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Joined Deng Ai at Lejia. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0035：先趣樂嘉城，作浮橋。司馬景王至，遂據之。；v028-b0013：大將軍遣兗州刺史鄧艾督泰山諸軍萬餘人至樂嘉，示弱以誘之，大將軍尋自洙至。；v028-b0013：大將軍縱驍騎追擊，大破之，欽遁走。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0035",
+            "kind": "body",
+            "quote": "先趣樂嘉城，作浮橋。司馬景王至，遂據之。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0013",
+            "kind": "body",
+            "quote": "大將軍遣兗州刺史鄧艾督泰山諸軍萬餘人至樂嘉，示弱以誘之，大將軍尋自洙至。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0013",
+            "kind": "body",
+            "quote": "大將軍縱驍騎追擊，大破之，欽遁走。"
+          }
+        ],
+        "phaseId": "campaign",
+        "careerId": "lejia"
+      },
+      {
+        "year": 255,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌汉魏故城一带",
+        "modernEn": "Historical Xu city, Xuchang, Henan",
+        "titleZh": "平乱后卒于许昌",
+        "titleEn": "Died at Xuchang after the campaign",
+        "descZh": "明确病卒许昌，故保留由战区返回的终点；司马昭后续回洛阳不是司马师生前行迹，264年追命也不标站。 历史地点为今地附近的近似定位；连线只表示先后关系，不复原古代道路。",
+        "descEn": "Died at Xuchang after the campaign. Coordinates approximate the historical locality; connecting lines indicate sequence, not reconstructed ancient roads.",
+        "quoteZh": "v004-b0032：司馬景王薨于許昌。二月丁巳，以衞將軍司馬文王為大將軍，錄尚書事。；v028-b0055：景王薨於許昌，文王總統六軍",
+        "sourceRefs": [
+          {
+            "volume": "004",
+            "blockId": "v004-b0032",
+            "kind": "body",
+            "quote": "司馬景王薨于許昌。二月丁巳，以衞將軍司馬文王為大將軍，錄尚書事。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0055",
+            "kind": "body",
+            "quote": "景王薨於許昌，文王總統六軍"
+          }
+        ],
+        "phaseId": "campaign",
+        "careerId": "death"
+      }
+    ]
+  },
+  "sima-zhao": {
+    "atlasPerson": "simazhao",
+    "stops": [
+      {
+        "year": 255,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌地区",
+        "modernEn": "Xuchang area, Henan",
+        "titleZh": "许昌总领六军",
+        "titleEn": "Assumed command at Xuchang",
+        "descZh": "司马师死于许昌，昭总领六军；诏原欲其留屯许昌，不等于未曾到达。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "After Sima Shi died at Xuchang, Zhao assumed command of the army there. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0055：景王薨於許昌，文王總統六軍；v028-b0055：權留衛將軍屯許昌為內外之援",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0055",
+            "kind": "body",
+            "quote": "景王薨於許昌，文王總統六軍"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0055",
+            "kind": "body",
+            "quote": "權留衛將軍屯許昌為內外之援"
+          }
+        ],
+        "phaseId": "rise",
+        "careerId": "regency"
+      },
+      {
+        "year": 255,
+        "coord": [
+          112.65,
+          34.68
+        ],
+        "ancientZh": "雒水南",
+        "ancientEn": "South bank of the Luo",
+        "modernZh": "河南洛阳洛河南岸区域",
+        "modernEn": "Southern Luo River area, Luoyang, Henan",
+        "titleZh": "带军还雒水南",
+        "titleEn": "Returned south of the Luo River",
+        "descZh": "与傅嘏等俱发，回到雒水南驻屯，随后拜大将军辅政；不据此定位某一宫门或军营。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Returned with Fu Gu to a camp south of the Luo River before taking the regency. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0055：輒與衛將軍俱發，還到雒水南屯住。；v004-b0032：以衞將軍司馬文王為大將軍，錄尚書事。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0055",
+            "kind": "body",
+            "quote": "輒與衛將軍俱發，還到雒水南屯住。"
+          },
+          {
+            "volume": "004",
+            "blockId": "v004-b0032",
+            "kind": "body",
+            "quote": "以衞將軍司馬文王為大將軍，錄尚書事。"
+          }
+        ],
+        "phaseId": "rise",
+        "careerId": "regency"
+      },
+      {
+        "year": 258,
+        "coord": [
+          116.78,
+          32.58
+        ],
+        "ancientZh": "寿春",
+        "ancientEn": "Shouchun",
+        "modernZh": "安徽寿县古寿春围城区域，丘头军营未定位",
+        "modernEn": "Shouchun siege area, Shouxian, Anhui; Qiutou camp unlocated",
+        "titleZh": "屯丘头围寿春，后亲临破城",
+        "titleEn": "Directed the Shouchun siege and personally approached the lines",
+        "descZh": "257年本人屯丘头，258年自临围并督进破城。合并取明确的寿春围城区域作代表；丘头军营确址未定，不把寿春坐标当成丘头古址，也不虚造两点间迁徙。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Commanded from Qiutou in 257, then personally approached the siege lines before Shouchun fell in 258. The point represents Shouchun; Qiutou camp remains unlocated. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0022：大將軍司馬文王督中外諸軍二十六萬眾，臨淮討之。大將軍屯丘頭。；v028-b0023：大將軍乃自臨圍，四面進兵，同時鼓譟登城；v004-b0052：三年春二月，大將軍司馬文王陷壽春城，斬諸葛誕。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0022",
+            "kind": "body",
+            "quote": "大將軍司馬文王督中外諸軍二十六萬眾，臨淮討之。大將軍屯丘頭。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0023",
+            "kind": "body",
+            "quote": "大將軍乃自臨圍，四面進兵，同時鼓譟登城"
+          },
+          {
+            "volume": "004",
+            "blockId": "v004-b0052",
+            "kind": "body",
+            "quote": "三年春二月，大將軍司馬文王陷壽春城，斬諸葛誕。"
+          }
+        ],
+        "phaseId": "huainan",
+        "careerIds": [
+          "siege",
+          "victory"
+        ],
+        "dateLabelZh": "257—258年",
+        "dateLabelEn": "257—258 CE",
+        "includedEpisodesZh": [
+          "257年屯丘头，诸军合围寿春；丘头营地不另定位。",
+          "258年亲临围，四面进兵，二月破寿春。"
+        ]
+      },
+      {
+        "year": 264,
+        "coord": [
+          108.86,
+          34.36
+        ],
+        "ancientZh": "长安",
+        "ancientEn": "Chang’an",
+        "modernZh": "陕西西安汉魏长安地区",
+        "modernEn": "Historical Chang’an area, Xi’an, Shaanxi",
+        "titleZh": "西至长安时钟会已死",
+        "titleEn": "Reached Chang’an after Zhong Hui died",
+        "descZh": "本书记军至长安时钟会已死。这里只标本人明确到达长安，不沿邓艾、钟会的行军线补出蜀地足迹。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "He reached Chang’an after Zhong Hui had already been killed; this does not place Zhao in Shu. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0068：軍至長安，會果已死，咸如所策。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0068",
+            "kind": "body",
+            "quote": "軍至長安，會果已死，咸如所策。"
+          }
+        ],
+        "phaseId": "west",
+        "careerId": "changan"
+      }
+    ]
+  },
+  "deng-ai": {
+    "atlasPerson": "dengai",
+    "stops": [
+      {
+        "year": 208,
+        "coord": [
+          114.36,
+          33.01
+        ],
+        "ancientZh": "汝南",
+        "ancientEn": "Runan",
+        "modernZh": "河南汝南地区，郡域示意",
+        "modernEn": "Runan commandery area, Henan",
+        "titleZh": "少孤迁汝南",
+        "titleEn": "Moved to Runan in youth",
+        "descZh": "曹操破荆州后迁汝南，为农民养犊。迁居确年未载，208仅为按上下文的排序值；点示郡域，不作出生地。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Moved to Runan after Cao Cao took Jingzhou; the exact relocation year and dwelling are unknown. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0028：少孤，太祖破荊州，徙汝南，為農民養犢。年十二，隨母至潁川",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0028",
+            "kind": "body",
+            "quote": "少孤，太祖破荊州，徙汝南，為農民養犢。年十二，隨母至潁川"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "early",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 220,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "颍川",
+        "ancientEn": "Yingchuan",
+        "modernZh": "河南许昌一带，颍川郡域示意",
+        "modernEn": "Yingchuan commandery area near Xuchang, Henan",
+        "titleZh": "十二岁随母至颍川",
+        "titleEn": "Accompanied his mother to Yingchuan",
+        "descZh": "十二岁随母到颍川，后来在典农系统任职。确年未载，220仅作早年两次迁居的顺序值，不据此反推生年。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Reached Yingchuan with his mother at age twelve; 220 is only an ordering value, not a dated event or birth-year calculation. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0028：少孤，太祖破荊州，徙汝南，為農民養犢。年十二，隨母至潁川；v028-b0028：為都尉學士，以口吃，不得作幹佐。為稻田守叢草吏。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0028",
+            "kind": "body",
+            "quote": "少孤，太祖破荊州，徙汝南，為農民養犢。年十二，隨母至潁川"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0028",
+            "kind": "body",
+            "quote": "為都尉學士，以口吃，不得作幹佐。為稻田守叢草吏。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "early",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 241,
+        "coord": [
+          116.78,
+          32.58
+        ],
+        "ancientZh": "寿春",
+        "ancientEn": "Shouchun",
+        "modernZh": "安徽寿县古寿春及淮南地区",
+        "modernEn": "Shouchun and Huainan area, Shouxian, Anhui",
+        "titleZh": "巡陈项以东至寿春",
+        "titleEn": "Inspected the region from Chen and Xiang to Shouchun",
+        "descZh": "本人巡陈、项以东至寿春，建议开渠屯田。巡察确年未载；241是正文开广漕渠年，仅用于合并经历的排序。陈、项为巡行范围，不复原逐段道路。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Inspected the region east of Chen and Xiang as far as Shouchun and proposed canals and farming. The inspection year is unknown; 241 dates implementation. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0029：使艾行陳、項已東至壽春。；v028-b0029：宜開河渠，可以引水澆溉，大積軍糧，又通運漕之道。；v028-b0029：宣王善之，事皆施行。正始二年，乃開廣漕渠",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0029",
+            "kind": "body",
+            "quote": "使艾行陳、項已東至壽春。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0029",
+            "kind": "body",
+            "quote": "宜開河渠，可以引水澆溉，大積軍糧，又通運漕之道。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0029",
+            "kind": "body",
+            "quote": "宣王善之，事皆施行。正始二年，乃開廣漕渠"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "canals",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated",
+        "mergedLocations": [
+          {
+            "year": 241,
+            "ancientZh": "陈",
+            "coord": [
+              114.9,
+              33.73
+            ],
+            "careerId": "canals"
+          },
+          {
+            "year": 241,
+            "ancientZh": "项",
+            "coord": [
+              115.06,
+              33.4
+            ],
+            "careerId": "canals"
+          },
+          {
+            "year": 241,
+            "ancientZh": "寿春",
+            "coord": [
+              116.78,
+              32.58
+            ],
+            "careerId": "canals"
+          }
+        ]
+      },
+      {
+        "year": 249,
+        "coord": [
+          103.35,
+          34.7
+        ],
+        "ancientZh": "洮城",
+        "ancientEn": "Taocheng",
+        "modernZh": "甘肃临潭及洮河上游宽泛区域，古城确址未定",
+        "modernEn": "Broad upper Tao River area near Lintan, Gansu; ancient site uncertain",
+        "titleZh": "白水北留屯，夜驰先据洮城",
+        "titleEn": "Moved from north of Baishui to hold Taocheng",
+        "descZh": "正文仅明白水北留屯、洮城在水北距屯六十里及夜驰先据；这不是263年蜀地白水。本点只取洮河上游宽泛区域，不声称已识别古城或白水确址。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Held a camp north of Baishui, then rushed to Taocheng sixty li away. This is not the Shu Baishui episode of 263; the ancient sites are unresolved. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0030：嘉平元年，與征西將軍郭淮拒蜀偏將軍姜維。；v028-b0030：於是留艾屯白水北。；v028-b0030：洮城在水北，去艾屯六十里。；v028-b0030：艾即夜潛軍徑到，維果來渡，而艾先至據城，得以不敗。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0030",
+            "kind": "body",
+            "quote": "嘉平元年，與征西將軍郭淮拒蜀偏將軍姜維。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0030",
+            "kind": "body",
+            "quote": "於是留艾屯白水北。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0030",
+            "kind": "body",
+            "quote": "洮城在水北，去艾屯六十里。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0030",
+            "kind": "body",
+            "quote": "艾即夜潛軍徑到，維果來渡，而艾先至據城，得以不敗。"
+          }
+        ],
+        "phaseId": "frontier",
+        "careerId": "taocheng"
+      },
+      {
+        "year": 255,
+        "coord": [
+          114.62,
+          33.77
+        ],
+        "ancientZh": "乐嘉",
+        "ancientEn": "Lejia",
+        "modernZh": "河南周口地区，乐嘉城战区近似",
+        "modernEn": "Lejia theater in the Zhoukou region, Henan",
+        "titleZh": "赴乐嘉作桥，追文钦并移屯",
+        "titleEn": "Built a bridge at Lejia and pursued Wen Qin",
+        "descZh": "兼道先赴乐嘉作桥，文钦败后追至丘头；随后受令据肥阳而自行移屯附亭。代表点取乐嘉战区；丘头、肥阳、附亭的确址未统一确认，保留次序而不补精确坐标。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Hastened to Lejia, pursued Wen Qin to Qiutou, then shifted from a Feiyang order to Futing. The later sites remain unlocated on this overview. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0035：艾斬之，兼道進軍，先趣樂嘉城，作浮橋。；v028-b0035：艾追之至丘頭。；v028-b0035：艾以與賊勢相遠，非要害之地，輒移屯附亭",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0035",
+            "kind": "body",
+            "quote": "艾斬之，兼道進軍，先趣樂嘉城，作浮橋。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0035",
+            "kind": "body",
+            "quote": "艾追之至丘頭。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0035",
+            "kind": "body",
+            "quote": "艾以與賊勢相遠，非要害之地，輒移屯附亭"
+          }
+        ],
+        "phaseId": "huainan",
+        "careerId": "lejia",
+        "includedEpisodesZh": [
+          "乐嘉作浮桥；追文钦至丘头。",
+          "诸葛诞令据肥阳，邓艾判断非要害而移屯附亭；遣将黎浆拒吴，不标部将战地为本人到达。"
+        ]
+      },
+      {
+        "year": 255,
+        "coord": [
+          103.86,
+          35.38
+        ],
+        "ancientZh": "狄道",
+        "ancientEn": "Didao",
+        "modernZh": "甘肃临洮一带",
+        "modernEn": "Lintao area, Gansu",
+        "titleZh": "解狄道之围",
+        "titleEn": "Relieved Didao",
+        "descZh": "本传明记解王经狄道围，姜维退钟提；钟提为对手退驻地，不纳本人站点。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Relieved Wang Jing at Didao; Jiang Wei’s withdrawal site is not added as Deng Ai’s location. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0035：解雍州刺史王經圍於狄道，姜維退駐鍾提",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0035",
+            "kind": "body",
+            "quote": "解雍州刺史王經圍於狄道，姜維退駐鍾提"
+          }
+        ],
+        "phaseId": "huainan",
+        "careerId": "didao"
+      },
+      {
+        "year": 257,
+        "coord": [
+          105.9,
+          34.45
+        ],
+        "ancientZh": "段谷",
+        "ancientEn": "Duangu",
+        "modernZh": "甘肃天水东南战区示意，战址未定",
+        "modernEn": "Southeastern Tianshui theater, Gansu; exact battlefield uncertain",
+        "titleZh": "段谷破维与次年长城拒敌",
+        "titleEn": "Won at Duangu and later defended Changcheng",
+        "descZh": "256年据武城山争险，继于段谷大破姜维；257年又拒维于长城。点代表段谷战区，武城山及陇右长城不另定址、不画作万里长城；257为合并排序值。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Fought from Wuchengshan to Duangu in 256 and resisted at Changcheng in 257. This point represents only the Duangu theater; the other sites remain unlocated. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0037：艾據武城山以相持。；v028-b0037：艾與戰於段谷，大破之。；v028-b0037：二年，拒姜維於長城，維退還。遷征西將軍",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0037",
+            "kind": "body",
+            "quote": "艾據武城山以相持。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0037",
+            "kind": "body",
+            "quote": "艾與戰於段谷，大破之。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0037",
+            "kind": "body",
+            "quote": "二年，拒姜維於長城，維退還。遷征西將軍"
+          }
+        ],
+        "phaseId": "huainan",
+        "careerIds": [
+          "duangu",
+          "changcheng"
+        ],
+        "dateLabelZh": "256—257年",
+        "dateLabelEn": "256—257 CE",
+        "includedEpisodesZh": [
+          "256年武城山相持后，段谷大破姜维。",
+          "257年拒姜维于长城；此为陇右战事地名，确址未定。"
+        ]
+      },
+      {
+        "year": 262,
+        "coord": [
+          103.77,
+          34.99
+        ],
+        "ancientZh": "侯和",
+        "ancientEn": "Houhe",
+        "modernZh": "甘肃卓尼、临洮南部地区，战区近似",
+        "modernEn": "Zhuoni and southern Lintao region, Gansu",
+        "titleZh": "侯和再破姜维",
+        "titleEn": "Defeated Jiang Wei at Houhe",
+        "descZh": "正文记景元三年破姜维于侯和。坐标只示陇右战区，姜维随后退驻沓中不能自动成为邓艾这一年的驻地。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Defeated Jiang Wei at Houhe in 262; the point is a regional approximation and does not follow Jiang Wei to Tazhong. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0038：景元三年，又破維於侯和，維卻保沓中。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0038",
+            "kind": "body",
+            "quote": "景元三年，又破維於侯和，維卻保沓中。"
+          }
+        ],
+        "phaseId": "huainan",
+        "careerId": "houhe"
+      },
+      {
+        "year": 263,
+        "coord": [
+          104.68,
+          32.94
+        ],
+        "ancientZh": "阴平",
+        "ancientEn": "Yinping",
+        "modernZh": "甘肃文县阴平地区",
+        "modernEn": "Yinping area near Wenxian, Gansu",
+        "titleZh": "由阴平起险道",
+        "titleEn": "Started the hazardous route from Yinping",
+        "descZh": "追维到阴平后建议绕道，冬十月自阴平入无人险地。只标出发区域，不把建议经行的每个亭道当作已精确识别的实到点。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "After reaching Yinping, led troops through an uninhabited mountain route in the tenth month. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0060：鄧艾追姜維到陰平；v028-b0039：冬十月，艾自陰平道行無人之地七百餘里，鑿山通道，造作橋閣。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0060",
+            "kind": "body",
+            "quote": "鄧艾追姜維到陰平"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0039",
+            "kind": "body",
+            "quote": "冬十月，艾自陰平道行無人之地七百餘里，鑿山通道，造作橋閣。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "yinping"
+      },
+      {
+        "year": 263,
+        "coord": [
+          104.75,
+          32.2
+        ],
+        "ancientZh": "江由",
+        "ancientEn": "Jiangyou",
+        "modernZh": "四川平武南坝古江油关一带",
+        "modernEn": "Historical Jiangyou area near Nanba, Pingwu, Sichuan",
+        "titleZh": "至江由，马邈降",
+        "titleEn": "Reached Jiangyou and accepted Ma Miao’s surrender",
+        "descZh": "正文写先登至江由、马邈降。点取平武南坝历史地域，不用现代江油市区替代。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Reached Jiangyou and received Ma Miao’s surrender; the point uses the historical area near Nanba, not modern Jiangyou city. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0039：先登至江由，蜀守將馬邈降。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0039",
+            "kind": "body",
+            "quote": "先登至江由，蜀守將馬邈降。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "yinping"
+      },
+      {
+        "year": 263,
+        "coord": [
+          104.28,
+          30.98
+        ],
+        "ancientZh": "雒",
+        "ancientEn": "Luo",
+        "modernZh": "四川广汉古雒县一带",
+        "modernEn": "Historical Luo county near Guanghan, Sichuan",
+        "titleZh": "破绵竹后进军雒县",
+        "titleEn": "Advanced to Luo after defeating Mianzhu",
+        "descZh": "绵竹破诸葛瞻后进军雒，刘禅遣使请降。将同段进军合并取雒为代表；汉绵竹县取德阳黄许一带近似，不与现代绵竹市重合。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "After defeating Zhuge Zhan at Mianzhu, advanced to Luo and received Liu Shan’s surrender request. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0039：忠、纂馳還更戰，大破之，斬瞻及尚書張遵等首，進軍到雒。；v028-b0039：劉禪遣使奉皇帝璽綬，為箋詣艾請降。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0039",
+            "kind": "body",
+            "quote": "忠、纂馳還更戰，大破之，斬瞻及尚書張遵等首，進軍到雒。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0039",
+            "kind": "body",
+            "quote": "劉禪遣使奉皇帝璽綬，為箋詣艾請降。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "conquest",
+        "mergedLocations": [
+          {
+            "year": 263,
+            "ancientZh": "绵竹",
+            "coord": [
+              104.46,
+              31.25
+            ],
+            "careerId": "conquest"
+          },
+          {
+            "year": 263,
+            "ancientZh": "雒",
+            "coord": [
+              104.28,
+              30.98
+            ],
+            "careerId": "conquest"
+          }
+        ]
+      },
+      {
+        "year": 263,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "ancientEn": "Chengdu",
+        "modernZh": "四川成都地区",
+        "modernEn": "Chengdu area, Sichuan",
+        "titleZh": "入成都受降并安纳",
+        "titleEn": "Entered Chengdu and settled the surrender",
+        "descZh": "本人至成都，受刘禅面缚之降，约束军士不虏掠。前一站雒为遣使请降，不能合并成同一地点受面降。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Entered Chengdu, received Liu Shan in person, and restrained looting. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0040：艾至成都，禪率太子諸王及群臣六十餘人面縛輿櫬詣軍門；v028-b0040：檢禦將士，無所虜略，綏納降附，使復舊業，蜀人稱焉。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0040",
+            "kind": "body",
+            "quote": "艾至成都，禪率太子諸王及群臣六十餘人面縛輿櫬詣軍門"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0040",
+            "kind": "body",
+            "quote": "檢禦將士，無所虜略，綏納降附，使復舊業，蜀人稱焉。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "conquest"
+      },
+      {
+        "year": 264,
+        "coord": [
+          104.38,
+          31.25
+        ],
+        "ancientZh": "绵竹西",
+        "ancientEn": "West of Mianzhu",
+        "modernZh": "四川德阳黄许以西宽泛区域，遇害地未定",
+        "modernEn": "Broad area west of historical Mianzhu near Huangxu, Deyang, Sichuan",
+        "titleZh": "被迎还后遇害于绵竹西",
+        "titleEn": "Killed west of Mianzhu while being brought back",
+        "descZh": "被槛车送还后，本营将士迎艾，卫瓘遣田续等在绵竹西杀之。点只表示汉绵竹县以西区域，不指认囚车行程或行刑确址。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "After his troops recovered him from the prison cart, Wei Guan’s men killed him west of Mianzhu. The exact place is unknown. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0044：瓘遣田續等討艾，遇於綿竹西，斬之。子忠與艾俱死；v028-b0044：艾本營將士追出艾檻車，迎還。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0044",
+            "kind": "body",
+            "quote": "瓘遣田續等討艾，遇於綿竹西，斬之。子忠與艾俱死"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0044",
+            "kind": "body",
+            "quote": "艾本營將士追出艾檻車，迎還。"
+          }
+        ],
+        "phaseId": "end",
+        "careerId": "death"
+      }
+    ]
+  },
+  "zhong-hui": {
+    "atlasPerson": "zhonghui",
+    "stops": [
+      {
+        "year": 255,
+        "coord": [
+          113.83,
+          34.022
+        ],
+        "ancientZh": "许昌",
+        "ancientEn": "Xuchang",
+        "modernZh": "河南许昌地区",
+        "modernEn": "Xuchang area, Henan",
+        "titleZh": "许昌参与统军谋议",
+        "titleEn": "Advised the command at Xuchang",
+        "descZh": "司马师死许昌后，司马昭统军，钟会谋谟帷幄；这是本人参议的驻军背景，不另补未载的战场站。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Advised Sima Zhao after Sima Shi’s death at Xuchang. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0055：景王薨於許昌，文王總統六軍，會謀謨帷幄。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0055",
+            "kind": "body",
+            "quote": "景王薨於許昌，文王總統六軍，會謀謨帷幄。"
+          }
+        ],
+        "phaseId": "regency",
+        "careerId": "regency"
+      },
+      {
+        "year": 255,
+        "coord": [
+          112.65,
+          34.68
+        ],
+        "ancientZh": "雒水南",
+        "ancientEn": "South bank of the Luo",
+        "modernZh": "河南洛阳洛河南岸区域",
+        "modernEn": "Southern Luo River area, Luoyang, Henan",
+        "titleZh": "与傅嘏等返雒水南",
+        "titleEn": "Returned south of the Luo with Fu Gu",
+        "descZh": "与傅嘏谋使司马昭带军回还，本人俱发至雒水南；点只示驻屯区域。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Joined Fu Gu and Sima Zhao in returning to a camp south of the Luo River. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0055：會與嘏謀，使嘏表上，輒與衛將軍俱發，還到雒水南屯住。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0055",
+            "kind": "body",
+            "quote": "會與嘏謀，使嘏表上，輒與衛將軍俱發，還到雒水南屯住。"
+          }
+        ],
+        "phaseId": "regency",
+        "careerId": "regency"
+      },
+      {
+        "year": 257,
+        "coord": [
+          116.78,
+          32.58
+        ],
+        "ancientZh": "寿春",
+        "ancientEn": "Shouchun",
+        "modernZh": "安徽寿县古寿春围城地区",
+        "modernEn": "Shouchun siege area, Shouxian, Anhui",
+        "titleZh": "随昭围寿春，密策全氏出降",
+        "titleEn": "Accompanied Zhao and induced the Quan clan to surrender",
+        "descZh": "257年明记随昭至寿春，密作全氏书信，城中全怿等由此降。围城延至258年，不把全氏出降年月硬定为始围当日。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Accompanied Zhao to Shouchun in 257 and used forged family letters to induce surrender during the siege. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0056：及誕反，車駕住項，文王至壽春，會復從行。；v028-b0057：會建策，密為輝、儀作書；v028-b0057：說吳中怒懌等不能拔壽春，欲盡誅諸將家，故逃來歸命。；v028-b0057：懌等恐懼，遂將所領開東城門出降",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0056",
+            "kind": "body",
+            "quote": "及誕反，車駕住項，文王至壽春，會復從行。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0057",
+            "kind": "body",
+            "quote": "會建策，密為輝、儀作書"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0057",
+            "kind": "body",
+            "quote": "說吳中怒懌等不能拔壽春，欲盡誅諸將家，故逃來歸命。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0057",
+            "kind": "body",
+            "quote": "懌等恐懼，遂將所領開東城門出降"
+          }
+        ],
+        "phaseId": "huainan",
+        "careerId": "shouchun",
+        "dateLabelZh": "257—258年",
+        "dateLabelEn": "257—258 CE"
+      },
+      {
+        "year": 263,
+        "coord": [
+          107.02,
+          33.07
+        ],
+        "ancientZh": "汉中",
+        "ancientEn": "Hanzhong",
+        "modernZh": "陕西汉中盆地，地域示意",
+        "modernEn": "Hanzhong basin, Shaanxi",
+        "titleZh": "经汉中，西出阳安口",
+        "titleEn": "Crossed Hanzhong and moved west through Yang’an Pass",
+        "descZh": "分从斜谷、骆谷入，诸军至汉中，本人径过二城西出阳安口。代表点取汉中盆地，不据并行军路线给本人同时标两个谷道，也不指定阳安口争议关址。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Crossed Hanzhong and passed west through Yang’an; parallel valley columns do not prove that he personally used both valleys. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0058：會統十餘萬眾，分從斜谷、駱谷入。；v028-b0058：諸軍數道平行，至漢中。；v028-b0058：會徑過，西出陽安口，遣人祭諸葛亮之墓。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0058",
+            "kind": "body",
+            "quote": "會統十餘萬眾，分從斜谷、駱谷入。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0058",
+            "kind": "body",
+            "quote": "諸軍數道平行，至漢中。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0058",
+            "kind": "body",
+            "quote": "會徑過，西出陽安口，遣人祭諸葛亮之墓。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "hanzhong"
+      },
+      {
+        "year": 263,
+        "coord": [
+          105.53,
+          32.21
+        ],
+        "ancientZh": "剑阁",
+        "ancientEn": "Jiange",
+        "modernZh": "四川剑阁剑门关地区",
+        "modernEn": "Jianmen Pass area, Jiange, Sichuan",
+        "titleZh": "攻剑阁不克而退",
+        "titleEn": "Failed to force Jiange and withdrew",
+        "descZh": "诸葛绪军归钟会后，会攻剑阁不克引退。部将田章奉遣入江由，不使钟会本人多出江由站。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "After taking over Zhuge Xu’s army, attacked Jiange unsuccessfully and withdrew; Tian Zhang’s separate advance is not Zhong Hui’s itinerary. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0060：會欲專軍勢，密白緒畏懦不進，檻車徵還。；v028-b0060：軍悉屬會，進攻劍閣，不克，引退",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0060",
+            "kind": "body",
+            "quote": "會欲專軍勢，密白緒畏懦不進，檻車徵還。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0060",
+            "kind": "body",
+            "quote": "軍悉屬會，進攻劍閣，不克，引退"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "jiange"
+      },
+      {
+        "year": 263,
+        "coord": [
+          104.75,
+          31.46
+        ],
+        "ancientZh": "涪县",
+        "ancientEn": "Fu county",
+        "modernZh": "四川绵阳古涪县地区",
+        "modernEn": "Historical Fu county area, Mianyang, Sichuan",
+        "titleZh": "进至涪，受姜维降",
+        "titleEn": "Reached Fu and received Jiang Wei’s surrender",
+        "descZh": "邓艾破绵竹后本人进至涪；姜维奉蜀主命来降。与邓艾入成都受刘禅面降的地点与先后分开。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Reached Fu after Deng Ai defeated Mianzhu and received Jiang Wei there, distinct from Liu Shan’s surrender to Deng Ai at Chengdu. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0060：會乃進軍至涪；v028-b0060：便從東道詣會降。；v028-b0061：臣據涪縣為東西勢援。",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0060",
+            "kind": "body",
+            "quote": "會乃進軍至涪"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0060",
+            "kind": "body",
+            "quote": "便從東道詣會降。"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0061",
+            "kind": "body",
+            "quote": "臣據涪縣為東西勢援。"
+          }
+        ],
+        "phaseId": "shu",
+        "careerId": "fuxian"
+      },
+      {
+        "year": 264,
+        "coord": [
+          104.07,
+          30.66
+        ],
+        "ancientZh": "成都",
+        "ancientEn": "Chengdu",
+        "modernZh": "四川成都地区",
+        "modernEn": "Chengdu area, Sichuan",
+        "titleZh": "成都称兵后遭军众杀死",
+        "titleEn": "Rebelled and was killed in Chengdu",
+        "descZh": "奉命进军成都，正月十五日到，次日矫遗诏拘诸将，十八日军众起兵，钟会与姜维被杀。不把谋划中的长安、孟津、洛阳当成已到。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Arrived on the fifteenth day, detained officers the next day and was killed during the uprising on the eighteenth. Planned destinations are excluded. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v028-b0063：敕會並進軍成都；v028-b0063：會以五年正月十五日至；v028-b0063：其明日，悉請護軍、郡守、牙門騎督以上及蜀之故官；v028-b0063：矯太后遺詔，使會起兵廢文王；v028-b0063：所請群官，悉閉著益州諸曹屋中；v028-b0064：十八日日中，烈軍兵與烈兒雷鼓出門，諸軍兵不期皆鼓譟出；v028-b0064：眾既格斬維，爭赴殺會。會時年四十",
+        "sourceRefs": [
+          {
+            "volume": "028",
+            "blockId": "v028-b0063",
+            "kind": "body",
+            "quote": "敕會並進軍成都"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0063",
+            "kind": "body",
+            "quote": "會以五年正月十五日至"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0063",
+            "kind": "body",
+            "quote": "其明日，悉請護軍、郡守、牙門騎督以上及蜀之故官"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0063",
+            "kind": "body",
+            "quote": "矯太后遺詔，使會起兵廢文王"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0063",
+            "kind": "body",
+            "quote": "所請群官，悉閉著益州諸曹屋中"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0064",
+            "kind": "body",
+            "quote": "十八日日中，烈軍兵與烈兒雷鼓出門，諸軍兵不期皆鼓譟出"
+          },
+          {
+            "volume": "028",
+            "blockId": "v028-b0064",
+            "kind": "body",
+            "quote": "眾既格斬維，爭赴殺會。會時年四十"
+          }
+        ],
+        "phaseId": "end",
+        "careerId": "rebellion"
+      }
+    ]
+  },
+  "zhang-liao": {
+    "atlasPerson": "zhangliao",
+    "stops": [
+      {
+        "year": 198,
+        "coord": [
+          117.98,
+          34.3
+        ],
+        "ancientZh": "下邳",
+        "ancientEn": "Xiapi",
+        "modernZh": "江苏睢宁古邳地区",
+        "modernEn": "Historical Xiapi near Gupi, Suining, Jiangsu",
+        "titleZh": "从吕布在徐州，后下邳降曹",
+        "titleEn": "Served Lü Bu in Xu and surrendered at Xiapi",
+        "descZh": "早年曾赴京都、河北募兵，后随吕布东奔徐州；确切驻处未载，本点以198年明确归降的下邳代表这一阶段，不把州名徐州径作现代徐州市区。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Earlier recruitment journeys are known only broadly; this point represents the documented surrender at Xiapi in 198. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0002：何進遣詣河北募兵，得千餘人。還，進敗，以兵屬董卓。卓敗，以兵屬呂布；v017-b0002：從布東奔徐州，領魯相，時年二十八。；v017-b0002：太祖破呂布於下邳，遼將其衆降，拜中郎將，賜爵關內侯。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "何進遣詣河北募兵，得千餘人。還，進敗，以兵屬董卓。卓敗，以兵屬呂布"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "從布東奔徐州，領魯相，時年二十八。"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "太祖破呂布於下邳，遼將其衆降，拜中郎將，賜爵關內侯。"
+          }
+        ],
+        "phaseId": "early",
+        "careerIds": [
+          "early",
+          "xiapi"
+        ],
+        "dateLabelZh": "至198年",
+        "dateLabelEn": "By 198 CE"
+      },
+      {
+        "year": 200,
+        "coord": [
+          114.53,
+          35.59
+        ],
+        "ancientZh": "白马",
+        "ancientEn": "Baima",
+        "modernZh": "河南滑县白马地区",
+        "modernEn": "Baima area near Huaxian, Henan",
+        "titleZh": "与关羽为前锋解白马围",
+        "titleEn": "Served as vanguard at Baima",
+        "descZh": "张辽与关羽前登击破颜良军，具体斩良归关羽；本点只标共同前锋到达战区。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Served with Guan Yu in the vanguard at Baima; the personal killing of Yan Liang belongs to Guan Yu. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v001-b0047：使張遼、關羽前登，擊破，斬良。",
+        "sourceRefs": [
+          {
+            "volume": "001",
+            "blockId": "v001-b0047",
+            "kind": "body",
+            "quote": "使張遼、關羽前登，擊破，斬良。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "baima"
+      },
+      {
+        "year": 201,
+        "coord": [
+          118.35,
+          34.55
+        ],
+        "ancientZh": "东海三公山",
+        "ancientEn": "Sangongshan in Donghai",
+        "modernZh": "江苏东海郡历史地域，三公山确址未定",
+        "modernEn": "Historical Donghai commandery area, Jiangsu; Sangongshan site uncertain",
+        "titleZh": "围昌豨，独上三公山招降",
+        "titleEn": "Besieged and persuaded Chang Xi at Sangongshan",
+        "descZh": "袁绍败后围昌豨于东海、独上三公山。确年与山址未定，201只作前后履历间的排序值；点仅示东海郡地域，不定位现代同名山。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Besieged Chang Xi in Donghai and visited him on Sangongshan; the year and mountain site are unknown. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0002：與夏侯淵圍昌豨於東海；v017-b0002：遼遂單身上三公山，入豨家，拜妻子。豨歡喜，隨詣太祖。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "與夏侯淵圍昌豨於東海"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "遼遂單身上三公山，入豨家，拜妻子。豨歡喜，隨詣太祖。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "changxi",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 205,
+        "coord": [
+          114.63,
+          36.28
+        ],
+        "ancientZh": "邺",
+        "ancientEn": "Ye",
+        "modernZh": "河北临漳古邺城及河北战区",
+        "modernEn": "Historical Ye near Linzhang and the Hebei theater",
+        "titleZh": "黎阳、邺与河北别徇后还邺",
+        "titleEn": "Returned to Ye after the Hebei campaigns",
+        "descZh": "先后从攻黎阳、邺，拔阴安，又徇赵国、常山、海滨，最后还邺。确年未载，205只作合并排序；代表点取明确返回的邺，海滨不另捏造驻点。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Campaigns included Liyang, Ye, Yin’an, Zhao and Changshan before returning to Ye; 205 is an ordering value, not a precise date. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0002：從討袁譚、袁尙於黎陽，有功，行中堅將軍。；v017-b0002：復從攻鄴，鄴破，遼別徇趙國、常山；v017-b0002：別將徇海濱，破遼東賊柳毅等。還鄴；v017-b0002：使遼與樂進拔陰安，徙其民河南。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "從討袁譚、袁尙於黎陽，有功，行中堅將軍。"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "復從攻鄴，鄴破，遼別徇趙國、常山"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "別將徇海濱，破遼東賊柳毅等。還鄴"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "使遼與樂進拔陰安，徙其民河南。"
+          }
+        ],
+        "phaseId": "hebei",
+        "careerId": "hebei",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated",
+        "mergedLocations": [
+          {
+            "year": 205,
+            "ancientZh": "黎阳",
+            "coord": [
+              114.55,
+              35.67
+            ],
+            "careerId": "hebei"
+          },
+          {
+            "year": 205,
+            "ancientZh": "阴安",
+            "coord": [
+              115.04,
+              36.02
+            ],
+            "careerId": "hebei"
+          },
+          {
+            "year": 205,
+            "ancientZh": "邺",
+            "coord": [
+              114.63,
+              36.28
+            ],
+            "careerId": "hebei"
+          },
+          {
+            "year": 205,
+            "ancientZh": "赵国",
+            "coord": [
+              114.48,
+              36.6
+            ],
+            "careerId": "hebei"
+          },
+          {
+            "year": 205,
+            "ancientZh": "常山",
+            "coord": [
+              114.58,
+              38.14
+            ],
+            "careerId": "hebei"
+          },
+          {
+            "year": 205,
+            "ancientZh": "还邺",
+            "coord": [
+              114.63,
+              36.28
+            ],
+            "careerId": "hebei"
+          }
+        ]
+      },
+      {
+        "year": 206,
+        "coord": [
+          113.94,
+          33.81
+        ],
+        "ancientZh": "临颍",
+        "ancientEn": "Linying",
+        "modernZh": "河南临颍地区；江夏仅作郡域留存",
+        "modernEn": "Linying, Henan; Jiangxia retained as a broad commandery region",
+        "titleZh": "定江夏诸县后还屯临颍",
+        "titleEn": "Returned to Linying after campaigning in Jiangxia",
+        "descZh": "别击荆州、定江夏诸县后还屯临颍。确年未载，206只作柳城前的排序；江夏坐标只示郡域，不指认任何未载县城。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Returned to Linying after securing counties in Jiangxia; the exact year and county itinerary are unknown. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0002：復別擊荆州，定江夏諸縣，還屯臨潁，封都亭侯。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "復別擊荆州，定江夏諸縣，還屯臨潁，封都亭侯。"
+          }
+        ],
+        "phaseId": "hebei",
+        "careerId": "jiangxia",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated",
+        "mergedLocations": [
+          {
+            "year": 206,
+            "ancientZh": "江夏郡域",
+            "coord": [
+              114.45,
+              30.8
+            ],
+            "careerId": "jiangxia"
+          },
+          {
+            "year": 206,
+            "ancientZh": "临颍",
+            "coord": [
+              113.94,
+              33.81
+            ],
+            "careerId": "jiangxia"
+          }
+        ]
+      },
+      {
+        "year": 207,
+        "coord": [
+          120.45,
+          41.57
+        ],
+        "ancientZh": "柳城",
+        "ancientEn": "Liucheng",
+        "modernZh": "辽宁朝阳柳城历史地域，非战场确址",
+        "modernEn": "Historical Liucheng area near Chaoyang, Liaoning; not an exact battlefield",
+        "titleZh": "从征柳城，遇敌受麾奋击",
+        "titleEn": "Joined the Liucheng campaign and led an attack",
+        "descZh": "本传记从征袁尚于柳城，遇敌劝战受麾。点表示此次远征地域，不把柳城城址与斩蹋顿战场断定在同一处。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Joined the campaign toward Liucheng and urged battle on encountering the enemy; the marker does not identify the exact battlefield. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0002：從征袁尙於柳城，卒與虜遇，遼勸太祖戰，氣甚奮；v017-b0002：太祖壯之，自以所持麾授遼。遂擊，大破之，斬單于蹋頓。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "從征袁尙於柳城，卒與虜遇，遼勸太祖戰，氣甚奮"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0002",
+            "kind": "body",
+            "quote": "太祖壯之，自以所持麾授遼。遂擊，大破之，斬單于蹋頓。"
+          }
+        ],
+        "phaseId": "north",
+        "careerId": "wuhuan"
+      },
+      {
+        "year": 208,
+        "coord": [
+          113.86,
+          34.27
+        ],
+        "ancientZh": "长社",
+        "ancientEn": "Changshe",
+        "modernZh": "河南长葛老城地区近似",
+        "modernEn": "Old-city area near Changge, Henan",
+        "titleZh": "受命屯长社",
+        "titleEn": "Was assigned to garrison Changshe",
+        "descZh": "荆州未定时遣屯长社，确年未载，208仅作排序。临发军乱的发生处未载，不标成长社营内已发生之事。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Was assigned to Changshe before Jingzhou was settled; the preceding mutiny’s location is unknown. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0003：時荆州未定，復遣遼屯長社。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0003",
+            "kind": "body",
+            "quote": "時荆州未定，復遣遼屯長社。"
+          }
+        ],
+        "phaseId": "huainan",
+        "careerId": "changshe",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 209,
+        "coord": [
+          116.46,
+          30.74
+        ],
+        "ancientZh": "灊山天柱山",
+        "ancientEn": "Tianzhushan in Qian",
+        "modernZh": "安徽潜山天柱山地区",
+        "modernEn": "Tianzhushan area, Qianshan, Anhui",
+        "titleZh": "登险破陈兰梅成",
+        "titleEn": "Defeated Chen Lan and Mei Cheng in the mountains",
+        "descZh": "本人至山下安营进攻，斩陈兰、梅成。确年未载，209只作履历次序值；采用山地范围，不定位具体营地、攀登路径或寨址。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Camped below the mountain and defeated Chen Lan and Mei Cheng; the exact year and paths are unknown. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0003：灊中有天柱山，高峻二十餘里，道險狹，步徑裁通，蘭等壁其上。；v017-b0003：遂進到山下安營，攻之，斬蘭成首，盡虜其衆。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0003",
+            "kind": "body",
+            "quote": "灊中有天柱山，高峻二十餘里，道險狹，步徑裁通，蘭等壁其上。"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0003",
+            "kind": "body",
+            "quote": "遂進到山下安營，攻之，斬蘭成首，盡虜其衆。"
+          }
+        ],
+        "phaseId": "huainan",
+        "careerId": "qianshan",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 216,
+        "coord": [
+          117.87,
+          31.6
+        ],
+        "ancientZh": "居巢",
+        "ancientEn": "Juchao",
+        "modernZh": "安徽巢湖古居巢地区",
+        "modernEn": "Historical Juchao area near Chaohu, Anhui",
+        "titleZh": "合肥破围后移屯居巢",
+        "titleEn": "Moved from Hefei to Juchao after the defense",
+        "descZh": "215年合肥逆击、坚守并追退军，216年曹操循战处后增兵、徙屯居巢；保留先后两地，以明确的后驻居巢作代表，216为合并排序。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Defended Hefei in 215, then moved to Juchao in 216. This marker represents the later garrison. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0004：使遼與樂進、李典等將七千餘人屯合肥。；v017-b0004：於是遼夜募敢從之士，得八百人；v017-b0004：權守合肥十餘日，城不可拔，乃引退。遼率諸軍追擊，幾復獲權。；v017-b0004：乃增遼兵，多留諸軍，徙屯居巢。；v017-b0004：建安二十一年，太祖復征孫權，到合肥",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0004",
+            "kind": "body",
+            "quote": "使遼與樂進、李典等將七千餘人屯合肥。"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0004",
+            "kind": "body",
+            "quote": "於是遼夜募敢從之士，得八百人"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0004",
+            "kind": "body",
+            "quote": "權守合肥十餘日，城不可拔，乃引退。遼率諸軍追擊，幾復獲權。"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0004",
+            "kind": "body",
+            "quote": "乃增遼兵，多留諸軍，徙屯居巢。"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0004",
+            "kind": "body",
+            "quote": "建安二十一年，太祖復征孫權，到合肥"
+          }
+        ],
+        "phaseId": "huainan",
+        "careerIds": [
+          "hefei",
+          "juchao"
+        ],
+        "dateLabelZh": "215—216年",
+        "dateLabelEn": "215—216 CE",
+        "mergedLocations": [
+          {
+            "year": 215,
+            "ancientZh": "合肥",
+            "coord": [
+              117.27,
+              31.86
+            ],
+            "careerId": "hefei"
+          },
+          {
+            "year": 216,
+            "ancientZh": "居巢",
+            "coord": [
+              117.87,
+              31.6
+            ],
+            "careerId": "juchao"
+          }
+        ]
+      },
+      {
+        "year": 219,
+        "coord": [
+          114.9,
+          33.73
+        ],
+        "ancientZh": "陈郡",
+        "ancientEn": "Chen commandery",
+        "modernZh": "河南周口淮阳地区；摩陂取郏县区域",
+        "modernEn": "Huaiyang area, Zhoukou; Mobei represented near Jiaxian, Henan",
+        "titleZh": "未及救樊，会摩陂还屯陈郡",
+        "titleEn": "Met Cao Cao at Mobei and moved to Chen",
+        "descZh": "救樊未至围已解，随后在摩陂会曹操、还屯陈郡。保留调防先后，不将樊城纳本人实到点。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "The siege was already relieved before he arrived; he met Cao Cao at Mobei and returned to Chen. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0005：遼未至，徐晃已破關羽，仁圍解。；v017-b0005：遼與太祖會摩陂。；v017-b0005：還屯陳郡。文帝即王位，轉前將軍。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0005",
+            "kind": "body",
+            "quote": "遼未至，徐晃已破關羽，仁圍解。"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0005",
+            "kind": "body",
+            "quote": "遼與太祖會摩陂。"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0005",
+            "kind": "body",
+            "quote": "還屯陳郡。文帝即王位，轉前將軍。"
+          }
+        ],
+        "phaseId": "relief",
+        "careerId": "mobei",
+        "mergedLocations": [
+          {
+            "year": 219,
+            "ancientZh": "摩陂",
+            "coord": [
+              113.21,
+              33.97
+            ],
+            "careerId": "mobei"
+          },
+          {
+            "year": 219,
+            "ancientZh": "陈郡",
+            "coord": [
+              114.9,
+              33.73
+            ],
+            "careerId": "mobei"
+          }
+        ]
+      },
+      {
+        "year": 220,
+        "coord": [
+          117.27,
+          31.86
+        ],
+        "ancientZh": "合肥",
+        "ancientEn": "Hefei",
+        "modernZh": "安徽合肥地区",
+        "modernEn": "Hefei area, Anhui",
+        "titleZh": "曹丕统事后再屯合肥",
+        "titleEn": "Returned to Hefei under Cao Pi",
+        "descZh": "曹丕即王位后，张辽转前将军，再遣还屯合肥。此次回返与215年守城分站保留。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Returned to garrison Hefei after Cao Pi became king, a distinct return after the earlier defense. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0005：還屯陳郡。文帝即王位，轉前將軍。；v017-b0005：孫權復叛，遣遼還屯合肥，進遼爵都鄕侯。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0005",
+            "kind": "body",
+            "quote": "還屯陳郡。文帝即王位，轉前將軍。"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0005",
+            "kind": "body",
+            "quote": "孫權復叛，遣遼還屯合肥，進遼爵都鄕侯。"
+          }
+        ],
+        "phaseId": "relief",
+        "careerId": "return"
+      },
+      {
+        "year": 221,
+        "coord": [
+          114.77,
+          34.55
+        ],
+        "ancientZh": "雍丘",
+        "ancientEn": "Yongqiu",
+        "modernZh": "河南杞县古雍丘地区",
+        "modernEn": "Historical Yongqiu near Qixian, Henan",
+        "titleZh": "朝洛阳后还屯雍丘患病",
+        "titleEn": "Returned to Yongqiu after court at Luoyang",
+        "descZh": "黄初二年本人朝洛阳宫，后还屯雍丘得疾。帝迎其就行在之处未详，不另补某宫馆点。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Attended court in Luoyang and returned to Yongqiu, where he became ill; the imperial traveling court’s location is unspecified. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0005：黃初二年，遼朝洛陽宮；v017-b0005：遼還屯雍丘，得疾。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0005",
+            "kind": "body",
+            "quote": "黃初二年，遼朝洛陽宮"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0005",
+            "kind": "body",
+            "quote": "遼還屯雍丘，得疾。"
+          }
+        ],
+        "phaseId": "late",
+        "careerId": "court",
+        "mergedLocations": [
+          {
+            "year": 221,
+            "ancientZh": "洛阳",
+            "coord": [
+              112.657,
+              34.725
+            ],
+            "careerId": "court"
+          },
+          {
+            "year": 221,
+            "ancientZh": "雍丘",
+            "coord": [
+              114.77,
+              34.55
+            ],
+            "careerId": "court"
+          }
+        ]
+      },
+      {
+        "year": 222,
+        "coord": [
+          119.42,
+          32.4
+        ],
+        "ancientZh": "江都",
+        "ancientEn": "Jiangdu",
+        "modernZh": "江苏扬州古江都县地区，非现代江都区中心",
+        "modernEn": "Historical Jiangdu county near Yangzhou, Jiangsu; not modern Jiangdu district center",
+        "titleZh": "海陵临江后病卒江都",
+        "titleEn": "Died at Jiangdu after reaching Hailing",
+        "descZh": "带病乘舟与曹休至海陵临江、与诸将破吕范，病笃卒江都。同段临江与终年合并；海陵在泰州，古江都取扬州城区附近，不用现代同名区中心。 地点为历史地域或战区的近似示意；连线只表示概括后的先后关系，不复原古代道路。",
+        "descEn": "Reached Hailing by boat, joined the fighting against Lü Fan, then died at historical Jiangdu; the two places are retained in the merged record. Coordinates approximate a historical locality or theater; lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v017-b0005：帝遣遼乘舟，與曹休至海陵，臨江。；v017-b0005：是歳，遼與諸將破權將呂範。遼病篤，遂薨於江都。帝爲流涕，諡曰剛侯。子虎嗣。",
+        "sourceRefs": [
+          {
+            "volume": "017",
+            "blockId": "v017-b0005",
+            "kind": "body",
+            "quote": "帝遣遼乘舟，與曹休至海陵，臨江。"
+          },
+          {
+            "volume": "017",
+            "blockId": "v017-b0005",
+            "kind": "body",
+            "quote": "是歳，遼與諸將破權將呂範。遼病篤，遂薨於江都。帝爲流涕，諡曰剛侯。子虎嗣。"
+          }
+        ],
+        "phaseId": "late",
+        "careerId": "death",
+        "mergedLocations": [
+          {
+            "year": 222,
+            "ancientZh": "海陵",
+            "coord": [
+              119.92,
+              32.46
+            ],
+            "careerId": "death"
+          },
+          {
+            "year": 222,
+            "ancientZh": "江都",
+            "coord": [
+              119.42,
+              32.4
+            ],
+            "careerId": "death"
+          }
+        ]
+      }
+    ]
+  },
+  "xun-yu": {
+    "atlasPerson": "xunyu",
+    "stops": [
+      {
+        "year": 191,
+        "coord": [
+          114.5,
+          37.0
+        ],
+        "ancientZh": "冀州地域",
+        "ancientEn": "Ji Province region",
+        "modernZh": "河北中南部及周边历史冀州地域",
+        "modernEn": "Historical Ji Province, around south-central Hebei",
+        "titleZh": "率宗族至冀州",
+        "titleEn": "Brought his kin to Ji Province",
+        "descZh": "本传明确率宗族至冀州，受袁绍礼遇；不据此断定本人到了州内哪座城。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，191仅为排序值。",
+        "descEn": "He brought his kin to Ji Province and was received by Yuan Shao; the exact city is unspecified. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v010-b0004：彧獨將宗族至冀州。而袁紹已奪馥位，待彧以上賔之禮。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0004",
+            "kind": "body",
+            "quote": "彧獨將宗族至冀州。而袁紹已奪馥位，待彧以上賔之禮。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "join",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 191,
+        "coord": [
+          115.03,
+          35.76
+        ],
+        "ancientZh": "东郡地域",
+        "ancientEn": "Dong Commandery region",
+        "modernZh": "河南濮阳至鲁西的历史东郡地域",
+        "modernEn": "Historical Dong Commandery around Puyang and western Shandong",
+        "titleZh": "离袁绍，从曹操于东郡",
+        "titleEn": "Joined Cao Cao in Dong Commandery",
+        "descZh": "初平二年离袁绍从在东郡的曹操；只定位郡域，不把曹操其他驻地补作荀彧路线。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "In 191 he left Yuan Shao and joined Cao Cao, who was in Dong Commandery; no precise settlement is inferred. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v010-b0004：時太祖爲奮武將軍，在東郡，初平二年，彧去紹從太祖。；v010-b0004：以爲司馬，時年二十九。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0004",
+            "kind": "body",
+            "quote": "時太祖爲奮武將軍，在東郡，初平二年，彧去紹從太祖。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0004",
+            "kind": "body",
+            "quote": "以爲司馬，時年二十九。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "join"
+      },
+      {
+        "year": 194,
+        "coord": [
+          115.5,
+          35.62
+        ],
+        "ancientZh": "鄄城",
+        "ancientEn": "Juancheng",
+        "modernZh": "山东鄄城地区",
+        "modernEn": "Juancheng area, Shandong",
+        "titleZh": "留守鄄城，保全根本",
+        "titleEn": "Held Juancheng during the rebellion",
+        "descZh": "识破张邈叛乱并召夏侯惇，郭贡见其无惧而退；不把遣程昱往范、东阿画为荀彧行程。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "He defended Juancheng and summoned Xiahou Dun. Cheng Yu’s visits to Fan and Dong’e are not attributed to Xun Yu. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v010-b0004：彧知邈爲亂，即勒兵設備，馳召東郡太守夏侯惇；v010-b0004：貢見彧無懼意，謂鄄城未易攻，遂引兵去。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0004",
+            "kind": "body",
+            "quote": "彧知邈爲亂，即勒兵設備，馳召東郡太守夏侯惇"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0004",
+            "kind": "body",
+            "quote": "貢見彧無懼意，謂鄄城未易攻，遂引兵去。"
+          }
+        ],
+        "phaseId": "base",
+        "careerId": "yanzhou"
+      },
+      {
+        "year": 196,
+        "coord": [
+          113.85,
+          34.02
+        ],
+        "ancientZh": "许",
+        "ancientEn": "Xu",
+        "modernZh": "河南许昌汉许县地区",
+        "modernEn": "Han-era Xu near Xuchang, Henan",
+        "titleZh": "汉廷中枢居许",
+        "titleEn": "Served in the Han court at Xu",
+        "descZh": "汉帝都许后任汉侍中、守尚书令，居中持重，与在外征伐的曹操通信筹事。此站概括长期中枢任职，不将官渡、宛叶建议变成前线到达。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "After the court moved to Xu, he served as palace attendant and acting Director of the Masters of Writing; later campaigns are not mapped as his travel. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v010-b0006：太祖遂至洛陽，奉迎天子都許。天子拜太祖大將軍，進彧爲漢侍中，守尚書令。；v010-b0006：常居中持重，太祖雖征伐在外，軍國事皆與彧籌焉。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0006",
+            "kind": "body",
+            "quote": "太祖遂至洛陽，奉迎天子都許。天子拜太祖大將軍，進彧爲漢侍中，守尚書令。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0006",
+            "kind": "body",
+            "quote": "常居中持重，太祖雖征伐在外，軍國事皆與彧籌焉。"
+          }
+        ],
+        "phaseId": "base",
+        "careerId": "emperor"
+      },
+      {
+        "year": 212,
+        "coord": [
+          115.78,
+          33.85
+        ],
+        "ancientZh": "谯",
+        "ancientEn": "Qiao",
+        "modernZh": "安徽亳州地区",
+        "modernEn": "Bozhou area, Anhui",
+        "titleZh": "奉命至谯劳军而留军",
+        "titleEn": "Sent to inspect the troops at Qiao",
+        "descZh": "曹操表请荀彧到谯劳军，随后留军，改以持节参丞相军事。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "Cao Cao requested that he visit the troops at Qiao and then retained him with the army. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v010-b0025：會征孫權，表請彧勞軍于譙，因輒留彧，以侍中光祿大夫持節，參丞相軍事。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0025",
+            "kind": "body",
+            "quote": "會征孫權，表請彧勞軍于譙，因輒留彧，以侍中光祿大夫持節，參丞相軍事。"
+          }
+        ],
+        "phaseId": "late",
+        "careerId": "dissent"
+      },
+      {
+        "year": 212,
+        "coord": [
+          116.79,
+          32.57
+        ],
+        "ancientZh": "寿春",
+        "ancientEn": "Shouchun",
+        "modernZh": "安徽寿县古寿春地区",
+        "modernEn": "Historical Shouchun near Shouxian, Anhui",
+        "titleZh": "病留寿春而卒",
+        "titleEn": "Fell ill and died at Shouchun",
+        "descZh": "正文说曹操军至濡须时，荀彧病留寿春，以忧薨；濡须是曹操军到达，不能画给荀彧。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "When Cao Cao reached Ruxu, Xun Yu remained ill at Shouchun and died there; Ruxu is not included as Xun Yu’s stop. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v010-b0025：太祖軍至濡須，彧疾留壽春，以憂薨，時年五十。諡曰敬侯。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0025",
+            "kind": "body",
+            "quote": "太祖軍至濡須，彧疾留壽春，以憂薨，時年五十。諡曰敬侯。"
+          }
+        ],
+        "phaseId": "late",
+        "careerId": "death"
+      }
+    ]
+  },
+  "xun-you": {
+    "atlasPerson": "xunyou",
+    "stops": [
+      {
+        "year": 191,
+        "coord": [
+          108.86,
+          34.32
+        ],
+        "ancientZh": "长安",
+        "ancientEn": "Chang’an",
+        "modernZh": "陕西西安汉长安城地区",
+        "modernEn": "Han Chang’an area, Xi’an, Shaanxi",
+        "titleZh": "董卓迁都后谋刺而下狱",
+        "titleEn": "Imprisoned after the plot against Dong Zhuo",
+        "descZh": "董卓迁都长安后，荀攸参与谋刺，事泄被收系狱；迁都后至董卓死前，确切系狱年未载。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，191仅为排序值。",
+        "descEn": "After Dong Zhuo moved the court to Chang’an, Xun You joined a plot and was imprisoned; the precise year is unknown. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v010-b0034：卓徙都長安。；v010-b0034：事垂就而覺，收顒、攸繫獄，顒憂懼自殺，攸言語飲食自若，會卓死得免。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0034",
+            "kind": "body",
+            "quote": "卓徙都長安。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0034",
+            "kind": "body",
+            "quote": "事垂就而覺，收顒、攸繫獄，顒憂懼自殺，攸言語飲食自若，會卓死得免。"
+          }
+        ],
+        "phaseId": "han",
+        "careerId": "prison",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 193,
+        "coord": [
+          112.3,
+          30.8
+        ],
+        "ancientZh": "荆州地域",
+        "ancientEn": "Jing Province region",
+        "modernZh": "今湖北中部为代表的历史荆州地域",
+        "modernEn": "Historical Jing Province, represented by central Hubei",
+        "titleZh": "求蜀郡不达，驻荆州",
+        "titleEn": "Stayed in Jing Province when the route to Shu was blocked",
+        "descZh": "本传只记驻荆州，未记具体城邑；宽泛地域点不等于荆州城或襄阳。蜀郡因道绝未到，不画入蜀路线。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，193仅为排序值。",
+        "descEn": "The text specifies Jing Province but no city. The route to Shu was blocked, so Shu is not shown as a destination reached. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v010-b0034：攸以蜀漢險固，人民殷盛，乃求爲蜀郡太守，道絶不得至，駐荊州。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0034",
+            "kind": "body",
+            "quote": "攸以蜀漢險固，人民殷盛，乃求爲蜀郡太守，道絶不得至，駐荊州。"
+          }
+        ],
+        "phaseId": "han",
+        "careerId": "jingzhou",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 198,
+        "coord": [
+          112.09,
+          32.68
+        ],
+        "ancientZh": "穰",
+        "ancientEn": "Rang",
+        "modernZh": "河南邓州古穰县地区",
+        "modernEn": "Historical Rang near Dengzhou, Henan",
+        "titleZh": "从征张绣，缓攻建议未从",
+        "titleEn": "Advised caution during the campaign against Zhang Xiu",
+        "descZh": "本传记从征张绣，曹操进军穰，刘表救绣使军不利；荀攸为从行军师，不作独立统军者。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "He accompanied the campaign at Rang, where Liu Biao’s relief forces vindicated his warning. He acted as adviser, not independent commander. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v010-b0035：以爲軍師。建安三年，從征張繡。；v010-b0035：太祖不從，遂進軍之穰，與戰。繡急，表果救之。軍不利。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0035",
+            "kind": "body",
+            "quote": "以爲軍師。建安三年，從征張繡。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0035",
+            "kind": "body",
+            "quote": "太祖不從，遂進軍之穰，與戰。繡急，表果救之。軍不利。"
+          }
+        ],
+        "phaseId": "campaign",
+        "careerId": "zhangxiu"
+      },
+      {
+        "year": 198,
+        "coord": [
+          117.95,
+          34.31
+        ],
+        "ancientZh": "下邳",
+        "ancientEn": "Xiapi",
+        "modernZh": "江苏邳州古下邳地区",
+        "modernEn": "Historical Xiapi near Pizhou, Jiangsu",
+        "titleZh": "与郭嘉共劝急攻",
+        "titleEn": "Urged the continued siege with Guo Jia",
+        "descZh": "曹操自宛至下邳，荀攸、郭嘉共劝乘吕布气衰急攻；本点不另拆水攻的河道与营地。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "At Xiapi he and Guo Jia urged continued pressure on Lü Bu; the waterways and camps are not mapped separately. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v010-b0036：是歳，太祖自宛征呂布，至下邳；v010-b0036：攸與郭嘉説曰；v010-b0036：今及布氣之未復，宮謀之未定，進急攻之，布可拔也。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0036",
+            "kind": "body",
+            "quote": "是歳，太祖自宛征呂布，至下邳"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0036",
+            "kind": "body",
+            "quote": "攸與郭嘉説曰"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0036",
+            "kind": "body",
+            "quote": "今及布氣之未復，宮謀之未定，進急攻之，布可拔也。"
+          }
+        ],
+        "phaseId": "campaign",
+        "careerId": "xiapi"
+      },
+      {
+        "year": 200,
+        "coord": [
+          114.74,
+          35.58
+        ],
+        "ancientZh": "白马",
+        "ancientEn": "Baima",
+        "modernZh": "河南滑县白马地区",
+        "modernEn": "Baima area near Huaxian, Henan",
+        "titleZh": "从救白马而献策",
+        "titleEn": "Accompanied the relief of Baima",
+        "descZh": "“从救刘延于白马”明确随军到场；颜良由前锋斩杀，荀攸是画策者。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "The text explicitly says he accompanied the relief of Baima; he devised the plan rather than personally killing Yan Liang. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v010-b0037：後從救劉延於白馬，攸畫策斬顏良。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0037",
+            "kind": "body",
+            "quote": "後從救劉延於白馬，攸畫策斬顏良。"
+          }
+        ],
+        "phaseId": "guandu",
+        "careerId": "baima"
+      },
+      {
+        "year": 200,
+        "coord": [
+          113.93,
+          34.78
+        ],
+        "ancientZh": "官渡",
+        "ancientEn": "Guandu",
+        "modernZh": "河南中牟官渡地区",
+        "modernEn": "Guandu area near Zhongmou, Henan",
+        "titleZh": "参与谋议并与曹洪留守",
+        "titleEn": "Advised and guarded the camp with Cao Hong",
+        "descZh": "截粮荐将、支持奇袭后，曹操留荀攸与曹洪守营，故只标官渡，不标乌巢为其到达点。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "He recommended commanders and supported the raid, then stayed with Cao Hong to guard the camp. Wuchao is not a stop. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v010-b0037：遂以輜重餌賊，賊競奔之，陣亂。乃縱歩騎撃，大破之，斬其騎將文醜，太祖遂與紹相拒於官渡。；v010-b0037：攸曰：「徐晃可。」乃遣晃及史渙邀撃破走之，燒其輜重。；v010-b0037：唯攸與賈詡勸太祖。太祖乃留攸及曹洪守。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0037",
+            "kind": "body",
+            "quote": "遂以輜重餌賊，賊競奔之，陣亂。乃縱歩騎撃，大破之，斬其騎將文醜，太祖遂與紹相拒於官渡。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0037",
+            "kind": "body",
+            "quote": "攸曰：「徐晃可。」乃遣晃及史渙邀撃破走之，燒其輜重。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0037",
+            "kind": "body",
+            "quote": "唯攸與賈詡勸太祖。太祖乃留攸及曹洪守。"
+          }
+        ],
+        "phaseId": "guandu",
+        "careerId": "guandu"
+      },
+      {
+        "year": 202,
+        "coord": [
+          114.56,
+          35.67
+        ],
+        "ancientZh": "黎阳",
+        "ancientEn": "Liyang",
+        "modernZh": "河南浚县古黎阳地区",
+        "modernEn": "Historical Liyang near Xunxian, Henan",
+        "titleZh": "从讨袁氏兄弟于黎阳",
+        "titleEn": "Accompanied the campaign at Liyang",
+        "descZh": "本传建安七年明确从讨袁谭、袁尚于黎阳；次年的趁乱取冀建议不另造一座谋议地点。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "The biography explicitly places him in the campaign against Yuan Tan and Yuan Shang at Liyang in 202. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v010-b0038：七年，從討袁譚、尚於黎陽。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0038",
+            "kind": "body",
+            "quote": "七年，從討袁譚、尚於黎陽。"
+          }
+        ],
+        "phaseId": "hebei",
+        "careerId": "yuan"
+      },
+      {
+        "year": 205,
+        "coord": [
+          116.7,
+          38.05
+        ],
+        "ancientZh": "南皮",
+        "ancientEn": "Nanpi",
+        "modernZh": "河北南皮地区",
+        "modernEn": "Nanpi area, Hebei",
+        "titleZh": "从攻南皮，河北平后封侯",
+        "titleEn": "Accompanied the attack at Nanpi",
+        "descZh": "本传记袁谭再叛后从斩谭于南皮；这里依本段不另补确年，205仅用于年表排序。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，205仅为排序值。",
+        "descEn": "He accompanied the attack that killed Yuan Tan at Nanpi; the year is not stated in this passage. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v010-b0038：其後譚叛，從斬譚於南皮。；v010-b0038：於是封陵樹亭侯。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0038",
+            "kind": "body",
+            "quote": "其後譚叛，從斬譚於南皮。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0038",
+            "kind": "body",
+            "quote": "於是封陵樹亭侯。"
+          }
+        ],
+        "phaseId": "hebei",
+        "careerId": "nanpi",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      }
+    ]
+  },
+  "guo-jia": {
+    "atlasPerson": "guojia",
+    "stops": [
+      {
+        "year": 198,
+        "coord": [
+          117.95,
+          34.31
+        ],
+        "ancientZh": "下邳",
+        "ancientEn": "Xiapi",
+        "modernZh": "江苏邳州古下邳地区",
+        "modernEn": "Historical Xiapi near Pizhou, Jiangsu",
+        "titleZh": "随军围吕布，主张继续急攻",
+        "titleEn": "Urged continued pressure against Lü Bu",
+        "descZh": "郭嘉本传记劝急攻，荀攸传交叉明确战场为下邳及二人共同进言。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "Guo Jia’s biography records his advice; Xun You’s biography identifies Xiapi and their joint recommendation. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v014-b0018：時士卒疲倦，太祖欲引軍還，嘉說太祖急攻之，遂禽布。；v010-b0036：攸與郭嘉説曰；v010-b0036：至下邳",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0018",
+            "kind": "body",
+            "quote": "時士卒疲倦，太祖欲引軍還，嘉說太祖急攻之，遂禽布。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0036",
+            "kind": "body",
+            "quote": "攸與郭嘉説曰"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0036",
+            "kind": "body",
+            "quote": "至下邳"
+          }
+        ],
+        "phaseId": "campaign",
+        "careerId": "xiapi"
+      },
+      {
+        "year": 200,
+        "coord": [
+          113.93,
+          34.78
+        ],
+        "ancientZh": "官渡",
+        "ancientEn": "Guandu",
+        "modernZh": "河南中牟官渡地区",
+        "modernEn": "Guandu area near Zhongmou, Henan",
+        "titleZh": "随军破袁绍",
+        "titleEn": "Accompanied the defeat of Yuan Shao",
+        "descZh": "本传以“从破袁绍”概述随军经历；孙策计划袭许的谈论不是郭嘉去江东或许的新站。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "The text says he accompanied the defeat of Yuan Shao. His assessment of Sun Ce does not establish travel to Jiangdong. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v014-b0020：從破袁紹，紹死，又從討譚、尚於黎陽，連戰數克。；v014-b0019：聞太祖與袁紹相持於官渡",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0020",
+            "kind": "body",
+            "quote": "從破袁紹，紹死，又從討譚、尚於黎陽，連戰數克。"
+          },
+          {
+            "volume": "014",
+            "blockId": "v014-b0019",
+            "kind": "body",
+            "quote": "聞太祖與袁紹相持於官渡"
+          }
+        ],
+        "phaseId": "campaign",
+        "careerId": "guandu"
+      },
+      {
+        "year": 202,
+        "coord": [
+          114.56,
+          35.67
+        ],
+        "ancientZh": "黎阳",
+        "ancientEn": "Liyang",
+        "modernZh": "河南浚县古黎阳地区",
+        "modernEn": "Historical Liyang near Xunxian, Henan",
+        "titleZh": "从讨袁氏，劝缓攻",
+        "titleEn": "Advised restraint after the Liyang campaign",
+        "descZh": "袁绍死后随讨二子于黎阳，主张缓压以使内争。确切进言年在本传未列，202只作排序。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，202仅为排序值。",
+        "descEn": "After Yuan Shao died, Guo Jia accompanied the Liyang campaign and urged easing pressure to allow division. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v014-b0020：從破袁紹，紹死，又從討譚、尚於黎陽，連戰數克。；v014-b0020：急之則相持，緩之而後爭心生。不如南向荊州若征劉表者，以待其變；變成而後擊之，可一舉定也。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0020",
+            "kind": "body",
+            "quote": "從破袁紹，紹死，又從討譚、尚於黎陽，連戰數克。"
+          },
+          {
+            "volume": "014",
+            "blockId": "v014-b0020",
+            "kind": "body",
+            "quote": "急之則相持，緩之而後爭心生。不如南向荊州若征劉表者，以待其變；變成而後擊之，可一舉定也。"
+          }
+        ],
+        "phaseId": "hebei",
+        "careerId": "yuan-split",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 203,
+        "coord": [
+          114.02,
+          33.39
+        ],
+        "ancientZh": "西平",
+        "ancientEn": "Xiping",
+        "modernZh": "河南西平及汝南西北部地区",
+        "modernEn": "Xiping area of historical Runan, Henan",
+        "titleZh": "南向荆州而军至西平",
+        "titleEn": "The army reached Xiping while turning south",
+        "descZh": "本传在缓攻建议后接军至西平，仍属随军叙事；不是青海西平郡，也不表示已经进入刘表治所。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，203仅为排序值。",
+        "descEn": "The following army movement reached Xiping in Runan, not the Xiping commandery in Qinghai; no arrival at Liu Biao’s seat is implied. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v014-b0020：軍至西平，譚、尚果爭冀州。；v014-b0020：急之則相持，緩之而後爭心生。不如南向荊州若征劉表者，以待其變；變成而後擊之，可一舉定也。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0020",
+            "kind": "body",
+            "quote": "軍至西平，譚、尚果爭冀州。"
+          },
+          {
+            "volume": "014",
+            "blockId": "v014-b0020",
+            "kind": "body",
+            "quote": "急之則相持，緩之而後爭心生。不如南向荊州若征劉表者，以待其變；變成而後擊之，可一舉定也。"
+          }
+        ],
+        "phaseId": "hebei",
+        "careerId": "yuan-split",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 204,
+        "coord": [
+          114.61,
+          36.25
+        ],
+        "ancientZh": "邺",
+        "ancientEn": "Ye",
+        "modernZh": "河北临漳与河南安阳交界古邺城地区",
+        "modernEn": "Historical Ye near Linzhang, Hebei",
+        "titleZh": "从定邺",
+        "titleEn": "Accompanied the capture of Ye",
+        "descZh": "正文明确“遂从定邺”；同一段随后转到南皮，保留这一重要转折，不把河北诸城一一补满。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，204仅为排序值。",
+        "descEn": "The text explicitly says he accompanied the capture of Ye, followed by the attack at Nanpi. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v014-b0020：太祖還救之，遂從定鄴。又從攻譚於南皮，冀州平。封嘉洧陽亭侯。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0020",
+            "kind": "body",
+            "quote": "太祖還救之，遂從定鄴。又從攻譚於南皮，冀州平。封嘉洧陽亭侯。"
+          }
+        ],
+        "phaseId": "hebei",
+        "careerId": "hebei",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 205,
+        "coord": [
+          116.7,
+          38.05
+        ],
+        "ancientZh": "南皮",
+        "ancientEn": "Nanpi",
+        "modernZh": "河北南皮地区",
+        "modernEn": "Nanpi area, Hebei",
+        "titleZh": "从攻南皮，受封洧阳亭侯",
+        "titleEn": "Accompanied Nanpi and received a marquisate",
+        "descZh": "本传明确随攻南皮，河北平后受封；封邑洧阳不等于本人又赴洧阳。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，205仅为排序值。",
+        "descEn": "He accompanied the attack at Nanpi and received a title; his fief at Weiyang is not a journey. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v014-b0020：太祖還救之，遂從定鄴。又從攻譚於南皮，冀州平。封嘉洧陽亭侯。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0020",
+            "kind": "body",
+            "quote": "太祖還救之，遂從定鄴。又從攻譚於南皮，冀州平。封嘉洧陽亭侯。"
+          }
+        ],
+        "phaseId": "hebei",
+        "careerId": "hebei",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 207,
+        "coord": [
+          116.05,
+          39.0
+        ],
+        "ancientZh": "易",
+        "ancientEn": "Yi",
+        "modernZh": "河北雄安容城、雄县一带的古易地域近似点",
+        "modernEn": "Approximate ancient Yi area near Rongcheng and Xiongxian, Hebei",
+        "titleZh": "至易，劝留辎重轻军兼道",
+        "titleEn": "At Yi, advised leaving baggage behind",
+        "descZh": "“至易，嘉言”提供本人在场的军中发言；仅取古易地域近似点，不把“易”直接落在今易县县城。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "The text places his advice at Yi. This approximates ancient Yi near Rongcheng and Xiongxian, rather than equating it with modern Yixian town. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v014-b0023：至易，嘉言曰：「兵貴神速。；v014-b0023：不如留輜重，輕兵兼道以出，掩其不意。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0023",
+            "kind": "body",
+            "quote": "至易，嘉言曰：「兵貴神速。"
+          },
+          {
+            "volume": "014",
+            "blockId": "v014-b0023",
+            "kind": "body",
+            "quote": "不如留輜重，輕兵兼道以出，掩其不意。"
+          }
+        ],
+        "phaseId": "north",
+        "careerId": "north"
+      },
+      {
+        "year": 207,
+        "coord": [
+          120.41,
+          41.58
+        ],
+        "ancientZh": "柳城",
+        "ancientEn": "Liucheng",
+        "modernZh": "辽宁朝阳古柳城地区",
+        "modernEn": "Historical Liucheng near Chaoyang, Liaoning",
+        "titleZh": "北征至柳城，还军后病笃",
+        "titleEn": "Returned from Liucheng and fell gravely ill",
+        "descZh": "“自柳城还”足以证曾到；本传未记确切卒地，不能把柳城或回军沿途某城断定为死亡地点。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "Returning from Liucheng proves presence there, but his exact place of death is unknown and is not inferred from the route. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v014-b0024：年三十八，自柳城還，疾篤，太祖問疾者交錯。及薨，臨其喪，哀甚",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0024",
+            "kind": "body",
+            "quote": "年三十八，自柳城還，疾篤，太祖問疾者交錯。及薨，臨其喪，哀甚"
+          }
+        ],
+        "phaseId": "north",
+        "careerId": "death"
+      }
+    ]
+  },
+  "cheng-yu": {
+    "atlasPerson": "chengyu",
+    "stops": [
+      {
+        "year": 184,
+        "coord": [
+          116.18,
+          36.12
+        ],
+        "ancientZh": "东阿",
+        "ancientEn": "Dong’e",
+        "modernZh": "山东阳谷阿城一带的古东阿地区",
+        "modernEn": "Historical Dong’e near Acheng, Yanggu, Shandong",
+        "titleZh": "率吏民反击王度，保全东阿",
+        "titleEn": "Helped defend Dong’e against Wang Du",
+        "descZh": "本站依据实际率吏民守城与反击，不依据籍贯；古东阿地域不直接等于今东阿县城。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，184仅为排序值。",
+        "descEn": "This stop follows his actual defense of the town, not his birthplace. Ancient Dong’e is represented near Acheng, not modern Dong’e town. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v014-b0002：昱率吏民開城門急擊之，度等破走。東阿由此得全。；v014-b0002：程昱字仲德，東郡東阿人也。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0002",
+            "kind": "body",
+            "quote": "昱率吏民開城門急擊之，度等破走。東阿由此得全。"
+          },
+          {
+            "volume": "014",
+            "blockId": "v014-b0002",
+            "kind": "body",
+            "quote": "程昱字仲德，東郡東阿人也。"
+          }
+        ],
+        "phaseId": "early",
+        "careerId": "donge",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 194,
+        "coord": [
+          115.5,
+          35.62
+        ],
+        "ancientZh": "鄄城",
+        "ancientEn": "Juancheng",
+        "modernZh": "山东鄄城地区",
+        "modernEn": "Juancheng area, Shandong",
+        "titleZh": "与荀彧留守鄄城",
+        "titleEn": "Guarded Juancheng with Xun Yu",
+        "descZh": "曹操征徐州时二人留守鄄城，叛乱后程昱离城赴范、东阿。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "He and Xun Yu were left to guard Juancheng before Cheng Yu went to Fan and Dong’e. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v014-b0004：太祖征徐州，使昱與荀彧留守鄄城。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0004",
+            "kind": "body",
+            "quote": "太祖征徐州，使昱與荀彧留守鄄城。"
+          }
+        ],
+        "phaseId": "three",
+        "careerId": "three"
+      },
+      {
+        "year": 194,
+        "coord": [
+          115.52,
+          35.96
+        ],
+        "ancientZh": "范",
+        "ancientEn": "Fan",
+        "modernZh": "鲁西南古范地域，今莘县与范县接壤一带",
+        "modernEn": "Historical Fan area near the Shenxian–Fanxian border",
+        "titleZh": "过范劝靳允守城",
+        "titleEn": "Visited Fan and persuaded Jin Yun to hold it",
+        "descZh": "本传明确“过范”；这里只取古范地域，不认定县治古城址。仓亭津为别骑所赴，不插作本人站。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "The text says he passed Fan and persuaded its magistrate. Cangting Ford was reached by detached cavalry, not necessarily Cheng Yu. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v014-b0004：昱乃歸，過范，說其令靳允曰；v014-b0004：昱又遣別騎絕倉亭津，陳宮至，不得渡。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0004",
+            "kind": "body",
+            "quote": "昱乃歸，過范，說其令靳允曰"
+          },
+          {
+            "volume": "014",
+            "blockId": "v014-b0004",
+            "kind": "body",
+            "quote": "昱又遣別騎絕倉亭津，陳宮至，不得渡。"
+          }
+        ],
+        "phaseId": "three",
+        "careerId": "three"
+      },
+      {
+        "year": 194,
+        "coord": [
+          116.18,
+          36.12
+        ],
+        "ancientZh": "东阿",
+        "ancientEn": "Dong’e",
+        "modernZh": "山东阳谷阿城一带的古东阿地区",
+        "modernEn": "Historical Dong’e near Acheng, Yanggu, Shandong",
+        "titleZh": "到东阿协力守城",
+        "titleEn": "Reached Dong’e and supported its defense",
+        "descZh": "本传明确至东阿，枣祗已率吏民坚守；这次回到东阿是叛乱中的转折，非重复籍贯点。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "He explicitly reached Dong’e, where Zao Zhi was already maintaining the defense. This is a documented return during the rebellion. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v014-b0004：昱至東阿，東阿令棗祗已率厲吏民，拒城堅守。；v014-b0004：又兗州從事薛悌與昱協謀，卒完三城，以待太祖。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0004",
+            "kind": "body",
+            "quote": "昱至東阿，東阿令棗祗已率厲吏民，拒城堅守。"
+          },
+          {
+            "volume": "014",
+            "blockId": "v014-b0004",
+            "kind": "body",
+            "quote": "又兗州從事薛悌與昱協謀，卒完三城，以待太祖。"
+          }
+        ],
+        "phaseId": "three",
+        "careerId": "three"
+      },
+      {
+        "year": 194,
+        "coord": [
+          115.52,
+          35.96
+        ],
+        "ancientZh": "范",
+        "ancientEn": "Fan",
+        "modernZh": "鲁西南古范地域，今莘县与范县接壤一带",
+        "modernEn": "Historical Fan area near the Shenxian–Fanxian border",
+        "titleZh": "任东平相，回屯范",
+        "titleEn": "Stationed at Fan as Chancellor of Dongping",
+        "descZh": "曹操还后表程昱东平相，正文接“屯范”，因此保留东阿之后屯范的回转；任东平相不另画东平。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。",
+        "descEn": "After Cao Cao returned, Cheng Yu was appointed Chancellor of Dongping and explicitly stationed at Fan. The office does not imply another trip to Dongping. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads.",
+        "quoteZh": "v014-b0004：乃表昱為東平相，屯范。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0004",
+            "kind": "body",
+            "quote": "乃表昱為東平相，屯范。"
+          }
+        ],
+        "phaseId": "three",
+        "careerId": "three"
+      },
+      {
+        "year": 200,
+        "coord": [
+          115.5,
+          35.62
+        ],
+        "ancientZh": "鄄城",
+        "ancientEn": "Juancheng",
+        "modernZh": "山东鄄城地区",
+        "modernEn": "Juancheng area, Shandong",
+        "titleZh": "以七百兵守鄄城",
+        "titleEn": "Held Juancheng with seven hundred men",
+        "descZh": "袁绍将南渡时再记程昱守鄄城，七百兵不受增援；原文不列确年，200只作排序，不虚构往返途中。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，200仅为排序值。",
+        "descEn": "As Yuan Shao prepared to cross south, Cheng Yu guarded Juancheng with seven hundred men; the passage does not state an exact year. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v014-b0006：時昱有七百兵守鄄城；v014-b0006：紹聞昱兵少，果不往。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0006",
+            "kind": "body",
+            "quote": "時昱有七百兵守鄄城"
+          },
+          {
+            "volume": "014",
+            "blockId": "v014-b0006",
+            "kind": "body",
+            "quote": "紹聞昱兵少，果不往。"
+          }
+        ],
+        "phaseId": "regional",
+        "careerId": "juancheng",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 202,
+        "coord": [
+          114.56,
+          35.67
+        ],
+        "ancientZh": "黎阳",
+        "ancientEn": "Liyang",
+        "modernZh": "河南浚县古黎阳地区",
+        "modernEn": "Historical Liyang near Xunxian, Henan",
+        "titleZh": "率军会黎阳并参与运粮",
+        "titleEn": "Joined the army at Liyang and supplied it",
+        "descZh": "亲引所募军会曹操于黎阳；李典传所记共运军粮并击高蕃，合并为该战区一站，不擅定高蕃军营坐标。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，202仅为排序值。",
+        "descEn": "He led his recruits to join Cao Cao at Liyang and helped convey grain; no precise location is invented for Gao Fan’s camp. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v014-b0006：昱收山澤亡命，得精兵數千人，乃引軍與太祖會黎陽，討袁譚、袁尚。；v018-b0003：太祖擊譚、尚於黎陽，使典與程昱等以船運軍糧。；v018-b0003：昱亦以為然。遂北渡河，攻蕃，破之，水道得通。",
+        "sourceRefs": [
+          {
+            "volume": "014",
+            "blockId": "v014-b0006",
+            "kind": "body",
+            "quote": "昱收山澤亡命，得精兵數千人，乃引軍與太祖會黎陽，討袁譚、袁尚。"
+          },
+          {
+            "volume": "018",
+            "blockId": "v018-b0003",
+            "kind": "body",
+            "quote": "太祖擊譚、尚於黎陽，使典與程昱等以船運軍糧。"
+          },
+          {
+            "volume": "018",
+            "blockId": "v018-b0003",
+            "kind": "body",
+            "quote": "昱亦以為然。遂北渡河，攻蕃，破之，水道得通。"
+          }
+        ],
+        "phaseId": "regional",
+        "careerId": "liyang",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      }
+    ]
+  },
+  "jia-xu": {
+    "atlasPerson": "jiaxu",
+    "stops": [
+      {
+        "year": 180,
+        "coord": [
+          107.13,
+          34.64
+        ],
+        "ancientZh": "汧",
+        "ancientEn": "Qian",
+        "modernZh": "陕西千阳古汧县地区",
+        "modernEn": "Historical Qian near Qianyang, Shaanxi",
+        "titleZh": "西还到汧遇叛氐",
+        "titleEn": "Captured by rebel Di near Qian",
+        "descZh": "去官西还明确到汧，借称段颎外孙脱险；只记地点，不补推其自京城至此的完整道路。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，180仅为排序值。",
+        "descEn": "After leaving office he reached Qian on his westward journey and escaped capture through a fabricated kinship claim. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v010-b0042：察孝廉爲郎，疾病去官，西還至汧，道遇叛氐，同行數十人皆爲所執。；v010-b0042：詡實非段甥，權以濟事，咸此類也。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0042",
+            "kind": "body",
+            "quote": "察孝廉爲郎，疾病去官，西還至汧，道遇叛氐，同行數十人皆爲所執。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0042",
+            "kind": "body",
+            "quote": "詡實非段甥，權以濟事，咸此類也。"
+          }
+        ],
+        "phaseId": "west",
+        "careerId": "qian",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 191,
+        "coord": [
+          111.2,
+          34.77
+        ],
+        "ancientZh": "陕",
+        "ancientEn": "Shan",
+        "modernZh": "河南三门峡陕州地区",
+        "modernEn": "Shanzhou area, Sanmenxia, Henan",
+        "titleZh": "在牛辅屯陕军中",
+        "titleEn": "Served in Niu Fu’s army at Shan",
+        "descZh": "正文明确牛辅屯陕、贾诩在辅军；不能把“董卓入洛阳”主语换成贾诩。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，191仅为排序值。",
+        "descEn": "The text explicitly places Jia Xu in Niu Fu’s army at Shan. Dong Zhuo’s move to Luoyang is not attributed to Jia Xu. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v010-b0043：卓壻中郎將牛輔屯陝，詡在輔軍。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0043",
+            "kind": "body",
+            "quote": "卓壻中郎將牛輔屯陝，詡在輔軍。"
+          }
+        ],
+        "phaseId": "west",
+        "careerId": "shan",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 195,
+        "coord": [
+          108.86,
+          34.32
+        ],
+        "ancientZh": "长安",
+        "ancientEn": "Chang’an",
+        "modernZh": "陕西西安汉长安城地区",
+        "modernEn": "Han Chang’an area, Xi’an, Shaanxi",
+        "titleZh": "长安朝廷任职并护持大臣",
+        "titleEn": "Served at the court in Chang’an",
+        "descZh": "不是仅凭劝攻长安立站：正文记朝廷任职、护持大臣，注引《献帝起居注》明确贾诩在被迁天子的随乘中，足证本人在场。攻城本身不写为他亲自统军。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，195仅为排序值。",
+        "descEn": "This stop is grounded in court service and a cited account explicitly placing him in the imperial convoy, not merely in his advice to attack Chang’an. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v010-b0043：乃更拜詡尚書，典選舉，多所匡濟，傕等親而憚之。；v010-b0043：傕等和，出天子，祐護大臣，詡有力焉。；v006-b0013-n03：於是天子一乘，貴人伏氏一乘，賈詡、左靈一乘，其餘皆步從。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0043",
+            "kind": "body",
+            "quote": "乃更拜詡尚書，典選舉，多所匡濟，傕等親而憚之。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0043",
+            "kind": "body",
+            "quote": "傕等和，出天子，祐護大臣，詡有力焉。"
+          },
+          {
+            "volume": "006",
+            "blockId": "v006-b0013-n03",
+            "kind": "peizhu",
+            "quote": "於是天子一乘，貴人伏氏一乘，賈詡、左靈一乘，其餘皆步從。",
+            "sourceBook": "《献帝起居注》"
+          }
+        ],
+        "phaseId": "west",
+        "careerIds": [
+          "changan",
+          "protect"
+        ],
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 195,
+        "coord": [
+          110.09,
+          34.57
+        ],
+        "ancientZh": "华阴",
+        "ancientEn": "Huayin",
+        "modernZh": "陕西华阴地区",
+        "modernEn": "Huayin area, Shaanxi",
+        "titleZh": "离李傕依段煨",
+        "titleEn": "Left Li Jue and joined Duan Wei at Huayin",
+        "descZh": "段煨屯华阴，贾诩离李傕往依；不因同郡或受官另加故乡、封邑站点。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，195仅为排序值。",
+        "descEn": "He left Li Jue and sought refuge with Duan Wei at Huayin; no hometown or fief stop is inferred. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v010-b0043：是時將軍段煨屯華陰，與詡同郡，遂去傕託煨。；v010-b0043：煨内恐其見奪，而外奉詡禮甚備，詡愈不自安。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0043",
+            "kind": "body",
+            "quote": "是時將軍段煨屯華陰，與詡同郡，遂去傕託煨。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0043",
+            "kind": "body",
+            "quote": "煨内恐其見奪，而外奉詡禮甚備，詡愈不自安。"
+          }
+        ],
+        "phaseId": "transition",
+        "careerId": "huayin",
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      },
+      {
+        "year": 197,
+        "coord": [
+          112.53,
+          32.99
+        ],
+        "ancientZh": "南阳地域",
+        "ancientEn": "Nanyang region",
+        "modernZh": "河南南阳盆地历史南阳郡地域",
+        "modernEn": "Historical Nanyang Commandery around the Nanyang basin, Henan",
+        "titleZh": "受迎前往南阳依张绣",
+        "titleEn": "Joined Zhang Xiu in Nanyang",
+        "descZh": "张绣在南阳，遣人迎贾诩，正文接“诩遂往”；本点近似郡域，不断言这次接见恰在宛城。后续主公战场与谋议不再自动生成贾诩路线。 坐标只近似表示历史地域，不指认古城、营址；连线只表先后关系，不复原古道。 本事确年未载，197仅为排序值。",
+        "descEn": "Zhang Xiu was in Nanyang and invited Jia Xu, who went there. The coordinate represents the region, not a proven meeting at Wan. Later campaigns are not automatically Jia Xu’s journeys. Coordinates approximate a historical locality, not an identified ancient city or camp. Lines show sequence, not reconstructed ancient roads. The numeric map year is for ordering only.",
+        "quoteZh": "v010-b0044：張繡在南陽，詡陰結繡，繡遣人迎詡。；v010-b0044：詡遂往，繡執子孫禮，煨果善視其家。",
+        "sourceRefs": [
+          {
+            "volume": "010",
+            "blockId": "v010-b0044",
+            "kind": "body",
+            "quote": "張繡在南陽，詡陰結繡，繡遣人迎詡。"
+          },
+          {
+            "volume": "010",
+            "blockId": "v010-b0044",
+            "kind": "body",
+            "quote": "詡遂往，繡執子孫禮，煨果善視其家。"
+          }
+        ],
+        "phaseId": "transition",
+        "careerIds": [
+          "zhangxiu",
+          "chase"
+        ],
+        "dateLabelZh": "确年未载",
+        "dateLabelEn": "Undated"
+      }
+    ]
+  }
+}

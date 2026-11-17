@@ -1,0 +1,104 @@
+"""张辽：区分前锋协同、本人足迹与未及到场的援军。"""
+from profile_v3 import Q
+ORIGIN=Q('v017-b0002','張遼字文遠，雁門馬邑人也。本聶壹之後，以避怨變姓。')
+MASTERS=Q('v017-b0002','何進遣詣河北募兵，得千餘人。還，進敗，以兵屬董卓。卓敗，以兵屬呂布')
+XUZHOU=Q('v017-b0002','從布東奔徐州，領魯相，時年二十八。')
+XIAPI=Q('v017-b0002','太祖破呂布於下邳，遼將其衆降，拜中郎將，賜爵關內侯。')
+BAIMA=Q('v001-b0047','使張遼、關羽前登，擊破，斬良。')
+CHANGXI=Q('v017-b0002','遼遂單身上三公山，入豨家，拜妻子。豨歡喜，隨詣太祖。')
+REBUKE=Q('v017-b0002','太祖遣豨還，責遼曰：「此非大將法也。」')
+HEBEI=Q('v017-b0002','從討袁譚、袁尙於黎陽，有功，行中堅將軍。')
+YE=Q('v017-b0002','復從攻鄴，鄴破，遼別徇趙國、常山')
+COAST=Q('v017-b0002','別將徇海濱，破遼東賊柳毅等。還鄴')
+JIANGXIA=Q('v017-b0002','復別擊荆州，定江夏諸縣，還屯臨潁，封都亭侯。')
+WUHUA=Q('v017-b0002','從征袁尙於柳城，卒與虜遇，遼勸太祖戰，氣甚奮')
+BANNER=Q('v017-b0002','太祖壯之，自以所持麾授遼。遂擊，大破之，斬單于蹋頓。')
+CHANGSHE=Q('v017-b0003','時荆州未定，復遣遼屯長社。')
+CAMP=Q('v017-b0003','遼將親兵數十人，中陳而立。有頃定，即得首謀者殺之。')
+TIANZHU=Q('v017-b0003','遂進到山下安營，攻之，斬蘭成首，盡虜其衆。')
+MOUNTAIN=Q('v017-b0003','灊中有天柱山，高峻二十餘里，道險狹，步徑裁通，蘭等壁其上。')
+HEFEI=Q('v017-b0004','使遼與樂進、李典等將七千餘人屯合肥。')
+EIGHT=Q('v017-b0004','於是遼夜募敢從之士，得八百人')
+RETURN=Q('v017-b0004','遼復還突圍，拔出餘衆。')
+WIN=Q('v017-b0004','權守合肥十餘日，城不可拔，乃引退。遼率諸軍追擊，幾復獲權。')
+GENERAL=Q('v017-b0004','太祖大壯遼，拜征東將軍。')
+JUCHAO=Q('v017-b0004','乃增遼兵，多留諸軍，徙屯居巢。')
+MISSED=Q('v017-b0005','遼未至，徐晃已破關羽，仁圍解。')
+MOBEI=Q('v017-b0005','遼與太祖會摩陂。')
+CHEN=Q('v017-b0005','還屯陳郡。文帝即王位，轉前將軍。')
+AGAIN=Q('v017-b0005','孫權復叛，遣遼還屯合肥，進遼爵都鄕侯。')
+JINYANG=Q('v017-b0005','文帝踐阼，封晉陽侯，增邑千戸，並前二千六百戸。')
+LUOYANG=Q('v017-b0005','黃初二年，遼朝洛陽宮')
+ILL=Q('v017-b0005','遼還屯雍丘，得疾。')
+HAILING=Q('v017-b0005','帝遣遼乘舟，與曹休至海陵，臨江。')
+DEATH=Q('v017-b0005','是歳，遼與諸將破權將呂範。遼病篤，遂薨於江都。帝爲流涕，諡曰剛侯。子虎嗣。')
+YEAR=Q('v002-b0028','是月，孫權復叛。復郢州爲荊州。帝自許昌南征，諸軍兵並進')
+PRAISE=Q('v017-b0007','撫衆則和，奉令無犯，當敵制決，靡有遺失。')
+PING=Q('v017-b0028','太祖建茲武功，而時之良將，五子爲先。')
+PROFILE=dict(
+ id='zhang-liao',tier='B',reading=['017'],syncLifespan=True,
+ lead='由丁原、董卓、吕布部下转入曹营的名将。参与白马、河北与柳城战事，讨陈兰梅成，合肥以八百人逆击孙权并追击退军。晚年受曹丕优礼，带病临江出征，222年卒于江都，谥刚侯。',role='曹魏前将军、晋阳侯',
+ facts=[
+ dict(key='hometown',label='籍贯',value='雁门马邑',text='字文远，本聂壹之后，为避怨改姓张；籍贯不是确证的出生地。',refs=[ORIGIN]),
+ dict(key='lifespan',label='生卒年',value='生年未详—222年',text='本传“时年二十八”随东奔徐州、领鲁相叙述，未能据之固定生年。末年征吴与文帝纪黄初三年相接，卒于江都。',refs=[XUZHOU,DEATH,YEAR]),
+ dict(key='identity',label='主要身份',value='先后事诸主，后为曹魏将领',text='先属丁原、何进、董卓、吕布，吕布败后率众降曹操；功业主要发生在曹氏统军时期。',refs=[MASTERS,XIAPI,Q('v017-b0002','并州刺史丁原以遼武力過人，召爲從事')]),
+ dict(key='office',label='最高官职',value='前将军',text='曾为中郎将、裨将军、中坚将军、荡寇将军，合肥胜后拜征东将军；曹丕即王位转前将军。',refs=[XIAPI,HEBEI,GENERAL,CHEN,Q('v017-b0002','以遼爲蕩寇將軍。')]),
+ dict(key='title',label='最高爵位',value='晋阳侯',text='由关内侯、都亭侯、都乡侯进为晋阳侯，食邑合二千六百户；不将封邑作实际赴任地点。',refs=[XIAPI,JIANGXIA,AGAIN,JINYANG]),
+ dict(key='posthumous',label='身后称号',value='刚侯',text='江都病卒后谥刚侯，子张虎嗣爵。225年曹丕又追录合肥功分邑封子，并非张辽本人再任官。',refs=[DEATH,Q('v017-b0005','六年，帝追念遼典在合肥之功')]),
+ dict(key='deeds',label='代表事迹',items=['白马前锋','诱昌豨降','柳城奋击','灊山讨叛','合肥逆击'],text='从协同前锋、独立招降到合肥先击后守，见其军旅行动的不同层次。',refs=[BAIMA,CHANGXI,WUHUA,TIANZHU,EIGHT]),
+ ],
+ intro=[
+ dict(title='转事诸主而入曹营',text='张辽字文远，雁门马邑人，本聂壹之后，为避怨改姓。早年以武力为丁原所召，何进命他赴河北募兵；何进败后属董卓，继而属吕布，随吕布东奔徐州、领鲁相。198年吕布败于下邳，张辽率众降曹操，获拜中郎将、赐关内侯。其后参与白马前锋，转而在曹氏军中凭连续战功建立地位，不能把前后不同主属写成始终如一的仕途。',refs=[ORIGIN,Q('v017-b0002','并州刺史丁原以遼武力過人，召爲從事'),MASTERS,XUZHOU,XIAPI,BAIMA],eventLinks=[dict(label='198年吕布败于下邳',eventId='xiapi')]),
+ dict(title='善战之外也有冒险',text='张辽与夏侯渊围昌豨，观察到敌人迟疑，主动通话，甚至独上三公山见其家属，使昌豨归降；曹操却责这不是大将应行之法。此后他随攻黎阳、邺，别徇赵国、常山与海滨，又定江夏诸县、还屯临颍。207年随征柳城，遇敌时鼓励决战，获曹操亲授旗麾。战功确实显著，招降中的临险冒进也由本传同时保留。',refs=[CHANGXI,REBUKE,HEBEI,YE,COAST,JIANGXIA,WUHUA,BANNER]),
+ dict(title='合肥先击而后守',text='南线统军期间，张辽曾平定军中夜乱，又率军登灊山讨陈兰、梅成。215年孙权围合肥，张辽依曹操预置军令，与李典主张趁敌未合先挫其势。他募八百敢死者突击，出围后又返回救出余众，使军心安定；孙权十余日不能拔城而退，张辽再率军追击，几乎擒获孙权。突击与坚守互为支撑，而非八百人一次消灭十万人的简化故事。',refs=[CAMP,TIANZHU,EIGHT,RETURN,WIN,HEFEI]),
+ dict(title='调防受礼与带病出征',text='合肥胜后张辽拜征东将军，后移居巢。219年奉召援曹仁，尚未抵达围已被徐晃解开，他在摩陂会曹操，转屯陈郡；曹丕统事后迁前将军，再屯合肥，进晋阳侯。221年入朝洛阳，后屯雍丘患病，受到遣医、亲临等优礼。222年仍乘舟与曹休到海陵临江，与诸将破吕范，终病卒江都，谥刚侯。',refs=[GENERAL,JUCHAO,MISSED,MOBEI,CHEN,AGAIN,JINYANG,LUOYANG,ILL,HAILING,DEATH]),
+ ],
+ careers=[
+ dict(id='early',when='汉末至降曹前，确年未载',title='募兵河北，随吕布东奔徐州',office='骑都尉、领鲁相',text='从丁原、何进至董卓、吕布，曾赴京都、河北募兵，后随吕布东奔徐州、领鲁相；“年二十八”的具体归年不强定。',refs=[MASTERS,XUZHOU,Q('v017-b0002','使將兵詣京都。'),Q('v017-b0002','遷騎都尉。')]),
+ dict(id='xiapi',when='198年',title='下邳率众归曹',office='中郎将、关内侯',text='曹操破吕布于下邳，张辽率所部投降，拜中郎将、赐爵关内侯，后以战功迁裨将军。',refs=[XIAPI,Q('v017-b0002','數有戰功，遷裨將軍。')],eventIds=['xiapi']),
+ dict(id='baima',when='200年',title='与关羽为白马前锋',office='—',text='武帝纪与关羽传均记张辽、关羽同为前锋击颜良；斩颜良的个人行动归关羽，不移给张辽。',refs=[BAIMA,Q('v036-b0003','羽望見良麾蓋，策馬刺良於萬眾之中，斬其首還')]),
+ dict(id='changxi',when='袁绍败后，确年未载',title='定鲁国，三公山招昌豨',office='裨将军',text='别定鲁国诸县，与夏侯渊围昌豨于东海；从对方迟疑试探诱降，独上三公山获成功，亦被曹操责其冒险。',refs=[Q('v017-b0002','袁紹破，別遣遼定魯國諸縣。與夏侯淵圍昌豨於東海'),CHANGXI,REBUKE]),
+ dict(id='hebei',when='黎阳至袁谭败后，确年未载',title='攻邺并别徇河北、海滨',office='行中坚将军，后荡寇将军',text='随攻黎阳、邺，并与乐进拔阴安、迁民河南；邺破后徇赵国、常山，袁谭败后徇海滨，破柳毅等，再还邺获亲迎。',refs=[HEBEI,YE,COAST,Q('v017-b0002','使遼與樂進拔陰安，徙其民河南。'),Q('v017-b0002','以遼爲蕩寇將軍。')]),
+ dict(id='jiangxia',when='柳城之役前，确年未载',title='定江夏诸县，还屯临颍',office='都亭侯',text='别击荆州，定江夏诸县，继而还屯临颍、封都亭侯。原文未给这次行军的逐地线路与确年。',refs=[JIANGXIA]),
+ dict(id='wuhuan',when='207年',title='柳城遇敌，受麾奋击',office='荡寇将军',text='随征袁尚至柳城，遇敌时劝曹操战，受麾后进击，大破乌丸军、斩蹋顿。此处记协同战果，不独占全军之功。',refs=[WUHUA,BANNER],eventIds=['wuhuan']),
+ dict(id='changshe',when='柳城后、荆州未定时，确年未载',title='屯长社前后平定军乱',office='荡寇将军',text='受命屯长社，临发时军中夜惊起火，令不反者安坐，以亲兵数十人镇定后擒杀首谋；乱起处未详，不直接标为长社。',refs=[CHANGSHE,CAMP]),
+ dict(id='qianshan',when='柳城后，确年未载',title='登灊山讨陈兰、梅成',office='增邑、假节',text='陈兰、梅成聚众灊山天柱山，张辽督张郃、牛盖等攻克，斩二人、尽虏其众，曹操以登险之功增邑假节。',refs=[MOUNTAIN,TIANZHU,Q('v017-b0003','增邑，假節。')]),
+ dict(id='hefei',when='215年',title='合肥募八百逆击，追孙权',office='征东将军',text='率八百人先击，出围后还救余众；孙权十余日不能克城而退，又率军追击，因功拜征东将军。',refs=[HEFEI,EIGHT,RETURN,WIN,GENERAL],eventIds=['hefei']),
+ dict(id='juchao',when='216年',title='曹操循战处，移屯居巢',office='征东将军',text='建安二十一年曹操至合肥循战场，增张辽兵力、多留诸军，张辽转屯居巢。',refs=[JUCHAO,Q('v017-b0004','建安二十一年，太祖復征孫權，到合肥')]),
+ dict(id='mobei',when='219年',title='援樊未及，会摩陂屯陈郡',office='—',text='奉召援曹仁，未到徐晃已解围；本人在摩陂与曹操会合后还屯陈郡，不将樊城列为已到。',refs=[MISSED,MOBEI,CHEN]),
+ dict(id='return',when='220年',title='转前将军，再屯合肥',office='前将军、晋阳侯',text='曹丕即王位转前将军，再遣屯合肥、进都乡侯；践阼进封晋阳侯，食邑合二千六百户。',refs=[CHEN,AGAIN,JINYANG]),
+ dict(id='court',when='221年',title='朝洛阳，屯雍丘患病',office='前将军',text='黄初二年朝洛阳宫，曹丕亲问破吴经过；后还屯雍丘得疾，朝廷遣医、亲临，病小差后还屯，行在具体位置未详。',refs=[LUOYANG,ILL,Q('v017-b0005','疾小差，還屯。')]),
+ dict(id='death',when='222年',title='临海陵，病卒江都',office='谥刚侯，张虎嗣爵',text='乘舟与曹休至海陵临江，带病与诸将破吕范；病笃卒于江都，谥刚侯、张虎嗣。其后225年追录合肥功不作本人行迹。',refs=[HAILING,DEATH,YEAR]),
+ ],
+ trajectory=dict(atlasPerson='zhangliao',phases=[
+ dict(id='early',title='转事诸主与归曹',when='汉末至袁绍败后，部分确年未载',span=(189,201),careers=['early','xiapi','baima','changxi'],atlasStops=[0,1,2]),
+ dict(id='hebei',title='河北与江夏征战',when='黎阳至柳城前，确年未载',span=(202,206),careers=['hebei','jiangxia'],atlasStops=[3,4]),
+ dict(id='north',title='柳城奋击',when='207年',span=(207,207),careers=['wuhuan'],atlasStops=[5]),
+ dict(id='huainan',title='讨叛与合肥成名',when='柳城后至216年，部分确年未载',span=(208,216),careers=['changshe','qianshan','hefei','juchao'],atlasStops=[6,7,8]),
+ dict(id='relief',title='援军调防与进爵',when='219—220年',span=(219,220),careers=['mobei','return'],atlasStops=[9,10]),
+ dict(id='late',title='受礼与带病临江',when='221—222年',span=(221,222),careers=['court','death'],atlasStops=[11,12]),
+ ]),
+ records=[
+ dict(section='military',when='曹操任用时期，确年未载',title='招降与统御部众',category='抚众与归附',careerRef='changxi',text='定鲁国诸县、招降昌豨与缘山诸部，是军事中的安附工作。曹操表文称其抚众则和、奉令无犯，这是主君对将领的统御评价，不扩写为完整地方治绩。',refs=[CHANGXI,YE,PRAISE]),
+ dict(section='military',when='207年',title='柳城遇敌敢于决战',category='临阵进击',careerRef='wuhuan',text='突然遇敌时劝战，获亲授麾旗而奋击，参与击破乌丸与蹋顿之死；正文把他置于曹操统军行动之中。',refs=[WUHUA,BANNER]),
+ dict(section='military',when='柳城后，确年未载',title='镇乱与登险讨叛',category='部队控制',careerRef='qianshan',text='军中夜惊时稳住不反部众、擒首谋；讨陈兰梅成又不畏狭险登山进攻。镇定与果断各有具体行动依据。',refs=[CAMP,MOUNTAIN,TIANZHU]),
+ dict(section='military',when='215年',title='先挫锋锐，再守合肥',category='攻守转换',careerRef='hefei',text='八百敢死者出击旨在挫敌气势、安定军心，继而守城；追退军几获孙权是后续行动，不与晨间突击混为一战。',refs=[Q('v017-b0004','是以教指及其未合逆擊之，折其盛勢，以安衆心，然後可守也。'),EIGHT,RETURN,WIN],eventIds=['hefei']),
+ dict(section='setback',when='袁绍败后，确年未载',title='独入敌家受曹操责',category='大将冒险',careerRef='changxi',text='昌豨归降虽成，单身入其家仍被曹操斥为非大将法。结果成功不消除主将自陷险境的风险。',refs=[CHANGXI,REBUKE]),
+ dict(section='setback',when='219年及晚年',title='救樊未到，病中再出征',category='行动限制',careerRef='death',text='救樊尚未到场围已解，不能记为亲自解围之功；晚年带病临江而病笃卒，是行动与身体的限制，正文未据此判为失职。',refs=[MISSED,ILL,HAILING,DEATH]),
+ ],
+ assessment=[dict(title='陈寿：五子为先',text='陈寿把张辽列入曹操良将中的五子，指出张辽、徐晃的行事记载较详。这是合评，不能伪作只赞张辽的独立长评。',refs=[PING,Q('v017-b0028','未如張遼、徐晃之備詳也。')]),dict(title='曹丕的追录与对手戒惧',text='曹丕追念合肥战功，称张辽、李典为国之爪牙；孙权则令诸将慎待病中的张辽。二者是君主追录与敌方判断，不等于所有战役均无险失。',refs=[Q('v017-b0005','可謂國之爪牙矣。'),Q('v017-b0005','張遼雖病，不可當也，愼之！')])],
+ relations=[
+ dict(category='旧主',name='丁原、何进、董卓',label='早年转属诸主',text='受丁原召用、奉何进命募兵，何进败后以兵属董卓。',refs=[MASTERS,Q('v017-b0002','并州刺史丁原以遼武力過人，召爲從事')]),
+ dict(category='旧主',name='吕布',personId='lv-bu',label='从属后下邳归曹',text='董卓败后属吕布，随东奔徐州；下邳吕布败后率众降曹操。',refs=[MASTERS,XUZHOU,XIAPI]),
+ dict(category='君臣',name='曹操',personId='caocao',label='任用、褒功也责冒险',text='降后受任统军，柳城授麾、合肥进官；招降昌豨后也被责不是大将之法。',refs=[XIAPI,BANNER,GENERAL,REBUKE]),
+ dict(category='君臣',name='曹丕',personId='cao-pi',label='进爵与病中优礼',text='转前将军、晋阳侯；病中遣医、亲临，卒后流涕追录功业。',refs=[CHEN,JINYANG,DEATH,Q('v017-b0005','車駕親臨，執其手')]),
+ dict(category='同僚',name='关羽',personId='guanyu',label='白马前锋与去留问答',text='白马同为前锋，又受命探问关羽去留，把答复告曹操。',refs=[BAIMA,Q('v036-b0003','遼以羽言報曹公，曹公義之。')]),
+ dict(category='同僚',name='乐进、李典',label='合肥分任攻守',text='共将七千余守合肥；曹操密教令张、李出战，乐进守护军。',refs=[HEFEI,Q('v017-b0004','張李將軍出戰；樂將軍守護軍')]),
+ dict(category='敌对',name='孙权',personId='sunquan',label='合肥与江上对手',text='215年合肥围退后几遭擒获，张辽病中临江仍为其所惮。',refs=[WIN,Q('v017-b0005','張遼雖病，不可當也，愼之！')]),
+ dict(category='亲族',name='张虎',label='嗣爵之子',text='父卒后嗣爵，官偏将军；其后子张统嗣。',refs=[DEATH,Q('v017-b0005','虎爲偏將軍，薨。子統嗣。')]),
+ ],
+ readingNotes=[dict(title='生年不据“二十八”强定',text='本传把二十八岁置于从吕布东奔徐州、领鲁相之后，没有在该句给确年；本页不以外部年代补算出生年。',refs=[XUZHOU]),dict(title='合肥八百与十万的叙事',text='正文记募八百、先出击再守城，吴退后再追；225年追诏用八百破十万概括功勋。二层语境不同，不改写为一场歼灭十万。',refs=[EIGHT,WIN,Q('v017-b0005','合肥之役，遼典以步卒八百，破賊十萬')]),dict(title='救樊不是已到樊城',text='本传明确说张辽未至，徐晃已解围，其后相会在摩陂。地图与武功都以此限制本人行动范围。',refs=[MISSED,MOBEI]),dict(title='临发军乱与长社的地点边界',text='正文先记遣屯长社，再记临发军乱，并未明确乱事发生在长社；只据明确到达或驻屯生成长社点，不把军乱地点坐实。',refs=[CHANGSHE,CAMP])],
+ sections={'civil':{'note':'本书详记张辽统军征讨，也记招降与军中交往，却没有可独立展开的地方施政举措。领鲁相的官名不足据以补出治绩；如实转达关羽去留另见人物关系。'}},
+ glossary=[('麾','军中指挥所用旗帜。'),('关内侯','有侯号而与具体县邑列侯不同的爵位。')],
+ sourceScope='以卷十七张辽本传及全部裴注为基础，交叉核对卷一武帝纪、卷二文帝纪、卷三十六关羽传、卷五十五甘宁传。军中评语、诏令与陈寿合评分层，招降与战场的确年和历史地理均保留必要留白。本页不声称穷尽全书所有提及张辽之处。',
+)

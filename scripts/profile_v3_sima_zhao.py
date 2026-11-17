@@ -1,0 +1,94 @@
+"""司马昭：无独立本传，严格限用本书散见记载。"""
+from profile_v3 import Q
+DONG=Q('v004-b0022-n02','時司馬文王為監軍，統諸軍，唯削文王爵而已。','《汉晋春秋》')
+REGENT=Q('v004-b0032','以衞將軍司馬文王為大將軍，錄尚書事。')
+BACK=Q('v028-b0055','衛將軍司馬文王為大軍後繼。')
+XUCHANG=Q('v028-b0055','景王薨於許昌，文王總統六軍')
+LUO=Q('v028-b0055','輒與衛將軍俱發，還到雒水南屯住。')
+QIU=Q('v028-b0022','大將軍司馬文王督中外諸軍二十六萬眾，臨淮討之。大將軍屯丘頭。')
+SIEGE=Q('v028-b0024','今三叛相聚於孤城之中，天其或者將使同就戮，吾當以全策縻之，可坐而制也。')
+VISIT=Q('v028-b0023','大將軍乃自臨圍，四面進兵，同時鼓譟登城')
+WIN=Q('v004-b0052','三年春二月，大將軍司馬文王陷壽春城，斬諸葛誕。')
+SETTLE=Q('v028-b0024','一無所殺，分佈三河近郡以安處之。')
+REFUSE=Q('v004-b0053','命大將軍司馬文王為相國，封晉公，食邑八郡，加之九錫，文王前後九讓乃止。')
+POWER=Q('v004-b0060-n01','司馬昭之心，路人所知也。','《汉晋春秋》')
+JIA=Q('v004-b0060-n01','中護軍賈充又逆帝戰於南闕下','《汉晋春秋》')
+MURDER=Q('v004-b0060-n01','濟即前刺帝，刃出於背。','《汉晋春秋》')
+RESPONSE=Q('v004-b0060-n01','天下其謂我何！','《汉晋春秋》')
+MEMORIAL=Q('v004-b0064','即駱驛申勑，不得迫近輦輿，而濟遽入陣間，以致大變。')
+PLANS=Q('v028-b0058','惟會亦以為蜀可取，豫共籌度地形，考論事勢。')
+ORDERS=Q('v028-b0038','大將軍司馬文王皆指授節度')
+TAKE=Q('v004-b0075','復命大將軍進位爵賜一如前詔。')
+SHUFALL=Q('v004-b0076','蜀主劉禪詣艾降，巴蜀皆平。')
+WEST=Q('v028-b0068','軍至長安，會果已死，咸如所策。')
+KING=Q('v004-b0077','己卯，進晉公爵為王，封十郡，并前二十。')
+RANKS=Q('v004-b0077','夏五月庚申，相國晉王奏復五等爵。')
+DEATH=Q('v004-b0085','秋八月辛卯，相國晉王薨。壬辰，晉太子炎紹封襲位，總攝百揆')
+BURIAL=Q('v004-b0085','乙亥，葬晉文王。')
+EMPEROR=Q('v048-b0025','晉文帝爲魏相國')
+SUCCESSION=Q('v004-b0086','禪位于晉嗣王，如漢魏故事。')
+PING=Q('v004-b0088','陳留王恭己南面，宰輔統政，仰遵前式，揖讓而禪')
+WIFE=Q('v013-b0032-n01','肅女適司馬文王，即文明皇后，生晉武帝、齊獻王攸。','《世语》')
+CAUTION=Q('v028-b0067','中國將士各自思歸，不肯與同也。')
+PROFILE=dict(
+ id='sima-zhao',tier='B',reading=['004','028'],syncLifespan=True,
+ lead='继司马师后掌魏廷军政，围平寿春，主持灭蜀并处置钟会反叛；其执政中曹髦率众讨伐而遇害。晚年受相国、晋公及晋王之号，265年卒，司马炎承其位后受禅，本人没有在生前称帝。',role='魏相国、晋王与实际执政者',
+ facts=[
+ dict(key='hometown',label='籍贯',value='本书未为本人专载',text='本书无司马昭独立传记，所用帝纪与钟会等传未给本人籍贯条。司马朗传记河内温人，可作家族线索，不能把旁人传首直接当司马昭本传。',refs=[REGENT,Q('v015-b0009','司馬朗字伯達，河内溫人也。')]),
+ dict(key='lifespan',label='生卒年',value='生年未详—265年',text='三少帝纪明记咸熙二年八月去世；本书没有在所核材料中直接记其生年，不沿用外部《晋书》推得的211年。',refs=[DEATH]),
+ dict(key='identity',label='主要身份',value='魏实际执政者、晋王',text='255年拜大将军录尚书事，后进相国、晋公、晋王；帝号为身后称谓，不表示生前已代魏。',refs=[REGENT,TAKE,KING,DEATH,SUCCESSION]),
+ dict(key='office',label='最高官职',value='相国',text='由卫将军进大将军、录尚书事，后受相国；官职、封爵与天子仪物分开，不把晋文帝写为生前任职。',refs=[REGENT,TAKE,DEATH]),
+ dict(key='title',label='最高爵位',value='晋王',text='258年相国、晋公、九锡之命辞让未受，263年再命进位爵，264年进爵为王；265年仍以相国晋王去世。',refs=[REFUSE,TAKE,KING,DEATH]),
+ dict(key='posthumous',label='身后称号',value='晋文王；本书亦称晋文帝',text='265年九月葬称晋文王；吴书回叙又称晋文帝。两者是身后称谓，不据此外推本书未详的追尊仪式与日期。',refs=[BURIAL,EMPEROR]),
+ dict(key='deeds',label='代表事迹',items=['继掌辅政','围平寿春','主持灭蜀','西至长安','进爵晋王'],text='军政决策、权力上升与曹髦遇害的政治危机共同构成其散见履历。',refs=[REGENT,WIN,ORDERS,WEST,KING,POWER]),
+ ],
+ intro=[
+ dict(title='从监军到接掌辅政',text='司马昭在本书没有独立本传，须由帝纪与相关人物传连读。裴注《汉晋春秋》记252年东关失利时，他为监军、统诸军，被削爵；255年司马师东征，司马昭为后继。司马师死在许昌后，昭总领六军，钟会与傅嘏谋使他带军回到雒水南，随后朝廷拜大将军、录尚书事。这里可见接掌权力的过程，不能用后来的帝号反写为当时已建晋朝。',refs=[DONG,BACK,XUCHANG,LUO,REGENT]),
+ dict(title='围平寿春与宽置降众',text='257年诸葛诞在寿春称兵，司马昭督中外二十六万众讨之，自屯丘头。他拒绝急攻坚城，主张深沟高垒使守军自困，并利用降者瓦解城内。次年城破，诸葛诞被杀；面对坑杀吴军降众的建议，司马昭主张只诛首恶，将他们分置三河近郡。围城的长期消耗、兵势控制与战后处置相互配合，这是相关传记中写得最具体的军事主持。',refs=[QIU,SIEGE,VISIT,WIN,SETTLE],eventLinks=[dict(label='257年诸葛诞在寿春称兵',eventId='shouchun-siege')]),
+ dict(title='皇帝遇害与权势推进',text='寿春平定后，朝廷屡加相国、晋公与九锡，司马昭起初辞让。260年曹髦不能忍受权力日去，率众出讨；裴注《汉晋春秋》记贾充率军抵抗，成济刺杀曹髦，昭闻后惊问天下将如何看待自己。正文随后保存昭上言，称已令不得伤害皇帝、将责任归于成济。这些是不同立场的叙述，不能把上言直接当作已经洗清执政者责任。',refs=[REFUSE,POWER,JIA,MURDER,RESPONSE,MEMORIAL]),
+ dict(title='灭蜀之后与身后接续',text='司马昭与钟会考论伐蜀形势，263年指授邓艾、钟会等分路进军，刘禅降而蜀亡。其间昭受相国、晋公之命；钟会告邓艾有异志后，昭向西进军，抵长安时钟会已经败死。264年进为晋王，又奏复五等爵，265年八月去世，司马炎继位。魏晋受禅发生在其死后；灭蜀前线诸将到过的江由、绵竹、成都，也不应移作司马昭本人的行迹。',refs=[PLANS,ORDERS,SHUFALL,TAKE,WEST,KING,RANKS,DEATH,SUCCESSION]),
+ ],
+ careers=[
+ dict(id='dongxing',when='252年',title='东关失利，监军受削爵',office='监军',text='正文记诸军东关失利；裴注《汉晋春秋》补记司马昭为监军统诸军而被削爵，不能因此证明本人到了每一处前线战场。',refs=[DONG,Q('v004-b0022','大破衆軍於東關。不利而還。')],eventIds=['dongxing-battle']),
+ dict(id='regency',when='255年',title='许昌统军，返雒水南接辅政',office='大将军、录尚书事',text='司马师平毌丘俭文钦时昭为后继；师死许昌，昭统六军，随傅嘏等返雒水南，随后获拜辅政。',refs=[BACK,XUCHANG,LUO,REGENT],eventIds=['qiu-wen-rebellion','sima-zhao-regency']),
+ dict(id='siege',when='257年',title='督军屯丘头，围寿春',office='大将军，后加大都督、假黄钺',text='督二十六万众讨诸葛诞，屯丘头，令诸军重围寿春，不以急攻消耗兵力。八月加大都督、假黄钺。',refs=[QIU,SIEGE,Q('v004-b0043','命大將軍司馬文王加號大都督，奏事不名，假黃鉞。')],eventIds=['shouchun-siege']),
+ dict(id='victory',when='258年',title='寿春平定，安置吴军降众',office='大将军',text='自临围督进，二月破寿春、斩诸葛诞；拒绝坑杀所降吴军，将其分处三河近郡。',refs=[VISIT,WIN,SETTLE]),
+ dict(id='decline',when='258年至260年前',title='辞相国、晋公与九锡',office='辞新命，仍大将军',text='258年五月受命为相国、晋公、加九锡，前后九让而止；后续屡次进位与辞让不都算已经受命。',refs=[REFUSE]),
+ dict(id='caomao',when='260年',title='曹髦讨昭遇害',office='大将军',text='曹髦率众攻向昭，贾充迎战、成济刺帝见于裴注《汉晋春秋》；正文保留昭自称令勿伤帝、请治成济的上言。',refs=[POWER,JIA,MURDER,MEMORIAL],eventIds=['cao-mao-death']),
+ dict(id='planning',when='262—263年',title='与钟会谋蜀，分授节度',office='大将军',text='考论蜀小民疲之势，与钟会共谋；命邓艾牵制姜维、诸葛绪截归路、钟会由谷道推进。派军目的地不作本人到达。',refs=[PLANS,ORDERS,Q('v028-b0038','使艾與維相綴連；雍州刺史諸葛緒要維，令不得歸。'),Q('v004-b0074','又命鎮西將軍鍾會由駱谷伐蜀。')]),
+ dict(id='conquest',when='263年',title='灭蜀与再受相国晋公之命',office='相国、晋公',text='诸军灭蜀，刘禅向邓艾降，司马昭为总体节度者；十月再命其进位爵赐，后文以相国晋公、晋王相承。',refs=[TAKE,SHUFALL,ORDERS,KING],eventIds=['fall-shu']),
+ dict(id='changan',when='264年正月',title='西向长安，钟会已死',office='相国、晋公',text='钟会告邓艾有异后昭向西进，至长安时钟会已被军众杀死。长安是明确到达点，不能沿诸将路线推到蜀中。',refs=[WEST,Q('v028-b0068','及會白鄧艾不軌，文王將西')],eventIds=['zhong-hui-rebellion']),
+ dict(id='king',when='264年',title='进晋王，奏复五等爵',office='相国、晋王',text='三月晋公进爵为王，增封十郡、共二十郡；五月奏复五等爵。封郡不是巡行记录。',refs=[KING,RANKS]),
+ dict(id='death',when='265年八月至九月',title='卒后司马炎绍位，葬称文王',office='晋太子炎袭位',text='咸熙二年八月辛卯去世，次日太子炎绍封袭位、总摄百揆；九月葬晋文王。',refs=[DEATH,BURIAL]),
+ dict(id='after',when='265年十二月及身后称谓',title='晋嗣王受禅，本书称文帝',office='身后称晋文王、晋文帝',text='魏禅位对象是晋嗣王司马炎，发生在昭死后；吴书回叙用晋文帝称昭，不补写书中未详的追尊仪式。',refs=[SUCCESSION,EMPEROR,DEATH],eventIds=['jin-founding']),
+ ],
+ trajectory=dict(atlasPerson='simazhao',phases=[
+ dict(id='rise',title='监军与继掌辅政',when='252—255年',span=(252,255),careers=['dongxing','regency'],atlasStops=[0,1]),
+ dict(id='huainan',title='围平寿春',when='257—258年',span=(257,258),careers=['siege','victory'],atlasStops=[2]),
+ dict(id='court',title='魏廷危机与谋蜀',when='258—263年',span=(258,263),careers=['decline','caomao','planning','conquest'],atlasStops=[]),
+ dict(id='west',title='西至长安与晋王',when='264年',span=(264,264),careers=['changan','king'],atlasStops=[3]),
+ dict(id='end',title='终年与身后接续',when='265年',span=(265,265),careers=['death','after'],atlasStops=[]),
+ ]),
+ records=[
+ dict(section='civil',when='258年',title='拒坑降众，分处近郡',category='战后处置',careerRef='victory',text='寿春破后区分首恶与降众，拒绝以淮南屡叛为由尽杀吴兵，将之分置三河近郡。原文呈现为处置政策，不推成全面无刑戮。',refs=[SETTLE,Q('v028-b0024','戮其元惡而已。')]),
+ dict(section='civil',when='264年',title='奏复五等爵',category='制度变更',careerRef='king',text='相国晋王奏复五等爵，是本书明确记载的制度变更；本条只列施行事实，不将扩大封授直接评为安民成效。',refs=[RANKS]),
+ dict(section='military',when='257—258年',title='持重围城，控制内外',category='统军节制',careerRef='siege',text='判断城固众多、急攻易受内外夹击，深沟重围等待自困，最后亲临督进。其角色是统军与围城决策，不以部将每场战斗作本人亲战。',refs=[QIU,SIEGE,VISIT]),
+ dict(section='military',when='263—264年',title='谋蜀与预防统将异动',category='总体筹划',careerRef='changan',text='与钟会共同考论形势，指授分路进兵；钟会异动时西至长安。对魏兵思归的判断见其与邵悌的对话，不当作先知式的必然。',refs=[PLANS,ORDERS,WEST,CAUTION]),
+ dict(section='setback',when='252年',title='东关败绩承担削爵',category='统军挫折',careerRef='dongxing',text='裴注《汉晋春秋》记为监军统诸军，东关败后削其爵；正文没有因此写出他本人在战场的详细位置。',refs=[DONG]),
+ dict(section='setback',when='260年',title='执政之下皇帝被杀',category='君臣与弑君危机',careerRef='caomao',text='曹髦率众讨昭，部下贾充、成济的抵抗导致皇帝被杀。昭上言将罪归成济，但史料立场与执政者的政治责任须并读，不能只据自辩免去争议。',refs=[JIA,MURDER,RESPONSE,MEMORIAL]),
+ dict(section='setback',when='263—264年',title='灭蜀之后两将相继死',category='统将与权力风险',careerRef='changan',text='邓艾被征而死、钟会兵变自灭，显示胜利未能避免将领之间与中央的严重冲突；不把昭事前的警惕直接写成这些死亡均为既定计划。',refs=[WEST,Q('v004-b0077','是月，鍾會反於蜀，為衆所討；鄧艾亦見殺。')]),
+ ],
+ assessment=[dict(title='陈寿：无司马昭独立专评',text='本书无司马昭独立本传或篇末专评。三少帝纪合评以陈留王“宰辅统政”“揖让而禅”收束魏晋之际，写的是皇帝处境与政权转移，不能改造成陈寿对昭品格的单独赞辞。',refs=[PING]),dict(title='正文与注引的不同政治视角',text='围寿春的正文强调持重与宽置降众；曹髦遇害的注引则保留皇帝对其权势的指控。两者分别支持具体行动的判断，不宜用一端覆盖全部执政。',refs=[SIEGE,SETTLE,POWER,MURDER])],
+ relations=[
+ dict(category='同僚',name='司马师',personId='sima-shi',label='后继统军与接掌辅政',text='师东征时昭为后继，师死许昌后昭总领六军并受拜辅政；本条依据共同军政经历。',refs=[BACK,XUCHANG,REGENT]),
+ dict(category='君臣',name='曹髦',personId='cao-mao',label='皇权与执政者冲突',text='曹髦欲讨昭，终为昭方军士杀害；正文上言与注引叙述分别保留。',refs=[POWER,JIA,MURDER,MEMORIAL]),
+ dict(category='部属',name='钟会',personId='zhong-hui',label='腹心、统将与反叛者',text='参与辅政接续，又与昭谋蜀；灭蜀后谋反，昭军至长安时已被杀。',refs=[LUO,PLANS,WEST]),
+ dict(category='部属',name='邓艾',personId='deng-ai',label='受节度灭蜀',text='受昭指授，奇袭蜀地成功，后被钟会告发征还；不能因部将功业给昭添前线足迹。',refs=[ORDERS,SHUFALL,Q('v028-b0068','及會白鄧艾不軌，文王將西')]),
+ dict(category='敌对',name='诸葛诞',label='寿春围讨对象',text='督大军围其所守寿春，二月破城而诞死。',refs=[QIU,WIN]),
+ dict(category='部属',name='贾充',label='皇帝遇害中的部将',text='裴注《汉晋春秋》记其率军迎曹髦，并答成济急问；责任争议不因昭自辩而消失。',refs=[JIA,Q('v004-b0060-n01','畜養汝等，正謂今日。今日之事，無所問也。','《汉晋春秋》')]),
+ dict(category='亲族',name='王氏、司马炎',personId='sima-yan',label='妻与嗣位之子',text='裴注《世语》记王肃女嫁昭，生晋武帝与齐献王攸；正文记炎在昭卒次日绍封袭位。',refs=[WIFE,DEATH]),
+ ],
+ readingNotes=[dict(title='没有本传时的基本档案边界',text='本页从帝纪与他传拼合履历，能确定卒年与主要官爵；籍贯与生年不拿旁人传首、外部史书或旧卡片填作本书明文。',refs=[REGENT,DEATH]),dict(title='文王、文帝与生前晋王',text='本书叙往事常称文王，吴书又称晋文帝；265年去世条仍称相国晋王。尊号是叙事称谓层，不把生前仕途写成皇帝即位。',refs=[DEATH,BURIAL,EMPEROR,SUCCESSION]),dict(title='曹髦遇害的正文与裴注',text='正文保留昭的上言称令不得伤帝；裴注《汉晋春秋》记贾充、成济行动与昭闻讯反应。两者出自不同政治位置，不能拼成无人争议的无责说。',refs=[MEMORIAL,JIA,MURDER,RESPONSE]),dict(title='三少帝合评不是昭专评',text='陈寿对陈留王的合评涉及宰辅统政与禅让，叙述重心是皇位接续；不虚构“陈寿评司马昭”式的原文。',refs=[PING])],
+ glossary=[('录尚书事','总领尚书政务的授权。'),('九锡','朝廷加予重臣的一组殊礼，与实际受命时间须分别。')],
+ sourceScope='本书无独立本传。以卷四三少帝纪与卷二十八诸葛诞、邓艾、钟会诸传为主要依据，交叉核对卷十三王肃传注、卷十五司马朗传与卷四十八吴主传。帝纪诏奏、臣下建言、裴注异说分别标注；不把陈寿对皇帝的合评冒充司马昭专评。本页不声称穷尽全书所有提及司马昭之处。',
+)
