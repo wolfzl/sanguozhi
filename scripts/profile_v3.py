@@ -47,6 +47,28 @@ V3_MODULES = [
     'profile_v3_huang_zhong', 'profile_v3_huang_gai', 'profile_v3_cheng_pu',
     'profile_v3_han_dang', 'profile_v3_zhang_xiu', 'profile_v3_ma_teng',
     'profile_v3_sima_yan',
+    'profile_v3_xiahou_dun',
+    'profile_v3_xiahou_yuan',
+    'profile_v3_cao_ren',
+    'profile_v3_xu_chu',
+    'profile_v3_xu_huang',
+    'profile_v3_zhang_he',
+    'profile_v3_yu_jin',
+    'profile_v3_yue_jin',
+    'profile_v3_pang_de',
+    'profile_v3_wei_yan',
+    'profile_v3_wang_ping',
+    'profile_v3_ma_su',
+    'profile_v3_liao_hua',
+    'profile_v3_gan_ning',
+    'profile_v3_ling_tong',
+    'profile_v3_zhou_tai',
+    'profile_v3_xu_sheng',
+    'profile_v3_ding_feng',
+    'profile_v3_jiang_qin',
+    'profile_v3_pan_zhang',
+    'profile_v3_hua_tuo',
+    'profile_v3_chen_gong',
 ]
 
 # 人物分级（scripts/person_tiers.py 按史料篇幅计算；改动须同时更新该脚本并通过 --check）。
@@ -113,7 +135,9 @@ def create_new(people, events, profiles):
             raise ValueError(f'{pid}: 已有人物页，种子不应再写 new 字段')
         if not any(f['key'] == 'lifespan' for f in seed['facts']):
             raise ValueError(f'{pid}: 新建人物必须写 lifespan 档案项（侧栏生卒年依据）')
-        if not seed.get('eventRoles'):
+        # 《华佗传》有可独立阅读的本传，现有事件库没有对应事件。
+        event_roles = seed.get('eventRoles', [])
+        if not event_roles and (pid != 'hua-tuo' or seed['tier'] != 'C'):
             raise ValueError(f'{pid}: 新建人物至少要登记一个事件（eventRoles），否则无法与事件互相链接')
         people.append(dict(
             id=pid, name=new['name'], courtesy=new.get('courtesy') or '本书未详', faction=new['faction'],
@@ -123,13 +147,27 @@ def create_new(people, events, profiles):
             dossier=dict(tier=new.get('label', '拓展人物'), extraRelations=[], glossary=[]),
         ))
         seed['syncLifespan'] = True
-        for event_id, role in seed['eventRoles']:
+        for event_id, role in event_roles:
             event = by_event.get(event_id)
             if event is None:
                 raise ValueError(f'{pid}: eventRoles 中的事件 {event_id} 不存在')
             if any(x.get('personId') == pid for x in event['participants']):
                 continue
-            event['participants'].append({'personId': pid, 'role': role})
+            participants = event['participants']
+            for index, participant in enumerate(participants):
+                names = participant.get('name', '').split('、')
+                if new['name'] not in names:
+                    continue
+                if len(names) == 1:
+                    participants[index] = {'personId': pid, 'role': participant['role']}
+                else:
+                    remaining = '、'.join(name for name in names if name != new['name'])
+                    participants[index:index + 1] = [
+                        {'personId': pid, 'role': role}, {**participant, 'name': remaining},
+                    ]
+                break
+            else:
+                participants.append({'personId': pid, 'role': role})
             event['tags'] = list(dict.fromkeys(event['tags'] + [new['name']]))
 
 

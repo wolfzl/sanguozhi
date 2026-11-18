@@ -13,3 +13,10 @@ test('portrait standard rejects empty courtesy names and duplicate relations',()
  assert.ok(validatePortraits([{...person,courtesy:''}],book).length);
  assert.ok(validatePortraits([{...person,relations:[{personId:'other'},{personId:'other'}]}],book).length);
 });
+
+test('only the sourced C-tier Hua Tuo profile can omit event navigation',()=>{
+ const noEvents={...person,id:'hua-tuo',dossier:{schema:'v3',contentTier:'C'},eventIds:[],paragraphs:[{}],milestones:[{when:'确年未载'}]};
+ assert.deepEqual(validatePortraits([noEvents],book),[]);
+ assert.equal(validatePortraits([{...noEvents,id:'other'}],book).length,2);
+ assert.equal(validatePortraits([{...noEvents,eventIds:['guandu']}],book).length,2);
+});

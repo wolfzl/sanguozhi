@@ -18,7 +18,7 @@
 ## 0. 执行者须知（先读）
 
 1. **一次只改一个人物。** 只新增 `scripts/profile_v3_<id>.py`（id 中的 `-` 换成 `_`，例如 `zhang-jiao` → `profile_v3_zhang_jiao.py`），并在 [scripts/profile_v3.py](../scripts/profile_v3.py) 的 `V3_MODULES` 里加一行。然后运行生成脚本，更新 `src/data/cards.json`。
-2. **不要改**：`src/components/`、`src/lib/`、其他人物的种子文件、`create_cards.py`、事件数据。确实需要改时，先停下来汇报原因。例外有两个：新建人物通过种子的 `eventRoles` 登记事件参与者，并把 `edition.json` 的人数加 1（见 §7.1）；迁移 A 级旧人物：要从 `profiles_*_expanded.py` 中删去该人物的旧数据（见 §14.1）。
+2. **不要改**：`src/components/`、`src/lib/`、其他人物的种子文件、`create_cards.py`、事件数据。确实需要改时，先停下来汇报原因。例外有两个：新建人物通过种子的 `eventRoles` 登记事件参与者，并把 `edition.json` 的人数加 1（见 §7.1）；迁移 A 级旧人物：要从 `profiles_*_expanded.py` 中删去该人物的旧数据（见 §14.1）。华佗的事件导航特例见 §7.1。
 3. **不要提交 git，不要执行 `npm run build`。** `npm run build` 会覆盖 `dist/`，影响本地 4324 端口正在运行的站点。构建检查一律输出到临时目录（见 §8）。
 4. **所有事实必须来自 `src/data/book.json`。** 你对三国的既有知识只能当作检索线索；《三国演义》、《晋书》、现代研究等本地书里没有的内容不得写入。
 5. 正文用简体中文；引文 `quote` 必须照抄 book.json 里的**繁体原文**，逐字一致。
@@ -65,11 +65,11 @@ scripts/profile_v3_liubei.py      A 级样例；profile_v3_guanyu.py 为 B 级�
 
 ## 4. 分级与篇幅
 
-所有数值与 `V3_LIMITS`（[content-validation.mjs](../scripts/content-validation.mjs)）一致，校验时按此执行。
+篇幅与栏目数量按 `V3_LIMITS`（[content-validation.mjs](../scripts/content-validation.mjs)）校验；站点通用校验另要求每张卡都有代表事迹。
 
 | 项目 | A 完整 | B 标准 | C 简版 |
 |---|---|---|---|
-| 必填 facts | 全部 8 项 | hometown、identity、office、posthumous、deeds | hometown、identity、office、posthumous |
+| 必填 facts | 全部 8 项 | hometown、identity、office、posthumous、deeds | hometown、identity、office、posthumous、deeds |
 | intro 段数 / 总字数 | 6—9 段 / 800—1300 字 | 3—5 段 / 400—700 字 | 1—2 段 / 300—450 字 |
 | careers 年表 | 15—30 条 | 8—15 条 | 3—6 条 |
 | 文治 / 武功 / 得失，每栏 | 5—15 条，可加 `group` 分组 | 2—6 条，不分组 | 1—6 条 |
@@ -99,8 +99,8 @@ scripts/profile_v3_liubei.py      A 级样例；profile_v3_guanyu.py 为 B 级�
 - **A 级（7 人）**：曹操、孙权、刘备、诸葛亮、陆逊、周瑜、司马懿。目前仍是旧 expanded 结构，见 §11。
 - **B 级（44 人）**：曹丕、曹叡、袁绍、董卓、孙皓、曹髦、孙策、荀彧、钟会、公孙瓒、刘禅、孙坚、邓艾、吕蒙、姜维、贾诩、曹爽、鲁肃、法正、郭嘉、张昭、荀攸、程昱、太史慈、庞统、陶谦、马超、张鲁、关羽✅、张辽、袁术、刘表、刘焉、赵云、蒋琬、吕范、费祎、刘璋、朱治、吕布、张飞，以及无本传、按散见记载定级的韩遂、司马师、司马昭。
 - **C 级（31 人，2026-11-18 调整）**：
-  - 已有页面（8 人）：黄忠、黄盖、程普、韩当、张绣、马腾、司马炎、张角✅。
-  - 按人气新增，需新建页面（23 人，按 §7.1）：
+  - 迁移已有页面（8 人，均已完成）：黄忠、黄盖、程普、韩当、张绣、马腾、司马炎、张角。
+  - 按人气新建页面（23 人，均已登记，流程见 §7.1）：
     - 魏：夏侯惇、夏侯渊、曹仁、典韦✅、许褚、徐晃、张郃、于禁、乐进、庞德；
     - 蜀：魏延、王平、马谡、廖化；
     - 吴：甘宁、凌统、周泰、徐盛、丁奉、蒋钦、潘璋；
@@ -261,7 +261,7 @@ python3 scripts/source_lookup.py check v054-b0038 '羽果信之，稍撤兵以�
    - 只能选现有事件。事件列表：`python3 -c "import json;print([(e['id'],e['year'],e['title']) for e in json.load(open('src/data/cards.json'))['events']])"`。
    - 角色描述不超过 15 字，写本人在事件中做了什么。
    - 至少一段 intro 要有 `eventLinks`、至少一行年表要有 `eventIds`，并且都要指向 eventRoles 里登记的事件，否则校验报 `Portrait without narrative events` / `milestone events`。
-   - **没有合适的既有事件时停下汇报**，不要自己新建事件。
+   - **没有合适的既有事件时停下汇报**，不要自己新建事件。华佗是本批的特例：卷二十九有独立本传，现有事件库没有可直接关联的条目，故保留空的 `eventRoles`，通过人物关系和原传继续阅读。其余新人物仍需有事件链接。
 3. **facts 必须有 lifespan**。侧栏的生卒年会自动按 lifespan 的 `value` 和第一条引文生成。
 4. **把 `src/data/edition.json` 中的 `"people"` 加 1**。这是新建人物时唯一允许修改的其他文件。
 5. 验收时 §8 的 `changed:` 会显示本人；`events same` 会是 False，属于正常情况。改用下面的命令确认事件只多了本人这一个参与者：
@@ -269,9 +269,10 @@ python3 scripts/source_lookup.py check v054-b0038 '羽果信之，稍撤兵以�
    python3 -c "
    import json;a=json.load(open('/tmp/cards.before.json'));b=json.load(open('src/data/cards.json'));ea={e['id']:e for e in a['events']}
    for e in b['events']:
-       if ea[e['id']]!=e: print(e['id'],[k for k in e if ea[e['id']].get(k)!=e[k]],e['participants'][-1])"
+       old=ea[e['id']]
+       if old!=e: print(e['id'],[k for k in e if old.get(k)!=e[k]],[p for p in e['participants'] if p not in old['participants']])"
    ```
-   预期只看到 eventRoles 中的事件，变动字段只有 `participants` 和 `tags`。
+   预期只看到 eventRoles 中的事件，变动字段只有 `participants` 和 `tags`。如果该人物已经以纯文本列在参与者中，则在原处转成链接；多人合列时保留其他人的姓名和原有说明。
 6. 新人物与已有人物的关系，只在本人的 `relations` 中写。**不要去改对方的种子文件**补回链。如果尚未建页的人物（例如写典韦时的许褚）出现在关系里，省略 `personId`，等对方建页后再补。
 
 ## 8. 验收命令与通过标准

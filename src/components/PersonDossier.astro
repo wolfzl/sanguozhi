@@ -133,6 +133,7 @@ const navigation = [
       <section id="related-events" class="article-section">
         <div class="section-eyebrow">从人物走向事件</div><h2>相关事件</h2>
         <div class="event-list compact">{p.eventIds.map(id=>{const note=d.relatedEventNotes?.find(n=>n.eventId===id); return note?<a class="event-reading-note" href={`/events/${id}/`}><small>{eventById(id).time}</small><h3>{note.label} ↗</h3><p>{note.text}</p></a>:<EventRow event={eventById(id)}/>;})}</div>
+        {p.eventIds.length === 0 && <p class="muted">本站暂无可直接关联的事件，可继续读下方的原传。</p>}
       </section>
       <Sources refs={refs} expanded={d.expanded} scope={d.sourceScope}/>
       <section class="original-invite"><span>继续读他的原传</span>{p.reading.map(id=>{const v=volumes.find(x=>x.id===id)!;return <a href={`/read/${id}/`}>{volumeTitle(v)} ↗</a>;})}</section>
