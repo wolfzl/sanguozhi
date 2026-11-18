@@ -37,6 +37,7 @@ def apply(people, events, R, include_six=True):
             profiles.update(module.PROFILES)
     import profile_v3
     v3 = profile_v3.load()
+    profile_v3.create_new(people, events, v3)
     profiles.update({pid: profile_v3.to_expanded(seed) for pid, seed in v3.items()})
     name_to_id = {p['name']:p['id'] for p in people}
     for pid, data in profiles.items():

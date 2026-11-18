@@ -18,7 +18,7 @@
 ## 0. 执行者须知（先读）
 
 1. **一次只改一个人物。** 只新增 `scripts/profile_v3_<id>.py`（id 中的 `-` 换成 `_`，例如 `zhang-jiao` → `profile_v3_zhang_jiao.py`），并在 [scripts/profile_v3.py](../scripts/profile_v3.py) 的 `V3_MODULES` 里加一行。然后运行生成脚本，更新 `src/data/cards.json`。
-2. **不要改**：`src/components/`、`src/lib/`、其他人物的种子文件、`create_cards.py`、事件数据。确实需要改时，先停下来汇报原因。唯一的例外是迁移 A 级旧人物：要从 `profiles_*_expanded.py` 中删去该人物的旧数据（见 §14.1）。
+2. **不要改**：`src/components/`、`src/lib/`、其他人物的种子文件、`create_cards.py`、事件数据。确实需要改时，先停下来汇报原因。例外有两个：新建人物通过种子的 `eventRoles` 登记事件参与者，并把 `edition.json` 的人数加 1（见 §7.1）；迁移 A 级旧人物：要从 `profiles_*_expanded.py` 中删去该人物的旧数据（见 §14.1）。
 3. **不要提交 git，不要执行 `npm run build`。** `npm run build` 会覆盖 `dist/`，影响本地 4324 端口正在运行的站点。构建检查一律输出到临时目录（见 §8）。
 4. **所有事实必须来自 `src/data/book.json`。** 你对三国的既有知识只能当作检索线索；《三国演义》、《晋书》、现代研究等本地书里没有的内容不得写入。
 5. 正文用简体中文；引文 `quote` 必须照抄 book.json 里的**繁体原文**，逐字一致。
@@ -91,13 +91,22 @@ scripts/profile_v3_liubei.py      A 级样例；profile_v3_guanyu.py 为 B 级�
   - 正文 ≥ 300 字，且正文加裴注 ≥ 1500 字。
 
   另外，没有独立传记、但正文中有 ≥ 20 段散见记载的人物也定为 B，此时 `sourceScope` 第一句要写明“本书无独立本传”。
-- **C**：其余人物，即本传很短，或只有少量散见记载的人物。
+- **C**：其余人物，即本传很短，或只有少量散见记载的人物；**另外加上按人气入选的人物**（脚本中的 `POPULAR_C`，2026-11-18 确认）。人气入选的人物不论史料多少，一律按 C 级写简版卡；以后需要展开时，再单独升级。
+- **移出计划**：知名度较低的 6 人（脚本中的 `EXCLUDED`）不再按 v3 改造，保留现有旧卡，不删页面。
 
 **分级名单（2026-11-13 计算）**
 
 - **A 级（7 人）**：曹操、孙权、刘备、诸葛亮、陆逊、周瑜、司马懿。目前仍是旧 expanded 结构，见 §11。
 - **B 级（44 人）**：曹丕、曹叡、袁绍、董卓、孙皓、曹髦、孙策、荀彧、钟会、公孙瓒、刘禅、孙坚、邓艾、吕蒙、姜维、贾诩、曹爽、鲁肃、法正、郭嘉、张昭、荀攸、程昱、太史慈、庞统、陶谦、马超、张鲁、关羽✅、张辽、袁术、刘表、刘焉、赵云、蒋琬、吕范、费祎、刘璋、朱治、吕布、张飞，以及无本传、按散见记载定级的韩遂、司马师、司马昭。
-- **C 级（14 人）**：黄盖、韩当、麋竺、张绣、程普、黄忠、孙乾（以上本传短）；袁谭、袁尚、马腾、王濬、司马炎、杜预、张角（以上无本传，散见记载少）。
+- **C 级（31 人，2026-11-18 调整）**：
+  - 已有页面（8 人）：黄忠、黄盖、程普、韩当、张绣、马腾、司马炎、张角✅。
+  - 按人气新增，需新建页面（23 人，按 §7.1）：
+    - 魏：夏侯惇、夏侯渊、曹仁、典韦✅、许褚、徐晃、张郃、于禁、乐进、庞德；
+    - 蜀：魏延、王平、马谡、廖化；
+    - 吴：甘宁、凌统、周泰、徐盛、丁奉、蒋钦、潘璋；
+    - 其他：华佗、陈宫。
+  - 新增人物的 id 见 `person_tiers.POPULAR_C`，例如 `xiahou-dun`、`dian-wei`、`gan-ning`。
+- **移出计划（6 人）**：孙乾、麋竺、杜预、王濬、袁谭、袁尚。保留旧卡，不写 v3 种子。
 
 查看每人的统计依据：
 
@@ -234,6 +243,37 @@ python3 scripts/source_lookup.py check v054-b0038 '羽果信之，稍撤兵以�
 5. 运行生成和校验（§8），按报错修改，直到全部通过。
 6. 对照 §2 的 R9、R10 自查一遍，然后按 §9 汇报。
 
+### 7.1 新建人物（尚无人物页的人）
+
+样例：[profile_v3_dian_wei.py](../scripts/profile_v3_dian_wei.py)（典韦）。与改造已有人物相比，多出以下几步：
+
+1. **种子加 `new` 字段**，写页面骨架所需的身份信息：
+   ```python
+   new=dict(name='典韦', faction='曹魏', period='汉末—197年', aliases=['典君'], tags=['宛城', '濮阳', '双戟']),
+   ```
+   - `faction` 只能用现有势力：汉末、曹魏、蜀汉、孙吴、西晋。
+   - `courtesy`（字）本书有就写，没有就省略，页面会显示“字号未详”。
+   - `id` 用 `person_tiers.POPULAR_C` 中给定的值，不要自己拼写。
+2. **种子加 `eventRoles` 字段**，至少登记一个既有事件，把本人加入事件参与者：
+   ```python
+   eventRoles=[('yanzhou-struggle', '濮阳募陷阵，击退吕布'), ('wancheng', '守营门战死')],
+   ```
+   - 只能选现有事件。事件列表：`python3 -c "import json;print([(e['id'],e['year'],e['title']) for e in json.load(open('src/data/cards.json'))['events']])"`。
+   - 角色描述不超过 15 字，写本人在事件中做了什么。
+   - 至少一段 intro 要有 `eventLinks`、至少一行年表要有 `eventIds`，并且都要指向 eventRoles 里登记的事件，否则校验报 `Portrait without narrative events` / `milestone events`。
+   - **没有合适的既有事件时停下汇报**，不要自己新建事件。
+3. **facts 必须有 lifespan**。侧栏的生卒年会自动按 lifespan 的 `value` 和第一条引文生成。
+4. **把 `src/data/edition.json` 中的 `"people"` 加 1**。这是新建人物时唯一允许修改的其他文件。
+5. 验收时 §8 的 `changed:` 会显示本人；`events same` 会是 False，属于正常情况。改用下面的命令确认事件只多了本人这一个参与者：
+   ```bash
+   python3 -c "
+   import json;a=json.load(open('/tmp/cards.before.json'));b=json.load(open('src/data/cards.json'));ea={e['id']:e for e in a['events']}
+   for e in b['events']:
+       if ea[e['id']]!=e: print(e['id'],[k for k in e if ea[e['id']].get(k)!=e[k]],e['participants'][-1])"
+   ```
+   预期只看到 eventRoles 中的事件，变动字段只有 `participants` 和 `tags`。
+6. 新人物与已有人物的关系，只在本人的 `relations` 中写。**不要去改对方的种子文件**补回链。如果尚未建页的人物（例如写典韦时的许褚）出现在关系里，省略 `personId`，等对方建页后再补。
+
 ## 8. 验收命令与通过标准
 
 在仓库根目录依次运行：
@@ -255,7 +295,7 @@ npx astro build --outDir /tmp/sgz-dist
 通过标准：
 
 - 生成两次结果一致，输出 `deterministic`。
-- `changed:` 中只有本次改造的人物，`events same: True`。
+- `changed:` 中只有本次改造的人物，`events same: True`（新建人物见 §7.1 第 5 步）。
 - validate、test、astro check 均无错误。
 - `/tmp/sgz-dist/people/<id>/index.html` 的体积：A 级不超过 250KB，B 级不超过 150KB，C 级不超过 80KB。三个样例分别是 210KB、145KB、46KB。
 
@@ -305,9 +345,9 @@ npx astro build --outDir /tmp/sgz-dist
 ## 12. 交给 Sonnet / Codex 的任务提示词
 
 ```text
-在 /Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified 中，按 docs/person-template-v3.md 把人物 <姓名>（id: <id>）改造成 v3 <B> 级人物卡。
-先完整阅读该文档和同级别样例（A：scripts/profile_v3_liubei.py；B：scripts/profile_v3_guanyu.py；C：scripts/profile_v3_zhang_jiao.py），再用 scripts/source_lookup.py 取证。
-只新增 scripts/profile_v3_<id>.py 并在 scripts/profile_v3.py 的 V3_MODULES 中登记；不要改其他文件，不要 git 提交，不要运行 npm run build。
+在 /Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified 中，按 docs/person-template-v3.md 把人物 <姓名>（id: <id>）改造成 v3 <B> 级人物卡（尚无人物页的人物，按 §7.1 新建）。
+先完整阅读该文档和同级别样例（A：scripts/profile_v3_liubei.py；B：scripts/profile_v3_guanyu.py；C：scripts/profile_v3_zhang_jiao.py；新建人物：scripts/profile_v3_dian_wei.py），再用 scripts/source_lookup.py 取证。
+只新增 scripts/profile_v3_<id>.py 并在 scripts/profile_v3.py 的 V3_MODULES 中登记（新建人物另把 src/data/edition.json 的 people 加 1）；不要改其他文件，不要 git 提交，不要运行 npm run build。
 完成后运行文档 §8 的全部验收命令，并按 §9 的格式汇报。遇到 §0 第 6 条所列情况时停下汇报。
 ```
 
@@ -317,6 +357,7 @@ npx astro build --outDir /tmp/sgz-dist
 2. 附录不再内嵌整卷原文，改为链接到阅读器。
 3. “失误、挫折与争议”各级必填；没有材料时写本人专属说明。
 4. 允许按人物自定义栏目名，但要等渲染层迁移后才能使用；默认栏目为“文治功绩 / 武功功绩 / 失误、挫折与争议”。
+5. （2026-11-18）C 级改为“史料少的人物 + 按人气入选的三方武将”，共 31 人；人气入选者不论史料多少一律写 C 级简版卡。孙乾、麋竺、杜预、王濬、袁谭、袁尚移出 v3 计划，保留旧卡。名单见 §4。
 
 ## 14. 三个样例说明
 
@@ -381,5 +422,7 @@ npx astro build --outDir /tmp/sgz-dist
 
 - 迁移曹操、诸葛亮、孙权、周瑜、陆逊、司马懿：照**刘备**的做法。其中曹操的旧数据是整段引文，需要逐条改成逐句引文。
 - 有本传、篇幅够 B 级线的人物：照**关羽**。
-- 本传很短，或没有本传的人物：照**张角**。没有本传但定为 B 级的人物（韩遂、司马师、司马昭），篇幅照关羽，`sourceScope` 和档案的写法照张角。
+- 本传很短，或没有本传的人物：照**张角**。
+- 尚无人物页、要新建的人物（人气 C 级的 23 人）：照**典韦**（§7.1）。他们多数本传较长，C 级篇幅装不下全部材料：只写最有代表性的两三件事，其余留给“继续读原传”。
+- 没有本传但定为 B 级的人物（韩遂、司马师、司马昭）：篇幅照关羽，`sourceScope` 和档案的写法照张角。
 

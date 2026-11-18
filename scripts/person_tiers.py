@@ -7,7 +7,8 @@
   A：开创政权或主持一国军政、决定三国格局的人物，且材料足以展开（人工指定，见 A_LIST）。
   B：有独立帝纪/本传/附传，且 正文 ≥ 600 字，或 正文 ≥ 300 字且正文+裴注 ≥ 1500 字；
      没有独立传记、但正文中有 ≥ 20 段散见记载的人物也定为 B（sourceScope 须说明无本传）。
-  C：其余人物（本传短，或只散见少量记载）。
+  C：其余人物（本传短，或只散见少量记载）；以及 POPULAR_C 中按人气入选的人物（不论史料多少，统一写简版卡）。
+  EXCLUDED：知名度较低、移出 v3 计划的人物，保留现有旧卡，不再扩写。
 """
 import json
 import re
@@ -19,6 +20,23 @@ sys.path.insert(0, str(Path(__file__).parent))
 A_LIST = ['caocao', 'liubei', 'sunquan', 'zhuge-liang', 'zhouyu', 'luxun', 'sima-yi']
 B_MAIN, B_MIN_MAIN, B_TOTAL, B_SCATTERED = 600, 300, 1500, 20
 
+# 按人气入选的 C 级人物（2026-11-18 确认）：三方武将为主。多数尚无人物页，需按指南 §7.1 新建。
+# 值为 (简体名, 繁体名, 势力)。
+POPULAR_C = {
+    'xiahou-dun': ('夏侯惇', '夏侯惇', '曹魏'), 'xiahou-yuan': ('夏侯渊', '夏侯淵', '曹魏'), 'cao-ren': ('曹仁', '曹仁', '曹魏'),
+    'dian-wei': ('典韦', '典韋', '曹魏'), 'xu-chu': ('许褚', '許褚', '曹魏'), 'xu-huang': ('徐晃', '徐晃', '曹魏'),
+    'zhang-he': ('张郃', '張郃', '曹魏'), 'yu-jin': ('于禁', '于禁', '曹魏'), 'yue-jin': ('乐进', '樂進', '曹魏'),
+    'pang-de': ('庞德', '龐德', '曹魏'),
+    'wei-yan': ('魏延', '魏延', '蜀汉'), 'wang-ping': ('王平', '王平', '蜀汉'), 'ma-su': ('马谡', '謖', '蜀汉'),
+    'liao-hua': ('廖化', '廖化', '蜀汉'),
+    'gan-ning': ('甘宁', '甘寧', '孙吴'), 'ling-tong': ('凌统', '凌統', '孙吴'), 'zhou-tai': ('周泰', '周泰', '孙吴'),
+    'xu-sheng': ('徐盛', '徐盛', '孙吴'), 'ding-feng': ('丁奉', '丁奉', '孙吴'), 'jiang-qin': ('蒋钦', '蔣欽', '孙吴'),
+    'pan-zhang': ('潘璋', '潘璋', '孙吴'),
+    'hua-tuo': ('华佗', '華佗', '汉末'), 'chen-gong': ('陈宫', '陳宮', '汉末'),
+}
+# 移出 v3 计划的人物（2026-11-18 确认）：页面保留旧版内容。
+EXCLUDED = ['sun-qian', 'mi-zhu', 'du-yu', 'wang-jun', 'yuan-tan', 'yuan-shang']
+
 # 帝纪按整卷统计；标题与人名不一致或传中夹有小标题的，手工给出段落范围 [start, end)。
 SPANS = {
     'caocao': ('001', 0, None), 'liubei': ('032', 0, None), 'sunquan': ('047', 0, None),
@@ -26,6 +44,7 @@ SPANS = {
     'cao-mao': ('004', 28, 65),        # 高貴鄉公
     'cao-shuang': ('009', 32, 38),     # 子 爽（附曹真傳）
     'gongsun-zan': ('008', 0, 13),     # 傳中夾有「劉虞」小標題
+    'ma-su': ('039', 10, 11),          # 附《馬良傳》v039-b0011，與馬良同段，字數含馬良
 }
 # 没有独立传记的人物：统计正文中提到的段落数。
 SCATTERED = {
@@ -74,6 +93,10 @@ def measure(person, trad):
 
 
 def tier_of(pid, m):
+    if pid in EXCLUDED:
+        return 'X'
+    if pid in POPULAR_C:
+        return 'C'
     if pid in A_LIST:
         return 'A'
     if m['scattered'] is not None:
@@ -95,6 +118,12 @@ def compute():
     for p in PEOPLE:
         m = measure(p, trad[p['id']])
         rows.append(dict(id=p['id'], name=p['name'], label=p['dossier']['tier'], tier=tier_of(p['id'], m), **m))
+    existing = {p['id'] for p in PEOPLE}
+    for pid, (name, trad_name, _) in POPULAR_C.items():
+        if pid in existing:
+            continue
+        m = measure(dict(id=pid, name=name, reading=[]), trad_name)
+        rows.append(dict(id=pid, name=name, label='待新建', tier=tier_of(pid, m), **m))
     return rows
 
 
@@ -102,12 +131,14 @@ if __name__ == '__main__':
     rows = compute()
     if '--check' in sys.argv:
         from profile_v3 import TIERS
-        diff = {r['id']: (TIERS.get(r['id']), r['tier']) for r in rows if TIERS.get(r['id']) != r['tier']}
+        expected = {r['id']: r['tier'] for r in rows if r['tier'] != 'X'}
+        diff = {pid: (TIERS.get(pid), t) for pid, t in expected.items() if TIERS.get(pid) != t}
+        diff.update({pid: (t, None) for pid, t in TIERS.items() if pid not in expected})
         print('一致' if not diff else f'不一致：{diff}')
         sys.exit(1 if diff else 0)
-    for t in 'ABC':
+    for t in 'ABCX':
         group = [r for r in rows if r['tier'] == t]
-        print(f'\n{t} 级（{len(group)} 人）')
+        print(f'\n{t} 级（{len(group)} 人）' if t != 'X' else f'\n移出 v3 计划（{len(group)} 人，保留旧卡）')
         for r in sorted(group, key=lambda r: -(r['main'] + r['notes'] + (r['scattered'] or 0))):
             size = f"散见正文 {r['scattered']} 段" if r['scattered'] is not None else f"正文 {r['main']} 字 / 裴注 {r['notes']} 字"
             print(f"  {r['name']}（{r['id']}）{r['kind']}，{size}；原标签 {r['label']}")

@@ -43,6 +43,7 @@ V3_MODULES = [
     'profile_v3_liu_yan',
     'profile_v3_liu_zhang',
     'profile_v3_zhang_lu',
+    'profile_v3_dian_wei',
 ]
 
 # 人物分级（scripts/person_tiers.py 按史料篇幅计算；改动须同时更新该脚本并通过 --check）。
@@ -56,9 +57,12 @@ TIERS = {
     'pang-tong': 'B', 'tao-qian': 'B', 'ma-chao': 'B', 'zhang-lu': 'B', 'guanyu': 'B', 'zhang-liao': 'B', 'yuan-shu': 'B', 'liu-biao': 'B',
     'liu-yan': 'B', 'zhaoyun': 'B', 'jiang-wan': 'B', 'lv-fan': 'B', 'fei-yi': 'B', 'liu-zhang': 'B', 'zhu-zhi': 'B', 'lv-bu': 'B',
     'zhangfei': 'B', 'han-sui': 'B', 'sima-shi': 'B', 'sima-zhao': 'B',
-    # C 级（14 人）
-    'huang-gai': 'C', 'han-dang': 'C', 'mi-zhu': 'C', 'zhang-xiu': 'C', 'cheng-pu': 'C', 'huang-zhong': 'C', 'sun-qian': 'C', 'yuan-tan': 'C',
-    'yuan-shang': 'C', 'ma-teng': 'C', 'wang-jun': 'C', 'sima-yan': 'C', 'du-yu': 'C', 'zhang-jiao': 'C',
+    # C 级（31 人）：史料较少的 8 人 + 按人气入选的 23 人（POPULAR_C，见 scripts/person_tiers.py）
+    'huang-gai': 'C', 'han-dang': 'C', 'zhang-xiu': 'C', 'cheng-pu': 'C', 'huang-zhong': 'C', 'ma-teng': 'C', 'sima-yan': 'C', 'zhang-jiao': 'C',
+    'xiahou-dun': 'C', 'xiahou-yuan': 'C', 'cao-ren': 'C', 'dian-wei': 'C', 'xu-chu': 'C', 'xu-huang': 'C', 'zhang-he': 'C', 'yu-jin': 'C',
+    'yue-jin': 'C', 'pang-de': 'C', 'wei-yan': 'C', 'wang-ping': 'C', 'ma-su': 'C', 'liao-hua': 'C', 'gan-ning': 'C', 'ling-tong': 'C',
+    'zhou-tai': 'C', 'xu-sheng': 'C', 'ding-feng': 'C', 'jiang-qin': 'C', 'pan-zhang': 'C', 'hua-tuo': 'C', 'chen-gong': 'C',
+    # 移出 v3 计划、保留旧卡：sun-qian, mi-zhu, du-yu, wang-jun, yuan-tan, yuan-shang
 }
 
 SECTIONS = ('civil', 'military', 'setback')
@@ -88,6 +92,42 @@ def load():
         seed = importlib.import_module(name).PROFILE
         profiles[seed['id']] = seed
     return profiles
+
+
+def create_new(people, events, profiles):
+    """为带 `new` 字段的种子新建人物骨架，并把本人登记到 `eventRoles` 列出的事件参与者中。
+
+    骨架只含必要的身份字段；正文内容随后由 to_expanded / finish 统一写入。
+    新人物的侧栏生卒年由 facts 中的 lifespan 自动同步（等同 syncLifespan=True）。
+    """
+    existing = {p['id'] for p in people}
+    by_event = {e['id']: e for e in events}
+    for pid, seed in profiles.items():
+        new = seed.get('new')
+        if new is None:
+            continue
+        if pid in existing:
+            raise ValueError(f'{pid}: 已有人物页，种子不应再写 new 字段')
+        if not any(f['key'] == 'lifespan' for f in seed['facts']):
+            raise ValueError(f'{pid}: 新建人物必须写 lifespan 档案项（侧栏生卒年依据）')
+        if not seed.get('eventRoles'):
+            raise ValueError(f'{pid}: 新建人物至少要登记一个事件（eventRoles），否则无法与事件互相链接')
+        people.append(dict(
+            id=pid, name=new['name'], courtesy=new.get('courtesy') or '本书未详', faction=new['faction'],
+            role=seed['role'], lead=seed['lead'], period=new['period'],
+            aliases=list(new.get('aliases', [])), tags=list(new.get('tags', [])),
+            paragraphs=[], milestones=[], relations=[], reading=list(seed['reading']), note=None,
+            dossier=dict(tier=new.get('label', '拓展人物'), extraRelations=[], glossary=[]),
+        ))
+        seed['syncLifespan'] = True
+        for event_id, role in seed['eventRoles']:
+            event = by_event.get(event_id)
+            if event is None:
+                raise ValueError(f'{pid}: eventRoles 中的事件 {event_id} 不存在')
+            if any(x.get('personId') == pid for x in event['participants']):
+                continue
+            event['participants'].append({'personId': pid, 'role': role})
+            event['tags'] = list(dict.fromkeys(event['tags'] + [new['name']]))
 
 
 def to_expanded(seed):

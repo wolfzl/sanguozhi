@@ -97211,6 +97211,691 @@
           ]
         }
       }
+    },
+    {
+      "id": "dian-wei",
+      "name": "典韦",
+      "courtesy": "本书未详",
+      "faction": "曹魏",
+      "role": "曹操帐下亲卫校尉",
+      "lead": "曹操的贴身护卫将领，以膂力和双戟闻名。濮阳之战率应募者击退吕布军；197年张绣在宛城反叛袭营，他死守营门、力战而死，曹操得以脱身。",
+      "period": "汉末—197年",
+      "aliases": [
+        "典君"
+      ],
+      "tags": [
+        "宛城",
+        "濮阳",
+        "双戟"
+      ],
+      "paragraphs": [
+        {
+          "title": "以勇力进入曹营",
+          "text": "典韦是陈留己吾人，相貌魁梧，膂力过人。他曾替人报仇，独自刺杀富春长李永后从容脱身，从此为豪杰所知。张邈起兵时他入伍，后归夏侯惇部下，因屡次斩首立功拜司马。曹操与吕布在濮阳交战，形势危急，典韦率应募陷阵的数十人冲上前，手持十余支戟大呼突击，击退吕布军，曹操才得以撤出。此后他被拜为都尉，统领亲兵护卫大帐，军中称“帐下壮士有典君，提一双戟八十斤”。",
+          "eventLinks": [
+            {
+              "label": "濮阳交战",
+              "eventId": "yanzhou-struggle"
+            }
+          ],
+          "refs": [
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "典韋，陳留己吾人也。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "形貌魁梧，旅力過人"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "懷匕首入殺永"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "後屬夏侯惇，數斬首有功，拜司馬。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "韋手持十餘戟，大呼起，所抵無不應手倒者。布眾退。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "拜韋都尉，引置左右，將親兵數百人，常繞大帳。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "帳下壯士有典君，提一雙戟八十斤。"
+            }
+          ]
+        },
+        {
+          "title": "宛城之变",
+          "text": "197年张绣在宛城降而复叛，夜袭曹营。曹操战败轻骑撤走，典韦在营门死战，部下死伤殆尽，他身被数十创仍挟杀两敌，最后瞋目大骂而死，叛军这才敢上前。曹操退到舞阴，听说典韦战死后流泪，募人寻回遗体，亲自临哭，归葬襄邑，此后每过其地都要祭祀，又先后任用他的儿子典满为郎中、司马。四十多年后的243年，典韦与曹真、夏侯渊等人一同配享曹操庙庭。",
+          "eventLinks": [
+            {
+              "label": "宛城降而复叛",
+              "eventId": "wancheng"
+            }
+          ],
+          "refs": [
+            {
+              "volume": "001",
+              "blockId": "v001-b0035",
+              "kind": "body",
+              "quote": "二年春正月，公到宛。張繡降，旣而悔之，復反。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "太祖出戰不利，輕騎引去。韋戰於門中，賊不得入。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "韋被數十創"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "韋復前突賊，殺數人，創重發，瞋目大罵而死。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "聞韋死，為流涕，募間取其喪，親自臨哭之"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "車駕每過，常祠以中牢。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "太祖思韋，拜滿為司馬，引自近。"
+            },
+            {
+              "volume": "004",
+              "blockId": "v004-b0010",
+              "kind": "body",
+              "quote": "武猛校尉典韋於太祖廟庭"
+            }
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "id": "youth",
+          "when": "早年，确年未载",
+          "title": "为人报仇，为豪杰所识",
+          "office": "未仕",
+          "text": "替襄邑刘氏刺杀富春长李永，突围脱身。",
+          "refs": [
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "懷匕首入殺永"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "由是為豪傑所識。"
+            }
+          ]
+        },
+        {
+          "id": "enlist",
+          "when": "初平年间（190—193），确年未载",
+          "title": "从军，拜司马",
+          "office": "司马",
+          "text": "张邈起兵时为士卒，后属夏侯惇，屡立斩首之功。",
+          "refs": [
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "初平中，張邈舉義兵，韋為士"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "後屬夏侯惇，數斬首有功，拜司馬。"
+            }
+          ]
+        },
+        {
+          "id": "puyang",
+          "when": "194年",
+          "title": "濮阳陷阵，击退吕布",
+          "office": "都尉，后迁校尉",
+          "eventIds": [
+            "yanzhou-struggle"
+          ],
+          "text": "曹操在濮阳夜袭吕布别屯后遭反击，典韦率应募者陷阵击退敌军；战后统领亲兵护卫大帐。",
+          "refs": [
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "太祖討呂布於濮陽。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "韋手持十餘戟，大呼起，所抵無不應手倒者。布眾退。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "拜韋都尉，引置左右，將親兵數百人，常繞大帳。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "遷為校尉。"
+            }
+          ]
+        },
+        {
+          "id": "wancheng",
+          "when": "197年",
+          "title": "宛城死守营门",
+          "office": "—",
+          "eventIds": [
+            "wancheng"
+          ],
+          "text": "张绣反叛袭营，典韦死守营门，力战而死。",
+          "refs": [
+            {
+              "volume": "001",
+              "blockId": "v001-b0035",
+              "kind": "body",
+              "quote": "二年春正月，公到宛。張繡降，旣而悔之，復反。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "韋戰於門中，賊不得入。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "韋復前突賊，殺數人，創重發，瞋目大罵而死。"
+            }
+          ]
+        },
+        {
+          "id": "honor",
+          "when": "243年",
+          "title": "配享太祖庙庭",
+          "office": "—",
+          "text": "正始四年诏以典韦等人配享曹操庙庭。",
+          "refs": [
+            {
+              "volume": "004",
+              "blockId": "v004-b0010",
+              "kind": "body",
+              "quote": "武猛校尉典韋於太祖廟庭"
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "personId": "caocao",
+          "label": "亲卫与主君",
+          "refs": [
+            {
+              "volume": "018",
+              "blockId": "v018-b0033",
+              "kind": "body",
+              "quote": "拜韋都尉，引置左右，將親兵數百人，常繞大帳。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "車駕每過，常祠以中牢。"
+            },
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "太祖思韋，拜滿為司馬，引自近。"
+            }
+          ]
+        },
+        {
+          "personId": "zhang-xiu",
+          "label": "宛城反叛袭营",
+          "refs": [
+            {
+              "volume": "018",
+              "blockId": "v018-b0034",
+              "kind": "body",
+              "quote": "後十餘日，繡反，襲太祖營"
+            }
+          ]
+        }
+      ],
+      "reading": [
+        "018"
+      ],
+      "note": null,
+      "dossier": {
+        "tier": "拓展人物",
+        "extraRelations": [],
+        "glossary": [
+          {
+            "term": "陷陈",
+            "text": "冲入敌阵。“陈”同“阵”。"
+          },
+          {
+            "term": "中牢",
+            "text": "祭祀所用的猪、羊二牲，规格低于太牢。"
+          }
+        ],
+        "hometown": "陈留郡己吾县",
+        "highestOffice": "校尉（武猛校尉）",
+        "highestTitle": "本书未载",
+        "posthumous": "无谥号记载；243年配享曹操庙庭",
+        "deeds": [
+          "濮阳击退吕布",
+          "宛城死守营门"
+        ],
+        "expanded": true,
+        "sourceScope": "以卷十八《典韦传》正文为基础，参看卷一《武帝纪》宛城之变的纪年、卷四正始四年配享诏和裴松之对配享名单的议论。本传无裴注。本页不声称穷尽全书所有提及典韦之处。",
+        "refs": [
+          {
+            "volume": "001",
+            "blockId": "v001-b0035",
+            "kind": "body",
+            "quote": "二年春正月，公到宛。張繡降，旣而悔之，復反。"
+          },
+          {
+            "volume": "018",
+            "blockId": "v018-b0034",
+            "kind": "body",
+            "quote": "韋復前突賊，殺數人，創重發，瞋目大罵而死。"
+          },
+          {
+            "volume": "018",
+            "blockId": "v018-b0033",
+            "kind": "body",
+            "quote": "典韋，陳留己吾人也。"
+          },
+          {
+            "volume": "018",
+            "blockId": "v018-b0034",
+            "kind": "body",
+            "quote": "遣歸葬襄邑"
+          },
+          {
+            "volume": "018",
+            "blockId": "v018-b0033",
+            "kind": "body",
+            "quote": "拜韋都尉，引置左右，將親兵數百人，常繞大帳。"
+          },
+          {
+            "volume": "018",
+            "blockId": "v018-b0033",
+            "kind": "body",
+            "quote": "遷為校尉。"
+          },
+          {
+            "volume": "004",
+            "blockId": "v004-b0010",
+            "kind": "body",
+            "quote": "武猛校尉典韋於太祖廟庭"
+          },
+          {
+            "volume": "018",
+            "blockId": "v018-b0033",
+            "kind": "body",
+            "quote": "韋手持十餘戟，大呼起，所抵無不應手倒者。布眾退。"
+          },
+          {
+            "volume": "018",
+            "blockId": "v018-b0034",
+            "kind": "body",
+            "quote": "韋戰於門中，賊不得入。"
+          }
+        ],
+        "civil": [],
+        "military": [
+          {
+            "when": "194年",
+            "title": "濮阳陷阵",
+            "category": "突击解围",
+            "careerRef": "puyang",
+            "eventIds": [
+              "yanzhou-struggle"
+            ],
+            "text": "在箭如雨下时等敌人逼近到五步才起身突击，击退吕布军，掩护曹操撤出战场。",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0033",
+                "kind": "body",
+                "quote": "「五步乃白。」"
+              },
+              {
+                "volume": "018",
+                "blockId": "v018-b0033",
+                "kind": "body",
+                "quote": "韋手持十餘戟，大呼起，所抵無不應手倒者。布眾退。"
+              },
+              {
+                "volume": "018",
+                "blockId": "v018-b0033",
+                "kind": "body",
+                "quote": "會日暮，太祖乃得引去。"
+              }
+            ]
+          },
+          {
+            "when": "197年",
+            "title": "宛城护主",
+            "category": "护卫断后",
+            "careerRef": "wancheng",
+            "eventIds": [
+              "wancheng"
+            ],
+            "text": "死守营门拖住叛军，曹操得以轻骑脱身。",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0034",
+                "kind": "body",
+                "quote": "太祖出戰不利，輕騎引去。韋戰於門中，賊不得入。"
+              }
+            ]
+          }
+        ],
+        "setbacks": [
+          {
+            "when": "197年",
+            "title": "宛城战死",
+            "category": "殉职",
+            "careerRef": "wancheng",
+            "eventIds": [
+              "wancheng"
+            ],
+            "text": "营门被叛军从他门绕入，左右死伤殆尽，典韦重伤战死。这是宛城之变中曹军的重大损失，不是他个人的指挥失误。",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0034",
+                "kind": "body",
+                "quote": "兵遂散從他門併入。"
+              },
+              {
+                "volume": "018",
+                "blockId": "v018-b0034",
+                "kind": "body",
+                "quote": "左右死傷者略盡。"
+              },
+              {
+                "volume": "018",
+                "blockId": "v018-b0034",
+                "kind": "body",
+                "quote": "韋復前突賊，殺數人，創重發，瞋目大罵而死。"
+              }
+            ]
+          }
+        ],
+        "scholarship": [],
+        "assessment": [
+          {
+            "title": "陈寿：比作樊哙",
+            "text": "陈寿把许褚、典韦并论，说他们护卫曹操左右、折冲御敌，好比汉初的樊哙。",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0050",
+                "kind": "body",
+                "quote": "許褚、典韋折衝左右，抑亦漢之樊噲也。"
+              }
+            ]
+          }
+        ],
+        "readingNotes": [
+          {
+            "title": "“一双戟八十斤”是军中歌谣",
+            "text": "这句话出自军中流传的歌谣，用来形容他的勇力，不宜当作兵器重量的实测记录。",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0033",
+                "kind": "body",
+                "quote": "軍中為之語曰：「帳下壯士有典君，提一雙戟八十斤。」"
+              }
+            ]
+          }
+        ],
+        "civilNote": "典韦一直担任曹操的亲卫武官，本书没有他参与治理或谋议的记载。",
+        "militaryNote": "",
+        "setbacksNote": "",
+        "factDetails": [
+          {
+            "label": "生卒年",
+            "text": "本传未记生年。宛城之变在建安二年（197）正月，见《武帝纪》；典韦死于此役。",
+            "refs": [
+              {
+                "volume": "001",
+                "blockId": "v001-b0035",
+                "kind": "body",
+                "quote": "二年春正月，公到宛。張繡降，旣而悔之，復反。"
+              },
+              {
+                "volume": "018",
+                "blockId": "v018-b0034",
+                "kind": "body",
+                "quote": "韋復前突賊，殺數人，創重發，瞋目大罵而死。"
+              }
+            ]
+          },
+          {
+            "label": "籍贯",
+            "text": "陈留己吾人；死后曹操遣人归葬襄邑。",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0033",
+                "kind": "body",
+                "quote": "典韋，陳留己吾人也。"
+              },
+              {
+                "volume": "018",
+                "blockId": "v018-b0034",
+                "kind": "body",
+                "quote": "遣歸葬襄邑"
+              }
+            ]
+          },
+          {
+            "label": "主要身份",
+            "text": "濮阳战后被引置曹操左右，统领亲兵数百人环卫大帐。",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0033",
+                "kind": "body",
+                "quote": "拜韋都尉，引置左右，將親兵數百人，常繞大帳。"
+              }
+            ]
+          },
+          {
+            "label": "最高官职",
+            "text": "由司马、都尉迁为校尉；243年配享太庙的诏书称他“武猛校尉”。",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0033",
+                "kind": "body",
+                "quote": "遷為校尉。"
+              },
+              {
+                "volume": "004",
+                "blockId": "v004-b0010",
+                "kind": "body",
+                "quote": "武猛校尉典韋於太祖廟庭"
+              }
+            ]
+          },
+          {
+            "label": "身后称号",
+            "text": "本书没有典韦的谥号。齐王曹芳正始四年（243），典韦与曹真、夏侯渊等人一起配享太祖庙庭。",
+            "refs": [
+              {
+                "volume": "004",
+                "blockId": "v004-b0010",
+                "kind": "body",
+                "quote": "武猛校尉典韋於太祖廟庭"
+              }
+            ]
+          },
+          {
+            "label": "代表事迹",
+            "text": "濮阳击退吕布、宛城死守营门。",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0033",
+                "kind": "body",
+                "quote": "韋手持十餘戟，大呼起，所抵無不應手倒者。布眾退。"
+              },
+              {
+                "volume": "018",
+                "blockId": "v018-b0034",
+                "kind": "body",
+                "quote": "韋戰於門中，賊不得入。"
+              }
+            ]
+          }
+        ],
+        "contextRelations": [
+          {
+            "title": "曹操｜亲卫与主君",
+            "text": "濮阳战后被引置左右护卫大帐；典韦战死后，曹操流涕临哭，经过襄邑时常以中牢祭祀，并任用其子典满。",
+            "category": "君臣",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0033",
+                "kind": "body",
+                "quote": "拜韋都尉，引置左右，將親兵數百人，常繞大帳。"
+              },
+              {
+                "volume": "018",
+                "blockId": "v018-b0034",
+                "kind": "body",
+                "quote": "車駕每過，常祠以中牢。"
+              },
+              {
+                "volume": "018",
+                "blockId": "v018-b0034",
+                "kind": "body",
+                "quote": "太祖思韋，拜滿為司馬，引自近。"
+              }
+            ],
+            "people": [
+              {
+                "name": "曹操",
+                "personId": "caocao"
+              }
+            ]
+          },
+          {
+            "title": "张绣｜宛城反叛袭营",
+            "text": "张绣先降后叛，袭击曹营，典韦死于此役。",
+            "category": "敌对",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0034",
+                "kind": "body",
+                "quote": "後十餘日，繡反，襲太祖營"
+              }
+            ],
+            "people": [
+              {
+                "name": "张绣",
+                "personId": "zhang-xiu"
+              }
+            ]
+          },
+          {
+            "title": "许褚｜并称的护卫名将",
+            "text": "陈寿把二人并论。裴松之认为许褚功劳超过典韦，却没有配享太庙，不合情理。",
+            "category": "同僚",
+            "refs": [
+              {
+                "volume": "018",
+                "blockId": "v018-b0050",
+                "kind": "body",
+                "quote": "許褚、典韋折衝左右"
+              },
+              {
+                "volume": "004",
+                "blockId": "v004-b0011-n01",
+                "kind": "peizhu",
+                "quote": "褚之功烈有過典韋，今祀韋而不及褚，文所未達也。",
+                "sourceBook": "裴松之案"
+              }
+            ],
+            "people": []
+          }
+        ],
+        "appendixRefs": [],
+        "schema": "v3",
+        "contentTier": "C",
+        "sectionTitles": {
+          "civil": "文治功绩",
+          "military": "武功功绩",
+          "setback": "失误、挫折与争议"
+        }
+      },
+      "lifespan": {
+        "text": "生年未详—197年",
+        "sourceTitle": "《三国志》卷001",
+        "sourceUrl": "/read/001/#v001-b0035",
+        "quote": "二年春正月，公到宛。張繡降，旣而悔之，復反。",
+        "note": "本传未记生年。宛城之变在建安二年（197）正月，见《武帝纪》；典韦死于此役。"
+      },
+      "eventIds": [
+        "yanzhou-struggle",
+        "wancheng"
+      ]
     }
   ],
   "events": [
@@ -98822,7 +99507,8 @@
         "吕布",
         "曹操",
         "荀彧",
-        "程昱"
+        "程昱",
+        "典韦"
       ],
       "participants": [
         {
@@ -98840,6 +99526,10 @@
         {
           "personId": "cheng-yu",
           "role": "安定范、东阿等地"
+        },
+        {
+          "personId": "dian-wei",
+          "role": "濮阳募陷阵，击退吕布"
         }
       ],
       "sections": [
@@ -99642,7 +100332,8 @@
       "tags": [
         "曹操",
         "张绣",
-        "刘表"
+        "刘表",
+        "典韦"
       ],
       "participants": [
         {
@@ -99656,6 +100347,10 @@
         {
           "personId": "liu-biao",
           "role": "与张绣结援"
+        },
+        {
+          "personId": "dian-wei",
+          "role": "守营门战死"
         }
       ],
       "sections": [
