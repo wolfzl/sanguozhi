@@ -17,7 +17,7 @@ try{
       assert.equal(response.status(),200,p.id);
       assert.equal(await page.locator('.expanded-dossier').count(),1);
       assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`overflow ${width}/${p.id}`);
-      assert.equal(await page.locator('#milestones tbody tr').count(),p.milestones.length);
+      assert.equal(await page.locator('#milestones tbody tr:not(.phase-row)').count(),p.milestones.length);
       for(const [id,key] of [['civil-achievements','civil'],['military-achievements','military'],['setbacks','setbacks']])
         assert.equal(await page.locator(`#${id} tbody tr`).count(),p.dossier[key].length,`${p.id}/${key}`);
       const broken=await page.locator('a[href^="#"]').evaluateAll(as=>as.map(a=>a.getAttribute('href')).filter(h=>!document.getElementById(h.slice(1))));
@@ -43,9 +43,11 @@ try{
         assert.ok(await page.locator(hash).evaluate(el=>el.open&&!el.hidden));
         await page.goto(`${base}/people/${p.id}/${hash}`,{waitUntil:'networkidle'});
         assert.ok(await page.locator(hash).evaluate(el=>el.open));
-        await search.fill('裴注');await search.dispatchEvent('input');
+        // Not every profile has 裴注 refs; pick a label that exists in this person's sources.
+        const [simpQuery,tradQuery]=p.dossier.refs.some(r=>r.kind==='peizhu')?['裴注','裴註']:['陈寿正文','陳壽正文'];
+        await search.fill(simpQuery);await search.dispatchEvent('input');
         const simplified=await page.locator('.source-item:visible').count();
-        await search.fill('裴註');await search.dispatchEvent('input');
+        await search.fill(tradQuery);await search.dispatchEvent('input');
         assert.equal(await page.locator('.source-item:visible').count(),simplified);
         assert.ok(simplified>0);
         await search.fill('');await search.dispatchEvent('input');

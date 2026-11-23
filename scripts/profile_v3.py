@@ -71,6 +71,10 @@ V3_MODULES = [
     'profile_v3_chen_gong',
 ]
 
+# C 级默认不做行迹地图；张角保留为“地点未详”模式的样例。
+# 须与 scripts/content-validation.mjs 的 C_TRAJECTORY_EXCEPTIONS 保持一致。
+C_TRAJECTORY_EXCEPTIONS = ['zhang-jiao']
+
 # 人物分级（scripts/person_tiers.py 按史料篇幅计算；改动须同时更新该脚本并通过 --check）。
 TIERS = {
     # A 级（7 人）
@@ -176,6 +180,9 @@ def to_expanded(seed):
     pid = seed['id']
     if seed['tier'] != TIERS.get(pid):
         raise ValueError(f"{pid}: 种子 tier={seed['tier']}，但分级名单为 {TIERS.get(pid)}（见 scripts/person_tiers.py）")
+    # C 级默认不做行迹地图（docs/atlas-trajectory-guide.md M2）；仅 C_TRAJECTORY_EXCEPTIONS 中的人物例外。
+    if seed['tier'] == 'C' and seed.get('trajectory') and pid not in C_TRAJECTORY_EXCEPTIONS:
+        raise ValueError(f"{pid}: C 级人物默认不做行迹地图，种子不得包含 trajectory（例外名单见 C_TRAJECTORY_EXCEPTIONS）")
     facts = {f['key']: f for f in seed['facts']}
     for f in seed['facts']:
         _check_sources(pid, f"facts/{f['key']}", f['refs'])

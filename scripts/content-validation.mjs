@@ -222,6 +222,8 @@ export function validateTimeline(events, relations) {
 
 // 人物行迹时期（docs/atlas-trajectory-guide.md 的 M1–M5）。
 // 站点年份、地名解析需要江山时序的数据，由 scripts/atlas-places.mjs check 检查。
+// C 级默认不做行迹地图；例外人物保留为“地点未详”模式的样例（须与 scripts/profile_v3.py 的 C_TRAJECTORY_EXCEPTIONS 一致）。
+export const C_TRAJECTORY_EXCEPTIONS = ['zhang-jiao'];
 export const TRAJECTORY_PHASE_LIMITS = { A: [5, 8], B: [3, 6], C: [2, 4] };
 export function validateTrajectory(people) {
   const errors = [];
@@ -231,6 +233,7 @@ export function validateTrajectory(people) {
     const t = d?.trajectory;
     if (!t) continue;
     const id = person.id;
+    if (d.contentTier === 'C' && !C_TRAJECTORY_EXCEPTIONS.includes(id)) { errors.push(`trajectory not allowed on C tier ${id}`); continue; }
     if (d.schema !== 'v3') { errors.push(`trajectory only allowed on v3 profiles ${id}`); continue; }
     const phases = t.phases ?? [];
     const [min, max] = TRAJECTORY_PHASE_LIMITS[d.contentTier] ?? [2, 8];

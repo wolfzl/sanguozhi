@@ -18,7 +18,10 @@ try {
     assert.deepEqual(renderedLinks,biographyLinks,`Linked labels ${person.id}`);
     assert.equal(await page.locator('#milestones .milestone-date').count(),person.milestones.length);
     assert.equal(await page.locator('#milestones a[href^="/events/"]').count(),person.milestones.reduce((n,m)=>n+(m.eventIds?.length??0),0),`Milestone event visibility ${person.id}`);
-    assert.equal(await page.locator('#relations .relation>a').count(),person.relations.length);
+    // v3 pages group relations into .context-relations items (one link per related person inside .record-events); older pages keep the flat .relation>a list.
+    const relationSelector=person.dossier.contextRelations?'#relations .context-relations .record-events a':'#relations .relation>a';
+    const relationIds=await page.locator(relationSelector).evaluateAll(els=>[...new Set(els.map(a=>a.getAttribute('href').split('/')[2]))].sort());
+    assert.deepEqual(relationIds,[...new Set(person.relations.map(r=>r.personId))].sort(),`Relations ${person.id}`);
   }
   for(const width of [390,320]){
     await page.setViewportSize({width,height:844});

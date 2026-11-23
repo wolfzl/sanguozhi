@@ -12,6 +12,7 @@
 
 - 写新人物前，先通读**同级别**的样例；结构、措辞和引文粒度都以它为准。
 - 生平履历的行迹地点（`careers[].place`）另见 [atlas-trajectory-guide.md](atlas-trajectory-guide.md)，样例是刘备。
+- **C 级默认不做行迹地图（`trajectory`）**：只有 A、B 级人物写行迹时期。张角是唯一例外，保留作“地点未详”样例（例外名单 `C_TRAJECTORY_EXCEPTIONS`）；其他 C 级种子带 `trajectory` 时，生成脚本和 `validate-content` 都会报错。
 
 ---
 
@@ -28,7 +29,7 @@
 
 65 张人物卡原本分属三套结构：张飞版 dossier（58 人）、曹操版 expanded、六人版 expanded（刘备、诸葛亮、孙权、周瑜、陆逊、司马懿）。v3 把它们统一成**一套种子格式**，再按人物分级决定各栏目的必填项和篇幅。
 
-渲染层还没有迁移（见 §11）。因此 v3 种子由适配器 `profile_v3.py` 转成现有页面能渲染的字段，页面会按 expanded 样式显示。
+渲染层没有为 v3 单独重写（现状见 §11）。因此 v3 种子由适配器 `profile_v3.py` 转成现有页面能渲染的字段，并写入 `dossier.expanded = true`，页面按 expanded 样式显示。
 
 ## 2. 硬性规则
 
@@ -49,14 +50,14 @@
 
 ```text
 scripts/create_cards.py           生成入口：python3 scripts/create_cards.py
-  └─ expanded_profiles.apply()    处理尚未迁移的曹操、诸葛亮、孙权、周瑜、陆逊、司马懿，以及所有 v3 人物
+  └─ expanded_profiles.apply()    处理所有 v3 人物（旧版三个 profiles_*_expanded.py 的 PROFILES 已清空，其加载分支仍在，但没有内容）
        └─ profile_v3.py           v3 适配器：load() / to_expanded() / finish()
             └─ profile_v3_<id>.py 每人一个种子文件，定义 PROFILE
 scripts/content-validation.mjs    校验规则；v3 规则在 validateV3Profiles
 scripts/validate-content.mjs      全量校验入口：node scripts/validate-content.mjs
 scripts/source_lookup.py          取证工具（§6）
 scripts/person_tiers.py           分级统计（§4）
-scripts/migrate_expanded_to_v3.py A 级旧人物迁移草稿工具（§14.1）
+scripts/migrate_expanded_to_v3.py A 级旧人物迁移草稿工具（§14.1）；旧模块已清空，现在运行会因找不到人物而报 KeyError，仅留作记录
 tests/person-template-v3.test.mjs v3 规则测试（以关羽为基准）
 scripts/profile_v3_liubei.py      A 级样例；profile_v3_guanyu.py 为 B 级样例；profile_v3_zhang_jiao.py 为 C 级样例
 ```
@@ -96,7 +97,7 @@ scripts/profile_v3_liubei.py      A 级样例；profile_v3_guanyu.py 为 B 级�
 
 **分级名单（2026-11-13 计算）**
 
-- **A 级（7 人）**：曹操、孙权、刘备、诸葛亮、陆逊、周瑜、司马懿。目前仍是旧 expanded 结构，见 §11。
+- **A 级（7 人）**：曹操、孙权、刘备、诸葛亮、陆逊、周瑜、司马懿。均已迁移为 v3 种子（`dossier.schema = 'v3'`、`contentTier = 'A'`，见 §11、§14.1）。
 - **B 级（44 人）**：曹丕、曹叡、袁绍、董卓、孙皓、曹髦、孙策、荀彧、钟会、公孙瓒、刘禅、孙坚、邓艾、吕蒙、姜维、贾诩、曹爽、鲁肃、法正、郭嘉、张昭、荀攸、程昱、太史慈、庞统、陶谦、马超、张鲁、关羽✅、张辽、袁术、刘表、刘焉、赵云、蒋琬、吕范、费祎、刘璋、朱治、吕布、张飞，以及无本传、按散见记载定级的韩遂、司马师、司马昭。
 - **C 级（31 人，2026-11-18 调整）**：
   - 迁移已有页面（8 人，均已完成）：黄忠、黄盖、程普、韩当、张绣、马腾、司马炎、张角。
@@ -238,7 +239,7 @@ python3 scripts/source_lookup.py check v054-b0038 '羽果信之，稍撤兵以�
    ```
    现有 `eventIds` 要在新年表中保留，挂到年份对应的行上。
 2. 按 §6 取证。
-3. 复制同级别样例的结构（A 刘备、B 关羽、C 张角），新建 `profile_v3_<id>.py`，替换全部内容。A 级旧人物先按 §14.1 生成草稿。
+3. 复制同级别样例的结构（A 刘备、B 关羽、C 张角），新建 `profile_v3_<id>.py`，替换全部内容。A 级 7 人已全部迁移完毕，不再需要生成草稿（§14.1 保留为迁移记录）。
 4. 在 `profile_v3.py` 的 `V3_MODULES` 中加入 `'profile_v3_<id>'`。
 5. 运行生成和校验（§8），按报错修改，直到全部通过。
 6. 对照 §2 的 R9、R10 自查一遍，然后按 §9 汇报。
@@ -328,20 +329,20 @@ npx astro build --outDir /tmp/sgz-dist
 
 ## 11. 当前限制与后续迁移
 
-渲染层（`PersonDossier.astro`、`catalog.ts`）尚未改动，所以存在以下差异：
+**迁移状态（2026-11-23 核对）**：`src/data/cards.json` 共 88 张人物卡，其中 82 张是 `dossier.schema = 'v3'`（A 7、B 44、C 31，与 §4 名单一致）；A 级的曹操、孙权、刘备、诸葛亮、陆逊、周瑜、司马懿都已是 v3，没有人物还停留在旧 expanded 数据。其余 6 张（孙乾、麋竺、杜预、王濬、袁谭、袁尚）是 §4 的“移出计划”，保留旧 dossier 卡，没有 `expanded` 标记。旧的 `scripts/profiles_shu_expanded.py`、`profiles_wu_expanded.py`、`profiles_other_expanded.py` 三个文件仍在，但内容只剩 `PROFILES = {}`；`expanded_profiles.py` 里加载它们的分支（`include_six`）也仍在，只是没有数据可加载。
 
-1. 侧栏“主要身份”显示的是 `role`，“常见称谓”显示的是 `aliases`。facts 的 `identity`、`names` 详解只出现在“档案详解与依据”中。
-2. 侧栏“生卒年”仍取自旧的 `lifespan` 字段，v3 的 lifespan 只出现在详解中，写的时候注意两者保持一致。
-3. 不支持自定义栏目名，`careerRef` 也不会在页面上显示为链接。
+渲染层（`PersonDossier.astro`、`catalog.ts`）没有为 v3 重写。自 2026-11-13 的行迹地图提交（e38b4a0 等）以来只增加了行迹相关内容：生平履历按时期分组（`tr.phase-row`）、“行迹地图”栏目和内嵌地图。组件里仍按 `dossier.expanded` 分支（所有 v3 页面和 82 张卡都走 expanded 分支，其余 6 张走旧分支），因此仍有以下差异：
+
+1. 侧栏“主要身份”显示的是 `role`，“常见称谓”显示的是 `aliases`。facts 的 `identity`、`names` 详解只出现在“档案详解与依据”（`factDetails`）中。
+2. 侧栏“生卒年”取自 `lifespan` 字段。只有种子写了 `syncLifespan` 才会把 facts 的 lifespan 同步到侧栏（目前 32 个种子这样做，A 级中除刘备外都已同步）；没写的种子，v3 的 lifespan 只出现在详解中，写的时候注意两者保持一致。
+3. 不支持自定义栏目名：`dossier.sectionTitles` 会写入 cards.json，但组件没有读取，页面上的栏目名是写死的。`careerRef` 也会写入并经 `validate-content` 校验，但页面上不显示为链接。
 4. A 级的“链接到阅读器卷”就是页面底部已有的“继续读原传”，不需要另外实现附录。
 
-后续迁移顺序：
+后续迁移：
 
-1. 渲染层支持 v3 字段：facts 列表、自定义 sections、careerRef 链接；新旧字段并存。
-2. 把六人迁移为 v3 种子：facts 拆项并逐项补 refs，relations 补 category，civil、military、setbacks 合并为 records。**刘备已完成**（§14.1）；还剩诸葛亮、孙权、周瑜、陆逊、司马懿。
-3. 迁移曹操：整段引文改为逐句；补齐年表 eventIds；删除内嵌附录。
-4. 删除旧 expanded 分支与 `profiles_*_expanded.py`。
-5. 其余 B、C 级人物按本文逐个改造，每次一人。
+1. 渲染层读取 v3 专属字段：`sectionTitles`、`careerRef` 链接、facts 独立列表；新旧字段并存。目前 `factDetails` 已以“档案详解与依据”折叠块显示。
+2. 删除旧 expanded 分支：三个空的 `profiles_*_expanded.py`、`expanded_profiles.py` 中的 `include_six` 分支和 `migrate_expanded_to_v3.py`；组件中的 `dossier.expanded` 判断需要等 6 张“移出计划”旧卡处理完（迁移或下线）后才能去掉。
+3. 其余 B、C 级人物已全部完成；新增人物按本文逐个添加（§7.1），每次一人。
 
 ## 12. 交给 Sonnet / Codex 的任务提示词
 
@@ -376,7 +377,9 @@ npx astro build --outDir /tmp/sgz-dist
 
 ### 14.1 A 级：刘备——旧人物迁移的示范
 
-**为什么选他**：A 级 7 人都已有完整的旧版内容，A 级工作的重点是把旧数据迁到 v3，而不是重写。刘备的旧数据本来就是逐句引文，迁移步骤最典型。
+**为什么选他**：A 级 7 人当时都已有完整的旧版内容，A 级工作的重点是把旧数据迁到 v3，而不是重写。刘备的旧数据本来就是逐句引文，迁移步骤最典型。
+
+**状态**：7 人均已迁移完毕，旧模块里的数据已删除，下面的草稿命令现在无法再运行（会报 KeyError），以下步骤作为迁移记录保留。
 
 **做法**：
 
@@ -421,7 +424,7 @@ npx astro build --outDir /tmp/sgz-dist
 
 ### 14.4 选哪个样例照抄
 
-- 迁移曹操、诸葛亮、孙权、周瑜、陆逊、司马懿：照**刘备**的做法。其中曹操的旧数据是整段引文，需要逐条改成逐句引文。
+- A 级 7 人已全部迁移完毕。今后若要重做或补写 A 级人物：照**刘备**的做法。
 - 有本传、篇幅够 B 级线的人物：照**关羽**。
 - 本传很短，或没有本传的人物：照**张角**。
 - 尚无人物页、要新建的人物（人气 C 级的 23 人）：照**典韦**（§7.1）。他们多数本传较长，C 级篇幅装不下全部材料：只写最有代表性的两三件事，其余留给“继续读原传”。

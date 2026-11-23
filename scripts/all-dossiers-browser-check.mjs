@@ -19,7 +19,7 @@ try{
       const rows=await page.locator('.dossier-table tbody tr').evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return {left:r.left,right:r.right};}));
       assert.ok(rows.every(r=>r.left>=0&&r.right<=width+1),`table bounds ${width}/${p.id}`);
       if(width===1440){
-        assert.equal(await page.locator('#milestones tbody tr').count(),p.milestones.length,p.id);
+        assert.equal(await page.locator('#milestones tbody tr:not(.phase-row)').count(),p.milestones.length,p.id);
         for(const [section,key] of [['civil-achievements','civil'],['military-achievements','military'],['setbacks','setbacks']]){
           assert.equal(await page.locator(`#${section} tbody tr`).count(),p.dossier[key].length,`${p.id}/${key}`);
           if(!p.dossier[key].length) assert.ok((await page.locator(`#${section} .evidence-note`).innerText()).trim().length>0,`${p.id}/${key} empty note`);

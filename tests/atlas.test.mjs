@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {validateTrajectory} from '../scripts/content-validation.mjs';
+import {validateTrajectory, C_TRAJECTORY_EXCEPTIONS} from '../scripts/content-validation.mjs';
 import {phaseUrl, routeUrl, stripNote, phaseNumeral, stopParam} from '../src/lib/atlas.mjs';
 
 const {people} = JSON.parse(fs.readFileSync('src/data/cards.json', 'utf8'));
@@ -114,6 +114,19 @@ const sparseRoute = () => {
   ]};
   return p;
 };
+
+test('C tier has no trajectory except the listed exceptions', () => {
+  const offenders = people.filter(p => p.dossier?.contentTier === 'C' && p.dossier.trajectory && !C_TRAJECTORY_EXCEPTIONS.includes(p.id));
+  assert.deepEqual(offenders.map(p => p.id), []);
+  assert.deepEqual(C_TRAJECTORY_EXCEPTIONS, ['zhang-jiao']);
+});
+
+test('validateTrajectory rejects a trajectory on a non-exception C tier person', () => {
+  const p = sparseRoute();
+  p.id = 'dian-wei';
+  failsWith(p, 'trajectory not allowed on C tier dian-wei');
+  assert.deepEqual(validateTrajectory([sparseRoute()]), []);
+});
 
 test('mode two accepts unknown locations with an explicit reason', () => {
   assert.deepEqual(validateTrajectory([sparseRoute()]), []);

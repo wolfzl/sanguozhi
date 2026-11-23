@@ -36,7 +36,7 @@
 | # | 规则 | 由谁检查 |
 |---|---|---|
 | M1 | 时期按顺序覆盖年表的**全部**行，每行只属于一个时期，顺序和年表一致，不跳行。 | `validateTrajectory` |
-| M2 | 时期数：A 级 5–8，B 级 3–6，C 级 2–4。每个时期至少 1 行。 | `validateTrajectory` |
+| M2 | 时期数：A 级 5–8，B 级 3–6。每个时期至少 1 行。**C 级默认不做行迹地图**，仅张角保留作“地点未详”样例（例外名单 `C_TRAJECTORY_EXCEPTIONS`，见 `scripts/content-validation.mjs` 和 `scripts/profile_v3.py`），其时期数为 2–4；其他 C 级人物带 `trajectory` 会报错。 | `validateTrajectory` |
 | M3 | `span` 是两个整数 `(起, 止)`，起 ≤ 止；时期之间不倒退（后一期的起年不早于前一期的起年）。 | `validateTrajectory` |
 | M4 | 模式一：`atlasPerson` 写江山时序的人物 key；每个时期的 `atlasStops` 是路线中的站号（从 0 数），站点年份必须落在本时期 `span` 内；站号全程递增。和本人关系不大的站可以不挂。页面链接按首站到末站生成区间，所以同一时期的站号必须连续。 | `validateTrajectory` + `atlas-places.mjs check` |
 | M5 | 模式二：每个时期提供 `place` 或非空的 `unmappedReason`，二者互斥；全程至少有一个已知地点。`place.name` 必须出现在本时期某一行的 `when`、`title` 或 `text` 中；`mapYear` 落在 `span` 内且不倒退；查询名、省份、近似标记规则见 §6。 | `validateTrajectory` + `atlas-places.mjs check` |
@@ -141,7 +141,7 @@ node scripts/atlas-places.mjs person liubei
 
 每个时期选一个最能代表这一时期的地点，一般是本人在这一时期主要驻扎或决定命运的地方，**标本人所在地**，不标部将作战地、出使目的地或只是建议攻打的地方。
 
-**史料未载地点时**，保留时期和履历，以 `unmappedReason` 说明缺失，不写 `place`。页面显示“地点未详”及原因，保留跳回履历的链接；地图仅标已知地点，全程至少需要一个。只有一个已知地点时展示单点，不补造路线。若确年也未载，`when` 必须注明，`span` 只用于取景范围，不作为事件年份依据。样例为 `profile_v3_zhang_jiao.py`：传道与联结信众、魏郡起事、遭讨击与被诛三期，仅第二期在魏郡标点，地图近似解析为元城（大名）。
+**史料未载地点时**，保留时期和履历，以 `unmappedReason` 说明缺失，不写 `place`。页面显示“地点未详”及原因，保留跳回履历的链接；地图仅标已知地点，全程至少需要一个。只有一个已知地点时展示单点，不补造路线。若确年也未载，`when` 必须注明，`span` 只用于取景范围，不作为事件年份依据。样例为 `profile_v3_zhang_jiao.py`（C 级中唯一保留行迹地图的例外，仅作该写法的样例，其他 C 级人物不做行迹地图）：传道与联结信众、魏郡起事、遭讨击与被诛三期，仅第二期在魏郡标点，地图近似解析为元城（大名）。
 
 江山时序的地名库以名城、名关为主，三国县邑不全：
 
