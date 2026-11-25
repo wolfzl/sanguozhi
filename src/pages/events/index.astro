@@ -3,11 +3,13 @@ import Base from '../../layouts/Base.astro';
 import Timeline from '../../components/Timeline.astro';
 import {events} from '../../lib/catalog';
 import {categories} from '../../lib/timeline.mjs';
+import {CAMPAIGNS} from '../../lib/atlas.mjs';
 import '../../styles/timeline.css';
 ---
-<Base title="三国事件线" description="从184年黄巾起义到280年吴亡，沿曹魏与晋、蜀汉、孙吴与汉末诸侯四条线，读懂事件的来龙去脉。" active="events">
+<Base title="三国事件线" description="从184年黄巾起事到280年吴亡，沿曹魏与晋、蜀汉、孙吴与汉末诸侯四条线，读懂事件的来龙去脉。" active="events">
 <div class="shell browse-page timeline-page" data-timeline-root>
-<div class="page-heading"><div class="eyebrow">事件 / 184—280</div><h1>四条线交织，<br/><em>一个时代起落。</em></h1><p>从黄巾起义到三国归晋。从汉廷失序与诸侯竞逐，读到三国建立、交锋与归晋。</p></div>
+<div class="page-heading"><div class="eyebrow">事件 / 184—280</div><h1>四条线交织，<br/><em>一个时代起落。</em></h1><p>184—280 年，从黄巾起事、诸侯竞逐，读到三国建立、彼此交锋，直至归于西晋。</p></div>
+<section class="campaign-strip" aria-labelledby="campaign-strip-title"><div class="campaign-strip-head"><span class="section-eyebrow">战役推演 / 地图</span><h2 id="campaign-strip-title">三大战役，分阶段在地图上看</h2></div><div class="campaign-strip-items">{Object.entries(CAMPAIGNS).map(([id,c])=><a class="campaign-tile" href={`/events/${id}/#campaign`}><span class="campaign-tile-meta">{c.from===c.to?c.from:`${c.from}—${c.to}`} · {c.sides}</span><strong>{c.title}</strong><p>{c.hook}</p><span class="campaign-tile-go">{c.phases} 个阶段 · 看推演 ↗</span></a>)}</div></section>
 <div class="timeline-controls">
 <div class="timeline-control-top"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">搜索事件</span><input type="search" placeholder="搜索事件、别名或关键词" autocomplete="off"/></label><div class="timeline-buttons view-buttons" aria-label="展现形式">{[['parallel','四线并行'],['list','时间列表']].map(([value,label])=><button type="button" data-timeline-filter="view" data-value={value} aria-pressed={value==='parallel'?'true':'false'}>{label}</button>)}</div></div>
 <div class="timeline-filter-line"><span class="filter-label">阅读范围</span><div class="timeline-buttons" aria-label="事件重要程度">{[['key','关键'],['all','全部']].map(([value,label])=><button type="button" data-timeline-filter="importance" data-value={value} aria-pressed={value==='all'?'true':'false'}>{label}</button>)}</div></div>

@@ -83,6 +83,7 @@ def extract_book(path):
             volume_id = f'{int(number.group(1)):03d}' if number else 'appendix'
             heading = body.find('h:h1', NS)
             title_node = heading if heading is not None else tree.find('h:head/h:title', NS)
+            # 原始标题仅作来源记录；站内显示的卷名由 src/data/volume-titles.json 按卷号统一给出，重新提取不会回退。
             title = clean(''.join(title_node.itertext())) if title_node is not None else href
             source_url = ''; revision = ''; blocks = []
             for node in body:

@@ -1,0 +1,16 @@
+---
+import EventRow from './EventRow.astro';
+import {eventById} from '../lib/catalog';
+interface Props { id: string; note?: {label: string; text: string} }
+const {id,note}=Astro.props;
+const e=eventById(id);
+---
+{note
+  ? <a class="event-reading-note" href={`/events/${id}/`}><small>{e.time}</small><h3>{note.label} ↗</h3><p>{note.text}</p></a>
+  : <EventRow event={e}/>}
+<style>
+  .event-reading-note{display:block;padding:20px 0;border-bottom:1px solid var(--line)}
+  .event-reading-note small{font-size:11px;color:var(--muted)}
+  .event-reading-note h3{font:19px/1.7 var(--serif);margin:6px 0}
+  .event-reading-note p{font-size:13px;margin:0;color:var(--muted)}
+</style>

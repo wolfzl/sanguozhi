@@ -130,8 +130,8 @@ function revealTarget() {
   }
   const target = document.getElementById(id);
   if (!target) return;
-  const detail = target.closest("details");
-  if (detail) detail.open = true;
+  for (let el: Element | null = target; el; el = el.parentElement)
+    if (el instanceof HTMLDetailsElement) el.open = true;
   if (target.classList.contains("peizhu") || target.closest(".peizhu"))
     setNotes(true);
   requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
@@ -167,6 +167,12 @@ if (timelineRoot) {
       const shown = [...group.querySelectorAll<HTMLElement>("[data-search-card]")].filter(card => !card.hidden);
       const placements = layoutYearEvents(shown.map(card => ({lanes:(card.dataset.lanes ?? "").split(" ")})));
       shown.forEach((card,index) => card.style.setProperty("--lane-row",String(placements[index].row)));
+    }
+    // Ghost markers and connectors mirror their card's visibility and row.
+    for (const ghost of timelineRoot!.querySelectorAll<HTMLElement>("[data-ghost-of]")) {
+      const card = timelineRoot!.querySelector<HTMLElement>(`[data-event-id="${ghost.dataset.ghostOf}"]`);
+      ghost.hidden = !card || card.hidden;
+      if (card) ghost.style.setProperty("--lane-row",card.style.getPropertyValue("--lane-row"));
     }
     for (const button of buttons) button.setAttribute("aria-pressed", String(state[button.dataset.timelineFilter as keyof typeof state] === button.dataset.value));
     const count = timelineRoot!.querySelector("[data-count]");

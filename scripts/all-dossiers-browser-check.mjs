@@ -26,9 +26,9 @@ try{
         }
         assert.ok((await page.locator('h1').innerText()).includes(p.courtesy==='本书未详'?'字号未详':p.courtesy),p.id);
         assert.equal(await page.locator('.profile-evidence .citations a').count(),p.dossier.refs.length,p.id);
-        const dangling=await page.locator('.detail-sidebar nav a').evaluateAll(as=>as.map(a=>a.getAttribute('href')).filter(h=>!document.querySelector(h)));
+        const dangling=await page.locator('.detail-sidebar nav a, [data-dossier-jump] a').evaluateAll(as=>as.map(a=>a.getAttribute('href')).filter(h=>!document.querySelector(h)));
         assert.deepEqual(dangling,[],`navigation ${p.id}`);
-        const caption=await page.locator('.career-table caption').innerText();
+        const caption=await page.locator('.career-table caption').first().textContent();
         assert.ok(caption.startsWith(p.name),`caption ${p.id}`);
         const glossary=p.dossier.glossary;
         assert.equal(await page.locator('.glossary').count(),glossary.length?1:0,p.id);

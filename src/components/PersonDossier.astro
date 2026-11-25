@@ -4,9 +4,12 @@ import Citations from './Citations.astro';
 import Share from './Share.astro';
 import EventRow from './EventRow.astro';
 import PersonNarrative from './PersonNarrative.astro';
-import { personById, eventById, referencesFor, volumes, volumeTitle } from '../lib/catalog';
+import FoldGroup from './FoldGroup.astro';
+import RelatedEvent from './RelatedEvent.astro';
+import { personById, eventById, events, referencesFor, volumes, volumeTitle } from '../lib/catalog';
 import { DEFAULT_ATLAS_BASE, versionedAtlasBase, phaseUrl, routeUrl, phaseNumeral } from '../lib/atlas.mjs';
-import type { Person, DossierRecord } from '../lib/catalog';
+import type { Person, DossierRecord, TrajectoryPhase } from '../lib/catalog';
+import { refKey } from '../lib/catalog';
 interface Props { person: Person }
 const { person: p } = Astro.props;
 const d = p.dossier!;
@@ -30,13 +33,80 @@ const phaseStart = new Map(phases.map((ph,i)=>[ph.careers[0],{ph,i}]));
 const careerTitle = new Map(p.milestones.map(m=>[m.id,m]));
 const stopLabel = (ph: {atlasStops?: number[]}) => ph.atlasStops?.length ? `地图第 ${ph.atlasStops.map(n=>n+1).join('、')} 站` : '地图未单列此期';
 const recordGroups = (rows: DossierRecord[]) => Array.from(new Set(rows.map(r=>r.group ?? ''))).map(title=>({title,rows:rows.filter(r=>(r.group ?? '')===title)}));
+// ---- 大表格分组（折叠）----
+interface Group<T> { title: string; when: string; rows: T[]; ph?: TrajectoryPhase; phIndex?: number }
+const CHUNK = 5;
+const MIN_GROUP = 3;
+const yearsIn = (text: string) => (text.match(/\d{3}/g) ?? []).map(Number);
+const spanLabel = (whens: string[]) => {
+  const ys = whens.flatMap(yearsIn);
+  if (!ys.length) return whens[0]?.split(/[，,]/)[0] ?? '';
+  const a = Math.min(...ys), b = Math.max(...ys);
+  return a === b ? `${a}年` : `${a}—${b}年`;
+};
+function chunked<T extends {when: string}>(rows: T[]): Group<T>[] {
+  const size = Math.ceil(rows.length / Math.ceil(rows.length / CHUNK));
+  const out: Group<T>[] = [];
+  for (let i = 0; i < rows.length; i += size) {
+    const part = rows.slice(i, i + size);
+    out.push({title:`第 ${out.length+1} 段`, when:spanLabel(part.map(r=>r.when)), rows:part});
+  }
+  return out;
+}
+const phaseIndexFor = (when: string) => {
+  const y = yearsIn(when)[0];
+  if (y === undefined) return -1;
+  let idx = phases.findIndex(ph => y >= ph.span[0] && y <= ph.span[1]);
+  if (idx < 0) { phases.forEach((ph,i)=>{ if (ph.span[0] <= y) idx = i; }); if (idx < 0) idx = 0; }
+  return idx;
+};
+// 生平履历：有行迹时期的人按时期分组，否则每 5 条左右一组（不足 7 条不折叠）。
+const careerGroups: Group<typeof p.milestones[number]>[] = (() => {
+  if (hasTrajectory) {
+    const out: Group<typeof p.milestones[number]>[] = [];
+    for (const m of p.milestones) {
+      const start = m.id ? phaseStart.get(m.id) : undefined;
+      if (start || !out.length) out.push({title:start?.ph.title ?? '', when:start?.ph.when ?? '', rows:[], ph:start?.ph, phIndex:start?.i});
+      out.at(-1)!.rows.push(m);
+    }
+    return out;
+  }
+  return p.milestones.length > CHUNK + 1 ? chunked(p.milestones) : [{title:'', when:'', rows:p.milestones}];
+})();
+// 功绩/挫折：优先用数据里的分组名；其次按行迹时期归并；否则按条数分段。
+function groupRecords(rows: DossierRecord[]): Group<DossierRecord>[] {
+  if (rows.some(r=>r.group)) return recordGroups(rows).map(g=>({title:g.title, when:spanLabel(g.rows.map(r=>r.when)), rows:g.rows}));
+  if (rows.length <= CHUNK + 1) return [{title:'', when:'', rows}];
+  if (hasTrajectory) {
+    const by = new Map<number, DossierRecord[]>(); let last = 0;
+    for (const r of rows) { let i = phaseIndexFor(r.when); if (i < 0) i = last; last = i; if (!by.has(i)) by.set(i, []); by.get(i)!.push(r); }
+    // 相邻时期的条目太少（1—2 条）时并成一组，避免出现一排只有一条的折叠项。
+    const merged: {from: number; to: number; rows: DossierRecord[]}[] = [];
+    for (const [i, rs] of [...by.entries()].sort((x,y)=>x[0]-y[0])) {
+      const last = merged.at(-1);
+      if (last && last.rows.length < MIN_GROUP) { last.to = i; last.rows.push(...rs); }
+      else merged.push({from:i, to:i, rows:[...rs]});
+    }
+    if (merged.length > 1 && merged.at(-1)!.rows.length < MIN_GROUP) { const tail = merged.pop()!; const prev = merged.at(-1)!; prev.to = tail.to; prev.rows.push(...tail.rows); }
+    if (merged.length > 1) return merged.map(g=>({title:g.from===g.to?phases[g.from].title:`${phases[g.from].title}至${phases[g.to].title}`, when:spanLabel(g.rows.map(r=>r.when))||phases[g.from].when, rows:g.rows, ph:phases[g.from], phIndex:g.from}));
+    return [{title:'', when:'', rows}];
+  }
+  return chunked(rows);
+}
+const relationGroups = d.contextRelations
+  ? Array.from(new Set(d.contextRelations.map(item=>item.category))).map(category=>({category,rows:d.contextRelations!.filter(item=>item.category===category)}))
+  : [];
+const EVENT_SHOWN = 6;
+const relatedIds=[...p.eventIds].sort((a,b)=>events.findIndex(x=>x.id===a)-events.findIndex(x=>x.id===b));
+const eventNote = (id: string) => d.relatedEventNotes?.find(n=>n.eventId===id);
+const evidenceCount = new Set(d.refs.map(refKey)).size;
 const navigation = [
   ['life','人物介绍'],['milestones','生平履历'],...(hasTrajectory ? [['trajectory','行迹地图']] : []),
   ...sections.map(s=>[s.id,s.title]),...(d.scholarship?.length ? [['scholarship','治学与个人侧面']] : []),...(d.assessment?.length ? [['assessment','史家评价']] : []),['relations','人物关系'],...((d.expanded?d.readingNotes?.length:p.note)?[['reading-note',d.expanded?'阅读提示与史料辨析':'阅读提示']]:[]),
   ['related-events','相关事件'],['sources','原文依据'],
 ];
 ---
-<div class:list={["shell detail-page person-dossier", {"expanded-dossier":d.expanded}]}>
+<div id="page-top" class:list={["shell detail-page person-dossier", {"expanded-dossier":d.expanded}]}>
   <a class="back-link" href="/people/">← 人物列表</a>
   <header class="detail-heading">
     <div>
@@ -46,10 +116,14 @@ const navigation = [
     </div>
     <Share />
   </header>
+  <nav class="dossier-jump" aria-label="章节跳转" data-dossier-jump>
+    {navigation.map(([id,title])=><a href={`#${id}`} data-spy={id}>{title}</a>)}
+  </nav>
   <div class="article-layout">
     <aside class="detail-sidebar">
       <div class="profile-seal" aria-hidden="true">{p.name.slice(0,1)}</div>
-      <span class="section-eyebrow">人物小档案</span>
+      <details class="profile-facts" open data-profile-facts>
+      <summary class="section-eyebrow">人物小档案<span class="facts-hint"> · 籍贯、官职、爵位</span></summary>
       <dl>
         {p.lifespan && <>
           <dt>生卒年</dt>
@@ -63,9 +137,10 @@ const navigation = [
         <dt>常见称谓</dt><dd>{p.aliases.map(a=>p.id==='zhangfei'&&a==='桓侯'?'张桓侯':a).join('、')||'暂无其他称谓'}</dd>
         <dt>代表事迹</dt><dd>{d.deeds.join('、')}</dd>
       </dl>
-      <div class="profile-evidence">档案依据<Citations refs={d.refs} all={refs}/></div>
-      <nav aria-label="本页目录">
-        {navigation.map(([id,title],index)=><a href={`#${id}`}>{title}<span>{String(index+1).padStart(2,'0')}</span></a>)}
+      <details class="profile-evidence"><summary>依据 {evidenceCount} 条</summary><Citations refs={d.refs} all={refs}/></details>
+      </details>
+      <nav aria-label="本页目录" data-dossier-toc>
+        {navigation.map(([id,title],index)=><a href={`#${id}`} data-spy={id}>{title}<span>{String(index+1).padStart(2,'0')}</span></a>)}
       </nav>
     </aside>
     <article class="article-body">
@@ -76,15 +151,17 @@ const navigation = [
       </section>
       <section id="milestones" class="article-section">
         <div class="section-eyebrow">沿着经历看变化</div><h2>生平履历</h2>
+        {careerGroups.map((g,gi)=><FoldGroup plain={careerGroups.length===1} id={g.ph?`phase-${g.ph.id}`:undefined} no={g.phIndex!==undefined?phaseNumeral(g.phIndex):String(gi+1)} title={g.title} when={g.when} count={g.rows.length} open={gi===0} mapUrl={g.ph&&phaseUrl(atlasBase,trajectory!,g.ph)||undefined} mapNote={g.ph&&!phaseUrl(atlasBase,trajectory!,g.ph)?(trajectory!.atlasPerson?'本期地图未标点':'本期地点未详'):undefined}>
         <table class="dossier-table career-table">
-          <caption class="sr-only">{p.name}的重要经历与官职、爵位变化</caption>
+          <caption class="sr-only">{p.name}的重要经历与官职、爵位变化{g.title&&careerGroups.length>1?`：${g.title}`:''}</caption>
           <thead><tr><th scope="col">时间</th><th scope="col">重要经历</th><th scope="col">官职、爵位变化</th></tr></thead>
-          <tbody>{p.milestones.map(m=><Fragment>{m.id&&phaseStart.has(m.id)&&(()=>{const {ph,i}=phaseStart.get(m.id)!;return <tr id={`phase-${ph.id}`} class="phase-row"><th colspan="3" scope="rowgroup"><span class="phase-no">{phaseNumeral(i)}</span><strong>{ph.title}</strong><span class="phase-when">{ph.when}</span>{phaseUrl(atlasBase,trajectory!,ph)?<a href={phaseUrl(atlasBase,trajectory!,ph)} target="_blank" rel="noopener">在地图上看 ↗</a>:<span class="phase-unmapped">{trajectory!.atlasPerson ? "本期未标点" : "地点未详"}</span>}</th></tr>;})()}<tr id={m.id?`career-${m.id}`:undefined}>
+          <tbody>{g.rows.map(m=><tr id={m.id?`career-${m.id}`:undefined}>
             <th scope="row" data-label="时间"><span class="milestone-date">{m.when}</span></th>
             <td data-label="重要经历">{d.expanded&&<strong>{m.title}</strong>}<p>{m.text}<Citations refs={m.refs} all={refs}/></p>{m.eventIds && m.eventIds.length>0&&<div class="record-events">{m.eventIds.map(id=><a href={`/events/${id}/`}>{eventById(id).title} ↗</a>)}</div>}</td>
             <td data-label="官职、爵位变化" class:list={{'office-change':m.office!=='—','no-change':m.office==='—'}}>{m.office}</td>
-          </tr></Fragment>)}</tbody>
+          </tr>)}</tbody>
         </table>
+        </FoldGroup>)}
       </section>
       {hasTrajectory&&<section id="trajectory" class="article-section trajectory">
         <div class="section-eyebrow">把经历放回地图</div><h2>行迹地图</h2>
@@ -100,8 +177,8 @@ const navigation = [
       </section>}
       {sections.map(section=><section id={section.id} class="article-section">
         <div class="section-eyebrow">{section.eyebrow}</div><h2>{section.title}</h2>
-        {section.records.length>0?recordGroups(section.records).map(group=><Fragment>{group.title&&<h3 class="group-title">{group.title}</h3>}<table class="dossier-table achievement-table">
-          <caption class="sr-only">{p.name}的{section.title}</caption>
+        {section.records.length>0?(()=>{const groups=groupRecords(section.records);return groups.map((group,gi)=><FoldGroup plain={groups.length===1} id={group.ph?`${section.id}-${group.ph.id}`:undefined} no={group.phIndex!==undefined?phaseNumeral(group.phIndex):String(gi+1)} title={group.title} when={group.when} count={group.rows.length} open={gi===0}><table class="dossier-table achievement-table">
+          <caption class="sr-only">{p.name}的{section.title}{group.title&&groups.length>1?`：${group.title}`:''}</caption>
           <thead><tr><th scope="col">年份</th><th scope="col">{section.id==='setbacks'?'事件':'功绩'}</th><th scope="col">{section.id==='setbacks'?'性质':'类型'}</th><th scope="col">{section.id==='setbacks'?'经过与后果':'具体表现与影响'}</th></tr></thead>
           <tbody>{group.rows.map(record=><tr>
             <th scope="row" data-label="年份">{record.when}</th>
@@ -109,7 +186,7 @@ const navigation = [
             <td data-label={section.id==='setbacks'?'性质':'类型'}><span class="record-category">{record.category}</span></td>
             <td data-label={section.id==='setbacks'?'经过与后果':'具体表现与影响'}><p>{record.text}<Citations refs={record.refs} all={refs}/></p>{record.eventIds && record.eventIds.length>0&&<div class="record-events">{record.eventIds.map(id=><a href={`/events/${id}/`}>{eventById(id).title} ↗</a>)}</div>}</td>
           </tr>)}</tbody>
-        </table></Fragment>):<p class="evidence-note">{section.note}</p>}
+        </table></FoldGroup>);})():<p class="evidence-note">{section.note}</p>}
       </section>)}
       {d.scholarship && d.scholarship.length>0&&<section id="scholarship" class="article-section">
         <div class="section-eyebrow">从功业走向个人</div><h2>治学、文学与个人侧面</h2>
@@ -121,7 +198,7 @@ const navigation = [
       </section>}
       <section id="relations" class="article-section">
         <div class="section-eyebrow">他与谁的故事交织</div><h2>人物关系</h2>
-        {d.contextRelations ? <div class="context-relations">{d.contextRelations.map(item=><div class="narrative-part"><span class="section-eyebrow">{item.category}</span><h3>{item.title}</h3><p>{item.text}<Citations refs={item.refs} all={refs}/></p><div class="record-events">{item.people.map(r=><a href={`/people/${r.personId}/`}>{r.name} ↗</a>)}</div></div>)}</div> : <div class="relation-list">
+        {d.contextRelations ? <div class="context-relations">{relationGroups.map((group,gi)=><FoldGroup plain={relationGroups.length===1} title={group.category} count={group.rows.length} open={gi===0}>{group.rows.map(item=><div class="narrative-part"><h3>{item.title}</h3><p>{item.text}<Citations refs={item.refs} all={refs}/></p><div class="record-events">{item.people.map(r=><a href={`/people/${r.personId}/`}>{r.name} ↗</a>)}</div></div>)}</FoldGroup>)}</div> : <div class="relation-list">
           {p.relations.map(r=><div class="relation"><a href={`/people/${r.personId}/`}>{personById(r.personId).name}<span aria-hidden="true">↗</span></a><p>{r.label}<Citations refs={r.refs} all={refs}/></p></div>)}
           {d.extraRelations.map(r=><div class="relation"><span class="relation-name">{r.name}</span><p>{r.label}<Citations refs={r.refs} all={refs}/></p>{r.people&&r.people.length>0&&<div class="record-events">{r.people.map(who=><a href={`/people/${who.personId}/`}>{who.name} ↗</a>)}</div>}</div>)}
         </div>}
@@ -132,20 +209,53 @@ const navigation = [
       {d.glossary.length>0&&<details class="glossary"><summary>文中名词 <span>{d.glossary.map(item=>item.term).join(' · ')}</span></summary><dl>{d.glossary.map(item=><><dt>{item.term}</dt><dd>{item.text}</dd></>)}</dl></details>}
       <section id="related-events" class="article-section">
         <div class="section-eyebrow">从人物走向事件</div><h2>相关事件</h2>
-        <div class="event-list compact">{p.eventIds.map(id=>{const note=d.relatedEventNotes?.find(n=>n.eventId===id); return note?<a class="event-reading-note" href={`/events/${id}/`}><small>{eventById(id).time}</small><h3>{note.label} ↗</h3><p>{note.text}</p></a>:<EventRow event={eventById(id)}/>;})}</div>
+        <div class="event-list compact">{relatedIds.slice(0,EVENT_SHOWN).map(id=><RelatedEvent id={id} note={eventNote(id)}/>)}</div>
+        {relatedIds.length>EVENT_SHOWN&&<details class="more-events"><summary>更多相关事件（还有 {relatedIds.length-EVENT_SHOWN} 个）<span aria-hidden="true">+</span></summary><div class="event-list compact">{relatedIds.slice(EVENT_SHOWN).map(id=><RelatedEvent id={id} note={eventNote(id)}/>)}</div></details>}
         {p.eventIds.length === 0 && <p class="muted">本站暂无可直接关联的事件，可继续读下方的原传。</p>}
       </section>
       <Sources refs={refs} expanded={d.expanded} scope={d.sourceScope}/>
       <section class="original-invite"><span>继续读他的原传</span>{p.reading.map(id=>{const v=volumes.find(x=>x.id===id)!;return <a href={`/read/${id}/`}>{volumeTitle(v)} ↗</a>;})}</section>
     </article>
   </div>
+  <a class="to-top" href="#page-top" data-to-top aria-label="回到顶部"><span aria-hidden="true">↑</span><small>顶部</small></a>
 </div>
+<script>import '../lib/dossier-ui';</script>
 
 <style>
-  .event-reading-note{display:block;padding:20px 0;border-bottom:1px solid var(--line)}
-  .event-reading-note small{font-size:11px;color:var(--muted)}
-  .event-reading-note h3{font:19px/1.7 var(--serif);margin:6px 0}
-  .event-reading-note p{font-size:13px;margin:0;color:var(--muted)}
+
+  /* ---- 减负：折叠、吸顶目录、回到顶部 ---- */
+  .profile-facts > summary{cursor:default;list-style:none;display:block}
+  .profile-facts > summary::-webkit-details-marker{display:none}
+  .facts-hint{display:none}
+  .profile-evidence{margin:12px 0 20px}
+  .profile-evidence > summary{cursor:pointer;width:fit-content;color:var(--red);font-size:11px;letter-spacing:1px;list-style:none}
+  .profile-evidence > summary::-webkit-details-marker{display:none}
+  .profile-evidence > summary::before{content:"+";display:inline-block;width:1.1em;color:var(--muted)}
+  .profile-evidence[open] > summary::before{content:"−"}
+  .profile-evidence .citations{display:block;margin:8px 0 0;line-height:2.2}
+  .dossier-jump{display:none}
+  .detail-sidebar nav > a[aria-current="location"]{color:var(--red)}
+  .detail-sidebar nav > a[aria-current="location"] > span{color:var(--red)}
+  .to-top{position:fixed;right:22px;bottom:22px;z-index:40;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;line-height:1;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;box-shadow:0 8px 20px -10px rgba(39,44,41,.55)}
+  .to-top span{font-size:15px}
+  .to-top small{font-size:8px;letter-spacing:1px;margin-top:2px}
+  .to-top:hover{background:var(--red);color:var(--paper)}
+  .to-top.is-visible{opacity:1;visibility:visible;transform:none}
+  @media(min-width:801px){
+    .detail-sidebar{position:static;align-self:stretch}
+    .detail-sidebar nav{position:sticky;top:18px;max-height:calc(100vh - 36px);overflow-y:auto;overscroll-behavior:contain;margin-top:6px}
+  }
+  @media(max-width:800px){
+    .dossier-jump{display:flex;position:sticky;top:0;z-index:30;gap:8px;overflow-x:auto;padding:10px 0;margin-top:2px;background:var(--paper);border-bottom:1px solid var(--line);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .dossier-jump::-webkit-scrollbar{display:none}
+    .dossier-jump a{flex:none;padding:6px 13px;border:1px solid var(--line);border-radius:999px;font-size:12px;line-height:1.5;white-space:nowrap;background:var(--card)}
+    .dossier-jump a[aria-current="location"]{background:var(--red);border-color:var(--red);color:var(--paper)}
+    .profile-facts > summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:2px 0}
+    .profile-facts > summary::after{content:"+";font-size:18px;color:var(--muted);line-height:1}
+    .profile-facts[open] > summary::after{content:"−"}
+    .facts-hint{display:inline;letter-spacing:0;font-size:10px;margin-right:auto;margin-left:2px}
+    .to-top{right:16px;bottom:16px}
+  }
   .narrative-part h3,.group-title{font:20px/1.6 var(--serif);margin:25px 0 10px}
   .narrative-part{margin-bottom:24px}
   .group-title{padding:13px 0;border-top:1px solid var(--line);color:var(--red);font-size:18px;margin-top:32px}
@@ -155,6 +265,11 @@ const navigation = [
   .reading-item p{margin:15px 0 4px}
   .context-relations .narrative-part{padding-bottom:18px;border-bottom:1px solid var(--line)}
   .context-relations h3{margin-top:7px}
+  .context-relations .narrative-part:last-child{border-bottom:0}
+  .more-events{margin-top:6px}
+  .more-events > summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:15px 16px;border:1px solid var(--line);background:var(--card);font-size:12px;color:var(--red)}
+  .more-events > summary::-webkit-details-marker{display:none}
+  .more-events[open] > summary span{display:inline-block;transform:rotate(45deg)}
   .fact-details dl{grid-template-columns:70px minmax(0,1fr)}
   .reading-tier{display:inline-block;margin-left:14px;padding:3px 9px;border:1px solid var(--line);color:var(--red);font-size:10px;letter-spacing:1px}
   .profile-evidence{font-size:10px;color:var(--muted);margin:12px 0 20px;line-height:1.9}

@@ -28,16 +28,19 @@ try{
         await search.fill('a-nonexistent-source-query');
         await search.dispatchEvent('input');
         assert.equal(await page.locator('.source-item:visible').count(),0);
+        // 档案依据与整张依据列表默认折叠；角标点击先弹出浮层，再经浮层链接跳到页底依据。
+        await page.locator('.profile-evidence > summary').click();
         const citation=page.locator('.profile-evidence a').first();
         const hash=await citation.getAttribute('href');
-        await citation.click();
+        const follow=async()=>{await citation.click();await page.locator('.cite-pop').getByRole('link',{name:/查看页底依据/}).click();};
+        await follow();
         assert.equal(await search.inputValue(),'');
         assert.ok(await page.locator(hash).evaluate(el=>el.open&&!el.hidden));
         // Native fragment navigation briefly resets focus before hashchange runs.
         await page.waitForFunction(hash=>document.querySelector(`${hash} > summary`)===document.activeElement,hash);
         // Repeating a citation must also reveal a target hidden by a new filter.
         await search.fill('a-nonexistent-source-query');
-        await citation.click();
+        await follow();
         await page.waitForFunction(hash=>document.querySelector(`${hash} > summary`)===document.activeElement,hash);
         assert.equal(await search.inputValue(),'');
         assert.ok(await page.locator(hash).evaluate(el=>el.open&&!el.hidden));

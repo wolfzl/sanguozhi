@@ -1,9 +1,12 @@
 ---
-interface Props { text: string }
-const {text} = Astro.props;
+import {splitPeople} from '../lib/person-links';
+// seen：同一原文段内已加过人物链接的人物（只在正文白话里传入；裴注白话不加链接）。
+interface Props { text: string; seen?: Set<string> }
+const {text,seen} = Astro.props;
 const paragraphs = text.split(/\n{2,}/).filter(Boolean);
+const plain = (value: string) => seen ? splitPeople(value, seen, false) : [{text: value}];
 ---
 {paragraphs.map(paragraph => <p>{paragraph.split(/(\[[^\]]+\]\(https?:\/\/[^)]+\))/g).map(part => {
   const link = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)]+)\)$/);
-  return link ? <a href={link[2]} target="_blank" rel="noopener">{link[1]}</a> : part;
+  return link ? <a href={link[2]} target="_blank" rel="noopener">{link[1]}</a> : plain(part).map(piece => piece.personId ? <a class="person-link" href={`/people/${piece.personId}/`} title="查看人物页">{piece.text}</a> : piece.text);
 })}</p>)}

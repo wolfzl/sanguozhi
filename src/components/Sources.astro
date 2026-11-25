@@ -5,10 +5,13 @@ import {Converter} from 'opencc-js/t2cn';
 interface Props {refs: SourceRef[]; expanded?: boolean; scope?: string}
 const {refs,expanded=false,scope}=Astro.props;
 const simplify=Converter({from:'t',to:'cn'});
+// 依据很多时（人物档案常有一百多条），整张列表默认收起，页面不被拉得很长；单条仍可展开、锚点会自动展开外层。
+const fold=refs.length>8;
+const Wrapper=fold?'details':'div';
 ---
 <section id="sources" class="article-section sources" data-expanded-sources={expanded || undefined}><div class="section-eyebrow">回到史料</div><h2>原文依据</h2><p class="muted">节选以简体显示，正文与裴注分别标明。展开查看节选，或前往对应卷中的完整段落。</p>
 {expanded&&<><p class="source-scope">{scope}</p><label class="source-search">查找原文、书名或段落编号<input type="search" data-source-query placeholder="例如：屯田、許攸、v001-b0062" autocomplete="off"/></label><p class="source-count" data-source-count aria-live="polite">共 {refs.length} 条依据</p></>}
-{refs.map((ref,i)=>{const volume=volumes.find(v=>v.id===ref.volume)!;return <details class="source-item" id={`source-${i+1}`} data-block-id={ref.blockId}><summary><span class="source-number">{String(i+1).padStart(2,'0')}</span><span>{simplify(refLabel(ref))}</span><span class="source-plus" aria-hidden="true">+</span></summary><div class="source-content">{expanded&&<code class="source-id">{ref.blockId}</code>}<blockquote lang="zh-Hans">{simplify(ref.quote)}</blockquote><div class="source-actions"><a href={`/read/${ref.volume}/#${ref.blockId}`}>阅读完整原文 <span aria-hidden="true">↗</span></a><a href={volume.permalink} target="_blank" rel="noopener">维基文库修订版 ↗</a></div></div></details>})}
+<Wrapper class={fold?'source-all':undefined} data-source-all={fold||undefined}>{fold&&<summary>展开全部 {refs.length} 条依据<span class="source-plus" aria-hidden="true">+</span></summary>}{refs.map((ref,i)=>{const volume=volumes.find(v=>v.id===ref.volume)!;return <details class="source-item" id={`source-${i+1}`} data-block-id={ref.blockId}><summary><span class="source-number">{String(i+1).padStart(2,'0')}</span><span>{simplify(refLabel(ref))}</span><span class="source-plus" aria-hidden="true">+</span></summary><div class="source-content">{expanded&&<code class="source-id">{ref.blockId}</code>}<blockquote lang="zh-Hans">{simplify(ref.quote)}</blockquote><div class="source-actions"><a href={`/read/${ref.volume}/#${ref.blockId}`}>阅读完整原文 <span aria-hidden="true">↗</span></a><a href={volume.permalink} target="_blank" rel="noopener">维基文库修订版 ↗</a></div></div></details>})}</Wrapper>
 </section>
 
 <script>
@@ -20,4 +23,9 @@ const simplify=Converter({from:'t',to:'cn'});
   .source-count,.source-scope{font-size:12px;color:var(--muted);line-height:1.95}
   .source-id{font-size:11px;color:var(--red);overflow-wrap:anywhere}
   .source-item[hidden]{display:none}
+  .source-all > summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:15px 4px;border:1px solid var(--line);background:var(--card);font-size:12px;color:var(--red)}
+  .source-all > summary::-webkit-details-marker{display:none}
+  .source-all[open] > summary{margin-bottom:10px}
+  .source-all[open] > summary .source-plus{transform:rotate(45deg)}
+  .source-all > summary{padding-inline:16px}
 </style>

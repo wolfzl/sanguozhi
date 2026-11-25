@@ -49,3 +49,12 @@ test("lords lane survives URL state and shares rows without colliding with commo
  assert.deepEqual(api.layoutYearEvents([{lanes:["common"]},{lanes:["lords"]}]),[{start:1,span:4,row:1},{start:4,span:1,row:2}]);
  assert.equal(api.matchesEvent({...event,lanes:["lords"]},{...api.parseTimelineState(),lane:"lords"}),true);
 });
+test("links the three Sanguozhi battles to Jiangshan campaign playback",async()=>{
+  const atlas=await import("../src/lib/atlas.mjs");
+  assert.deepEqual(Object.keys(atlas.CAMPAIGNS),["guandu","chibi","yiling"]);
+  const embed=new URL(atlas.campaignUrl("http://127.0.0.1:8000/",atlas.CAMPAIGNS.guandu,{embed:true}));
+  assert.deepEqual(Object.fromEntries(embed.searchParams),{embed:"1",from:"199",to:"200",campaign:"guandu",cphase:"1"});
+  const open=new URL(atlas.campaignUrl("http://127.0.0.1:8000/",atlas.CAMPAIGNS.yiling,{phase:4}));
+  assert.deepEqual(Object.fromEntries(open.searchParams),{year:"221",campaign:"yiling",cphase:"4"});
+  assert.equal(atlas.campaignUrl("http://127.0.0.1:8000/",undefined),"");
+});

@@ -10,6 +10,7 @@ if (root) {
   function filter() {
     const query = normalize(input.value);
     rows.forEach((row,i)=>row.hidden=Boolean(query&&!texts[i].includes(query)));
+    if (query) { const all = root!.querySelector<HTMLDetailsElement>('[data-source-all]'); if (all) all.open = true; }
     count.textContent = `显示 ${rows.filter(row=>!row.hidden).length} / ${rows.length} 条依据`;
   }
   function reveal(hash: string, focus=false) {
@@ -17,7 +18,7 @@ if (root) {
     const target = document.getElementById(hash.slice(1)) as HTMLDetailsElement | null;
     if (!target || !root!.contains(target)) return;
     if (target.hidden) { input.value=''; filter(); }
-    target.open = true;
+    for (let el: Element | null = target; el && root!.contains(el); el = el.parentElement) if (el instanceof HTMLDetailsElement) el.open = true;
     if (focus) target.querySelector('summary')?.focus({preventScroll:true});
     requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));
   }
@@ -25,7 +26,8 @@ if (root) {
   window.addEventListener('hashchange',()=>reveal(location.hash,true));
   document.addEventListener('click',event=>{
     const anchor=(event.target as Element).closest<HTMLAnchorElement>('a[href^="#source-"]');
-    if (anchor) {
+    // 引用角标由浮层处理（已 preventDefault），这里只负责页内其他指向依据的锚点。
+    if (anchor && !event.defaultPrevented) {
       // Repeating the current fragment has no hashchange event to restore focus.
       if (anchor.hash === location.hash) event.preventDefault();
       reveal(anchor.hash,true);

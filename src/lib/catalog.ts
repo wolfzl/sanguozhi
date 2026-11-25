@@ -1,5 +1,6 @@
 import bookData from "../data/book.json";
 import cardData from "../data/cards.json";
+import volumeTitleData from "../data/volume-titles.json";
 import { Converter } from "opencc-js/t2cn";
 
 export interface SourceRef {
@@ -128,15 +129,19 @@ export const events = (cardData.events as unknown as Event[]).sort(
   (a, b) => a.year - b.year || a.order - b.order,
 );
 const simplify = Converter({ from: "tw", to: "cn" });
+/**
+ * 卷目显示名：统一为「魏书 · 卷名」。显示名由 src/data/volume-titles.json 按卷号给出，
+ * 不依赖 EPUB 提取出的原始标题（其中混有繁简、「第十」「卷五十五」等不一致写法），
+ * 因此重新提取原书不会让卷名回退。book.json 保持不变以固定来源哈希。
+ */
+const volumeTitles = volumeTitleData as Record<string, string>;
 export function volumeTitle(v: Volume) {
-  if (v.id === "appendix") return "上三国志注表";
-  const title = simplify(v.title)
+  const fixed = volumeTitles[v.id];
+  if (fixed) return fixed;
+  return simplify(v.title)
     .replace(/^卷\d+\s*/, "")
-    .replace(/^卷[一二三四五六七八九十]+[·\s]*/, "")
     .replace(/[•]/g, "·")
-    .replace(/呉/g, "吴");
-  return title
-    .replace(/^(魏|蜀|吴)书[一二三四五六七八九十]+\s*/, "$1书 · ")
+    .replace(/呉/g, "吴")
     .replace(/·/g, " · ")
     .replace(/\s+/g, " ")
     .trim();

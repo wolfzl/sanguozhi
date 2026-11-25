@@ -2235,3 +2235,219 @@ em {
 
 /* More historical factions remain usable on narrow screens. */
 .filter-group { flex-wrap: wrap; }
+
+/* 引用角标浮层：就地显示依据节选 */
+.cite-pop {
+  position: absolute;
+  z-index: 60;
+  width: min(380px, calc(100vw - 24px));
+  padding: 14px 16px 12px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--red);
+  box-shadow: 0 14px 32px -14px rgba(39, 44, 41, 0.45);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.cite-pop[hidden] {
+  display: none;
+}
+.cite-pop-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--red);
+}
+.cite-pop blockquote {
+  margin: 7px 0 10px;
+  max-height: 11.5em;
+  overflow-y: auto;
+  font: 14px/1.9 var(--serif);
+  overflow-wrap: anywhere;
+}
+.cite-pop-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  font-size: 11px;
+  color: var(--red);
+}
+.cite-pop-actions a:hover {
+  text-decoration: underline;
+}
+.citations a[aria-expanded="true"] {
+  background: var(--red);
+  color: var(--paper);
+}
+
+/* 原文阅读：人物链接、白话提示条、逐段对照 */
+.original-text a.person-link {
+  color: inherit;
+  border-bottom: 1px solid rgba(161, 66, 48, 0.4);
+  text-decoration: none;
+}
+.original-text a.person-link:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+.baihua-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin-top: 18px;
+  padding: 13px 18px;
+  border: 1px solid #d9b3a6;
+  border-left: 4px solid var(--red);
+  background: #f4e4dc;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.baihua-banner[hidden] {
+  display: none;
+}
+.baihua-banner strong {
+  color: var(--red);
+  font-weight: 600;
+}
+.baihua-banner span {
+  color: #6a5a52;
+  font-size: 12px;
+}
+.reader-toolbar button[data-parallel][hidden] {
+  display: none;
+}
+.original-text.is-baihua {
+  border-left: 2px solid #d9b3a6;
+  padding-left: 22px;
+}
+.original-text .parallel-source {
+  display: none;
+}
+.original-text.show-parallel .parallel-source {
+  display: block;
+  margin: 6px 0 22px;
+  padding: 10px 16px 11px;
+  border-left: 2px solid var(--line);
+  background: rgba(120, 90, 55, 0.045);
+  font-size: 16px;
+  line-height: 1.95;
+  color: #4d5049;
+  text-indent: 0;
+}
+.parallel-source .parallel-label {
+  display: block;
+  font: 10px var(--sans);
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+.parallel-source .parallel-body {
+  text-indent: 0;
+}
+.parallel-source .parallel-note {
+  color: #77796e;
+  font-size: 0.92em;
+}
+.hide-notes .parallel-note {
+  display: none;
+}
+@media (max-width: 800px) {
+  .original-text.is-baihua {
+    padding-left: 14px;
+  }
+  .original-text.show-parallel .parallel-source {
+    font-size: 15px;
+    padding-inline: 12px;
+  }
+}
+
+/* 首页「从哪里读起」入口卡 */
+.start-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.start-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 26px 20px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.start-card:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+  color: var(--ink);
+}
+.start-no {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  font: 22px var(--serif);
+  color: #a1423055;
+}
+.start-for {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--red);
+}
+.start-card strong {
+  font: 24px var(--serif);
+  letter-spacing: 1px;
+  margin: 8px 0 10px;
+}
+.start-card p {
+  font-size: 12px;
+  line-height: 1.95;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+.start-go {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  color: var(--red);
+}
+.start-go i {
+  font-style: normal;
+  font-size: 16px;
+}
+.start-section {
+  padding-top: 52px;
+}
+@media (max-width: 800px) {
+  .start-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .start-card {
+    padding: 20px 20px 16px;
+  }
+  .start-card strong {
+    font-size: 21px;
+  }
+}
+
+/* 关于页：给普通读者的开场 */
+.about-benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.about-benefits li {
+  padding: 15px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.95;
+}
+.about-benefits strong {
+  color: var(--red);
+  font-weight: 600;
+  margin-right: 6px;
+}

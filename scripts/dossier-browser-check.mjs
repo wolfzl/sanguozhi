@@ -20,10 +20,12 @@ try {
   assert.equal(await page.locator('.person-dossier').count(),1);
   assert.equal(await page.getByRole('heading',{name:'生平履历',exact:true}).count(),1);
   assert.equal(await page.getByRole('heading',{name:'关键经历',exact:true}).count(),0);
-  // Phase header rows (tr.phase-row) are grouping rows, not milestones.
+  // Careers are folded into one <details class="fold-group"> per phase; rows are real milestones only.
   assert.equal(await page.locator('#milestones tbody tr:not(.phase-row)').count(),zf.milestones.length);
-  assert.equal(await page.locator('#milestones tbody tr.phase-row').count(),phases.length);
-  assert.ok((await page.locator('#milestones tbody tr:not(.phase-row)').last().innerText()).includes(zf.milestones.at(-1).title));
+  assert.equal(await page.locator('#milestones details.fold-group').count(),phases.length);
+  assert.equal(await page.locator('#milestones details.fold-group[open]').count(),1,'only the first period starts open');
+  // Later periods start collapsed, so read textContent rather than rendered innerText.
+  assert.ok((await page.locator('#milestones tbody tr:not(.phase-row)').last().textContent()).includes(zf.milestones.at(-1).title));
   assert.equal(zd.civil.length,0,'Zhang Fei is expected to have no civil achievements');
   assert.equal(await page.locator('#civil-achievements table').count(),0);
   assert.ok((await page.locator('#civil-achievements .evidence-note').innerText()).includes(zd.civilNote));
@@ -41,6 +43,11 @@ try {
   const cite=page.locator('#setbacks tbody tr').first().locator('.citations a').first();
   const target=await cite.getAttribute('href');
   await cite.click();
+  // A click now opens an in-place popover with the excerpt; its link jumps to the full evidence item.
+  const pop=page.locator('.cite-pop');
+  await pop.waitFor({state:'visible'});
+  assert.ok((await pop.innerText()).length>10);
+  await pop.getByRole('link',{name:/查看页底依据/}).click();
   const source=page.locator(target);
   await source.waitFor({state:'visible'});
   assert.equal(await source.getAttribute('open'),'');
@@ -53,6 +60,7 @@ try {
   await page.goto(`${base}/people/zhangfei/`,{waitUntil:'load'});
   // Milestone rows link to events; the event page must link back to the person.
   const eventId=firstEventMilestone.eventIds[0];
+  await page.evaluate(()=>document.querySelectorAll('#milestones details').forEach(d=>{d.open=true;}));
   await page.locator(`#milestones a[href="/events/${eventId}/"]`).first().click();
   assert.equal(new URL(page.url()).pathname,`/events/${eventId}/`);
   assert.ok(await page.locator('a[href="/people/zhangfei/"]').count()>0);

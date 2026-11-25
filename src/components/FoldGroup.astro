@@ -1,0 +1,52 @@
+---
+// 人物页大表格的分组折叠：<details>/<summary>，无 JS 也可展开。
+// plain=true 时不折叠，只输出（可选的）分组小标题与内容。
+interface Props {
+  id?: string;
+  no?: string;
+  title: string;
+  when?: string;
+  count: number;
+  open?: boolean;
+  plain?: boolean;
+  mapUrl?: string;
+  mapNote?: string;
+}
+const {id,no,title,when,count,open=false,plain=false,mapUrl,mapNote}=Astro.props;
+---
+{plain
+  ? <Fragment>{title&&<h3 class="group-title">{title}</h3>}<slot/></Fragment>
+  : <details class="fold-group" id={id} open={open||undefined}>
+      <summary>
+        {no&&<span class="fold-no" aria-hidden="true">{no}</span>}
+        <strong class="fold-title">{title||'其他'}</strong>
+        {when&&<span class="fold-when">{when}</span>}
+        <span class="fold-count">{count} 条</span>
+        <span class="fold-plus" aria-hidden="true">+</span>
+      </summary>
+      {(mapUrl||mapNote)&&<p class="fold-map">{mapUrl?<a href={mapUrl} target="_blank" rel="noopener">在地图上看这一时期 ↗</a>:<span>{mapNote}</span>}</p>}
+      <slot/>
+    </details>}
+
+<style>
+  .group-title{font:18px/1.6 var(--serif);padding:13px 0;border-top:1px solid var(--line);color:var(--red);margin:32px 0 10px}
+  .fold-group{border-top:1px solid var(--line)}
+  .fold-group:last-of-type{border-bottom:1px solid var(--line)}
+  .fold-group summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;padding:17px 4px}
+  .fold-group summary::-webkit-details-marker{display:none}
+  .fold-no{display:inline-block;flex:none;width:22px;height:22px;border:1px solid var(--red);border-radius:50%;color:var(--red);font-size:11px;line-height:20px;text-align:center;align-self:center}
+  .fold-title{font:18px/1.6 var(--serif);color:var(--red);font-weight:400}
+  .fold-when{font-size:11px;color:var(--muted)}
+  .fold-count{font-size:11px;color:var(--muted)}
+  .fold-plus{margin-left:auto;color:var(--muted);font-size:18px;line-height:1;align-self:center;transition:transform .2s}
+  .fold-group[open] > summary .fold-plus{transform:rotate(45deg)}
+  .fold-map{margin:0 0 6px 4px;font-size:11px}
+  .fold-map a{color:var(--red);text-decoration:underline;text-underline-offset:3px}
+  .fold-map span{color:var(--muted)}
+  .fold-group[open]{padding-bottom:14px}
+  @media(max-width:640px){
+    .fold-group summary{padding:15px 0}
+    .fold-title{font-size:17px}
+    .fold-no{width:20px;height:20px;line-height:18px}
+  }
+</style>

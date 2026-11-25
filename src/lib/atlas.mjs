@@ -57,3 +57,21 @@ export function routeUrl(base, trajectory, { embed = false } = {}) {
 
 /** 时期序号用的中文数字（时期最多 8 个）。 */
 export const phaseNumeral = i => '一二三四五六七八九十'[i] ?? String(i + 1);
+
+// 三大战役推演：江山时序（atlas_campaigns.js）里的分阶段战役回放，按本站事件 id 对应。
+// key、年份范围与阶段数须与江山时序的 CAMPAIGNS 条目一致（?campaign=<key>&cphase=<从 1 开始>）。
+export const CAMPAIGNS = {
+  guandu: { key: 'guandu', title: '官渡之战', from: 199, to: 200, phases: 7, sides: '曹操 vs 袁绍', hook: '声西击东解白马，两军相持官渡；许攸来奔，曹操夜袭乌巢，袁绍败北。' },
+  chibi: { key: 'chibi', title: '赤壁之战', from: 208, to: 208, phases: 6, sides: '曹操 vs 孙刘联军', hook: '孙刘合兵沿江迎击；黄盖诈降，火船延烧曹军营落，曹操北归。' },
+  yiling: { key: 'yiling', title: '夷陵之战', from: 221, to: 222, phases: 6, sides: '刘备 vs 孙权', hook: '刘备东征驻营猇亭，陆逊持军不出；纵火并破连营，刘备退至白帝。' },
+};
+
+/** 战役推演地址。embed=true 时生成嵌入地址，并把时间轴限定在战役年份范围内。 */
+export function campaignUrl(base, campaign, { embed = false, phase = 1 } = {}) {
+  if (!campaign) return '';
+  return build(base, {
+    ...(embed ? { embed: 1, from: campaign.from, to: campaign.to } : { year: campaign.from }),
+    campaign: campaign.key,
+    cphase: phase,
+  });
+}
