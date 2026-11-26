@@ -74,7 +74,7 @@ export interface Person {
   eventIds: string[];
   note: SourceNote | null;
 }
-/** 行迹时期，见 docs/atlas-trajectory-guide.md。 */
+/** 行迹时期，见 docs/guides/atlas-trajectory-guide.md。 */
 export interface AtlasPlace { name: string; query: string; province: string; mapYear: number; approx?: boolean }
 export interface TrajectoryPhase { id: string; title: string; when: string; span: [number, number]; careers: string[]; atlasStops?: number[]; place?: AtlasPlace; unmappedReason?: string }
 export interface Trajectory { atlasPerson?: string; phases: TrajectoryPhase[] }

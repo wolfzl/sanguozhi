@@ -174,7 +174,7 @@ test('a period with no personal location does not link to the entire unrelated i
   assert.equal(phaseUrl(BASE,t,t.phases[0]),'');
 });
 
-const shuAudit = JSON.parse(fs.readFileSync('docs/shu-trajectory-audit.json','utf8'));
+const shuAudit = JSON.parse(fs.readFileSync('docs/audits/shu-trajectory-audit.json','utf8'));
 test('all nine corrected Shu routes preserve sourced careers and exact phase stop ranges', () => {
   assert.equal(Object.keys(shuAudit).length,9);
   for (const [id,route] of Object.entries(shuAudit)) {

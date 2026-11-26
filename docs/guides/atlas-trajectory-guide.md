@@ -6,7 +6,7 @@
 
   | 样例 | 种子文件 | 页面 |
   |---|---|---|
-  | 刘备（模式一：复用江山时序路线） | [profile_v3_liubei.py](../scripts/profile_v3_liubei.py) 的 `trajectory` | `/people/liubei/#trajectory` |
+  | 刘备（模式一：复用江山时序路线） | [profile_v3_liubei.py](../../scripts/profile_v3_liubei.py) 的 `trajectory` | `/people/liubei/#trajectory` |
 
 - 本文是 [person-template-v3.md](person-template-v3.md) 的补充。人物卡的取证规则（R1–R10）照旧适用；本文只规定时期怎么分、地图怎么接。
 
@@ -135,7 +135,7 @@ node scripts/atlas-places.mjs person liubei
 | liu-yan | liuyan | 2 | liu-zhang | liuzhang | 7 |
 | zhang-lu | zhanglu | 3 | | | |
 
-本轮九名蜀汉人物使用带原文引用的独立人物站点（`curatedOnly`），不再混入只提及姓名的公共事件。详见 [核对数据](shu-trajectory-audit.json)。其他人物仍沿用既有路线。上游新增事件后，站号可能整体后移；`atlas-places.mjs check` 会按年份核对，发现错位就报错。
+本轮九名蜀汉人物使用带原文引用的独立人物站点（`curatedOnly`），不再混入只提及姓名的公共事件。详见 [核对数据](../audits/shu-trajectory-audit.json)。其他人物仍沿用既有路线。上游新增事件后，站号可能整体后移；`atlas-places.mjs check` 会按年份核对，发现错位就报错。
 
 ## 6. 模式二：代表地点
 
@@ -282,7 +282,7 @@ npx astro build --outDir /tmp/sgz-dist
 
 ## 孙吴九人独立人物路线
 
-孙坚、孙策、孙皓、鲁肃、吕蒙、太史慈、张昭、朱治、吕范均使用 `curatedOnly` 的独立人物路线，共42个时期、71站。配套地图必须包含这九人的新人物数据；旧地图不能仅靠本站的时期链接显示新路线。数据见 [wu-trajectory-audit.json](wu-trajectory-audit.json)，内容与审查说明见 [wu-b-profile-review.md](wu-b-profile-review.md)。
+孙坚、孙策、孙皓、鲁肃、吕蒙、太史慈、张昭、朱治、吕范均使用 `curatedOnly` 的独立人物路线，共42个时期、71站。配套地图必须包含这九人的新人物数据；旧地图不能仅靠本站的时期链接显示新路线。数据见 [wu-trajectory-audit.json](../audits/wu-trajectory-audit.json)，内容与审查说明见 [wu-b-profile-review.md](../reviews/wu-b-profile-review.md)。
 
 每站保留 `phaseId`、`careerId` 或 `careerIds`、逐句 `sourceRefs`；必要时用 `mergedLocations` 留存合并前地点。地图数字年份可为排序值，确年未载时必须显示 `dateLabelZh/En` 并在说明中解释。期内没有可靠地理定位的履历仍保留，时期不强行标点。孙坚、孙策229年的身后追尊均无站点。
 
@@ -300,7 +300,7 @@ JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/atlas-places.mjs chec
 
 ## 曹魏十四人独立人物路线
 
-曹丕、曹叡、曹髦、曹爽、司马师、司马昭、邓艾、钟会、张辽、荀彧、荀攸、郭嘉、程昱、贾诩均采用 `curatedOnly` 独立路线，共65个时期、110站；47个时期有地图入口。逐站依据、时期及履历归属保存在 [wei-trajectory-audit.json](wei-trajectory-audit.json)，完整审查与验证见 [wei-b-profile-review.md](wei-b-profile-review.md)。曹操、司马懿及既有蜀汉、孙吴路线未改。
+曹丕、曹叡、曹髦、曹爽、司马师、司马昭、邓艾、钟会、张辽、荀彧、荀攸、郭嘉、程昱、贾诩均采用 `curatedOnly` 独立路线，共65个时期、110站；47个时期有地图入口。逐站依据、时期及履历归属保存在 [wei-trajectory-audit.json](../audits/wei-trajectory-audit.json)，完整审查与验证见 [wei-b-profile-review.md](../reviews/wei-b-profile-review.md)。曹操、司马懿及既有蜀汉、孙吴路线未改。
 
 足迹按正文适度合并相邻经历，并保留曹叡许昌—摩陂往返、程昱范—东阿—范屯等实际回转。没有可靠到达证据的任官、封邑、派军、战略建议、未实施计划与身后追命仍留在履历，不标为本人行迹。确年未载的排序年份通过 `dateLabelZh/En` 明示；合并站在说明及 `mergedLocations` / `includedEpisodesZh` 中保留所含经历，不将代表点声称为全部古址。
 
@@ -318,7 +318,7 @@ JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/atlas-places.mjs chec
 
 ## 汉末十一人独立人物路线
 
-袁绍、袁术、公孙瓒、韩遂、董卓、吕布、刘表、陶谦、刘焉、刘璋、张鲁均使用 `curatedOnly` 独立路线，共50个时期、69站、42个有地图入口的时期。数据见 [han-trajectory-audit.json](han-trajectory-audit.json)，内容审查与验收见 [han-b-profile-review.md](han-b-profile-review.md)。原有三国势力人物路线与A类绘制规则不变。
+袁绍、袁术、公孙瓒、韩遂、董卓、吕布、刘表、陶谦、刘焉、刘璋、张鲁均使用 `curatedOnly` 独立路线，共50个时期、69站、42个有地图入口的时期。数据见 [han-trajectory-audit.json](../audits/han-trajectory-audit.json)，内容审查与验收见 [han-b-profile-review.md](../reviews/han-b-profile-review.md)。原有三国势力人物路线与A类绘制规则不变。
 
 不为满足站数补造足迹：刘焉、刘表、陶谦目前各只有2处有依据的区域落点。地图全量校验允许少于3站的独立路线，但要求非空、运行时站数与种子一致，并且每站均有格式正确的原文短引依据；其他从公共事件推得的路线仍保留至少3站的要求。本站专项检查继续逐句核对本书、时期、履历与地图运行时。
 

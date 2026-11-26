@@ -136,7 +136,7 @@ export function validatePersonDossiers(people, {requireAll=false} = {}) {
   return errors;
 }
 
-// v3 人物卡规则（docs/person-template-v3.md §4、§7）。只检查 dossier.schema === 'v3' 的人物。
+// v3 人物卡规则（docs/guides/person-template-v3.md §4、§7）。只检查 dossier.schema === 'v3' 的人物。
 export const V3_LIMITS = {
   A: {introCount:[6,9], introChars:[800,1300], careers:[15,30], records:[5,15], relations:[10,18], readingNotes:[5,12], facts:['lifespan','hometown','identity','office','title','posthumous','names','deeds']},
   B: {introCount:[3,5], introChars:[400,700], careers:[8,15], records:[2,6], relations:[4,10], readingNotes:[2,5], facts:['hometown','identity','office','posthumous','deeds']},
@@ -220,7 +220,7 @@ export function validateTimeline(events, relations) {
   return errors;
 }
 
-// 人物行迹时期（docs/atlas-trajectory-guide.md 的 M1–M5）。
+// 人物行迹时期（docs/guides/atlas-trajectory-guide.md 的 M1–M5）。
 // 站点年份、地名解析需要江山时序的数据，由 scripts/atlas-places.mjs check 检查。
 // C 级默认不做行迹地图；例外人物保留为“地点未详”模式的样例（须与 scripts/profile_v3.py 的 C_TRAJECTORY_EXCEPTIONS 一致）。
 export const C_TRAJECTORY_EXCEPTIONS = ['zhang-jiao'];

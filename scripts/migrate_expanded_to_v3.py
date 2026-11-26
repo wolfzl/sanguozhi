@@ -5,7 +5,7 @@
 
 草稿只搬运 intro / careers / records / scholarship / assessment / readingNotes / glossary，
 引文原样保留。以下部分必须人工完成（刘备样例 scripts/profile_v3_liubei.py 即按此修订）：
-  - facts：按 docs/person-template-v3.md §5.2 逐项写 value/text/refs（草稿只给出旧值）；
+  - facts：按 docs/guides/person-template-v3.md §5.2 逐项写 value/text/refs（草稿只给出旧值）；
   - careers 的 id：草稿为 c01、c02…，改成有意义的英文 slug，并同步 records 的 careerRef；
   - relations：补 category、personId、text（草稿中为 TODO）；
   - sourceScope：删去“附录收录……”之类的说法，改为指向阅读器；

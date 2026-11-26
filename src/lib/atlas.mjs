@@ -1,5 +1,5 @@
 // 人物行迹地图：把人物卡的 trajectory（按时期分组）转成江山时序（jiangshan-map）的深链。
-// 规则见 docs/atlas-trajectory-guide.md。本文件同时被页面和 Node 脚本使用，保持纯 JS。
+// 规则见 docs/guides/atlas-trajectory-guide.md。本文件同时被页面和 Node 脚本使用，保持纯 JS。
 //   模式一：trajectory.atlasPerson 存在，地图用江山时序自己的人物路线（?person=…&stop=…）。
 //   模式二：已知时期的代表地点 place 连成本站路线；地点未详的时期不标点。
 

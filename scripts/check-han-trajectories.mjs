@@ -8,7 +8,7 @@ import { createRequire } from 'node:module';
 import { phaseUrl, routeUrl } from '../src/lib/atlas.mjs';
 
 const read = file => JSON.parse(fs.readFileSync(file, 'utf8'));
-const audit = read('docs/han-trajectory-audit.json');
+const audit = read('docs/audits/han-trajectory-audit.json');
 const people = new Map(read('src/data/cards.json').people.map(p => [p.id, p]));
 const sources = new Map();
 for (const volume of read('src/data/book.json').volumes) {

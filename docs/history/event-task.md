@@ -1,5 +1,5 @@
 # 事件内容独立任务
-只编辑 scripts/event_content.py 和 docs/event-v2-review.md。不要编辑 cards.json、create_cards.py、其他代码，不要提交（主代理统一提交）。不要启动子代理。
+只编辑 scripts/event_content.py 和 docs/reviews/event-v2-review.md。不要编辑 cards.json、create_cards.py、其他代码，不要提交（主代理统一提交）。不要启动子代理。
 实现 expand_events(base, R) 返回38个事件（原8 id保留）；build_relationships(R) 返回事件关系数组。
 每事件字段原Event相同，加endYear:int、order:int（同年明确顺序；无准确月不能编造）、phase: formation|states|unification、lanes:string[] common|wei|shu|wu、categories:string[] war|state|succession|diplomacy|governance、importance:key|standard。
 参与者 {personId,role} 或 {name,role}（没有人物卡时纯文本）。所有部分 refs用R(blockid,quote?,work?)准确取本书引句；需要核对事实而非仅存在引句。事件400—700字（sections合计），4段背景/经过/结果/影响，最后段interpretation=true；其他段含分析时亦true。每段明确证据。新事件每个至少3个事实原文依据；少则说明原因，不编造。书中不同记载保留差异。精简平实，避免同质填充。

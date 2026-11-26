@@ -1,143 +1,83 @@
 # 三国志 · 人物与事件
 
-基于《三国志·陈寿撰裴松之注》的手机友好静态网站。第三版提供 65 位人物、70 个事件（其中 26 个关键事件）、65 卷全文与《上三国志注表》。卡片以简体写成，原文阅读支持简繁切换，引用区分陈寿正文与裴注。
+**简体中文** · [English](README.en.md) · [日本語](README.ja.md)
 
-项目位于 `/Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified`，是 `.sanguozhi-repo` 的独立 Git worktree，开发分支为 `feat/sanguozhi-simplified`。汉末诸侯扩充从 `01dcf9a` 新建 worktree，在 `feat/sanguozhi-lords-expansion` 完成；网站页面路径、数据结构和引用标识沿用第二版。原始 EPUB 与原有阅读资料保持不变。
+给孩子讲三国故事的时候，我发现自己讲的多半是《三国演义》里的情节，真实的历史反而说不清楚。为了给孩子讲对，我做了这个网站：从一个人、一件事读进陈寿《三国志》（裴松之注）。先读人物小传和事件解读，再顺着每句话后面的引用编号，回到正文与裴注的原句。
 
-## 打开网站
+**在线阅读：<https://wolfzl.github.io/>**
 
-本次交付的预览地址：**http://127.0.0.1:4324/**。
+![首页](docs/images/home.jpg)
 
-目录入口脚本为 `/Users/zhangliang/ai/readbook/sanguozhi/site.sh`，后台启动服务，关闭当前终端后仍可继续运行：
+## 这个项目是什么
 
-```bash
-cd /Users/zhangliang/ai/readbook/sanguozhi
-./site.sh start    # 启动；已运行时复用现有服务
-./site.sh status   # 查看运行状态
-./site.sh restart  # 重启
-./site.sh stop     # 停止
-```
+- **以正史为准**：人物和事件只依据《三国志》正文与裴注写成，不用《三国演义》或影视情节补写史料。不同篇章说法不一时并列呈现，不替读者下定论。
+- **每句话都有出处**：讲解里的 `[n]` 角标点开就是原文摘录，可以继续跳到全文中的对应段落。构建时有校验脚本逐条确认每段引文确实出现在原文里。
+- **原书完整可读**：65 卷及《上三国志注表》全文，正文与裴注分层显示，可在简体、繁体之间切换。
+- **白话试译**：全书 66 个阅读单元都提供 AI 辅助的白话试译，可以逐段与原文对照。译文尚待人工审阅，仅供参考，以原文为准。
 
-不带参数时查看状态。脚本从自身位置定位网站，也可以在其他目录用绝对路径执行。日志保存在 `sanguozhi-simplified/work/site-control/preview.log`，PID 记录保存在同目录的 `preview.pid`。脚本只停止本项目在 4324 端口的 Astro 预览进程，发现其他程序占用端口时会提示并退出；它也支持复用之前通过 `npm run preview -- --port 4324` 启动的本项目服务。
+| 人物 | 事件 | 原文 |
+|---|---|---|
+| 88 位人物档案：生平履历、文治武功、失误与争议、史家评价、人物关系、行迹地图 | 184—280 年间 70 个事件（26 个关键事件），按曹魏与晋、蜀汉、孙吴、汉末诸侯四条线并行展示；赤壁、官渡、夷陵附分阶段推演 | 简繁切换、裴注显示开关、白话逐段对照；正文中已建档的人名可以直接跳到人物页 |
 
-依赖和 `dist/` 必须先准备好；缺少时脚本会给出安装或构建命令。修改网站后先停止服务、执行 `npm run build`，再启动。脚本不会自动重建网站。
+![人物页：点开引用即可看到原文](docs/images/person.jpg)
 
-入口脚本的源码 `scripts/site.sh` 已纳入 Git。重新检出项目时，可执行 `cp scripts/site.sh ../site.sh && chmod +x ../site.sh` 恢复目录入口；只需改动项目外层目录名称时无需修改脚本。
+![阅读器：白话与原文逐段对照](docs/images/reader.jpg)
 
-预览服务关闭后，在终端执行：
+## 快速开始
 
-```bash
-cd /Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified
-npm run preview -- --port 4324
-```
-
-再在浏览器打开上面的地址。源码和 `dist/` 均已生成。静态页面需要通过 HTTP 服务访问；目录、脚本及资源采用站点根路径。
-
-在新环境恢复依赖或修改内容后，使用 Node.js 22.12 或更新版本：
+需要 Node.js 22.12 或更新版本；修改内容种子和运行全部测试还需要 Python 3.10 以上。
 
 ```bash
 npm ci
-npm run build
-npm run preview -- --port 4324
+npm run dev          # 开发预览：http://127.0.0.1:4321/
+npm run build        # 校验内容 → 类型检查 → 生成 dist/
+npm run preview      # 预览构建结果
+npm test             # Python 与 Node 单元测试
 ```
 
-本次验证环境：Node.js 25.6.0，Astro 5.18.2。开发预览使用 `npm run dev`，默认地址为 http://127.0.0.1:4321/。
+人物页的行迹地图和战役推演嵌入了 [江山时序](https://github.com/DeanChensj/jiangshan-map)。地图默认连接 `http://127.0.0.1:8000/`，需要另外运行一份江山时序；没有运行时，地图区域显示为空白，其余内容不受影响。构建时可以用环境变量改成其他地址，见 [.env.example](.env.example)。
 
-## 网站内容与行为
+## 目录结构
 
-- 首页、人物列表、事件列表、人物详情、事件详情、全书目录、原文阅读、版本说明及 404 页面。
-- 人物支持简繁姓名、字号、常见称谓搜索和主要历史势力筛选，覆盖汉末、魏、蜀、吴、晋；袁绍、袁术等独立诸侯统一归入汉末。
-- 184—280 年事件线默认显示全部 70 个事件，可切换 26 个关键事件。桌面支持曹魏与晋、蜀汉、孙吴、汉末诸侯四线并行及时间列表，手机使用单列时间汇总。
-- 阅读范围、势力、事件类型与搜索组合筛选；URL 保存状态，刷新、历史返回、详情页“返回事件线”均可恢复。选一方时展开为单条线。
-- 曹氏势力→曹魏→西晋、刘备势力→蜀汉、孙氏势力→孙吴按年代改变名称；蜀汉在 263 年结束。共享事件只有一张卡和一个页面。
-- 事件页提供背景与后果、同一历史进程、并行对照、政权承继关联，附解释和引用。解读明确标注，时间相邻导航单独保留。
-- 未设人物卡的参与者仅显示姓名，不生成失效页面。
-- 每个关键生平节点、关系和事件段落附原文依据。点击引用编号展开节选，再进入精确的原文块。
-- 原文默认显示简体，工具栏可切换简体／繁体；正文、裴注、标题及引书名称一起切换。当前浏览器通过 localStorage 记住选择，翻页、刷新后继续使用；存储不可用时仍可正常切换。
-- 简体通过现有 OpenCC 依赖从繁体底本转换，仅改变阅读区文字。切回繁体直接恢复保存的原字形，不做简转繁反推；卡片“原文依据”的引句及裴注书名固定显示简体，不提供切换按钮；底层引用仍保留繁体，继续精确核对出处。JavaScript 不可用时显示繁体底本并隐藏字形切换按钮。
-- 原文可切换卷目、翻页及显示/隐藏裴注；从引用链接进入注文时自动显示相应裴注。切换字形保留段落 ID、锚点高亮、链接和阅读位置。
-- 已有完整译稿的卷目另提供“白话”阅读选项，均为待审阅的 AI 辅助试译。译文覆盖对应卷目的正文、裴注和篇末评语，保留原文定位编号，可随时切回简繁原文核对；已完成卷目、覆盖数量与疑难处见 `docs/wei-translation-progress.md`。
-- 分享优先使用浏览器系统分享；不支持或分享失败时复制链接。用户取消分享时静默返回。
-- 复制链接优先使用 Clipboard API，不可用时尝试兼容复制；两种方式都失败时提示从地址栏复制。
-
-本地网址只在运行服务的电脑上可用。当前交付本地预览，不包含公开部署、账号、数据库、AI 对话、地图或海报导出。
-
-## 内容结构与增补方法
-
-- `src/data/book.json`：66 个原文章节、固定段落与注文标识、EPUB 哈希、各页来源和修订号。
-- `src/data/cards.json`：生成的人物与事件卡片。请编辑对应种子并重新生成；已有卡片 ID 不应因改中文标题而改变。
-- `src/lib/catalog.ts`：人物、事件、出处的 TypeScript 类型和页面查询。
-- `scripts/extract_epub.py`：Python 标准库 EPUB 提取器。
-- `scripts/create_cards.py`：保留原始卡片种子，再调用 `event_content.py` / `person_content.py` / `lords_content.py` 及 `portraits_*.py` / `portrait_events_*.py` 扩充，统一生成卡片、关系与人物事件双向链接。重新运行会覆盖 `cards.json`；请编辑对应种子文件。
-- `scripts/event_content.py`：30 张新增事件、38 个事件元数据及事件关系的编辑种子。
-- `scripts/person_content.py`：第二版 22 张新增人物及原人物更新的编辑种子。
-- `scripts/portraits_*.py`：按汉末、魏晋、蜀、吴分组的人物小传、生卒依据、纪年经历和人物关系。
-- `scripts/zhangfei_profile.py`：张飞新版人物资料，包含统一生平履历、功绩与挫折；在人物小传生成后应用，重新生成数据不会丢失。
-- `scripts/expanded_profiles.py`：曹操及刘备、诸葛亮、孙权、周瑜、陆逊、司马懿的完整档案集成。曹操确认稿保存在 `profile_caocao_content.py`，其他六人在 `profiles_*_expanded.py`。扩展字段包括有题生平、分组功绩、治学与个人侧面、史家评价、史料辨析及完整本传附录；司马懿按散见材料注明范围。
-- `scripts/portrait_events_*.py`：人物关键经历所需的8个补充事件，先于人物改写生成。
-- `scripts/lords_content.py`：第三版 31 张新增人物、23 个新增事件、诸侯线及补充参与关系的编辑种子。
-- `docs/han-lords-expansion.md`：第三版增补范围、史料层次与验证记录。
-- `src/data/edition.json`：本期数量、关键事件数和时间范围；增补范围时同步更新。
-- `src/lib/timeline.mjs`：筛选状态、时间线名称与位置的纯函数。
-- `docs/event-v2-review.md` / `docs/person-v2-review.md`：新增内容的史料核对记录。
-- `src/lib/reader-script.ts`：阅读区文字转换、原字形恢复与偏好记忆。
-- `scripts/reader-check.mjs`：66 个阅读单元的简繁切换、结构保留、原文恢复与浏览器行为检查。
-- `docs/simplified-reader.md`：简体阅读设计与验证记录。
-- `docs/validation-v2.md`：第二版验证记录。
-- `docs/content-review.md`：首版史料核对记录。
-- `docs/validation.md`：首版验收记录；新版结果见 `docs/validation-v2.md`。
-
-新增人物至少填写稳定 ID、姓名、字号、势力标签、简介、生平段落、3—5 个节点、关系、阅读卷目和事件关联。生平正文目标 300—500 字。新增事件填写稳定 ID、标题、显示时间、起止年份、同年排序、阶段、参与势力、重要程度、事件类型、关联人物及四个事件段落，正文目标 400—700 字。
-
-每处 `refs` 必须包含 `volume`、`blockId`、`kind`、`quote`；`quote` 是当前原文块中的精确子串。引用裴注时 `kind` 使用 `peizhu`，`blockId` 指向注文，另填写 `sourceBook`。人物与事件关联需双向一致。校验器从 `edition.json` 读取预期数量，并检查时间范围、势力终点、关系端点与每个事件的关联覆盖。关系用唯一 ID 和 from/to/type/summary/interpretation/refs 表达，parallel 只记录一条，在双方页面展示。
-
-修改种子后先执行 `python3 scripts/create_cards.py`，再执行 `npm run build`；构建会先校验引用与关联。改变来源版本时，保留旧版标识与资料，不能直接覆盖旧引用。
-
-重提取原书：
-
-```bash
-npm run extract
-# 也可指定新的 EPUB 路径；输出前应先备份旧数据和核对引用。
-python3 scripts/extract_epub.py /absolute/path/book.epub --output work/new-book.json
+```text
+src/
+  pages/        页面：首页、人物、事件、原文阅读、关于
+  components/   页面组件
+  lib/          数据查询、时间线、阅读器、引用浮层等逻辑
+  data/         生成好的站点数据：原文（book.json）、人物与事件（cards.json）、白话译文（translations/）
+scripts/        原文提取、内容种子与生成器、校验脚本、浏览器检查
+tests/          Python 与 Node 单元测试
+docs/
+  guides/       写作与数据规范（人物卡模板、行迹地图指南、设计说明）
+  reviews/      史料核对与验收记录
+  audits/       行迹地图的逐站核对数据
+  history/      开发过程记录
+public/         静态资源与第三方许可文本
 ```
 
-## 验证
+人物与事件的内容写在 `scripts/` 下的 Python 种子文件里（如 `profile_v3_*.py`、`event_content.py`），由 `scripts/create_cards.py` 生成 `src/data/cards.json`。请修改种子文件，不要直接改生成结果。完整流程见 [docs/development.md](docs/development.md)。
 
-```bash
-npm test
-npm run validate
-npm run build
-# 另一个终端先运行 npm run preview -- --port 4324
-npm run test:browser
-npm run test:portraits
-npm run test:dossier
-npm run test:reader
-```
+## 反馈
 
-启停脚本验证使用 `npm run test:control`，需要先构建网站并让 4324 端口空闲。检查会实际启动及停止测试工作区的服务，覆盖重复启动、重启、过期 PID、端口冲突和复用现有预览进程。
+- 发现史料错误、错别字或页面问题，欢迎在 [Issues](https://github.com/wolfzl/wolfzl.github.io/issues) 提出，方便大家看到并跟踪处理。
+- 不方便使用 GitHub 的话，也可以发邮件到 [wolfzhang008@gmail.com](mailto:wolfzhang008@gmail.com)。
 
-完整浏览器检查使用 Playwright Chromium；在新环境缺少浏览器时先执行 `npx playwright install chromium`。可用 `SANGUO_URL=http://127.0.0.1:其他端口 npm run test:browser` 更换地址；`test:reader` 和 `test:portraits` 同样支持该环境变量。人物专项逐页检查65位人物的生卒信息、正文与关键经历链接、人物关系，并抽样验证390/320像素布局。
+## 参与贡献
 
-全书比对测试读取原始 EPUB；原件不在指定路径时会明确跳过这两项测试，其他测试仍可运行。原件未复制进网站仓库。浏览器截图与临时报告在被 Git 忽略的 `work/` 内。
+欢迎指出史料错误、错别字、误链和页面问题，也欢迎补充人物和事件。请先读 [CONTRIBUTING.md](CONTRIBUTING.md)：最重要的规则是每一条叙述都要能落到原文中的一句话。
 
-## 静态部署与许可
+## 许可
 
-部署时上传 `dist/` 的全部内容，并以它作为站点根目录。真实域名确定后，构建时设置站点地址，以生成绝对的分享图片与页面链接：
+本项目采用双许可：
 
-```bash
-SANGUO_SITE=https://your-domain.example npm run build
-```
+- **代码**（页面、组件、脚本中的程序逻辑、测试）：[MIT](LICENSE)。
+- **文本内容**（原文、人物与事件卡片、白话译文、内容种子文件、文档）：[CC BY-SA 4.0](LICENSE-CONTENT.md)。原文取自维基文库，原著属于公有领域；本站整理的内容按同一许可提供，转载或改编时请署名、注明修改并以相同许可分享。
 
-`public/share-card.png` 为通用分享预览图。公网平台是否展示预览取决于它的抓取规则，应在公开部署后验证。
+哪些文件属于“内容”见 [LICENSE-CONTENT.md](LICENSE-CONTENT.md)。本项目用到的第三方软件与数据见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
-原著属于公有领域；使用的维基文库网络文本及本站卡片整理按来源声明沿用 CC BY-SA 4.0。各卷提供固定修订链接，贡献者署名与修订历史可从原页面查阅。再利用时注明来源、许可及修改，并按同一许可分享演绎内容。
+## 致谢
 
-OpenCC 浏览器模块的许可及第三方声明保留在 `public/licenses/`，随静态构建一并交付。第三方软件遵循各自许可。
-
-## 人物与事件的写作原则
-
-人物介绍使用简洁、自然的小传口吻，以人物在具体事件中的行动串起生平。已核实的生卒年单独展示；推算、有争议或不详的时间注明依据，不拿活动年代代替生卒年。正文中的重要事件写明年份并链接站内事件页，关键经历也提供入口；事件页列出人物，人物页保留双向关联。故事优先取《三国志》正文和裴注；补充其他史书的生卒依据时单独注明书名和来源。65位人物现已统一这一写作方式；本轮重写其余64位，并补充辽东、兴势、东兴、毌丘俭文钦起兵、洮西、段谷、南郡与吴国二宫之争8个事件页。
-
-人物段落可附 `eventLinks`（按正文顺序填写 label 和 eventId）；关键经历可附 `eventIds`。构建会校验事件存在、链接文字出现且顺序正确、参与人物与事件双向相连。`lifespan` 保存生卒年与独立的补充史料依据。
-
-张飞新版人物页保留原有原文与事件入口，新增核心人物标签、人物资料、统一生平履历、文治功绩说明、武功功绩、失误与挫折及名词解释。`test:dossier` 支持 `SANGUO_URL`，验证资料布局、裴注跳转、事件回链和1440/390/320像素页面。其他人物仍使用相同基础档案结构。曹操等七位增加完整资料，各类条目数量按史料决定；扩展页的引用区支持简繁搜索、段落编号检索和引用跳转自动展开。运行 `node scripts/expanded-dossiers-browser-check.mjs` 检查七位的1440/768/390/320像素页面、引用焦点、搜索及直接锚点。
+- 陈寿撰、裴松之注《三国志》，[维基文库](https://zh.wikisource.org/wiki/三國志) 网络录入本及其贡献者。
+- [江山时序 Jiangshan Atlas](https://github.com/DeanChensj/jiangshan-map)（DeanChensj，GPL-3.0）提供历史地图、人物路线与战役推演。
+- [OpenCC](https://github.com/BYVoid/OpenCC) 与 [opencc-js](https://github.com/nk2028/opencc-js) 提供简繁转换。
+- [Astro](https://astro.build/) 静态站点框架。

@@ -6,9 +6,9 @@
 
   | 级别 | 样例 | 种子文件 | 页面 |
   |---|---|---|---|
-  | A | 刘备 | [profile_v3_liubei.py](../scripts/profile_v3_liubei.py) | `/people/liubei/` |
-  | B | 关羽 | [profile_v3_guanyu.py](../scripts/profile_v3_guanyu.py) | `/people/guanyu/` |
-  | C | 张角 | [profile_v3_zhang_jiao.py](../scripts/profile_v3_zhang_jiao.py) | `/people/zhang-jiao/` |
+  | A | 刘备 | [profile_v3_liubei.py](../../scripts/profile_v3_liubei.py) | `/people/liubei/` |
+  | B | 关羽 | [profile_v3_guanyu.py](../../scripts/profile_v3_guanyu.py) | `/people/guanyu/` |
+  | C | 张角 | [profile_v3_zhang_jiao.py](../../scripts/profile_v3_zhang_jiao.py) | `/people/zhang-jiao/` |
 
 - 写新人物前，先通读**同级别**的样例；结构、措辞和引文粒度都以它为准。
 - 生平履历的行迹地点（`careers[].place`）另见 [atlas-trajectory-guide.md](atlas-trajectory-guide.md)，样例是刘备。
@@ -18,7 +18,7 @@
 
 ## 0. 执行者须知（先读）
 
-1. **一次只改一个人物。** 只新增 `scripts/profile_v3_<id>.py`（id 中的 `-` 换成 `_`，例如 `zhang-jiao` → `profile_v3_zhang_jiao.py`），并在 [scripts/profile_v3.py](../scripts/profile_v3.py) 的 `V3_MODULES` 里加一行。然后运行生成脚本，更新 `src/data/cards.json`。
+1. **一次只改一个人物。** 只新增 `scripts/profile_v3_<id>.py`（id 中的 `-` 换成 `_`，例如 `zhang-jiao` → `profile_v3_zhang_jiao.py`），并在 [scripts/profile_v3.py](../../scripts/profile_v3.py) 的 `V3_MODULES` 里加一行。然后运行生成脚本，更新 `src/data/cards.json`。
 2. **不要改**：`src/components/`、`src/lib/`、其他人物的种子文件、`create_cards.py`、事件数据。确实需要改时，先停下来汇报原因。例外有两个：新建人物通过种子的 `eventRoles` 登记事件参与者，并把 `edition.json` 的人数加 1（见 §7.1）；迁移 A 级旧人物：要从 `profiles_*_expanded.py` 中删去该人物的旧数据（见 §14.1）。华佗的事件导航特例见 §7.1。
 3. **不要提交 git，不要执行 `npm run build`。** `npm run build` 会覆盖 `dist/`，影响本地 4324 端口正在运行的站点。构建检查一律输出到临时目录（见 §8）。
 4. **所有事实必须来自 `src/data/book.json`。** 你对三国的既有知识只能当作检索线索；《三国演义》、《晋书》、现代研究等本地书里没有的内容不得写入。
@@ -66,7 +66,7 @@ scripts/profile_v3_liubei.py      A 级样例；profile_v3_guanyu.py 为 B 级�
 
 ## 4. 分级与篇幅
 
-篇幅与栏目数量按 `V3_LIMITS`（[content-validation.mjs](../scripts/content-validation.mjs)）校验；站点通用校验另要求每张卡都有代表事迹。
+篇幅与栏目数量按 `V3_LIMITS`（[content-validation.mjs](../../scripts/content-validation.mjs)）校验；站点通用校验另要求每张卡都有代表事迹。
 
 | 项目 | A 完整 | B 标准 | C 简版 |
 |---|---|---|---|
@@ -84,7 +84,7 @@ scripts/profile_v3_liubei.py      A 级样例；profile_v3_guanyu.py 为 B 级�
 
 **分级规则（按史料多少）**
 
-分级由 [scripts/person_tiers.py](../scripts/person_tiers.py) 按 book.json 统计后得出，结果写在 [profile_v3.py](../scripts/profile_v3.py) 的 `TIERS` 里。种子文件的 `tier` 必须与之一致，否则生成时报错。
+分级由 [scripts/person_tiers.py](../../scripts/person_tiers.py) 按 book.json 统计后得出，结果写在 [profile_v3.py](../../scripts/profile_v3.py) 的 `TIERS` 里。种子文件的 `tier` 必须与之一致，否则生成时报错。
 
 - **A**：开创政权、主持一国军政或决定三国格局的人物，且材料足以展开。由人工指定，见脚本中的 `A_LIST`。
 - **B**：有独立的帝纪、本传或附传，并且满足下面任一条件：
@@ -246,7 +246,7 @@ python3 scripts/source_lookup.py check v054-b0038 '羽果信之，稍撤兵以�
 
 ### 7.1 新建人物（尚无人物页的人）
 
-样例：[profile_v3_dian_wei.py](../scripts/profile_v3_dian_wei.py)（典韦）。与改造已有人物相比，多出以下几步：
+样例：[profile_v3_dian_wei.py](../../scripts/profile_v3_dian_wei.py)（典韦）。与改造已有人物相比，多出以下几步：
 
 1. **种子加 `new` 字段**，写页面骨架所需的身份信息：
    ```python
@@ -347,7 +347,7 @@ npx astro build --outDir /tmp/sgz-dist
 ## 12. 交给 Sonnet / Codex 的任务提示词
 
 ```text
-在 /Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified 中，按 docs/person-template-v3.md 把人物 <姓名>（id: <id>）改造成 v3 <B> 级人物卡（尚无人物页的人物，按 §7.1 新建）。
+在 <repo> 中，按 docs/guides/person-template-v3.md 把人物 <姓名>（id: <id>）改造成 v3 <B> 级人物卡（尚无人物页的人物，按 §7.1 新建）。
 先完整阅读该文档和同级别样例（A：scripts/profile_v3_liubei.py；B：scripts/profile_v3_guanyu.py；C：scripts/profile_v3_zhang_jiao.py；新建人物：scripts/profile_v3_dian_wei.py），再用 scripts/source_lookup.py 取证。
 只新增 scripts/profile_v3_<id>.py 并在 scripts/profile_v3.py 的 V3_MODULES 中登记（新建人物另把 src/data/edition.json 的 people 加 1）；不要改其他文件，不要 git 提交，不要运行 npm run build。
 完成后运行文档 §8 的全部验收命令，并按 §9 的格式汇报。遇到 §0 第 6 条所列情况时停下汇报。

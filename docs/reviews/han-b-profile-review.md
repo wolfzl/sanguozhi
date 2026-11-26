@@ -17,8 +17,8 @@
 
 ## 隔离预览
 
-- 站点：`/Users/zhangliang/.codex/worktrees/han-b-profiles/sanguozhi-simplified`
-- 地图：`/Users/zhangliang/.codex/worktrees/han-b-atlas/jiangshan-map`
+- 站点：`<worktrees>/han-b-profiles/sanguozhi-simplified`
+- 地图：`<worktrees>/han-b-atlas/jiangshan-map`
 - 地图预览通过原8000服务的 `/.runtime/han-b-preview/` 路径提供，不另开地图服务。
 
 
@@ -60,7 +60,7 @@
 
 ## 联动与校验范围
 
-规范化路线仅保留在 `docs/han-trajectory-audit.json`；原始分组交付片段归档至Git忽略的 `work/han-b-profiles/route-fragments/`，避免维护两套正式路线副本。`scripts/check-han-trajectories.mjs`逐站校验短引、卷号与来源层次、时期及履历归属、全覆盖与无重复分配、地图原始数据及运行时路线，不只比较站数。
+规范化路线仅保留在 `docs/audits/han-trajectory-audit.json`；原始分组交付片段归档至Git忽略的 `work/han-b-profiles/route-fragments/`，避免维护两套正式路线副本。`scripts/check-han-trajectories.mjs`逐站校验短引、卷号与来源层次、时期及履历归属、全覆盖与无重复分配、地图原始数据及运行时路线，不只比较站数。
 
 地图侧只改本次11个人物资料、资源哈希及一项校验条件：有完整逐站引用的独立路线可少于3站。刘焉、刘表、陶谦各2站，未为满足原先密度检查硬加无据地点。其他地图人物、公共数据与A类绘制代码未改；既有蜀汉与A类高亮回归通过。
 

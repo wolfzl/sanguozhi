@@ -9,5 +9,5 @@
 - [x] 检查桌面与手机浏览、控制台、构建和预览。
 - [x] 补齐 README、内容核对记录，提交全部源码。
 
-交付目录：`/Users/zhangliang/ai/readbook/tmp/sanguozhi-web`。
+交付目录：`<workspace>/tmp/sanguozhi-web`。
 先本地预览；不公开部署。原始 EPUB 与已有阅读资料不修改。

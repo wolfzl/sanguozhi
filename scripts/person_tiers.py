@@ -1,4 +1,4 @@
-"""按史料多少给人物卡分级（docs/person-template-v3.md §4）。
+"""按史料多少给人物卡分级（docs/guides/person-template-v3.md §4）。
 
 用法：python3 scripts/person_tiers.py        # 打印每人的篇幅统计与分级
       python3 scripts/person_tiers.py --check # 核对统计结果与 profile_v3.TIERS 一致

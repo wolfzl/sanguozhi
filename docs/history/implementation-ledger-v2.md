@@ -1,8 +1,8 @@
 # 三国志事件线升级执行记录
 
-计划：docs/superpowers/plans/2026-10-09-timeline-v2.md；已确认设计：docs/superpowers/specs/2026-10-09-timeline-design.md。
+计划：docs/history/superpowers/plans/2026-10-09-timeline-v2.md；已确认设计：docs/history/superpowers/specs/2026-10-09-timeline-design.md。
 
-- worktree：/Users/zhangliang/ai/readbook/tmp/sanguozhi-timeline；基线 c1ce3ab；分支 feat/sanguozhi-timeline-v2。
+- worktree：<workspace>/tmp/sanguozhi-timeline；基线 c1ce3ab；分支 feat/sanguozhi-timeline-v2。
 - 原生 create_worktree 返回 Not a git repository（当前对话无绑定仓库）；为遵守用户指定 /tmp 位置，使用独立源仓库 git worktree add 创建。
 - 基线：Python 6 / Node 7 通过。
 - 内容两个独立文件并行编写，父代理整合；没有多人编辑 cards.json。

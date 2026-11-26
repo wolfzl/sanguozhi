@@ -14,15 +14,15 @@
 
 ## 保存位置
 
-源码、文档和构建文件：`/Users/zhangliang/ai/readbook/tmp/sanguozhi-timeline/`。
-静态站点：`/Users/zhangliang/ai/readbook/tmp/sanguozhi-timeline/dist/`。
+源码、文档和构建文件：`<workspace>/tmp/sanguozhi-timeline/`。
+静态站点：`<workspace>/tmp/sanguozhi-timeline/dist/`。
 Git分支：`feat/sanguozhi-timeline-v2`。
-原版保留：`/Users/zhangliang/ai/readbook/tmp/sanguozhi-web/`。
+原版保留：`<workspace>/tmp/sanguozhi-web/`。
 
 本地服务关闭后重启：
 
 ```bash
-cd /Users/zhangliang/ai/readbook/tmp/sanguozhi-timeline
+cd <workspace>/tmp/sanguozhi-timeline
 npm run preview -- --port 4323
 ```
 

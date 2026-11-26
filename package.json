@@ -1,6 +1,11 @@
 {
   "name": "sanguozhi-card-site",
   "version": "2.0.0",
+  "description": "从人物和事件读进陈寿《三国志》（裴松之注）的静态阅读网站 · A static reading site for the Sanguozhi",
+  "license": "MIT AND CC-BY-SA-4.0",
+  "engines": {
+    "node": ">=22.12"
+  },
   "private": true,
   "type": "module",
   "scripts": {

@@ -37,7 +37,7 @@
 
 沿用 A 类规则：概览轨迹为虚线，选中时期的到达路段为实线，其余为虚线。虚实不表示史料可信度。A 类共用绘图会省略投影长度小于8单位的极短连线（本次吕范建业—洞口），站点和选中状态仍保留；验收同时核对这项行为，没有挪动坐标来强行制造连线。
 
-审计文件 `docs/wu-trajectory-audit.json` 保留逐站原文、时期、履历、代表位置与必要的合并前地点；说明同站包含的经历而不能另定坐标时使用 `includedEpisodesZh`，不伪造带坐标的合并对象。运行 `JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/check-wu-trajectories.mjs` 可重新核对本书、人物卡与地图运行时的一致性。
+审计文件 `docs/audits/wu-trajectory-audit.json` 保留逐站原文、时期、履历、代表位置与必要的合并前地点；说明同站包含的经历而不能另定坐标时使用 `includedEpisodesZh`，不伪造带坐标的合并对象。运行 `JIANGSHAN_DIR=/path/to/matching/jiangshan-map node scripts/check-wu-trajectories.mjs` 可重新核对本书、人物卡与地图运行时的一致性。
 
 ## 验收结果
 
@@ -50,12 +50,12 @@
 
 ## 主目录与本地交付
 
-- 三国志站主目录：`/Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified`
-- 三国志站主仓库：`/Users/zhangliang/ai/readbook/sanguozhi/.sanguozhi-repo`
-- 江山时序主目录：`/Users/zhangliang/ai/github/jiangshan-map`
+- 三国志站主目录：`<repo>`
+- 三国志站主仓库：`<repo-main-checkout>`
+- 江山时序主目录：`<jiangshan-map>`
 - 人物站点：<http://127.0.0.1:4324/people/sun-ce/#trajectory>
 - 配套地图：<http://127.0.0.1:8000/?person=sunce>
 
 两侧必须联动部署。人物站点正式本地构建采用默认地图根路径，不能残留开发用的 `/.runtime/wu-b-preview/` 地址；构建时的 `sgz_rev` 更新地图文档缓存键。地图JS资源按 `sync_version.js` 同步内容哈希，部署后强制刷新浏览器核对实际加载版本。
 
-开发阶段使用独立worktree、`/tmp/sgz-wu-b-dist`、4335临时人物站点以及原地图 `.runtime/wu-b-preview` 符号链接。完成上线验证后清理本轮开发预览与worktree。逐站证据已纳入 `docs/wu-trajectory-audit.json`；开发日志、截图与后续部署记录保存在主目录被Git忽略的 `work/wu-b-release-20261116/`，不依赖待清理worktree。
+开发阶段使用独立worktree、`/tmp/sgz-wu-b-dist`、4335临时人物站点以及原地图 `.runtime/wu-b-preview` 符号链接。完成上线验证后清理本轮开发预览与worktree。逐站证据已纳入 `docs/audits/wu-trajectory-audit.json`；开发日志、截图与后续部署记录保存在主目录被Git忽略的 `work/wu-b-release-20261116/`，不依赖待清理worktree。

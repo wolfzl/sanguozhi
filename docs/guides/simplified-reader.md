@@ -1,6 +1,6 @@
 # 原文阅读简繁切换
 
-实施日期：2026-10-09。基于事件线第二版 `9d2951e`，开发分支 `feat/sanguozhi-simplified`，worktree 为 `/Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified`。
+实施日期：2026-10-09。基于事件线第二版 `9d2951e`，开发分支 `feat/sanguozhi-simplified`，worktree 为 `<repo>`。
 
 ## 设计与范围
 
@@ -40,7 +40,7 @@
 预览地址：<http://127.0.0.1:4324/read/001/>。源码、构建文件 `dist/`、说明及截图均位于上述 worktree，截图与构建日志位于 Git 忽略的 `work/`。
 
 ```bash
-cd /Users/zhangliang/ai/readbook/sanguozhi/sanguozhi-simplified
+cd <repo>
 npm ci
 npm test
 npm run build

@@ -1,5 +1,6 @@
 """Lossless text extraction with separate, addressable Pei annotations."""
 import argparse
+import os
 import hashlib
 import html
 import json
@@ -10,7 +11,8 @@ from pathlib import Path
 from zipfile import ZipFile
 
 NS = {'o': 'http://www.idpf.org/2007/opf', 'h': 'http://www.w3.org/1999/xhtml'}
-DEFAULT_SOURCE = '/Users/zhangliang/ai/readbook/inbox/三国志-陈寿撰裴松之注-维基文库-20260923.epub'
+# 原始 EPUB 不随仓库分发：放在 work/ 下，或用环境变量 SANGUO_EPUB / 命令行参数指定。
+DEFAULT_SOURCE = os.environ.get('SANGUO_EPUB') or str(Path(__file__).resolve().parents[1] / 'work' / '三国志-陈寿撰裴松之注-维基文库-20260923.epub')
 ALLOWED = {'p', 'span', 'a', 'small', 'blockquote', 'h1', 'h2', 'h3', 'h4', 'div', 'section', 'em', 'strong', 'b', 'i', 'sup', 'sub', 'br', 'ul', 'ol', 'li', 'dl', 'dt', 'dd', 'table', 'tbody', 'tr', 'th', 'td'}
 
 def tag(node):

@@ -1,4 +1,4 @@
-"""关羽：v3 模版 B 级样例（docs/person-template-v3.md）。
+"""关羽：v3 模版 B 级样例（docs/guides/person-template-v3.md）。
 
 所有引文为 book.json 中逐字存在的繁体短句；裴注引文第三项为注引书名。
 """
@@ -126,7 +126,7 @@ PROFILE = dict(
              refs=[SHI, SHI_YEAR, Q('v036-b0007', '子興嗣。')]),
     ],
 
-    # 行迹时期（docs/atlas-trajectory-guide.md）：模式一，复用江山时序的关羽路线。
+    # 行迹时期（docs/guides/atlas-trajectory-guide.md）：模式一，复用江山时序的关羽路线。
     # 第 5 站（219 年陆逊屯陆口致书关羽）主角是陆逊，不挂；身后追谥也不挂行迹站。
     # 早年 span 仅供地图取景和站号校验，显示时间仍保留“确年未载”。
     trajectory=dict(

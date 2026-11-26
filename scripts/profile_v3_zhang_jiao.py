@@ -1,4 +1,4 @@
-"""张角：v3 模版 C 级样例（docs/person-template-v3.md）。
+"""张角：v3 模版 C 级样例（docs/guides/person-template-v3.md）。
 
 本书没有张角传，事迹散见于《孙坚传》正文和裴注引文；示范“无本传、散见记载”的写法。
 """

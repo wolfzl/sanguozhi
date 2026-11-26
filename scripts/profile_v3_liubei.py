@@ -1,4 +1,4 @@
-"""刘备：v3 模版 A 级样例（docs/person-template-v3.md）。
+"""刘备：v3 模版 A 级样例（docs/guides/person-template-v3.md）。
 
 由旧版 profiles_shu_expanded.LIUBEI 迁移而来（用 scripts/migrate_expanded_to_v3.py 的同类脚本生成草稿后人工修订）：
 引文原本就是逐句形式，原样保留；新增逐项档案依据、关系分类与年表编号，删除内嵌附录。
@@ -247,7 +247,7 @@ PROFILE = dict(
                   Q('v032-b0037', '夏四月癸巳，先主殂於永安宮，時年六十三。'),
                   Q('v032-b0042', '諡曰昭烈皇帝。秋，八月，葬惠陵。')]),
     ],
-    # 行迹时期（docs/atlas-trajectory-guide.md）：模式一，复用江山时序的刘备路线。
+    # 行迹时期（docs/guides/atlas-trajectory-guide.md）：模式一，复用江山时序的刘备路线。
     # 第 7 站（214 年张飞镇守阆中）主角是张飞，不挂。
     trajectory=dict(
         atlasPerson='liubei',

@@ -1,4 +1,4 @@
-"""v3 人物卡种子（docs/person-template-v3.md）到现有 expanded 数据结构的适配器。
+"""v3 人物卡种子（docs/guides/person-template-v3.md）到现有 expanded 数据结构的适配器。
 
 渲染层尚未迁移，因此这里把 v3 的统一结构转换成 expanded_profiles.apply 已能处理的字段，
 再在 apply 之后补写 v3 专属字段（contentTier、careerRef、关系名单等）。
@@ -180,7 +180,7 @@ def to_expanded(seed):
     pid = seed['id']
     if seed['tier'] != TIERS.get(pid):
         raise ValueError(f"{pid}: 种子 tier={seed['tier']}，但分级名单为 {TIERS.get(pid)}（见 scripts/person_tiers.py）")
-    # C 级默认不做行迹地图（docs/atlas-trajectory-guide.md M2）；仅 C_TRAJECTORY_EXCEPTIONS 中的人物例外。
+    # C 级默认不做行迹地图（docs/guides/atlas-trajectory-guide.md M2）；仅 C_TRAJECTORY_EXCEPTIONS 中的人物例外。
     if seed['tier'] == 'C' and seed.get('trajectory') and pid not in C_TRAJECTORY_EXCEPTIONS:
         raise ValueError(f"{pid}: C 级人物默认不做行迹地图，种子不得包含 trajectory（例外名单见 C_TRAJECTORY_EXCEPTIONS）")
     facts = {f['key']: f for f in seed['facts']}
@@ -255,7 +255,7 @@ def finish(person, seed, R):
             sourceUrl=f"/read/{ref['volume']}/#{ref['blockId']}",
             quote=ref['quote'], note=life['text'],
         )
-    # 行迹时期（docs/atlas-trajectory-guide.md），原样写入；span 转成列表便于 JSON 校验。
+    # 行迹时期（docs/guides/atlas-trajectory-guide.md），原样写入；span 转成列表便于 JSON 校验。
     if seed.get('trajectory'):
         t = deepcopy(seed['trajectory'])
         for ph in t['phases']:

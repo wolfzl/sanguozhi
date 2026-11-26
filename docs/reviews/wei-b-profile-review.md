@@ -45,7 +45,7 @@
 
 ## 地图联动与数据范围
 
-14条路线使用 `curatedOnly`，排除公共事件泛泛提名。逐站保留 `phaseId`、`careerId(s)` 和 `sourceRefs`，必要的合并前地点用 `mergedLocations`，无法另定坐标的所含经历用 `includedEpisodesZh`；确年未载时明示数字年份只是排序值。日期栏使用“确年未载”等短提示，具体排序年及合并经历的年代说明留在详情，避免挤压站名；不改变排序值、站点及证据。规范化数据见 `docs/wei-trajectory-audit.json`。专用检查 `scripts/check-wei-trajectories.mjs` 对照本书、人物卡、地图原始数据与运行时核验，不仅比较站数。
+14条路线使用 `curatedOnly`，排除公共事件泛泛提名。逐站保留 `phaseId`、`careerId(s)` 和 `sourceRefs`，必要的合并前地点用 `mergedLocations`，无法另定坐标的所含经历用 `includedEpisodesZh`；确年未载时明示数字年份只是排序值。日期栏使用“确年未载”等短提示，具体排序年及合并经历的年代说明留在详情，避免挤压站名；不改变排序值、站点及证据。规范化数据见 `docs/audits/wei-trajectory-audit.json`。专用检查 `scripts/check-wei-trajectories.mjs` 对照本书、人物卡、地图原始数据与运行时核验，不仅比较站数。
 
 完全复用A类线型：概览为虚线，选中时期的到达路段为实线，其余为虚线。虚实不表示史料真假。短于8投影单位的连线沿用既有省略规则，同地活动不硬画线，站点与选中状态保留。未定位时期不生成地图入口。所有地图链接沿用构建时 `sgz_rev`，资源内容哈希同步更新，浏览器检查没有拦截替换资源或清空缓存。
 
@@ -62,8 +62,8 @@
 
 ## 开发预览与本地发布
 
-- 站点 worktree：`/Users/zhangliang/.codex/worktrees/wei-b-profiles/sanguozhi-simplified`
-- 地图 worktree：`/Users/zhangliang/.codex/worktrees/wei-b-atlas/jiangshan-map`
+- 站点 worktree：`<worktrees>/wei-b-profiles/sanguozhi-simplified`
+- 地图 worktree：`<worktrees>/wei-b-atlas/jiangshan-map`
 - 临时人物预览：<http://127.0.0.1:4336/people/cao-pi/#trajectory>
 - 配套隔离地图通过原8000服务的 `/.runtime/wei-b-preview/` 路径提供；没有另开地图服务。
 

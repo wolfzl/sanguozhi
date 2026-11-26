@@ -1,4 +1,4 @@
-"""典韦：v3 C 级“新建人物”样例（docs/person-template-v3.md §7.1）。
+"""典韦：v3 C 级“新建人物”样例（docs/guides/person-template-v3.md §7.1）。
 
 本书原来没有典韦的人物页。种子里的 `new` 字段让生成脚本新建页面，
 `eventRoles` 把他登记为既有事件的参与者，从而与事件页互相链接。

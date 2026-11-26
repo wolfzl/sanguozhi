@@ -1,5 +1,6 @@
 """Independent comparison of shipped text against the actual source EPUB."""
 import json
+import os
 import unittest
 import xml.etree.ElementTree as ET
 from collections import Counter
@@ -8,7 +9,7 @@ from pathlib import Path
 from zipfile import ZipFile
 
 SITE = Path(__file__).parents[1]
-SOURCE = Path('/Users/zhangliang/ai/readbook/inbox/三国志-陈寿撰裴松之注-维基文库-20260923.epub')
+SOURCE = Path(os.environ.get('SANGUO_EPUB') or SITE / 'work' / '三国志-陈寿撰裴松之注-维基文库-20260923.epub')
 
 def normalized(text):
     return ' '.join(text.split())

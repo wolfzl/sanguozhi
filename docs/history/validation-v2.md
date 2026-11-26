@@ -1,6 +1,6 @@
 # 第二版验收记录
 
-验收日期：2026年10月9日（Asia/Shanghai）。分支 feat/sanguozhi-timeline-v2，worktree /Users/zhangliang/ai/readbook/tmp/sanguozhi-timeline。
+验收日期：2026年10月9日（Asia/Shanghai）。分支 feat/sanguozhi-timeline-v2，worktree <workspace>/tmp/sanguozhi-timeline。
 
 ## 交付范围
 

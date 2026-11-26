@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// 行迹地图工具，规则见 docs/atlas-trajectory-guide.md。
+// 行迹地图工具，规则见 docs/guides/atlas-trajectory-guide.md。
 //   node scripts/atlas-places.mjs person liubei                 列出江山时序人物路线和站号（从 0 数）
 //   node scripts/atlas-places.mjs lookup 安喜 中山 --year 184   试查询名（模式二）
 //   node scripts/atlas-places.mjs check [id ...]               检查站号年份（模式一）或地名解析（模式二）
@@ -18,7 +18,7 @@ if (!fs.existsSync(serverPath)) {
 }
 const mcp = createRequire(import.meta.url)(serverPath);
 const runtime = mcp.createMcpRuntime();
-const shuAudit = JSON.parse(fs.readFileSync(new URL('../docs/shu-trajectory-audit.json', import.meta.url), 'utf8'));
+const shuAudit = JSON.parse(fs.readFileSync(new URL('../docs/audits/shu-trajectory-audit.json', import.meta.url), 'utf8'));
 
 /** 解析一个地名；识别不了时返回 null。 */
 function resolve(place, year) {
