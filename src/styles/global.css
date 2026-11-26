@@ -2451,3 +2451,23 @@ em {
   font-weight: 600;
   margin-right: 6px;
 }
+
+/* 首页：开源与反馈 */
+.open-source { margin-bottom: 80px; }
+.reading-invite + .open-source { padding-top: 0; }
+.open-source-body { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.open-source-text p { font-size: 13px; line-height: 2; color: var(--muted); margin: 0 0 14px; }
+.open-source-text a { color: var(--red); }
+.open-source-links { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.open-source-links a { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; align-items: baseline; gap: 12px; padding: 16px 4px; border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: background .2s; }
+.open-source-links a:hover { background: rgba(120, 90, 55, .05); }
+.open-source-links span { font-size: 11px; letter-spacing: 1px; color: var(--muted); }
+.open-source-links strong { font-weight: 400; font-size: 14px; overflow-wrap: anywhere; }
+.open-source-links i { font-style: normal; color: var(--red); }
+@media (max-width: 800px) {
+  .open-source { margin-bottom: 48px; }
+  .open-source-body { grid-template-columns: 1fr; gap: 22px; }
+  .open-source-text p { font-size: 12px; }
+  .open-source-links a { grid-template-columns: 64px minmax(0, 1fr) auto; }
+  .open-source-links strong { font-size: 13px; }
+}
