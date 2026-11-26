@@ -1,0 +1,66 @@
+---
+/**
+ * 江山时序地图嵌入。
+ * 江山时序的嵌入模式在任何宽度下都使用桌面布局，手机上人物卡片会盖住大半张地图，
+ * 所以窄屏只显示一张预览卡片，点开后在新页面全屏查看（单独打开时江山时序会用手机布局）。
+ * 宽屏由脚本插入 iframe；无 JavaScript 时同样显示预览卡片。
+ */
+interface Props {
+  embedSrc: string;
+  openHref: string;
+  title: string;
+  label: string;
+  hint: string;
+  frameClass: string;
+}
+const { embedSrc, openHref, title, label, hint, frameClass } = Astro.props;
+---
+<div class={`${frameClass} atlas-embed`} data-atlas-embed data-src={embedSrc} data-title={title}>
+  <a class="atlas-preview" href={openHref} target="_blank" rel="noopener">
+    <span class="atlas-preview-grid" aria-hidden="true"></span>
+    <span class="atlas-preview-eyebrow">江山时序 · 历史地图</span>
+    <strong>{label}</strong>
+    <span class="atlas-preview-hint">{hint}</span>
+    <span class="atlas-preview-go">全屏打开地图 <i aria-hidden="true">↗</i></span>
+  </a>
+</div>
+
+<script>
+  const wide = window.matchMedia("(min-width: 701px)");
+  function mount() {
+    if (!wide.matches) return;
+    for (const box of document.querySelectorAll<HTMLElement>("[data-atlas-embed]:not(.has-iframe)")) {
+      const frame = document.createElement("iframe");
+      frame.src = box.dataset.src ?? "";
+      frame.title = box.dataset.title ?? "";
+      frame.loading = "lazy";
+      box.append(frame);
+      box.classList.add("has-iframe");
+    }
+  }
+  mount();
+  wide.addEventListener("change", mount);
+</script>
+
+<style is:global>
+  /* 人物行迹地图的框（战役推演的 .campaign-frame 在 timeline.css）。 */
+  .atlas-frame{position:relative;width:100%;height:min(78vh,760px);min-height:520px;border:1px solid var(--line);background:rgba(120,90,55,.035)}
+  .atlas-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .atlas-embed:not(.has-iframe){height:auto;min-height:0;border:0;background:none}
+  .atlas-embed.has-iframe .atlas-preview{display:none}
+  .atlas-preview{position:relative;display:flex;flex-direction:column;gap:8px;overflow:hidden;padding:26px 24px 22px;border:1px solid var(--line);border-top:3px solid var(--red);background:var(--card);color:var(--ink);text-decoration:none;transition:border-color .2s,box-shadow .2s}
+  .atlas-preview:hover{border-color:var(--red);box-shadow:0 8px 18px -12px rgba(39,44,41,.45)}
+  .atlas-preview-grid{position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:linear-gradient(rgba(120,90,55,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(120,90,55,.08) 1px,transparent 1px);background-size:22px 22px}
+  .atlas-preview>*:not(.atlas-preview-grid){position:relative}
+  .atlas-preview-eyebrow{font-size:11px;letter-spacing:1px;color:var(--red)}
+  .atlas-preview strong{font:400 22px/1.4 var(--serif)}
+  .atlas-preview-hint{font-size:13px;line-height:1.8;color:var(--muted)}
+  .atlas-preview-go{margin-top:6px;font-size:13px;color:var(--red)}
+  @media (max-width:700px){
+    .atlas-embed.has-iframe{height:auto;min-height:0;border:0;background:none}
+    .atlas-embed.has-iframe iframe{display:none}
+    .atlas-embed.has-iframe .atlas-preview{display:flex}
+    /* 预览卡片已经提供“全屏打开”，手机上不再重复下方的打开链接。 */
+    .atlas-embed[data-atlas-embed]~:is(.atlas-open,.campaign-open){display:none}
+  }
+</style>

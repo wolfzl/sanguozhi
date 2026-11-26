@@ -5,6 +5,7 @@ import Share from './Share.astro';
 import EventRow from './EventRow.astro';
 import PersonNarrative from './PersonNarrative.astro';
 import FoldGroup from './FoldGroup.astro';
+import AtlasEmbed from './AtlasEmbed.astro';
 import RelatedEvent from './RelatedEvent.astro';
 import { personById, eventById, events, referencesFor, volumes, volumeTitle } from '../lib/catalog';
 import { DEFAULT_ATLAS_BASE, versionedAtlasBase, phaseUrl, routeUrl, phaseNumeral } from '../lib/atlas.mjs';
@@ -166,7 +167,7 @@ const navigation = [
       {hasTrajectory&&<section id="trajectory" class="article-section trajectory">
         <div class="section-eyebrow">把经历放回地图</div><h2>行迹地图</h2>
         <p class="evidence-note">{p.name}一生分为 {phases.length} 个时期。{trajectory!.atlasPerson?<Fragment>地图直接使用<a href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">江山时序</a>的{p.name}路线，与在江山时序中搜索{p.name}看到的相同；地图上的说明文字出自江山时序，本站内容以下表和生平履历为准。</Fragment>:<Fragment>{hasUnmappedPhases?"地图标示本书明确记载的地点，地点未详的时期见下表。地图由":"每个时期取一个代表地点，由"}<a href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">江山时序</a>{hasUnmappedPhases?"提供；":"连成路线；"}站名用的是它的地名。</Fragment>}疆域为示意性近似。连线表示已知地点的先后关系，不是古代道路复原；选中时期的到达路段为实线，其余为虚线，虚实不表示史料可信度。未载地点、未实施的计划与身后追谥不补造足迹。</p>
-        <div class="atlas-frame"><iframe src={routeUrl(atlasBase,trajectory!,{embed:true})} title={`${p.name}行迹地图`} loading="lazy"></iframe></div>
+        <AtlasEmbed frameClass="atlas-frame" embedSrc={routeUrl(atlasBase,trajectory!,{embed:true})} openHref={routeUrl(atlasBase,trajectory!)} title={`${p.name}行迹地图`} label={`${p.name}行迹地图`} hint={`${phases.length} 个时期的足迹路线。手机屏幕较小，点开后全屏查看更清楚。`}/>
         <a class="atlas-open" href={routeUrl(atlasBase,trajectory!)} target="_blank" rel="noopener">在江山时序中打开 ↗</a>
         <ol class="trajectory-list">{phases.map((ph,i)=><li>
           <span class="stop-index">{phaseNumeral(i)}</span>
@@ -302,8 +303,6 @@ const navigation = [
   .phase-unmapped{font-size:11px;color:var(--muted)}
   .trajectory .evidence-note{font-size:12px;line-height:1.95;margin-bottom:20px}
   .trajectory .evidence-note a{color:var(--red)}
-  .atlas-frame{position:relative;width:100%;height:min(78vh,760px);min-height:520px;border:1px solid var(--line);background:rgba(120,90,55,.035)}
-  .atlas-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   .atlas-open{display:inline-block;margin:12px 0 26px;font-size:12px;color:var(--red)}
   .trajectory-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);font-size:12px;line-height:1.9}
   .trajectory-list li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
@@ -338,7 +337,6 @@ const navigation = [
     .dossier-table tr.phase-row{padding:22px 0 8px;border-bottom:1px solid var(--red)}
     .phase-row th{padding:0!important}
     .phase-row strong{display:inline-block;margin:0 8px}
-    .atlas-frame{height:80vh;min-height:560px}
     .record-category{font-size:11px}
     .evidence-note{padding:15px 17px}
     .relation-name{font-size:17px}
