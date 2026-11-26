@@ -4,7 +4,7 @@
 
 给孩子讲三国故事的时候，我发现自己讲的多半是《三国演义》里的情节，真实的历史反而说不清楚。为了给孩子讲对，我做了这个网站：从一个人、一件事读进陈寿《三国志》（裴松之注）。先读人物小传和事件解读，再顺着每句话后面的引用编号，回到正文与裴注的原句。
 
-**在线阅读：<https://wolfzl.github.io/>**
+**在线阅读：<https://wolfzl.github.io/sanguozhi/>**
 
 ![首页](docs/images/home.jpg)
 
@@ -59,7 +59,7 @@ public/         静态资源与第三方许可文本
 
 ## 反馈
 
-- 发现史料错误、错别字或页面问题，欢迎在 [Issues](https://github.com/wolfzl/wolfzl.github.io/issues) 提出，方便大家看到并跟踪处理。
+- 发现史料错误、错别字或页面问题，欢迎在 [Issues](https://github.com/wolfzl/sanguozhi/issues) 提出，方便大家看到并跟踪处理。
 - 不方便使用 GitHub 的话，也可以发邮件到 [wolfzhang008@gmail.com](mailto:wolfzhang008@gmail.com)。
 
 ## 参与贡献

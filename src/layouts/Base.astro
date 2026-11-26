@@ -4,7 +4,8 @@ interface Props { title?: string; description?: string; active?: string }
 const {title='读懂人物，看见历史',description='从三十四位人物、三十八个历史事件进入《三国志》，沿着原文与裴注，读懂历史的来龙去脉。',active=''}=Astro.props;
 const pageTitle=`${title} · 三国志`;
 const canonical=Astro.site ? new URL(Astro.url.pathname,Astro.site).href : undefined;
-const image=Astro.site ? new URL('/share-card.png',Astro.site).href : '/share-card.png';
+const shareCard=`${import.meta.env.BASE_URL}share-card.png`;
+const image=Astro.site ? new URL(shareCard,Astro.site).href : shareCard;
 ---
 <!doctype html>
 <html lang="zh-CN">

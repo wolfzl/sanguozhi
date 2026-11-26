@@ -20,6 +20,7 @@ jobs:
     env:
       # 正式网址与地图实例；fork 后请改成自己的地址。
       SANGUO_SITE: https://wolfzl.github.io
+      SANGUO_BASE: /sanguozhi
       PUBLIC_ATLAS_BASE: https://wolfzl.github.io/jiangshan-map/
     steps:
       - uses: actions/checkout@v4

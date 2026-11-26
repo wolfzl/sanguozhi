@@ -138,9 +138,11 @@ npm run test:baihua      # 白话阅读
 
 ## 部署
 
-`npm run build` 生成的 `dist/` 是纯静态文件，可以放到任意静态托管服务的站点根目录。页面链接都以 `/` 开头，部署在子路径下需要额外配置 Astro 的 `base`。
+`npm run build` 生成的 `dist/` 是纯静态文件，可以放到任意静态托管服务。部署在子路径下（如 GitHub 项目页 `/sanguozhi/`）时设置 `SANGUO_BASE`：源码和内容数据里的站内链接都按根路径书写，构建完成后由 `astro.config.mjs` 中的 `prefix-root-links` 统一加上前缀；客户端脚本里拼接的地址使用 `import.meta.env.BASE_URL`。
+
+正式站点由 `.github/workflows/pages.yml` 在推送 `main` 后自动构建并发布到 GitHub Pages（<https://wolfzl.github.io/sanguozhi/>）。
 
 构建时：
 
-- 设置 `SANGUO_SITE` 为正式网址，生成正确的分享链接与图片地址；
+- 设置 `SANGUO_SITE` 为站点域名（如 `https://wolfzl.github.io`），`SANGUO_BASE` 为子路径（如 `/sanguozhi`），生成正确的分享链接与图片地址；
 - 设置 `PUBLIC_ATLAS_BASE` 为已部署的江山时序地址，否则地图为空白。江山时序的许可要求见 [THIRD_PARTY_NOTICES](../THIRD_PARTY_NOTICES.md)。

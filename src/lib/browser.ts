@@ -142,7 +142,7 @@ const selector = document.querySelector<HTMLSelectElement>(
   "[data-volume-select]",
 );
 selector?.addEventListener("change", () => {
-  if (selector.value) location.assign(`/read/${selector.value}/`);
+  if (selector.value) location.assign(`${import.meta.env.BASE_URL}read/${selector.value}/`);
 });
 
 // The event explorer uses one canonical DOM card per event in both views.
@@ -248,6 +248,6 @@ try {
   const remembered = sessionStorage.getItem("sanguo-timeline-url");
   if (remembered) {
     const url = new URL(remembered,location.origin);
-    if (url.origin === location.origin && url.pathname === "/events/") for (const link of document.querySelectorAll<HTMLAnchorElement>("[data-timeline-back]")) link.href = url.pathname + url.search + url.hash;
+    if (url.origin === location.origin && url.pathname === `${import.meta.env.BASE_URL}events/`) for (const link of document.querySelectorAll<HTMLAnchorElement>("[data-timeline-back]")) link.href = url.pathname + url.search + url.hash;
   }
 } catch {}

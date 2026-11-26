@@ -4,7 +4,7 @@
 
 When I told my child stories about the Three Kingdoms, I realized most of what I knew came from the novel *Romance of the Three Kingdoms*, and I couldn't say what had actually happened. So, to teach my child the real history, I built this site: a way into Chen Shou's *Sanguozhi* (*Records of the Three Kingdoms*), with Pei Songzhi's commentary, one person or one event at a time. Read a plain-language profile or event account first, then follow the citation markers back to the exact sentence in the original text and commentary.
 
-**Read online: <https://wolfzl.github.io/>**
+**Read online: <https://wolfzl.github.io/sanguozhi/>**
 
 The site itself is in Chinese: the narratives and translations are written in modern Chinese, and the original is Classical Chinese.
 
@@ -61,7 +61,7 @@ People and event content lives in Python seed files under `scripts/` (for exampl
 
 ## Feedback
 
-- Please report factual errors, typos or page problems in [Issues](https://github.com/wolfzl/wolfzl.github.io/issues), so others can see and follow them.
+- Please report factual errors, typos or page problems in [Issues](https://github.com/wolfzl/sanguozhi/issues), so others can see and follow them.
 - If GitHub isn't convenient, email [wolfzhang008@gmail.com](mailto:wolfzhang008@gmail.com).
 
 ## Contributing
