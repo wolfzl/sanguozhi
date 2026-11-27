@@ -83,3 +83,4 @@ public/         静的ファイルと第三者ライセンス文書
 - 歴史地図、人物の足跡、戦況再現を提供する [江山時序 Jiangshan Atlas](https://github.com/DeanChensj/jiangshan-map)（DeanChensj、GPL-3.0）。
 - 簡体字・繁体字の変換に使用している [OpenCC](https://github.com/BYVoid/OpenCC) と [opencc-js](https://github.com/nk2028/opencc-js)。
 - 静的サイトフレームワーク [Astro](https://astro.build/)。
+- 本プロジェクトは [LINUX DO](https://linux.do/) コミュニティに参加し、支持しています。

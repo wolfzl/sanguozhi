@@ -81,3 +81,4 @@ public/         静态资源与第三方许可文本
 - [江山时序 Jiangshan Atlas](https://github.com/DeanChensj/jiangshan-map)（DeanChensj，GPL-3.0）提供历史地图、人物路线与战役推演。
 - [OpenCC](https://github.com/BYVoid/OpenCC) 与 [opencc-js](https://github.com/nk2028/opencc-js) 提供简繁转换。
 - [Astro](https://astro.build/) 静态站点框架。
+- 本项目积极参与并认可 [LINUX DO](https://linux.do/) 社区。

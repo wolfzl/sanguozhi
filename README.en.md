@@ -83,3 +83,4 @@ This project is dual-licensed:
 - [Jiangshan Atlas](https://github.com/DeanChensj/jiangshan-map) (DeanChensj, GPL-3.0) for historical maps, personal itineraries and battle playback.
 - [OpenCC](https://github.com/BYVoid/OpenCC) and [opencc-js](https://github.com/nk2028/opencc-js) for Simplified/Traditional conversion.
 - The [Astro](https://astro.build/) static site framework.
+- This project takes part in and supports the [LINUX DO](https://linux.do/) community.
